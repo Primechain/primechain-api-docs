@@ -5,6 +5,9 @@ Blockchain parameters(Blockchain parameters)
 1. [Blockchain parameters](#1-Blockchain-parameters)
 2. [Runtime parameters](#2-runtime-parameters)
 3. [Blockchain information](#3-blockchain-information)
+4. [Memory information](#4-memory-information)
+
+
 
 ## 1. Blockchain parameters
 
@@ -173,3 +176,18 @@ Use `get /api/v1/blockchain_info` to get general information about this node and
 2. The `burnaddress` is an address with no known private key. Assets can be sent to the `burnaddress` to make them provably unspendable. 
 3. The `nodeaddress` can be passed to other nodes for connecting. 
 4. The `setupblocks` field gives the length in blocks of the setup phase in which some consensus constraints are not applied.
+
+## 4. Memory information
+The memory pool contains transactions that the node has seen and validated, but which have not yet been confirmed on the active chain. To get information about the memory pool, use `get /api/v1/mempool_info`
+
+```
+{
+  "mempool_info": 
+    {
+      "size": 0,
+      "bytes": 0
+    }
+}
+```
+***Note:***
+If the memory pool is growing continuously, this suggests that transactions are being generated faster than the network is able to process them.
