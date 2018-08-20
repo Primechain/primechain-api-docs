@@ -4,8 +4,8 @@
 
 Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
-1. Blockchain administration
-2. Entities
-3. Digital Signatures
-4. Smart Asset Lifecycle Management
-5. Data Storage
+1. [Blockchain administration](https://github.com/Primechain/primechain-api-docs/blob/master/docs/blockchain_administration.MD)
+2. [Entities]
+3. [Digital Signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/digital_signatures.MD)
+4. [Smart Asset Lifecycle Management]
+5. [Data Storage]
