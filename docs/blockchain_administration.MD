@@ -116,11 +116,57 @@ To get a selection of this node's runtime parameters (these are set when the nod
   }
 }
 ```
-3. Blockchain information
+## 3. Blockchain information
 
 Use `get /api/v1/blockchain_info` to get general information about this node and blockchain. 
 ```
-
+{
+"blockchain_params": 
+  [
+    {
+      "version": "1.0.6",
+      "nodeversion": 10006901,
+      "protocolversion": 10010,
+      "chainname": "primechain-api",
+      "description": "MultiChain primechain-api",
+      "protocol": "multichain",
+      "port": 61172,
+      "setupblocks": 60,
+      "nodeaddress": "primechain-api@10.1.3.5:61172",
+      "burnaddress": "1XXXXXXXa5XXXXXXidXXXXXXPuXXXXXXRMNLPi",
+      "incomingpaused": false,
+      "miningpaused": false,
+      "walletversion": 60000,
+      "balance": 0,
+      "walletdbversion": 2,
+      "reindex": false,
+      "blocks": 59,
+      "timeoffset": 0,
+      "connections": 0,
+      "proxy": "",
+      "difficulty": 6e-8,
+      "testnet": false,
+      "keypoololdest": 1534763559,
+      "keypoolsize": 2,
+      "paytxfee": 0,
+      "relayfee": 0,
+      "errors": "",
+      "chain": "main",
+      "chain_name": "primechain-api",
+      "description_": "MultiChain primechain-api",
+      "protocol_": "multichain",
+      "setup_blocks": 60,
+      "re_index": false,
+      "blocks_": 59,
+      "headers": 59,
+      "bestblockhash": "00385c95a6be9b0bcade6404c608583e89100716485ffcf015dd3e10883ad525",
+      "difficulty_": 6e-8,
+      "verificationprogress": 1,
+      "chainwork": "0000000000000000000000000000000000000000000000000000000000003c00",
+      "chainrewards": 0
+    }
+  ],
+}
 ```
 ***Notes:***
 1. The `bestblockhash` of the most recent block on the active chain can be compared across nodes to check if they are perfectly synchronized.
