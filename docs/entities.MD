@@ -1,3 +1,11 @@
+# Entities
+
+[Blockchain parameters](#1-blockchain-parameters)
+1. [Creating a new entity](#1-creating-a-new-entity)
+2. [Creating a new entity (for external key management)](#2-creating-a-new-entity-for-external-key-management)
+3. [List entities](#3-list-entities)
+
+
 ## 1. Creating a new entity
 When you create a new signer (entity / person), ESE generates a public key, private key and a corresponding blockchain address. To create a new signer, use `get /api/v1/create_entity`. The output will be the blockchain address of the newly created signer.
 ```
@@ -18,3 +26,6 @@ If you want to generate a public/private key pair, which is not stored in the wa
 "privkey": "VAV9DaTL8S4WjVCiezmGRTASH26GNmuaDVkee2jamZKVyWDLjMPE32R1"
 }
 ```
+
+## 3. List entities
+
