@@ -84,3 +84,35 @@ Use `get /api/v1/blockchain_params` to view the blockchain parameters:
   }
 }
 ```
+
+## 2. Runtime parameters
+To get a selection of this node's runtime parameters (these are set when the node starts up), use `get /api/v1/runtime_params`
+
+```
+{
+"runtime_params": 
+  {
+  "port": 61172,
+  "reindex": false,
+  "rescan": false,
+  "txindex": true,
+  "autocombineminconf": 1,
+  "autocombinemininputs": 50,
+  "autocombinemaxinputs": 100,
+  "autocombinedelay": 1,
+  "autocombinesuspend": 15,
+  "autosubscribe": "",
+  "handshakelocal": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
+  "bantx": "",
+  "lockblock": "",
+  "hideknownopdrops": false,
+  "maxshowndata": 16384,
+  "miningrequirespeers": true,
+  "mineemptyrounds": 10,
+  "miningturnover": 0.5,
+  "lockadminminerounds": 10,
+  "gen": true,
+  "genproclimit": 1
+  }
+}
+```
