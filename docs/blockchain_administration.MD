@@ -1,6 +1,10 @@
 # Blockchain administration
 
-Blockchain parameters
+Blockchain parameters(Blockchain parameters)
+
+[Blockchain parameters](#Blockchain-parameters)
+
+
 
 ## 1. Blockchain parameters
 
