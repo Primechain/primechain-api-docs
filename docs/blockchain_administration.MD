@@ -3,7 +3,7 @@
 Blockchain parameters(Blockchain parameters)
 
 [Blockchain parameters](#Blockchain-parameters)
-
+[Runtime parameters](#Runtime-parameters)
 
 
 ## 1. Blockchain parameters
