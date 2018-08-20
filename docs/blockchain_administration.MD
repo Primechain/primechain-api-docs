@@ -1,8 +1,8 @@
 # Blockchain administration
 
-Blockchain parameters(Blockchain parameters)
 
-1. [Blockchain parameters](#1-Blockchain-parameters)
+
+1. [Blockchain parameters](#1-blockchain-parameters)
 2. [Runtime parameters](#2-runtime-parameters)
 3. [Blockchain information](#3-blockchain-information)
 4. [Memory pool information](#4-memory-pool-information)
@@ -10,6 +10,8 @@ Blockchain parameters(Blockchain parameters)
 6. [List blocks](#6-list-blocks)
 7. [Peer info](#7-peer-info)
 
+
+## 1. Blockchain parameters
 Use `get /api/v1/blockchain_params` to view the blockchain parameters:
 
 ```
