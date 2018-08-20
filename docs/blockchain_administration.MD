@@ -199,7 +199,8 @@ Use `get /api/v1/list_blocks` for information about the blocks specified, on the
 
 ```
 ```
-Note: The blocks parameter can contain a comma-delimited list or array of block heights, hashes, height ranges (e.g. 100-200) or -n for the most recent n blocks. Alternatively, pass an object {"starttime":...,"endtime":...} for blocks whose timestamps are in the given range.
+***Note:***
+The blocks parameter can contain a comma-delimited list or array of block heights, hashes, height ranges (e.g. 100-200) or -n for the most recent n blocks. Alternatively, pass an object {"starttime":...,"endtime":...} for blocks whose timestamps are in the given range.
 
 ## 7. Peer info
 Use `get /api/v1/peer_info` for information about the other nodes to which this node is connected.
