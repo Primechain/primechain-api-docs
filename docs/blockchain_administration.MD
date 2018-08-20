@@ -4,7 +4,7 @@ Blockchain parameters(Blockchain parameters)
 
 1. [Blockchain parameters](#1-Blockchain-parameters)
 2. [Runtime parameters](#2-runtime-parameters)
-
+3. [Blockchain information](#3-blockchain-information)
 
 ## 1. Blockchain parameters
 
@@ -116,3 +116,14 @@ To get a selection of this node's runtime parameters (these are set when the nod
   }
 }
 ```
+3. Blockchain information
+
+Use `get /api/v1/blockchain_info` to get general information about this node and blockchain. 
+```
+
+```
+***Notes:***
+1. The `bestblockhash` of the most recent block on the active chain can be compared across nodes to check if they are perfectly synchronized.
+2. The `burnaddress` is an address with no known private key. Assets can be sent to the `burnaddress` to make them provably unspendable. 
+3. The `nodeaddress` can be passed to other nodes for connecting. 
+4. The `setupblocks` field gives the length in blocks of the setup phase in which some consensus constraints are not applied.
