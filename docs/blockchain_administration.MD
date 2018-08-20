@@ -5,11 +5,10 @@ Blockchain parameters(Blockchain parameters)
 1. [Blockchain parameters](#1-Blockchain-parameters)
 2. [Runtime parameters](#2-runtime-parameters)
 3. [Blockchain information](#3-blockchain-information)
-4. [Memory information](#4-memory-information)
-
-
-
-## 1. Blockchain parameters
+4. [Memory pool information](#4-memory-pool-information)
+5. [Raw memory pool](#5-raw-memory-pool)
+6. [List blocks](#6-list-blocks)
+7. [Peer info](#7-peer-info)
 
 Use `get /api/v1/blockchain_params` to view the blockchain parameters:
 
@@ -177,7 +176,7 @@ Use `get /api/v1/blockchain_info` to get general information about this node and
 3. The `nodeaddress` can be passed to other nodes for connecting. 
 4. The `setupblocks` field gives the length in blocks of the setup phase in which some consensus constraints are not applied.
 
-## 4. Memory information
+## 4. Memory pool information
 The memory pool contains transactions that the node has seen and validated, but which have not yet been confirmed on the active chain. To get information about the memory pool, use `get /api/v1/mempool_info`
 
 ```
@@ -191,3 +190,20 @@ The memory pool contains transactions that the node has seen and validated, but 
 ```
 ***Note:***
 If the memory pool is growing continuously, this suggests that transactions are being generated faster than the network is able to process them.
+
+## 5. Raw memory pool
+For a list of transaction IDs which are in the node's memory pool, use `get /api/v1/raw_mempool`
+
+## 6. List blocks
+Use `get /api/v1/list_blocks` for information about the blocks specified, on the active chain only.
+
+```
+```
+Note: The blocks parameter can contain a comma-delimited list or array of block heights, hashes, height ranges (e.g. 100-200) or -n for the most recent n blocks. Alternatively, pass an object {"starttime":...,"endtime":...} for blocks whose timestamps are in the given range.
+
+## 7. Peer info
+Use `get /api/v1/peer_info` for information about the other nodes to which this node is connected.
+```
+```
+***Note:*** 
+This includes handshake and handshakelocal fields showing the remote and local address used during the handshaking for that connection.
