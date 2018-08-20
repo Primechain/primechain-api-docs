@@ -1,7 +1,5 @@
 # Blockchain administration
 
-
-
 1. [Blockchain parameters](#1-blockchain-parameters)
 2. [Runtime parameters](#2-runtime-parameters)
 3. [Blockchain information](#3-blockchain-information)
