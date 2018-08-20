@@ -1,3 +1,7 @@
+# Blockchain administration
+
+Blockchain parameters
+
 ## 1. Blockchain parameters
 
 Use `get /api/v1/blockchain_params` to view the blockchain parameters:
