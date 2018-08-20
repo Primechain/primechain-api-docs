@@ -1,6 +1,5 @@
 # Entities
 
-[Blockchain parameters](#1-blockchain-parameters)
 1. [Creating a new entity](#1-creating-a-new-entity)
 2. [Creating a new entity (for external key management)](#2-creating-a-new-entity-for-external-key-management)
 3. [List entities](#3-list-entities)
