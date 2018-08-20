@@ -27,4 +27,32 @@ If you want to generate a public/private key pair, which is not stored in the wa
 ```
 
 ## 3. List entities
-
+To get a list of entities in this node's wallet, use `get /api/v1/list_entities`
+```
+{
+  "list_entities": 
+  [
+    {
+      "address": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1"
+     },
+    {
+       "address": "1f2N8o6MmK1rTvf6kZKxWiCMZ84wFLWhdD2V5"
+    },
+    {
+      "address": "1ZKRvTnxuYzmHFnSpTwLGKvWnSjYkJYrehm8uf"
+    },
+    {
+      "address": "1UDowrpjFXZjdzTwWmcWfMrekdZvpjstoPiMGk"
+    },
+    {
+      "address": "1MVeZ9GJxX7uXfijq6ZeDsAXWCPYZRALfNidvD"
+    },
+    {
+      "address": "159jsk5QNbd4ox521HxsgFK1zFM8fivWJRiUBM"
+    },
+    {
+      "address": "1LgxYpp4fPd6hVivcVa7HGLbmR6AZzvqdHwXdj"
+    }
+  ],
+}
+```
