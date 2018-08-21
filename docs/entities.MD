@@ -7,13 +7,14 @@
 
 ## 1. Creating a new entity
 When you create a new signer (entity / person), ESE generates a public key, private key and a corresponding blockchain address. To create a new signer, use `get /api/v1/create_entity`. The output will be the blockchain address of the newly created signer.
+
+![Creating a new entity](http://www.primechaintech.com/img/api_documentation/create_entity.png)
 ```
 {
-"address": "159jsk5QNbd4ox521HxsgFK1zFM8fivWJRiUBM"
+"address": "1PQ81MEXFtLMrf8iqXZm7tMqnkEDDYs71GDrot"
 }
 ```
 The private key is automatically stored in your node. This will not be visible to other nodes. If you don't want the private key stored in the node, use `get /api/v1/create_keypair `. 
-
 
 ## 2. Creating a new entity (for external key management)
 If you want to generate a public/private key pair, which is not stored in the wallet and which is ready for external key management use `get /api/v1/create_keypair `. The output will be the blockchain address, public key and private key of the newly created signer.
