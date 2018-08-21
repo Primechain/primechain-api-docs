@@ -30,6 +30,7 @@ If you want to generate a public/private key pair, which is not stored in the wa
 
 ## 3. List entities
 To get a list of entities in this node's wallet, use `get /api/v1/list_entities`
+![List entities](http://www.primechaintech.com/img/api_documentation/list_entities.png)
 ```
 {
   "list_entities": 
