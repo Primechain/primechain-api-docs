@@ -62,6 +62,13 @@ To get a list of entities in this node's wallet, use `get /api/v1/list_entities`
 ```
 ## 4. Create multisig address
 To create a pay-to-scripthash (P2SH) multisig address and add it to the wallet, use `post /api/v1/create_multisig_address`. Funds sent to this address can only be spent by transactions signed by `nrequired` of the specified keys.
+```
+{
+  "nrequired": 1,
+  "primary_address": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
+  "secondary_address": "1f2N8o6MmK1rTvf6kZKxWiCMZ84wFLWhdD2V5"  
+}
+```
 ![Create multisig address](http://www.primechaintech.com/img/api_documentation/create_multisig_address.png)
 Each key can be a full public key, or an address if the corresponding key is in the node's wallet. Output is the P2SH multisig address.
 ```
