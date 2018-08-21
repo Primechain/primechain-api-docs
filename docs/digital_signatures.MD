@@ -1,3 +1,8 @@
+# Digital Signatures
+
+1. [Signing data](#1-signing-data)
+2. [Verifying a digital signature](#2-verifying-a-digital-signature)
+
 ## 1. Signing data
 To generate a digital signature, use `post /api/v1/create_signature` and provide 2 parameters - addresss (the blockchain address of the signer) and message (the hash of the data to be signed). Example:
 ```
