@@ -6,11 +6,13 @@ To generate a digital signature, use `post /api/v1/create_signature` and provide
   "message": "c14fa6ea73269522b3362c637e9d90de39f58ac7696536019b7a3f2e0741e606"
 }
 ```
+![Signing data](http://www.primechaintech.com/img/api_documentation/create_signature.png)
+
 The output will be the digital signature:
 ```
 {
 "status": 200,
-"signature": "H0rpS5JUamrWh8tQrlMpwFmSqyoL1u4IuOYY1LuJJGdVEj48m6G2pxwlPeoZzxyH5lOXR+DS3ZbX12eMEbajLYw="
+"signature": "IK+0M1DdcCnjIzVB4j997WusLlglq3rhBFsqEsuxkOZ7XwseQR2yJQ9/eOp/h/a6lt38iTu4aYceSx1yE1oUYIs="
 }
 ```
 Note: The signature can be created only by the node containing the private key.
