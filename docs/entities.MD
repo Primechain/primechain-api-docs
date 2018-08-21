@@ -1,11 +1,14 @@
 # Entities
 
-1. [Creating a new entity](#1-creating-a-new-entity)
-2. [Creating a new entity (for external key management)](#2-creating-a-new-entity-for-external-key-management)
-3. [List entities](#3-list-entities)
-4. [Create multisig address](#4-create-multisig-address)
-5. [Grant permissions to an entity](#5-grant-permissions-to-an-entity)
+[1. Creating a new entity](#1-creating-a-new-entity)
 
+[2. Creating a new entity (for external key management)](#2-creating-a-new-entity-for-external-key-management)
+
+[3. List entities](#3-list-entities)
+
+[4. Create multisig address](#4-create-multisig-address)
+
+[5. Grant permissions to an entity](#5-grant-permissions-to-an-entity)
 
 ## 1. Creating a new entity
 When you create a new signer (entity / person), ESE generates a public key, private key and a corresponding blockchain address. To create a new signer, use `get /api/v1/create_entity`. The output will be the blockchain address of the newly created signer.
