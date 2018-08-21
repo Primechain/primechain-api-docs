@@ -12,6 +12,8 @@
 ## 1. Blockchain parameters
 Use `get /api/v1/blockchain_params` to view the blockchain parameters:
 
+![Blockchain parameters](http://www.primechaintech.com/img/api_documentation/blockchain_params.png)
+
 ```
 {
 "blockchain_params": 
@@ -90,6 +92,7 @@ Use `get /api/v1/blockchain_params` to view the blockchain parameters:
 ## 2. Runtime parameters
 To get a selection of this node's runtime parameters (these are set when the node starts up), use `get /api/v1/runtime_params`
 
+![Runtime parameters](http://www.primechaintech.com/img/api_documentation/runtime_params.png)
 ```
 {
 "runtime_params": 
@@ -121,6 +124,9 @@ To get a selection of this node's runtime parameters (these are set when the nod
 ## 3. Blockchain information
 
 Use `get /api/v1/blockchain_info` to get general information about this node and blockchain. 
+
+![Blockchain information](http://www.primechaintech.com/img/api_documentation/blockchain_info.png)
+
 ```
 {
 "blockchain_params": 
