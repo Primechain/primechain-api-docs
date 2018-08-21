@@ -81,6 +81,12 @@ Use `post /api/v1/grant_permissions` to grant 1 or more of the following 8 permi
 * ***mine***	to mine blocks
 * ***activate***	to change connect, send and receive permissions for other entities
 * ***admin***	to change all permissions for other entities, including issue, mine, activate and admin
+```
+{
+  "address": "1PQ81MEXFtLMrf8iqXZm7tMqnkEDDYs71GDrot",
+  "permission": "send,connect"
+}
+```
 ![Grant permissions to an entity](http://www.primechaintech.com/img/api_documentation/grant_permissions.png)
 The output will be the txid of the transaction in which the permissions were granted.
 ```
