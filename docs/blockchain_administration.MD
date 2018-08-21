@@ -197,8 +197,74 @@ For a list of transaction IDs which are in the node's memory pool, use `get /api
 ## 6. List blocks
 Use `get /api/v1/list_blocks` for information about the blocks specified, on the active chain only.
 
+`List blocks 10-12:`
+
+![List blocks 10 to 12](http://www.primechaintech.com/img/api_documentation/list_blocks.jpg)
 ```
+{
+"list_blocks": [
+  {
+"hash": "004968b902a48bea35aa9eaf805538b4dfc87a459d565c98d7073d2d46e0900e",
+"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
+"confirmations": 50,
+"height": 10,
+"time": 1534147156,
+"txcount": 1
+},
+  {
+"hash": "007114db4305134280f3d258cb26e3a3e3fac3a7569845f60cc559586a58e480",
+"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
+"confirmations": 49,
+"height": 11,
+"time": 1534147173,
+"txcount": 1
+},
+  {
+"hash": "007b00e2f671cdc5efbe66d19a1c63aba98ae79d9e46b97dee2fb520d2679d68",
+"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
+"confirmations": 48,
+"height": 12,
+"time": 1534147185,
+"txcount": 1
+}
+],
+}
 ```
+
+`List blocks 8, 14 and 23:`
+
+![List blocks 8, 14 and 23](http://www.primechaintech.com/img/api_documentation/list_blocks2.png)
+```
+{
+"list_blocks": [
+  {
+"hash": "007cbc3d66d76ebd2e6510cc7bbb59dad1d9e78300d678089cc6645f8c65a17a",
+"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
+"confirmations": 52,
+"height": 8,
+"time": 1534147125,
+"txcount": 1
+},
+  {
+"hash": "00291965ee0587f5d732810bba18b2384c15140d3f52e293b881557f171b2e2d",
+"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
+"confirmations": 46,
+"height": 14,
+"time": 1534147213,
+"txcount": 1
+},
+  {
+"hash": "0052fa2f3c3b6b97fda9d6685f771142afbccefde10c532e8e838ca2ad7065f1",
+"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
+"confirmations": 37,
+"height": 23,
+"time": 1534147339,
+"txcount": 1
+}
+],
+}
+```
+
 ***Note:***
 The blocks parameter can contain a comma-delimited list or array of block heights, hashes, height ranges (e.g. 100-200) or -n for the most recent n blocks. Alternatively, pass an object {"starttime":...,"endtime":...} for blocks whose timestamps are in the given range.
 
