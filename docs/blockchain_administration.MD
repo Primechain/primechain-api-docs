@@ -93,6 +93,7 @@ Use `get /api/v1/blockchain_params` to view the blockchain parameters:
 To get a selection of this node's runtime parameters (these are set when the node starts up), use `get /api/v1/runtime_params`
 
 ![Runtime parameters](http://www.primechaintech.com/img/api_documentation/runtime_params.png)
+
 ```
 {
 "runtime_params": 
@@ -121,6 +122,7 @@ To get a selection of this node's runtime parameters (these are set when the nod
   }
 }
 ```
+
 ## 3. Blockchain information
 
 Use `get /api/v1/blockchain_info` to get general information about this node and blockchain. 
@@ -185,6 +187,8 @@ Use `get /api/v1/blockchain_info` to get general information about this node and
 ## 4. Memory pool information
 The memory pool contains transactions that the node has seen and validated, but which have not yet been confirmed on the active chain. To get information about the memory pool, use `get /api/v1/mempool_info`
 
+![Memory pool information](http://www.primechaintech.com/img/api_documentation/mempool_info.png)
+
 ```
 {
   "mempool_info": 
@@ -200,10 +204,12 @@ If the memory pool is growing continuously, this suggests that transactions are 
 ## 5. Raw memory pool
 For a list of transaction IDs which are in the node's memory pool, use `get /api/v1/raw_mempool`
 
+![Memory pool information](http://www.primechaintech.com/img/api_documentation/raw_mempool.png)
+
 ## 6. List blocks
 Use `get /api/v1/list_blocks` for information about the blocks specified, on the active chain only.
 
-`List blocks 10-12:`
+***List blocks 10-12***
 
 ![List blocks 10 to 12](http://www.primechaintech.com/img/api_documentation/list_blocks.jpg)
 ```
@@ -237,7 +243,7 @@ Use `get /api/v1/list_blocks` for information about the blocks specified, on the
 }
 ```
 
-`List blocks 8, 14 and 23:`
+***List blocks 8, 14 and 23***
 
 ![List blocks 8, 14 and 23](http://www.primechaintech.com/img/api_documentation/list_blocks2.png)
 ```
@@ -270,7 +276,6 @@ Use `get /api/v1/list_blocks` for information about the blocks specified, on the
 ],
 }
 ```
-
 ***Note:***
 The blocks parameter can contain a comma-delimited list or array of block heights, hashes, height ranges (e.g. 100-200) or -n for the most recent n blocks. Alternatively, pass an object {"starttime":...,"endtime":...} for blocks whose timestamps are in the given range.
 
