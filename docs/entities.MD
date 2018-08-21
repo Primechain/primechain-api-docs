@@ -4,7 +4,7 @@
 2. [Creating a new entity (for external key management)](#2-creating-a-new-entity-for-external-key-management)
 3. [List entities](#3-list-entities)
 4. [Create multisig address](#4-create-multisig-address)
-
+5. [Grant permissions to an entity](#5-grant-permissions-to-an-entity)
 
 
 ## 1. Creating a new entity
@@ -71,3 +71,22 @@ Each key can be a full public key, or an address if the corresponding key is in 
 "redeem_script": "51210266f1068c2cd4681af9c60ca502d9cbea34bcc33a697cbe443df63d79214a011d21034cc36b3b86e632bc23e5aa7e0f28e159baee469feb43d1e4227b6706f27aedd852ae"
 }
 ```
+## 5. Grant permissions to an entity
+Use `post /api/v1/grant_permissions` to grant 1 or more of the following 8 permissions 
+* ***connect***	to connect to other nodes and see the blockchain's contents
+* ***send***	to send smart blockchain assets to other entities
+* ***receive***	to receive smart blockchain assets from other entities
+* ***issue***	to issue new smart assets
+* ***create***	to create data streams
+* ***mine***	to mine blocks
+* ***activate***	to change connect, send and receive permissions for other entities
+* ***admin***	to change all permissions for other entities, including issue, mine, activate and admin
+![Grant permissions to an entity](http://www.primechaintech.com/img/api_documentation/grant_permissions.png)
+The output will be the txid of the transaction in which the permissions were granted.
+```
+{
+"status": 200,
+"transaction_id": "049bc8fd6468c547c282740659415b9b2cd14ecba9f0eb3bd05367d3041d8063"
+}
+```
+***Note:*** Permissions can be revoked using `revoke_permission.`
