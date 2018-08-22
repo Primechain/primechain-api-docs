@@ -14,6 +14,8 @@
 
 [7. Information about the addresses in the wallet](#7-information-about-the-addresses-in-the-wallet)
 
+[8. Validate address](#8-validate-address)
+
 ## 1. Creating a new entity
 When you create a new signer (entity / person), ESE generates a public key, private key and a corresponding blockchain address. To create a new signer, use `get /api/v1/create_entity`. The output will be the blockchain address of the newly created signer.
 ![Creating a new entity](http://www.primechaintech.com/img/api_documentation/create_entity.png)
@@ -158,3 +160,16 @@ To get information about the addresses in the wallet, use `get /api/v1/listaddre
     ],
 }
 ```
+## 8. Validate address
+
+To get information about the validity of an address, including whether this node has the address's private key in its wallet, use `post /api/v1/validate_address`
+![Validate address](http://www.primechaintech.com/img/api_documentation/validate_address.png)
+```
+{
+"status": 200,
+"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+"isvalid": true,
+"ismine": true
+}
+```
+
