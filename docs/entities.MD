@@ -133,27 +133,28 @@ To get information about the addresses in the wallet, use `get /api/v1/listaddre
 ![Information about the addresses in the wallet](http://www.primechaintech.com/img/api_documentation/listaddresses.png)
 ```
 {
-"addresses": [
-  {
-"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
-"ismine": true,
-"iswatchonly": false,
-"isscript": false,
-"pubkey": "023da6a7af2a23a83dfea12d91352b39c2c20c6832fe58742db7db380e658d27c6",
-"iscompressed": true,
-"account": "",
-"synchronized": true
-},
-  {
-"address": "15p7mPvCBGKPDmGAvUX8CJH7QUPx65QFxQMfqT",
-"ismine": true,
-"iswatchonly": false,
-"isscript": false,
-"pubkey": "03509cdeb36d15287eeaa6af6bac26e468fe063855778bfbc9d8049bd9fe3d22d1",
-"iscompressed": true,
-"account": "",
-"synchronized": true
-}
-],
+  "addresses": 
+    [
+      {
+        "address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+        "ismine": true,
+        "iswatchonly": false,
+        "isscript": false,
+        "pubkey": "023da6a7af2a23a83dfea12d91352b39c2c20c6832fe58742db7db380e658d27c6",
+        "iscompressed": true,
+        "account": "",
+        "synchronized": true
+      },
+      {
+        "address": "15p7mPvCBGKPDmGAvUX8CJH7QUPx65QFxQMfqT",
+        "ismine": true,
+        "iswatchonly": false,
+        "isscript": false,
+        "pubkey": "03509cdeb36d15287eeaa6af6bac26e468fe063855778bfbc9d8049bd9fe3d22d1",
+        "iscompressed": true,
+        "account": "",
+        "synchronized": true
+      }
+    ],
 }
 ```
