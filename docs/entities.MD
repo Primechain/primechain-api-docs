@@ -10,6 +10,8 @@
 
 [5. Grant permissions to an entity](#5-grant-permissions-to-an-entity)
 
+[6. Revoke permissions to an entity](#6-revoke-permissions-to-an-entity)
+
 ## 1. Creating a new entity
 When you create a new signer (entity / person), ESE generates a public key, private key and a corresponding blockchain address. To create a new signer, use `get /api/v1/create_entity`. The output will be the blockchain address of the newly created signer.
 ![Creating a new entity](http://www.primechaintech.com/img/api_documentation/create_entity.png)
@@ -106,3 +108,20 @@ The output will be the txid of the transaction in which the permissions were gra
 }
 ```
 ***Note:*** Permissions can be revoked using `revoke_permission.`
+
+## 6. Revoke permissions to an entity
+Use `post /api/v1/revoke_permissions` to revoke the specified permissions from the specified address.
+```
+{
+  "address": "15p7mPvCBGKPDmGAvUX8CJH7QUPx65QFxQMfqT ",
+  "permission": "send,connect"
+}
+```
+![Revoke permissions to an entity](http://www.primechaintech.com/img/api_documentation/revoke_permissions.png)
+The output will be the txid of the transaction in which the permissions were revoked.
+```
+{
+"status": 200,
+"transaction_id": "5c1c23f55d145537970288fc194d01fe96f1d3aa41e8f1e0bdc468137df0c745"
+}
+```
