@@ -75,7 +75,7 @@ To create additional units of an open asset, use `post /api/v1/asset_create_more
 ```
 Output is the txid of the transaction in which the additional units were created.
 
-3. Details of a specified asset
+## 3. Details of a specified asset
 To get details of a specific asset, use `post /api/v1/asset_details` and pass the asset name or referece id as a parameter.
 ```
 {
