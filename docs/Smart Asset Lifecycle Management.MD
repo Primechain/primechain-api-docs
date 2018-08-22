@@ -4,6 +4,8 @@ A blockchain smart asset can be the digital representation of a real-world asset
 
 [1. Create a new asset](#1-create-a-new-asset)
 
+[2. Create additional units of an open asset](#2-create-additional-units-of-an-open-asset)
+
 ## 1. Create a new asset
 To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 
@@ -42,3 +44,30 @@ To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 "stream": "STREAM_107-265-45291"
 }
 ```
+
+## 2. Create additional units of an open asset
+
+To create additional units of an open asset, use `post /api/v1/asset_create_more_from`.
+
+***Note:***
+* `from_address` is the entity that creates the asset. It must have `send` permission.
+* `to_address` is the entity that receives the newly created asset. It must have `receive` permission.
+* The `from_address` and `to_address` can be the same.
+* `asset_name` refers to the name of the asset.
+* `quantity` refers to the additional quantity of the asset being issued.
+```
+{
+  "from_address": "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3",
+  "to_address": "1LkbUksHGpYNj7nedjQq1FugSkeS47pnm49DXX",
+  "asset_name": "INR-tokens",
+  "quantity": 12000
+}
+```
+![Create additional units of an open asset](http://www.primechaintech.com/img/api_documentation/asset_create_more_from.png)
+```
+{
+"status": 200,
+"transaction_id": "77d0cf12efb81084aa90b2db51dac46a72a579e8fb2f0f1956b32cd83f5930c5"
+}
+```
+Output is the txid of the transaction in which the additional units were created.
