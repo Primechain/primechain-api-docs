@@ -219,6 +219,56 @@ Use  `assets_held_by_entity` to get details of Assets held by specified entities
 }
 }
 ```
+You can also enter multiple addresses:
+```
+{
+   "address":
+  		[
+  			"1GQcJpxnkFSGXu8wi1k5mp1W11Xnt8wgLX6DXf",
+  			"15GRafetDoXFgMXRHPfPYQRG3b4vLrpeDBCZS9"
+  		]
+}
+```
+![Assets held by specified entities](http://www.primechaintech.com/img/api_documentation/assets_held_by_entity.png)
+```
+{
+"status": 200,
+"response": {
+"15GRafetDoXFgMXRHPfPYQRG3b4vLrpeDBCZS9": [
+  {
+"name": "INR-tokens",
+"assetref": "58-266-14272",
+"qty": 12
+},
+  {
+"name": "USD-tokens",
+"assetref": null,
+"qty": 43
+}
+],
+"1GQcJpxnkFSGXu8wi1k5mp1W11Xnt8wgLX6DXf": [
+  {
+"name": "USD-tokens",
+"assetref": null,
+"qty": 5057
+}
+],
+"total": [
+  {
+"name": "INR-tokens",
+"assetref": "58-266-14272",
+"qty": 12
+},
+  {
+"name": "USD-tokens",
+"assetref": null,
+"qty": 5100
+}
+],
+}
+}
+```
+
 ## 6. Transfer asset
 To send assets from one entity to another use `send_asset_from` and pass 4 parameters - `from_address`, `to_address`, `asset_name` and `quantity`.
 ```
