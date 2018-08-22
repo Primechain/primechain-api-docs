@@ -8,6 +8,8 @@ A blockchain smart asset can be the digital representation of a real-world asset
 
 [3. Details of a specified asset](#3-details-of-a-specified-asset)
 
+[4. Balances of all assets](#4-balances-of-all-assets)
+
 
 ## 1. Create a new asset
 To create a new smart asset, use `post /api/v1/create_new_asset_from`.
@@ -126,6 +128,43 @@ To get details of a specific asset, use `post /api/v1/asset_details` and pass th
 ],
 }
 ],
+}
+],
+}
+```
+
+## 4. Balances of all assets
+To get the name, asset ref and balance of all assets, use `get /api/v1/asset_balances`
+![Balances of all assets](http://www.primechaintech.com/img/api_documentation/asset_balances.png)
+
+```
+{
+"status": 200,
+"asset_balance": [
+  {
+"name": "Transaction_token",
+"assetref": "95-265-56834",
+"qty": 500000
+},
+  {
+"name": "Test_Token",
+"assetref": "84-265-60771",
+"qty": 500000
+},
+  {
+"name": "primechain_asset",
+"assetref": "60-512-53351",
+"qty": 500000
+},
+  {
+"name": "INR-tokens",
+"assetref": "107-265-45291",
+"qty": 20500
+},
+  {
+"name": "primechain_token",
+"assetref": "72-265-12278",
+"qty": 500000
 }
 ],
 }
