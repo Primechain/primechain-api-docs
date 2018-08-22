@@ -10,6 +10,11 @@ A blockchain smart asset can be the digital representation of a real-world asset
 
 [4. Balances of all assets](#4-balances-of-all-assets)
 
+[5. Assets held by specified entities](#5-assets-held-by-specified-entities)
+
+[6. Transfer asset](#6-transfer-asset)
+
+
 
 ## 1. Create a new asset
 To create a new smart asset, use `post /api/v1/create_new_asset_from`.
@@ -174,3 +179,9 @@ To get the name, asset ref and balance of all assets, use `get /api/v1/asset_bal
   ],
 }
 ```
+
+## 5. Assets held by specified entities
+
+
+## 6. Transfer asset
+
