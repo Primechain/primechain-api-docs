@@ -25,3 +25,11 @@ exports.grant = (address, stream_name) => {
 to
 exports.grant_write_permission_to_stream = (address, stream_name) => {
 ```
+
+## 3. Rename functions/grant.js
+```
+functions/grant.js
+to
+functions/grant_write_permission_to_stream.js
+```
+
