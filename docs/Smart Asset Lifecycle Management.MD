@@ -184,4 +184,20 @@ To get the name, asset ref and balance of all assets, use `get /api/v1/asset_bal
 
 
 ## 6. Transfer asset
-
+To send assets from one entity to another use `send_asset_from` and pass 4 parameters - `from_address`, `to_address`, `asset_name` and `quantity`.
+```
+{
+  "from_address": "1LkbUksHGpYNj7nedjQq1FugSkeS47pnm49DXX ",
+  "to_address": "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3",
+  "asset_name": "107-265-45291",
+  "quantity": 12
+}
+```
+![Transfer asset](http://www.primechaintech.com/img/api_documentation/send_asset_from.png)
+```
+{
+"status": 200,
+"transaction_id": "9d10f1ce34ddaf69cf387cb1b784d7bcd48b04559528b7d3b9d806264ecc27cc"
+}
+```
+The output is the txid of the transaction in which the asset was transferred.
