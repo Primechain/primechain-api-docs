@@ -229,7 +229,7 @@ You can also enter multiple addresses:
   		]
 }
 ```
-![Assets held by specified entities](http://www.primechaintech.com/img/api_documentation/assets_held_by_entity.png)
+![Assets held by specified entities](http://www.primechaintech.com/img/api_documentation/assets_held_by_entity2.png)
 ```
 {
 "status": 200,
