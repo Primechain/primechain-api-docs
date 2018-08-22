@@ -181,8 +181,44 @@ To get the name, asset ref and balance of all assets, use `get /api/v1/asset_bal
 ```
 
 ## 5. Assets held by specified entities
-
-
+Use  `assets_held_by_entity` to get details of Assets held by specified entities
+```
+{
+  "address": "15GRafetDoXFgMXRHPfPYQRG3b4vLrpeDBCZS9"
+}
+```
+![Assets held by specified entities](http://www.primechaintech.com/img/api_documentation/assets_held_by_entity.png)
+```
+{
+"status": 200,
+"response": {
+"15GRafetDoXFgMXRHPfPYQRG3b4vLrpeDBCZS9": [
+  {
+"name": "INR-tokens",
+"assetref": "58-266-14272",
+"qty": 12
+},
+  {
+"name": "USD-tokens",
+"assetref": null,
+"qty": 43
+}
+],
+"total": [
+  {
+"name": "INR-tokens",
+"assetref": "58-266-14272",
+"qty": 12
+},
+  {
+"name": "USD-tokens",
+"assetref": null,
+"qty": 43
+}
+],
+}
+}
+```
 ## 6. Transfer asset
 To send assets from one entity to another use `send_asset_from` and pass 4 parameters - `from_address`, `to_address`, `asset_name` and `quantity`.
 ```
