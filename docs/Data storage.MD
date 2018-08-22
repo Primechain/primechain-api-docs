@@ -108,7 +108,7 @@ To grant an entity write permission to a stream, use `post /api/v1/grant_write_p
 The output is the transaction_id of the transaction granting the permission.
 
 ## 4. Subscribe node to a data stream
-To subscribe a node to a data stream, use `subscribe` and pass the stream name as a parameter.
+To subscribe a node to a data stream, use `post /api/v1/subscribe` and pass the stream name as a parameter.
 ```
 {
   "stream_name": "TEST_STREAM"
@@ -123,7 +123,7 @@ The response is null
 }
 ```
 ## 5. Unsubscribe node from a data stream
-To unsubscribe a node from a data stream, use `unsubscribe` and pass the stream name as a parameter.
+To unsubscribe a node from a data stream, use `post /api/v1/unsubscribe` and pass the stream name as a parameter.
 ```
 {
   "stream_name": "TEST_STREAM"
@@ -140,5 +140,5 @@ The response is null
 
 ## 6. Write to a data stream
 
-To write to a data stream, use `write_to_stream` and pass 2 parameters - `stream`, `string'
+To write to a data stream, use `post /api/v1/write_to_stream` and pass 2 parameters - `stream`, `string'
 
