@@ -134,7 +134,7 @@ The output will be the txid of the transaction in which the permissions were rev
 
 ## 7. List permissions given to all entities
 To get a list of all permissions which have been explicitly granted to all entities, use `get /api/v1/listpermissions`. 
-![List permissions given to all entities](http://www.primechaintech.com/img/api_documentation/listaddresses.png)
+![List permissions given to all entities](http://www.primechaintech.com/img/api_documentation/listpermissions.png)
 ```
 {
 "address": [
