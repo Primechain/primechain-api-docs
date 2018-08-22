@@ -12,9 +12,11 @@
 
 [6. Revoke permissions to an entity](#6-revoke-permissions-to-an-entity)
 
-[7. Information about the addresses in the wallet](#7-information-about-the-addresses-in-the-wallet)
+[7. List permissions given to all entities](#7-list-permissions-given-to-all-entities)
 
-[8. Validate address](#8-validate-address)
+[8. Information about the addresses in the wallet](#8-information-about-the-addresses-in-the-wallet)
+
+[9. Validate address](#9-validate-address)
 
 ## 1. Creating a new entity
 When you create a new signer (entity / person), ESE generates a public key, private key and a corresponding blockchain address. To create a new signer, use `get /api/v1/create_entity`. The output will be the blockchain address of the newly created signer.
@@ -129,7 +131,74 @@ The output will be the txid of the transaction in which the permissions were rev
 "transaction_id": "5c1c23f55d145537970288fc194d01fe96f1d3aa41e8f1e0bdc468137df0c745"
 }
 ```
-## 7. Information about the addresses in the wallet
+
+## 7. List permissions given to all entities
+To get a list of all permissions which have been explicitly granted to all entities, use `get /api/v1/listpermissions`. 
+![List permissions given to all entities](http://www.primechaintech.com/img/api_documentation/listaddresses.png)
+```
+{
+"address": [
+  {
+"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+"for": null,
+"type": "mine",
+"startblock": 0,
+"endblock": 4294967295
+},
+  {
+"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+"for": null,
+"type": "admin",
+"startblock": 0,
+"endblock": 4294967295
+},
+  {
+"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+"for": null,
+"type": "activate",
+"startblock": 0,
+"endblock": 4294967295
+},
+  {
+"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+"for": null,
+"type": "connect",
+"startblock": 0,
+"endblock": 4294967295
+},
+  {
+"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+"for": null,
+"type": "send",
+"startblock": 0,
+"endblock": 4294967295
+},
+  {
+"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+"for": null,
+"type": "receive",
+"startblock": 0,
+"endblock": 4294967295
+},
+  {
+"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+"for": null,
+"type": "issue",
+"startblock": 0,
+"endblock": 4294967295
+},
+  {
+"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+"for": null,
+"type": "create",
+"startblock": 0,
+"endblock": 4294967295
+}
+],
+}
+```
+
+## 8. Information about the addresses in the wallet
 
 To get information about the addresses in the wallet, use `get /api/v1/listaddresses`. 
 ![Information about the addresses in the wallet](http://www.primechaintech.com/img/api_documentation/listaddresses.png)
@@ -160,7 +229,7 @@ To get information about the addresses in the wallet, use `get /api/v1/listaddre
     ],
 }
 ```
-## 8. Validate address
+## 9. Validate address
 
 To get information about the validity of an address, including whether this node has the address's private key in its wallet, use `post /api/v1/validate_address`
 ![Validate address](http://www.primechaintech.com/img/api_documentation/validate_address.png)
