@@ -12,6 +12,8 @@
 
 [6. Revoke permissions to an entity](#6-revoke-permissions-to-an-entity)
 
+[7. Information about the addresses in the wallet](#7-information-about-the-addresses-in-the-wallet)
+
 ## 1. Creating a new entity
 When you create a new signer (entity / person), ESE generates a public key, private key and a corresponding blockchain address. To create a new signer, use `get /api/v1/create_entity`. The output will be the blockchain address of the newly created signer.
 ![Creating a new entity](http://www.primechaintech.com/img/api_documentation/create_entity.png)
@@ -123,5 +125,35 @@ The output will be the txid of the transaction in which the permissions were rev
 {
 "status": 200,
 "transaction_id": "5c1c23f55d145537970288fc194d01fe96f1d3aa41e8f1e0bdc468137df0c745"
+}
+```
+## 7. Information about the addresses in the wallet
+
+To get information about the addresses in the wallet, use `get /api/v1/listaddresses`. 
+![Information about the addresses in the wallet](http://www.primechaintech.com/img/api_documentation/listaddresses.png)
+```
+{
+"addresses": [
+  {
+"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+"ismine": true,
+"iswatchonly": false,
+"isscript": false,
+"pubkey": "023da6a7af2a23a83dfea12d91352b39c2c20c6832fe58742db7db380e658d27c6",
+"iscompressed": true,
+"account": "",
+"synchronized": true
+},
+  {
+"address": "15p7mPvCBGKPDmGAvUX8CJH7QUPx65QFxQMfqT",
+"ismine": true,
+"iswatchonly": false,
+"isscript": false,
+"pubkey": "03509cdeb36d15287eeaa6af6bac26e468fe063855778bfbc9d8049bd9fe3d22d1",
+"iscompressed": true,
+"account": "",
+"synchronized": true
+}
+],
 }
 ```
