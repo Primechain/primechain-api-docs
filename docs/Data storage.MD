@@ -12,6 +12,7 @@ MultiChain streams enable a blockchain to be used as a general purpose append-on
 
 [5. Unsubscribe node from a data stream](#5-unsubscribe-node-from-a-data-stream)
 
+[6. Write to a data stream](#6-write-to-a-data-stream)
 
 ## 1. Create data stream
 To create a new stream on the blockchain with the specified name, use `post /api/v1/create_data_stream_from `
@@ -136,4 +137,8 @@ The response is null
 "response": null
 }
 ```
+
+## 6. Write to a data stream
+
+To write to a data stream, use `write_to_stream` and pass 2 parameters - `stream`, `string'
 
