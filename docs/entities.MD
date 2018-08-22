@@ -101,8 +101,8 @@ Use `post /api/v1/grant_permissions` to grant 1 or more of the following 8 permi
 * ***admin***	to change all permissions for other entities, including issue, mine, activate and admin
 ```
 {
-  "address": "1PQ81MEXFtLMrf8iqXZm7tMqnkEDDYs71GDrot",
-  "permission": "send,connect"
+  "address": "15p7mPvCBGKPDmGAvUX8CJH7QUPx65QFxQMfqT",
+  "permission": "connect,send,receive,issue,create,mine,activate,admin"
 }
 ```
 ![Grant permissions to an entity](http://www.primechaintech.com/img/api_documentation/grant_permissions.png)
