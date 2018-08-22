@@ -8,11 +8,26 @@ MultiChain streams enable a blockchain to be used as a general purpose append-on
 
 ## 1. Create data stream
 To create a new stream on the blockchain with the specified name, use `post /api/v1/create_data_stream_from `
+```
+{
+  "from_address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+  "type": "stream",
+  "stream_name": "TEST_STREAM",
+  "details": "This is a test data stream" 
+}
+```
+![Create data stream](http://www.primechaintech.com/img/api_documentation/create_data_stream_from.png)
 
 The output is the txid of the transaction creating the stream.
-
-Note: If open is true then anyone with global send permissions can publish to the stream, otherwise publishers must be explicitly granted per-stream write permissions.
-
+```
+{
+"status": 200,
+"transaction_id": "ddc2fc8d7ad149e0e51a5fc4765b1917a38cbddc0fe7f77a7081cfcf5486a851"
+}
+```
+***Note:*** 
+* The entity creating the stream must have `create` permission.
+* Publishers must be explicitly granted per-stream write permissions.
 
 ## 2. List data streams
 To get information about all the streams created on the blockchain, use `get /api/v1/list_data_streams`. 
