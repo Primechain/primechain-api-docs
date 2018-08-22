@@ -6,6 +6,8 @@ MultiChain streams enable a blockchain to be used as a general purpose append-on
 
 [2. List data streams](#2-list-data-streams)
 
+[3. Grant write permission to a stream](#3-grant-write-permission-to-a-stream)
+
 ## 1. Create data stream
 To create a new stream on the blockchain with the specified name, use `post /api/v1/create_data_stream_from `
 ```
@@ -81,4 +83,18 @@ To get information about all the streams created on the blockchain, use `get /ap
 ],
 }
 ```
+## 3. Grant write permission to a stream
 
+To grant an entity write permission to a stream, use `post /api/v1/grant` and provide 2 parameters - addresss (the blockchain address of the entity) and the stream name. Example:
+{
+  "address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+  "stream_name": "TEST_STREAM"
+}
+![Grant write permission to a stream](http://www.primechaintech.com/img/api_documentation/grant.png)
+```
+{
+"status": 200,
+"transaction_id": "d728a3912a7cc3935a06b026702227334ead85e61da1921fb019adadbbbecdb3"
+}
+```
+The output is the transaction_id of the transaction granting the permission.
