@@ -8,6 +8,11 @@ MultiChain streams enable a blockchain to be used as a general purpose append-on
 
 [3. Grant write permission to a stream](#3-grant-write-permission-to-a-stream)
 
+[4. Subscribe node to a data stream](#4-subscribe-node-to-a-data-stream)
+
+[5. Unsubscribe node from a data stream](#5-unsubscribe-node-from-a-data-stream)
+
+
 ## 1. Create data stream
 To create a new stream on the blockchain with the specified name, use `post /api/v1/create_data_stream_from `
 ```
@@ -98,3 +103,35 @@ To grant an entity write permission to a stream, use `post /api/v1/grant` and pr
 }
 ```
 The output is the transaction_id of the transaction granting the permission.
+
+## 4. Subscribe node to a data stream
+To subscribe a node to a data stream, use `subscribe` and pass the stream name as a parameter.
+```
+{
+  "stream_name": "TEST_STREAM"
+}
+```
+![Subscribe node to a data stream](http://www.primechaintech.com/img/api_documentation/subscribe.png)
+The response is null
+```
+{
+"status": 200,
+"response": null
+}
+```
+## 5. Unsubscribe node from a data stream
+To unsubscribe a node from a data stream, use `unsubscribe` and pass the stream name as a parameter.
+```
+{
+  "stream_name": "TEST_STREAM"
+}
+```
+![Unsubscribes node from a data stream](http://www.primechaintech.com/img/api_documentation/unsubscribe.png)
+The response is null
+```
+{
+"status": 200,
+"response": null
+}
+```
+
