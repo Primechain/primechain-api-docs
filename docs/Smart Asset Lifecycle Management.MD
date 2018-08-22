@@ -14,7 +14,7 @@ A blockchain smart asset can be the digital representation of a real-world asset
 
 [6. Transfer asset](#6-transfer-asset)
 
-
+[7. Transactions by a specified entity](#7-transactions-by-a-specified-entity)
 
 ## 1. Create a new asset
 To create a new smart asset, use `post /api/v1/create_new_asset_from`.
@@ -201,3 +201,7 @@ To send assets from one entity to another use `send_asset_from` and pass 4 param
 }
 ```
 The output is the txid of the transaction in which the asset was transferred.
+
+## 7. Transactions by a specified entity
+
+`entity_transaction_list`
