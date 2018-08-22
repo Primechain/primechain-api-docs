@@ -140,32 +140,33 @@ To get the name, asset ref and balance of all assets, use `get /api/v1/asset_bal
 ```
 {
 "status": 200,
-"asset_balance": [
-  {
-"name": "Transaction_token",
-"assetref": "95-265-56834",
-"qty": 500000
-},
-  {
-"name": "Test_Token",
-"assetref": "84-265-60771",
-"qty": 500000
-},
-  {
-"name": "primechain_asset",
-"assetref": "60-512-53351",
-"qty": 500000
-},
-  {
-"name": "INR-tokens",
-"assetref": "107-265-45291",
-"qty": 20500
-},
-  {
-"name": "primechain_token",
-"assetref": "72-265-12278",
-"qty": 500000
-}
-],
+"asset_balance": 
+  [
+    {
+      "name": "Transaction_token",
+      "assetref": "95-265-56834",
+      "qty": 500000
+    },
+    {
+      "name": "Test_Token",
+      "assetref": "84-265-60771",
+      "qty": 500000
+    },
+    {
+      "name": "primechain_asset",
+      "assetref": "60-512-53351",
+      "qty": 500000
+    },
+    {
+      "name": "INR-tokens",
+      "assetref": "107-265-45291",
+      "qty": 20500
+    },
+    {
+      "name": "primechain_token",
+      "assetref": "72-265-12278",
+      "qty": 500000
+    }
+  ],
 }
 ```
