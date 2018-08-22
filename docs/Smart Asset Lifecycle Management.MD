@@ -93,43 +93,47 @@ To get details of a specific asset, use `post /api/v1/asset_details` and pass th
 ```
 {
 "status": 200,
-"response": [
-  {
-"name": "INR-tokens",
-"issuetxid": "ebb05ee44fcafce787e7e1d318f5a69846fa27458eeff1ec1317eb5e6fcd6dd2",
-"assetref": "107-265-45291",
-"multiple": 1,
-"units": 1,
-"open": true,
-"details": {},
-"issueqty": 20500,
-"issueraw": 20500,
-"subscribed": true,
-"synchronized": true,
-"transactions": 2,
-"confirmed": 2,
-"issues": [
-  {
-"txid": "ebb05ee44fcafce787e7e1d318f5a69846fa27458eeff1ec1317eb5e6fcd6dd2",
-"qty": 8500,
-"raw": 8500,
-"details": {},
-"issuers": [
-  "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3"
-],
-},
-  {
-"txid": "77d0cf12efb81084aa90b2db51dac46a72a579e8fb2f0f1956b32cd83f5930c5",
-"qty": 12000,
-"raw": 12000,
-"details": {},
-"issuers": [
-  "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3"
-],
-}
-],
-}
-],
+"response": 
+  [
+    {
+      "name": "INR-tokens",
+      "issuetxid": "ebb05ee44fcafce787e7e1d318f5a69846fa27458eeff1ec1317eb5e6fcd6dd2",
+      "assetref": "107-265-45291",
+      "multiple": 1,
+      "units": 1,
+      "open": true,
+      "details": {},
+      "issueqty": 20500,
+      "issueraw": 20500,
+      "subscribed": true,
+      "synchronized": true,
+      "transactions": 2,
+      "confirmed": 2,
+      "issues": 
+        [
+          {
+            "txid": "ebb05ee44fcafce787e7e1d318f5a69846fa27458eeff1ec1317eb5e6fcd6dd2",
+            "qty": 8500,
+            "raw": 8500,
+            "details": {},
+            "issuers": 
+              [
+                "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3"
+              ],
+           },
+          {
+            "txid": "77d0cf12efb81084aa90b2db51dac46a72a579e8fb2f0f1956b32cd83f5930c5",
+            "qty": 12000,
+            "raw": 12000,
+            "details": {},
+            "issuers": 
+              [
+                "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3"
+              ],
+            }
+          ],
+      }
+  ],
 }
 ```
 
