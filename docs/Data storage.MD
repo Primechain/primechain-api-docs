@@ -18,6 +18,8 @@ MultiChain streams enable a blockchain to be used as a general purpose append-on
 
 [8. List stream items by publisher](#8-list-stream-items-by-publisher)
 
+[9. List keys in a specified stream](#9-list-keys-in-a-specified-stream)
+
 ## 1. Create data stream
 To create a new stream on the blockchain with the specified name, use `post /api/v1/create_data_stream_from `
 ```
@@ -165,7 +167,7 @@ To write to a data stream, use `post /api/v1/write_to_stream` and pass these par
 }
 ```
 ## 7. List stream items by key
-To list stream items by key, use `post /api/v1/list_stream_items_by_key` and pass 2 variables - `key` and `stream_name`
+To list stream items by key, use `post /api/v1/list_stream_items_by_key` and pass 2 parameters - `key` and `stream_name`
 ```
 {
 "key": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
@@ -238,7 +240,7 @@ To list stream items by key, use `post /api/v1/list_stream_items_by_key` and pas
 ```
 
 ## 8. List stream items by publisher
-To list stream items by publisher, use `post /api/v1/list_stream_items_by_publisher` and pass 2 variables - `address` and `stream_name`
+To list stream items by publisher, use `post /api/v1/list_stream_items_by_publisher` and pass 2 parameters - `address` and `stream_name`
 ```
 {
 "address": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
@@ -264,5 +266,28 @@ To list stream items by publisher, use `post /api/v1/list_stream_items_by_publis
       "txid": "579cbc75dad47d5e6c29b14bec65d2b5ebd5e703f4338a60b1f8614250772217"
     }
   ],
+}
+```
+## 9. List keys in a specified stream
+
+To list keys in a specified stream, use `post /api/v1/list_stream_keys` and pass 1 parameter - `stream_name`
+```
+{
+"stream_name": "OFFER_DETAILS_STREAM"
+}
+```
+![List keys in a specified stream](http://www.primechaintech.com/img/api_documentation/list_stream_keys.png)
+
+```
+{
+"status": 200,
+"response": [
+  {
+"key": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a"
+},
+  {
+"key": "Invoice no. 443598724"
+}
+],
 }
 ```
