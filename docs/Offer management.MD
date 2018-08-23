@@ -24,3 +24,9 @@ To create an offer, use `create_offer` and pass these parameters:
   	}
 }
 ```
+
+## 2. Reading an offer
+
+## 3. Accepting an offer
+
+## 4. Rejecting an offer
