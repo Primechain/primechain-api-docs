@@ -4,8 +4,10 @@
 
 Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
-1. [Blockchain administration](https://github.com/Primechain/primechain-api-docs/blob/master/docs/blockchain_administration.MD)
-2. [Entities](https://github.com/Primechain/primechain-api-docs/blob/master/docs/entities.MD)
-3. [Digital Signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/digital_signatures.MD)
-4. [Smart Asset Lifecycle Management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/smart_asset_lifecycle_management.MD)
-5. [Data Storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/data_storage.MD)
+1. [Blockchain administration](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD)
+2. [Entities](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD)
+3. [Digital Signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD)
+4. [Smart Asset Lifecycle Management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD)
+5. [Data Streams](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD)
+
+[Changing an end-point](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Changing%20an%20end-point.MD)
