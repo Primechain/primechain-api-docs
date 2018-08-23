@@ -140,5 +140,24 @@ The response is null
 
 ## 6. Write to a data stream
 
-To write to a data stream, use `post /api/v1/write_to_stream` and pass 2 parameters - `stream`, `string'
+To write to a data stream, use `post /api/v1/write_to_stream` and pass these parameters:
+```
+{
+  "from_address": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+  "key": "Invoice no. 443598724",
+  "value": 
+  	{ 
+    	"issue_date": "08-08-2018",
+    	"value":"USD 44,500"
+  	},
+  "stream": "OFFER_DETAILS_STREAM"
+}
+```
+![Write to a data stream](http://www.primechaintech.com/img/api_documentation/write_to_stream.png)
+```
+{
+"status": 200,
+"response": "50da4136ebf0fc608739ad97da8b57a2aad65a44d8a9b08cf42f26d2a55793d1"
+}
 
+```
