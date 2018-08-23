@@ -14,6 +14,10 @@ MultiChain streams enable a blockchain to be used as a general purpose append-on
 
 [6. Write to a data stream](#6-write-to-a-data-stream)
 
+[7. List stream items by key](#7-list-stream-items-by-key)
+
+[8. List stream items by publisher](#8-list-stream-items-by-publisher)
+
 ## 1. Create data stream
 To create a new stream on the blockchain with the specified name, use `post /api/v1/create_data_stream_from `
 ```
@@ -159,5 +163,106 @@ To write to a data stream, use `post /api/v1/write_to_stream` and pass these par
 "status": 200,
 "response": "50da4136ebf0fc608739ad97da8b57a2aad65a44d8a9b08cf42f26d2a55793d1"
 }
+```
+## 7. List stream items by key
+To list stream items by key, use `post /api/v1/list_stream_items_by_key` and pass 2 variables - `key` and `stream_name`
+```
+{
+"key": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+"stream_name": "OFFER_DETAILS_STREAM"
+}
+```
+![List stream items by key](http://www.primechaintech.com/img/api_documentation/list_stream_items_by_key.png)
+```
+{
+"status": 200,
+"response": [
+  {
+"publishers": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+"key": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+"data": "{"key1":"Hello","key2":"world","key3":"chai pilo"}",
+"confirmations": 48,
+"blockhash": "00b419fa10d1b4c7e9c0d35573fe99e12cec16cb954545754120462f1fcc3d97",
+"blockindex": 1,
+"blocktime": 1535010800,
+"txid": "579cbc75dad47d5e6c29b14bec65d2b5ebd5e703f4338a60b1f8614250772217",
+"vout": 0,
+"valid": true,
+"time": 1535010791,
+"timereceived": 1535010791
+},
+  {
+"publishers": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+"key": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+"data": "{"key1":"Hello","key2":"world"}",
+"confirmations": 48,
+"blockhash": "00b419fa10d1b4c7e9c0d35573fe99e12cec16cb954545754120462f1fcc3d97",
+"blockindex": 1,
+"blocktime": 1535010800,
+"txid": "579cbc75dad47d5e6c29b14bec65d2b5ebd5e703f4338a60b1f8614250772217",
+"vout": 0,
+"valid": true,
+"time": 1535010791,
+"timereceived": 1535010791
+},
+  {
+"publishers": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+"key": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+"data": "{"hello":"world","check_stream_data":"hex-blob"}",
+"confirmations": 48,
+"blockhash": "00b419fa10d1b4c7e9c0d35573fe99e12cec16cb954545754120462f1fcc3d97",
+"blockindex": 1,
+"blocktime": 1535010800,
+"txid": "579cbc75dad47d5e6c29b14bec65d2b5ebd5e703f4338a60b1f8614250772217",
+"vout": 0,
+"valid": true,
+"time": 1535010791,
+"timereceived": 1535010791
+},
+  {
+"publishers": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+"key": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+"data": "{"hello":"world","check_stream_data":"hex-blob"}",
+"confirmations": 48,
+"blockhash": "00b419fa10d1b4c7e9c0d35573fe99e12cec16cb954545754120462f1fcc3d97",
+"blockindex": 1,
+"blocktime": 1535010800,
+"txid": "579cbc75dad47d5e6c29b14bec65d2b5ebd5e703f4338a60b1f8614250772217",
+"vout": 0,
+"valid": true,
+"time": 1535010791,
+"timereceived": 1535010791
+}
+],
+}
+```
 
+## 8. List stream items by publisher
+To list stream items by publisher, use `post /api/v1/list_stream_items_by_publisher` and pass 2 variables - `address` and `stream_name`
+```
+{
+"address": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+"stream_name": "OFFER_DETAILS_STREAM"
+}
+```
+![List stream items by publisher](http://www.primechaintech.com/img/api_documentation/list_stream_items_by_publisher.png)
+```
+{
+  "status": 200,
+  "response": 
+  [
+    {
+      "publishers": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+      "key": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+      "data": 
+        "{
+            "issue_date":"08-08-2018",
+            "value":"USD 44,500"
+         }",
+      "confirmations": 48,
+      "blocktime": 1535010800,
+      "txid": "579cbc75dad47d5e6c29b14bec65d2b5ebd5e703f4338a60b1f8614250772217"
+    }
+  ],
+}
 ```
