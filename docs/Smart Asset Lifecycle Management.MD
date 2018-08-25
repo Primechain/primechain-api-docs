@@ -18,6 +18,7 @@ A blockchain smart asset can be the digital representation of a real-world asset
 
 ## 1. Create a new asset
 To create a new smart asset, use `post /api/v1/create_new_asset_from`.
+***Note: This may take 8 to 10 seconds.***
 
 ***Note:***
 * `from_address` is the entity that creates the asset. It must have `send` permission.
