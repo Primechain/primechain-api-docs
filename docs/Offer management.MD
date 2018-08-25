@@ -14,8 +14,8 @@ To create an offer, use `create_offer` and pass these parameters:
 * name and quantity of asset offerred in return - `offer_asset`
 ```
 {
-  "from_address": "1LcJbJWGmN59AAE7xfMk6GYW2Jsy4V8Fay2p4Q",
-  "to_address": "1LfegkhQAD6jVZ1VQ4eJMLd4Ydt3MqodbnizqV",
+  "from_address": "1LfegkhQAD6jVZ1VQ4eJMLd4Ydt3MqodbnizqV",
+  "to_address": "1LcJbJWGmN59AAE7xfMk6GYW2Jsy4V8Fay2p4Q",
   "ask_asset": {
     "silver-tokens": 40
   },
@@ -24,7 +24,7 @@ To create an offer, use `create_offer` and pass these parameters:
   }
 }
 ```
-![Creating an offer](http://www.primechaintech.com/img/api_documentation/create_offer.png)
+![Creating an offer](http://www.primechaintech.com/img/api_documentation/create_offer2.png)
 The output is the `transaction id` and the `hexadecimal blob` of the offer details.
 ```
 {
