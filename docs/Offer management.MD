@@ -1,6 +1,7 @@
 # Offer management
 
 [1. Creating an offer](#1-creating-an-offer)
+[2. Reading an offer](#2-reading-an-offer)
 
 ## 1. Creating an offer
 To create an offer, use `create_offer` and pass these parameters:
@@ -19,6 +20,7 @@ To create an offer, use `create_offer` and pass these parameters:
     "gold-tokens": 10
   }
 }
+![Creating an offer](http://www.primechaintech.com/img/api_documentation/create_offer.png)
 ```
 The output is the `transaction id` and the `hexadecimal blob` of the offer details.
 ```
