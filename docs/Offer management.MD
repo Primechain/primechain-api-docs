@@ -4,6 +4,8 @@
 
 [2. Reading an offer](#2-reading-an-offer)
 
+[3. Accepting an offer](#3-accepting-an-offer)
+
 ## 1. Creating an offer
 To create an offer, use `create_offer` and pass these parameters:
 * address of the entity making the offer - `from_address`, 
