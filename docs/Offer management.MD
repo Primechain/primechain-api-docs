@@ -1,16 +1,16 @@
 # Offer management
 
-[1. Creating an offer](#1-creating-an-offer)
+[1. Create an offer](#1-create-an-offer)
 
-[2. Reading an offer](#2-reading-an-offer)
+[2. Read an offer](#2-read-an-offer)
 
-[3. Accepting an offer](#3-accepting-an-offer)
+[3. Accept an offer](#3-accept-an-offer)
 
-[4. Rejecting an offer](#4-rejecting-an-offer)
+[4. Reject an offer](#4-reject-an-offer)
 
-[5. Cancelling an offer](#5-cancelling-an-offer)
+[5. Cancel an offer](#5-cancel-an-offer)
 
-## 1. Creating an offer
+## 1. Create an offer
 To create an offer, use `create_offer` and pass these parameters:
 * address of the entity making the offer - `from_address`, 
 * address of the entityto whom the offer is made - `to_address`, 
@@ -39,7 +39,7 @@ The output is the `transaction id` and the `hexadecimal blob` of the offer detai
 }
 ```
 
-## 2. Reading an offer
+## 2. Read an offer
 To interpret an offer, use `read_offer` and pass the hex blob:
 ```
 {
@@ -78,7 +78,7 @@ To interpret an offer, use `read_offer` and pass the hex blob:
 }
 }
 ```
-## 3. Accepting an offer
+## 3. Accept an offer
 To accept an offer, use `accept_offer` and pass 3 parameters - `from_address`, `hex_blob`, `ask_asset` and `offer_asset`
 ```
 {
@@ -100,7 +100,7 @@ To accept an offer, use `accept_offer` and pass 3 parameters - `from_address`, `
 }
 ```
 
-## 4. Rejecting an offer
+## 4. Reject an offer
 To reject an offer, use `reject_offer` and pass the `txid` of the offer as a parameter.
 ```
 {
@@ -115,6 +115,17 @@ To reject an offer, use `reject_offer` and pass the `txid` of the offer as a par
 }
 ```
 
-## 5. Cancelling an offer
-
-
+## 5. Cancel an offer
+To cancel an offer, use `cancel_offer` and pass the `txid` of the offer as a parameter.
+```
+{
+"tx_id": "2de5443596eae41a9b46ac41043e8d9c978da54b1bbde4715b872f4794ed1c24"
+}
+```
+![Cancel an offer](http://www.primechaintech.com/img/api_documentation/cancel_offer.png)
+```
+{
+"status": 200,
+"response": true
+}
+```
