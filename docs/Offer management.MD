@@ -6,6 +6,10 @@
 
 [3. Accepting an offer](#3-accepting-an-offer)
 
+[4. Rejecting an offer](#4-rejecting-an-offer)
+
+[5. Cancelling an offer](#5-cancelling-an-offer)
+
 ## 1. Creating an offer
 To create an offer, use `create_offer` and pass these parameters:
 * address of the entity making the offer - `from_address`, 
@@ -97,3 +101,20 @@ To accept an offer, use `accept_offer` and pass 3 parameters - `from_address`, `
 ```
 
 ## 4. Rejecting an offer
+To reject an offer, use `reject_offer` and pass the `txid` of the offer as a parameter.
+```
+{
+  "tx_id": "2b36fe1ee137155a561e0df4f26af422ef7853c564dd0815b754eaaa3942ab2b"
+}
+```
+![Rejecting an offer](http://www.primechaintech.com/img/api_documentation/reject_offer.png)
+```
+{
+"status": 200,
+"response": true
+}
+```
+
+## 5. Cancelling an offer
+
+
