@@ -102,7 +102,7 @@ Use `post /api/v1/grant_permissions` to grant 1 or more of the following 8 permi
 ```
 {
   "address": "15p7mPvCBGKPDmGAvUX8CJH7QUPx65QFxQMfqT",
-  "permission": "connect,send,receive,issue,create,mine,activate,admin"
+  "permission": "connect,send,receive,issue,create,activate,admin"
 }
 ```
 ![Grant permissions to an entity](http://www.primechaintech.com/img/api_documentation/grant_permissions.png)
