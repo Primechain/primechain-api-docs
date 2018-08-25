@@ -24,7 +24,8 @@ To create an offer, use `create_offer` and pass these parameters:
   }
 }
 ```
-![Creating an offer](http://www.primechaintech.com/img/api_documentation/create_offer3.png)
+![Creating an offer](http://www.primechaintech.com/img/api_documentation/create_offer4.png)
+
 The output is the `transaction id` and the `hexadecimal blob` of the offer details.
 ```
 {
