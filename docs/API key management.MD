@@ -4,7 +4,7 @@
 [1. Create a new API key](#1-create-a-new-api-key)
 
 
-1. Create a new API key
+### 1. Create a new API key
 To create a new api key, use `get_api_key` and pass 4 parameters - `first_name`, `last_name`, `email`, `phone` and `company_name`.
 ```
 {
