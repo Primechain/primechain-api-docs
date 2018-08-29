@@ -24,8 +24,10 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 8. [Information about the addresses in the wallet](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#8-information-about-the-addresses-in-the-wallet)
 9. [Validate address](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#9-validate-address)
 
-
 ## 3. [Digital Signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD)
+1. [Signing data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#1-signing-data)
+2. [Verifying a digital signature](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#2-verifying-a-digital-signature)
+
 ## 4. [Smart Asset Lifecycle Management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD)
 ## 5. [Data Streams](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD)
 
