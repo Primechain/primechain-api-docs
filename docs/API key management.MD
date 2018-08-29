@@ -15,7 +15,8 @@ To create a new api key, use `get_api_key` and pass 4 parameters - `first_name`,
   "company_name": "Primechain Technologies"
 }
 ```
-![Create a new API key](http://www.primechaintech.com/img/sawtooth/get_api_key.png)
+![Create a new API key](http://www.primechaintech.com/img/api_documentation/get_api_key.png)
+
 ```
 {
 "status": 200,
