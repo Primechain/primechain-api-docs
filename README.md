@@ -4,6 +4,8 @@
 
 Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
+***Note:*** Remember to pass the [API key](https://github.com/Primechain/primechain-api-docs/blob/master/docs/API%20key%20management.MD#2-passing-the-api-key) in the Authorization header. 
+
 ## 1. [Blockchain administration](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD)
 1. [Blockchain parameters](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD#1-blockchain-parameters)
 2. [Runtime parameters](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD#2-runtime-parameters)
