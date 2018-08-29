@@ -38,5 +38,16 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 7. [Transactions by a specified entity](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transactions-by-a-specified-entity)
 
 ## 5. [Data Streams](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD)
+1. Create data stream](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#1-create-data-stream)
+2. [List data streams](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#2-list-data-streams)
+3. [Grant write permission to a stream](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#3-grant-write-permission-to-a-stream)
+4. [Subscribe node to a data stream](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#4-subscribe-node-to-a-data-stream)
+5. [Unsubscribe node from a data stream](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#5-unsubscribe-node-from-a-data-stream)
+6. [Write to a data stream](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#6-write-to-a-data-stream)
+7. [List stream items by key](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#7-list-stream-items-by-key)
+8. [List stream items by publisher](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#8-list-stream-items-by-publisher)
+9. [List keys in a specified stream](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#9-list-keys-in-a-specified-stream)
 
+
+## Others
 [Changing an end-point](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Changing%20an%20end-point.MD)
