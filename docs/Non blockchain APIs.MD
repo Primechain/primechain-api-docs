@@ -2,6 +2,9 @@
 
 [1. Create passwords](#1-create-passwords)
 
+[2. Get UUID](#2-get-uuid)
+
+
 ## 1. Create passwords
 To get a list of random passwords, use `get /api/v1/get_password`
 ![Search](http://www.primechaintech.com/img/api_documentation//get_password2.png)
@@ -17,3 +20,13 @@ To get a list of random passwords, use `get /api/v1/get_password`
 "complex_40_character": "kF1BWmtpags2S8r^CQljaMxIQuoFbZ9g-Wp8z&pr"
 }
 ```
+
+## 2. Get UUID
+To get a universally unique identifier (UUID), use `get /api/v1/uuid`
+![Get UUID](http://www.primechaintech.com/img/api_documentation/uuid.png)
+```
+{
+"uuid": "6a349f26-b2fa-4bca-9ee0-90e5f607446e"
+}
+```
+
