@@ -60,3 +60,4 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 ## Others
 1. [Changing an end-point](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Changing%20an%20end-point.MD)
 2. [API key management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/API%20key%20management.MD)
+3. [Non blockchain APIs](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Non%20blockchain%20APIs.MD)
