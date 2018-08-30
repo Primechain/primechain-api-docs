@@ -58,4 +58,5 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 5. [Cancel an offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#5-cancel-an-offer)
 
 ## Others
-[Changing an end-point](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Changing%20an%20end-point.MD)
+1. [Changing an end-point](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Changing%20an%20end-point.MD)
+2. [API key management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/API%20key%20management.MD)
