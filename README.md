@@ -29,6 +29,7 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 ## 3. [Digital Signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD)
 1. [Signing data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#1-signing-data)
 2. [Verifying a digital signature](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#2-verifying-a-digital-signature)
+3. [Sign and store signature](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#3-sign-and-store-signature)
 
 ## 4. [Data Streams](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD)
 1. [Create data stream](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#1-create-data-stream)
