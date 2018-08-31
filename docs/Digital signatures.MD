@@ -51,7 +51,7 @@ Note: The signature can be verified by any node.
 
 ## 3. Sign and store signature 
 
-To sign data and store the signature in the data stream, use `post /api/v1/create_save_signature`.
+To sign data and store the signature in the `SIGNATURE_MASTERLIST` data stream, use `post /api/v1/create_save_signature`.
 ```
 {
   "from_address": "1Z4yPEPFyuLED67NmdgmhHbumqZpP6M79WQcv3",
