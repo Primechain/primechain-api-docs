@@ -8,7 +8,7 @@ To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_data` and pas
 ```
 {
   "address":"1b8yZEFmK2HSTKUm1rgKUDABPAq8CGRJYQWW2k",
-  file:<your file>
+  "file":"<your file>"
 }
 ```
 ![Encrypt, sign and upload data](http://www.primechaintech.com/img/api_documentation/encrypt_sign_store_data.png)
