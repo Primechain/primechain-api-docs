@@ -28,7 +28,7 @@ The output contains:
 ```
 
 ## 2. Decrypt and download data
-To decrypt and download a file, use `get /api/v1/decrypt_download_data` and pass these values:
+To decrypt and download a file, use `post /api/v1/decrypt_download_data` and pass these values:
 * The blockchain address using which the file was signed
 * The transaction id of the transaction in which the dats was stored on the blockchain
 * The AES decryption key data - password and iv
@@ -40,3 +40,6 @@ To decrypt and download a file, use `get /api/v1/decrypt_download_data` and pass
   "iv": "Q68wBhkE9bwg"
 }
 ```
+![Decrypt and download data](http://www.primechaintech.com/img/api_documentation/decrypt_download_data.png)
+
+The file will get downloaded.
