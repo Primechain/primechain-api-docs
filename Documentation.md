@@ -58,6 +58,12 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 4. [Reject an offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#4-reject-an-offer)
 5. [Cancel an offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#5-cancel-an-offer)
 
+# 7. [Encrypted data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD)
+
+1. [Encrypt, sign and upload data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#1-encrypt-sign-and-upload-data)
+2. [Decrypt and download data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-decrypt-and-download-data)
+
+
 ## Others
 1. [Changing an end-point](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Changing%20an%20end-point.MD)
 2. [API key management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/API%20key%20management.MD)
