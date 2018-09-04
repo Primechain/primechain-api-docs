@@ -1,4 +1,4 @@
-# Encrypted data storage.MD
+# Encrypted data storage
 
 1. [Encrypt, sign and upload data](#1-encrypt-sign-and-upload-data)
 2. [Decrypt and download data](#2-decrypt-and-download-data)
