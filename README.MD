@@ -1,5 +1,7 @@
 # Primechain API
 
+[![Electronic Signature Engine](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
+
 Primechain APIs make it very simple for developers to add blockchain power to their code - smart asset lifecycle management, electronic signatures, encrypted data storage & more.
 
 ![Primechain-API](http://www.primechaintech.com/images/projects/api-github.png)
