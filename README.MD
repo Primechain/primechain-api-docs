@@ -23,8 +23,7 @@ Blockchain is a world-changing technology, but it suffers from some pain points:
 Primechain APIs make it very simple for developers to add blockchain power to their code - smart asset lifecycle management, electronic signatures, encrypted data storage & more.
 
 ## 2. Documentation
-Prmechain API documentation is available at: 
-
+Prmechain API documentation is available at:    
 https://github.com/Primechain/primechain-api-docs/blob/master/Documentation.md
 
 ## 3. Demo server
@@ -43,5 +42,5 @@ In both options, the data is stored 100% on your servers (on-cloud / on-premise)
 Primechain API are developed and maintained by [Primechain™ Technologies Pvt. Ltd.](http://www.primechaintech.com), a blockchain startup with the mission of building blockchains for a better world. We operate the Bankchain community of banks and maintain the Blockchain Security Controls. We also operate the Autonomous Blockchain for Corporate Data (Primechain-A.B.C.D.).
 
 ## 6. Use cases
-A partial list of Primechain-API use cases is at:
+A partial list of Primechain-API use cases is at:   
 https://github.com/Primechain/primechain-api-docs/blob/master/use-cases.MD
