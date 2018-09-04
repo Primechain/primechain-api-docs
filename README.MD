@@ -20,7 +20,7 @@ Blockchain is a world-changing technology, but it suffers from some pain points:
 3.	Building blockchain solutions from the ground up is very expensive and time consuming.
 4. There is a severe shortage of skilled blockchain developers.
  
-Primechain APIs enable developers to add blockchain power to their code in minutes. 
+Primechain APIs make it very simple for developers to add blockchain power to their code - smart asset lifecycle management, electronic signatures, encrypted data storage & more.
 
 ## 2. Documentation
 Prmechain API documentation is available at: 
