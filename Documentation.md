@@ -1,6 +1,6 @@
 # Primechain API Documentation
 
-[![Primechain-API](https://img.shields.io/badge/Built%20on-Primechain--API-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Built by Primechain](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 
 Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
@@ -58,7 +58,7 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 4. [Reject an offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#4-reject-an-offer)
 5. [Cancel an offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#5-cancel-an-offer)
 
-# 7. [Encrypted data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD)
+## 7. [Encrypted data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD)
 
 1. [Encrypt, sign and upload data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#1-encrypt-sign-and-upload-data)
 2. [Decrypt and download data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-decrypt-and-download-data)
