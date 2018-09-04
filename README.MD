@@ -28,8 +28,7 @@ Prmechain API documentation is available at:
 https://github.com/Primechain/primechain-api-docs/blob/master/Documentation.md
 
 ## 3. Demo server
-You can use [Advanced Rest Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) (see sample screenshot below) or [Postman](https://www.getpostman.com/) to explore the various API end points on `http://104.211.75.174:2512`.
-![A sample screenshot](http://www.primechaintech.com/images/api-client-github.png)
+You can use [Advanced Rest Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) to explore the various API end points on `http://104.211.75.174:2512`.
 
 ## 4. Availability
 Primechain-API is available in 2 modes:
