@@ -2,13 +2,19 @@
 
 [1. Creating a new entity](#1-creating-a-new-entity)   
 [2. Creating a new entity (for external key management)](#2-creating-a-new-entity-for-external-key-management)   
-[3. List entities](#3-list-entities)   
+[3. Creating a new entity (with RSA keys)](#3-creating-a-new-entity-with-rsa-keys)   
+
+
+
 [4. Create multisig address](#4-create-multisig-address)   
 [5. Grant permissions to an entity](#5-grant-permissions-to-an-entity)   
 [6. Revoke permissions to an entity](#6-revoke-permissions-to-an-entity)   
 [7. List permissions given to all entities](#7-list-permissions-given-to-all-entities)   
 [8. Information about the addresses in the wallet](#8-information-about-the-addresses-in-the-wallet)   
 [9. Validate address](#9-validate-address)   
+
+[10. List entities](#10-list-entities)   
+
 
 ## 1. Creating a new entity
 To create a new entity, use `get /api/v1/create_entity`.The following are generated:
@@ -40,34 +46,10 @@ If you want to generate a public/private key pair, which is not stored in the wa
 }
 ```
 
-## 3. List entities
-To get a list of entities in this node's wallet, use `get /api/v1/list_entities`
-```
-{
- "status": 200,
- "primechain_adress": 
-  [
-   "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-   "1af89TzR7d7N3pqtKrfzQFxz9MYuNvpt2iFBmj",
-   "1B14GaGb9KQYy7poHQA4JvrzgRmLs6QFyX4dw6",
-   "14gtREapQns3DtYqiS6pke3sShgDmLxVQP6ZeS",
-   "1ZYxMuEUjMMaSvCPtS8i4UuLvDu57GrPGQVH7b",
-   "13ep2rhnTGiJXCNfqCiqJxw8NoCzN4eKYinSuN",
-   "1FWGDnR9evbf4HQNKfeKeYKxRagwckH4Kemsxs",
-   "18ZmXBoXpyAUJyGMPJuSK6jxMSvZaqto8E1PzK",
-   "1F3Kftk57XJeQsF4jQqURidqZZcQY7UbVMtMcz",
-   "1DxwNEoAwyeQszLptyYGJyEN413mzEn4MV9eSR",
-   "1E8HozfDmmzemad8TbmL8MnPVpc5TnSEpRzNRD",
-   "1C6ecGod2vqP85w8SRW1nquqn8HiynL9jjYzuP",
-   "1X3GYYdmtrdZvv99HACeFMNre26w1EiVxNqrJ7",
-   "1Xnvg8LsdHJfruJhcQcxrorjmgLEe5sBb9evkr",
-   "1Lh4NnTmU4HFx6uN2nkPfWtbNQNT1sqDuwSMcM",
-   "1Miao2swgemhAjZNjmmjb3Tv8aGM9DifbxbBKX",
-   "1JUoybWwFsYT16K1rpm35SY8tJ8Y3er7dkjZ5D",
-   "15AnXVteaDaTb1wBstqxaXN2ixCEereugw7acE"
- ],
-}
-```
+## 3. Creating a new entity (with RSA keys)
+
+
+
 ## 4. Create multisig address
 To create a pay-to-scripthash (P2SH) multisig address and add it to the wallet, use `post /api/v1/create_multisig_address`. Funds sent to this address can only be spent by transactions signed by `nrequired` of the specified keys.
 ```
@@ -239,3 +221,8 @@ To get information about the validity of an address, including whether this node
 }
 ```
 
+## 10. List entities
+To get a list of entities in this node's wallet, use `get /api/v1/list_entities`
+```
+
+```
