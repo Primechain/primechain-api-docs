@@ -206,7 +206,7 @@ For a list of transaction IDs which are in the node's memory pool, use `get /api
 ```
 
 ## 6. List blocks
-Use `get /api/v1/list_blocks` for information about the blocks specified, on the active chain only.
+Use `post /api/v1/list_blocks` for information about the blocks specified, on the active chain only.
 
 ***List blocks 10 to 12***
 
