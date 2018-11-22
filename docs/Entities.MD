@@ -97,16 +97,15 @@ Use `post /api/v1/grant_permissions` to grant 1 or more of the following 8 permi
 * ***admin***	to change all permissions for other entities, including issue, mine, activate and admin
 ```
 {
-  "address": "15p7mPvCBGKPDmGAvUX8CJH7QUPx65QFxQMfqT",
-  "permission": "connect,send,receive,issue,create,activate,admin"
+  "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+  "permission": "send,receive"
 }
 ```
-![Grant permissions to an entity](http://www.primechaintech.com/img/api_documentation/grant_permissions.png)
 The output will be the txid of the transaction in which the permissions were granted.
 ```
 {
-"status": 200,
-"transaction_id": "049bc8fd6468c547c282740659415b9b2cd14ecba9f0eb3bd05367d3041d8063"
+ "status": 200,
+ "transaction_id": "39ecbdc585812403cf7591449b71ae39ced68b044c9e8f2a969ba02cd5ac25ee"
 }
 ```
 ***Note:*** Permissions can be revoked using `revoke_permission.`
@@ -119,7 +118,6 @@ Use `post /api/v1/revoke_permissions` to revoke the specified permissions from t
   "permission": "send,connect"
 }
 ```
-![Revoke permissions to an entity](http://www.primechaintech.com/img/api_documentation/revoke_permissions.png)
 The output will be the txid of the transaction in which the permissions were revoked.
 ```
 {
@@ -130,7 +128,6 @@ The output will be the txid of the transaction in which the permissions were rev
 
 ## 7. List permissions given to all entities
 To get a list of all permissions which have been explicitly granted to all entities, use `get /api/v1/listpermissions`. 
-![List permissions given to all entities](http://www.primechaintech.com/img/api_documentation/listpermissions.png)
 ```
 {
 "address": [
@@ -228,7 +225,6 @@ To get information about the addresses in the wallet, use `get /api/v1/listaddre
 ## 9. Validate address
 
 To get information about the validity of an address, including whether this node has the address's private key in its wallet, use `post /api/v1/validate_address`
-![Validate address](http://www.primechaintech.com/img/api_documentation/validate_address.png)
 ```
 {
 "status": 200,
