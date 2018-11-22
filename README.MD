@@ -29,7 +29,7 @@ Prmechain API documentation is available at:
 https://github.com/Primechain/primechain-api-docs/blob/master/Documentation.md
 
 ## 3. Demo server
-You can use [Advanced Rest Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) to explore the various API end points on `http://104.211.75.174:2512` with this API key `PT-ixv-p5Q964m16%xESmy7w2B&g2keqAaZh3%QzklGkCQS4bKSR-SRjX&Zl*VSj%sL`
+You can use [Advanced Rest Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) to explore the various API end points on `http://103.83.192.43:2512/api/v1/`
 
 ![Demo server](http://www.primechaintech.com/img/api_documentation/screenshot_sample.png)
 
