@@ -3,16 +3,12 @@
 [1. Creating a new entity](#1-creating-a-new-entity)   
 [2. Creating a new entity (for external key management)](#2-creating-a-new-entity-for-external-key-management)   
 [3. Creating a new entity (with RSA keys)](#3-creating-a-new-entity-with-rsa-keys)   
-
-
-
 [4. Create multisig address](#4-create-multisig-address)   
 [5. Grant permissions to an entity](#5-grant-permissions-to-an-entity)   
 [6. Revoke permissions to an entity](#6-revoke-permissions-to-an-entity)   
 [7. List permissions given to all entities](#7-list-permissions-given-to-all-entities)   
 [8. Information about the addresses in the wallet](#8-information-about-the-addresses-in-the-wallet)   
 [9. Validate address](#9-validate-address)   
-
 [10. List entities](#10-list-entities)   
 
 
@@ -32,7 +28,7 @@ To create a new entity, use `get /api/v1/create_entity`.The following are genera
 The private key is automatically stored in your node. This will not be visible to other nodes. If you don't want the private key stored in the node, use `get /api/v1/create_keypair`. 
 
 ## 2. Creating a new entity (for external key management)
-If you want to generate a public/private key pair, which is not stored in the wallet and which is ready for external key management use `get /api/v1/create_keypair`. The output will be the blockchain address, public key and private key of the newly created signer.
+If you want to generate a public/private key pair, which is not stored in the wallet and which is ready for external key management use `get /api/v1/create_keypair`. The output will be the primechain address, public key and private key of the newly created signer.
 
 ```
 {
@@ -47,8 +43,27 @@ If you want to generate a public/private key pair, which is not stored in the wa
 ```
 
 ## 3. Creating a new entity (with RSA keys)
+If you want to generate a public/private key pair along with an RSA key pair, use `get /api/v1/create_entity_rsa`. The output will be the:
+* primechain address
+* primechain public key
+* primechain private key
+* RSA private key (this is also stored in the RSA_MASTERLIST data stream)   
+* RSA public key
 
-
+```
+{
+ "status":200,
+ "response":   
+  {
+    "primechain_address":"1CAWXRnYRuteZ6L2LTEgCBZhUaDCppDG8CmGMJ",
+    "primechain_privkey":"VDFNDcRuzdBaEKNFWgRfu5aiZBeqtRit9TW4dM4GCh61JECsV4e8B1B7",
+    "primechain_pubkey":"02d7afe9af7402a43419dea57b8eb7735d6de95d147835da1e290c8b42e07b3180",
+    "rsa_privkey":"-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC28MoHm4q9uPey\nkyUrCy3FlYEoTEDCb86TTDHT7PEI6ujQYpubSjbLJsuu2dCNEeNi7Gm5zd2phszS\nHcUNRam63Y9GYAdczgUcMB4/oRrWYINLthV1G07PljlFM9YzwjHADV0iqLZP3QPe\npwtMqLJf/kR/pht3xJ6Qh2DH7DuTGEjmnhpvUNCMHtrdG8t68Imq1QRqQPFtvjZP\nkNa0NQpTgD0O8niVxdN3vwWYSQVTDrPvSa9yHMdjSJUjNDJUzfdyqm/c57L8OxAJ\nQanuToKuxLy/fPJeCzjfZOzY/mdH6MdYwnviOWmoj5xOd3acfiSGBMjvjPrwrArk\nuDWSsUiNAgMBAAECggEAO+3DcRyOJbqbQh+b9G7UDr78MZRRPqDb3jr+s7sR9ubl\nX6Z97TAxpPlPjjcCb8QlZjmmJN0AuVFUdZyU+dURVgrQrbA1mTxQRjypHBUNsp6p\nRDsg6l0Iw04l8rqZeBksrQpzsS/tkVoIs36rX/B/hpzIGbzzkJeTjisbFEMZ/QRQ\nyPfRD9ykd6jxKuzX1+kq/xloo4dzJ6/PiRJFTVTKTG5VeEsgxcPh0R37WWQizQMK\nzSc6wgHspSVcYhe6kCoRQVI42vQkhLJnAN4LxQvkunRVhrT7zmAFRmV6XSONV9ne\nrYR3l7ExIDzI8/3Wb1ilqfo7ssSJ+q4MHwSuT4NpbQKBgQDbKn69pcTF5nMt94bs\nfog5oB0+G19Ccn4q667+mu4cLhHbalzXF9on9SCWcf/LfOArOSbZDDp1gCTKU+sW\n4kCzqwRi1TvGCzRRrKBTnAreLx9Baz76QKOnXGGXVu5R6D1iTBCVqyNzy9+a3X/K\n32lxelj5hWjazWXzRD+ZmH66rwKBgQDVr7bVttFUOkPFLQ4MFgtXTO2ORvZ+tfWQ\nQCvvvLh29iTxDzD9c80T2MLwv7hwu9fY+IFx5fQUQBm+6niqN4H6wGq53mPfxGg0\nEvM/pwNo5cCY+Nlh+S5WKQMoc4Ehe94dJGkNn2anRtNbyA1bF97Zh4RMISaDbYBe\nOqQd3XCPgwKBgQCftdHyRbClPpBEuRKbmIGQ7LsinTPH6kNC58j4RNKrum7M5C+P\nlxQk9h6vQ5fSI8f/93/1v1GCesVUo963KF1aEI/7rcQHR/byZcfX5eiNjO1L8OlN\n2Hjp5wo/DNxS19iTnzaeur31DmZ+JleP8UqXpT7dZnjIqdFXey6VsWj4hQKBgAHt\nTrnIp0SaLehGSr0jKcEEyZOh4jEsVOWTHpJP4l34REcEOw3eEHhgWQmwwOoLV5v2\nSbyMNVJFbbYCCUqHq51mRNAeSEpJTCNEFHt7dxVoFP+MJvGyPI+8WPHxcLWrl0ot\n/OCJknRpuBg4yp4KrhDKHxBMsDs5LpIq9zXpvE0fAoGARpEc3Z0WciBr2v94aFGm\ne/78DLEhyaCT13DAvzx1fgGwXobocbECzYSvjrwcYN19MOs7XDqeXWaPkP3tLwr2\naaNe9xDyUxDQObJuTmef+Fjj+6iNQRiPAQdCjcNNH64tg39ubc0qNOMHE4rvM9rW\njh88H0YIlvbayBocGik4Qs0=\n-----END PRIVATE KEY-----",
+    "rsa_pubkey":"-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtvDKB5uKvbj3spMlKwst\nxZWBKExAwm/Ok0wx0+zxCOro0GKbm0o2yybLrtnQjRHjYuxpuc3dqYbM0h3FDUWp\nut2PRmAHXM4FHDAeP6Ea1mCDS7YVdRtOz5Y5RTPWM8IxwA1dIqi2T90D3qcLTKiy\nX/5Ef6Ybd8SekIdgx+w7kxhI5p4ab1DQjB7a3RvLevCJqtUEakDxbb42T5DWtDUK\nU4A9DvJ4lcXTd78FmEkFUw6z70mvchzHY0iVIzQyVM33cqpv3Oey/DsQCUGp7k6C\nrsS8v3zyXgs432Ts2P5nR+jHWMJ74jlpqI+cTnd2nH4khgTI74z68KwK5Lg1krFI\njQIDAQAB\n-----END PUBLIC KEY-----",
+    "transaction_id":"fd73c8028fdca76d435c1c058eb4e54f8ee8a1754d61a9e8cad60aa538ea1060"
+   }
+ }
+```
 
 ## 4. Create multisig address
 To create a pay-to-scripthash (P2SH) multisig address and add it to the wallet, use `post /api/v1/create_multisig_address`. Funds sent to this address can only be spent by transactions signed by `nrequired` of the specified keys.
@@ -59,7 +74,6 @@ To create a pay-to-scripthash (P2SH) multisig address and add it to the wallet, 
   "secondary_address": "1f2N8o6MmK1rTvf6kZKxWiCMZ84wFLWhdD2V5"  
 }
 ```
-![Create multisig address](http://www.primechaintech.com/img/api_documentation/create_multisig_address.png)
 Each key can be a full public key, or an address if the corresponding key is in the node's wallet. Output is the P2SH multisig address.
 ```
 {
