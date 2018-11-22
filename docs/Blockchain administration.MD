@@ -182,10 +182,9 @@ Use `get /api/v1/blockchain_info` to get general information about this node and
 ## 4. Memory pool information
 The memory pool contains transactions that the node has seen and validated, but which have not yet been confirmed on the active chain. To get information about the memory pool, use `get /api/v1/mempool_info`
 
-![Memory pool information](http://www.primechaintech.com/img/api_documentation/mempool_info.png)
-
 ```
 {
+  "status": 200,
   "mempool_info": 
     {
       "size": 0,
@@ -199,7 +198,12 @@ If the memory pool is growing continuously, this suggests that transactions are 
 ## 5. Raw memory pool
 For a list of transaction IDs which are in the node's memory pool, use `get /api/v1/raw_mempool`
 
-![Memory pool information](http://www.primechaintech.com/img/api_documentation/raw_mempool.png)
+```
+{
+  "status": 200,
+  "raw_mempool": [],
+}
+```
 
 ## 6. List blocks
 Use `get /api/v1/list_blocks` for information about the blocks specified, on the active chain only.
