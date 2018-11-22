@@ -238,5 +238,29 @@ To get information about the validity of an address, including whether this node
 ## 10. List entities
 To get a list of entities in this node's wallet, use `get /api/v1/list_entities`
 ```
-
+{
+  "status": 200,
+  "primechain_address": 
+    [
+     "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+     "1af89TzR7d7N3pqtKrfzQFxz9MYuNvpt2iFBmj",
+     "1B14GaGb9KQYy7poHQA4JvrzgRmLs6QFyX4dw6",
+     "14gtREapQns3DtYqiS6pke3sShgDmLxVQP6ZeS",
+     "1ZYxMuEUjMMaSvCPtS8i4UuLvDu57GrPGQVH7b",
+     "13ep2rhnTGiJXCNfqCiqJxw8NoCzN4eKYinSuN",
+     "1FWGDnR9evbf4HQNKfeKeYKxRagwckH4Kemsxs",
+     "18ZmXBoXpyAUJyGMPJuSK6jxMSvZaqto8E1PzK",
+     "1F3Kftk57XJeQsF4jQqURidqZZcQY7UbVMtMcz",
+     "1DxwNEoAwyeQszLptyYGJyEN413mzEn4MV9eSR",
+     "1E8HozfDmmzemad8TbmL8MnPVpc5TnSEpRzNRD",
+     "1C6ecGod2vqP85w8SRW1nquqn8HiynL9jjYzuP",
+     "1X3GYYdmtrdZvv99HACeFMNre26w1EiVxNqrJ7",
+     "1Xnvg8LsdHJfruJhcQcxrorjmgLEe5sBb9evkr",
+     "1Lh4NnTmU4HFx6uN2nkPfWtbNQNT1sqDuwSMcM",
+     "1Miao2swgemhAjZNjmmjb3Tv8aGM9DifbxbBKX",
+     "1JUoybWwFsYT16K1rpm35SY8tJ8Y3er7dkjZ5D",
+     "15AnXVteaDaTb1wBstqxaXN2ixCEereugw7acE",
+     "1VtTz3kJvcGhnMBefhayNpzkRHqj5oudKUoXeD"
+    ],
+}
 ```
