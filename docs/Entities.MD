@@ -70,8 +70,11 @@ To create a pay-to-scripthash (P2SH) multisig address and add it to the wallet, 
 ```
 {
   "nrequired": 1,
-  "primary_address": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
-  "secondary_address": "1f2N8o6MmK1rTvf6kZKxWiCMZ84wFLWhdD2V5"  
+  "address ": [
+    "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+    "1X3GYYdmtrdZvv99HACeFMNre26w1EiVxNqrJ7",
+    "1JUoybWwFsYT16K1rpm35SY8tJ8Y3er7dkjZ5D"
+  ]
 }
 ```
 Each key can be a full public key, or an address if the corresponding key is in the node's wallet. Output is the P2SH multisig address.
