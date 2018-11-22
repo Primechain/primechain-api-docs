@@ -114,15 +114,15 @@ The output will be the txid of the transaction in which the permissions were gra
 Use `post /api/v1/revoke_permissions` to revoke the specified permissions from the specified address.
 ```
 {
-  "address": "15p7mPvCBGKPDmGAvUX8CJH7QUPx65QFxQMfqT ",
-  "permission": "send,connect"
+  "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+  "permission": "send,receive"
 }
 ```
 The output will be the txid of the transaction in which the permissions were revoked.
 ```
 {
 "status": 200,
-"transaction_id": "5c1c23f55d145537970288fc194d01fe96f1d3aa41e8f1e0bdc468137df0c745"
+"transaction_id": "1427b87f4d7b0d42bb84a0f52c068f04b99e9bc7773155280f7b26d618ac9e66"
 }
 ```
 
@@ -130,64 +130,38 @@ The output will be the txid of the transaction in which the permissions were rev
 To get a list of all permissions which have been explicitly granted to all entities, use `get /api/v1/listpermissions`. 
 ```
 {
-"address": [
-  {
-"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
-"for": null,
-"type": "mine",
-"startblock": 0,
-"endblock": 4294967295
-},
-  {
-"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
-"for": null,
-"type": "admin",
-"startblock": 0,
-"endblock": 4294967295
-},
-  {
-"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
-"for": null,
-"type": "activate",
-"startblock": 0,
-"endblock": 4294967295
-},
-  {
-"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
-"for": null,
-"type": "connect",
-"startblock": 0,
-"endblock": 4294967295
-},
-  {
-"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
-"for": null,
-"type": "send",
-"startblock": 0,
-"endblock": 4294967295
-},
-  {
-"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
-"for": null,
-"type": "receive",
-"startblock": 0,
-"endblock": 4294967295
-},
-  {
-"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
-"for": null,
-"type": "issue",
-"startblock": 0,
-"endblock": 4294967295
-},
-  {
-"address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
-"for": null,
-"type": "create",
-"startblock": 0,
-"endblock": 4294967295
-}
-],
+  "status": 200,
+  "primechain_address": 
+   [
+    {
+      "address": "13ep2rhnTGiJXCNfqCiqJxw8NoCzN4eKYinSuN",
+      "for": null,
+      "type": "send",
+      "startblock": 0,
+      "endblock": 4294967295
+     },
+     {
+      "address": "14gtREapQns3DtYqiS6pke3sShgDmLxVQP6ZeS",
+      "for": null,
+      "type": "receive",
+      "startblock": 0,
+      "endblock": 4294967295
+     },
+     {
+      "address": "16FmdRaQLPPbiNRH2ECWCXShTDiXUpjw9QUXPb",
+      "for": null,
+      "type": "send",
+      "startblock": 0,
+      "endblock": 4294967295
+     },
+     {
+      "address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+      "for": null,
+      "type": "create",
+      "startblock": 0,
+      "endblock": 4294967295
+     }
+   ],
 }
 ```
 
