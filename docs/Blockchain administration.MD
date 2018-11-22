@@ -208,68 +208,83 @@ For a list of transaction IDs which are in the node's memory pool, use `get /api
 ## 6. List blocks
 Use `get /api/v1/list_blocks` for information about the blocks specified, on the active chain only.
 
-***List blocks 10-12***
+***List blocks 10 to 12***
 
-![List blocks 10 to 12](http://www.primechaintech.com/img/api_documentation/list_blocks.jpg)
+Pass this as a parameter:
 ```
 {
-"list_blocks": [
-  {
-"hash": "004968b902a48bea35aa9eaf805538b4dfc87a459d565c98d7073d2d46e0900e",
-"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
-"confirmations": 50,
-"height": 10,
-"time": 1534147156,
-"txcount": 1
-},
-  {
-"hash": "007114db4305134280f3d258cb26e3a3e3fac3a7569845f60cc559586a58e480",
-"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
-"confirmations": 49,
-"height": 11,
-"time": 1534147173,
-"txcount": 1
-},
-  {
-"hash": "007b00e2f671cdc5efbe66d19a1c63aba98ae79d9e46b97dee2fb520d2679d68",
-"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
-"confirmations": 48,
-"height": 12,
-"time": 1534147185,
-"txcount": 1
+  "block_number":"10-12"
 }
-],
+```
+The output will be something like this:
+```
+{
+  "status": 200,
+  "list_blocks": 
+    [
+      {
+        "hash": "06bdc0dbbd7c1b0f186155ff2cd4888d35e17ac025b7225975621089402b129f",
+        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+        "confirmations": 344,
+        "height": 10,
+        "time": 1542715078,
+        "txcount": 1
+      },
+      {
+        "hash": "04d3b553930432b35e80d23c33a486b8f4e879054efb2d20a13fa5577611e55c",
+        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+        "confirmations": 343,
+        "height": 11,
+        "time": 1542715084,
+        "txcount": 1
+      },
+      {
+        "hash": "036184e6f87b07b228af79fe25c362cea452834a68c51857701fb9bfc39847da",
+        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+        "confirmations": 342,
+        "height": 12,
+        "time": 1542715094,
+        "txcount": 1
+      }
+    ],
 }
+
 ```
 
 ***List blocks 8, 14 and 23***
 
-![List blocks 8, 14 and 23](http://www.primechaintech.com/img/api_documentation/list_blocks2.png)
+Pass this as a parameter:
 ```
 {
+  "block_number":"8,14,23"
+}
+```
+The output will be something like this:
+{
+"status": 200,
 "list_blocks": [
   {
-"hash": "007cbc3d66d76ebd2e6510cc7bbb59dad1d9e78300d678089cc6645f8c65a17a",
-"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
-"confirmations": 52,
+"hash": "0905dd48268cc52657a500ac0dd5184c55bc1e7d76760ecd497eb70b68acc6d4",
+"miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"confirmations": 346,
 "height": 8,
-"time": 1534147125,
+"time": 1542715054,
 "txcount": 1
 },
   {
-"hash": "00291965ee0587f5d732810bba18b2384c15140d3f52e293b881557f171b2e2d",
-"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
-"confirmations": 46,
+"hash": "08810e8b23928846d86bb4284f95c20fd18892ffddde496a38f73c5910373d2f",
+"miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"confirmations": 340,
 "height": 14,
-"time": 1534147213,
+"time": 1542715114,
 "txcount": 1
 },
   {
-"hash": "0052fa2f3c3b6b97fda9d6685f771142afbccefde10c532e8e838ca2ad7065f1",
-"miner": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
-"confirmations": 37,
+"hash": "08d58161a636616df060d54e0ed59ffae01935ec834663630c4215231ee5fa49",
+"miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"confirmations": 331,
 "height": 23,
-"time": 1534147339,
+"time": 1542715204,
 "txcount": 1
 }
 ],
@@ -280,7 +295,6 @@ The blocks parameter can contain a comma-delimited list or array of block height
 
 ## 7. Peer info
 Use `get /api/v1/peer_info` for information about the other nodes to which this node is connected.
-```
-```
+
 ***Note:*** 
 This includes handshake and handshakelocal fields showing the remote and local address used during the handshaking for that connection.
