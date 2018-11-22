@@ -260,34 +260,36 @@ Pass this as a parameter:
 }
 ```
 The output will be something like this:
+```
 {
-"status": 200,
-"list_blocks": [
-  {
-"hash": "0905dd48268cc52657a500ac0dd5184c55bc1e7d76760ecd497eb70b68acc6d4",
-"miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-"confirmations": 346,
-"height": 8,
-"time": 1542715054,
-"txcount": 1
-},
-  {
-"hash": "08810e8b23928846d86bb4284f95c20fd18892ffddde496a38f73c5910373d2f",
-"miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-"confirmations": 340,
-"height": 14,
-"time": 1542715114,
-"txcount": 1
-},
-  {
-"hash": "08d58161a636616df060d54e0ed59ffae01935ec834663630c4215231ee5fa49",
-"miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-"confirmations": 331,
-"height": 23,
-"time": 1542715204,
-"txcount": 1
-}
-],
+  "status": 200,
+  "list_blocks": 
+    [
+      {
+        "hash": "0905dd48268cc52657a500ac0dd5184c55bc1e7d76760ecd497eb70b68acc6d4",
+        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+        "confirmations": 346,
+        "height": 8,
+        "time": 1542715054,
+        "txcount": 1
+      },
+      {
+        "hash": "08810e8b23928846d86bb4284f95c20fd18892ffddde496a38f73c5910373d2f",
+        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+        "confirmations": 340,
+        "height": 14,
+        "time": 1542715114,
+        "txcount": 1
+      },
+      {
+        "hash": "08d58161a636616df060d54e0ed59ffae01935ec834663630c4215231ee5fa49",
+        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+        "confirmations": 331,
+        "height": 23,
+        "time": 1542715204,
+        "txcount": 1
+      }
+    ],
 }
 ```
 ***Note:***
