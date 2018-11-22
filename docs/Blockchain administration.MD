@@ -91,34 +91,33 @@ Use `get /api/v1/blockchain_params` to view the blockchain parameters:
 ## 2. Runtime parameters
 To get a selection of this node's runtime parameters (these are set when the node starts up), use `get /api/v1/runtime_params`
 
-![Runtime parameters](http://www.primechaintech.com/img/api_documentation/runtime_params.png)
-
 ```
 {
-"runtime_params": 
-  {
-  "port": 61172,
-  "reindex": false,
-  "rescan": false,
-  "txindex": true,
-  "autocombineminconf": 1,
-  "autocombinemininputs": 50,
-  "autocombinemaxinputs": 100,
-  "autocombinedelay": 1,
-  "autocombinesuspend": 15,
-  "autosubscribe": "",
-  "handshakelocal": "1Cema16ostGkWi1xkBq9HUQ8deDKV53ZxHjAu1",
-  "bantx": "",
-  "lockblock": "",
-  "hideknownopdrops": false,
-  "maxshowndata": 16384,
-  "miningrequirespeers": true,
-  "mineemptyrounds": 10,
-  "miningturnover": 0.5,
-  "lockadminminerounds": 10,
-  "gen": true,
-  "genproclimit": 1
-  }
+  "status": 200,
+  "runtime_params": 
+    {
+      "port": 61172,
+      "reindex": false,
+      "rescan": false,
+      "txindex": true,
+      "autocombineminconf": 1,
+      "autocombinemininputs": 50,
+      "autocombinemaxinputs": 100,
+      "autocombinedelay": 1,
+      "autocombinesuspend": 15,
+      "autosubscribe": "",
+      "handshakelocal": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+      "bantx": "",
+      "lockblock": "",
+      "hideknownopdrops": false,
+      "maxshowndata": 16384,
+      "miningrequirespeers": false,
+      "mineemptyrounds": 10,
+      "miningturnover": 0.5,
+      "lockadminminerounds": 10,
+      "gen": true,
+      "genproclimit": 1
+     }
 }
 ```
 
@@ -126,36 +125,34 @@ To get a selection of this node's runtime parameters (these are set when the nod
 
 Use `get /api/v1/blockchain_info` to get general information about this node and blockchain. 
 
-![Blockchain information](http://www.primechaintech.com/img/api_documentation/blockchain_info.png)
-
 ```
 {
-"blockchain_params": 
-  [
+  "status": 200,
+  "blockchain_info": 
     {
       "version": "1.0.6",
       "nodeversion": 10006901,
-      "protocolversion": 10010,
+      "protocolversion": 10011,
       "chainname": "primechain-api",
       "description": "MultiChain primechain-api",
       "protocol": "multichain",
       "port": 61172,
       "setupblocks": 60,
-      "nodeaddress": "primechain-api@10.1.3.5:61172",
-      "burnaddress": "1XXXXXXXa5XXXXXXidXXXXXXPuXXXXXXRMNLPi",
+      "nodeaddress": "primechain-api@103.83.192.43:61172",
+      "burnaddress": "1XXXXXXXW1XXXXXXR8XXXXXXXEXXXXXXZmw9ZL",
       "incomingpaused": false,
       "miningpaused": false,
       "walletversion": 60000,
       "balance": 0,
       "walletdbversion": 2,
       "reindex": false,
-      "blocks": 59,
+      "blocks": 353,
       "timeoffset": 0,
       "connections": 0,
       "proxy": "",
-      "difficulty": 6e-8,
+      "difficulty": 0,
       "testnet": false,
-      "keypoololdest": 1534763559,
+      "keypoololdest": 1542802602,
       "keypoolsize": 2,
       "paytxfee": 0,
       "relayfee": 0,
@@ -166,16 +163,15 @@ Use `get /api/v1/blockchain_info` to get general information about this node and
       "protocol_": "multichain",
       "setup_blocks": 60,
       "re_index": false,
-      "blocks_": 59,
-      "headers": 59,
-      "bestblockhash": "00385c95a6be9b0bcade6404c608583e89100716485ffcf015dd3e10883ad525",
-      "difficulty_": 6e-8,
+      "blocks_": 353,
+      "headers": 353,
+      "bestblockhash": "0ed6d2931bfbbca53d9f6483b5a6bf63072ec288855383c7fc9eaf7fdbeb704e",
+      "difficulty_": 0,
       "verificationprogress": 1,
-      "chainwork": "0000000000000000000000000000000000000000000000000000000000003c00",
+      "chainwork": "0000000000000000000000000000000000000000000000000000000000001620",
       "chainrewards": 0
     }
-  ],
-}
+  }
 ```
 ***Notes:***
 1. The `bestblockhash` of the most recent block on the active chain can be compared across nodes to check if they are perfectly synchronized.
