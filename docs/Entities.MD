@@ -12,7 +12,6 @@
 
 ## 1. Creating a new entity
 When you create a new signer (entity / person), ESE generates a public key, private key and a corresponding blockchain address. To create a new signer, use `get /api/v1/create_entity`. The output will be the blockchain address of the newly created signer.
-![Creating a new entity](http://www.primechaintech.com/img/api_documentation/create_entity.png)
 ```
 {
 "address": "1PQ81MEXFtLMrf8iqXZm7tMqnkEDDYs71GDrot"
