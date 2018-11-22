@@ -132,36 +132,38 @@ To get a list of all permissions which have been explicitly granted to all entit
 {
   "status": 200,
   "primechain_address": 
-   [
+  [
     {
-      "address": "13ep2rhnTGiJXCNfqCiqJxw8NoCzN4eKYinSuN",
-      "for": null,
-      "type": "send",
-      "startblock": 0,
-      "endblock": 4294967295
-     },
-     {
-      "address": "14gtREapQns3DtYqiS6pke3sShgDmLxVQP6ZeS",
-      "for": null,
-      "type": "receive",
-      "startblock": 0,
-      "endblock": 4294967295
-     },
-     {
-      "address": "16FmdRaQLPPbiNRH2ECWCXShTDiXUpjw9QUXPb",
-      "for": null,
-      "type": "send",
-      "startblock": 0,
-      "endblock": 4294967295
-     },
-     {
       "address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-      "for": null,
-      "type": "create",
-      "startblock": 0,
-      "endblock": 4294967295
-     }
-   ],
+      "ismine": true,
+      "iswatchonly": false,
+      "isscript": false,
+      "pubkey": "0203f2047224b87a0e8fffa61a4741d13cb215e1735b16570eacb2c3729aa129aa",
+      "iscompressed": true,
+      "account": "",
+      "synchronized": true
+    },
+    {
+      "address": "1af89TzR7d7N3pqtKrfzQFxz9MYuNvpt2iFBmj",
+      "ismine": true,
+      "iswatchonly": false,
+      "isscript": false,
+      "pubkey": "0301b67565c43d7f130be061b66ed7f1160b02f72e9054ff573ddc6baac76a4a13",
+      "iscompressed": true,
+      "account": "",
+      "synchronized": true
+     },
+     {
+      "address": "1VtTz3kJvcGhnMBefhayNpzkRHqj5oudKUoXeD",
+      "ismine": true,
+      "iswatchonly": false,
+      "isscript": false,
+      "pubkey": "0326b77627f8b708d60a252b0b596588244301e15ae03fc180857e4339e38b4d89",
+      "iscompressed": true,
+      "account": "",
+      "synchronized": true
+    }
+  ],
 }
 ```
 
@@ -171,29 +173,40 @@ To get information about the addresses in the wallet, use `get /api/v1/listaddre
 ![Information about the addresses in the wallet](http://www.primechaintech.com/img/api_documentation/listaddresses.png)
 ```
 {
-  "addresses": 
-    [
-      {
-        "address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
-        "ismine": true,
-        "iswatchonly": false,
-        "isscript": false,
-        "pubkey": "023da6a7af2a23a83dfea12d91352b39c2c20c6832fe58742db7db380e658d27c6",
-        "iscompressed": true,
-        "account": "",
-        "synchronized": true
-      },
-      {
-        "address": "15p7mPvCBGKPDmGAvUX8CJH7QUPx65QFxQMfqT",
-        "ismine": true,
-        "iswatchonly": false,
-        "isscript": false,
-        "pubkey": "03509cdeb36d15287eeaa6af6bac26e468fe063855778bfbc9d8049bd9fe3d22d1",
-        "iscompressed": true,
-        "account": "",
-        "synchronized": true
-      }
-    ],
+ "status": 200,
+ "primechain_address": 
+ [
+  {
+    "address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+    "ismine": true,
+    "iswatchonly": false,
+    "isscript": false,
+    "pubkey": "0203f2047224b87a0e8fffa61a4741d13cb215e1735b16570eacb2c3729aa129aa",
+    "iscompressed": true,
+    "account": "",
+    "synchronized": true
+  },
+  {
+    "address": "1af89TzR7d7N3pqtKrfzQFxz9MYuNvpt2iFBmj",
+    "ismine": true,
+    "iswatchonly": false,
+    "isscript": false,
+    "pubkey": "0301b67565c43d7f130be061b66ed7f1160b02f72e9054ff573ddc6baac76a4a13",
+    "iscompressed": true,
+    "account": "",
+    "synchronized": true
+   },
+   {
+     "address": "1VtTz3kJvcGhnMBefhayNpzkRHqj5oudKUoXeD",
+     "ismine": true,
+     "iswatchonly": false,
+     "isscript": false,
+     "pubkey": "0326b77627f8b708d60a252b0b596588244301e15ae03fc180857e4339e38b4d89",
+     "iscompressed": true,
+     "account": "",
+     "synchronized": true
+   }
+ ],
 }
 ```
 ## 9. Validate address
