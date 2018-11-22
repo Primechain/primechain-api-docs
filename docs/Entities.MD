@@ -69,20 +69,20 @@ If you want to generate a public/private key pair along with an RSA key pair, us
 To create a pay-to-scripthash (P2SH) multisig address and add it to the wallet, use `post /api/v1/create_multisig_address`. Funds sent to this address can only be spent by transactions signed by `nrequired` of the specified keys.
 ```
 {
-  "nrequired": 1,
-  "address ": [
+  "nrequired": 2,
+  "address": [
     "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-    "1X3GYYdmtrdZvv99HACeFMNre26w1EiVxNqrJ7",
-    "1JUoybWwFsYT16K1rpm35SY8tJ8Y3er7dkjZ5D"
+    "1af89TzR7d7N3pqtKrfzQFxz9MYuNvpt2iFBmj",
+    "1B14GaGb9KQYy7poHQA4JvrzgRmLs6QFyX4dw6"
   ]
 }
 ```
 Each key can be a full public key, or an address if the corresponding key is in the node's wallet. Output is the P2SH multisig address.
 ```
 {
-"status": 200,
-"address": "47m73n8bFqbjxJiTXvNpKNekKjsQG2yf6g5B1p",
-"redeem_script": "51210266f1068c2cd4681af9c60ca502d9cbea34bcc33a697cbe443df63d79214a011d21034cc36b3b86e632bc23e5aa7e0f28e159baee469feb43d1e4227b6706f27aedd852ae"
+ "status": 200,
+ "primechain_address": "4PDTYCYWRVwkjLHCH9RCkq5csUJ7LFwMMDHjfM",
+ "redeem_script": "52210203f2047224b87a0e8fffa61a4741d13cb215e1735b16570eacb2c3729aa129aa210301b67565c43d7f130be061b66ed7f1160b02f72e9054ff573ddc6baac76a4a1321028cce374a25e5c2640c99ae5f4112f27d1ededb7e3160cafbee0592ec102b125653ae"
 }
 ```
 ## 5. Grant permissions to an entity
