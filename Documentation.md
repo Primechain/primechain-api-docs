@@ -66,6 +66,10 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
 ## 8. [Authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
 
+1. [Onboarding an entity](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD#1-onboarding-an-entity)   
+2. [Authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD#2-authentication)
+
+
 ## Others
 1. [Upgrading Primechain-API](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Upgrading%20Primechain-API.MD)
 2. [API key management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/API%20key%20management.MD)
