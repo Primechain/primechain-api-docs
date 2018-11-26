@@ -284,4 +284,103 @@ The output is the txid of the transaction in which the asset was transferred.
 
 ## 7. Transactions by a specified entity
 
-`entity_transaction_list`
+To list information about the transactions related to an address in this node’s wallet, including how they affected that address’s balance. use `entity_transaction_list` and pass the address as a parameter.
+
+```
+{
+  "primechain_address": "17Sonz7gM3ha6PvqZhRwKT7PUjA2H4TuKuRqF5"
+}
+```
+
+```
+{
+"status": 200,
+"entity_transaction_list": [
+  {
+"balance": {
+"amount": 0,
+"assets": [],
+},
+"myaddresses": [
+  "17Sonz7gM3ha6PvqZhRwKT7PUjA2H4TuKuRqF5"
+],
+"addresses": [
+  "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+],
+"permissions": [
+  {
+"for": null,
+"connect": false,
+"send": true,
+"receive": true,
+"create": false,
+"issue": false,
+"mine": false,
+"admin": false,
+"activate": false,
+"startblock": 0,
+"endblock": 4294967295,
+"timestamp": 1543234253,
+"addresses": [
+  "17Sonz7gM3ha6PvqZhRwKT7PUjA2H4TuKuRqF5"
+],
+}
+],
+"items": [],
+"data": [],
+"confirmations": 102,
+"blockhash": "0d69963b68d1e50c524daa9bf9924de6ace08fb52b8287020df4bc40c2fce3a0",
+"blockindex": 1,
+"blocktime": 1543234262,
+"txid": "3349d33772f690b16bd54bd51ce4ba6404dad9882395309198b2091bd5e0c3c4",
+"valid": true,
+"time": 1543234253,
+"timereceived": 1543234253
+},
+  {
+"balance": {
+"amount": 0,
+"assets": [
+  {
+"name": "AUTH-tokens-series-K",
+"assetref": "836-266-28088",
+"qty": 17430
+}
+],
+},
+"myaddresses": [
+  "17Sonz7gM3ha6PvqZhRwKT7PUjA2H4TuKuRqF5"
+],
+"addresses": [
+  "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9"
+],
+"permissions": [],
+"issue": {
+"name": "AUTH-tokens-series-K",
+"assetref": "836-266-28088",
+"multiple": 1,
+"units": 1,
+"open": true,
+"details": {
+"details": "These are the details of this asset."
+},
+"qty": 17430,
+"raw": 17430,
+"addresses": [
+  "17Sonz7gM3ha6PvqZhRwKT7PUjA2H4TuKuRqF5"
+],
+},
+"items": [],
+"data": [],
+"confirmations": 91,
+"blockhash": "06d4ce7fdbdb787ab294bcd781dd498e32426d7e67c0e705ce26acf62b4ce25f",
+"blockindex": 1,
+"blocktime": 1543234386,
+"txid": "b86d0c4896a06984104b2d75d7be9030b8fd1c44dab90d015e094f3e5ea660a8",
+"valid": true,
+"time": 1543234375,
+"timereceived": 1543234375
+}
+],
+}
+```
