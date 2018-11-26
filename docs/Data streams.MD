@@ -24,14 +24,12 @@ MultiChain streams enable a blockchain to be used as a general purpose append-on
 To create a new stream on the blockchain with the specified name, use `post /api/v1/create_data_stream_from `
 ```
 {
-  "from_address": "1AguXpqkeH2aZDpU5NaJ2xgp5ZoxiGgCi99c3E",
+  "from_address": "15AnXVteaDaTb1wBstqxaXN2ixCEereugw7acE",
   "type": "stream",
   "stream_name": "TEST_STREAM",
   "details": "This is a test data stream" 
 }
 ```
-![Create data stream](http://www.primechaintech.com/img/api_documentation/create_data_stream_from.png)
-
 The output is the txid of the transaction creating the stream.
 ```
 {
@@ -45,7 +43,6 @@ The output is the txid of the transaction creating the stream.
 
 ## 2. List data streams
 To get information about all the streams created on the blockchain, use `get /api/v1/list_data_streams`. 
-![List data streams](http://www.primechaintech.com/img/api_documentation/list_data_streams.png)
 ```
 {
 "stream_details": [
