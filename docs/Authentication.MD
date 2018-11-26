@@ -1,9 +1,7 @@
 # Authentication
 
-1. [Onboarding an entity](#1-onboarding-an-entity)
-
-2. [Runtime parameters](#2-runtime-parameters)
-
+[1. Onboarding an entity](#1-onboarding-an-entity)
+[2. Authentication](#2-authentication)
 
 Code-named Primechain-AUTH, this system uses the native capabilities of the multichain blockchain along with RSA based asymmetric encryption to achieve a secure password-less authentication system. This can be used to authenticate an entity (an individual, a company, a device) to an app, a website, an email account, a blockchain etc.
 
@@ -19,7 +17,7 @@ The entity uses `get /api/v1/onboard_user` to generate the following:
 
 The entity's primechain address, primechain public key, RSA public key is published to the ENTITY_MASTERLIST datastream of Primechain-MONEY. The entity's primechain private key and RSA private key is known only to the entity.
 
-## Step 2: Authentication
+## 2. Authentication
 Authentication is a 10-step process:
 1. The entity sends its primechain address to the verifier.
 2. The verifier retrieves the entity's RSA public key from the ENTITY_MASTERLIST datastream of Primechain-MONEY.
