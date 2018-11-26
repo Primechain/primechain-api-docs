@@ -2,8 +2,8 @@
 
 1. [Encrypt, sign and upload data](#1-encrypt-sign-and-upload-data)
 2. [Decrypt and download data](#2-decrypt-and-download-data)
-3. [Encrypt, sign and upload file](#1-encrypt-sign-and-upload-file)
-4. [Decrypt and download file](#2-decrypt-and-download-file)
+3. [Encrypt, sign and upload file](#3-encrypt-sign-and-upload-file)
+4. [Decrypt and download file](#4-decrypt-and-download-file)
 
 ## 1. Encrypt, sign and upload data
 To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_data` and pass the blockchain address (using which the file will be signed) and the file data.
