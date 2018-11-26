@@ -1,16 +1,15 @@
 # Offer management
 
-[1. Create an offer](#1-create-an-offer)
+[1. Create a public offer](#1-create-a-public-offer)
+[2. Create a targetted offer](#2-create-a-targetted-offer)
+
 
 [2. Read an offer](#2-read-an-offer)
-
 [3. Accept an offer](#3-accept-an-offer)
-
 [4. Reject an offer](#4-reject-an-offer)
-
 [5. Cancel an offer](#5-cancel-an-offer)
 
-## 1. Create an offer
+## 1. Create a public offer
 To create an offer, use `create_offer` and pass these parameters:
 * address of the entity making the offer - `from_address`, 
 * address of the entityto whom the offer is made - `to_address`, 
@@ -38,6 +37,8 @@ The output is the `transaction id` and the `hexadecimal blob` of the offer detai
 "offer_blob": "0100000001d5d9b15fab6b3bc833f3c77d2a43f734675cfb39190b80f2e272e797308b5e01000000006a473044022005f121a474ec0eae78f80fe0fe5bfb016e12bf59949482f5e964f43b79d00d8f022001f62a8d4785759bf62ca4acc77b9fba69fe88118ff6400e6dbbffadd82a99178321033d1196659ec9c34eaa029393a4847a84b3a6f3caa9d49626f91f60748bb0d84fffffffff0100000000000000003776a9149115494fbc2450905dd05e2c8cd28672617807c388ac1c73706b71945e564ca39292efe316cae288dddf310a000000000000007500000000"
 }
 ```
+## 2. Create a targetted offer
+
 
 ## 2. Read an offer
 To interpret an offer, use `read_offer` and pass the hex blob:
