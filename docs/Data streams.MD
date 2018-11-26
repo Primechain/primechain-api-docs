@@ -186,29 +186,30 @@ To list stream items by key, use `post /api/v1/list_stream_items_by_key` and pas
 To list stream items by publisher, use `post /api/v1/list_stream_items_by_publisher` and pass 2 parameters - `address` and `stream_name`
 ```
 {
-"address": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
-"stream_name": "OFFER_DETAILS_STREAM"
+  "address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
+  "stream_name": "TEST_STREAM"
 }
 ```
-![List stream items by publisher](http://www.primechaintech.com/img/api_documentation/list_stream_items_by_publisher.png)
 ```
 {
   "status": 200,
   "response": 
-  [
-    {
-      "publishers": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
-      "key": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
-      "data": 
-        "{
-            "issue_date":"08-08-2018",
-            "value":"USD 44,500"
-         }",
-      "confirmations": 48,
-      "blocktime": 1535010800,
-      "txid": "579cbc75dad47d5e6c29b14bec65d2b5ebd5e703f4338a60b1f8614250772217"
-    }
-  ],
+    [
+      {
+        "publishers": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
+        "key": "Invoice no. 443598724",
+        "data": "{"issue_date":"08-11-2018","value":"USD 44,500"}",
+        "confirmations": 11,
+        "blockhash": "075eaf3b5c8fd1063b18a0c02a6b67b106276aeff82bce22a4a809a199cf466e",
+        "blockindex": 1,
+        "blocktime": 1543234837,
+        "txid": "c3238398b4633d7a0be543e81b2f57cb1314f178fea2b71ae29d4423866d7fe9",
+        "vout": 0,
+        "valid": true,
+        "time": 1543234832,
+        "timereceived": 1543234832
+      }
+    ],
 }
 ```
 ## 9. List keys in a specified stream
