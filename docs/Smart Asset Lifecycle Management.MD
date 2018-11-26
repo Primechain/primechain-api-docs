@@ -174,7 +174,7 @@ To get the name, asset ref and balance of all assets, use `get /api/v1/asset_bal
 Use  `assets_held_by_entity` to get details of Assets held by specified entities
 ```
 {
-  "address": "15GRafetDoXFgMXRHPfPYQRG3b4vLrpeDBCZS9"
+  "address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk"
 }
 ```
 ```
@@ -223,45 +223,48 @@ You can also enter multiple addresses:
 {
    "address":
   		[
-  			"1GQcJpxnkFSGXu8wi1k5mp1W11Xnt8wgLX6DXf",
-  			"15GRafetDoXFgMXRHPfPYQRG3b4vLrpeDBCZS9"
+  			"1AdBvHHyknKcvUsYbQ9pPXMS2wd8oD9coY3gT7",
+  			"1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk"
   		]
 }
 ```
-![Assets held by specified entities](http://www.primechaintech.com/img/api_documentation/assets_held_by_entity2.png)
 ```
 {
 "status": 200,
 "response": {
-"15GRafetDoXFgMXRHPfPYQRG3b4vLrpeDBCZS9": [
+"1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk": [
   {
-"name": "INR-tokens",
-"assetref": "58-266-14272",
-"qty": 12
+"name": "AUTH-tokens-series-A",
+"assetref": "622-267-44590",
+"qty": 17430
 },
   {
-"name": "USD-tokens",
-"assetref": null,
-"qty": 43
-}
-],
-"1GQcJpxnkFSGXu8wi1k5mp1W11Xnt8wgLX6DXf": [
+"name": "AUTH-tokens-series-B",
+"assetref": "633-267-11748",
+"qty": 17430
+},
   {
-"name": "USD-tokens",
-"assetref": null,
-"qty": 5057
+"name": "AUTH-tokens",
+"assetref": "595-266-8935",
+"qty": 17430
 }
 ],
+"1AdBvHHyknKcvUsYbQ9pPXMS2wd8oD9coY3gT7": [],
 "total": [
   {
-"name": "INR-tokens",
-"assetref": "58-266-14272",
-"qty": 12
+"name": "AUTH-tokens-series-A",
+"assetref": "622-267-44590",
+"qty": 17430
 },
   {
-"name": "USD-tokens",
-"assetref": null,
-"qty": 5100
+"name": "AUTH-tokens-series-B",
+"assetref": "633-267-11748",
+"qty": 17430
+},
+  {
+"name": "AUTH-tokens",
+"assetref": "595-266-8935",
+"qty": 17430
 }
 ],
 }
