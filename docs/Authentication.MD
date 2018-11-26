@@ -1,4 +1,4 @@
-# Authentication
+# Password-less authentication
 
 [1. Onboarding an entity](#1-onboarding-an-entity)   
 [2. Authentication](#2-authentication)   
