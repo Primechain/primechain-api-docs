@@ -14,14 +14,14 @@ A blockchain smart asset can be the digital representation of a real-world asset
 To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 
 ***Note:***
-*  This may take 8 to 10 seconds.
-* `from_address` is the entity that creates the asset. It must have `send` permission.
-* `to_address` is the entity that receives the newly created asset. It must have `receive` permission. It must also have permissions to write to the ***ASSET_DATA_MASTERLIST***
+*  This may take 8 to 10 seconds.   
+* `from_address` is the entity that creates the asset. It must have `send`, `receive' and `issue` permissions. It must also have permissions to write to the ***ASSET_DATA_MASTERLIST***   
+* `to_address` is the entity that receives the newly created asset. It must have `receive` permission and ideally also `send` permission.   
 *  The `from_address` and `to_address` can be the same.
-*  `unit` refers to the fractions of the asset.
+*  `unit` refers to the minimum divisible quantity of the asset.
 * `asset` refers to the name of the asset.
 * `quantity` refers to the initial quantity of the asset.
-* `code` refers to any arbitrary code or category.
+* `details` refers to any details about the asset.
 * Setting `"open": "true"` will create an open asset - additional units of the asset CAN be issued in the future. 
 * Setting `"open": "false"` will create a closed asset - additional units of the asset CANNOT be issued in the future. 
 
