@@ -1,7 +1,7 @@
 # Authentication
 
-[1. Onboarding an entity](#1-onboarding-an-entity)
-[2. Authentication](#2-authentication)
+[1. Onboarding an entity](#1-onboarding-an-entity)   
+[2. Authentication](#2-authentication)   
 
 Code-named Primechain-AUTH, this system uses the native capabilities of the multichain blockchain along with RSA based asymmetric encryption to achieve a secure password-less authentication system. This can be used to authenticate an entity (an individual, a company, a device) to an app, a website, an email account, a blockchain etc.
 
