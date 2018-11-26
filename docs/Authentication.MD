@@ -1,6 +1,9 @@
 # Authentication
 
 1. [Blockchain parameters](#1-blockchain-parameters)
+
+[Step 1: Onboarding an entity](#step-1:-onboarding-an-entity)
+
 2. [Runtime parameters](#2-runtime-parameters)
 3. [Blockchain information](#3-blockchain-information)
 4. [Memory pool information](#4-memory-pool-information)
