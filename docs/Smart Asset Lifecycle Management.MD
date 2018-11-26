@@ -87,54 +87,44 @@ To get details of a specific asset, use `post /api/v1/asset_details` and pass th
 ```
 ```
 {
-  "asset_name": "INR-tokens"
+  "asset_name": "AUTH-tokens-series-A"
 }
 ```
-![Details of a specified asset](http://www.primechaintech.com/img/api_documentation/asset_details.png)
 ```
 {
 "status": 200,
-"response": 
-  [
-    {
-      "name": "INR-tokens",
-      "issuetxid": "ebb05ee44fcafce787e7e1d318f5a69846fa27458eeff1ec1317eb5e6fcd6dd2",
-      "assetref": "107-265-45291",
-      "multiple": 1,
-      "units": 1,
-      "open": true,
-      "details": {},
-      "issueqty": 20500,
-      "issueraw": 20500,
-      "subscribed": true,
-      "synchronized": true,
-      "transactions": 2,
-      "confirmed": 2,
-      "issues": 
-        [
-          {
-            "txid": "ebb05ee44fcafce787e7e1d318f5a69846fa27458eeff1ec1317eb5e6fcd6dd2",
-            "qty": 8500,
-            "raw": 8500,
-            "details": {},
-            "issuers": 
-              [
-                "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3"
-              ],
-           },
-          {
-            "txid": "77d0cf12efb81084aa90b2db51dac46a72a579e8fb2f0f1956b32cd83f5930c5",
-            "qty": 12000,
-            "raw": 12000,
-            "details": {},
-            "issuers": 
-              [
-                "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3"
-              ],
-            }
-          ],
-      }
-  ],
+"response": [
+  {
+"name": "AUTH-tokens-series-A",
+"issuetxid": "2eaea9d94fdc908b68a12f7d5c642513f53c8c7d1d507116b42f00a1ff0d68e7",
+"assetref": "622-267-44590",
+"multiple": 1,
+"units": 1,
+"open": true,
+"details": {
+"details": "These are the details of this asset."
+},
+"issueqty": 17430,
+"issueraw": 17430,
+"subscribed": true,
+"synchronized": true,
+"transactions": 2,
+"confirmed": 2,
+"issues": [
+  {
+"txid": "2eaea9d94fdc908b68a12f7d5c642513f53c8c7d1d507116b42f00a1ff0d68e7",
+"qty": 17430,
+"raw": 17430,
+"details": {
+"details": "These are the details of this asset."
+},
+"issuers": [
+  "1AdBvHHyknKcvUsYbQ9pPXMS2wd8oD9coY3gT7"
+],
+}
+],
+}
+],
 }
 ```
 
