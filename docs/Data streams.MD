@@ -135,21 +135,20 @@ The response is null
 To write to a data stream, use `post /api/v1/write_to_stream` and pass these parameters:
 ```
 {
-  "from_address": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a",
+  "from_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
   "key": "Invoice no. 443598724",
   "value": 
   	{ 
-    	"issue_date": "08-08-2018",
+    	"issue_date": "08-11-2018",
     	"value":"USD 44,500"
   	},
-  "stream": "OFFER_DETAILS_STREAM"
+  "stream": "TEST_STREAM"
 }
 ```
-![Write to a data stream](http://www.primechaintech.com/img/api_documentation/write_to_stream.png)
 ```
 {
 "status": 200,
-"response": "50da4136ebf0fc608739ad97da8b57a2aad65a44d8a9b08cf42f26d2a55793d1"
+"response": "c3238398b4633d7a0be543e81b2f57cb1314f178fea2b71ae29d4423866d7fe9"
 }
 ```
 ## 7. List stream items by key
