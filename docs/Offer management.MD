@@ -1,13 +1,13 @@
 # Offer management
 
-[1. Create a public offer](#1-create-a-public-offer)
-[2. Create a targetted offer](#2-create-a-targetted-offer)
+[1. Create a public offer](#1-create-a-public-offer)   
+[2. Create a targetted offer](#2-create-a-targetted-offer)   
 
 
-[2. Read an offer](#2-read-an-offer)
-[3. Accept an offer](#3-accept-an-offer)
-[4. Reject an offer](#4-reject-an-offer)
-[5. Cancel an offer](#5-cancel-an-offer)
+[2. Read an offer](#2-read-an-offer)   
+[3. Accept an offer](#3-accept-an-offer)   
+[4. Reject an offer](#4-reject-an-offer)   
+[5. Cancel an offer](#5-cancel-an-offer)   
 
 ## 1. Create a public offer
 To create an offer, use `create_offer` and pass these parameters:
@@ -27,7 +27,6 @@ To create an offer, use `create_offer` and pass these parameters:
   }
 }
 ```
-![Creating an offer](http://www.primechaintech.com/img/api_documentation/create_offer4.png)
 
 The output is the `transaction id` and the `hexadecimal blob` of the offer details.
 ```
@@ -47,7 +46,6 @@ To interpret an offer, use `read_offer` and pass the hex blob:
   "hex_blob": "0100000001d5d9b15fab6b3bc833f3c77d2a43f734675cfb39190b80f2e272e797308b5e01000000006a473044022005f121a474ec0eae78f80fe0fe5bfb016e12bf59949482f5e964f43b79d00d8f022001f62a8d4785759bf62ca4acc77b9fba69fe88118ff6400e6dbbffadd82a99178321033d1196659ec9c34eaa029393a4847a84b3a6f3caa9d49626f91f60748bb0d84fffffffff0100000000000000003776a9149115494fbc2450905dd05e2c8cd28672617807c388ac1c73706b71945e564ca39292efe316cae288dddf310a000000000000007500000000"
 }
 ```
-![Reading an offer](http://www.primechaintech.com/img/api_documentation/read_offer.png)
 ```
 {
 "status": 200,
@@ -93,7 +91,6 @@ To accept an offer, use `accept_offer` and pass 3 parameters - `from_address`, `
   }
 }
 ```
-![Accepting an offer](http://www.primechaintech.com/img/api_documentation/accept_offer.png)
 ```
 {
 "status": 200,
@@ -108,7 +105,6 @@ To reject an offer, use `reject_offer` and pass the `txid` of the offer as a par
   "tx_id": "2b36fe1ee137155a561e0df4f26af422ef7853c564dd0815b754eaaa3942ab2b"
 }
 ```
-![Rejecting an offer](http://www.primechaintech.com/img/api_documentation/reject_offer.png)
 ```
 {
 "status": 200,
@@ -123,7 +119,6 @@ To cancel an offer, use `cancel_offer` and pass the `txid` of the offer as a par
 "tx_id": "2de5443596eae41a9b46ac41043e8d9c978da54b1bbde4715b872f4794ed1c24"
 }
 ```
-![Cancel an offer](http://www.primechaintech.com/img/api_documentation/cancel_offer.png)
 ```
 {
 "status": 200,
