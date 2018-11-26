@@ -109,7 +109,6 @@ To subscribe a node to a data stream, use `post /api/v1/subscribe` and pass the 
   "stream_name": "TEST_STREAM"
 }
 ```
-![Subscribe node to a data stream](http://www.primechaintech.com/img/api_documentation/subscribe.png)
 The response is null
 ```
 {
@@ -124,7 +123,6 @@ To unsubscribe a node from a data stream, use `post /api/v1/unsubscribe` and pas
   "stream_name": "TEST_STREAM"
 }
 ```
-![Unsubscribes node from a data stream](http://www.primechaintech.com/img/api_documentation/unsubscribe.png)
 The response is null
 ```
 {
