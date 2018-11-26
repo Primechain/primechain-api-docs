@@ -14,7 +14,7 @@ A blockchain smart asset can be the digital representation of a real-world asset
 To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 
 ***Note:***
-*  This may take 8 to 10 seconds.   
+*  This may take upto 30 seconds.   
 * `from_address` is the entity that creates the asset. It must have `send`, `receive` and `issue` permissions. It must also have permissions to write to the ***ASSET_DATA_MASTERLIST***   
 * `to_address` is the entity that receives the newly created asset. It must have `receive` permission and ideally also `send` permission.   
 *  The `from_address` and `to_address` can be the same.
@@ -27,11 +27,11 @@ To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 
 ```
 {
-  "from_address": "1AdBvHHyknKcvUsYbQ9pPXMS2wd8oD9coY3gT7",
-  "to_address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
+  "from_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
+  "to_address": "17Sonz7gM3ha6PvqZhRwKT7PUjA2H4TuKuRqF5",
   "asset": 
   	{
-    	"name": "AUTH-tokens",
+    	"name": "AUTH-tokens-series-K",
     	"open": true
   	},
   "unit": 1,
@@ -45,10 +45,13 @@ To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 * the newly created data stream specifically for writing data relating to this asset. The `to_address` is granted write permissions to this stream. 
 ```
 {
-"status": 200,
-"transaction_id": "ae963786b6866a03ece2d1d6086860d03d60d01682771bf437e3896ca4ce62a0",
-"asset_ref": "107-265-45291",
-"stream": "STREAM_107-265-45291"
+  "status": 200,
+  "transaction_id": "a922dce10c6f3690c11ab2526b24d59aee643fd248501c37be9a38d9bacd058a",
+  "asset_ref": "836-266-28088",
+  "description": 
+    {
+      "details": "These are the details of this asset."
+    }
 }
 ```
 
