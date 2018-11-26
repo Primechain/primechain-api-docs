@@ -64,6 +64,7 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 1. [Encrypt, sign and upload data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#1-encrypt-sign-and-upload-data)
 2. [Decrypt and download data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-decrypt-and-download-data)
 
+## 8. [Authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
 
 ## Others
 1. [Upgrading Primechain-API](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Upgrading%20Primechain-API.MD)
