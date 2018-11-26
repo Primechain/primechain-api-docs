@@ -64,17 +64,16 @@ To create additional units of an open asset, use `post /api/v1/asset_create_more
 * `quantity` refers to the additional quantity of the asset being issued.
 ```
 {
-  "from_address": "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3",
-  "to_address": "1LkbUksHGpYNj7nedjQq1FugSkeS47pnm49DXX",
-  "asset_name": "INR-tokens",
-  "quantity": 12000
+  "from_address": "1AdBvHHyknKcvUsYbQ9pPXMS2wd8oD9coY3gT7",
+  "to_address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
+  "asset_name": "AUTH-tokens",
+  "quantity": 350
 }
 ```
-![Create additional units of an open asset](http://www.primechaintech.com/img/api_documentation/asset_create_more_from.png)
 ```
 {
 "status": 200,
-"transaction_id": "77d0cf12efb81084aa90b2db51dac46a72a579e8fb2f0f1956b32cd83f5930c5"
+"transaction_id": "d755b1b97a4acb5ce53618fb724e2a3f6db1ad6ebe3a19c86175e81573db3ab5"
 }
 ```
 Output is the txid of the transaction in which the additional units were created.
