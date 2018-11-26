@@ -67,7 +67,7 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 3. [Encrypt, sign and upload file](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-encrypt-sign-and-upload-file)
 4. [Decrypt and download file](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-decrypt-and-download-file)
 
-## 8. [Authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
+## 8. [Password-less authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
 
 1. [Onboarding an entity](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD#1-onboarding-an-entity)   
 2. [Authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD#2-authentication)
