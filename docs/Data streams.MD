@@ -89,11 +89,10 @@ To get information about all the streams created on the blockchain, use `get /ap
 To grant an entity write permission to a stream, use `post /api/v1/grant_write_permission_to_stream` and provide 2 parameters - addresss (the blockchain address of the entity) and the stream name. Example:
 ```
 {
-  "address": "15GRafetDoXFgMXRHPfPYQRG3b4vLrpeDBCZS9",
-  "stream_name": "OFFER_DETAILS_STREAM"
+  "address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
+  "stream_name": "ASSET_DATA_MASTERLIST"
 }
 ```
-![Grant write permission to a stream](http://www.primechaintech.com/img/api_documentation/grant_write_permission_to_stream.png)
 ```
 {
 "status": 200,
