@@ -2,18 +2,6 @@
 
 1. [Onboarding an entity](#1-onboarding-an-entity)
 
-2. [Runtime parameters](#2-runtime-parameters)
-3. [Blockchain information](#3-blockchain-information)
-4. [Memory pool information](#4-memory-pool-information)
-5. [Raw memory pool](#5-raw-memory-pool)
-6. [List blocks](#6-list-blocks)
-7. [Peer info](#7-peer-info)
-
-
-## 1. Blockchain parameters
-Use `get /api/v1/blockchain_params` to view the blockchain parameters:
-
-
 Code-named Primechain-AUTH, this system uses the native capabilities of the multichain blockchain along with RSA based asymmetric encryption to achieve a secure password-less authentication system. This can be used to authenticate an entity (an individual, a company, a device) to an app, a website, an email account, a blockchain etc.
 
 ## 1. Onboarding an entity
