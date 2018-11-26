@@ -155,29 +155,30 @@ To write to a data stream, use `post /api/v1/write_to_stream` and pass these par
 To list stream items by key, use `post /api/v1/list_stream_items_by_key` and pass 2 parameters - `key` and `stream_name`
 ```
 {
-"key": "Invoice no. 443598724",
-"stream_name": "TEST_STREAM"
+  "key": "Invoice no. 443598724",
+  "stream_name": "TEST_STREAM"
 }
 ```
 ```
 {
 "status": 200,
-"response": [
-  {
-"publishers": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
-"key": "Invoice no. 443598724",
-"data": "{"issue_date":"08-11-2018","value":"USD 44,500"}",
-"confirmations": 11,
-"blockhash": "075eaf3b5c8fd1063b18a0c02a6b67b106276aeff82bce22a4a809a199cf466e",
-"blockindex": 1,
-"blocktime": 1543234837,
-"txid": "c3238398b4633d7a0be543e81b2f57cb1314f178fea2b71ae29d4423866d7fe9",
-"vout": 0,
-"valid": true,
-"time": 1543234832,
-"timereceived": 1543234832
-}
-],
+"response": 
+  [
+    {
+      "publishers": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
+      "key": "Invoice no. 443598724",
+      "data": "{"issue_date":"08-11-2018","value":"USD 44,500"}",
+      "confirmations": 11,
+      "blockhash": "075eaf3b5c8fd1063b18a0c02a6b67b106276aeff82bce22a4a809a199cf466e",
+      "blockindex": 1,
+      "blocktime": 1543234837,
+      "txid": "c3238398b4633d7a0be543e81b2f57cb1314f178fea2b71ae29d4423866d7fe9",
+      "vout": 0,
+      "valid": true,
+      "time": 1543234832,
+      "timereceived": 1543234832
+    }
+  ],
 }
 ```
 
