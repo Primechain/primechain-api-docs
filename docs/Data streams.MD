@@ -2,23 +2,15 @@
 
 MultiChain streams enable a blockchain to be used as a general purpose append-only database, with the blockchain providing timestamping, notarization and immutability. A MultiChain blockchain can contain any number of streams, where the data published in every stream is stored by every node. If a node chooses to subscribe to a stream, it will index that stream’s contents to enable efficient retrieval in various ways.
 
-[1. Create data stream](#1-create-data-stream)
-
-[2. List data streams](#2-list-data-streams)
-
-[3. Grant write permission to a stream](#3-grant-write-permission-to-a-stream)
-
-[4. Subscribe node to a data stream](#4-subscribe-node-to-a-data-stream)
-
-[5. Unsubscribe node from a data stream](#5-unsubscribe-node-from-a-data-stream)
-
-[6. Write to a data stream](#6-write-to-a-data-stream)
-
-[7. List stream items by key](#7-list-stream-items-by-key)
-
-[8. List stream items by publisher](#8-list-stream-items-by-publisher)
-
-[9. List keys in a specified stream](#9-list-keys-in-a-specified-stream)
+[1. Create data stream](#1-create-data-stream)   
+[2. List data streams](#2-list-data-streams)   
+[3. Grant write permission to a stream](#3-grant-write-permission-to-a-stream)   
+[4. Subscribe node to a data stream](#4-subscribe-node-to-a-data-stream)   
+[5. Unsubscribe node from a data stream](#5-unsubscribe-node-from-a-data-stream)   
+[6. Write to a data stream](#6-write-to-a-data-stream)   
+[7. List stream items by key](#7-list-stream-items-by-key)   
+[8. List stream items by publisher](#8-list-stream-items-by-publisher)   
+[9. List keys in a specified stream](#9-list-keys-in-a-specified-stream)   
 
 ## 1. Create data stream
 To create a new stream on the blockchain with the specified name, use `post /api/v1/create_data_stream_from `
