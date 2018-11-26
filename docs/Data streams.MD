@@ -13,20 +13,23 @@ MultiChain streams enable a blockchain to be used as a general purpose append-on
 [9. List keys in a specified stream](#9-list-keys-in-a-specified-stream)   
 
 ## 1. Create data stream
-To create a new stream on the blockchain with the specified name, use `post /api/v1/create_data_stream_from `
+To create a new stream on the blockchain with the specified name, use `post /api/v1/create_data_stream_from ` with 5 parameters:
 ```
 {
-  "from_address": "15AnXVteaDaTb1wBstqxaXN2ixCEereugw7acE",
+  "from_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
   "type": "stream",
-  "stream_name": "TEST_STREAM",
-  "details": "This is a test data stream" 
+  "stream_name": "TEST_STREAM_8",
+  "details": "This is a test data stream",
+  "open":true
 }
 ```
+***Note:*** If `open` is set to `true`, write permissions need not be explicitly provided. All addresses can write to the stream. If `open` is set to `false`, write permissions need to be explicitly provided.
+
 The output is the txid of the transaction creating the stream.
 ```
 {
 "status": 200,
-"transaction_id": "ddc2fc8d7ad149e0e51a5fc4765b1917a38cbddc0fe7f77a7081cfcf5486a851"
+"transaction_id": "e6c3f05d1f576fb559d04ab60124fdbd04d0b32605fab2534a81a63ebe0962ac"
 }
 ```
 ***Note:*** 
