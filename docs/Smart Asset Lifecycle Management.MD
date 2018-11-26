@@ -16,7 +16,7 @@ To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 ***Note:***
 *  This may take 8 to 10 seconds.
 * `from_address` is the entity that creates the asset. It must have `send` permission.
-* `to_address` is the entity that receives the newly created asset. It must have `receive` permission.
+* `to_address` is the entity that receives the newly created asset. It must have `receive` permission. It must also have permissions to write to the ***ASSET_DATA_MASTERLIST***
 *  The `from_address` and `to_address` can be the same.
 *  `unit` refers to the fractions of the asset.
 * `asset` refers to the name of the asset.
