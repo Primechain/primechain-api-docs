@@ -2,19 +2,13 @@
 
 A blockchain smart asset can be the digital representation of a real-world asset (e.g. gold, equity shares, fiat currency, stressed asset) or an asset in itself (e.g. bitcoin and other crypto-currencies). The blockchain removes the characteristic of infinite reproducibility from a digital asset. It confirms that each unit of value was transferred only once, solving the long-standing problem of double spending. A blockchain can assign title rights because it provides a record that compels offer and acceptance. 
 
-[1. Create a new asset](#1-create-a-new-asset)
-
-[2. Create additional units of an open asset](#2-create-additional-units-of-an-open-asset)
-
-[3. Details of a specified asset](#3-details-of-a-specified-asset)
-
-[4. Balances of all assets](#4-balances-of-all-assets)
-
-[5. Assets held by specified entities](#5-assets-held-by-specified-entities)
-
-[6. Transfer asset](#6-transfer-asset)
-
-[7. Transactions by a specified entity](#7-transactions-by-a-specified-entity)
+[1. Create a new asset](#1-create-a-new-asset)   
+[2. Create additional units of an open asset](#2-create-additional-units-of-an-open-asset)   
+[3. Details of a specified asset](#3-details-of-a-specified-asset)   
+[4. Balances of all assets](#4-balances-of-all-assets)   
+[5. Assets held by specified entities](#5-assets-held-by-specified-entities)   
+[6. Transfer asset](#6-transfer-asset)    
+[7. Transactions by a specified entity](#7-transactions-by-a-specified-entity)    
 
 ## 1. Create a new asset
 To create a new smart asset, use `post /api/v1/create_new_asset_from`.
@@ -23,7 +17,8 @@ To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 *  This may take 8 to 10 seconds.
 * `from_address` is the entity that creates the asset. It must have `send` permission.
 * `to_address` is the entity that receives the newly created asset. It must have `receive` permission.
-* The `from_address` and `to_address` can be the same.
+*  The `from_address` and `to_address` can be the same.
+*  `unit` refers to the fractions of the asset.
 * `asset` refers to the name of the asset.
 * `quantity` refers to the initial quantity of the asset.
 * `code` refers to any arbitrary code or category.
@@ -32,15 +27,16 @@ To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 
 ```
 {
-  "from_address": "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3",
-  "to_address": "1LkbUksHGpYNj7nedjQq1FugSkeS47pnm49DXX",
+  "from_address": "1AdBvHHyknKcvUsYbQ9pPXMS2wd8oD9coY3gT7",
+  "to_address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
   "asset": 
   	{
-    	"name": "INR-tokens",
+    	"name": "AUTH-tokens",
     	"open": true
   	},
-  "quantity": 8500,
-  "code": "110450" 
+  "unit": 1,
+  "quantity": 17430,
+  "details": "These are the details of this asset." 
 }
 ```
 ***Output is:***
