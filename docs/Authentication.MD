@@ -1,8 +1,6 @@
 # Authentication
 
-1. [Blockchain parameters](#1-blockchain-parameters)
-
-[Step 1: Onboarding an entity](#step-1:-onboarding-an-entity)
+1. [Onboarding an entity](#1-onboarding-an-entity)
 
 2. [Runtime parameters](#2-runtime-parameters)
 3. [Blockchain information](#3-blockchain-information)
@@ -18,7 +16,7 @@ Use `get /api/v1/blockchain_params` to view the blockchain parameters:
 
 Code-named Primechain-AUTH, this system uses the native capabilities of the multichain blockchain along with RSA based asymmetric encryption to achieve a secure password-less authentication system. This can be used to authenticate an entity (an individual, a company, a device) to an app, a website, an email account, a blockchain etc.
 
-## Step 1: Onboarding an entity
+## 1. Onboarding an entity
 An entity is onboarded by a bank (known as the onboarding bank) after due diligence (KYC process). The entity is provided with an application that is capable of running a multichain cold node. As part of the onboarding process, the onboarding bank provides the entity the Primechain-MONEY blockchain's parameters file.
 
 The entity uses `get /api/v1/onboard_user` to generate the following:
