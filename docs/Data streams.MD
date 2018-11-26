@@ -217,21 +217,17 @@ To list stream items by publisher, use `post /api/v1/list_stream_items_by_publis
 To list keys in a specified stream, use `post /api/v1/list_stream_keys` and pass 1 parameter - `stream_name`
 ```
 {
-"stream_name": "OFFER_DETAILS_STREAM"
+"stream_name": "TEST_STREAM"
 }
 ```
-![List keys in a specified stream](http://www.primechaintech.com/img/api_documentation/list_stream_keys.png)
-
 ```
 {
-"status": 200,
-"response": [
-  {
-"key": "1KZhwaRzvAo2Q3F3H117XCos7319nrs5JMbM9a"
-},
-  {
-"key": "Invoice no. 443598724"
-}
-],
+  "status": 200,
+  "response": 
+    [
+      {
+        "key": "Invoice no. 443598724"
+      }
+    ],
 }
 ```
