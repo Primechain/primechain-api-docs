@@ -272,20 +272,20 @@ You can also enter multiple addresses:
 ```
 
 ## 6. Transfer asset
-To send assets from one entity to another use `send_asset_from` and pass 4 parameters - `from_address`, `to_address`, `asset_name` and `quantity`.
+To send assets from one entity to another use `send_asset_from` and pass 4 parameters - `from_address`, `to_address`, `asset_name`, `quantity` and `details`
 ```
 {
-  "from_address": "1LkbUksHGpYNj7nedjQq1FugSkeS47pnm49DXX ",
-  "to_address": "1FG92XaytZPWspbkVpVicJpQzeFPA78VbUkii3",
-  "asset_name": "107-265-45291",
-  "quantity": 12
+  "from_address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
+  "to_address": "17eC7qETgYmdHwwT8b2CKBdbT6MxTosGYVYjHU",
+  "asset_name": "622-267-44590",
+  "quantity": 4,
+  "details": "These are the details of this transfer"
 }
 ```
-![Transfer asset](http://www.primechaintech.com/img/api_documentation/send_asset_from.png)
 ```
 {
 "status": 200,
-"transaction_id": "9d10f1ce34ddaf69cf387cb1b784d7bcd48b04559528b7d3b9d806264ecc27cc"
+"transaction_id": "925b18653decdc04544e0f570bbdce7eabf8945dc360f6b7f42ed2a5a02a1185"
 }
 ```
 The output is the txid of the transaction in which the asset was transferred.
