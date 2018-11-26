@@ -163,7 +163,7 @@ To get the name, asset ref and balance of all assets, use `get /api/v1/asset_bal
 ```
 
 ## 5. Assets held by specified entities
-Use  `assets_held_by_entity` to get details of Assets held by specified entities
+Use  `post /api/v1/assets_held_by_entity` to get details of Assets held by specified entities
 ```
 {
   "address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk"
@@ -264,7 +264,7 @@ You can also enter multiple addresses:
 ```
 
 ## 6. Transfer asset
-To send assets from one entity to another use `send_asset_from` and pass 4 parameters - `from_address`, `to_address`, `asset_name`, `quantity` and `details`
+To send assets from one entity to another use `post /api/v1/send_asset_from` and pass 4 parameters - `from_address`, `to_address`, `asset_name`, `quantity` and `details`
 ```
 {
   "from_address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
@@ -284,7 +284,7 @@ The output is the txid of the transaction in which the asset was transferred.
 
 ## 7. Transactions by a specified entity
 
-To list information about the transactions related to an address in this node’s wallet, including how they affected that address’s balance. use `entity_transaction_list` and pass the address as a parameter.
+To list information about the transactions related to an address in this node’s wallet, including how they affected that address’s balance. use `post /api/v1/entity_transaction_list` and pass the address as a parameter.
 
 ```
 {
