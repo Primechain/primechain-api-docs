@@ -2,12 +2,10 @@
 
 [1. Create a public offer](#1-create-a-public-offer)   
 [2. Create a targetted offer](#2-create-a-targetted-offer)   
-
-
-[2. Read an offer](#2-read-an-offer)   
-[3. Accept an offer](#3-accept-an-offer)   
-[4. Reject an offer](#4-reject-an-offer)   
-[5. Cancel an offer](#5-cancel-an-offer)   
+[3. Read an offer](#3-read-an-offer)   
+[4. Accept an offer](#4-accept-an-offer)   
+[5. Reject an offer](#5-reject-an-offer)   
+[6. Cancel an offer](#6-cancel-an-offer)   
 
 ## 1. Create a public offer
 To create an offer, use `create_offer` and pass these parameters:
@@ -39,7 +37,7 @@ The output is the `transaction id` and the `hexadecimal blob` of the offer detai
 ## 2. Create a targetted offer
 
 
-## 2. Read an offer
+## 3. Read an offer
 To interpret an offer, use `read_offer` and pass the hex blob:
 ```
 {
@@ -77,7 +75,7 @@ To interpret an offer, use `read_offer` and pass the hex blob:
 }
 }
 ```
-## 3. Accept an offer
+## 4. Accept an offer
 To accept an offer, use `accept_offer` and pass 3 parameters - `from_address`, `hex_blob`, `ask_asset` and `offer_asset`
 ```
 {
@@ -98,7 +96,7 @@ To accept an offer, use `accept_offer` and pass 3 parameters - `from_address`, `
 }
 ```
 
-## 4. Reject an offer
+## 5. Reject an offer
 To reject an offer, use `reject_offer` and pass the `txid` of the offer as a parameter.
 ```
 {
@@ -112,7 +110,7 @@ To reject an offer, use `reject_offer` and pass the `txid` of the offer as a par
 }
 ```
 
-## 5. Cancel an offer
+## 6. Cancel an offer
 To cancel an offer, use `cancel_offer` and pass the `txid` of the offer as a parameter.
 ```
 {
