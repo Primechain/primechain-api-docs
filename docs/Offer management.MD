@@ -22,8 +22,8 @@ aaaa
 ```
 ## 2. Create a targetted offer
 To create an offer, use `/create_targeted_offer` and pass these parameters:
-* address of the entity making the offer - `from_address`, 
-* address of the entity to whom the offer is made - `to_address`, 
+* address of the entity making the offer - `from_address`   
+* address of the entity to whom the offer is made - `to_address`   
 * name and quantity of asset asked for - `ask_asset` 
 * name and quantity of asset offerred in return - `offer_asset`
 ```
