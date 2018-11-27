@@ -56,7 +56,35 @@ To interpret an offer, use `read_offer` and pass the hex blob:
 }
 ```
 ```
-aaaaa
+{
+"status": 200,
+"response": {
+"offer": {
+"amount": 0,
+"assets": [
+  {
+"name": "Platinum-tokens-series-A",
+"assetref": "895-267-41850",
+"qty": 10
+}
+],
+},
+"ask": {
+"amount": 0,
+"assets": [
+  {
+"name": "Uranium-tokens-series-A",
+"assetref": "902-267-35651",
+"qty": 40
+}
+],
+},
+"requiredfee": 0,
+"candisable": true,
+"cancomplete": true,
+"complete": false
+}
+}
 ```
 ## 4. Accept an offer
 To accept an offer, use `accept_offer` and pass 3 parameters - `from_address`, `hex_blob`, `ask_asset` and `offer_asset`
