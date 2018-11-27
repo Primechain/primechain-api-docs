@@ -10,7 +10,7 @@ Primechain APIs make it very simple for developers to add blockchain power to th
 
 1. [Introduction](#1-introduction)
 2. [Documentation](#2-documentation)
-3. [Demo server](#3-demo-server)
+3. [Sandbox](#3-sandbox)
 4. [Availability](#4-availability)
 5. [About Primechain Technologies](#5-about-primechain-technologies)
 6. [Use cases](#6-use-cases)
@@ -28,20 +28,16 @@ Primechain APIs make it very simple for developers to add blockchain power to th
 Prmechain API documentation is available at:    
 https://github.com/Primechain/primechain-api-docs/blob/master/Documentation.md
 
-## 3. Demo server
-You can use [Advanced Rest Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) to explore the various API end points on `http://103.83.192.43:2512/api/v1/`
-
-![Demo server](http://www.primechaintech.com/img/api_documentation/screenshot_sample.png)
+## 3. Sandbox
+Email us on info@primechain.in for details on accessing the Primechain-API sandbox.
 
 ## 4. Availability
 Primechain-API is available in 2 modes:
-* remote service - this is where the API service runs on the Primechain Cloud and the data is stored on your servers.
-* local service - this is where the API service runs on your servers and the data is stored on your servers.
-
-In both options, the data is stored 100% on your servers (on-cloud / on-premise).
+* a node on Primechain-MONEY, a multi-framework permissioned blockchain available only to BankChain members. The API runs on your infrastructure (on-cloud / on-premise).
+* dedicated service - this is where the API runs on your infrastructure (on-cloud / on-premise) and all the data is stored on your infrastructure (on-cloud / on-premise).
 
 ## 5. About Primechain Technologies
-Primechain API are developed and maintained by [Primechain™ Technologies Pvt. Ltd.](http://www.primechaintech.com), a blockchain startup with the mission of building blockchains for a better world. We operate the Bankchain community of banks and maintain the Blockchain Security Controls. We also operate the Autonomous Blockchain for Corporate Data (Primechain-A.B.C.D.).
+Primechain API are developed and maintained by [Primechain™ Technologies Pvt. Ltd.](http://www.primechaintech.com), a blockchain startup with the mission of building blockchains for a better world. We operate the Bankchain community of banks and maintain the Blockchain Security Controls. 
 
 ## 6. Use cases
 A partial list of Primechain-API use cases is at:   
