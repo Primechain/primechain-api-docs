@@ -83,7 +83,15 @@ The output contains:
 2. The digital signature
 3. The AES decryption key data - password and iv
 ```
-
+{
+    "status": 200,
+    "response": {
+        "transaction_id": "8c4419f7e808800b83ec6ac9090813dbeec59c2deb837993a47089ce45acf6b8",
+        "signature": "IJFvhJtyv03/kUICkceq4orcAFPzMJKmfuK80pSesdRxXPPF/SQnR234P5I8kY/GslH4bRgFE9mwkm5HhCPTfZk=",
+        "password": "pK4mTkZ5Mb6YRlwFmkUnpOO4DA8oY6JV",
+        "iv": "T24LZEuWHyrz"
+    }
+}
 ```
 
 ## 4. Decrypt and download file
