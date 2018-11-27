@@ -9,16 +9,29 @@
 
 ## 1. Create a public offer
 To create an offer, use `create_public_offer` and pass these parameters:
-* address of the entity making the offer - `from_address`, 
+* address of the entity making the offer - `primechain_address`, 
 * name and quantity of asset asked for - `ask_asset` 
 * name and quantity of asset offerred in return - `offer_asset`
 ```
-aaaa
+{
+  "primechain_address": "1Uw5kTMTx96YAoQ81BrnuDezcdFhVmAWvCMDTN",
+  "ask_asset": 
+    {
+      "Uranium-tokens-series-A": 40
+    },
+  "offer_asset": 
+    {
+      "Platinum-tokens-series-A": 10
+    }
+}
 ```
 
 The output is the `transaction id` and the `hexadecimal blob` of the offer details.
 ```
-aaaa
+{
+  "status": 200,
+  "offer_blob": "010000000190cbca25c112c4c696f94503493801d254e4aabb11b736931de6798e1075aee7000000006b483045022100d9d2978fcc5b3cfc0812fe09053016007e8e3da77a538fc7bc9840711b96b39e0220714e1443cabc7450889c9637ca4f68047a226c6db79b8e12740055f3bde7c806832102be496ef6b719a8bf9f472fa778e490fc4dcbc333d133634a323c140a975244bdffffffff0100000000000000003776a914ceab8b6fd5876940500dc9e6e9e402b0424c34c888ac1c73706b712ca4a239e8175078e715648b47a58b4328000000000000007500000000"
+}
 ```
 ## 2. Create a targetted offer
 To create an offer, use `/create_targeted_offer` and pass these parameters:
