@@ -52,39 +52,11 @@ The output is the `transaction id` and the `offer blob` of the offer details.
 To interpret an offer, use `read_offer` and pass the hex blob:
 ```
 {
-  "hex_blob": "0100000001d5d9b15fab6b3bc833f3c77d2a43f734675cfb39190b80f2e272e797308b5e01000000006a473044022005f121a474ec0eae78f80fe0fe5bfb016e12bf59949482f5e964f43b79d00d8f022001f62a8d4785759bf62ca4acc77b9fba69fe88118ff6400e6dbbffadd82a99178321033d1196659ec9c34eaa029393a4847a84b3a6f3caa9d49626f91f60748bb0d84fffffffff0100000000000000003776a9149115494fbc2450905dd05e2c8cd28672617807c388ac1c73706b71945e564ca39292efe316cae288dddf310a000000000000007500000000"
+  "offer_blob": "01000000019e57279825b7413826a879a437dc51572c89fcb1462e1f86927ddc8fb0485ad4000000006a4730440220282026f991b7f46dde67e4ae72b4e838e955cc538cbcbcc2cdf3f44ad20c04f10220777e5ed8178b1c542a4a044a9d3446d304f5df54ebd5f98c416d3cbd80adb79a832102be496ef6b719a8bf9f472fa778e490fc4dcbc333d133634a323c140a975244bdffffffff0100000000000000003776a914ceab8b6fd5876940500dc9e6e9e402b0424c34c888ac1c73706b712ca4a239e8175078e715648b47a58b4328000000000000007500000000"
 }
 ```
 ```
-{
-"status": 200,
-"read_offer": {
-"offer": {
-"amount": 0,
-"assets": [
-  {
-"name": "gold-tokens",
-"assetref": "157-267-10355",
-"qty": 40
-}
-],
-},
-"ask": {
-"amount": 0,
-"assets": [
-  {
-"name": "silver-tokens",
-"assetref": "169-267-57137",
-"qty": 10
-}
-],
-},
-"requiredfee": 0,
-"candisable": true,
-"cancomplete": true,
-"complete": false
-}
-}
+aaaaa
 ```
 ## 4. Accept an offer
 To accept an offer, use `accept_offer` and pass 3 parameters - `from_address`, `hex_blob`, `ask_asset` and `offer_asset`
