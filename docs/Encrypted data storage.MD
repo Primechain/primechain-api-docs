@@ -9,8 +9,7 @@
 To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_data` and pass the blockchain address (using which the file will be signed) and the file data.
 ```
 {
-  "address":"1b8yZEFmK2HSTKUm1rgKUDABPAq8CGRJYQWW2k",
-  "file":"<your file>"
+aaaaa
 }
 ```
 The output contains:
@@ -18,13 +17,7 @@ The output contains:
 2. The digital signature
 3. The AES decryption key data - password and iv
 ```
-{
-  "status": 200,
-  "transaction_id": "6b0dd5214b67bf633cdedef33712580704139e94d03ac783af5f6657d76d718b",
-  "signature": "H7nCV1EEdnWPs287G9xkHuAhfhtIBqrBce2r/FWAURG5EXzB4VR0J378LlGgQCC2I9NMPLB2Uc4j8hHVNaJl2RE=",
-  "password": "wYKTKWMDZXHMfSGiyGKgHVUuqdVVezgE",
-  "iv": "Q68wBhkE9bwg"
-}
+bbbb
 ```
 
 ## 2. Decrypt and download data
@@ -33,20 +26,18 @@ To decrypt and download a file, use `post /api/v1/decrypt_download_data` and pas
 * The transaction id of the transaction in which the dats was stored on the blockchain
 * The AES decryption key data - password and iv
 ```
-{
-  "address": "1b8yZEFmK2HSTKUm1rgKUDABPAq8CGRJYQWW2k",
-  "txid": "6b0dd5214b67bf633cdedef33712580704139e94d03ac783af5f6657d76d718b",
-  "password": "wYKTKWMDZXHMfSGiyGKgHVUuqdVVezgE",
-  "iv": "Q68wBhkE9bwg"
-}
+ccccc
 ```
-The file will get downloaded.
+The output will be the data.
+```
+dddd
+```
 
 ## 3. Encrypt, sign and upload file
 To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_file` and pass the blockchain address (using which the file will be signed) and the file data.
 ```
 {
-  "address":"1b8yZEFmK2HSTKUm1rgKUDABPAq8CGRJYQWW2k",
+  "primechain_address":"aaaaa",
   "file":"<your file>"
 }
 ```
@@ -55,13 +46,7 @@ The output contains:
 2. The digital signature
 3. The AES decryption key data - password and iv
 ```
-{
-  "status": 200,
-  "transaction_id": "6b0dd5214b67bf633cdedef33712580704139e94d03ac783af5f6657d76d718b",
-  "signature": "H7nCV1EEdnWPs287G9xkHuAhfhtIBqrBce2r/FWAURG5EXzB4VR0J378LlGgQCC2I9NMPLB2Uc4j8hHVNaJl2RE=",
-  "password": "wYKTKWMDZXHMfSGiyGKgHVUuqdVVezgE",
-  "iv": "Q68wBhkE9bwg"
-}
+eeeeee
 ```
 
 ## 4. Decrypt and download file
@@ -70,12 +55,6 @@ To decrypt and download a file, use `post /api/v1/decrypt_download_file` and pas
 * The transaction id of the transaction in which the dats was stored on the blockchain
 * The AES decryption key data - password and iv
 ```
-{
-  "address": "1b8yZEFmK2HSTKUm1rgKUDABPAq8CGRJYQWW2k",
-  "txid": "6b0dd5214b67bf633cdedef33712580704139e94d03ac783af5f6657d76d718b",
-  "password": "wYKTKWMDZXHMfSGiyGKgHVUuqdVVezgE",
-  "iv": "Q68wBhkE9bwg"
-}
+fffffff
 ```
 The file will get downloaded.
-
