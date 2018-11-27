@@ -9,7 +9,19 @@
 To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_data` and pass the blockchain address (using which the file will be signed) and the file data.
 ```
 {
-aaaaa
+  {
+  "primechain_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
+  "data": 
+    {
+      "type": "GUARANTEE",
+      "40A": "IRREVOCABLE",
+      "20": ":DOC.500",
+      "31C": "181106 INDIA",
+      "31D": "181206 DUBAI",
+       "50": "IMPORTER COMPANY NAME, IMPORTER COMPANY ADDRESS, INDIA",
+       "59": "EXPORTER COMPANY NAME, EXPORTER COMPANY ADDRESS, DUBAI"
+    }
+  }
 }
 ```
 The output contains:
@@ -17,7 +29,15 @@ The output contains:
 2. The digital signature
 3. The AES decryption key data - password and iv
 ```
-bbbb
+{
+"status": 200,
+"response": {
+"transaction_id": "27ed040aa02b6fe6f8635bacaa3ad8f85c49d9bfdc9a1cb37fc33e5db900c228",
+"signature": "IMgAru76ErWwYHq1qFhUne1AnfQIU9a0WrAWgw4LiH4zcsT8tvnINzg15E5DgjdGbij4u7jxyCHBXoDKhU/2JPk=",
+"password": "kGhMFsTYQ7HwfWxLUKGXh37zwPF7yRJC",
+"iv": "nPKF0E6icGKs"
+}
+}
 ```
 
 ## 2. Decrypt and download data
@@ -26,11 +46,27 @@ To decrypt and download a file, use `post /api/v1/decrypt_download_data` and pas
 * The transaction id of the transaction in which the dats was stored on the blockchain
 * The AES decryption key data - password and iv
 ```
-ccccc
+{
+  "txid": "27ed040aa02b6fe6f8635bacaa3ad8f85c49d9bfdc9a1cb37fc33e5db900c228",
+  "password": "kGhMFsTYQ7HwfWxLUKGXh37zwPF7yRJC",
+  "iv":"nPKF0E6icGKs"
+}
 ```
 The output will be the data.
 ```
-dddd
+{
+"status": 200,
+"response": 
+  {
+    20: ":DOC.500",
+    50: "IMPORTER COMPANY NAME, IMPORTER COMPANY ADDRESS, INDIA",
+    59: "EXPORTER COMPANY NAME, EXPORTER COMPANY ADDRESS, DUBAI",
+    "type": "GUARANTEE",
+    "40A": "IRREVOCABLE",
+    "31C": "181106 INDIA",
+    "31D": "181206 DUBAI"
+  }
+}
 ```
 
 ## 3. Encrypt, sign and upload file
