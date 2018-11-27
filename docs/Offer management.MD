@@ -13,16 +13,7 @@ To create an offer, use `create_public_offer` and pass these parameters:
 * name and quantity of asset asked for - `ask_asset` 
 * name and quantity of asset offerred in return - `offer_asset`
 ```
-{
-  "from_address": "1LfegkhQAD6jVZ1VQ4eJMLd4Ydt3MqodbnizqV",
-  "to_address": "1LcJbJWGmN59AAE7xfMk6GYW2Jsy4V8Fay2p4Q",
-  "ask_asset": {
-    "silver-tokens": 40
-  },
-  "offer_asset": {
-    "gold-tokens": 10
-  }
-}
+aaaa
 ```
 
 The output is the `transaction id` and the `hexadecimal blob` of the offer details.
@@ -43,12 +34,14 @@ To create an offer, use `/create_targeted_offer` and pass these parameters:
 {
   "from_address": "1Uw5kTMTx96YAoQ81BrnuDezcdFhVmAWvCMDTN",
   "to_address": "16XxJEpKQCmxEhXs56Wsb2WaTghVzKixYTR92k",
-  "ask_asset": {
-    "Uranium-tokens-series-A": 40
-  },
-  "offer_asset": {
-    "Platinum-tokens-series-A": 10
-  }
+  "ask_asset": 
+    {
+      "Uranium-tokens-series-A": 40
+    },
+  "offer_asset": 
+    {
+      "Platinum-tokens-series-A": 10
+    }
 }
 ```
 The output is the `transaction id` and the `offer blob` of the offer details.
