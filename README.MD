@@ -42,3 +42,16 @@ Primechain API are developed and maintained by [Primechain™ Technologies Pvt. 
 ## 6. Use cases
 A partial list of Primechain-API use cases is at:   
 https://github.com/Primechain/primechain-api-docs/blob/master/use-cases.MD
+
+## 7. Standards and algorithms
+
+[Federal Information Processing Standard (FIPS) 186-4, Digital Signature Standard (DSS)](https://csrc.nist.gov/publications/detail/fips/186/4/final), specifies three NIST-approved digital signature algorithms: DSA, RSA, and ECDSA. All three are used to generate and verify digital signatures, in conjunction with an approved hash function specified in [FIPS 180-4, Secure Hash Standard](https://csrc.nist.gov/publications/detail/fips/180/4/final) or [FIPS 202, SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions](https://csrc.nist.gov/publications/detail/fips/202/final).
+
+## 8. Glossary of terms
+* AAD: Additional Authenticated Data 
+* AES: Advanced Encryption Standard.
+* Authentication Tag (Tag): A cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data. 
+* GCM: Galois/Counter Mode
+* Initialization Vector: A nonce that is associated with an invocation of authenticated encryption on a particular plaintext and AAD.   
+
+For more information, see [NIST Special Publication 800-38D](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf)
