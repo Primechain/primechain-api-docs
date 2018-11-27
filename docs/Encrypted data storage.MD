@@ -27,7 +27,8 @@ To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_data` and pas
 The output contains:
 1. The transaction id of the transaction in which the dats was stored on the blockchain
 2. The digital signature
-3. The AES decryption key data - password and iv
+3. The AES password
+4. The AES initializaion vector (iv)
 ```
 {
 "status": 200,
@@ -43,9 +44,9 @@ The output contains:
 
 ## 2. Decrypt and download data
 To decrypt and download a file, use `post /api/v1/decrypt_download_data` and pass these values:
-* The blockchain address using which the file was signed
 * The transaction id of the transaction in which the dats was stored on the blockchain
-* The AES decryption key data - password and iv
+* The AES password
+* The AES initializaion vector (iv)
 ```
 {
   "txid": "27ed040aa02b6fe6f8635bacaa3ad8f85c49d9bfdc9a1cb37fc33e5db900c228",
@@ -81,7 +82,8 @@ To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_file` and pas
 The output contains:
 1. The transaction id of the transaction in which the dats was stored on the blockchain
 2. The digital signature
-3. The AES decryption key data - password and iv
+3. The AES password
+4. The AES initializaion vector (iv)
 ```
 {
     "status": 200,
