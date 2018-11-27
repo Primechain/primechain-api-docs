@@ -8,9 +8,8 @@
 [6. Cancel an offer](#6-cancel-an-offer)   
 
 ## 1. Create a public offer
-To create an offer, use `create_offer` and pass these parameters:
+To create an offer, use `create_public_offer` and pass these parameters:
 * address of the entity making the offer - `from_address`, 
-* address of the entityto whom the offer is made - `to_address`, 
 * name and quantity of asset asked for - `ask_asset` 
 * name and quantity of asset offerred in return - `offer_asset`
 ```
@@ -35,7 +34,11 @@ The output is the `transaction id` and the `hexadecimal blob` of the offer detai
 }
 ```
 ## 2. Create a targetted offer
-
+To create an offer, use `create_targetted_offer` and pass these parameters:
+* address of the entity making the offer - `from_address`, 
+* address of the entity to whom the offer is made - `to_address`, 
+* name and quantity of asset asked for - `ask_asset` 
+* name and quantity of asset offerred in return - `offer_asset`
 
 ## 3. Read an offer
 To interpret an offer, use `read_offer` and pass the hex blob:
