@@ -24,7 +24,13 @@ Blockchain is a world-changing technology, but it suffers from some pain points:
  
 Primechain APIs make it very simple for developers to add blockchain power to their code - smart asset lifecycle management, electronic signatures, encrypted data storage & more.
 
-![Primechain-node](http://www.primechaintech.com/img/api_documentation/node.png)
+***A typical Primechain node:***
+![Primechain-node](http://www.primechaintech.com/img/api_documentation/node2.png)
+
+***Typical internal setup***
+![Typical internal setup](http://www.primechaintech.com/img/api_documentation/b2_internal.png)
+
+
 
 ## 2. Documentation
 Prmechain API documentation is available at:    
