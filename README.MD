@@ -30,6 +30,7 @@ Primechain APIs make it very simple for developers to add blockchain power to th
 ***Typical internal setup***
 ![Typical internal setup](http://www.primechaintech.com/img/api_documentation/b2_internal.png)
 
+![Illustrative layout](http://www.primechaintech.com/img/api_documentation/b2_outline2.png)
 
 
 ## 2. Documentation
