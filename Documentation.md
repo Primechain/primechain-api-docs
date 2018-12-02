@@ -15,7 +15,7 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 6. [List blocks](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD#6-list-blocks)
 7. [Peer info](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD#7-peer-info)
 
-## 2. [Entities](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD)
+## 2. [Entity creation & permissions management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD)
 1. [Creating a new entity](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#1-creating-a-new-entity)
 2. [Creating a new entity (for external key management)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#2-creating-a-new-entity-for-external-key-management)
 3. [Creating a new entity (with RSA keys)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#3-creating-a-new-entity-with-rsa-keys)
