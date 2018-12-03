@@ -43,7 +43,7 @@ The output contains:
 ```
 
 ## 2. Decrypt and download data
-To decrypt and download a file, use `post /api/v1/decrypt_download_data` and pass these values:
+To decrypt and download data, use `post /api/v1/decrypt_download_data` and pass these values:
 * The transaction id of the transaction in which the dats was stored on the blockchain
 * The AES password
 * The AES initializaion vector (iv)
