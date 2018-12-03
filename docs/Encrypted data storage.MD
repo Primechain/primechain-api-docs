@@ -6,7 +6,7 @@
 4. [Decrypt and download file](#4-decrypt-and-download-file)
 
 ## 1. Encrypt, sign and upload data
-To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_data` and pass the blockchain address (using which the file will be signed) and the file data.
+To encrypt and upload data, use `post /api/v1/encrypt_sign_store_data` and pass the blockchain address (using which the file will be signed) and the file data.
 ```
 {
   {
@@ -34,7 +34,7 @@ The output contains:
 "status": 200,
 "response": 
   {
-    "transaction_id": "27ed040aa02b6fe6f8635bacaa3ad8f85c49d9bfdc9a1cb37fc33e5db900c228",
+    "tx_id": "27ed040aa02b6fe6f8635bacaa3ad8f85c49d9bfdc9a1cb37fc33e5db900c228",
     "signature": "IMgAru76ErWwYHq1qFhUne1AnfQIU9a0WrAWgw4LiH4zcsT8tvnINzg15E5DgjdGbij4u7jxyCHBXoDKhU/2JPk=",
     "password": "kGhMFsTYQ7HwfWxLUKGXh37zwPF7yRJC",
     "iv": "nPKF0E6icGKs"
