@@ -129,7 +129,8 @@ To accept an offer, use `post /api/v1/accept_offer` and pass 2 parameters -
 To reject an offer, use `post /api/v1/reject_offer` and pass the `txid` of the offer as a parameter.
 ```
 {
-  "tx_id": "aaaa"
+   "primechain_address: "16XxJEpKQCmxEhXs56Wsb2WaTghVzKixYTR92k",
+   "tx_id": "3a963687e042c80ed7a9d1f3bcfe1f2a260ee09d5d468ffdf5bfcf211f71617a"
 }
 ```
 ```
@@ -143,7 +144,8 @@ To reject an offer, use `post /api/v1/reject_offer` and pass the `txid` of the o
 To cancel an offer, use `post /api/v1/cancel_offer` and pass the `txid` of the offer as a parameter.
 ```
 {
-"tx_id": "aaaa"
+   "primechain_address: "16XxJEpKQCmxEhXs56Wsb2WaTghVzKixYTR92k",
+   "tx_id": "3a963687e042c80ed7a9d1f3bcfe1f2a260ee09d5d468ffdf5bfcf211f71617a"
 }
 ```
 ```
