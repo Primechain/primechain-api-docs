@@ -14,77 +14,76 @@ Use `get /api/v1/blockchain_params` to view the blockchain parameters:
 
 ```
 {
-  "status": 200,
-  "blockchain_params": 
-  {
-    "chain-protocol": "multichain",
-    "chain-description": "MultiChain primechain-api",
-    "root-stream-name": "root",
-    "root-stream-open": false,
-    "chain-is-testnet": false,
-    "target-block-time": 10,
-    "maximum-block-size": 1000000000,
-    "default-network-port": 61172,
-    "default-rpc-port": 15590,
-    "anyone-can-connect": false,
-    "anyone-can-send": false,
-    "anyone-can-receive": false,
-    "anyone-can-receive-empty": true,
-    "anyone-can-create": false,
-    "anyone-can-issue": false,
-    "anyone-can-mine": false,
-    "anyone-can-activate": false,
-    "anyone-can-admin": false,
-    "support-miner-precheck": true,
-    "allow-arbitrary-outputs": false,
-    "allow-p2sh-outputs": true,
-    "allow-multisig-outputs": true,
-    "setup-first-blocks": 60,
-    "mining-diversity": 0.3,
-    "admin-consensus-upgrade": 0.5,
-    "admin-consensus-admin": 0.5,
-    "admin-consensus-activate": 0.5,
-    "admin-consensus-mine": 0.5,
-    "admin-consensus-create": 0,
-    "admin-consensus-issue": 0,
-    "lock-admin-mine-rounds": 10,
-    "mining-requires-peers": false,
-    "mine-empty-rounds": 10,
-    "mining-turnover": 0.5,
-    "first-block-reward": -1,
-    "initial-block-reward": 0,
-    "reward-halving-interval": 52560000,
-    "reward-spendable-delay": 1,
-    "minimum-per-output": 0,
-    "maximum-per-output": 100000000000000,
-    "minimum-relay-fee": 0,
-    "native-currency-multiple": 100000000,
-    "skip-pow-check": true,
-    "pow-minimum-bits": 4,
-    "target-adjust-freq": -1,
-    "allow-min-difficulty-blocks": false,
-    "only-accept-std-txs": true,
-    "max-std-tx-size": 100000000,
-    "max-std-op-returns-count": 1024,
-    "max-std-op-return-size": 67108864,
-    "max-std-op-drops-count": 100,
-    "max-std-element-size": 32768,
-    "chain-name": "primechain-api",
-    "protocol-version": 10011,
-    "network-message-start": "f2c2dde5",
-    "address-pubkeyhash-version": "00e56c20",
-    "address-scripthash-version": "056f212c",
-    "private-key-version": "80736e72",
-    "address-checksum-value": "042695a6",
-    "genesis-pubkey": "0203f2047224b87a0e8fffa61a4741d13cb215e1735b16570eacb2c3729aa129aa",
-    "genesis-version": 1,
-    "genesis-timestamp": 1542714998,
-    "genesis-nbits": 537919487,
-    "genesis-nonce": 11,
-    "genesis-pubkey-hash": "f77c8e6f155b95a2a4aed30c99bca230871d9971",
-    "genesis-hash": "00aec9c0e03aed13dc678e9306bd78f71536b240725ce6ffaf8abc0fc64e5651",
-    "chain-params-hash": "487a00663455e9bf54e7e2ecdefd9e7ed8e2d0b5f781e72807d987e3970a2db0"
-  }
+"status": 200,
+"blockchain_params": {
+"chain-protocol": "multichain",
+"chain-description": "MultiChain primechain-api",
+"root-stream-name": "root",
+"root-stream-open": false,
+"chain-is-testnet": false,
+"target-block-time": 10,
+"maximum-block-size": 1000000000,
+"default-network-port": 61172,
+"default-rpc-port": 15590,
+"anyone-can-connect": false,
+"anyone-can-send": false,
+"anyone-can-receive": false,
+"anyone-can-receive-empty": true,
+"anyone-can-create": false,
+"anyone-can-issue": false,
+"anyone-can-mine": false,
+"anyone-can-activate": false,
+"anyone-can-admin": false,
+"support-miner-precheck": true,
+"allow-arbitrary-outputs": false,
+"allow-p2sh-outputs": true,
+"allow-multisig-outputs": true,
+"setup-first-blocks": 60,
+"mining-diversity": 0.3,
+"admin-consensus-upgrade": 0.5,
+"admin-consensus-admin": 0.5,
+"admin-consensus-activate": 0.5,
+"admin-consensus-mine": 0.5,
+"admin-consensus-create": 0,
+"admin-consensus-issue": 0,
+"lock-admin-mine-rounds": 10,
+"mining-requires-peers": false,
+"mine-empty-rounds": 10,
+"mining-turnover": 0.5,
+"first-block-reward": -1,
+"initial-block-reward": 0,
+"reward-halving-interval": 52560000,
+"reward-spendable-delay": 1,
+"minimum-per-output": 0,
+"maximum-per-output": 100000000000000,
+"minimum-relay-fee": 0,
+"native-currency-multiple": 100000000,
+"skip-pow-check": true,
+"pow-minimum-bits": 4,
+"target-adjust-freq": -1,
+"allow-min-difficulty-blocks": false,
+"only-accept-std-txs": true,
+"max-std-tx-size": 100000000,
+"max-std-op-returns-count": 1024,
+"max-std-op-return-size": 67108864,
+"max-std-op-drops-count": 100,
+"max-std-element-size": 32768,
+"chain-name": "primechain-api",
+"protocol-version": 10011,
+"network-message-start": "f2e1ccf2",
+"address-pubkeyhash-version": "00c4bbce",
+"address-scripthash-version": "05f724b2",
+"private-key-version": "80e9f374",
+"address-checksum-value": "97582e9c",
+"genesis-pubkey": "03bb8ca6bc395d6638ab1bc9a7e8a34ef10b894663bef065ee0d5966c43f8adabc",
+"genesis-version": 1,
+"genesis-timestamp": 1543911518,
+"genesis-nbits": 537919487,
+"genesis-nonce": 3,
+"genesis-pubkey-hash": "b180acd07afad0857f3993da10cfd7342e20208a",
+"genesis-hash": "0a5648249009b26040a0305af1d7cdd463311a12d95db0264ecbb6beef4f8941",
+"chain-params-hash": "ee65fb033910ff0703e02a3bfd5ccb5b89cd111c59e8582f80a4616b5b2d16fb"
+}
 }
 ```
 
@@ -93,31 +92,30 @@ To get a selection of this node's runtime parameters (these are set when the nod
 
 ```
 {
-  "status": 200,
-  "runtime_params": 
-    {
-      "port": 61172,
-      "reindex": false,
-      "rescan": false,
-      "txindex": true,
-      "autocombineminconf": 1,
-      "autocombinemininputs": 50,
-      "autocombinemaxinputs": 100,
-      "autocombinedelay": 1,
-      "autocombinesuspend": 15,
-      "autosubscribe": "",
-      "handshakelocal": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-      "bantx": "",
-      "lockblock": "",
-      "hideknownopdrops": false,
-      "maxshowndata": 16384,
-      "miningrequirespeers": false,
-      "mineemptyrounds": 10,
-      "miningturnover": 0.5,
-      "lockadminminerounds": 10,
-      "gen": true,
-      "genproclimit": 1
-     }
+"status": 200,
+"runtime_params": {
+"port": 61172,
+"reindex": false,
+"rescan": false,
+"txindex": true,
+"autocombineminconf": 1,
+"autocombinemininputs": 50,
+"autocombinemaxinputs": 100,
+"autocombinedelay": 1,
+"autocombinesuspend": 15,
+"autosubscribe": "",
+"handshakelocal": "1Qr572HfZyxmburpA6fQY4Nu2k7uWVR5dwwBoe",
+"bantx": "",
+"lockblock": "",
+"hideknownopdrops": false,
+"maxshowndata": 16384,
+"miningrequirespeers": false,
+"mineemptyrounds": 10,
+"miningturnover": 0.5,
+"lockadminminerounds": 10,
+"gen": true,
+"genproclimit": 1
+}
 }
 ```
 
@@ -127,51 +125,50 @@ Use `get /api/v1/blockchain_info` to get general information about this node and
 
 ```
 {
-  "status": 200,
-  "blockchain_info": 
-    {
-      "version": "1.0.6",
-      "nodeversion": 10006901,
-      "protocolversion": 10011,
-      "chainname": "primechain-api",
-      "description": "MultiChain primechain-api",
-      "protocol": "multichain",
-      "port": 61172,
-      "setupblocks": 60,
-      "nodeaddress": "primechain-api@103.83.192.43:61172",
-      "burnaddress": "1XXXXXXXW1XXXXXXR8XXXXXXXEXXXXXXZmw9ZL",
-      "incomingpaused": false,
-      "miningpaused": false,
-      "walletversion": 60000,
-      "balance": 0,
-      "walletdbversion": 2,
-      "reindex": false,
-      "blocks": 353,
-      "timeoffset": 0,
-      "connections": 0,
-      "proxy": "",
-      "difficulty": 0,
-      "testnet": false,
-      "keypoololdest": 1542802602,
-      "keypoolsize": 2,
-      "paytxfee": 0,
-      "relayfee": 0,
-      "errors": "",
-      "chain": "main",
-      "chain_name": "primechain-api",
-      "description_": "MultiChain primechain-api",
-      "protocol_": "multichain",
-      "setup_blocks": 60,
-      "re_index": false,
-      "blocks_": 353,
-      "headers": 353,
-      "bestblockhash": "0ed6d2931bfbbca53d9f6483b5a6bf63072ec288855383c7fc9eaf7fdbeb704e",
-      "difficulty_": 0,
-      "verificationprogress": 1,
-      "chainwork": "0000000000000000000000000000000000000000000000000000000000001620",
-      "chainrewards": 0
-    }
-  }
+"status": 200,
+"blockchain_info": {
+"version": "1.0.6",
+"nodeversion": 10006901,
+"protocolversion": 10011,
+"chainname": "primechain-api",
+"description": "MultiChain primechain-api",
+"protocol": "multichain",
+"port": 61172,
+"setupblocks": 60,
+"nodeaddress": "primechain-api@169.63.131.118:61172",
+"burnaddress": "1XXXXXXXM4XXXXXXiqXXXXXXdyXXXXXXc7qCdr",
+"incomingpaused": false,
+"miningpaused": false,
+"walletversion": 60000,
+"balance": 0,
+"walletdbversion": 2,
+"reindex": false,
+"blocks": 81,
+"timeoffset": 0,
+"connections": 3,
+"proxy": "",
+"difficulty": 0,
+"testnet": false,
+"keypoololdest": 1543915768,
+"keypoolsize": 2,
+"paytxfee": 0,
+"relayfee": 0,
+"errors": "",
+"chain": "main",
+"chain_name": "primechain-api",
+"description_": "MultiChain primechain-api",
+"protocol_": "multichain",
+"setup_blocks": 60,
+"re_index": false,
+"blocks_": 81,
+"headers": 81,
+"bestblockhash": "0166ed431644e7a6f768ac2ad5b3904e13a158be729cd5873854fffb01821007",
+"difficulty_": 0,
+"verificationprogress": 1,
+"chainwork": "0000000000000000000000000000000000000000000000000000000000000520",
+"chainrewards": 0
+}
+}
 ```
 ***Notes:***
 1. The `bestblockhash` of the most recent block on the active chain can be compared across nodes to check if they are perfectly synchronized.
@@ -219,34 +216,33 @@ Pass this as a parameter:
 The output will be something like this:
 ```
 {
-  "status": 200,
-  "list_blocks": 
-    [
-      {
-        "hash": "06bdc0dbbd7c1b0f186155ff2cd4888d35e17ac025b7225975621089402b129f",
-        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-        "confirmations": 344,
-        "height": 10,
-        "time": 1542715078,
-        "txcount": 1
-      },
-      {
-        "hash": "04d3b553930432b35e80d23c33a486b8f4e879054efb2d20a13fa5577611e55c",
-        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-        "confirmations": 343,
-        "height": 11,
-        "time": 1542715084,
-        "txcount": 1
-      },
-      {
-        "hash": "036184e6f87b07b228af79fe25c362cea452834a68c51857701fb9bfc39847da",
-        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-        "confirmations": 342,
-        "height": 12,
-        "time": 1542715094,
-        "txcount": 1
-      }
-    ],
+"status": 200,
+"list_blocks": [
+  {
+"hash": "068c42ca81014ecddb9dedbd00e9256f823babd539aef30e580229dee79c1821",
+"miner": "1QzSTNf9pCBCPGxSFHYWEzdkCWiKeThgv4Hkmt",
+"confirmations": 72,
+"height": 10,
+"time": 1543911612,
+"txcount": 1
+},
+  {
+"hash": "040d8d8b1913fb25fef5f995054ada332db4d7c32e322e5344fe53264caf124d",
+"miner": "1QzSTNf9pCBCPGxSFHYWEzdkCWiKeThgv4Hkmt",
+"confirmations": 71,
+"height": 11,
+"time": 1543911621,
+"txcount": 1
+},
+  {
+"hash": "0f07a552f2801a198cd5d3f2c2e989379bb60427d3ad4bc4fc22c0060014dc79",
+"miner": "1QzSTNf9pCBCPGxSFHYWEzdkCWiKeThgv4Hkmt",
+"confirmations": 70,
+"height": 12,
+"time": 1543911637,
+"txcount": 1
+}
+],
 }
 
 ```
@@ -262,41 +258,117 @@ Pass this as a parameter:
 The output will be something like this:
 ```
 {
-  "status": 200,
-  "list_blocks": 
-    [
-      {
-        "hash": "0905dd48268cc52657a500ac0dd5184c55bc1e7d76760ecd497eb70b68acc6d4",
-        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-        "confirmations": 346,
-        "height": 8,
-        "time": 1542715054,
-        "txcount": 1
-      },
-      {
-        "hash": "08810e8b23928846d86bb4284f95c20fd18892ffddde496a38f73c5910373d2f",
-        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-        "confirmations": 340,
-        "height": 14,
-        "time": 1542715114,
-        "txcount": 1
-      },
-      {
-        "hash": "08d58161a636616df060d54e0ed59ffae01935ec834663630c4215231ee5fa49",
-        "miner": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-        "confirmations": 331,
-        "height": 23,
-        "time": 1542715204,
-        "txcount": 1
-      }
-    ],
+"status": 200,
+"list_blocks": [
+  {
+"hash": "0ff1c0dd9ae284766e1150d1eee8b4dc34bae6e75935849f4b41e0e720337270",
+"miner": "1QzSTNf9pCBCPGxSFHYWEzdkCWiKeThgv4Hkmt",
+"confirmations": 74,
+"height": 8,
+"time": 1543911597,
+"txcount": 1
+},
+  {
+"hash": "08294da3838341b76bc8003dd891f4156b08748a20c45517960d229eac10e525",
+"miner": "1QzSTNf9pCBCPGxSFHYWEzdkCWiKeThgv4Hkmt",
+"confirmations": 68,
+"height": 14,
+"time": 1543911653,
+"txcount": 1
+},
+  {
+"hash": "09e6467214f9bd1e0696a9e146cdb635a898c6f325d1af0eba7dd00fc12f6ee0",
+"miner": "1QzSTNf9pCBCPGxSFHYWEzdkCWiKeThgv4Hkmt",
+"confirmations": 59,
+"height": 23,
+"time": 1543911745,
+"txcount": 1
+}
+],
 }
 ```
 ***Note:***
 The blocks parameter can contain a comma-delimited list or array of block heights, hashes, height ranges (e.g. 100-200) or -n for the most recent n blocks. Alternatively, pass an object {"starttime":...,"endtime":...} for blocks whose timestamps are in the given range.
 
 ## 7. Peer info
-Use `get /api/v1/peer_info` for information about the other nodes to which this node is connected.
+Use `get /api/v1/peer_info` for information about the other nodes to which this node is connected. The output will be something like this:
+
+```
+{
+"status": 200,
+"peer_info": [
+  {
+"id": 5,
+"addr": "169.63.131.125:61172",
+"addrlocal": "169.63.131.118:43376",
+"services": "0000000000000001",
+"lastsend": 1543919288,
+"lastrecv": 1543919288,
+"bytessent": 24378,
+"bytesrecv": 22834,
+"conntime": 1543915962,
+"pingtime": 0.06828,
+"version": 70002,
+"subver": "/MultiChain:0.1.0.11/",
+"handshakelocal": "1Qr572HfZyxmburpA6fQY4Nu2k7uWVR5dwwBoe",
+"handshake": "1aMiTQjLXABeoKtVgBcr5zzVXtT1eRvRTfY3RJ",
+"inbound": false,
+"startingheight": 81,
+"banscore": 0,
+"synced_headers": 81,
+"synced_blocks": 81,
+"inflight": [],
+"whitelisted": false
+},
+  {
+"id": 6,
+"addr": "10.188.200.228:61172",
+"addrlocal": "10.188.200.225:59178",
+"services": "0000000000000001",
+"lastsend": 1543919289,
+"lastrecv": 1543919289,
+"bytessent": 22920,
+"bytesrecv": 22895,
+"conntime": 1543915963,
+"pingtime": 0.067716,
+"version": 70002,
+"subver": "/MultiChain:0.1.0.11/",
+"handshakelocal": "1Qr572HfZyxmburpA6fQY4Nu2k7uWVR5dwwBoe",
+"handshake": "1aMiTQjLXABeoKtVgBcr5zzVXtT1eRvRTfY3RJ",
+"inbound": false,
+"startingheight": 81,
+"banscore": 0,
+"synced_headers": 81,
+"synced_blocks": 81,
+"inflight": [],
+"whitelisted": false
+},
+  {
+"id": 7,
+"addr": "52.172.139.41:61172",
+"addrlocal": "169.63.131.118:57018",
+"services": "0000000000000001",
+"lastsend": 1543919290,
+"lastrecv": 1543919291,
+"bytessent": 22804,
+"bytesrecv": 22926,
+"conntime": 1543915964,
+"pingtime": 0.261546,
+"version": 70002,
+"subver": "/MultiChain:0.1.0.11/",
+"handshakelocal": "1Qr572HfZyxmburpA6fQY4Nu2k7uWVR5dwwBoe",
+"handshake": "1QzSTNf9pCBCPGxSFHYWEzdkCWiKeThgv4Hkmt",
+"inbound": false,
+"startingheight": 81,
+"banscore": 0,
+"synced_headers": 81,
+"synced_blocks": 81,
+"inflight": [],
+"whitelisted": false
+}
+],
+}
+```
 
 ***Note:*** 
 This includes handshake and handshakelocal fields showing the remote and local address used during the handshaking for that connection.
