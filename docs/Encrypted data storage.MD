@@ -98,9 +98,9 @@ The output contains:
 
 ## 4. Decrypt and download file
 To decrypt and download a file, use `post /api/v1/decrypt_download_file` and pass these values:
-1 The transaction id of the transaction in which the file was stored on the blockchain
-2. The AES password
-3. The AES initializaion vector (iv)
+1 The transaction id of the transaction in which the file was stored on the blockchain   
+2. The AES password   
+3. The AES initializaion vector (iv)   
 ```
 {
   "txid":"8c4419f7e808800b83ec6ac9090813dbeec59c2deb837993a47089ce45acf6b8",
