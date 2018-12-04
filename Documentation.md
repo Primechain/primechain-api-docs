@@ -73,4 +73,7 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
 ## Others
 1. [Upgrading Primechain-API](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Upgrading%20Primechain-API.MD)
+
+2. [List of data streams](https://github.com/Primechain/primechain-api-docs/blob/master/docs/List%20of%20data%20streams.MD)
+
 3. [Non blockchain APIs](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Non%20blockchain%20APIs.MD)
