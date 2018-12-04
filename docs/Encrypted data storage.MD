@@ -6,7 +6,7 @@
 4. [Decrypt and download file](#4-decrypt-and-download-file)
 
 ## 1. Encrypt, sign and upload data
-To encrypt and upload data, use `post /api/v1/encrypt_sign_store_data` and pass the blockchain address (using which the file will be signed) and the file data.
+To encrypt and upload data, use `post /api/v1/encrypt_sign_store_data` and pass the blockchain address (using which the data will be signed) and the data.
 ```
 {
   {
@@ -25,7 +25,7 @@ To encrypt and upload data, use `post /api/v1/encrypt_sign_store_data` and pass 
 }
 ```
 The output contains:
-1. The transaction id of the transaction in which the dats was stored on the blockchain
+1. The transaction id of the transaction in which the data was stored on the blockchain
 2. The digital signature
 3. The AES password
 4. The AES initializaion vector (iv)
@@ -44,7 +44,7 @@ The output contains:
 
 ## 2. Decrypt and download data
 To decrypt and download data, use `post /api/v1/decrypt_download_data` and pass these values:
-* The transaction id of the transaction in which the dats was stored on the blockchain
+* The transaction id of the transaction in which the data was stored on the blockchain
 * The AES password
 * The AES initializaion vector (iv)
 ```
@@ -72,7 +72,7 @@ The output will be the data.
 ```
 
 ## 3. Encrypt, sign and upload file
-To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_file` and pass the blockchain address (using which the file will be signed) and the file data.
+To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_file` and pass the blockchain address (using which the file will be signed) and the file.
 ```
 {
   "primechain_address":"17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
@@ -80,7 +80,7 @@ To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_file` and pas
 }
 ```
 The output contains:
-1. The transaction id of the transaction in which the dats was stored on the blockchain
+1. The transaction id of the transaction in which the data was stored on the blockchain
 2. The digital signature
 3. The AES password
 4. The AES initializaion vector (iv)
@@ -98,7 +98,7 @@ The output contains:
 
 ## 4. Decrypt and download file
 To decrypt and download a file, use `post /api/v1/decrypt_download_file` and pass these values:
-1 The transaction id of the transaction in which the dats was stored on the blockchain
+1 The transaction id of the transaction in which the file was stored on the blockchain
 2. The AES password
 3. The AES initializaion vector (iv)
 ```
