@@ -15,20 +15,20 @@
 ## 1. Creating a new entity
 To create a new entity, use `get /api/v1/create_entity`.The following are generated:
 * a public key, 
-* private key 
-* blockchain address. 
+* a private key 
+* a blockchain address. 
 
  The output will be the blockchain address of the newly created signer.
 ```
 {
 "status": 200,
-"primechain_address": "15AnXVteaDaTb1wBstqxaXN2ixCEereugw7acE"
+"primechain_address": "1VCeqGYXLaqMtAFtxTNeTzfW8T714us2t3uwYM"
 }
 ```
 The private key is automatically stored in your node. This will not be visible to other nodes. If you don't want the private key stored in the node, use `get /api/v1/create_keypair`. 
 
 ## 2. Creating a new entity (for external key management)
-If you want to generate a public/private key pair, which is not stored in the wallet and which is ready for external key management use `get /api/v1/create_keypair`. The output will be the primechain address, public key and private key of the newly created signer.
+If you want to generate a blockchain key pair which is not stored in the wallet and which is ready for external key management use `get /api/v1/create_keypair`. The output will be the blockchain address, blockchain public key and blockchain private key of the newly created entity.
 
 ```
 {
@@ -43,7 +43,7 @@ If you want to generate a public/private key pair, which is not stored in the wa
 ```
 
 ## 3. Creating a new entity (with RSA keys)
-If you want to generate a public/private key pair along with an RSA key pair, use `get /api/v1/create_entity_rsa`. The output will be the:
+If you want to generate a blockchain key pair along with an RSA key pair, use `get /api/v1/create_entity_rsa`. The output will be the:
 * primechain address
 * primechain public key
 * primechain private key
