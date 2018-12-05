@@ -52,17 +52,17 @@ Note: The signature can be verified by any node.
 To sign data and store the signature in the `SIGNATURE_MASTERLIST` data stream, use `post /api/v1/create_save_signature`.
 ```
 {
-  "from_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-  "hash": "c14fa6ea73269522b3362c637e9d90de39f58ac7696536019b7a3f2e0741e606"
+  "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+  "data": "c14fa6ea73269522b3362c637e9d90de39f58ac7696536019b7a3f2e0741e606"
 }
 ```
-The output will be the signature and the transaction id vide which the signature is stored in the `SIGNATURE_MASTERLIST` data stream:
+The output will be the signature and the transaction id vide which the signature is stored in the `GREAT` data stream:
 ```
 {
 "status": 200,
 "response": 
   {
-    "transaction_id": "c2ac22b1603ace9d86a760f48c893906515edb2ae34b14770f73a5cd99177e9b",
+    "tx_id": "c2ac22b1603ace9d86a760f48c893906515edb2ae34b14770f73a5cd99177e9b",
     "signature": "IJHOhoHoNaWtszoPnzp6VZnfQS8oa3UMv5QhnQ7SRLLpZ2nqDCcZpxXcLFHCYZP7snMsGRW4dOyl7AYzb/17QOI="
   }
 }
