@@ -100,7 +100,7 @@ The output is the decrypted data referred to as `decrypted_data`
 ```
 {
 "status": 200,
-"decrypt_data": "1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn"
+"decrypted_data": "1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn"
 }
 ```
 
@@ -170,7 +170,7 @@ The output is the decrypted data referred to as `decrypted_data`
 ```
 {
 "status": 200,
-"decrypt_data": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="
+"decrypted_data": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="
 }
 ```
 
@@ -180,13 +180,16 @@ Samairah signs the decrypted data using her 'primechain private key'. For this s
 2. Samairah's private key
 ```
 {
-  "primechain_private_key": "aaaa",
-  "data": "aaaa"
+  "data": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q==",
+  "primechain_private_key": "V9uvYCkvGFGcrq2ePqtgnxA4qHAdFThhAUEkCT2sMogXv2pmAZq7nu3A"
 }
 ```
 The output is the digital signature.
 ```
-output
+{
+  "status": 200,
+  "signature": "H3i7JTbIfwe/jf05z3ea+O/Ljl0DHLg7MzTc4RE6FRd7M79SLGgq1zzuPkzffXHjecbcAMLtjHqoxUVRskSHfmQ="
+}
 ```
 
 ### Step 10
@@ -196,13 +199,19 @@ Samairah encrypts the following with Noodle Bank's RSA public key:
 3. the data that has been signed (hash in this case)
 
 This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
-1. `data`, which is the `primechain address` of the entity   
+1. `data`
 2. `rsa_public_key` of Noodle Bank
 ```
 {
-  "data": "xxxx",
-  "rsa_public_key": "aaaa"
+  "data": 
+        {
+           "signature":"H3i7JTbIfwe/jf05z3ea+O/Ljl0DHLg7MzTc4RE6FRd7M79SLGgq1zzuPkzffXHjecbcAMLtjHqoxUVRskSHfmQ=" ,
+           "primechain_address":"1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn",
+           "data":"NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="
+         },
+  "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1XUamZGgGBIKgUdXW35b 9V1PQ6jjv87erZY6XxW1RvdSBxfnYKIF+6FgTX1x/Rz54ynZagTA0CkdkYp+yKrG U53Cg/4vNl6MV2Ky/YgrBr1pOZzo89AyAt7u0lAPmkOXsewVTSSfQteQN4UoCtKh fPPgGiMlgKNvbH0pl3mD7USqI3Zo9VLm+P4qdyPG75mSu4t6i+xLWQOe9FtYUaR+ dy8OB8PBGIgkx3Q9Ik0xtBNTcYRAunJXULFy0T2xvmv73PS1OrJgNwXHEm/IDI+/ 5amvxtQirt7VBeubfQIyBcBGKSve2BRs2Fuw1ftZ4usSmgUTMZSi2NUU1Fhw1vQo WwIDAQAB -----END PUBLIC KEY-----"
 }
+
 ```
 The output is the encrypted value referred to as `encrypted_data_rsa`:
 ```
@@ -213,17 +222,32 @@ output
 Samairah sends this encrypted data to Noodle Bank.
 
 ### Step 12
-Noodle Bank verifies the digital signature using `post /api/v1/verify_signed_data` and passes the following parameters:
+Noodle Bank verifies the digital signature using `post /api/v1/verify_signature` and passes the following parameters:
 1. The data to be verified   
-2. Samairah's primechain public key
+2. Samairah's primechain address   
+3. The signature
 ```
-input
+{
+  "primechain_address": "aaaa",
+  "data": "aaaa",
+  "signature": "aaaa"
+}
+
 ```
-The output is:
+The output will be `true` if the signature is valid and `false` if the signature is invalid or if an error occurs.
 ```
-output
+{
+"status": 200,
+"response": true
+}
 ```
+```
+{
+"status": 200,
+"response": false
+}
+```
+If the signature is valid, the entity is verified.
 
 Noodle Bank also uses the stored timestamp to confirm that the signature is returned within a pre-set interval e.g. 30 seconds.
 
-If the signature is valid, the entity is verified.
