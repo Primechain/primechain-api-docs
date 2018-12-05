@@ -142,11 +142,11 @@ output
 ```
 
 ### Step 7
-The verifier sends the encrypted value to the entity.
+Noodle Bank sends the encrypted value to Samairah.
 
 ### Step 9
-The entity decrypts the encrypted value using its own RSA private key. The entity uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_rsa`. The parameters are:
-1. The entity's RSA private key
+Samairah decrypts the encrypted value using her own RSA private key. Samairah uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_rsa`. The parameters are:
+1. Samairah's RSA private key
 2. The `encrypted_data_rsa`
 ```
 input
@@ -157,9 +157,9 @@ output
 ```
 
 ### Step 10
-The entity signs the decrypted data using its primechain private key. For this it uses `post /api/v1/sign_data` and passes the following parameters:
+Samairah signs the decrypted data using her 'primechain private key'. For this she uses `post /api/v1/sign_data` and passes the following parameters:
 1. The data to be signed   
-2. The private key of the entity (signer)   
+2. Samairah's private key
 ```
 input
 ```
@@ -169,9 +169,9 @@ output
 ```
 
 ### Step 11
-The entity encrypts the following with the RSA public key of the verifier:
+Samairah encrypts the following with Noodle Bank's RSA public key:
 1. the digital signature 
-2. the primechain address of the entity (signer)
+2. Samairah's primechain address
 3. the data that has been signed
 
 This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
@@ -189,12 +189,12 @@ output
 ```
 
 ### Step 12
-The entity sends this encrypted data to the verifier.
+Samairah sends this encrypted data to Noodle Bank.
 
 ### Step 13
-The verifier verifies the digital signature using `post /api/v1/verify_signed_data` and passes the following parameters:
+Noodle Bank verifies the digital signature using `post /api/v1/verify_signed_data` and passes the following parameters:
 1. The data to be verified   
-2. The primechain public key of the entity (signer)   
+2. Samairah's primechain public key
 ```
 input
 ```
@@ -203,6 +203,6 @@ The output is:
 output
 ```
 
-The verifier also uses the stored timestamp to confirm that the signature is returned within a pre-set interval e.g. 30 seconds.
+Noodle Bank also uses the stored timestamp to confirm that the signature is returned within a pre-set interval e.g. 30 seconds.
 
 If the signature is valid, the entity is verified.
