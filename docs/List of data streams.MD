@@ -1,6 +1,9 @@
 # List of data streams
 
 ASSET_DATA_MASTERLIST   
+
+[ASSET_DATA_MASTERLIST](#asset_data_masterlist)
+
 BLACKLIST_MASTERLIST   
 BLOB_STREAM   
 DATA_MASTERLIST   
