@@ -122,28 +122,39 @@ The output is the 'RSA public key' of the entity.
 ### Step 6
 Noodle Bank generates a 512-character random string and the current GMT timestamp. For this it uses `get /api/v1/create_string_timestamp` and gets an output like:
 ```
-string^timestamp
+{
+"status": 200,
+"response": 
+  {
+    "string": "kaPYzPoOBv3wcDjLPpj23jl7JJLrgUBFNyYFt2NvPazaBlKBbg3SqgvFZtVzNmJtnUgLcQrglERswfuYwPwisywP54nMuo5HzXw0D2Kztqzy44K0zJs0upZlQjwEnWhGpKwtHFKqVrIUwCpPY83ZolRsurHSk76kWoNukxIntiXmkeDzWe0YYtsUBcIG41BieiIGO9n5DmXFow1L6l91hQL1T6fdafALJX9sZIDNPVlyalb7dOJyHxBH0lkykxt19VbTb4dZCWn68YkzYxhpp0AFtbF6bMBinZCbkbmsZPAhQx44k5fEksv6UDz8bj9H8thTxUXXVZTB3msdbHgZrOhfzAFHyTEA7IBVSrz8CdsU1XeEFHnYZZ6ogxQ0ZfacO6v9SdXzG8McK0mTr4BHeWQXmVMXmzKnCMZrH8KnXvBGyCsBhOnjvP7yVoEtf2xIqwPQ9jcvIf3NNZVqtAxL0utoZ3KB1DQ9NgZpTPCsSr8mffEzH2264urIOzGIs0j9",
+    "timestamp": 1544011513,
+    "hash": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="
+  }
+}
 ```
 Note: The hash is the SHA-512 hash of `string^timestamp`  
 
-The `string` and `timestamp` are stored in the verifier's private database.
+The `string` and `timestamp` are stored in Noodle Bank's private database.
 
 The `hash` is encrypted with Samairah's RSA public key and sent to her. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
 1. `data`, which is the hash   
 2. `rsa_public_key` of Samairah
 ```
 {
-  "data": "xxxx",
-  "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkSMswu6s2N2Ars4y6WyA 9OqWPRrx/5+6CFKa0cFak42xjWCQ5JBI8CSal8sQiebCNMCxpGwLcdFHv5ufJOt2 He3jzgU8hw1kPjzw+ONryz88flVqVXwTv2Yzd93IEvDl4rAIADDarso0McA6wvAz KfjQcoYcl1iHGxcFYUgUzDOZNStw8vPWJ7cogJZRuQTolN1X8BMczWJvXEeaLBCT HEt9QBTEGDsJqNBYLZkSEBA3ozS+02jE6fg7DpMU2KhbVO4MtTlmXvjM31+95Mk3 9XDSESLP0l8Nosd79L33r5Q38enfL8KCs6AYY18qvPIRE28IYFLzkzCvV5TJfTnG mQIDAQAB -----END PUBLIC KEY-----",
+  "data": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q==",
+  "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkSMswu6s2N2Ars4y6WyA 9OqWPRrx/5+6CFKa0cFak42xjWCQ5JBI8CSal8sQiebCNMCxpGwLcdFHv5ufJOt2 He3jzgU8hw1kPjzw+ONryz88flVqVXwTv2Yzd93IEvDl4rAIADDarso0McA6wvAz KfjQcoYcl1iHGxcFYUgUzDOZNStw8vPWJ7cogJZRuQTolN1X8BMczWJvXEeaLBCT HEt9QBTEGDsJqNBYLZkSEBA3ozS+02jE6fg7DpMU2KhbVO4MtTlmXvjM31+95Mk3 9XDSESLP0l8Nosd79L33r5Q38enfL8KCs6AYY18qvPIRE28IYFLzkzCvV5TJfTnG mQIDAQAB -----END PUBLIC KEY-----"
 }
 ```
 The output is the encrypted value referred to as `encrypted_data_rsa`:
 ```
-output
+{
+"status": 200,
+"encrypted_data_rsa": "K+stxqVtxVfsZnLCanbOiQLw0D5WcJ3BEx/uif7go9FLtUfqXp30yTani4UemS6x6WqVS+E7GaK04uO0NBiIkAkQNlv7TidL3fnMuYRHfXivZ8zjrGyP2YCMw82kRWUi91DbEbgGeHp4Dt90KXCy6THUMyolPKp2QpWV0HDmeaIt/RitmWeKBYc1Uko1cYfGZOuukn6576hz9XEoBl6qMCHdPtenT+3kgBPjvH71/GaRH/8VWadY1z2jIUkhhfuAymU/C593CJAnw2kpgUjKpyXpEFqGQmJgrAyfSiQx57sdagXYTcDPuXova8HSYRZwK6n6siVDok6fr4pR5tYvhA=="
+}
 ```
 
 ### Step 7
-Noodle Bank sends the encrypted value to Samairah.
+Noodle Bank sends the `encrypted_data_rsa` to Samairah.
 
 ### Step 9
 Samairah decrypts the encrypted value using her own RSA private key. Samairah uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_rsa`. The parameters are:
