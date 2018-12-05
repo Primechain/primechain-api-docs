@@ -3,19 +3,25 @@
 [1. Onboarding an entity](#1-onboarding-an-entity)   
 [2. Authentication](#2-authentication)   
 
-These end-points can be used to authenticate an entity (an individual, a company) or a device.
+In these end-points, a user These end-points can be used to authenticate 
 
 ## 1. Onboarding an entity / verifier
-An entity / verifier is onboarded using `get /api/v1/onboard_user` to generate the following:
-post ?? 
-give entity name, description e.g. imei number, pan number etc etc
-
-1. the primechain address    
-2. the primechain private key    
-3. the primechain public key
+A user can be an individual, a company, a device etc and can be on-boarded using using `post /api/v1/onboard_user` and passing the following parameters:
+1. The user identifier e.g. name, account number, IMIE number, serial number, CIN etc.
+2. The user description
+```
+{
+user_identifier
+user_description
+}
+```
+The output is:   
+1. the new user's primechain address    
+2. the new user's primechain private key    
+3. the new user's primechain public key   
 4. the relevant transaction id   
-5. the RSA public key
-6. the RSA private key
+5. the new user's RSA public key   
+6. the new user's RSA private key   
 
 ```
 {
@@ -31,13 +37,14 @@ give entity name, description e.g. imei number, pan number etc etc
     }
 }
 ```
+The following are automatically published to the AUTH_USERS_MASTERLIST datastream:
+1. new user's identifier
+2. new user's description
+1. new user's primechain address    
+2. new user's primechain public key  
+3. new user's RSA public key   
 
-The following are automatically published to the RSA_MASTERLIST datastream:
-1. the primechain address,    
-2. the primechain public key,    
-3. the RSA public key    
-
-The newly created entity's primechain private key and RSA private key are not published to the RSA_MASTERLIST datastream.
+The newly created user's primechain private key and RSA private key are not published to any datastream.
 
 ## 2. Authentication
 Authentication is a 13-step process:
