@@ -1,19 +1,21 @@
 # List of data streams
 
+This is the list of all the data streams created automatically by Primechain API. Click on a stream name to see details.
+
 [ASSET_DATA_MASTERLIST](#asset_data_masterlist)   
 [BLACKLIST_MASTERLIST](#blacklist_masterlist)    
 [BLOB_STREAM](#blob_stream)    
 [DATA_MASTERLIST](#data_masterlist)     
-DATA_SIGNATURE_MASTERLIST   
-FILE_MASTERLIST   
-FILE_SIGNATURE_MASTERLIST   
-GREAT   
-OFFER_DETAILS_STREAM   
-ONBOARD_USERLIST   
-
+[DATA_SIGNATURE_MASTERLIST](#data_signature_masterlist)    
+[FILE_MASTERLIST](#file_masterlist)     
+[FILE_SIGNATURE_MASTERLIST](#file_signature_masterlist)    
+[GREAT](#great) 
+[OFFER_DETAILS_STREAM](#offer_details_stream)  
+[ONBOARD_USERLIST](#onboard_userlist)      
 [RSA_MASTERLIST](#rsa_masterlist)   
-SIGNATURE_MASTERLIST      
-WHITELIST_MASTERLIST   
+[SIGNATURE_MASTERLIST](#signature_masterlist)      
+[WHITELIST_MASTERLIST](#whitelist_masterlist)
+
 
 # ASSET_DATA_MASTERLIST
 
