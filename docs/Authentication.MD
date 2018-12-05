@@ -44,7 +44,7 @@ The following are automatically published to the AUTH_USERS_MASTERLIST datastrea
 The newly created user's primechain private key and RSA private key are not published to any datastream.
 
 ## 2. Authentication
-Authentication is a 13-step process. The user being authenticated is referred to as 'entity' and the user carrying out the authentication is referred to as the 'verifier'.
+Authentication is a 12-step process. The user being authenticated is referred to as 'entity' and the user carrying out the authentication is referred to as the 'verifier'.
 
 In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the entity. Their primechain addresses are: `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah).
 
@@ -163,7 +163,6 @@ Samairah decrypts the encrypted value using her own RSA private key. Samairah us
 ```
 {
   "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCRIyzC7qzY3YCu zjLpbID06pY9GvH/n7oIUprRwVqTjbGNYJDkkEjwJJqXyxCJ5sI0wLGkbAtx0Ue/ m58k63Yd7ePOBTyHDWQ+PPD442vLPzx+VWpVfBO/ZjN33cgS8OXisAgAMNquyjQx wDrC8DMp+NByhhyXWIcbFwVhSBTMM5k1K3Dy89YntyiAllG5BOiU3VfwExzNYm9c R5osEJMcS31AFMQYOwmo0FgtmRIQEDejNL7TaMTp+DsOkxTYqFtU7gy1OWZe+Mzf X73kyTf1cNIRIs/SXw2ix3v0vfevlDfx6d8vwoKzoBhjXyq88hETbwhgUvOTMK9X lMl9OcaZAgMBAAECggEADQob+2d2IAXGie38pPwameZ5mQPSuiSfkh/ZyP6WJKuW SB1k5yQPaYPgX8LeuYUB7btiOmN6o78psw1IPwjok8fLr7bIuVl6qBzRiYrlJF2K Ec+avhNnssp71UkXsJv0C2nFTj8VZp7EEbQzk1ABSMQR9jgWWYKaoNRwp0zSkYXt SDbWLIAMJQgsH42itg/9+MgGUtHReZMjzEHYqU1Re8I+O0Ayy51HW44zgjxck10g CsAQnCF7UWyagxvTtoQSoBHqVhRK7L40yUxvDB+Bv+Tq4XOSw+WaeBJLOqFngcsz NzzQThp4muauQv3HPr757hXuq+wHQhG/FpV6jQEAAQKBgQD96sF77LMwKwfOT1vH ER9aBNHv+xY/ULZM9HdMYtl7Mym91KDzxW/1zDKGzoUDZlNm2UnldIs0UlWozjOE 23AWGh/IO4PNbpS4Rz5rmCXh83EJYAmFa50iMQC611zsvra4Nc5u3EiDAf3I20wE YMfLew53yWvluGdEp7WWWtjrWQKBgQCSU/lU4RzLVNhYdxC0O/P9fE46RKI+Ygl3 TSItTSEPKw6H4GPmEhgqbyhLF26LMlv4y03VXLAGB/x8suFaUnJOyemkILm6SQmU RJlOcvY2CKpyJ21H/VmklslkugwUinyV48IRPiNyPi/TSPFQQBGL+9yIKThOogwm JqE8w/aNQQKBgQDs7YBdAiCxcXV3LNWWioOWm6jJJKE9szJn3DT1Mcd9DeCFIUKO NEykLkV3RH0ZDwIDlf09/eFmkO0c9ktcTOXpubauP9pcdjKPQOsdunqeu2leNh6s QB3/KXpk3U/4GHympo5ZI3MFy3XjVb042JWVaN23KFtlnwu9JEBsa5i9AQKBgFgi Le2avM4XJ0t5Q11bMuT9ZtyflB0AzXTGx4wDhaLuKw1Z8LGVOmrskpdP4KwEQ/MA +LtG3Vp0mvW8hBDz0Zd0872AXH1AGn3sJ25hvbvj0k15Q8/1X3XLwDdj+3yvwMRC 7xOVmqHnpMScjYPpYuguZbC5KwnpfmnIIJtJ6IlBAoGAEGuy6McpovKopghtqJ3B jtEGhVysu1UTqSOe4NcVvLUbT7SsIN+8xygWKAYAGuCE7AN6N6LDBa72KuzS0U+S iiO/j+t62FY8lY1vvI4YKXmwr7ONhPVjhRgIHjAx9IJ8P8hWAxC9i+n1oiK9ECWL 81kiQg+BuclnyJQ8MOHuu+8= -----END PRIVATE KEY-----",
-
   "encrypted_data_rsa": "K+stxqVtxVfsZnLCanbOiQLw0D5WcJ3BEx/uif7go9FLtUfqXp30yTani4UemS6x6WqVS+E7GaK04uO0NBiIkAkQNlv7TidL3fnMuYRHfXivZ8zjrGyP2YCMw82kRWUi91DbEbgGeHp4Dt90KXCy6THUMyolPKp2QpWV0HDmeaIt/RitmWeKBYc1Uko1cYfGZOuukn6576hz9XEoBl6qMCHdPtenT+3kgBPjvH71/GaRH/8VWadY1z2jIUkhhfuAymU/C593CJAnw2kpgUjKpyXpEFqGQmJgrAyfSiQx57sdagXYTcDPuXova8HSYRZwK6n6siVDok6fr4pR5tYvhA=="
 }
 ```
@@ -175,23 +174,26 @@ The output is the decrypted data referred to as `decrypted_data`
 }
 ```
 
-### Step 10
-Samairah signs the decrypted data using her 'primechain private key'. For this she uses `post /api/v1/sign_data` and passes the following parameters:
+### Step 9
+Samairah signs the decrypted data using her 'primechain private key'. For this she uses `post /api/v1/create_signature` and passes the following parameters:
 1. The data to be signed   
 2. Samairah's private key
 ```
-input
+{
+  "primechain_private_key": "aaaa",
+  "data": "aaaa"
+}
 ```
 The output is the digital signature.
 ```
 output
 ```
 
-### Step 11
+### Step 10
 Samairah encrypts the following with Noodle Bank's RSA public key:
 1. the digital signature 
 2. Samairah's primechain address
-3. the data that has been signed
+3. the data that has been signed (hash in this case)
 
 This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
 1. `data`, which is the `primechain address` of the entity   
@@ -207,10 +209,10 @@ The output is the encrypted value referred to as `encrypted_data_rsa`:
 output
 ```
 
-### Step 12
+### Step 11
 Samairah sends this encrypted data to Noodle Bank.
 
-### Step 13
+### Step 12
 Noodle Bank verifies the digital signature using `post /api/v1/verify_signed_data` and passes the following parameters:
 1. The data to be verified   
 2. Samairah's primechain public key
