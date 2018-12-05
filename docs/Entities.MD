@@ -33,12 +33,11 @@ If you want to generate a blockchain key pair which is not stored in the wallet 
 ```
 {
 "status": 200,
-"response": 
-  {
-    "primechain_privkey": "V7MjFJkL9jX5Ubb8PVuqxcyKarUawtweoHBChYVC6F3LMmqTLcK29Tpm",
-    "primechain_address": "16FmdRaQLPPbiNRH2ECWCXShTDiXUpjw9QUXPb",
-    "primechain_pubkey": "02134c2ab1a1bfe97dd9d0c23b658b0e1b3f012ac3d9a00387351c7e87994987ae"
-   }
+"response": {
+"primechain_private_key": "VFGxBp56YTFwAkwtLn3rxKh4ah8JYRtKf2Kb3YkKyTqFnD1XdyWXmPX6",
+"primechain_address": "1Zj8hJiAtR5UaZkrzWhsRwU1s6DYBQULeCx3Ro",
+"primechain_public_key": "03b085ad524868aa32ba05109bf0448b188bfd3627fde1c91c127d938c07815879"
+}
 }
 ```
 
