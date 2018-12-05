@@ -44,7 +44,7 @@ The following are automatically published to the AUTH_USERS_MASTERLIST datastrea
 The newly created user's primechain private key and RSA private key are not published to any datastream.
 
 ## 2. Authentication
-Authentication is a 12-step process. The user being authenticated is referred to as 'entity' and the user carrying out the authentication is referred to as the 'verifier'.
+Authentication is a 13-step process. The user being authenticated is referred to as 'entity' and the user carrying out the authentication is referred to as the 'verifier'.
 
 In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the entity. Their primechain addresses are: `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah).
 
@@ -215,13 +215,35 @@ This is done using `post /api/v1/encrypt_data_rsa` and passing the following par
 ```
 The output is the encrypted value referred to as `encrypted_data_rsa`:
 ```
-output
+{
+"status": 200,
+"encrypted_data_rsa": "KVzEEUAnMZMLFMK0FV+GHI6B4fY5q49zf9l6BNt4LXOJBVba/J0y1g5SX1K4Ol0S8p7z+0yOWUkXllU6wu99Sw6VntCJJK21zlyKGEtqGpReEXsS42ibXY+wMmoEU/aVd84pLIbfSAc5vBP5OpvmMD3/JPiPtDFqqIuEnadAerjoCwWpBsdxBm+YWB0nOpwabz7rpamjvrsS3Q3f3p67T+a/CM9JzrZxwG/UBbqbxWU2dPfpy7YuqFSLEuQj0DAPOOv3hCcaIQAXdWejcURyxTB7ZIpos+od5Wnsx/2e6ANMHgSJqCiLAs0xzOa8uLeLV8hFQk9HoKSB412kTR4PESL6n3NqRkQh403ui5EvP02j5bF+B7i/xA7EQfuVIj8F28woH3pOJ4rrKGPl7J11VV8R6OoQbo6d4n6tIQDdS2mpYcjzdpEWeM7PGCB0mRRDxJaToBV35Z5WvBPVO/ug1Eh4eQP+7YlTVEliDjEggX2GrEH945kK3oCxsDwysmR1w5fQUeguflejMYvSOHrcIVOl/0Z/t1WFtD6TYVcs4xKYiPKPbdzlm85S3q4ArlNi3yo47zLWYvGs11QbiOvetTDhSYKSq8YiTgbPC9vDhZVgxvNbZe+k9psQOvtljF0WjYarmuHGyQTv9vpY7eziEnSHCPH++LKwF+RkwMVOmJM="
+}
 ```
 
 ### Step 11
 Samairah sends this encrypted data to Noodle Bank.
 
 ### Step 12
+Noodle Bank uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_rsa`. The parameters are:
+1. Noodle Bank's RSA private key
+2. The `encrypted_data_rsa`
+```
+{
+  "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQDVdRqZkaAYEgqB R1dbflv1XU9DqOO/zt6tljpfFbVG91IHF+dgogX7oWBNfXH9HPnjKdlqBMDQKR2R in7IqsZTncKD/i82XoxXYrL9iCsGvWk5nOjz0DIC3u7SUA+aQ5ex7BVNJJ9C15A3 hSgK0qF88+AaIyWAo29sfSmXeYPtRKojdmj1Uub4/ip3I8bvmZK7i3qL7EtZA570 W1hRpH53Lw4Hw8EYiCTHdD0iTTG0E1NxhEC6cldQsXLRPbG+a/vc9LU6smA3BccS b8gMj7/lqa/G1CKu3tUF65t9AjIFwEYpK97YFGzYW7DV+1ni6xKaBRMxlKLY1RTU WHDW9ChbAgMBAAECgf8RgomsD0YSs2gpMrD30GW6uuzFoBUOpumdU7V2F1HHgII6 ErvoMWJMQfCkaqXvHXFiMQykpb8rVDQYvEOqMlgSg95w9WjqDNd2U6JbKdBdvSvk jfqOBYYUtjThC7A79096SON2cIqf8Q7jfwjJ2n1kwpyfiEKLStzZCWtgAZfQ3qq5 wgatNWHWTjokVukWvK3zMamPEP9dOw97/Oo6i6wT/VeKM8d/p5fKoEUNSEBYzJkp CoxGIFpy8s1X3QvxJB9cLomY/JTrMsynIR7YimBmVAtlY2pndsXjC3aVR+WN6MtZ RCwzccA+JqmNiZr63MWIlKmCil/muGJG5UngbPECgYEA7wjahkoMSqyD4bt5ceFt FFMTb6qooW7DFj2ZVlr+NJ4DMieve0IhkOZenTGpSAGlyY7wJXnRCET2fTnEf0R7 OX+Nap/sVxAOaXRSupsvvauUjp2ETjhxSnZHhLPr3z9lj08lIDHUoo9QS5hbpwsK as2ojjLrKxEcaEGKHpeoqNkCgYEA5JuGiAnwj408jGudgJiQ146VJkYYT1UvKqn6 F7QVNg4OW4QckqBZRUwhEZSUBpluNQuLeO9EVDjQR16ZBBYgvEFQKLj0nJdcUz11 JiAsiQzrJIWPE/HM587QlTnr5xHcjyJuGnon/tyGdQptAd5dlsgQ/ctt7EypAfDr /7B+elMCgYBrt2SqUWIaoIVJyu7eV8SM/SbsEk6teLlnI1kfJiAZ2/76shGNDO8N WhLW6ZMsRLnOC6DCcpO1E0a0hby70UNqVMWIgArD7RNhiC7jsp0f7tsiLW96xEqh UI3ICkBHuUzt+K91Q59bphN8DWt36izGlmjXs7BwFuTjQm2YfaVeeQKBgCjo7BpM LRCDZeJ7H6RzqPfqPCatRIxt4hLweCDlySXzPf6Cldpnd5I/HWvX+uVzb5Vui3cI 2mF4CU28UAW7MACAb6fZ8WxUaeE7jktUVqPv++R9Qi1/h/uztv/9bYncWGwE7U8v rRievjETvI4pDPZ+twuz6+ftkBEY3CLVosyhAoGAdAIMNkZGPDdeWSGO6Zl3SBYf hhsFJc3nn9pNKhPgXZUvioAi+I9POljFJQgn9Y9OYYpp7b7L1lCP0D9cgOkju7UX DScZTRml7urq8lNqHR/dS8fKo4Z0JEowhmtUBH4clv5hOaY9EjG2w/kNZCdxDbJU b8SwjFWTl8KUu3O7N/g= -----END PRIVATE KEY-----",
+  "encrypted_data_rsa": "KVzEEUAnMZMLFMK0FV+GHI6B4fY5q49zf9l6BNt4LXOJBVba/J0y1g5SX1K4Ol0S8p7z+0yOWUkXllU6wu99Sw6VntCJJK21zlyKGEtqGpReEXsS42ibXY+wMmoEU/aVd84pLIbfSAc5vBP5OpvmMD3/JPiPtDFqqIuEnadAerjoCwWpBsdxBm+YWB0nOpwabz7rpamjvrsS3Q3f3p67T+a/CM9JzrZxwG/UBbqbxWU2dPfpy7YuqFSLEuQj0DAPOOv3hCcaIQAXdWejcURyxTB7ZIpos+od5Wnsx/2e6ANMHgSJqCiLAs0xzOa8uLeLV8hFQk9HoKSB412kTR4PESL6n3NqRkQh403ui5EvP02j5bF+B7i/xA7EQfuVIj8F28woH3pOJ4rrKGPl7J11VV8R6OoQbo6d4n6tIQDdS2mpYcjzdpEWeM7PGCB0mRRDxJaToBV35Z5WvBPVO/ug1Eh4eQP+7YlTVEliDjEggX2GrEH945kK3oCxsDwysmR1w5fQUeguflejMYvSOHrcIVOl/0Z/t1WFtD6TYVcs4xKYiPKPbdzlm85S3q4ArlNi3yo47zLWYvGs11QbiOvetTDhSYKSq8YiTgbPC9vDhZVgxvNbZe+k9psQOvtljF0WjYarmuHGyQTv9vpY7eziEnSHCPH++LKwF+RkwMVOmJM="
+}
+```
+The output is the decrypted data referred to as `decrypted_data`
+```
+{
+"status": 200,
+"decrypted_data": "aaa"
+}
+```
+
+
+### Step 13
 Noodle Bank verifies the digital signature using `post /api/v1/verify_signature` and passes the following parameters:
 1. The data to be verified   
 2. Samairah's primechain address   
