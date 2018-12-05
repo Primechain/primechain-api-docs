@@ -1,16 +1,16 @@
 # Blockchain based authentication
 
-[1. Onboarding an entity](#1-onboarding-an-entity)   
+[1. Onboarding a user](#1-onboarding-a-user)   
 [2. Authentication](#2-authentication)   
 
-## 1. Onboarding an entity / verifier
+## 1. Onboarding a user
 A user can be an individual, a company, a device etc and can be on-boarded using using `post /api/v1/onboard_user` and passing the following parameters:
 1. The user identifier e.g. name, account number, IMIE number, serial number, CIN etc.
 2. The user description
 ```
 {
-user_identifier
-user_description
+  "user_identifier": "1234567890",
+  "user_description": "Primechain Technologies Private Limited"
 }
 ```
 The output is:   
@@ -26,13 +26,13 @@ The output is:
   "status": 200,
   "response": 
     {
-      "primechain_address": "18WFbKrENxf7u1xwUXYrKzbZuU2Hh4d4GA4pM9",
-      "primechain_private_key": "VCaewXd7tWw1FyowD2SV5zTVTRCA1USVai3gWPp5zy4JJtmxhKVYw4UT",
-      "primechain_public_key": "0253b060c93ba01879bc1cceefe7cfe8aa7bd5c1a611064ac100e92ef5227efd8d",
-      "tx_id": "45fcc868c8d52d3f2cb2a0b2b389997cb625ae6d66594206956e045f15b9f721",
-      "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApXnD9fvGxJSJ+Y7CnVE6 SqildolOyVtNK1f6SO9O/ksVzKahi9ZYIrMqZiF5UoUP8z2GlxnIEpdwhKoxH7KX Y1d6l4fE/0W3QH9eGCcmxvWncZiQJIwmWB4NqeKO1AIBE9hxk8ZhHEI68AMv1ptG L6J2HlFQ3z4us76pTbhsVZmAyQ+yc6g6sU4gGj7GDVyS1ZpIw+2O8ybNYfN8ieSU qZ56tA/OeSxaWKMl/JaDHuZ3kWzEfXfed+7WmFxXqHUpkf58W8pYsiLDlgfBlKWD Rxzflc/LGKjwS3d1ydHKvPRDJ0hqNf6DHO4AyoOfI3fnqdFc1psN/F+fnfYsm8z+ VwIDAQAB -----END PUBLIC KEY-----",
-      "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQClecP1+8bElIn5 jsKdUTpKqKV2iU7JW00rV/pI707+SxXMpqGL1lgisypmIXlShQ/zPYaXGcgSl3CE qjEfspdjV3qXh8T/RbdAf14YJybG9adxmJAkjCZYHg2p4o7UAgET2HGTxmEcQjrw Ay/Wm0YvonYeUVDfPi6zvqlNuGxVmYDJD7JzqDqxTiAaPsYNXJLVmkjD7Y7zJs1h 83yJ5JSpnnq0D855LFpYoyX8loMe5neRbMR9d9537taYXFeodSmR/nxbyliyIsOW B8GUpYNHHN+Vz8sYqPBLd3XJ0cq89EMnSGo1/oMc7gDKg58jd+ep0VzWmw38X5+d 9iybzP5XAgMBAAECggEBAJF7Fk/jRYN63Dstyegpi8grsR0f5sacoKHkvUT2MErd lJLSROD+V4paXoJgF5v3JGjDxNp/bij6P5BDWOD3UKWkOUGTuhx8HHp2ADHX6f2t 58K1ULTxCp0Z/wVHDC9Ue8II3wH+vU3s5IgzJRHWfcRPXu2UrDc5IjIhBBQyefxe iBIFsijtItFEH1JrlembFRnLq4eiVfwWZ7Arg2QD+GlEM0jDfxOP/h2fW3PguBgE 54qq5iZz8OZvMVzStgZ402WGo3FHmDhnxa5bkla8Jg/5n6qCrDW0IulqAZV1vYXX F4sLqPR3OMhlL5nmp9Ng5kBo9VxWPTccxEH5rXLqELECgYEA2mlfHk+7Z1bt6qhE wbuukbnbC6goZ3eigKXQZuut8/R/Xj766ZB16UtXA/kLqUtUKHtxXghEHxWSF+E7 2466/KTAF9M2PGbXW4vkO+gXfZGDPMwZInSn5sXBFukj0nuVmp+M1A0D+b8ELFTr QRy2yJ1V0odMsIq8Bz40yhX0m+0CgYEAwfQtf7MTGWaE2jxakmcXP5ChqzFWWuC8 nK5Cr3cilnKLR4Ph5cHktEJip4WtwXLVNuQRGLLGCuNKXErt5HHh8QGQ7DBzS9yJ wEBfv8dqUsBc1G8eO2kvclYEPDTXytTXR/kdPG10Sd5PGJfeJrFCBBdjrFZ85Qo7 P5bwPm8HItMCgYBxVHfMrKabSpoNRt7Wf+JnLz8f31OHzKX/hwqKPQR4L4ffiWJ8 yz7DnRo7r4CDidjTYKpElplyX6j8xxxeIsOX0Iz0T942nU5l7EKzawy1VUn5xBXO sSVmM3qrvrGdyA6quttCNLa5YopxzmZ71MBrfGhJ43bBrFtAjuCpc5cHSQKBgQCq iqQ/NxzCJu0GYC9bsB43HFurhhRikF4IfwnP87eMBmgFmCdXuWf6QK0ylE62XNyy CVQnHXsaM8U85f3L838yRahCpk+bEu5lB7WpkhUhclety48Pumun446Ryf09Mm2h saBNdAjeswVloJQL/a0In/Bapynm01pJjdTtcP8bVQKBgDKVN4eQtpCz6uEBX3QP KdioYh4AA6p4UqOvc+RNjCJ/d29oCMCnzwedvOJAl3YCNRnsSVtzAyc0XMeJpeXM Gwq4IVV3b+lptAtVtMKeUf4IM/EHKiEYh7bL+QoqpVE0XyKvWmn0SRRv5Vlu/9hY F2Pi1CSo3cDET/VVtnWWATva -----END PRIVATE KEY-----"
-    }
+      "primechain_address": "1HpE8ZwqDyckgmnEnsHBkigsGDhvoYqQXXGBYj",
+      "primechain_private_key": "V7vznRFfAMCGbzayvAcHsePBJEaoswLmtGXGCgLiNNDe86uJ1AZaqsci",
+      "primechain_public_key": "022b031af75d871f44e0cad222c0beb6b2753e3a28697b62917b1dfa4bbde14519",
+      "tx_id": "64645e8b59df078be0cdb2d5986e468d31bc4d1089feb164b5278106ce6ce0f3",
+      "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgpX9L2fIk8syLtsF7BQG gB1vIeZgK8brEwU8GDyJlhPa1Axf0B+sjh7wgqGMpCZd9LpFwxJQEkrWiR63Nn3o OVXJ1/b3Gw91Jy5B6zJMOTM/ojCtEfA5X9KP3U5ETR5s1fHFrql5zOnj00hiUX3u bb143kVbneclu+kIGXvHB1Du5NF+rkeN2FPXHwUxbxWSF+Imp6yVQ3OjH9uXVZH3 VAWt/7dcn+Pb1FreK4wIIFX/CeqQ3+KC5XPc8f4HbO1MuaU2TkczbQxZHU7LdzIf ag422lQlivu/4EV1rcyz9j5c9DjrN38tH+WfQRb2CstEf3tCrd93ZAiCGkK/x5qd HwIDAQAB -----END PUBLIC KEY-----",
+      "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCClf0vZ8iTyzIu 2wXsFAaAHW8h5mArxusTBTwYPImWE9rUDF/QH6yOHvCCoYykJl30ukXDElASStaJ Hrc2feg5VcnX9vcbD3UnLkHrMkw5Mz+iMK0R8Dlf0o/dTkRNHmzV8cWuqXnM6ePT SGJRfe5tvXjeRVud5yW76QgZe8cHUO7k0X6uR43YU9cfBTFvFZIX4ianrJVDc6Mf 25dVkfdUBa3/t1yf49vUWt4rjAggVf8J6pDf4oLlc9zx/gds7Uy5pTZORzNtDFkd Tst3Mh9qDjbaVCWK+7/gRXWtzLP2Plz0OOs3fy0f5Z9BFvYKy0R/e0Kt33dkCIIa Qr/Hmp0fAgMBAAECggEAJc6C9NyZR6DGsKYcutK5ZxIegLQQF9yJZoJXebTdKKQq 8MV8X+crsCHpBAj9jPDGtvnPBMEiiYk9P4mzBYXCXAcoXuxTcnQxONy9nPh89PqP a8en88+W7NUrbakhQSqT3AUZdI4Ag4EbwqnsPSe2hfMbMU7nTXoEhLjc7XPWlZk7 jbQZwivjhm5y8Kol1YKBCKBbSQqDgu1tqb1J+X7md5OMZyMaIzgNZmf+Y2YB//pS 1khYDd8w7GOyGs45p7CehPWBNqDW0IwvzZiRNCgDNkJLgvA5+NPiFIEWaEGBZwYm vi6ZTe51xoqDa8rbH7wSbIjwvnd1q9VqufaSwXG9EQKBgQD8JzoTdp+vDso386BT GZF+NmvgMs0Dtoc8FdC3CLXarU46V6rwHbMpC57u2L4cSWUpemiUxTKMjppKm/bO 0YugCiShH08QexoTcQdzaIPduEqdqCneEhUHpR1gyGgowKVr0FrHGit/CUHt5JK+ l2u+NA+nIV8DUytIBMK6XTTo+wKBgQCEk/yCXcMnzWx10IXxy1oOR5sVPsysDn1F 8NOJBb6Qitd0l3W58vtlYxDDRCxtqUdqc6Te9VMEgvzjLJpVUcPCd7LMVmtrwcr6 cZU1uTtkm8Bj8HZBMpvvFb2W3H02SFuHYlhjCOcnNRnNt78jT/sIboItHDC9azFi IxUnVaqrLQKBgQDftW2xFu1VQqnmOh9jmquabm4G2wtI4AfbJv+lY/Tzrg5ZdK4T mkX5hHXdMi54qiU2R4PBebL/QQVibDzsALz/oAAfcseSt6TK2tzhZziW3YpVlXyP qTs/LR6DX0oJ3eDlZlUjj/RHIM99X+1RasYMWeQJQ3IoYQFlQ9P/w/HNQQKBgFrD gZSyoj+mmEFUH884e4/ZH+f8lVyZktQGGpvtLdiA5R4x7uv92HRBzSERlCUDRhwv zcjCRTKKhpz0VThiANYq4mKYK3SbON4aUp90D6BCLQV+g0cBYdXdmW0lyCcYhGj8 QCyU1MN3zBGVYSrIv8C2/zHo4clcEHPyNrI2KOCFAoGAdw6mncyn26cqiSjssaG3 4Fqwl/aCuFWj7ruXOENMb2n1icg1Athk2jz44W3XTPj1MLPUZqPVyUlJDBddmhvl nwG3qQU/w0+BlvIFtW/7j5tMJ21bDZ7S5g6Bix7soeZNuRZK0z2ihOsSclXmtdmH vb05+Q8ZdbPR2iEhz2qs2UQ= -----END PRIVATE KEY-----"
+  }
 }
 ```
 The following are automatically published to the AUTH_USERS_MASTERLIST datastream:
