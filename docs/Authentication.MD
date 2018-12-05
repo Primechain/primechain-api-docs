@@ -55,7 +55,7 @@ The entity retrieves the 'RSA public key' of the verifier using `post /api/v1/ge
   "primechain_ address": "aaa"
 }
 ```
-The output is the `RSA public key` of the verifier.
+The output is the 'RSA public key' of the verifier.
 
 
 ### Step 2
