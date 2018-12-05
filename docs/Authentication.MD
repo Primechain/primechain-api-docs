@@ -17,15 +17,14 @@ An entity / verifier is onboarded by a bank (known as the onboarding bank) after
 ```
 {
 "status": 200,
-"response": 
-  {
-    "primechain_address": "1LSkxfMXyBZ6dkS5boJ4HqVUtg8HT23Th7BAD7",
-    "primechain_private_key": "VAYsZsWm9bNZGUZxctwTfhRwxSbdtq7kpeGPweA3DwvNd8VWVEf5UhaK",
-    "primechain_public_key": "039d308affe4a60dcaf4ba2e392d5ad2af6314a7921dfca12bfa83e1472f97cf4f",
-    "tx_id": "1e44d8cdbeab525c0d8f72ce982074acecc4a9d57fbb1ad121b2554eca506bfc",
-    "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvr4r+1xpdqZYWUAvsMQ6 KHiLnSZjsO76BwZ//RWZtW2AMAcXZPttps6sbuiyANzslhpLQffrpYoLeQXdMmkB HyeJxwdYpfjjt/ab7ke0oMaSTOt+kuAeNLQZBXpN4BiZs96To3b9AcQzYHb5Y9Ty 6eQLHi27glaLmpZL+mQs9mR3SJTEoXoZZ7CGT54v6DB5sO3BrXrE0t8SP1TfD91C INrrlfrs8GGw+58wK6yQ88LQqHgXmbWoqF3lyg1oGgan1Sj0jBYp6RyMJ3HQvbml 5NwG1gpzDPjAF9NsZnowPF/vOBjpqI3fTFFiiW2A8txzpwphCyNUSvuJMFy2+GBj vwIDAQAB -----END PUBLIC KEY-----",
-    "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC+viv7XGl2plhZ QC+wxDooeIudJmOw7voHBn/9FZm1bYAwBxdk+22mzqxu6LIA3OyWGktB9+uligt5 Bd0yaQEfJ4nHB1il+OO39pvuR7SgxpJM636S4B40tBkFek3gGJmz3pOjdv0BxDNg dvlj1PLp5AseLbuCVoualkv6ZCz2ZHdIlMShehlnsIZPni/oMHmw7cGtesTS3xI/ VN8P3UIg2uuV+uzwYbD7nzArrJDzwtCoeBeZtaioXeXKDWgaBqfVKPSMFinpHIwn cdC9uaXk3AbWCnMM+MAX02xmejA8X+84GOmojd9MUWKJbYDy3HOnCmELI1RK+4kw XLb4YGO/AgMBAAECggEBAIdlBmNOna4TNfNklHWtVHsV1kSe03TsrZ3/ByrnAky+ hZeR8RFFR/h4C/5OPsxOBcImt/UDvsmqy6oEd5co4hrzPeGBXXOy0DHtY5IoZBcb 3Q2svBQV8lsG3Bv/TPgdfj0naTVHaSCv3KhEy5IJvsQ3k4zAebFzLXV16ki6gxAB 1nyfxHT5po2nBd6l01PU26tWXctVT99PKAogXgA24DYUbo6rvyiEJ6XFHZafyZ2T XbNH8vw3hYmm7S714lP3sbPUrbWuVq8dXikOwBVzPnYhye+WyMMkEHDtJFbj5Nsl e1nsKnvgd6y8BUsqFiZznRpvlO4nXw5TECSot3gkcMECgYEA533JDAQqMPlJTTqy X+yZ48xM80IfX7ctg+PQZOVos9GZtbN9wP0K1s48ylQM586HdcMOkjpbg3luTAiw mLtLzkzq+mEr9dzN5lPR0jO38ni692SCPnPxN/XGgNH3oPR1X7269WsFkFdXn6SZ yV5QY2l1lrrPW7K1106hQFBo5tUCgYEA0u/2Msyaurz0m+Jy/98xEZmDCjHYL4Fl AHX5RbrfF4FfYq8k6lTKU5XIg+Pgdnz9Cv/4vagFp0SdgIqJIpwAEYLskXckbFMp 5xQ5rRJJcEcxCmrK2yFYbaWm1+xWNPLklNoqgnteuutbqOFO+i+L0uG4oR6lKrT2 2y2JeTRtEkMCgYEAvfLo1YNVW3oyO7y+QRfT7qflPHY1aETWhDKa/S+BCowipIXz 2jfIfRodp6fwLwW5AVhczIA2N1uctacrwSduvIlBBtJVUBkumqCMuv7VIZEPWZCP js90T4bMq0ee+eOdrEHy9w4qMpZ4v/ZAeot5Sxlt85C2NXge3d0XU76nVUECgYAg ecVj6NBhs7nNTj36WviJByN/rFDmb3uHaKJqM+0pB0gSP3jlgwxrdgIbHDhwxamH ygUX3giQyiWdpraaV35DM+8MLlWzP9KRuzFuDgS0fqF0QyDcP/QHXZukXsSe/k5n BHfLAweAq7++7oFkT3GtlAcC917ihl4DPK2PtZydVQKBgH4pBHXWtA7ED4S8iC7y 6JOF3nAC6lTwyk0fV2+X1cPi4pff15gA9VJkbj/oCH6NlcsP3W14N8gFRVcw9IEd zx16xBjlZn0u15ICCVxpyunaglXqP/IK/57g4PN1o/6yEGjpbRiyNHEJWfNg4V0N wZ/fl1ZdsNyKm563Wcdq9Tuq -----END PRIVATE KEY-----"
-  }
+"response": {
+"primechain_address": "18WFbKrENxf7u1xwUXYrKzbZuU2Hh4d4GA4pM9",
+"primechain_private_key": "VCaewXd7tWw1FyowD2SV5zTVTRCA1USVai3gWPp5zy4JJtmxhKVYw4UT",
+"primechain_public_key": "0253b060c93ba01879bc1cceefe7cfe8aa7bd5c1a611064ac100e92ef5227efd8d",
+"tx_id": "45fcc868c8d52d3f2cb2a0b2b389997cb625ae6d66594206956e045f15b9f721",
+"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApXnD9fvGxJSJ+Y7CnVE6 SqildolOyVtNK1f6SO9O/ksVzKahi9ZYIrMqZiF5UoUP8z2GlxnIEpdwhKoxH7KX Y1d6l4fE/0W3QH9eGCcmxvWncZiQJIwmWB4NqeKO1AIBE9hxk8ZhHEI68AMv1ptG L6J2HlFQ3z4us76pTbhsVZmAyQ+yc6g6sU4gGj7GDVyS1ZpIw+2O8ybNYfN8ieSU qZ56tA/OeSxaWKMl/JaDHuZ3kWzEfXfed+7WmFxXqHUpkf58W8pYsiLDlgfBlKWD Rxzflc/LGKjwS3d1ydHKvPRDJ0hqNf6DHO4AyoOfI3fnqdFc1psN/F+fnfYsm8z+ VwIDAQAB -----END PUBLIC KEY-----",
+"rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQClecP1+8bElIn5 jsKdUTpKqKV2iU7JW00rV/pI707+SxXMpqGL1lgisypmIXlShQ/zPYaXGcgSl3CE qjEfspdjV3qXh8T/RbdAf14YJybG9adxmJAkjCZYHg2p4o7UAgET2HGTxmEcQjrw Ay/Wm0YvonYeUVDfPi6zvqlNuGxVmYDJD7JzqDqxTiAaPsYNXJLVmkjD7Y7zJs1h 83yJ5JSpnnq0D855LFpYoyX8loMe5neRbMR9d9537taYXFeodSmR/nxbyliyIsOW B8GUpYNHHN+Vz8sYqPBLd3XJ0cq89EMnSGo1/oMc7gDKg58jd+ep0VzWmw38X5+d 9iybzP5XAgMBAAECggEBAJF7Fk/jRYN63Dstyegpi8grsR0f5sacoKHkvUT2MErd lJLSROD+V4paXoJgF5v3JGjDxNp/bij6P5BDWOD3UKWkOUGTuhx8HHp2ADHX6f2t 58K1ULTxCp0Z/wVHDC9Ue8II3wH+vU3s5IgzJRHWfcRPXu2UrDc5IjIhBBQyefxe iBIFsijtItFEH1JrlembFRnLq4eiVfwWZ7Arg2QD+GlEM0jDfxOP/h2fW3PguBgE 54qq5iZz8OZvMVzStgZ402WGo3FHmDhnxa5bkla8Jg/5n6qCrDW0IulqAZV1vYXX F4sLqPR3OMhlL5nmp9Ng5kBo9VxWPTccxEH5rXLqELECgYEA2mlfHk+7Z1bt6qhE wbuukbnbC6goZ3eigKXQZuut8/R/Xj766ZB16UtXA/kLqUtUKHtxXghEHxWSF+E7 2466/KTAF9M2PGbXW4vkO+gXfZGDPMwZInSn5sXBFukj0nuVmp+M1A0D+b8ELFTr QRy2yJ1V0odMsIq8Bz40yhX0m+0CgYEAwfQtf7MTGWaE2jxakmcXP5ChqzFWWuC8 nK5Cr3cilnKLR4Ph5cHktEJip4WtwXLVNuQRGLLGCuNKXErt5HHh8QGQ7DBzS9yJ wEBfv8dqUsBc1G8eO2kvclYEPDTXytTXR/kdPG10Sd5PGJfeJrFCBBdjrFZ85Qo7 P5bwPm8HItMCgYBxVHfMrKabSpoNRt7Wf+JnLz8f31OHzKX/hwqKPQR4L4ffiWJ8 yz7DnRo7r4CDidjTYKpElplyX6j8xxxeIsOX0Iz0T942nU5l7EKzawy1VUn5xBXO sSVmM3qrvrGdyA6quttCNLa5YopxzmZ71MBrfGhJ43bBrFtAjuCpc5cHSQKBgQCq iqQ/NxzCJu0GYC9bsB43HFurhhRikF4IfwnP87eMBmgFmCdXuWf6QK0ylE62XNyy CVQnHXsaM8U85f3L838yRahCpk+bEu5lB7WpkhUhclety48Pumun446Ryf09Mm2h saBNdAjeswVloJQL/a0In/Bapynm01pJjdTtcP8bVQKBgDKVN4eQtpCz6uEBX3QP KdioYh4AA6p4UqOvc+RNjCJ/d29oCMCnzwedvOJAl3YCNRnsSVtzAyc0XMeJpeXM Gwq4IVV3b+lptAtVtMKeUf4IM/EHKiEYh7bL+QoqpVE0XyKvWmn0SRRv5Vlu/9hY F2Pi1CSo3cDET/VVtnWWATva -----END PRIVATE KEY-----"
+}
 }
 ```
 
@@ -42,14 +41,18 @@ Authentication is a 10-step process:
 ### Step 1
 The entity encrypts its primechain address with the RSA public key of the verifier and then sends this encrypted value to the verifier. The entity uses `post /api/v1/encrypt_data_rsa` and provides the following:
 
-* the data to be encrypted (in this case, the primechain address of the entity
-* the RSA 
+* the data to be encrypted (in this case, its primechain address)
+* the primechain address of the verifier
 
 ```
-input
+{
+  "data": "18WFbKrENxf7u1xwUXYrKzbZuU2Hh4d4GA4pM9"
+  "primechain_address": "1MJo5DjP48mb55iyR3DCZueTTEWqu6scc2eYzK",
+
+}
 ```
 
-The output is the encrypted value.
+The output is the encrypted value created by encrypting the entity's address with the RSA public key of the verifier.
 
 ```
 output
