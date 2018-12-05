@@ -6,7 +6,7 @@
 [4. Create multisig address](#4-create-multisig-address)   
 [5. Grant permissions to an entity](#5-grant-permissions-to-an-entity)   
 [6. Revoke permissions to an entity](#6-revoke-permissions-to-an-entity)   
-[7. List permissions given to all entities](#7-list-permissions-given-to-all-entities)   
+[7. List permissions given to a specific address](#7-list-permissions-given-to-a-specific-address) 
 [8. Information about the addresses in the wallet](#8-information-about-the-addresses-in-the-wallet)   
 [9. Validate address](#9-validate-address)   
 [10. List entities](#10-list-entities)   
@@ -46,22 +46,20 @@ If you want to generate a blockchain key pair along with an RSA key pair, use `g
 * primechain address
 * primechain public key
 * primechain private key
-* RSA private key (this is also stored in the RSA_MASTERLIST data stream)   
+* RSA private key  
 * RSA public key
 
 ```
 {
- "status":200,
- "response":   
-  {
-    "primechain_address":"1CAWXRnYRuteZ6L2LTEgCBZhUaDCppDG8CmGMJ",
-    "primechain_privkey":"VDFNDcRuzdBaEKNFWgRfu5aiZBeqtRit9TW4dM4GCh61JECsV4e8B1B7",
-    "primechain_pubkey":"02d7afe9af7402a43419dea57b8eb7735d6de95d147835da1e290c8b42e07b3180",
-    "rsa_privkey":"-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC28MoHm4q9uPey\nkyUrCy3FlYEoTEDCb86TTDHT7PEI6ujQYpubSjbLJsuu2dCNEeNi7Gm5zd2phszS\nHcUNRam63Y9GYAdczgUcMB4/oRrWYINLthV1G07PljlFM9YzwjHADV0iqLZP3QPe\npwtMqLJf/kR/pht3xJ6Qh2DH7DuTGEjmnhpvUNCMHtrdG8t68Imq1QRqQPFtvjZP\nkNa0NQpTgD0O8niVxdN3vwWYSQVTDrPvSa9yHMdjSJUjNDJUzfdyqm/c57L8OxAJ\nQanuToKuxLy/fPJeCzjfZOzY/mdH6MdYwnviOWmoj5xOd3acfiSGBMjvjPrwrArk\nuDWSsUiNAgMBAAECggEAO+3DcRyOJbqbQh+b9G7UDr78MZRRPqDb3jr+s7sR9ubl\nX6Z97TAxpPlPjjcCb8QlZjmmJN0AuVFUdZyU+dURVgrQrbA1mTxQRjypHBUNsp6p\nRDsg6l0Iw04l8rqZeBksrQpzsS/tkVoIs36rX/B/hpzIGbzzkJeTjisbFEMZ/QRQ\nyPfRD9ykd6jxKuzX1+kq/xloo4dzJ6/PiRJFTVTKTG5VeEsgxcPh0R37WWQizQMK\nzSc6wgHspSVcYhe6kCoRQVI42vQkhLJnAN4LxQvkunRVhrT7zmAFRmV6XSONV9ne\nrYR3l7ExIDzI8/3Wb1ilqfo7ssSJ+q4MHwSuT4NpbQKBgQDbKn69pcTF5nMt94bs\nfog5oB0+G19Ccn4q667+mu4cLhHbalzXF9on9SCWcf/LfOArOSbZDDp1gCTKU+sW\n4kCzqwRi1TvGCzRRrKBTnAreLx9Baz76QKOnXGGXVu5R6D1iTBCVqyNzy9+a3X/K\n32lxelj5hWjazWXzRD+ZmH66rwKBgQDVr7bVttFUOkPFLQ4MFgtXTO2ORvZ+tfWQ\nQCvvvLh29iTxDzD9c80T2MLwv7hwu9fY+IFx5fQUQBm+6niqN4H6wGq53mPfxGg0\nEvM/pwNo5cCY+Nlh+S5WKQMoc4Ehe94dJGkNn2anRtNbyA1bF97Zh4RMISaDbYBe\nOqQd3XCPgwKBgQCftdHyRbClPpBEuRKbmIGQ7LsinTPH6kNC58j4RNKrum7M5C+P\nlxQk9h6vQ5fSI8f/93/1v1GCesVUo963KF1aEI/7rcQHR/byZcfX5eiNjO1L8OlN\n2Hjp5wo/DNxS19iTnzaeur31DmZ+JleP8UqXpT7dZnjIqdFXey6VsWj4hQKBgAHt\nTrnIp0SaLehGSr0jKcEEyZOh4jEsVOWTHpJP4l34REcEOw3eEHhgWQmwwOoLV5v2\nSbyMNVJFbbYCCUqHq51mRNAeSEpJTCNEFHt7dxVoFP+MJvGyPI+8WPHxcLWrl0ot\n/OCJknRpuBg4yp4KrhDKHxBMsDs5LpIq9zXpvE0fAoGARpEc3Z0WciBr2v94aFGm\ne/78DLEhyaCT13DAvzx1fgGwXobocbECzYSvjrwcYN19MOs7XDqeXWaPkP3tLwr2\naaNe9xDyUxDQObJuTmef+Fjj+6iNQRiPAQdCjcNNH64tg39ubc0qNOMHE4rvM9rW\njh88H0YIlvbayBocGik4Qs0=\n-----END PRIVATE KEY-----",
-    "rsa_pubkey":"-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtvDKB5uKvbj3spMlKwst\nxZWBKExAwm/Ok0wx0+zxCOro0GKbm0o2yybLrtnQjRHjYuxpuc3dqYbM0h3FDUWp\nut2PRmAHXM4FHDAeP6Ea1mCDS7YVdRtOz5Y5RTPWM8IxwA1dIqi2T90D3qcLTKiy\nX/5Ef6Ybd8SekIdgx+w7kxhI5p4ab1DQjB7a3RvLevCJqtUEakDxbb42T5DWtDUK\nU4A9DvJ4lcXTd78FmEkFUw6z70mvchzHY0iVIzQyVM33cqpv3Oey/DsQCUGp7k6C\nrsS8v3zyXgs432Ts2P5nR+jHWMJ74jlpqI+cTnd2nH4khgTI74z68KwK5Lg1krFI\njQIDAQAB\n-----END PUBLIC KEY-----",
-    "transaction_id":"fd73c8028fdca76d435c1c058eb4e54f8ee8a1754d61a9e8cad60aa538ea1060"
-   }
- }
+"status": 200,
+"response": {
+"primechain_address": "18WiRzKsfmJEH6E3ESnrvgfcndAGwnFHrPnqRp",
+"primechain_private_key": "VGFuvDqexth6GZPSkAXwZwEyQ9Y8LHFokUH2BwkcdvRPcGvF5HUy9euk",
+"primechain_public_key": "035f3609b3ddb799946a6cbdf49820552ac9fed49ea10d954cdc4b1caf90cf88c4",
+"rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCUX/V0STFvx1Yh OEuCXVjqgPVZq4XxbBJj/P3/8vAsC498VyEgmy4rbWKS1+pSFt6ex8YDt1yZZroP N4Tg1I/jOk1YH/5rB7lmV+uv/g7WvE3FWEDRnDjbZBxClV4AhaZvOI5cR542BSii GfOVf4NqULMmjdVkdPxiJ8pl1mr9iy/LTC7gaD4RJ27kztNPUO+xsWoee5wtTlEv IUOKr/PwQIyBmu4uXXiVbVsNLlq7oFJ2yxHDcPVVI8klHRoiCjzwZvM05VY6xk5s DCysJ9EzpeBdwO84Qvqkr2I9NYLDFnr7yVYUYA72RcSbl+tPev1Oq7v0/qKlcJX5 XBajebzJAgMBAAECggEATqz/W3UAONRLUHwoVe0nm9lbv/uan6R9r/VTvidUwRY0 NGuDDmYauj5bWaASCQtFao5l6kyNVm5JVI5M8GbmEUg2APeeEaTb42/VctHVjnn1 ByK/5CXhZDwWXBwV51L3KNylaDs1olFj9WirZ+dgiLxX8qacs5LwzR9qTEvBGcWn CSgD1Yw60nQS9Y7NXkV0GHhSp7YXa+lXnG6cMEYqqxHD9GTD2p/SaoPf4t0ajobE 6ZH9UfbapRUPATTF5X0S+UqPfNUthCOvzSzX/bfrBECpwAAB4TWeinqJA3EpYw/j 9sbTGBenxZwhxIEs0On4WM3dV8HZJv+tSwo05ZpG7QKBgQDcTGijkH4R9bYE50OQ DLEdCmAE2gdJpxG0bEGFuF+AmuRT2mtmapMlsAx6udDuckUbRMbjqC9UjnxXqeEI dyuqf2SDDt3JhD23/Gk/qylld95w1LMueZY+SwYrWvjyydJE8sVjj78Kc6X2vuAB uDyB6geg+kVVcd1QyRgqmh4crwKBgQCsa6HGP7rJeDDCyKzL5aw0HZKJ0DW2O4hp asJjVHWDRfInzAGn9jXa62b5EoI1jCApNBoRPn1vCVq0K4z9zCypt66A62wrNIKI W/34NFkEtYMpQJE2Y6uYgrNGDy3yuPuNnOkl8/TQlJmEf/ykMEJepIBYq759BvTa zuVivM1MBwKBgQCPt91wD7zfdKAptMIUAOOvIWyg3ahxeWgIf7ODTFQpr2MT/WOh rhePN7n8eqr+VFgXQRhLvxYZoNcnzbD8d9pp4bAt/A3fAMHO/QGgwsY/5yKcE3dN 84571zAQKspMgjQGPSdfG5EzfV0hi0bSeGIpEwelEoEXDDCpGngEmwTYCwKBgQCU ZSpd6znC7mvhKT/3WRvl2tHlRMsFpaVZPWZCgU2GhyvMbru6KKDfYx1EH1br6UdA zzPkRYlFiKKFULpPMWv7Qjixgm2dndr+q1YhSkSXVfWmCokwa4Yjg9Hx6Vyde/Id RsAvRxEcd9jM/i6dzV9B/4jrSB1xlAwnSkyIt4Bl/wKBgEzqce+tYkn6NxbVcRiQ W6D/UXj1kP9HWYFnI4xWj5Zp9H54yuhZ//gzAf4qB9XYnrOHy3t3mu08/Yrg9F14 +YBHwQD8Gu3qTpw9vFfKXgJs2J8zt/0ePmgg+5rOho833WkKU0qJxhTSu5RcqYFp rYQDaP11oooPIHZr/yHMRI2/ -----END PRIVATE KEY-----",
+"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlF/1dEkxb8dWIThLgl1Y 6oD1WauF8WwSY/z9//LwLAuPfFchIJsuK21iktfqUhbensfGA7dcmWa6DzeE4NSP 4zpNWB/+awe5Zlfrr/4O1rxNxVhA0Zw422QcQpVeAIWmbziOXEeeNgUoohnzlX+D alCzJo3VZHT8YifKZdZq/Ysvy0wu4Gg+ESdu5M7TT1DvsbFqHnucLU5RLyFDiq/z 8ECMgZruLl14lW1bDS5au6BSdssRw3D1VSPJJR0aIgo88GbzNOVWOsZObAwsrCfR M6XgXcDvOEL6pK9iPTWCwxZ6+8lWFGAO9kXEm5frT3r9Tqu79P6ipXCV+VwWo3m8 yQIDAQAB -----END PUBLIC KEY-----"
+}
+}
 ```
 
 ## 4. Create multisig address
@@ -100,11 +98,11 @@ Use `post /api/v1/grant_permissions` to grant 1 or more of the following 8 permi
   "permission": "send,receive"
 }
 ```
-The output will be the txid of the transaction in which the permissions were granted.
+The output will be the transaction id of the transaction in which the permissions were granted.
 ```
 {
  "status": 200,
- "transaction_id": "39ecbdc585812403cf7591449b71ae39ced68b044c9e8f2a969ba02cd5ac25ee"
+ "tx_id": "39ecbdc585812403cf7591449b71ae39ced68b044c9e8f2a969ba02cd5ac25ee"
 }
 ```
 ***Note:*** Permissions can be revoked using `revoke_permission.`
@@ -125,7 +123,7 @@ The output will be the txid of the transaction in which the permissions were rev
 }
 ```
 
-## 7. List permissions given to all entities
+## 7. List permissions given to a specific address
 To get a list of all permissions which have been explicitly granted to a specific address, use `post /api/v1/listpermissions` and pass the primechain address as a parameter:
 ```
 {
