@@ -8,8 +8,8 @@
 To generate a digital signature, use `post /api/v1/create_signature` and provide 2 parameters - addresss (the blockchain address of the signer) and message (the hash of the data to be signed). Example:
 ```
 {
-  "address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-  "message": "c14fa6ea73269522b3362c637e9d90de39f58ac7696536019b7a3f2e0741e606"
+  "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+  "data": "c14fa6ea73269522b3362c637e9d90de39f58ac7696536019b7a3f2e0741e606"
 }
 ```
 
@@ -27,8 +27,8 @@ Note: The signature can be created only by the node containing the private key.
 To verify that the the signature for the specified hash and public key is valid, use `post /api/v1/verify_signature` and provide 3 parameters - addresss (the blockchain address of the signer), message (the hash of the data to be verified) and signature (the digital signature). Example:
 ```
 {
-  "address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-  "message": "c14fa6ea73269522b3362c637e9d90de39f58ac7696536019b7a3f2e0741e606",
+  "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+  "data": "c14fa6ea73269522b3362c637e9d90de39f58ac7696536019b7a3f2e0741e606",
   "signature": "IJHOhoHoNaWtszoPnzp6VZnfQS8oa3UMv5QhnQ7SRLLpZ2nqDCcZpxXcLFHCYZP7snMsGRW4dOyl7AYzb/17QOI="
 }
 ```
