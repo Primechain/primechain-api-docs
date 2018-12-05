@@ -169,7 +169,10 @@ Samairah decrypts the encrypted value using her own RSA private key. Samairah us
 ```
 The output is the decrypted data referred to as `decrypted_data`
 ```
-output
+{
+"status": 200,
+"decrypt_data": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="
+}
 ```
 
 ### Step 10
