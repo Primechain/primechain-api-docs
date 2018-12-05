@@ -237,12 +237,15 @@ Noodle Bank uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_
 The output is the decrypted data referred to as `decrypted_data`
 ```
 {
-"status": 200,
-"decrypted_data": "aaa"
+  "status": 200,
+  "decrypted_data": "     
+    {
+      "signature":"H3i7JTbIfwe/jf05z3ea+O/Ljl0DHLg7MzTc4RE6FRd7M79SLGgq1zzuPkzffXHjecbcAMLtjHqoxUVRskSHfmQ=",
+      "primechain_address":"1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn",
+      "data":"NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="'
+     }"          
 }
 ```
-
-
 ### Step 13
 Noodle Bank verifies the digital signature using `post /api/v1/verify_signature` and passes the following parameters:
 1. The data to be verified   
@@ -250,9 +253,9 @@ Noodle Bank verifies the digital signature using `post /api/v1/verify_signature`
 3. The signature
 ```
 {
-  "primechain_address": "aaaa",
-  "data": "aaaa",
-  "signature": "aaaa"
+   "primechain_address":"1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn",
+   "data":"NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="'
+   "signature":"H3i7JTbIfwe/jf05z3ea+O/Ljl0DHLg7MzTc4RE6FRd7M79SLGgq1zzuPkzffXHjecbcAMLtjHqoxUVRskSHfmQ=",
 }
 
 ```
