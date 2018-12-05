@@ -22,6 +22,17 @@ This is the list of all the data streams created automatically by Primechain API
 # ASSET_DATA_MASTERLIST
 
 # AUTH_USERS_MASTERLIST
+Data is entered into this stream when the `onboard_user` end-point is used. The data stored is:
+1. new user's identifier
+2. new user's description
+3. new user's primechain address
+4. new user's primechain public key
+5. new user's RSA public key
+
+To obtain the data in this stream, use `list_onboarded_user_details`. The output will be something like this:
+```
+aaa
+```
 
 # BLACKLIST_MASTERLIST
 
@@ -42,21 +53,7 @@ This is the list of all the data streams created automatically by Primechain API
 # ONBOARD_USERLIST
 
 # RSA_MASTERLIST
-Data is entered into this stream when the `onboard_user` end-point is used. The data stored is:
-1. the newly created entity's primechain address,    
-2. the newly created entity's primechain public key,    
-3. the newly created entity's RSA public key    
 
-To obtain the data in this stream, use `list_stream_items` and pass the stream name as the value:
-```
-{
-  "stream_name": "RSA_MASTERLIST"
-}
-```
-The output will be something like this:
-```
-aaa
-```
 
 # SIGNATURE_MASTERLIST      
 
