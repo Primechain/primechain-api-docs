@@ -3,16 +3,19 @@
 [1. Onboarding an entity](#1-onboarding-an-entity)   
 [2. Authentication](#2-authentication)   
 
-These end-points can be used to authenticate an entity (an individual, a company, a device) to an app, a website, an email account, a blockchain etc.
+These end-points can be used to authenticate an entity (an individual, a company) or a device.
 
 ## 1. Onboarding an entity / verifier
-An entity / verifier is onboarded by a bank (known as the onboarding bank) after due diligence (KYC process). The entity uses `get /api/v1/onboard_user` to generate the following:
-1. a primechain address
-2. a primechain private key
-3. a primechain public key
-4. transaction id
-5. an RSA public key
-6. an RSA private key
+An entity / verifier is onboarded using `get /api/v1/onboard_user` to generate the following:
+post ?? 
+give entity name, description e.g. imei number, pan number etc etc
+
+1. the primechain address    
+2. the primechain private key    
+3. the primechain public key
+4. the relevant transaction id   
+5. the RSA public key
+6. the RSA private key
 
 ```
 {
@@ -29,85 +32,153 @@ An entity / verifier is onboarded by a bank (known as the onboarding bank) after
 }
 ```
 
-The following are published to the RSA_MASTERLIST datastream:
-1. entity's primechain address,    
-2. entity's primechain public key,    
-3. entity's RSA public key    
+The following are automatically published to the RSA_MASTERLIST datastream:
+1. the primechain address,    
+2. the primechain public key,    
+3. the RSA public key    
 
-The entity's primechain private key and RSA private key are known only to the entity.
+The newly created entity's primechain private key and RSA private key are not published to the RSA_MASTERLIST datastream.
 
 ## 2. Authentication
 Authentication is a 10-step process:
 
 ### Step 1
-The entity encrypts its primechain address with the RSA public key of the verifier and then sends this encrypted value to the verifier. The entity uses `post /api/v1/encrypt_data_rsa` and provides the following:
 
-* the data to be encrypted (in this case, its primechain address)
-* the RSA public key of the verifier
-
+The entity retrieves the `RSA public key` of the verifier using `post /api/v1/get_rsa_key` and passing the `primechain address` of the verifier as a parameter.
 ```
 {
-  "data": "18WFbKrENxf7u1xwUXYrKzbZuU2Hh4d4GA4pM9"
-  "rsa_public_key": "aaaa",
+  "primechain_ address": "aaa"
 }
 ```
-The output is the encrypted value:
+The output is the `RSA public key` of the verifier.
 
-```
-output
-```
 
 ### Step 2
-The verifier uses its RSA private key to decrypt the encrypted string received by it. For this it uses `post /api/v1/decrypt_data_rsa` and passes its own RSA private key and the encrypted data:
+The entity encrypts its own `primechain address` with the `RSA public key` of the verifier. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
+1. `data`, which is the `primechain address` of the entity   
+2. `rsa_public_key` of the verifier   
 ```
-input
+{
+  "data": "xxxx",
+  "rsa_public_key": "aaaa"
+}
 ```
-
-The output is the decrypted string (in this case the address of the entity to be verified).
-
+The output is the encrypted value referred to as `encrypted_data_rsa`:
 ```
 output
 ```
 
 ### Step 3
+The entity sends the `encrypted_data_rsa` to the verifier. 
 
-The verifier then retreives the entity's RSA public key from the ENTITY_MASTERLIST datastream. For this it uses `hhh` and passes the following input:
+### Step 4
+The verifier uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_rsa`. The parameters are:
+1. The verifier's RSA private key
+2. The `encrypted_data_rsa`
+```
+input
+```
+The output is the decrypted data referred to as `decrypted_data`
+```
+output
+```
 
-The output is the RSA public key of the entity.
+### Step 5
+The verifier retrieves the `RSA public key` of the entity using `post /api/v1/get_rsa_key` and passing the `primechain address` of the entity as a parameter.
+```
+{
+  "primechain_ address": "aaa"
+}
+```
+The output is the `RSA public key` of the entity.
 ```
 aaaa
 ```
 
-
-### Step 4
+### Step 6
 The verifier generates a 512-character random string and the GMT timestamp. For this it uses `get /api/v1/create_string_timestamp` and gets an output like:
 ```
 string^timestamp
 ```
-
-The string along with the GMT timestamp are stored in the verifier's private database.
-
-### Step 5
-The verifier encrypts the string and the GMT timestamp with the entity's RSA public key.
-
-
-### Step 6
-The verifier sends the encrypted value to the entity.
+The 512-character random string along with the GMT timestamp are stored in the verifier's private database.
 
 ### Step 7
-The entity decrypts the encrypted value using its own RSA private key.
+The verifier encrypts the 512-character random string along with the GMT timestamp with the entity's RSA public key. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
+1. `data`, which is the `primechain address` of the entity   
+2. `rsa_public_key` of the verifier   
+```
+{
+  "data": "xxxx",
+  "rsa_public_key": "aaaa"
+}
+```
+The output is the encrypted value referred to as `encrypted_data_rsa`:
+```
+output
+```
 
 ### Step 8
-The entity signs the decrypted string using its primechain private key.
+The verifier sends the encrypted value to the entity.
 
 ### Step 9
-The entity encrypts the following with the RSA public key of the verifier:
-* the digital signature 
-* its primechain address
-
-and sends this to the verifier.
+The entity decrypts the encrypted value using its own RSA private key. The entity uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_rsa`. The parameters are:
+1. The entity's RSA private key
+2. The `encrypted_data_rsa`
+```
+input
+```
+The output is the decrypted data referred to as `decrypted_data`
+```
+output
+```
 
 ### Step 10
-The verifier verifies the digital signature using the entity's primechain address and the random string. The verifier also uses the stored timestamp to confirm that the signature is returned within a pre-set interval e.g. 30 seconds.
+The entity signs the decrypted data using its primechain private key. For this it uses `post /api/v1/sign_data` and passes the following parameters:
+1. The data to be signed   
+2. The private key of the entity (signer)   
+```
+input
+```
+The output is the digital signature.
+```
+output
+```
+
+### Step 11
+The entity encrypts the following with the RSA public key of the verifier:
+1. the digital signature 
+2. the primechain address of the entity (signer)
+3. the data that has been signed
+
+This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
+1. `data`, which is the `primechain address` of the entity   
+2. `rsa_public_key` of the verifier   
+```
+{
+  "data": "xxxx",
+  "rsa_public_key": "aaaa"
+}
+```
+The output is the encrypted value referred to as `encrypted_data_rsa`:
+```
+output
+```
+
+### Step 12
+The entity sends this encrypted data to the verifier.
+
+### Step 13
+The verifier verifies the digital signature using `post /api/v1/verify_signed_data` and passes the following parameters:
+1. The data to be verified   
+2. The primechain public key of the entity (signer)   
+```
+input
+```
+The output is:
+```
+output
+```
+
+The verifier also uses the stored timestamp to confirm that the signature is returned within a pre-set interval e.g. 30 seconds.
 
 If the signature is valid, the entity is verified and the session can be started.
