@@ -238,7 +238,7 @@ To list keys in a specified stream, use `post /api/v1/list_stream_keys` and pass
 
 ## 10. Retrieve all data from a specified stream
 
-To obtain all data from a specified stream, use `list_stream_items` and pass the stream name as the value:
+To obtain all data from a specified stream, use `post /api/v1/list_stream_items` and pass 1 parameter - `stream_name`
 ```
 {
   "stream_name": "RSA_MASTERLIST"
