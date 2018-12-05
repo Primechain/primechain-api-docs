@@ -2,7 +2,9 @@
 
 This is the list of all the data streams created automatically by Primechain API. Click on a stream name to see details.
 
-[ASSET_DATA_MASTERLIST](#asset_data_masterlist)   
+[ASSET_DATA_MASTERLIST](#asset_data_masterlist)  
+[AUTH_USERS_MASTERLIST](#auth_users_masterlist)
+
 [BLACKLIST_MASTERLIST](#blacklist_masterlist)    
 [BLOB_STREAM](#blob_stream)    
 [DATA_MASTERLIST](#data_masterlist)     
@@ -18,6 +20,8 @@ This is the list of all the data streams created automatically by Primechain API
 
 
 # ASSET_DATA_MASTERLIST
+
+# AUTH_USERS_MASTERLIST
 
 # BLACKLIST_MASTERLIST
 
