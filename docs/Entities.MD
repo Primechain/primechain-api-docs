@@ -273,17 +273,25 @@ To get information about the addresses in the wallet, use `get /api/v1/listaddre
 To get information about the validity of an address, including whether this node has the address's private key in its wallet, use `post /api/v1/validate_address` and pass this parameter:
 ```
 {
-  "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+  "primechain_address": "1Qr572HfZyxmburpA6fQY4Nu2k7uWVR5dwwBoe"
 }
 ```
 The output will be:
 
 ```
 {
- "status": 200,
- "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
- "isvalid": true,
- "ismine": true
+"status": 200,
+"response": {
+"isvalid": true,
+"primechain_address": "1Qr572HfZyxmburpA6fQY4Nu2k7uWVR5dwwBoe",
+"ismine": true,
+"iswatchonly": false,
+"isscript": false,
+"pubkey": "02fc0cbee9f8a649d21628f2c4640d5ce33c115cea64c265db2612e0c3b31dfb26",
+"iscompressed": true,
+"account": "",
+"synchronized": true
+}
 }
 ```
 
