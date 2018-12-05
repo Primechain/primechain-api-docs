@@ -47,7 +47,7 @@ The following are automatically published to the AUTH_USERS_MASTERLIST datastrea
 The newly created user's primechain private key and RSA private key are not published to any datastream.
 
 ## 2. Authentication
-Authentication is a 13-step process:
+Authentication is a 13-step process. The user being authenticated is referred to as 'entity' and the user carrying out the authentication is referred to as the 'verifier'.
 
 ### Step 1
 
