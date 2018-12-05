@@ -9,8 +9,8 @@ A user can be an individual, a company, a device etc and can be on-boarded using
 2. The user description
 ```
 {
-  "user_identifier": "1234567890",
-  "user_description": "Primechain Technologies Private Limited"
+  "user_identifier": "23792387",
+  "user_description": "Heat sensor installed at Zimblia Avenue"
 }
 ```
 The output is:   
@@ -23,16 +23,15 @@ The output is:
 
 ```
 {
-  "status": 200,
-  "response": 
-    {
-      "primechain_address": "1HpE8ZwqDyckgmnEnsHBkigsGDhvoYqQXXGBYj",
-      "primechain_private_key": "V7vznRFfAMCGbzayvAcHsePBJEaoswLmtGXGCgLiNNDe86uJ1AZaqsci",
-      "primechain_public_key": "022b031af75d871f44e0cad222c0beb6b2753e3a28697b62917b1dfa4bbde14519",
-      "tx_id": "64645e8b59df078be0cdb2d5986e468d31bc4d1089feb164b5278106ce6ce0f3",
-      "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgpX9L2fIk8syLtsF7BQG gB1vIeZgK8brEwU8GDyJlhPa1Axf0B+sjh7wgqGMpCZd9LpFwxJQEkrWiR63Nn3o OVXJ1/b3Gw91Jy5B6zJMOTM/ojCtEfA5X9KP3U5ETR5s1fHFrql5zOnj00hiUX3u bb143kVbneclu+kIGXvHB1Du5NF+rkeN2FPXHwUxbxWSF+Imp6yVQ3OjH9uXVZH3 VAWt/7dcn+Pb1FreK4wIIFX/CeqQ3+KC5XPc8f4HbO1MuaU2TkczbQxZHU7LdzIf ag422lQlivu/4EV1rcyz9j5c9DjrN38tH+WfQRb2CstEf3tCrd93ZAiCGkK/x5qd HwIDAQAB -----END PUBLIC KEY-----",
-      "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCClf0vZ8iTyzIu 2wXsFAaAHW8h5mArxusTBTwYPImWE9rUDF/QH6yOHvCCoYykJl30ukXDElASStaJ Hrc2feg5VcnX9vcbD3UnLkHrMkw5Mz+iMK0R8Dlf0o/dTkRNHmzV8cWuqXnM6ePT SGJRfe5tvXjeRVud5yW76QgZe8cHUO7k0X6uR43YU9cfBTFvFZIX4ianrJVDc6Mf 25dVkfdUBa3/t1yf49vUWt4rjAggVf8J6pDf4oLlc9zx/gds7Uy5pTZORzNtDFkd Tst3Mh9qDjbaVCWK+7/gRXWtzLP2Plz0OOs3fy0f5Z9BFvYKy0R/e0Kt33dkCIIa Qr/Hmp0fAgMBAAECggEAJc6C9NyZR6DGsKYcutK5ZxIegLQQF9yJZoJXebTdKKQq 8MV8X+crsCHpBAj9jPDGtvnPBMEiiYk9P4mzBYXCXAcoXuxTcnQxONy9nPh89PqP a8en88+W7NUrbakhQSqT3AUZdI4Ag4EbwqnsPSe2hfMbMU7nTXoEhLjc7XPWlZk7 jbQZwivjhm5y8Kol1YKBCKBbSQqDgu1tqb1J+X7md5OMZyMaIzgNZmf+Y2YB//pS 1khYDd8w7GOyGs45p7CehPWBNqDW0IwvzZiRNCgDNkJLgvA5+NPiFIEWaEGBZwYm vi6ZTe51xoqDa8rbH7wSbIjwvnd1q9VqufaSwXG9EQKBgQD8JzoTdp+vDso386BT GZF+NmvgMs0Dtoc8FdC3CLXarU46V6rwHbMpC57u2L4cSWUpemiUxTKMjppKm/bO 0YugCiShH08QexoTcQdzaIPduEqdqCneEhUHpR1gyGgowKVr0FrHGit/CUHt5JK+ l2u+NA+nIV8DUytIBMK6XTTo+wKBgQCEk/yCXcMnzWx10IXxy1oOR5sVPsysDn1F 8NOJBb6Qitd0l3W58vtlYxDDRCxtqUdqc6Te9VMEgvzjLJpVUcPCd7LMVmtrwcr6 cZU1uTtkm8Bj8HZBMpvvFb2W3H02SFuHYlhjCOcnNRnNt78jT/sIboItHDC9azFi IxUnVaqrLQKBgQDftW2xFu1VQqnmOh9jmquabm4G2wtI4AfbJv+lY/Tzrg5ZdK4T mkX5hHXdMi54qiU2R4PBebL/QQVibDzsALz/oAAfcseSt6TK2tzhZziW3YpVlXyP qTs/LR6DX0oJ3eDlZlUjj/RHIM99X+1RasYMWeQJQ3IoYQFlQ9P/w/HNQQKBgFrD gZSyoj+mmEFUH884e4/ZH+f8lVyZktQGGpvtLdiA5R4x7uv92HRBzSERlCUDRhwv zcjCRTKKhpz0VThiANYq4mKYK3SbON4aUp90D6BCLQV+g0cBYdXdmW0lyCcYhGj8 QCyU1MN3zBGVYSrIv8C2/zHo4clcEHPyNrI2KOCFAoGAdw6mncyn26cqiSjssaG3 4Fqwl/aCuFWj7ruXOENMb2n1icg1Athk2jz44W3XTPj1MLPUZqPVyUlJDBddmhvl nwG3qQU/w0+BlvIFtW/7j5tMJ21bDZ7S5g6Bix7soeZNuRZK0z2ihOsSclXmtdmH vb05+Q8ZdbPR2iEhz2qs2UQ= -----END PRIVATE KEY-----"
-  }
+"status": 200,
+"response": {
+"primechain_address": "1HvGxDqC6u9rmL8y5KUCrK6VeDu1FCbotcqoZJ",
+"primechain_private_key": "V7qoHKPfQc94zJXmrUmqPiFin5BrDbc9A1GASqVi7phHs5qgtoic6NHT",
+"primechain_public_key": "0295e71fb842152960130859ff74d92487e8e8da37e78e6ba8af38afe2c08a68cf",
+"tx_id": "911b8f91ba10c389db12718310e6a9d6d70eb4756e5a1877e091774fb00eff9d",
+"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgz1B0KRqUx7GGFh429EJ RE1TzapV0/SWnX5Z6q2ZXtzUa/kken0Zhceq2OBdWQspuNQT7EOsxp7xZrxSjxmy gc4+OBlVknqTJ49hLPPo5bZ7SBLHBadrv9XMIIgQXsEntpYWzydEOrct63FdBygG Kf/GBGH06tcpcH5SbrrI7EpCwuRu7qCjIYmRhA3eu5xo9Wi5TOfV2QAOq9ia0cU3 +jQ8PRL/MNIT+5dm7B4lwo4WY6isTa6fd2UX94Wi6uOSsEEj0F7XIJ41L4owlpHv WEulkEJWLzzmsDAemoQ+H/HzXmfHnZKLVexDGxbDX2MGzy9txaWElEOSJD6DXVhG zQIDAQAB -----END PUBLIC KEY-----",
+"rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCDPUHQpGpTHsYY WHjb0QlETVPNqlXT9JadflnqrZle3NRr+SR6fRmFx6rY4F1ZCym41BPsQ6zGnvFm vFKPGbKBzj44GVWSepMnj2Es8+jltntIEscFp2u/1cwgiBBewSe2lhbPJ0Q6ty3r cV0HKAYp/8YEYfTq1ylwflJuusjsSkLC5G7uoKMhiZGEDd67nGj1aLlM59XZAA6r 2JrRxTf6NDw9Ev8w0hP7l2bsHiXCjhZjqKxNrp93ZRf3haLq45KwQSPQXtcgnjUv ijCWke9YS6WQQlYvPOawMB6ahD4f8fNeZ8edkotV7EMbFsNfYwbPL23FpYSUQ5Ik PoNdWEbNAgMBAAECggEAKt86/c6IEUkvS0qziJN75H0iUEBBs3DmNuLMutYlEREw r2j/Gqh9Su+UBy8cL3dvFLrrGzZsXaIUmAwTKD4ryy21s5vLEYPLSJQVGZtATLJV CZFgxJ8RmuRbv5DTUDDnKUVUhC1+o3Oto4kv66OOh+/PHyVk3caV+fK6OQP5mP6d IP/XU3sU2ynyBo2UKwf3jXgUdojfx/eSrj4Pu1BozAbmaRECr8+lc4pMLIYpB47G yRWJO9LjcNG2fhj495/+3MrwypOXhZyUSHoI6KiVNRz4WCgXJQ5efXUDXrov8mM7 05y5a+8w/RQi2EOj8QSl6YujEgxiGWnDT5I02R+goQKBgQDIPibMaWEg/QN+VeOU HaQeIItS3NaSrAHLw4qcsuvEB+87nTT+TxL5bxQIGEAh41ZmfFnHZIkXBI/5lQpa RV61JlzS+owFfUXB8JEfqpzrPEgUnDx12xTG76YqwnMbgOKP8wIea1WL97U25avr jLFL3vMx5+nnX72PPWsRmSzlBQKBgQCnyFltJmI3m6voDijS8z/yeL97qsZwo/Fs UZsz/zU8762pd01R0BrmIvRff9ZX/Cg+6v/NipKVQjYLDTHKqo24WmL/2i72gDmQ oxcKBp3b2hPiAx7EtHgN0Vtwh2T2OlbVFxbreCKPavjnr3ZwgGg0L6C64ibZFEmX yyZgkTyFKQKBgQCMLSYP9r0t0LD/YbTc3Rskk/e0XDBBoPPo5sxEAeSV6FAK1XRh io1n2+CUAhXzIyg6ulZHBRQK7wCy4SjMJL+15FMaxpX6ycVpjLSrDE6pRhvXgb+5 aVJUKTOTv2fBGyp/Rsh27wCF6TQMaB8/18/NoxdwGj9d32HdwksPmMEa2QKBgG25 ZVovTu4E3TBeCi6iq8A7XSZX8Xx6iokG+VPQ45UdPVnlTmhhiyXT2DKYHKnfmsZC 0tUteV0pNsSVdWmPjizw12tw2WOVSZAgSBHjb9r2TChzV+zWBOksb/swYENytZSX jAKjxx45m9uQcQlzwDHYr+lnunYegV5Gmatvb7+5AoGBAKzmJSonyC3KJQRUQcPc ay3MaPaUE7BtGWkYVEILjAGsGeruBB7uYSMhJqxM6Mws1QpGf4WPVBSYgtM3Z3d4 nhUpNETaxlHUZF3X9CLXCqQO/U4MBP94K/URbyff9nFoPLCeFNONRXELxaDrvcjK ZNfg3vvsd0USatehpj7dAOP6 -----END PRIVATE KEY-----"
+}
 }
 ```
 The following are automatically published to the AUTH_USERS_MASTERLIST datastream:
@@ -47,12 +46,14 @@ The newly created user's primechain private key and RSA private key are not publ
 ## 2. Authentication
 Authentication is a 13-step process. The user being authenticated is referred to as 'entity' and the user carrying out the authentication is referred to as the 'verifier'.
 
+In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the entity. Their primechain addresses are: `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah).
+
 ### Step 1
 
-The entity retrieves the 'RSA public key' of the verifier using `post /api/v1/get_rsa_key` and passing the 'primechain address' of the verifier as a parameter.
+Sanya retrieves Noodle's 'RSA public key' using `post /api/v1/get_rsa_key` and passing Noodle's 'primechain address' as a parameter.
 ```
 {
-  "primechain_ address": "aaa"
+  "primechain_ address": "12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v"
 }
 ```
 The output is the 'RSA public key' of the verifier.
