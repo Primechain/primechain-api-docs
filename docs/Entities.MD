@@ -94,15 +94,15 @@ Use `post /api/v1/grant_permissions` to grant 1 or more of the following 8 permi
 * ***admin***	to change all permissions for other entities, including issue, mine, activate and admin
 ```
 {
-  "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+  "primechain_address": "1VCeqGYXLaqMtAFtxTNeTzfW8T714us2t3uwYM",
   "permission": "send,receive"
 }
 ```
 The output will be the transaction id of the transaction in which the permissions were granted.
 ```
 {
- "status": 200,
- "tx_id": "39ecbdc585812403cf7591449b71ae39ced68b044c9e8f2a969ba02cd5ac25ee"
+"status": 200,
+"tx_id": "e39330efc1594e062a1047074231ce97f65f4d71dbf745576bba81504afba923"
 }
 ```
 ***Note:*** Permissions can be revoked using `revoke_permission.`
@@ -111,15 +111,15 @@ The output will be the transaction id of the transaction in which the permission
 Use `post /api/v1/revoke_permissions` to revoke the specified permissions from the specified address.
 ```
 {
-  "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-  "permission": "send,receive"
+  "primechain_address": "1VCeqGYXLaqMtAFtxTNeTzfW8T714us2t3uwYM",
+  "permission": "send"
 }
 ```
 The output will be the txid of the transaction in which the permissions were revoked.
 ```
 {
 "status": 200,
-"transaction_id": "1427b87f4d7b0d42bb84a0f52c068f04b99e9bc7773155280f7b26d618ac9e66"
+"tx_id": "989515694062a199f33770eeda617d631b4faafc8cc8a9048662d053e2516192"
 }
 ```
 
