@@ -5,8 +5,8 @@
 
 ## 1. Onboarding a user
 A user can be an individual, a company, a device etc and can be on-boarded using using `post /api/v1/onboard_user` and passing the following parameters:
-1. The user identifier e.g. name, account number, IMIE number, serial number, CIN etc.
-2. The user description
+1. The user identifier e.g. name, account number, IMEI number, IP address, serial number, CIN etc.
+2. The user description 
 ```
 {
   "user_identifier": "23792387",
