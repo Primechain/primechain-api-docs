@@ -61,8 +61,8 @@ The output is the `RSA public key` of the verifier.
 
 
 ### Step 2
-The entity encrypts its own `primechain address` with the `RSA public key` of the verifier. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
-1. `data`, which is the `primechain address` of the entity   
+The entity encrypts its own 'primechain address' with the 'RSA public key' of the verifier. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
+1. `data`, which is the 'primechain address' of the entity   
 2. `rsa_public_key` of the verifier   
 ```
 {
@@ -91,13 +91,13 @@ output
 ```
 
 ### Step 5
-The verifier retrieves the `RSA public key` of the entity using `post /api/v1/get_rsa_key` and passing the `primechain address` of the entity as a parameter.
+The verifier retrieves the 'RSA public key' of the entity using `post /api/v1/get_rsa_key` and passing the 'primechain address' of the entity as a parameter.
 ```
 {
   "primechain_ address": "aaa"
 }
 ```
-The output is the `RSA public key` of the entity.
+The output is the 'RSA public key' of the entity.
 ```
 aaaa
 ```
