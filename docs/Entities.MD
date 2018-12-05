@@ -230,7 +230,6 @@ The output will be something like this:
 ## 8. Information about the addresses in the wallet
 
 To get information about the addresses in the wallet, use `get /api/v1/listaddresses`. 
-![Information about the addresses in the wallet](http://www.primechaintech.com/img/api_documentation/listaddresses.png)
 ```
 {
  "status": 200,
