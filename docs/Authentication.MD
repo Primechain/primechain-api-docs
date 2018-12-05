@@ -40,7 +40,7 @@ The following are automatically published to the RSA_MASTERLIST datastream:
 The newly created entity's primechain private key and RSA private key are not published to the RSA_MASTERLIST datastream.
 
 ## 2. Authentication
-Authentication is a 10-step process:
+Authentication is a 13-step process:
 
 ### Step 1
 
@@ -181,4 +181,4 @@ output
 
 The verifier also uses the stored timestamp to confirm that the signature is returned within a pre-set interval e.g. 30 seconds.
 
-If the signature is valid, the entity is verified and the session can be started.
+If the signature is valid, the entity is verified.
