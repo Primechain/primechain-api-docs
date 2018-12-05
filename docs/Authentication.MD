@@ -51,7 +51,7 @@ Authentication is a 13-step process. The user being authenticated is referred to
 
 ### Step 1
 
-The entity retrieves the `RSA public key` of the verifier using `post /api/v1/get_rsa_key` and passing the `primechain address` of the verifier as a parameter.
+The entity retrieves the 'RSA public key' of the verifier using `post /api/v1/get_rsa_key` and passing the 'primechain address' of the verifier as a parameter.
 ```
 {
   "primechain_ address": "aaa"
