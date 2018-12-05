@@ -3,8 +3,6 @@
 [1. Onboarding an entity](#1-onboarding-an-entity)   
 [2. Authentication](#2-authentication)   
 
-In these end-points, a user These end-points can be used to authenticate 
-
 ## 1. Onboarding an entity / verifier
 A user can be an individual, a company, a device etc and can be on-boarded using using `post /api/v1/onboard_user` and passing the following parameters:
 1. The user identifier e.g. name, account number, IMIE number, serial number, CIN etc.
