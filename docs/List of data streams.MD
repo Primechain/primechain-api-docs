@@ -29,9 +29,24 @@ Data is entered into this stream when the `onboard_user` end-point is used. The 
 4. new user's primechain public key
 5. new user's RSA public key
 
-To obtain the data in this stream, use `list_onboarded_user_details`. The output will be something like this:
+To obtain the data in this stream, use `list_onboarded_user_details` and pass the user's primechain address as the parameter:
 ```
-aaa
+{
+  "primechain_address": "1Pjzi3yK3jFCLCte2uTTYiHbh8QVTh6SNS8ehY"
+}
+```
+The output will be something like this:
+```
+{
+  "status": 200,
+  "response": 
+    {
+      "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqLaEj608vDUGt/XZ0nmp L5x6vmJFli/ms30JSjjjcaAyAKMzn2c50jTERDhIvSh02Baa2SVu6KtlwxAKWzXG MQhiv2dsgL+ZanIQbP9WFzPw5VqlPs9O0BtnPkPWV9t31+YTAKirlwJbOsbvMQ2P x0rxaY7Fia5ifrlYNVwE/uMOWXhii7LdNcmTR9q1KW1KQUAy8agmShC+WmNEMRhy qPy1DehtKgeiE0Gq0bJmGg9BlTKF40DuXAuWHgS/oMOdaEK0afdz+ltm9vcAU1OW gPPPX7XTOusYtLT/S88oSlEPgJl0E9Xq1kBT1gbs1vGjyjDP9qdvSVSIBcwNRcAS MwIDAQAB -----END PUBLIC KEY-----",
+      "user_identifier": "Sanya Nagpal",
+      "user_description": "Indian citizen holding passport number 987654321",
+      "primechain_public_key": "0300d59b899af64b7771423eda8b37e7f62e5f97b6a6f13fc77f3c4e9cd3430215"
+   }
+}
 ```
 
 # BLACKLIST_MASTERLIST
