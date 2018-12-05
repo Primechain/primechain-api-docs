@@ -127,43 +127,106 @@ The output will be the txid of the transaction in which the permissions were rev
 ```
 
 ## 7. List permissions given to all entities
-To get a list of all permissions which have been explicitly granted to all entities, use `get /api/v1/listpermissions`. 
+To get a list of all permissions which have been explicitly granted to a specific address, use `post /api/v1/listpermissions` and pass the primechain address as a parameter:
 ```
 {
-  "status": 200,
-  "primechain_address": 
-  [
-    {
-      "address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-      "ismine": true,
-      "iswatchonly": false,
-      "isscript": false,
-      "pubkey": "0203f2047224b87a0e8fffa61a4741d13cb215e1735b16570eacb2c3729aa129aa",
-      "iscompressed": true,
-      "account": "",
-      "synchronized": true
-    },
-    {
-      "address": "1af89TzR7d7N3pqtKrfzQFxz9MYuNvpt2iFBmj",
-      "ismine": true,
-      "iswatchonly": false,
-      "isscript": false,
-      "pubkey": "0301b67565c43d7f130be061b66ed7f1160b02f72e9054ff573ddc6baac76a4a13",
-      "iscompressed": true,
-      "account": "",
-      "synchronized": true
-     },
-     {
-      "address": "1VtTz3kJvcGhnMBefhayNpzkRHqj5oudKUoXeD",
-      "ismine": true,
-      "iswatchonly": false,
-      "isscript": false,
-      "pubkey": "0326b77627f8b708d60a252b0b596588244301e15ae03fc180857e4339e38b4d89",
-      "iscompressed": true,
-      "account": "",
-      "synchronized": true
-    }
-  ],
+  "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+}
+```
+The output will be something like this:
+```
+{
+"status": 200,
+"primechain_address": [
+  {
+"address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"for": null,
+"type": "connect",
+"startblock": 0,
+"endblock": 4294967295,
+"admins": [
+  "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+],
+"pending": [],
+},
+  {
+"address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"for": null,
+"type": "send",
+"startblock": 0,
+"endblock": 4294967295,
+"admins": [
+  "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+],
+"pending": [],
+},
+  {
+"address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"for": null,
+"type": "receive",
+"startblock": 0,
+"endblock": 4294967295,
+"admins": [
+  "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+],
+"pending": [],
+},
+  {
+"address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"for": null,
+"type": "issue",
+"startblock": 0,
+"endblock": 4294967295,
+"admins": [
+  "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+],
+"pending": [],
+},
+  {
+"address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"for": null,
+"type": "create",
+"startblock": 0,
+"endblock": 4294967295,
+"admins": [
+  "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+],
+"pending": [],
+},
+  {
+"address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"for": null,
+"type": "mine",
+"startblock": 0,
+"endblock": 4294967295,
+"admins": [
+  "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+],
+"pending": [],
+},
+  {
+"address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"for": null,
+"type": "admin",
+"startblock": 0,
+"endblock": 4294967295,
+"admins": [
+  "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+],
+"pending": [],
+},
+  {
+"address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
+"for": null,
+"type": "activate",
+"startblock": 0,
+"endblock": 4294967295,
+"admins": [
+  "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3"
+],
+"pending": [],
+}
+],
 }
 ```
 
