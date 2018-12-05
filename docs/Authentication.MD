@@ -50,13 +50,13 @@ In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal i
 
 ### Step 1
 
-Sanya retrieves Noodle's 'RSA public key' using `post /api/v1/get_rsa_key` and passing Noodle's 'primechain address' as a parameter.
+Sanya retrieves Noodle Bank's 'RSA public key' using `post /api/v1/get_rsa_key` and passing Noodle's 'primechain address' as a parameter.
 ```
 {
   "primechain_address": "12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v"
 }
 ```
-The output is the 'RSA public key' of the verifier.
+The output is Noodle Bank's 'RSA public key'.
 ```
 {
 "status": 200,
@@ -67,7 +67,8 @@ The output is the 'RSA public key' of the verifier.
 ### Step 2
 Samairah encrypts her own 'primechain address' with Noodle Bank's 'RSA public key'. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
 1. `data`, which is the 'primechain address' of the entity   
-2. `rsa_public_key` of the verifier   
+2. `rsa_public_key` of the 
+
 ```
 {
   "data": "1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn",
@@ -176,7 +177,7 @@ Samairah encrypts the following with Noodle Bank's RSA public key:
 
 This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
 1. `data`, which is the `primechain address` of the entity   
-2. `rsa_public_key` of the verifier   
+2. `rsa_public_key` of Noodle Bank
 ```
 {
   "data": "xxxx",
