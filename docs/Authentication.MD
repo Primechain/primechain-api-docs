@@ -40,7 +40,7 @@ The entity's primechain private key and RSA private key is known only to the ent
 Authentication is a 10-step process:
 
 ### Step 1
-The entity encryptes its primechain address with the RSA public key of the verifier and then sends this encrypted value to the verifier. The entity uses `post /api/v1/encrypt_data_rsa` and provides the following:
+The entity encrypts its primechain address with the RSA public key of the verifier and then sends this encrypted value to the verifier. The entity uses `post /api/v1/encrypt_data_rsa` and provides the following:
 
 * the data to be encrypted (in this case, the primechain address of the entity
 * the RSA 
