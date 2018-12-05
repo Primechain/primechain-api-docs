@@ -104,32 +104,36 @@ The output is the decrypted data referred to as `decrypted_data`
 ```
 
 ### Step 5
-The verifier retrieves the 'RSA public key' of the entity using `post /api/v1/get_rsa_key` and passing the 'primechain address' of the entity as a parameter.
+Noodle Bank retrieves Samairah's 'RSA public key' using `post /api/v1/get_rsa_key` and passing Samairah's 'primechain address' as a parameter.
 ```
 {
-  "primechain_ address": "aaa"
+  "primechain_address": "1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn"
 }
 ```
 The output is the 'RSA public key' of the entity.
 ```
-aaaa
+{
+"status": 200,
+"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkSMswu6s2N2Ars4y6WyA 9OqWPRrx/5+6CFKa0cFak42xjWCQ5JBI8CSal8sQiebCNMCxpGwLcdFHv5ufJOt2 He3jzgU8hw1kPjzw+ONryz88flVqVXwTv2Yzd93IEvDl4rAIADDarso0McA6wvAz KfjQcoYcl1iHGxcFYUgUzDOZNStw8vPWJ7cogJZRuQTolN1X8BMczWJvXEeaLBCT HEt9QBTEGDsJqNBYLZkSEBA3ozS+02jE6fg7DpMU2KhbVO4MtTlmXvjM31+95Mk3 9XDSESLP0l8Nosd79L33r5Q38enfL8KCs6AYY18qvPIRE28IYFLzkzCvV5TJfTnG mQIDAQAB -----END PUBLIC KEY-----"
+}
 ```
 
 ### Step 6
-The verifier generates a 512-character random string and the GMT timestamp. For this it uses `get /api/v1/create_string_timestamp` and gets an output like:
+Noodle Bank generates a 512-character random string and the current GMT timestamp. For this it uses `get /api/v1/create_string_timestamp` and gets an output like:
 ```
 string^timestamp
 ```
-The 512-character random string along with the GMT timestamp are stored in the verifier's private database.
+Note: The hash is the SHA-512 hash of `string^timestamp`  
 
-### Step 7
-The verifier encrypts the 512-character random string along with the GMT timestamp with the entity's RSA public key. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
-1. `data`, which is the `primechain address` of the entity   
-2. `rsa_public_key` of the verifier   
+The `string` and `timestamp` are stored in the verifier's private database.
+
+The `hash` is encrypted with Samairah's RSA public key and sent to her. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
+1. `data`, which is the hash   
+2. `rsa_public_key` of Samairah
 ```
 {
   "data": "xxxx",
-  "rsa_public_key": "aaaa"
+  "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkSMswu6s2N2Ars4y6WyA 9OqWPRrx/5+6CFKa0cFak42xjWCQ5JBI8CSal8sQiebCNMCxpGwLcdFHv5ufJOt2 He3jzgU8hw1kPjzw+ONryz88flVqVXwTv2Yzd93IEvDl4rAIADDarso0McA6wvAz KfjQcoYcl1iHGxcFYUgUzDOZNStw8vPWJ7cogJZRuQTolN1X8BMczWJvXEeaLBCT HEt9QBTEGDsJqNBYLZkSEBA3ozS+02jE6fg7DpMU2KhbVO4MtTlmXvjM31+95Mk3 9XDSESLP0l8Nosd79L33r5Q38enfL8KCs6AYY18qvPIRE28IYFLzkzCvV5TJfTnG mQIDAQAB -----END PUBLIC KEY-----",
 }
 ```
 The output is the encrypted value referred to as `encrypted_data_rsa`:
@@ -137,7 +141,7 @@ The output is the encrypted value referred to as `encrypted_data_rsa`:
 output
 ```
 
-### Step 8
+### Step 7
 The verifier sends the encrypted value to the entity.
 
 ### Step 9
