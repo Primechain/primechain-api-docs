@@ -242,7 +242,7 @@ The output is the decrypted data referred to as `decrypted_data`
     {
       "signature":"H3i7JTbIfwe/jf05z3ea+O/Ljl0DHLg7MzTc4RE6FRd7M79SLGgq1zzuPkzffXHjecbcAMLtjHqoxUVRskSHfmQ=",
       "primechain_address":"1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn",
-      "data":"NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="'
+      "data":"NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="
      }"          
 }
 ```
@@ -254,10 +254,9 @@ Noodle Bank verifies the digital signature using `post /api/v1/verify_signature`
 ```
 {
    "primechain_address":"1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn",
-   "data":"NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="'
-   "signature":"H3i7JTbIfwe/jf05z3ea+O/Ljl0DHLg7MzTc4RE6FRd7M79SLGgq1zzuPkzffXHjecbcAMLtjHqoxUVRskSHfmQ=",
+   "data":"NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="
+   "signature":"H3i7JTbIfwe/jf05z3ea+O/Ljl0DHLg7MzTc4RE6FRd7M79SLGgq1zzuPkzffXHjecbcAMLtjHqoxUVRskSHfmQ="
 }
-
 ```
 The output will be `true` if the signature is valid and `false` if the signature is invalid or if an error occurs.
 ```
@@ -275,4 +274,3 @@ The output will be `true` if the signature is valid and `false` if the signature
 If the signature is valid, the entity is verified.
 
 Noodle Bank also uses the stored timestamp to confirm that the signature is returned within a pre-set interval e.g. 30 seconds.
-
