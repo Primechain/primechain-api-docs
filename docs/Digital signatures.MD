@@ -56,7 +56,7 @@ To sign data and store the signature in the `SIGNATURE_MASTERLIST` data stream, 
   "data": "c14fa6ea73269522b3362c637e9d90de39f58ac7696536019b7a3f2e0741e606"
 }
 ```
-The output will be the signature and the transaction id vide which the signature is stored in the `GREAT` data stream:
+The output will be the signature and the transaction id through which the signature is stored in the `GREAT` data stream:
 ```
 {
 "status": 200,
