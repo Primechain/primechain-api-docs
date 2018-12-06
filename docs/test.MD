@@ -6,18 +6,18 @@
 
 ## [2. Authentication](#2-authentication)   
 [Step 1 - Retrieving the RSA public key of the verifier](#step-1---retrieving-the-rsa-public-key-of-the-verifier)   
-[Step 2 - Encrypting the blockchain address of the user to be verified](#step-2---encrypting-the-blockchain-address-of-the-user-to-be-verified)   
+[Step 2 - Encrypting the blockchain address of the requester](#step-2---encrypting-the-blockchain-address-of-the-requester)   
 [Step 3 - Sending the encrypted blockchain address to the verifier](#step-3---sending-the-encrypted-blockchain-address-to-the-verifier)   
 [Step 4 - Decrypting the encrypted blockchain address](#step-4---decrypting-the-encrypted-blockchain-address)   
-[Step 5 - Retrieving the RSA public key of the entity to be verified](#step-5---retrieving-the-rsa-public-key-of-the-entity-to-be-verified)   
+[Step 5 - Retrieving the RSA public key of the requester](#step-5---retrieving-the-rsa-public-key-of-the-requester)   
 [Step 6 - Generating a random string and timestamp and hash](#step-6---generating-a-random-string-and-timestamp-and-hash)   
-[Step 7 - Sending the hash to the entity to be verified](#step-7---sending-the-hash-to-the-entity-to-be-verified)   
+[Step 7 - Sending the hash to the requester](#step-7---sending-the-hash-to-the-requester)   
 [Step 8 - Decryption of the hash](#step-8---decryption-of-the-hash)    
-[Step 9 - Signing of the hash by the entity to be verified](#step-9---signing-of-the-hash-by-the-entity-to-be-verified)   
+[Step 9 - Signing of the hash by the requester](#step-9---signing-of-the-hash-by-the-requester)   
 [Step 10 - Creating the encrypted envelope](#step-10---creating-the-encrypted-envelope)   
 [Step 11 - Sending the encrypted envelope to the verifier](#step-11---sending-the-encrypted-envelope-to-the-verifier)   
 [Step 12 - Decrypting of the encrypted envelope by the verifier](#step-12---decrypting-of-the-encrypted-envelope-by-the-verifier)   
-[Step 13 - Verifiation of the digital signature](#step-13---verifiation-of-the-digital-signature)   
+[Step 13 - Verification of the digital signature](#step-13---verification-of-the-digital-signature)   
 
 # 1. Onboarding a user
 A user can be an individual, a company, a device etc and can be on-boarded using `post /api/v1/onboard_user` and passing the following parameters:
@@ -99,9 +99,9 @@ If Samairah and her sister Sanya both have Noodle Bank accounts and use the same
 ```
 
 # 2. Authentication
-Authentication is a 13-step process. The user being authenticated is referred to as 'entity' and the user carrying out the authentication is referred to as the 'verifier'.
+Authentication is a 13-step process. The user being authenticated is referred to as 'requester' and the user carrying out the authentication is referred to as the 'verifier'.
 
-In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the entity. Their primechain addresses are: `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah).
+In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the requester. Their primechain addresses are: `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah).
 
 ### Step 1 - Retrieving the RSA public key of the verifier
 
@@ -119,7 +119,7 @@ The output is Noodle Bank's 'RSA public key'.
 }
 ```
 
-### Step 2 - Encrypting the blockchain address of the user to be verified
+### Step 2 - Encrypting the blockchain address of the requester
 Samairah encrypts her own 'primechain address' with Noodle Bank's 'RSA public key'. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
 1. `data`, which is Samairah's 'primechain address'   
 2. `rsa_public_key` of Noodle Bank 
@@ -159,14 +159,14 @@ The output is the decrypted data, which in this case is Samairah's 'primechain a
 }
 ```
 
-### Step 5 - Retrieving the RSA public key of the entity to be verified 
+### Step 5 - Retrieving the RSA public key of the requester
 Noodle Bank retrieves Samairah's 'RSA public key' using `post /api/v1/get_rsa_key` and passing Samairah's 'primechain address' as a parameter.
 ```
 {
   "primechain_address": "1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn"
 }
 ```
-The output is the 'RSA public key' of the entity.
+The output is the 'RSA public key' of the requester.
 ```
 {
 "status": 200,
@@ -187,7 +187,7 @@ Noodle Bank generates a 512-character random string and the current GMT timestam
   }
 }
 ```
-Note: The hash is the SHA-512 hash of `string^timestamp`  
+Note: The `hash` is the SHA-512 hash of `string^timestamp`  
 
 The `string` and `timestamp` are stored in Noodle Bank's private database.
 
@@ -208,7 +208,7 @@ The output is the encrypted value referred to as `encrypted_data_rsa`:
 }
 ```
 
-### Step 7 - Sending the hash to the entity to be verified
+### Step 7 - Sending the hash to the requester
 Noodle Bank sends the `encrypted_data_rsa` to Samairah.
 
 ### Step 8 - Decryption of the hash
@@ -229,7 +229,7 @@ The output is the decrypted data, which in this case is the hash.
 }
 ```
 
-### Step 9 - Signing of the hash by the entity to be verified
+### Step 9 - Signing of the hash by the requester
 Samairah signs the decrypted data using her 'primechain private key'. For this she uses `post /api/v1/create_signature` and passes the following parameters:
 1. The data to be signed   
 2. Samairah's private key
@@ -301,7 +301,7 @@ The output is the decrypted data referred to as `decrypted_data`
      }"          
 }
 ```
-### Step 13 - Verifiation of the digital signature
+### Step 13 - Verification of the digital signature
 Noodle Bank verifies the digital signature using `post /api/v1/verify_signature` and passes the following parameters:
 1. The data to be verified   
 2. Samairah's primechain address   
