@@ -269,13 +269,13 @@ The output is the 'RSA public key' of the requester.
 Noodle Bank generates a 512-character random string and the current GMT timestamp. For this it uses `get /api/v1/create_string_timestamp` and gets an output like:
 ```
 {
-"status": 200,
-"response": 
-  {
-    "string": "kaPYzPoOBv3wcDjLPpj23jl7JJLrgUBFNyYFt2NvPazaBlKBbg3SqgvFZtVzNmJtnUgLcQrglERswfuYwPwisywP54nMuo5HzXw0D2Kztqzy44K0zJs0upZlQjwEnWhGpKwtHFKqVrIUwCpPY83ZolRsurHSk76kWoNukxIntiXmkeDzWe0YYtsUBcIG41BieiIGO9n5DmXFow1L6l91hQL1T6fdafALJX9sZIDNPVlyalb7dOJyHxBH0lkykxt19VbTb4dZCWn68YkzYxhpp0AFtbF6bMBinZCbkbmsZPAhQx44k5fEksv6UDz8bj9H8thTxUXXVZTB3msdbHgZrOhfzAFHyTEA7IBVSrz8CdsU1XeEFHnYZZ6ogxQ0ZfacO6v9SdXzG8McK0mTr4BHeWQXmVMXmzKnCMZrH8KnXvBGyCsBhOnjvP7yVoEtf2xIqwPQ9jcvIf3NNZVqtAxL0utoZ3KB1DQ9NgZpTPCsSr8mffEzH2264urIOzGIs0j9",
-    "timestamp": 1544011513,
-    "hash": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="
-  }
+  "status": 200,
+  "response": 
+    {
+      "string": "WN2kwi7Bi4OslUaGRHP427AE0NFXriDhayjFSZUnY7jkvaBdFlEg9or7OAlDQwkmPp3BoS5qbzK1bha9jqHuZUhMV8VM6POSz8YGHjtiQVEyPaejquIZqfdt8Wto3A4b5hRfYkOAGpzhNhGLCYuiDQqTzfZNy3gnpyOartX7z2NMpdz8Y3mOCtS3KtzRG2T9Ah2t9vMIW02IlZ7RgdkOZgG76rOhtdXQT8dMlMkI4o5mtkBUzq9Sdo8yZR7Th6TCYcGMsZiyuYLuSNr03NpJhS23RWfgb58YFH0AdEacHor0ebIAmmi7aXqMnCrHYZUo2M2EPdh3IuqEyVPAxHmp2nvgzMM5hNzw7fUowCxPC9q33SvYnsZC4EsCwyj6SywN1KGgwVPnvyCYTSQcbETZdlivt4XwlE7HwnNSUhJbufODUBoPiPubRCsWh4qacNdlducONVCtiIvbYxpKr3KLFIUtHMv5I8g0gcMJWinIrNV0c2XvKjkxKADV1BDqZA0X",
+      "timestamp": 1544090758,
+      "hash": "d7634a35369c47bf26055744032f85e0e6f1d3645f29c97674770cde95b6631db9a76fa2e93a018fec94e65ba11c752b8ca04403a3cf1b24c69412fc878e30c8"
+    }
 }
 ```
 Note: The `hash` is the SHA-512 hash of `string^timestamp`  
