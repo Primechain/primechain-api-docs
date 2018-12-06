@@ -5,6 +5,7 @@
 [1.2 Multiple users share the same device](#12-multiple-users-share-the-same-device)   
 
 ## [2. Authentication](#2-authentication)   
+[Optional - Use of symmetric encryption](#optional---use-of-symmetric-encryption)   
 [Step 1 - Retrieving the RSA public key of the verifier](#step-1---retrieving-the-rsa-public-key-of-the-verifier)   
 [Step 2 - Encrypting the blockchain address of the requester](#step-2---encrypting-the-blockchain-address-of-the-requester)   
 [Step 3 - Sending the encrypted blockchain address to the verifier](#step-3---sending-the-encrypted-blockchain-address-to-the-verifier)   
@@ -102,6 +103,91 @@ If Samairah and her sister Sanya both have Noodle Bank accounts and use the same
 Authentication is a 13-step process. The user being authenticated is referred to as 'requester' and the user carrying out the authentication is referred to as the 'verifier'.
 
 In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the requester. Their primechain addresses are: `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah).
+
+### Optional - Use of symmetric encryption
+At any stage, you may optionally use AES symmetric encryption using `post /api/v1/encrypt_data_aes` and passing the data as the parameter:
+```
+{
+  "data":"I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+}
+```
+The output is the:
+1. AES password   
+2. AES initialization vector   
+3. The AES authentication tag   
+4. The encrypted data   
+```
+{
+"status": 200,
+"response": 
+  {
+    "aes_password": "S3N6GudzJJ8bhC6H7PzwlEKX5s7dUTjy",
+    "aes_iv": "kMPCFmXF3DjF",
+    "aes_tag": 
+      {
+        "type": "Buffer",
+        "data": 
+        [
+          50,
+          109,
+          253,
+          2,
+          12,
+          90,
+          85,
+          124,
+          20,
+          45,
+          241,
+          247,
+          11,
+          82,
+          229,
+          113
+        ],
+      },
+    "encrypted_data_aes": "d3786f4a9f8f0e36475327b6f3a26d5c582ea31b87dae25a63bd2abecdd092287be32fac3205d56ddafa55d6f173a947a33bc417065f451bbffe7c0c62a7a2adedad0c14f842c05ad99fc9b36a20865c0f15b7e6a0b77b9c1538bf2a3a5b9c5ba6a510c73b072d8fbcee359575a1d253a05605be37"
+  }
+}
+```
+To decrypt, use `post /api/v1/decrypt_data_aes` and pass the following parameters
+1. Encrypted data
+2. AES password   
+2. AES initialization vector   
+3. The AES authentication tag   
+```
+{
+  "encrypted_data_aes": "d3786f4a9f8f0e36475327b6f3a26d5c582ea31b87dae25a63bd2abecdd092287be32fac3205d56ddafa55d6f173a947a33bc417065f451bbffe7c0c62a7a2adedad0c14f842c05ad99fc9b36a20865c0f15b7e6a0b77b9c1538bf2a3a5b9c5ba6a510c73b072d8fbcee359575a1d253a05605be37"      "aes_password": "S3N6GudzJJ8bhC6H7PzwlEKX5s7dUTjy",
+    "aes_iv": "kMPCFmXF3DjF",
+    "aes_tag": 
+      {
+        "type": "Buffer",
+        "data": 
+        [
+          50,
+          109,
+          253,
+          2,
+          12,
+          90,
+          85,
+          124,
+          20,
+          45,
+          241,
+          247,
+          11,
+          82,
+          229,
+          113
+        ],
+      },
+}
+```
+The output will be the decrypted data.
+```
+output
+```
 
 ### Step 1 - Retrieving the RSA public key of the verifier
 
