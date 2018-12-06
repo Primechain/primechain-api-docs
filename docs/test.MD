@@ -157,7 +157,8 @@ To decrypt, use `post /api/v1/decrypt_data_aes` and pass the following parameter
 3. The AES authentication tag   
 ```
 {
-  "encrypted_data_aes": "d3786f4a9f8f0e36475327b6f3a26d5c582ea31b87dae25a63bd2abecdd092287be32fac3205d56ddafa55d6f173a947a33bc417065f451bbffe7c0c62a7a2adedad0c14f842c05ad99fc9b36a20865c0f15b7e6a0b77b9c1538bf2a3a5b9c5ba6a510c73b072d8fbcee359575a1d253a05605be37"      "aes_password": "S3N6GudzJJ8bhC6H7PzwlEKX5s7dUTjy",
+  "encrypted_data_aes": "d3786f4a9f8f0e36475327b6f3a26d5c582ea31b87dae25a63bd2abecdd092287be32fac3205d56ddafa55d6f173a947a33bc417065f451bbffe7c0c62a7a2adedad0c14f842c05ad99fc9b36a20865c0f15b7e6a0b77b9c1538bf2a3a5b9c5ba6a510c73b072d8fbcee359575a1d253a05605be37",
+  "aes_password": "S3N6GudzJJ8bhC6H7PzwlEKX5s7dUTjy",
     "aes_iv": "kMPCFmXF3DjF",
     "aes_tag": 
       {
@@ -180,13 +181,17 @@ To decrypt, use `post /api/v1/decrypt_data_aes` and pass the following parameter
           82,
           229,
           113
-        ],
-      },
+        ]
+      }
 }
+
 ```
 The output will be the decrypted data.
 ```
-output
+{
+"status": 200,
+"response": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+}
 ```
 
 ### Step 1 - Retrieving the RSA public key of the verifier
