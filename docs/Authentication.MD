@@ -1,9 +1,26 @@
 # Blockchain based authentication
 
-[1. Onboarding a user](#1-onboarding-a-user)   
-[2. Authentication](#2-authentication)   
+## [1. Onboarding a user](#1-onboarding-a-user)   
+[1.1 User has multiple devices](#11-user-has-multiple-devices)   
+[1.2 Multiple users share the same device](#12-multiple-users-share-the-same-device)   
 
-## 1. Onboarding a user
+## [2. Authentication](#2-authentication)   
+[Optional - Use of symmetric encryption](#optional---use-of-symmetric-encryption)   
+[Step 1 - Retrieving the RSA public key of the verifier](#step-1---retrieving-the-rsa-public-key-of-the-verifier)   
+[Step 2 - Encrypting the blockchain address of the requester](#step-2---encrypting-the-blockchain-address-of-the-requester)   
+[Step 3 - Sending the encrypted blockchain address to the verifier](#step-3---sending-the-encrypted-blockchain-address-to-the-verifier)   
+[Step 4 - Decrypting the encrypted blockchain address](#step-4---decrypting-the-encrypted-blockchain-address)   
+[Step 5 - Retrieving the RSA public key of the requester](#step-5---retrieving-the-rsa-public-key-of-the-requester)   
+[Step 6 - Generating a random string and timestamp and hash](#step-6---generating-a-random-string-and-timestamp-and-hash)   
+[Step 7 - Sending the hash to the requester](#step-7---sending-the-hash-to-the-requester)   
+[Step 8 - Decryption of the hash](#step-8---decryption-of-the-hash)    
+[Step 9 - Signing of the hash by the requester](#step-9---signing-of-the-hash-by-the-requester)   
+[Step 10 - Creating the encrypted envelope](#step-10---creating-the-encrypted-envelope)   
+[Step 11 - Sending the encrypted envelope to the verifier](#step-11---sending-the-encrypted-envelope-to-the-verifier)   
+[Step 12 - Decrypting of the encrypted envelope by the verifier](#step-12---decrypting-of-the-encrypted-envelope-by-the-verifier)   
+[Step 13 - Verification of the digital signature](#step-13---verification-of-the-digital-signature)   
+
+# 1. Onboarding a user
 A user can be an individual, a company, a device etc and can be on-boarded using `post /api/v1/onboard_user` and passing the following parameters:
 1. The user identifier e.g. name, account number, IMEI number, IP address, serial number, CIN etc.
 2. The user description 
@@ -43,36 +60,141 @@ The following are automatically published to the AUTH_USERS_MASTERLIST datastrea
 
 The newly created user's primechain private key and RSA private key are not published to any datastream.
 
+## 1.1 User has multiple devices
+
 If Samairah uses the Noodle Bank app on multiple devices, multiple on-boarding will be required e.g. 
 ```
 {
-  "user_identifier": "23792387",
+  "user_identifier": "112345867",
   "user_description": "Samairah Nagpal's Noodle Bank app on her Android phone"
 }
 ```
 
 ```
 {
-  "user_identifier": "23792387",
+  "user_identifier": "112345867",
   "user_description": "Samairah Nagpal's Noodle Bank app on her iPhone"
 }
 ```
 
 ```
 {
-  "user_identifier": "23792387",
+  "user_identifier": "112345867",
   "user_description": "Samairah Nagpal's Noodle Bank app on her Windows tab"
 }
 ```
 
+## 1.2 Multiple users share the same device
+If Samairah and her sister Sanya both have Noodle Bank accounts and use the same device, multiple on-boarding will be required e.g. 
+```
+{
+  "user_identifier": "112345867",
+  "user_description": "Samairah Nagpal's Noodle Bank app on her Android phone"
+}
+```
+```
+{
+  "user_identifier": "222345867",
+  "user_description": "Sanya Nagpal's Noodle Bank app on her Android phone"
+}
+```
 
+# 2. Authentication
+Authentication is a 13-step process. The user being authenticated is referred to as 'requester' and the user carrying out the authentication is referred to as the 'verifier'.
 
-## 2. Authentication
-Authentication is a 13-step process. The user being authenticated is referred to as 'entity' and the user carrying out the authentication is referred to as the 'verifier'.
+In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the requester. Their primechain addresses are: `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah).
 
-In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the entity. Their primechain addresses are: `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah).
+### Optional - Use of symmetric encryption
+At any stage, you may optionally use AES symmetric encryption using `post /api/v1/encrypt_data_aes` and passing the data as the parameter:
+```
+{
+  "data":"I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+}
+```
+The output is the:
+1. AES password   
+2. AES initialization vector   
+3. The AES authentication tag   
+4. The encrypted data   
+```
+{
+"status": 200,
+"response": 
+  {
+    "aes_password": "S3N6GudzJJ8bhC6H7PzwlEKX5s7dUTjy",
+    "aes_iv": "kMPCFmXF3DjF",
+    "aes_tag": 
+      {
+        "type": "Buffer",
+        "data": 
+        [
+          50,
+          109,
+          253,
+          2,
+          12,
+          90,
+          85,
+          124,
+          20,
+          45,
+          241,
+          247,
+          11,
+          82,
+          229,
+          113
+        ],
+      },
+    "encrypted_data_aes": "d3786f4a9f8f0e36475327b6f3a26d5c582ea31b87dae25a63bd2abecdd092287be32fac3205d56ddafa55d6f173a947a33bc417065f451bbffe7c0c62a7a2adedad0c14f842c05ad99fc9b36a20865c0f15b7e6a0b77b9c1538bf2a3a5b9c5ba6a510c73b072d8fbcee359575a1d253a05605be37"
+  }
+}
+```
+To decrypt, use `post /api/v1/decrypt_data_aes` and pass the following parameters
+1. Encrypted data
+2. AES password   
+2. AES initialization vector   
+3. The AES authentication tag   
+```
+{
+  "encrypted_data_aes": "d3786f4a9f8f0e36475327b6f3a26d5c582ea31b87dae25a63bd2abecdd092287be32fac3205d56ddafa55d6f173a947a33bc417065f451bbffe7c0c62a7a2adedad0c14f842c05ad99fc9b36a20865c0f15b7e6a0b77b9c1538bf2a3a5b9c5ba6a510c73b072d8fbcee359575a1d253a05605be37",
+  "aes_password": "S3N6GudzJJ8bhC6H7PzwlEKX5s7dUTjy",
+    "aes_iv": "kMPCFmXF3DjF",
+    "aes_tag": 
+      {
+        "type": "Buffer",
+        "data": 
+        [
+          50,
+          109,
+          253,
+          2,
+          12,
+          90,
+          85,
+          124,
+          20,
+          45,
+          241,
+          247,
+          11,
+          82,
+          229,
+          113
+        ]
+      }
+}
 
-### Step 1
+```
+The output will be the decrypted data.
+```
+{
+"status": 200,
+"response": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+}
+```
+
+### Step 1 - Retrieving the RSA public key of the verifier
 
 Samairah retrieves Noodle Bank's 'RSA public key' using `post /api/v1/get_rsa_key` and passing Noodle's 'primechain address' as a parameter.
 ```
@@ -88,7 +210,7 @@ The output is Noodle Bank's 'RSA public key'.
 }
 ```
 
-### Step 2
+### Step 2 - Encrypting the blockchain address of the requester
 Samairah encrypts her own 'primechain address' with Noodle Bank's 'RSA public key'. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
 1. `data`, which is Samairah's 'primechain address'   
 2. `rsa_public_key` of Noodle Bank 
@@ -107,10 +229,10 @@ The output is the encrypted value referred to as `encrypted_data_rsa`:
 }
 ```
 
-### Step 3
+### Step 3 - Sending the encrypted blockchain address to the verifier
 Samairah sends the `encrypted_data_rsa` to Noodle Bank.
 
-### Step 4
+### Step 4 - Decrypting the encrypted blockchain address
 Noodle Bank uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_rsa`. The parameters are:
 1. Noodle Bank's RSA private key
 2. The `encrypted_data_rsa`
@@ -128,14 +250,14 @@ The output is the decrypted data, which in this case is Samairah's 'primechain a
 }
 ```
 
-### Step 5
+### Step 5 - Retrieving the RSA public key of the requester
 Noodle Bank retrieves Samairah's 'RSA public key' using `post /api/v1/get_rsa_key` and passing Samairah's 'primechain address' as a parameter.
 ```
 {
   "primechain_address": "1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn"
 }
 ```
-The output is the 'RSA public key' of the entity.
+The output is the 'RSA public key' of the requester.
 ```
 {
 "status": 200,
@@ -143,7 +265,7 @@ The output is the 'RSA public key' of the entity.
 }
 ```
 
-### Step 6
+### Step 6 - Generating a random string and timestamp and hash
 Noodle Bank generates a 512-character random string and the current GMT timestamp. For this it uses `get /api/v1/create_string_timestamp` and gets an output like:
 ```
 {
@@ -156,7 +278,7 @@ Noodle Bank generates a 512-character random string and the current GMT timestam
   }
 }
 ```
-Note: The hash is the SHA-512 hash of `string^timestamp`  
+Note: The `hash` is the SHA-512 hash of `string^timestamp`  
 
 The `string` and `timestamp` are stored in Noodle Bank's private database.
 
@@ -177,10 +299,10 @@ The output is the encrypted value referred to as `encrypted_data_rsa`:
 }
 ```
 
-### Step 7
+### Step 7 - Sending the hash to the requester
 Noodle Bank sends the `encrypted_data_rsa` to Samairah.
 
-### Step 8
+### Step 8 - Decryption of the hash
 Samairah decrypts the encrypted value using her own RSA private key. Samairah uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_rsa`. The parameters are:
 1. Samairah's RSA private key
 2. The `encrypted_data_rsa`
@@ -198,7 +320,7 @@ The output is the decrypted data, which in this case is the hash.
 }
 ```
 
-### Step 9
+### Step 9 - Signing of the hash by the requester
 Samairah signs the decrypted data using her 'primechain private key'. For this she uses `post /api/v1/create_signature` and passes the following parameters:
 1. The data to be signed   
 2. Samairah's private key
@@ -216,8 +338,8 @@ The output is the digital signature.
 }
 ```
 
-### Step 10
-Samairah encrypts the following with Noodle Bank's RSA public key:
+### Step 10 - Creating the encrypted envelope
+Samairah creates an 'encrypted envelope' containing the following:
 1. the digital signature 
 2. Samairah's primechain address
 3. the data that has been signed (hash in this case)
@@ -245,10 +367,10 @@ The output is the encrypted value referred to as `encrypted_data_rsa`:
 }
 ```
 
-### Step 11
-Samairah sends this encrypted data to Noodle Bank.
+### Step 11 - Sending the encrypted envelope to the verifier
+Samairah sends the encrypted envelope to Noodle Bank.
 
-### Step 12
+### Step 12 - Decrypting of the encrypted envelope by the verifier
 Noodle Bank uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_rsa`. The parameters are:
 1. Noodle Bank's RSA private key
 2. The `encrypted_data_rsa`
@@ -270,7 +392,7 @@ The output is the decrypted data referred to as `decrypted_data`
      }"          
 }
 ```
-### Step 13
+### Step 13 - Verification of the digital signature
 Noodle Bank verifies the digital signature using `post /api/v1/verify_signature` and passes the following parameters:
 1. The data to be verified   
 2. Samairah's primechain address   
