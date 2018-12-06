@@ -5,7 +5,8 @@
 [1.2 Multiple users share the same device](#12-multiple-users-share-the-same-device)   
 
 ## [2. Authentication](#2-authentication)   
-[Step 1 - Retrieving verifiers RSA public key](#step-1---retrieving-verifiers-rsa-public-key)
+[Step 1 - Retrieving the RSA public key of the verifier](#step-1---retrieving-the-rsa-public-key-of-the-verifier)   
+[Step 2 - Encrypting the blockchain address of the user to be verified](#step-2---encrypting-the-blockchain-address-of-the-user-to-be-verified)   
 
 # 1. Onboarding a user
 A user can be an individual, a company, a device etc and can be on-boarded using `post /api/v1/onboard_user` and passing the following parameters:
@@ -91,7 +92,7 @@ Authentication is a 13-step process. The user being authenticated is referred to
 
 In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the entity. Their primechain addresses are: `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah).
 
-### Step 1 - Retrieving verifiers RSA public key
+### Step 1 - Retrieving the RSA public key of the verifier
 
 Samairah retrieves Noodle Bank's 'RSA public key' using `post /api/v1/get_rsa_key` and passing Noodle's 'primechain address' as a parameter.
 ```
@@ -107,7 +108,7 @@ The output is Noodle Bank's 'RSA public key'.
 }
 ```
 
-### Step 2
+### Step 2 - Encrypting the blockchain address of the user to be verified
 Samairah encrypts her own 'primechain address' with Noodle Bank's 'RSA public key'. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
 1. `data`, which is Samairah's 'primechain address'   
 2. `rsa_public_key` of Noodle Bank 
