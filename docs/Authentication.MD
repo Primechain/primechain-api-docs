@@ -66,8 +66,8 @@ The output is Noodle Bank's 'RSA public key'.
 
 ### Step 2
 Samairah encrypts her own 'primechain address' with Noodle Bank's 'RSA public key'. This is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
-1. `data`, which is the 'primechain address' of the entity   
-2. `rsa_public_key` of the 
+1. `data`, which is Samairah's 'primechain address'   
+2. `rsa_public_key` of Noodle Bank 
 
 ```
 {
@@ -96,7 +96,7 @@ Noodle Bank uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_
   "encrypted_data_rsa": "UiP5ggF10c9onAxpvCgO116XcnZx9oBZ7+odcUziubmnfashhtavDf6vAzZ24ZnLEwvZPWOexyV/xKCCpXzZb4fxCI5T1xQvIVRSxjqFVmoltrc74Xg6y8DPWkItKf5ahZJEZSp5Oi+3TbH/LxQ6MIpQo/5//5PdlGgrN1xMiWW9YLBZhL2oEw46wUdBVbZkR2BOsUIDRXVmy8OkC8Ouzb3zk0bcGbrsmCvinHArh+z2S5NaqgGX/Bl9FBBw7xGzINbWVvH99nRQNXXM3xgrBJm/DjGJW+t9x7OAAp5+RxzzgKxgTAA5J9fGMkkHFf0SKJBnJlI7TDti3/iuPAoztA=="
 }
 ```
-The output is the decrypted data referred to as `decrypted_data`
+The output is the decrypted data, which in this case is Samairah's 'primechain address'.
 ```
 {
 "status": 200,
@@ -166,7 +166,7 @@ Samairah decrypts the encrypted value using her own RSA private key. Samairah us
   "encrypted_data_rsa": "K+stxqVtxVfsZnLCanbOiQLw0D5WcJ3BEx/uif7go9FLtUfqXp30yTani4UemS6x6WqVS+E7GaK04uO0NBiIkAkQNlv7TidL3fnMuYRHfXivZ8zjrGyP2YCMw82kRWUi91DbEbgGeHp4Dt90KXCy6THUMyolPKp2QpWV0HDmeaIt/RitmWeKBYc1Uko1cYfGZOuukn6576hz9XEoBl6qMCHdPtenT+3kgBPjvH71/GaRH/8VWadY1z2jIUkhhfuAymU/C593CJAnw2kpgUjKpyXpEFqGQmJgrAyfSiQx57sdagXYTcDPuXova8HSYRZwK6n6siVDok6fr4pR5tYvhA=="
 }
 ```
-The output is the decrypted data referred to as `decrypted_data`
+The output is the decrypted data, which in this case is the hash.
 ```
 {
 "status": 200,
@@ -180,7 +180,7 @@ Samairah signs the decrypted data using her 'primechain private key'. For this s
 2. Samairah's private key
 ```
 {
-  "data": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q==",
+  "data": "/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q==",
   "primechain_private_key": "V9uvYCkvGFGcrq2ePqtgnxA4qHAdFThhAUEkCT2sMogXv2pmAZq7nu3A"
 }
 ```
