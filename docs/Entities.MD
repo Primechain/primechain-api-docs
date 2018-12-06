@@ -6,7 +6,7 @@
 [4. Create multisig address](#4-create-multisig-address)   
 [5. Grant permissions to an entity](#5-grant-permissions-to-an-entity)   
 [6. Revoke permissions to an entity](#6-revoke-permissions-to-an-entity)   
-[7. List permissions given to a specific address](#7-list-permissions-given-to-a-specific-address) 
+[7. List permissions given to a specific address](#7-list-permissions-given-to-a-specific-address)    
 [8. Information about the addresses in the wallet](#8-information-about-the-addresses-in-the-wallet)   
 [9. Validate address](#9-validate-address)   
 [10. List entities](#10-list-entities)   
