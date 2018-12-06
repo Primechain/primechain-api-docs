@@ -5,7 +5,7 @@
 3. [Sign and store signature](#3-sign-and-store-signature)
 
 ## 1. Signing data
-To generate a digital signature, use `post /api/v1/create_signature` and provide 2 parameters - addresss (the blockchain address of the signer) and message (the hash of the data to be signed). Example:
+To generate a digital signature, use `post /api/v1/create_signature` and provide 2 parameters - addresss (the blockchain address of the signer) and data (the hash of the information to be signed). Example:
 ```
 {
   "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
@@ -24,7 +24,7 @@ Note: The signature can be created only by the node containing the private key.
 
 ## 2. Verifying a digital signature
 
-To verify that the the signature for the specified hash and public key is valid, use `post /api/v1/verify_signature` and provide 3 parameters - addresss (the blockchain address of the signer), message (the hash of the data to be verified) and signature (the digital signature). Example:
+To verify that the the signature for the specified hash and public key is valid, use `post /api/v1/verify_signature` and provide 3 parameters - addresss (the blockchain address of the signer), data (the hash of the information to be verified) and signature (the digital signature). Example:
 ```
 {
   "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
