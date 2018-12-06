@@ -287,7 +287,7 @@ The `hash` is encrypted with Samairah's RSA public key and sent to her. This is 
 2. `rsa_public_key` of Samairah
 ```
 {
-  "data": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q==",
+  "data": "d7634a35369c47bf26055744032f85e0e6f1d3645f29c97674770cde95b6631db9a76fa2e93a018fec94e65ba11c752b8ca04403a3cf1b24c69412fc878e30c8",
   "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkSMswu6s2N2Ars4y6WyA 9OqWPRrx/5+6CFKa0cFak42xjWCQ5JBI8CSal8sQiebCNMCxpGwLcdFHv5ufJOt2 He3jzgU8hw1kPjzw+ONryz88flVqVXwTv2Yzd93IEvDl4rAIADDarso0McA6wvAz KfjQcoYcl1iHGxcFYUgUzDOZNStw8vPWJ7cogJZRuQTolN1X8BMczWJvXEeaLBCT HEt9QBTEGDsJqNBYLZkSEBA3ozS+02jE6fg7DpMU2KhbVO4MtTlmXvjM31+95Mk3 9XDSESLP0l8Nosd79L33r5Q38enfL8KCs6AYY18qvPIRE28IYFLzkzCvV5TJfTnG mQIDAQAB -----END PUBLIC KEY-----"
 }
 ```
@@ -295,7 +295,7 @@ The output is the encrypted value referred to as `encrypted_data_rsa`:
 ```
 {
 "status": 200,
-"encrypted_data_rsa": "K+stxqVtxVfsZnLCanbOiQLw0D5WcJ3BEx/uif7go9FLtUfqXp30yTani4UemS6x6WqVS+E7GaK04uO0NBiIkAkQNlv7TidL3fnMuYRHfXivZ8zjrGyP2YCMw82kRWUi91DbEbgGeHp4Dt90KXCy6THUMyolPKp2QpWV0HDmeaIt/RitmWeKBYc1Uko1cYfGZOuukn6576hz9XEoBl6qMCHdPtenT+3kgBPjvH71/GaRH/8VWadY1z2jIUkhhfuAymU/C593CJAnw2kpgUjKpyXpEFqGQmJgrAyfSiQx57sdagXYTcDPuXova8HSYRZwK6n6siVDok6fr4pR5tYvhA=="
+"encrypted_data_rsa": "DuGcSUU9PuA8GVw0rgy/atvy9kWoQ4AD1q8jm1TrI4t61/IfBomajbfvAv93bOKKGLmUa8a6eJekxVySo6wwLsfy5CaAG1muA5AN9zOae72izTGDpvPC8c/iYAoC5V6wwwWuhH/CrCy2bDN5aKSI8lh9zgoAiKvEzKdMTCoMLOs3RzwOhzqT/yF7OsLM9cW3baFYgxrHtsOyAbEkG2DA0SR3XxDZtJIeLDXyZntqf7UQ7GJ6DGam4bnTe4UuUjNaApESWs/XlQFA1k7C7N9jooSNrvXcwIoMUdWNTJ3DY6KtxSCpwEaZrGuJrCnVZ5qEegCECAXilTccpf6ko+z7BA=="
 }
 ```
 
@@ -309,14 +309,14 @@ Samairah decrypts the encrypted value using her own RSA private key. Samairah us
 ```
 {
   "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCRIyzC7qzY3YCu zjLpbID06pY9GvH/n7oIUprRwVqTjbGNYJDkkEjwJJqXyxCJ5sI0wLGkbAtx0Ue/ m58k63Yd7ePOBTyHDWQ+PPD442vLPzx+VWpVfBO/ZjN33cgS8OXisAgAMNquyjQx wDrC8DMp+NByhhyXWIcbFwVhSBTMM5k1K3Dy89YntyiAllG5BOiU3VfwExzNYm9c R5osEJMcS31AFMQYOwmo0FgtmRIQEDejNL7TaMTp+DsOkxTYqFtU7gy1OWZe+Mzf X73kyTf1cNIRIs/SXw2ix3v0vfevlDfx6d8vwoKzoBhjXyq88hETbwhgUvOTMK9X lMl9OcaZAgMBAAECggEADQob+2d2IAXGie38pPwameZ5mQPSuiSfkh/ZyP6WJKuW SB1k5yQPaYPgX8LeuYUB7btiOmN6o78psw1IPwjok8fLr7bIuVl6qBzRiYrlJF2K Ec+avhNnssp71UkXsJv0C2nFTj8VZp7EEbQzk1ABSMQR9jgWWYKaoNRwp0zSkYXt SDbWLIAMJQgsH42itg/9+MgGUtHReZMjzEHYqU1Re8I+O0Ayy51HW44zgjxck10g CsAQnCF7UWyagxvTtoQSoBHqVhRK7L40yUxvDB+Bv+Tq4XOSw+WaeBJLOqFngcsz NzzQThp4muauQv3HPr757hXuq+wHQhG/FpV6jQEAAQKBgQD96sF77LMwKwfOT1vH ER9aBNHv+xY/ULZM9HdMYtl7Mym91KDzxW/1zDKGzoUDZlNm2UnldIs0UlWozjOE 23AWGh/IO4PNbpS4Rz5rmCXh83EJYAmFa50iMQC611zsvra4Nc5u3EiDAf3I20wE YMfLew53yWvluGdEp7WWWtjrWQKBgQCSU/lU4RzLVNhYdxC0O/P9fE46RKI+Ygl3 TSItTSEPKw6H4GPmEhgqbyhLF26LMlv4y03VXLAGB/x8suFaUnJOyemkILm6SQmU RJlOcvY2CKpyJ21H/VmklslkugwUinyV48IRPiNyPi/TSPFQQBGL+9yIKThOogwm JqE8w/aNQQKBgQDs7YBdAiCxcXV3LNWWioOWm6jJJKE9szJn3DT1Mcd9DeCFIUKO NEykLkV3RH0ZDwIDlf09/eFmkO0c9ktcTOXpubauP9pcdjKPQOsdunqeu2leNh6s QB3/KXpk3U/4GHympo5ZI3MFy3XjVb042JWVaN23KFtlnwu9JEBsa5i9AQKBgFgi Le2avM4XJ0t5Q11bMuT9ZtyflB0AzXTGx4wDhaLuKw1Z8LGVOmrskpdP4KwEQ/MA +LtG3Vp0mvW8hBDz0Zd0872AXH1AGn3sJ25hvbvj0k15Q8/1X3XLwDdj+3yvwMRC 7xOVmqHnpMScjYPpYuguZbC5KwnpfmnIIJtJ6IlBAoGAEGuy6McpovKopghtqJ3B jtEGhVysu1UTqSOe4NcVvLUbT7SsIN+8xygWKAYAGuCE7AN6N6LDBa72KuzS0U+S iiO/j+t62FY8lY1vvI4YKXmwr7ONhPVjhRgIHjAx9IJ8P8hWAxC9i+n1oiK9ECWL 81kiQg+BuclnyJQ8MOHuu+8= -----END PRIVATE KEY-----",
-  "encrypted_data_rsa": "K+stxqVtxVfsZnLCanbOiQLw0D5WcJ3BEx/uif7go9FLtUfqXp30yTani4UemS6x6WqVS+E7GaK04uO0NBiIkAkQNlv7TidL3fnMuYRHfXivZ8zjrGyP2YCMw82kRWUi91DbEbgGeHp4Dt90KXCy6THUMyolPKp2QpWV0HDmeaIt/RitmWeKBYc1Uko1cYfGZOuukn6576hz9XEoBl6qMCHdPtenT+3kgBPjvH71/GaRH/8VWadY1z2jIUkhhfuAymU/C593CJAnw2kpgUjKpyXpEFqGQmJgrAyfSiQx57sdagXYTcDPuXova8HSYRZwK6n6siVDok6fr4pR5tYvhA=="
+  "encrypted_data_rsa": "DuGcSUU9PuA8GVw0rgy/atvy9kWoQ4AD1q8jm1TrI4t61/IfBomajbfvAv93bOKKGLmUa8a6eJekxVySo6wwLsfy5CaAG1muA5AN9zOae72izTGDpvPC8c/iYAoC5V6wwwWuhH/CrCy2bDN5aKSI8lh9zgoAiKvEzKdMTCoMLOs3RzwOhzqT/yF7OsLM9cW3baFYgxrHtsOyAbEkG2DA0SR3XxDZtJIeLDXyZntqf7UQ7GJ6DGam4bnTe4UuUjNaApESWs/XlQFA1k7C7N9jooSNrvXcwIoMUdWNTJ3DY6KtxSCpwEaZrGuJrCnVZ5qEegCECAXilTccpf6ko+z7BA=="
 }
 ```
 The output is the decrypted data, which in this case is the hash.
 ```
 {
 "status": 200,
-"decrypted_data": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q=="
+"decrypted_data": "d7634a35369c47bf26055744032f85e0e6f1d3645f29c97674770cde95b6631db9a76fa2e93a018fec94e65ba11c752b8ca04403a3cf1b24c69412fc878e30c8"
 }
 ```
 
@@ -326,7 +326,7 @@ Samairah signs the hash using her 'primechain private key'. For this she uses `p
 2. Samairah's private key
 ```
 {
-  "data": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q==",
+  "data": "d7634a35369c47bf26055744032f85e0e6f1d3645f29c97674770cde95b6631db9a76fa2e93a018fec94e65ba11c752b8ca04403a3cf1b24c69412fc878e30c8",
   "primechain_private_key": "V9uvYCkvGFGcrq2ePqtgnxA4qHAdFThhAUEkCT2sMogXv2pmAZq7nu3A"
 }
 ```
