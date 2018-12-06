@@ -4,7 +4,7 @@
 [2. Authentication](#2-authentication)   
 
 ## 1. Onboarding a user
-A user can be an individual, a company, a device etc and can be on-boarded using using `post /api/v1/onboard_user` and passing the following parameters:
+A user can be an individual, a company, a device etc and can be on-boarded using `post /api/v1/onboard_user` and passing the following parameters:
 1. The user identifier e.g. name, account number, IMEI number, IP address, serial number, CIN etc.
 2. The user description 
 ```
