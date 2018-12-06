@@ -10,7 +10,7 @@ A user can be an individual, a company, a device etc and can be on-boarded using
 ```
 {
   "user_identifier": "23792387",
-  "user_description": "Heat sensor installed at Zimblia Avenue"
+  "user_description": "Samairah Nagpal's Noodle Bank app on her iPad"
 }
 ```
 The output is:   
@@ -42,6 +42,30 @@ The following are automatically published to the AUTH_USERS_MASTERLIST datastrea
 3. new user's RSA public key   
 
 The newly created user's primechain private key and RSA private key are not published to any datastream.
+
+If Samairah uses the Noodle Bank app on multiple devices, multiple on-boarding will be required e.g. 
+```
+{
+  "user_identifier": "23792387",
+  "user_description": "Samairah Nagpal's Noodle Bank app on her Android phone"
+}
+```
+
+```
+{
+  "user_identifier": "23792387",
+  "user_description": "Samairah Nagpal's Noodle Bank app on her iPhone"
+}
+```
+
+```
+{
+  "user_identifier": "23792387",
+  "user_description": "Samairah Nagpal's Noodle Bank app on her Windows tab"
+}
+```
+
+
 
 ## 2. Authentication
 Authentication is a 13-step process. The user being authenticated is referred to as 'entity' and the user carrying out the authentication is referred to as the 'verifier'.
