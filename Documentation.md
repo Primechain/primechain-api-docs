@@ -41,6 +41,7 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 8. [List stream items by publisher](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#8-list-stream-items-by-publisher)
 9. [List keys in a specified stream](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Data%20streams.MD#9-list-keys-in-a-specified-stream)
 
+
 ## 5. [Smart Asset Lifecycle Management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD)
 1. [Create a new asset](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset)
 2. [Create additional units of an open asset](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#2-create-additional-units-of-an-open-asset)
@@ -70,6 +71,7 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 1. [Onboarding an entity](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD#1-onboarding-an-entity)   
 2. [Authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD#2-authentication)
 
+## 9. [List of data streams](https://github.com/Primechain/primechain-api-docs/blob/master/docs/List%20of%20data%20streams.MD)
 
 ## [Others](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Others.MD)
 
