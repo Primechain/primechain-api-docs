@@ -321,12 +321,12 @@ The output is the decrypted data, which in this case is the hash.
 ```
 
 ### Step 9 - Signing of the hash by the requester
-Samairah signs the decrypted data using her 'primechain private key'. For this she uses `post /api/v1/create_signature` and passes the following parameters:
-1. The data to be signed   
+Samairah signs the hash using her 'primechain private key'. For this she uses `post /api/v1/create_signature` and passes the following parameters:
+1. The data to be signed (hash in this case)   
 2. Samairah's private key
 ```
 {
-  "data": "/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q==",
+  "data": "NokbI+G2Pk4/c2jZl2i8Y/QJgbGVZ0A8/yTEAEAowNv5oUc3NJ/I7zETqhNgcxsWgfldJEx8NRP+T6fTqwFM3Q==",
   "primechain_private_key": "V9uvYCkvGFGcrq2ePqtgnxA4qHAdFThhAUEkCT2sMogXv2pmAZq7nu3A"
 }
 ```
