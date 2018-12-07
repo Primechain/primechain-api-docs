@@ -47,9 +47,8 @@ Save this output along with the following:
 * Price (optional)
 
 ***Note:***
-The encrypted KYC data is stored in the DATA_MASTERLIST stream.
-
-Your primechain address, the data hash and the digitsal signature are stored in the DATA_SIGNATURE_MASTERLIST stream.
+* The encrypted KYC data is stored in the DATA_MASTERLIST stream.   
+* Your primechain address, the data hash and the digitsal signature are stored in the DATA_SIGNATURE_MASTERLIST stream.
 
 
 
