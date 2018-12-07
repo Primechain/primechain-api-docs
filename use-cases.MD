@@ -64,9 +64,14 @@ Healthcare & Pharmaceutical industry can greatly benefit from the immutable data
 ### 5. Insurance
 Blockchain technology can reduce time, cost and risk across the entire insurance value chain. Primechain-API use cases for insurance include:
 
-1. blockchain enabled micro insurance
-2. agent details registry
-3. policy & claims records
+1. Blockchain enabled micro insurance
+2. Agent details registry
+3. Policy & claims records
+4. KYC repository and sharing
+5. Verified Health & Policy Records
+6. Auto insurance repository
+7. Unclaimed Life Insurance repository
+8. National Policy & Claims Records repository
  
 
 ### 6. Manufacturing
