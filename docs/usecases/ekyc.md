@@ -115,7 +115,7 @@ Save this output along with the following:
 
 ***Note:***
 * The encrypted KYC data is stored in the FILE_MASTERLIST stream. 
-* Your primechain address, the data hash and the digitsal signature are stored in the FILE_SIGNATURE_MASTERLIST stream.
+* Your primechain address, the data hash and the digital signature are stored in the FILE_SIGNATURE_MASTERLIST stream.
 
 
 ## 4. Download KYC file
