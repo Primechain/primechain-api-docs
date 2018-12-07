@@ -17,7 +17,7 @@ Blockchain technology is ideal for banks and financial service providers because
 12.	Issuance of Bank Guarantees & Letters of Credit 
 13.	Loan origination & lifecycle management
 14.	Loyalty program management
-15.	Password-less authentication
+15.	[Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
 16.	Peer-to-peer lending & Crowd funding 
 17.	Peer-to-peer payments
 18.	Repository of AML, CBWT & STR records 
