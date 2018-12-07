@@ -7,7 +7,11 @@
 
 # 1. Upload KYC data
 
-To upload KYC data, use `post /api/v1/encrypt_sign_store_data` and pass your primechain address and the data. For example:
+To upload KYC data, use `post /api/v1/encrypt_sign_store_data` and pass the following parameters:   
+1. Your primechain address. The primechain private key coressponding to this address will be used to sign the data. 
+2. The KYC data.
+
+For example:
 ```
 {
   {
@@ -27,7 +31,7 @@ To upload KYC data, use `post /api/v1/encrypt_sign_store_data` and pass your pri
 ```
 The output contains:
 1. The transaction id of the transaction in which the encryted data was stored on the blockchain
-2. The digital signature
+2. The digital signature 
 3. The 32 character AES password
 4. The 12 character AES initializaion vector (iv)
 ```
@@ -48,7 +52,7 @@ Save this output along with the following:
 
 ***Note:***
 * The encrypted KYC data is stored in the DATA_MASTERLIST stream.   
-* Your primechain address, the data hash and the digitsal signature are stored in the DATA_SIGNATURE_MASTERLIST stream.
+* Your primechain address, the data hash and the digital signature are stored in the DATA_SIGNATURE_MASTERLIST stream.
 
 ## 2. Download KYC data
 To download data, use `post /api/v1/decrypt_download_data` and pass these parameters:
