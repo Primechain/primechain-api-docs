@@ -1,16 +1,16 @@
 # Encrypted data storage
 
-[Introduction](#introduction)
+1. [Introduction](#1-introduction)
 
-1. [Sign, encrypt and store data in the blockchain](#1-sign-encrypt-and-store-data-in-the-blockchain)
+2. [Sign, encrypt and store data in the blockchain](#2-sign-encrypt-and-store-data-in-the-blockchain)
 
-2. [Decrypt, verify and retrieve data from the blockchain](#2-decrypt-verify-and-retrieve-data-from-the-blockchain)
+3. [Decrypt, verify and retrieve data from the blockchain](#3-decrypt-verify-and-retrieve-data-from-the-blockchain)
 
-3. [Encrypt, sign and upload file](#3-encrypt-sign-and-upload-file)
+4. [Encrypt, sign and upload file](#4-encrypt-sign-and-upload-file)
 
-4. [Decrypt and download file](#4-decrypt-and-download-file)
+5. [Decrypt and download file](#5-decrypt-and-download-file)
 
-# Introduction
+# 1. Introduction
 
 For an overview of the digital / electronic signature process, see [this](https://github.com/Primechain/primechain-api-docs/blob/master/docs/The%20electronic%20signature%20process.MD).
 
@@ -24,7 +24,7 @@ Glossary of terms
 For more information, see [NIST Special Publication 800-38D](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf)
 
 
-# 1. Sign, encrypt and store data in the blockchain
+# 2. Sign, encrypt and store data in the blockchain
 To encrypt data and store the encrypted data in the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
 1. the data 
 2. the primechain address of the signing entity
@@ -86,7 +86,7 @@ The following is the output:
 }
 ```
 
-## 2. Decrypt, verify and retrieve data from the blockchain
+## 3. Decrypt, verify and retrieve data from the blockchain
 To retrieve data from the blockchain and decrypt it, use `post /api/v1/decrypt_download_data` and pass these values:
 1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
 2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
@@ -128,7 +128,7 @@ The output will be the data and the details of the signer.
 }
 ```
 
-## 3. Encrypt, sign and upload file
+## 4. Encrypt, sign and upload file
 To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_file` and pass the blockchain address (using which the file will be signed) and the file.
 ```
 {
@@ -153,7 +153,7 @@ The output contains:
 }
 ```
 
-## 4. Decrypt and download file
+## 5. Decrypt and download file
 To decrypt and download a file, use `post /api/v1/decrypt_download_file` and pass these values:   
 1 The transaction id of the transaction in which the file was stored on the blockchain   
 2. The AES password   
