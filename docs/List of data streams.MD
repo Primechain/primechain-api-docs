@@ -76,6 +76,7 @@ The output will be something like this:
 # SIGNATURE_MASTERLIST      
 
 # VERIFIED_USER_MASTERLIST
+This is a closed stream created at the start. Seed node writes to it when a new verified address is requested by a member. Verified addresses are given write permissions to  DATA_SIGNATURE_MASTERLIST and DATA_MASTERLIST streams so that they can use [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
 
 # WHITELIST_MASTERLIST   
 
