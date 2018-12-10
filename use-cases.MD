@@ -4,29 +4,30 @@
 Blockchain technology is ideal for banks and financial service providers because it offers real-time automated settlement in addition to vastly improved security, transparency & auditability with reduced infrastructure cost. Primechain API use cases for banking & related financial services include:
 
 1.	Auction of assets
-2.	Charge Registry
-3.	Contract authentication, verification & storage
-4.	Cross-border remittance
-5.	Data marketplaces
-6.	[Digital signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD)
-7.	Employee background verification
-8.	Encrypted communications
-9.	Encrypted data storage
-10.	Invoice discounting / Supply chain finance / factoring
-11.	Issuance of Bank Guarantees & Letters of Credit 
-12. [KYC (Individual)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/kyc_individual.md)
-13. KYC (Corporate)
-14.	Loan origination & lifecycle management
-15.	Loyalty program management
-16.	[Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
-17.	Peer-to-peer lending & Crowd funding 
-18.	Peer-to-peer payments
-19.	Repository of AML, CBWT & STR records 
-20.	Smart asset lifecycle management
-21.	Stressed assets (NPA) marketplace
-22.	Syndicated loans
-23.	Vendor on-boarding & rating
-
+2. Bank Guarantees
+3.	Charge Registry
+4.	Contract authentication, verification & storage
+5.	Cross-border remittance
+6. Crowd funding 
+7.	Data marketplaces
+8.	[Digital signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD)
+9.	Employee background verification
+10.	Encrypted communication
+11.	Encrypted data storage
+12.	Invoice discounting / supply chain finance / factoring
+13. [KYC (Individual)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/kyc_individual.md)
+14. KYC (Corporate)
+15. Letters of Credit 
+16.	Loan origination & lifecycle management
+17.	Loyalty program lifecycle management
+18.	[Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
+19.	Peer-to-peer lending
+20.	Peer-to-peer payments
+21.	Repository of records 
+22.	Smart asset lifecycle management
+23.	Stressed assets (NPA) marketplace
+24.	Syndicated loans
+25.	Vendor on-boarding & rating
 
 ### 2. Capital markets
 By providing transparent real-time data and increasing the efficiency in settlement of transactions and processing, blockchains are immensely useful for capital markets. Primechain-API use cases for Capital markets include:
