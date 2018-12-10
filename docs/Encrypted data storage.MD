@@ -1,5 +1,16 @@
 # Encrypted data storage
 
+For an overview of the digital / electronic signature process, see [this](https://github.com/Primechain/primechain-api-docs/blob/master/docs/The%20electronic%20signature%20process.MD).
+
+Glossary of terms
+* AAD: Additional Authenticated Data 
+* AES: Advanced Encryption Standard.
+* Authentication Tag (Tag): A cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data. 
+* GCM: Galois/Counter Mode
+* Initialization Vector: A nonce that is associated with an invocation of authenticated encryption on a particular plaintext and AAD.   
+
+For more information, see [NIST Special Publication 800-38D](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf)
+
 1. [Sign, encrypt and store data in the blockchain](#1-sign-encrypt-and-store-data-in-the-blockchain)
 
 2. [Decrypt, verify and retrieve data from the blockchain](#2-decrypt-verify-and-retrieve-data-from-the-blockchain)
@@ -44,8 +55,8 @@ The following are published to the `DATA_SIGNATURE_MASTERLIST` stream:
 The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
 1. the encrypted version of the data
 2. the AES password
-3. the Initialization Vector (IV), which is a nonce that is associated with an invocation of authenticated encryption on a particular plaintext and Additional Authenticated Data.   
-4. the Authentication Tag (tag), which is the cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data. 
+3. the Initialization Vector (IV)   
+4. the Authentication Tag (tag)
 
 ### Step 5: Storing the encrypted data
 The encrypted data and the tag are published to the `DATA_MASTERLIST` stream
