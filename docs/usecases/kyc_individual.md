@@ -35,13 +35,14 @@ Sample output:
 ```
 {
 "status": 200,
-"response": {
-"tx_id_enc_data": "2f8b38c13db74e9a6f57edbd504f94fa9fd4138c3b0a68218f7bb83ad49848a9",
-"tx_id_signature": "e6bab35b15d91d02659fdfaebc96d50a6d76f7c4e620ba2ef662d78306ce1d15",
-"signature": "Hxc55xzUa4z/3/PoPTbWgOU0MCk+8Bne6Y65nkA4QOsueIR6HlRE0qlYUSpxwVEVuDn4E/VbgwWBCIknXB+f+EI=",
-"aes_password": "kTQCgp1AUvdjm1lMHe6vwN1zi3EthtKK",
-"aes_iv": "2F3FnHkHHd0R"
-}
+"response": 
+  {
+    "tx_id_enc_data": "2f8b38c13db74e9a6f57edbd504f94fa9fd4138c3b0a68218f7bb83ad49848a9",
+    "tx_id_signature": "e6bab35b15d91d02659fdfaebc96d50a6d76f7c4e620ba2ef662d78306ce1d15",
+    "signature": "Hxc55xzUa4z/3/PoPTbWgOU0MCk+8Bne6Y65nkA4QOsueIR6HlRE0qlYUSpxwVEVuDn4E/VbgwWBCIknXB+f+EI=",
+    "aes_password": "kTQCgp1AUvdjm1lMHe6vwN1zi3EthtKK",
+    "aes_iv": "2F3FnHkHHd0R"
+  }
 }
 ```
 Save this output along with the following:
@@ -56,9 +57,40 @@ For details, see:
 
 Sample input:
 ```
-aqaa
+{
+  "tx_id_enc_data": "2f8b38c13db74e9a6f57edbd504f94fa9fd4138c3b0a68218f7bb83ad49848a9",
+  "tx_id_signature": "e6bab35b15d91d02659fdfaebc96d50a6d76f7c4e620ba2ef662d78306ce1d15",
+  "aes_password": "kTQCgp1AUvdjm1lMHe6vwN1zi3EthtKK",
+  "aes_iv": "2F3FnHkHHd0R"
+  }
 ```
 Sample output:
 ```
-aaaa
+{
+"status": 200,
+"response": 
+  {
+    "data": 
+      {
+        "data_category": "KYC",
+        "entity_category": "INDIVIDUAL",
+        "name": "Gopal Kumar Santoshi",
+        "name_father": "INDIVIDUAL",
+        "name_wife": "Ekta Santoshi",
+        "email": "gopal@example.com",
+        "mobile": "+91-1234567890",
+        "address": "213, Zimblia Avenue, Zimblia, IN",
+        "gender": "male",
+        "dob": "06-NOV-1973",
+        "driving_license": "0987654321 dated 11-JAN-2010 issued by RTO, Zimblia",
+        "passport": "6554345678 dated 18-MAR-2010 issued by PPO, Zimblia"
+      },
+    "signer_detail": 
+      {
+        "name": "Noodle Bank Official Signer",
+        "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
+      },
+    "signature_status": true
+  }
+}
 ```
