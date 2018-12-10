@@ -108,10 +108,10 @@ The digital signature, hash and the primechain address of the signing entity are
 The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
 
 ### Step 3: Decryption
-3. The encrypted data is decrypted.
+The encrypted data is decrypted.
 
 ### Step 4: Verification
-4. The digital signature is verified
+The digital signature is verified
 
 ### Step 5: Output
 The output will be the data and the details of the signer.
@@ -126,7 +126,7 @@ The output will be the data and the details of the signer.
         "email": "scarlett@example.com",
         "cell": ":1234567890"
        },
-"signer_detail": 
+  "signer_detail": 
       {
         "name": "Noodle Bank Official Signer",
         "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
