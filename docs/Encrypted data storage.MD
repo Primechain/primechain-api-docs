@@ -6,9 +6,10 @@
 
 3. [Decrypt, verify and retrieve data from the blockchain](#3-decrypt-verify-and-retrieve-data-from-the-blockchain)
 
-4. [Encrypt, sign and upload file](#4-encrypt-sign-and-upload-file)
+4. [Sign, encrypt and store a file in the blockchain](#4-sign-encrypt-and-store-a-file-in-the-blockchain)
 
-5. [Decrypt and download file](#5-decrypt-and-download-file)
+5. [Decrypt, verify and retrieve a file from the blockchain](#5-decrypt-verify-and-retrieve-a-file-from-the-blockchain)
+
 
 # 1. Introduction
 
@@ -128,7 +129,7 @@ The output will be the data and the details of the signer.
 }
 ```
 
-## 4. Encrypt, sign and upload file
+## 4. Sign, encrypt and store a file in the blockchain
 To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_file` and pass the blockchain address (using which the file will be signed) and the file.
 ```
 {
@@ -153,7 +154,7 @@ The output contains:
 }
 ```
 
-## 5. Decrypt and download file
+## 5. Decrypt, verify and retrieve a file from the blockchain
 To decrypt and download a file, use `post /api/v1/decrypt_download_file` and pass these values:   
 1 The transaction id of the transaction in which the file was stored on the blockchain   
 2. The AES password   
