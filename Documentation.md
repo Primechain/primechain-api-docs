@@ -73,8 +73,7 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
 ## 9. [List of data streams](https://github.com/Primechain/primechain-api-docs/blob/master/docs/List%20of%20data%20streams.MD)
 
-## 10. [Use cases](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
-[Corporate & Individual KYC and due-diligence](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/ekyc.md)
+## 10. [Use cases](https://github.com/Primechain/primechain-api-docs/blob/master/use-cases.MD)
 
 ## [Others](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Others.MD)
 
