@@ -6,29 +6,47 @@
 4. [Decrypt and download file](#4-decrypt-and-download-file)
 
 ## 1. Encrypt, sign and upload data
-To encrypt and upload data, use `post /api/v1/encrypt_sign_store_data` and pass the blockchain address (using which the data will be signed) and the data.
+To encrypt data and store the encrypted data in the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
+1. the data 
+2. the primechain address of the signing entity
+
 ```
 {
-  {
   "primechain_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
   "data": 
     {
-      "type": "GUARANTEE",
-      "40A": "IRREVOCABLE",
-      "20": ":DOC.500",
-      "31C": "181106 INDIA",
-      "31D": "181206 DUBAI",
-       "50": "IMPORTER COMPANY NAME, IMPORTER COMPANY ADDRESS, INDIA",
-       "59": "EXPORTER COMPANY NAME, EXPORTER COMPANY ADDRESS, DUBAI"
+      "name": "Scarlett Johansson",
+      "email": "scarlett@example.com",
+      "cell": ":1234567890"
     }
-  }
 }
 ```
-The output contains:
-1. The transaction id of the transaction in which the data was stored on the blockchain
-2. The digital signature
-3. The AES password
-4. The AES initializaion vector (iv)
+
+This is what happens:   
+
+1. The SHA-512 hash of the data is computed.
+
+2. The hash is signed using the private key of the signing entity (using ECDSA).
+
+3. The following are published to the `DATA_SIGNATURE_MASTERLIST` stream:
+* the digital signature
+* the hash
+* the primechain address of the signing entity
+
+4. The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
+* the encrypted version of the data
+* the AES password
+* the Initialization Vector (IV), which is a nonce that is associated with an invocation of authenticated encryption on a particular plaintext and Additional Authenticated Data.   
+* the Authentication Tag (tag), which is the cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data. 
+
+5. The encrypted data and the tag are published to the `DATA_MASTERLIST` stream
+
+6. The following is the output:
+* the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
+* the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
+c) The AES password
+d) The Initialization Vector (IV)
+
 ```
 {
 "status": 200,
@@ -43,10 +61,12 @@ The output contains:
 ```
 
 ## 2. Decrypt and download data
-To decrypt and download data, use `post /api/v1/decrypt_download_data` and pass these values:
-* The transaction id of the transaction in which the data was stored on the blockchain
+To retrieve data from the blockchain and decrypt it, use `post /api/v1/decrypt_download_data` and pass these values:
+* the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
+* the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
 * The AES password
-* The AES initializaion vector (iv)
+* The Initialization Vector (IV)
+
 ```
 {
   "txid": "27ed040aa02b6fe6f8635bacaa3ad8f85c49d9bfdc9a1cb37fc33e5db900c228",
@@ -54,20 +74,28 @@ To decrypt and download data, use `post /api/v1/decrypt_download_data` and pass 
   "iv":"nPKF0E6icGKs"
 }
 ```
-The output will be the data.
+This is what happens:   
+
+1. The digital signature, hash and the primechain address of the signing entity are retrieved from the DATA_SIGNSTURE_MASTERLIST stream.
+
+2. The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
+
+3. The encrypted data is decrypted.
+
+4. The digital signature is verified
+
+5. The output is the decrypted data and address and name of the signer  
+
+The output will be the data and the details of the signer.
 ```
 {
-"status": 200,
-"response": 
-  {
-    20: ":DOC.500",
-    50: "IMPORTER COMPANY NAME, IMPORTER COMPANY ADDRESS, INDIA",
-    59: "EXPORTER COMPANY NAME, EXPORTER COMPANY ADDRESS, DUBAI",
-    "type": "GUARANTEE",
-    "40A": "IRREVOCABLE",
-    "31C": "181106 INDIA",
-    "31D": "181206 DUBAI"
-  }
+  "primechain_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
+  "data": 
+    {
+      "name": "Scarlett Johansson",
+      "email": "scarlett@example.com",
+      "cell": ":1234567890"
+    }
 }
 ```
 
