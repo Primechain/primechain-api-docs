@@ -5,7 +5,7 @@
 3. [Encrypt, sign and upload file](#3-encrypt-sign-and-upload-file)
 4. [Decrypt and download file](#4-decrypt-and-download-file)
 
-## 1. Encrypt, sign and upload data
+# 1. Encrypt, sign and upload data
 To encrypt data and store the encrypted data in the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
 1. the data 
 2. the primechain address of the signing entity
@@ -24,28 +24,35 @@ To encrypt data and store the encrypted data in the blockchain, use `post /api/v
 
 This is what happens:   
 
-1. The SHA-512 hash of the data is computed.
+## Step 1: Hash computation
 
+The SHA-512 hash of the data is computed.
+
+## Step 2: Signing
 2. The hash is signed using the private key of the signing entity (using ECDSA).
 
-3. The following are published to the `DATA_SIGNATURE_MASTERLIST` stream:
+## Step 3: Publishing to the `DATA_SIGNATURE_MASTERLIST` stream
+The following are published to the `DATA_SIGNATURE_MASTERLIST` stream:
 * the digital signature
 * the hash
 * the primechain address of the signing entity
 
-4. The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
-* the encrypted version of the data
-* the AES password
-* the Initialization Vector (IV), which is a nonce that is associated with an invocation of authenticated encryption on a particular plaintext and Additional Authenticated Data.   
-* the Authentication Tag (tag), which is the cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data. 
+## Step 4: Encryption
+The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
+1. the encrypted version of the data
+2. the AES password
+3. the Initialization Vector (IV), which is a nonce that is associated with an invocation of authenticated encryption on a particular plaintext and Additional Authenticated Data.   
+4. the Authentication Tag (tag), which is the cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data. 
 
-5. The encrypted data and the tag are published to the `DATA_MASTERLIST` stream
+## Step 5: Publishing to the `DATA_MASTERLIST` stream
+The encrypted data and the tag are published to the `DATA_MASTERLIST` stream
 
-6. The following is the output:
-* the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
-* the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
-c) The AES password
-d) The Initialization Vector (IV)
+## Step 6: Output 
+The following is the output:
+1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
+2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
+3. The AES password
+4. The Initialization Vector (IV)
 
 ```
 {
