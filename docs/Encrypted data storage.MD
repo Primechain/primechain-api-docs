@@ -1,11 +1,14 @@
 # Encrypted data storage
 
-1. [Encrypt, sign and upload data](#1-encrypt-sign-and-upload-data)
+1. [Sign, encrypt and upload data in the blockchain]([1. Sign, encrypt and upload data in the blockchain](#1-sign,-encrypt-and-upload-data-in-the-blockchain)
+
 2. [Decrypt and download data](#2-decrypt-and-download-data)
+
 3. [Encrypt, sign and upload file](#3-encrypt-sign-and-upload-file)
+
 4. [Decrypt and download file](#4-decrypt-and-download-file)
 
-# 1. Encrypt, sign and upload data
+# 1. Sign, encrypt and upload data in the blockchain
 To encrypt data and store the encrypted data in the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
 1. the data 
 2. the primechain address of the signing entity
