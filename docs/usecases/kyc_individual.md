@@ -5,7 +5,7 @@
 
 # 1. Sign, encrypt and store KYC data in the blockchain
 
-To Sign, encrypt and store KYC data in the blockchain, use `post /api/v1/encrypt_sign_store_data`.
+To sign, encrypt and store KYC data in the blockchain, use `post /api/v1/encrypt_sign_store_data`.
 
 For details, see: 
 [https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain)
