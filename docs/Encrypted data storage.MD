@@ -1,6 +1,6 @@
 # Encrypted data storage
 
-1. [Sign, encrypt and store data in the blockchain](#1-sign,-encrypt-and-store-data-in-the-blockchain)
+1. [Sign, encrypt and store data in the blockchain](#1-sign-encrypt-and-store-data-in-the-blockchain)
 
 2. [Decrypt and download data](#2-decrypt-and-download-data)
 
@@ -34,20 +34,20 @@ The SHA-512 hash of the data is computed.
 ## Step 2: Signing
 2. The hash is signed using the private key of the signing entity (using ECDSA).
 
-## Step 3: Publishing to the `DATA_SIGNATURE_MASTERLIST` stream
+## Step 3: Storing the signature
 The following are published to the `DATA_SIGNATURE_MASTERLIST` stream:
 * the digital signature
 * the hash
 * the primechain address of the signing entity
 
-## Step 4: Encryption
+## Step 4: Encrypting the data
 The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
 1. the encrypted version of the data
 2. the AES password
 3. the Initialization Vector (IV), which is a nonce that is associated with an invocation of authenticated encryption on a particular plaintext and Additional Authenticated Data.   
 4. the Authentication Tag (tag), which is the cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data. 
 
-## Step 5: Publishing to the `DATA_MASTERLIST` stream
+## Step 5: Storing the encrypted data
 The encrypted data and the tag are published to the `DATA_MASTERLIST` stream
 
 ## Step 6: Output 
