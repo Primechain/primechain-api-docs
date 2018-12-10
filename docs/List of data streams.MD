@@ -59,7 +59,11 @@ The output will be something like this:
 # DATA_MASTERLIST   
 This is a closed stream.
 
-Verified addresses write to it when using [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
+Verified users are those that are listed in VERIFIED_USER_MASTERLIST stream. They are given write permissions as described [here](https://github.com/Primechain/primechain-api/blob/master/README.md#28-verified-users).
+
+Verified addresses write to DATA_MASTERLIST when using [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
+
+
 
 # DATA_SIGNATURE_MASTERLIST   
 This is a closed stream.
