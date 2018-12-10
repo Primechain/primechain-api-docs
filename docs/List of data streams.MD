@@ -57,11 +57,14 @@ The output will be something like this:
 # CODE_MASTERLIST   
 
 # DATA_MASTERLIST   
+This is a closed stream.
+
+Verified addresses write to it when using [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
 
 # DATA_SIGNATURE_MASTERLIST   
-This is a closed stream created at the start. 
+This is a closed stream.
 
-Verified addresses write to it when using use [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
+Verified addresses write to it when using [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
 
 # FILE_MASTERLIST   
 
@@ -79,7 +82,7 @@ Verified addresses write to it when using use [`encrypt_sign_store_data`](https:
 # SIGNATURE_MASTERLIST      
 
 # VERIFIED_USER_MASTERLIST   
-This is a closed stream created at the start. 
+This is a closed stream.
 
 Seed node writes to it when a new verified address is requested by a member. 
 
