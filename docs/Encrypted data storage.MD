@@ -116,7 +116,25 @@ The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
 ### Step 5: Output
 The output will be the data and the details of the signer.
 ```
-output
+{
+"status": 200,
+"response": 
+  {
+    "data": 
+      {
+        "name": "Scarlett Johansson",
+        "email": "scarlett@example.com",
+        "cell": ":1234567890"
+       },
+"signer_detail": 
+      {
+        "name": "Noodle Bank Official Signer",
+        "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
+       },
+   "signature_status": true
+  }
+}
+
 ```
 
 ## 4. Sign, encrypt and store a file in the blockchain
