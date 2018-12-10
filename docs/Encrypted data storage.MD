@@ -31,26 +31,26 @@ This is what happens:
 
 The SHA-512 hash of the data is computed.
 
-## Step 2: Signing
+### Step 2: Signing
 The hash is signed using the private key of the signing entity (using ECDSA).
 
-## Step 3: Storing the signature
+### Step 3: Storing the signature
 The following are published to the `DATA_SIGNATURE_MASTERLIST` stream:
 1. the digital signature
 2. the hash
 3. the primechain address of the signing entity
 
-## Step 4: Encrypting the data
+### Step 4: Encrypting the data
 The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
 1. the encrypted version of the data
 2. the AES password
 3. the Initialization Vector (IV), which is a nonce that is associated with an invocation of authenticated encryption on a particular plaintext and Additional Authenticated Data.   
 4. the Authentication Tag (tag), which is the cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data. 
 
-## Step 5: Storing the encrypted data
+### Step 5: Storing the encrypted data
 The encrypted data and the tag are published to the `DATA_MASTERLIST` stream
 
-## Step 6: Output 
+### Step 6: Output 
 The following is the output:
 1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
 2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
@@ -86,19 +86,19 @@ To retrieve data from the blockchain and decrypt it, use `post /api/v1/decrypt_d
 ```
 This is what happens:   
 
-## Step 1: Retrieval of signing data 
+### Step 1: Retrieval of signing data 
 The digital signature, hash and the primechain address of the signing entity are retrieved from the DATA_SIGNSTURE_MASTERLIST stream.
 
-## Step 2: Retrieval of encrypted data 
+### Step 2: Retrieval of encrypted data 
 The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
 
-## Step 3: Decryption
+### Step 3: Decryption
 3. The encrypted data is decrypted.
 
-## Step 4: Verification
+### Step 4: Verification
 4. The digital signature is verified
 
-## Step 5: Output
+### Step 5: Output
 The output will be the data and the details of the signer.
 ```
 {
