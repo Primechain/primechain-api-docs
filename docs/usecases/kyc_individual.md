@@ -1,4 +1,4 @@
-# Corporate & Individual KYC and due-diligence
+# KYC (Individual)
 
 1. [Upload KYC data](#1-upload-kyc-data)
 2. [Download KYC data](#2-download-kyc-data)
@@ -10,8 +10,7 @@
 To upload KYC data, use `post /api/v1/encrypt_sign_store_data` and pass the following parameters:   
 1. Your primechain address. The primechain private key coressponding to this address will be used to sign the data. Note: The address must have write permissions to DATA_MASTERLIST and DATA_SIGNATURE_MASTERLIST granted by the seed node.
 
-2. The KYC data. The recommended KYC codes for individuals and for corporates are stored in the `CODE_MASTERLIST` stream.
-
+2. The KYC data. The recommended KYC codes are stored in the `CODE_MASTERLIST` stream.
 
 For example:
 ```
@@ -38,7 +37,7 @@ The output contains:
 1. The transaction id of the transaction in which the encryted data was stored on the blockchain
 2. The digital signature 
 3. The 32 character AES password
-4. The 12 character AES initializaion vector (iv)
+4. The 12 character AES initializaion vector (IV)
 ```
 {
 "status": 200,
@@ -59,7 +58,7 @@ Save this output along with the following:
 * The encrypted KYC data is stored in the DATA_MASTERLIST stream.   
 * Your primechain address, the data hash and the digital signature are stored in the DATA_SIGNATURE_MASTERLIST stream.
 
-## 2. Download KYC data
+# 2. Download KYC data
 To download data, use `post /api/v1/decrypt_download_data` and pass these parameters:
 * The transaction id of the transaction in which the data was stored on the blockchain
 * The AES password
@@ -88,8 +87,7 @@ The output will be the data.
 }
 ```
 
-
-## 3. Upload KYC file
+# 3. Upload KYC file
 
 To upload KYC data, use `post /api/v1/encrypt_sign_store_file` and pass your primechain address and the file. For example:
 ```
@@ -123,7 +121,7 @@ Save this output along with the following:
 * Your primechain address, the data hash and the digital signature are stored in the FILE_SIGNATURE_MASTERLIST stream.
 
 
-## 4. Download KYC file
+# 4. Download KYC file
 To download data, use `post /api/v1/decrypt_download_file` and pass these values:   
 1 The transaction id of the transaction in which the file was stored on the blockchain   
 2. The AES password   
