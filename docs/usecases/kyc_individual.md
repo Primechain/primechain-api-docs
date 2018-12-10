@@ -15,13 +15,13 @@ To upload KYC data, use `post /api/v1/encrypt_sign_store_data` and pass the foll
 For example:
 ```
 {
-  "primechain_address": "126c5fHTWm54Td6dy22mJVguEsRz4fkfoag1fQ",
+  "primechain_address": "16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd",
   "data": 
   {
     "data_category": "KYC",
     "entity_category": "INDIVIDUAL",
     "name": "Gopal Kumar Santoshi",
-    "name_father": "Ram Kumar Santoshi",
+    "name_father": "INDIVIDUAL",
     "name_wife": "Ekta Santoshi",
     "email": "gopal@example.com",
     "mobile": "+91-1234567890",
@@ -41,14 +41,14 @@ The output contains:
 ```
 {
 "status": 200,
-"response": 
-  {
-    "tx_id": "27ed040aa02b6fe6f8635bacaa3ad8f85c49d9bfdc9a1cb37fc33e5db900c228",
-    "signature": "IMgAru76ErWwYHq1qFhUne1AnfQIU9a0WrAWgw4LiH4zcsT8tvnINzg15E5DgjdGbij4u7jxyCHBXoDKhU/2JPk=",
-    "password": "kGhMFsTYQ7HwfWxLUKGXh37zwPF7yRJC",
-    "iv": "nPKF0E6icGKs"
-  }
+"response": {
+"tx_id": "9a6fa8fe940fb6cc36936ce18cc1fd13b1b9b16ab5de372c24330df624e51240",
+"signature": "HyI4D2W8R6hqMQleDEWrS0stNk493YpERpm4pMESK8BBKYGnMkYxMiEB/hsH/UiuLHGoTmoR2Z/vQBpsAqIvhIw=",
+"password": "4El9Aidug9aj4Co1XPc57pyrpQn675rh",
+"iv": "XDNffhBhkEq4"
 }
+}
+
 ```
 Save this output along with the following:
 * Customers identifier e.g. PAN, account number
@@ -65,25 +65,29 @@ To download data, use `post /api/v1/decrypt_download_data` and pass these parame
 * The AES initializaion vector (iv)
 ```
 {
-  "txid": "27ed040aa02b6fe6f8635bacaa3ad8f85c49d9bfdc9a1cb37fc33e5db900c228",
-  "password": "kGhMFsTYQ7HwfWxLUKGXh37zwPF7yRJC",
-  "iv":"nPKF0E6icGKs"
+"tx_id": "9a6fa8fe940fb6cc36936ce18cc1fd13b1b9b16ab5de372c24330df624e51240",
+"password": "4El9Aidug9aj4Co1XPc57pyrpQn675rh",
+"iv": "XDNffhBhkEq4"
 }
 ```
 The output will be the data.
 ```
 {
 "status": 200,
-"response": 
-  {
-    20: ":DOC.500",
-    50: "IMPORTER COMPANY NAME, IMPORTER COMPANY ADDRESS, INDIA",
-    59: "EXPORTER COMPANY NAME, EXPORTER COMPANY ADDRESS, DUBAI",
-    "type": "GUARANTEE",
-    "40A": "IRREVOCABLE",
-    "31C": "181106 INDIA",
-    "31D": "181206 DUBAI"
-  }
+"response": {
+"data_category": "KYC",
+"entity_category": "INDIVIDUAL",
+"name": "Gopal Kumar Santoshi",
+"name_father": "INDIVIDUAL",
+"name_wife": "Ekta Santoshi",
+"email": "gopal@example.com",
+"mobile": "+91-1234567890",
+"address": "213, Zimblia Avenue, Zimblia, IN",
+"gender": "male",
+"dob": "06-NOV-1973",
+"driving_license": "0987654321 dated 11-JAN-2010 issued by RTO, Zimblia",
+"passport": "6554345678 dated 18-MAR-2010 issued by PPO, Zimblia"
+}
 }
 ```
 
