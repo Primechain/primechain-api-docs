@@ -1,9 +1,8 @@
 # Others
 
 [1. Upgrading Primechain-API](#1-upgrading-primechain-api)   
-[2. List of data streams](#2-list-of-data-streams)   
-[3. Create passwords](#3-create-passwords)   
-[4. Create UUID](#4-create-uuid)   
+[2. Create passwords](#3-create-passwords)   
+[3. Create UUID](#4-create-uuid)   
 
 ## 1. Upgrading Primechain-API
 Login to the server and execute the following commands:
@@ -12,9 +11,8 @@ sudo su apiuser
 cd ~/primechain-api && pm2 stop 0 && git pull && pm2 start 0
 ```
 
-## 2. List of data streams
 
-## 3. Create passwords
+## 2. Create passwords
 To get a list of random passwords, use `get /api/v1/get_password`
 ```
 {
@@ -28,7 +26,7 @@ To get a list of random passwords, use `get /api/v1/get_password`
 "complex_40_character": "0Q%$zj&B-bXZW3V2tn!GWhvGiEjf&q8p-SP^reur"
 }
 ```
-## 4. Create UUID
+## 3. Create UUID
 To get a universally unique identifier (UUID), use `get /api/v1/uuid`
 ```
 {
