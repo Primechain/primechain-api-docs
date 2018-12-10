@@ -7,7 +7,7 @@ This is the list of all the data streams created automatically by Primechain API
 [BLACKLIST_MASTERLIST](#blacklist_masterlist)    
 [BLOB_STREAM](#blob_stream)    
 [DATA_MASTERLIST](#data_masterlist)     
-[CODE_MASTERLIST]   
+[CODE_MASTERLIST](#code-masterlist)   
 [DATA_SIGNATURE_MASTERLIST](#data_signature_masterlist)    
 [FILE_MASTERLIST](#file_masterlist)     
 [FILE_SIGNATURE_MASTERLIST](#file_signature_masterlist)    
