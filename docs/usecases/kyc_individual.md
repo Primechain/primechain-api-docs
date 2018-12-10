@@ -45,9 +45,10 @@ Sample output:
   }
 }
 ```
-Save this output along with the following:
-* Customers identifier e.g. PAN, account number
+Save this output in your private database along with the following:
+* Customers identifier
 * Price (optional)
+* Description of the record
 
 # 2. Decrypt, verify and retrieve KYC data from the blockchain
 To decrypt, verify and retrieve KYC data in the blockchain, use `post /api/v1/decrypt_download_data`.
