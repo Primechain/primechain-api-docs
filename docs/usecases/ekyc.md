@@ -18,13 +18,18 @@ For example:
   "primechain_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
   "data": 
     {
-      "type": "GUARANTEE",
-      "10001010": "cin",
-      "20": ":DOC.500",
-      "31C": "181106 INDIA",
-      "31D": "181206 DUBAI",
-       "50": "IMPORTER COMPANY NAME, IMPORTER COMPANY ADDRESS, INDIA",
-       "59": "EXPORTER COMPANY NAME, EXPORTER COMPANY ADDRESS, DUBAI"
+      "data_category": "KYC",
+      "entity_category": "INDIVIDUAL",
+      "name": "Gopal Kumar Santoshi",
+      "name_father": "INDIVIDUAL",
+      "name_wife": "Ekta Santoshi",
+      "email": "gopal@example.com",
+      "mobile": "+91-1234567890",
+      "address": "213, Zimblia Avenue, Zimblia, IN"
+      "gender": "male",
+      "dob": "06-NOV-1973",
+      "driving_license": "0987654321 dated 11-JAN-2010 issued by RTO, Zimblia",
+      "passport": "6554345678 dated 18-MAR-2010 issued by PPO, Zimblia",
     }
   }
 }
