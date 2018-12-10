@@ -6,25 +6,26 @@ Blockchain technology is ideal for banks and financial service providers because
 1.	Auction of assets
 2.	Charge Registry
 3.	Contract authentication, verification & storage
-4.	Corporate & Individual KYC and due-diligence
-5.	Cross-border remittance
-6.	Data marketplaces
-7.	Electronic signatures
-8.	Employee background verification
-9.	Encrypted communications
-10.	Encrypted data storage
-11.	Invoice discounting / Supply chain finance / factoring
-12.	Issuance of Bank Guarantees & Letters of Credit 
-13.	Loan origination & lifecycle management
-14.	Loyalty program management
-15.	[Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
-16.	Peer-to-peer lending & Crowd funding 
-17.	Peer-to-peer payments
-18.	Repository of AML, CBWT & STR records 
-19.	Smart asset lifecycle management
-20.	Stressed assets (NPA) marketplace
-21.	Syndicated loans
-22.	Vendor on-boarding & rating
+4.	Cross-border remittance
+5.	Data marketplaces
+6.	Electronic signatures
+7.	Employee background verification
+8.	Encrypted communications
+9.	Encrypted data storage
+10.	Invoice discounting / Supply chain finance / factoring
+11.	Issuance of Bank Guarantees & Letters of Credit 
+12. KYC (Individual)
+13. KYC (Corporate)
+14.	Loan origination & lifecycle management
+15.	Loyalty program management
+16.	[Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
+17.	Peer-to-peer lending & Crowd funding 
+18.	Peer-to-peer payments
+19.	Repository of AML, CBWT & STR records 
+20.	Smart asset lifecycle management
+21.	Stressed assets (NPA) marketplace
+22.	Syndicated loans
+23.	Vendor on-boarding & rating
 
 
 ### 2. Capital markets
