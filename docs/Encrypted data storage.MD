@@ -1,5 +1,17 @@
 # Encrypted data storage
 
+[Introduction](#introduction)
+
+1. [Sign, encrypt and store data in the blockchain](#1-sign-encrypt-and-store-data-in-the-blockchain)
+
+2. [Decrypt, verify and retrieve data from the blockchain](#2-decrypt-verify-and-retrieve-data-from-the-blockchain)
+
+3. [Encrypt, sign and upload file](#3-encrypt-sign-and-upload-file)
+
+4. [Decrypt and download file](#4-decrypt-and-download-file)
+
+# Introduction
+
 For an overview of the digital / electronic signature process, see [this](https://github.com/Primechain/primechain-api-docs/blob/master/docs/The%20electronic%20signature%20process.MD).
 
 Glossary of terms
@@ -11,13 +23,6 @@ Glossary of terms
 
 For more information, see [NIST Special Publication 800-38D](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf)
 
-1. [Sign, encrypt and store data in the blockchain](#1-sign-encrypt-and-store-data-in-the-blockchain)
-
-2. [Decrypt, verify and retrieve data from the blockchain](#2-decrypt-verify-and-retrieve-data-from-the-blockchain)
-
-3. [Encrypt, sign and upload file](#3-encrypt-sign-and-upload-file)
-
-4. [Decrypt and download file](#4-decrypt-and-download-file)
 
 # 1. Sign, encrypt and store data in the blockchain
 To encrypt data and store the encrypted data in the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
