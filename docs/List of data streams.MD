@@ -53,6 +53,8 @@ The output will be something like this:
 
 # BLOB_STREAM   
 
+# CODE_MASTERLIST
+
 # DATA_MASTERLIST   
 
 # DATA_SIGNATURE_MASTERLIST   
