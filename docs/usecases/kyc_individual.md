@@ -65,29 +65,30 @@ To download data, use `post /api/v1/decrypt_download_data` and pass these parame
 * The AES initializaion vector (iv)
 ```
 {
-"tx_id": "9a6fa8fe940fb6cc36936ce18cc1fd13b1b9b16ab5de372c24330df624e51240",
-"password": "4El9Aidug9aj4Co1XPc57pyrpQn675rh",
-"iv": "XDNffhBhkEq4"
+  "tx_id": "9a6fa8fe940fb6cc36936ce18cc1fd13b1b9b16ab5de372c24330df624e51240",
+  "password": "4El9Aidug9aj4Co1XPc57pyrpQn675rh",
+  "iv": "XDNffhBhkEq4"
 }
 ```
 The output will be the data.
 ```
 {
 "status": 200,
-"response": {
-"data_category": "KYC",
-"entity_category": "INDIVIDUAL",
-"name": "Gopal Kumar Santoshi",
-"name_father": "INDIVIDUAL",
-"name_wife": "Ekta Santoshi",
-"email": "gopal@example.com",
-"mobile": "+91-1234567890",
-"address": "213, Zimblia Avenue, Zimblia, IN",
-"gender": "male",
-"dob": "06-NOV-1973",
-"driving_license": "0987654321 dated 11-JAN-2010 issued by RTO, Zimblia",
-"passport": "6554345678 dated 18-MAR-2010 issued by PPO, Zimblia"
-}
+"response": 
+  {
+    "data_category": "KYC",
+    "entity_category": "INDIVIDUAL",
+    "name": "Gopal Kumar Santoshi",
+    "name_father": "INDIVIDUAL",
+    "name_wife": "Ekta Santoshi",
+    "email": "gopal@example.com",
+    "mobile": "+91-1234567890",
+    "address": "213, Zimblia Avenue, Zimblia, IN",
+    "gender": "male",
+    "dob": "06-NOV-1973",
+    "driving_license": "0987654321 dated 11-JAN-2010 issued by RTO, Zimblia",
+    "passport": "6554345678 dated 18-MAR-2010 issued by PPO, Zimblia"
+  }
 }
 ```
 
@@ -108,7 +109,8 @@ The output contains:
 ```
 {
     "status": 200,
-    "response": {
+    "response": 
+    {
         "transaction_id": "8c4419f7e808800b83ec6ac9090813dbeec59c2deb837993a47089ce45acf6b8",
         "signature": "IJFvhJtyv03/kUICkceq4orcAFPzMJKmfuK80pSesdRxXPPF/SQnR234P5I8kY/GslH4bRgFE9mwkm5HhCPTfZk=",
         "password": "pK4mTkZ5Mb6YRlwFmkUnpOO4DA8oY6JV",
@@ -134,7 +136,7 @@ To download data, use `post /api/v1/decrypt_download_file` and pass these values
 {
   "txid":"8c4419f7e808800b83ec6ac9090813dbeec59c2deb837993a47089ce45acf6b8",
   "password":"pK4mTkZ5Mb6YRlwFmkUnpOO4DA8oY6JV",
-   "iv":"T24LZEuWHyrz"
+  "iv":"T24LZEuWHyrz"
 }
 ```
 The file will get downloaded.
