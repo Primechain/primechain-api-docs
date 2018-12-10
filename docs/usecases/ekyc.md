@@ -11,10 +11,12 @@ To upload KYC data, use `post /api/v1/encrypt_sign_store_data` and pass the foll
 1. Your primechain address. The primechain private key coressponding to this address will be used to sign the data. 
 2. The KYC data.
 
+Note: The address must have write permissions to DATA_MASTERLIST and DATA_SIGNATURE_MASTERLIST granted by the seed node.
+
 For example:
 ```
 {
-  "primechain_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
+  "primechain_address": "126c5fHTWm54Td6dy22mJVguEsRz4fkfoag1fQ",
   "data": 
   {
     "data_category": "KYC",
