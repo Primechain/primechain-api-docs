@@ -41,12 +41,13 @@ The output contains:
 ```
 {
 "status": 200,
-"response": {
-"tx_id": "9a6fa8fe940fb6cc36936ce18cc1fd13b1b9b16ab5de372c24330df624e51240",
-"signature": "HyI4D2W8R6hqMQleDEWrS0stNk493YpERpm4pMESK8BBKYGnMkYxMiEB/hsH/UiuLHGoTmoR2Z/vQBpsAqIvhIw=",
-"password": "4El9Aidug9aj4Co1XPc57pyrpQn675rh",
-"iv": "XDNffhBhkEq4"
-}
+"response": 
+  {
+    "tx_id": "9a6fa8fe940fb6cc36936ce18cc1fd13b1b9b16ab5de372c24330df624e51240",
+    "signature": "HyI4D2W8R6hqMQleDEWrS0stNk493YpERpm4pMESK8BBKYGnMkYxMiEB/hsH/UiuLHGoTmoR2Z/vQBpsAqIvhIw=",
+    "password": "4El9Aidug9aj4Co1XPc57pyrpQn675rh",
+    "iv": "XDNffhBhkEq4"
+  }
 }
 
 ```
