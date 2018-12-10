@@ -28,7 +28,7 @@ To encrypt data and store the encrypted data in the blockchain, use `post /api/v
 
 ```
 {
-  "primechain_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
+  "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
   "data": 
     {
       "name": "Scarlett Johansson",
@@ -75,10 +75,11 @@ The following is the output:
 "status": 200,
 "response": 
   {
-    "tx_id": "27ed040aa02b6fe6f8635bacaa3ad8f85c49d9bfdc9a1cb37fc33e5db900c228",
-    "signature": "IMgAru76ErWwYHq1qFhUne1AnfQIU9a0WrAWgw4LiH4zcsT8tvnINzg15E5DgjdGbij4u7jxyCHBXoDKhU/2JPk=",
-    "password": "kGhMFsTYQ7HwfWxLUKGXh37zwPF7yRJC",
-    "iv": "nPKF0E6icGKs"
+    "tx_id_enc_data": "a8441a8e8fe52c6f84941fd1f08f774ecbf0dc9edf9fd18e9f9d20f1d2945940",
+    "tx_id_signature": "8f15a1b3bc4cbeeae89ea28e77982ac7baa04c45870d9d40086b799ad795487f",
+    "signature": "H523zhPwR1gdPn2R0/JlfTJLWB5HaII96vJcDx4qy8f2StF1AE6Qfft8lqE2IoDd2czj5cW8i9ZJLaWXu7KkEyE=",
+    "aes_password": "5M1qnsYeRmSvlwNtZ8oJiHC0g9ucVrgc",
+    "aes_iv": "zNc59qnYapAw"
   }
 }
 ```
@@ -92,10 +93,11 @@ To retrieve data from the blockchain and decrypt it, use `post /api/v1/decrypt_d
 
 ```
 {
-  "txid": "27ed040aa02b6fe6f8635bacaa3ad8f85c49d9bfdc9a1cb37fc33e5db900c228",
-  "password": "kGhMFsTYQ7HwfWxLUKGXh37zwPF7yRJC",
-  "iv":"nPKF0E6icGKs"
-}
+    "tx_id_enc_data": "a8441a8e8fe52c6f84941fd1f08f774ecbf0dc9edf9fd18e9f9d20f1d2945940",
+    "tx_id_signature": "8f15a1b3bc4cbeeae89ea28e77982ac7baa04c45870d9d40086b799ad795487f",
+    "aes_password": "5M1qnsYeRmSvlwNtZ8oJiHC0g9ucVrgc",
+    "aes_iv": "zNc59qnYapAw"
+ }
 ```
 This is what happens:   
 
@@ -114,15 +116,7 @@ The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
 ### Step 5: Output
 The output will be the data and the details of the signer.
 ```
-{
-  "primechain_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
-  "data": 
-    {
-      "name": "Scarlett Johansson",
-      "email": "scarlett@example.com",
-      "cell": ":1234567890"
-    }
-}
+output
 ```
 
 ## 4. Sign, encrypt and store a file in the blockchain
