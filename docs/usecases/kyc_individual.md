@@ -1,11 +1,11 @@
 # KYC (Individual)
 
-1. [Upload KYC data](#1-upload-kyc-data)
-2. [Download KYC data](#2-download-kyc-data)
+1. [Sign, encrypt and store KYC data in the blockchain](#1-sign-encrypt-and-store-kyc-data-in-the-blockchain)
+2. [2. Decrypt, verify and retrieve data from the blockchain](#2-decrypt-verify-and-retrieve-data-from-the-blockchain)
 3. [Upload KYC file](#3-upload-kyc-file)
 4. [Download KYC file](#4-download-kyc-file)
 
-# 1. Upload KYC data
+# 1. Sign, encrypt and store KYC data in the blockchain
 
 To upload KYC data, use `post /api/v1/encrypt_sign_store_data` and pass the following parameters:   
 1. Your primechain address. The primechain private key coressponding to this address will be used to sign the data. Note: The address must have write permissions to DATA_MASTERLIST and DATA_SIGNATURE_MASTERLIST granted by the seed node.
@@ -59,7 +59,7 @@ Save this output along with the following:
 * The encrypted KYC data is stored in the DATA_MASTERLIST stream.   
 * Your primechain address, the data hash and the digital signature are stored in the DATA_SIGNATURE_MASTERLIST stream.
 
-# 2. Download KYC data
+# 2. Decrypt, verify and retrieve data from the blockchain
 To download data, use `post /api/v1/decrypt_download_data` and pass these parameters:
 * The transaction id of the transaction in which the data was stored on the blockchain
 * The AES password
