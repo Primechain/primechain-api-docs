@@ -14,23 +14,21 @@ To upload KYC data, use `post /api/v1/encrypt_sign_store_data` and pass the foll
 For example:
 ```
 {
-  {
   "primechain_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
   "data": 
-    {
-      "data_category": "KYC",
-      "entity_category": "INDIVIDUAL",
-      "name": "Gopal Kumar Santoshi",
-      "name_father": "INDIVIDUAL",
-      "name_wife": "Ekta Santoshi",
-      "email": "gopal@example.com",
-      "mobile": "+91-1234567890",
-      "address": "213, Zimblia Avenue, Zimblia, IN"
-      "gender": "male",
-      "dob": "06-NOV-1973",
-      "driving_license": "0987654321 dated 11-JAN-2010 issued by RTO, Zimblia",
-      "passport": "6554345678 dated 18-MAR-2010 issued by PPO, Zimblia",
-    }
+  {
+    "data_category": "KYC",
+    "entity_category": "INDIVIDUAL",
+    "name": "Gopal Kumar Santoshi",
+    "name_father": "INDIVIDUAL",
+    "name_wife": "Ekta Santoshi",
+    "email": "gopal@example.com",
+    "mobile": "+91-1234567890",
+    "address": "213, Zimblia Avenue, Zimblia, IN",
+    "gender": "male",
+    "dob": "06-NOV-1973",
+    "driving_license": "0987654321 dated 11-JAN-2010 issued by RTO, Zimblia",
+    "passport": "6554345678 dated 18-MAR-2010 issued by PPO, Zimblia"
   }
 }
 ```
