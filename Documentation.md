@@ -61,10 +61,15 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
 ## 7. [Encrypted data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD)
 
-1. [Encrypt, sign and upload data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#1-encrypt-sign-and-upload-data)
-2. [Decrypt and download data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-decrypt-and-download-data)
-3. [Encrypt, sign and upload file](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-encrypt-sign-and-upload-file)
-4. [Decrypt and download file](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-decrypt-and-download-file)
+1. [Introduction](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#1-introduction)
+
+2. [Sign, encrypt and store data in the blockchain](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain)
+
+3. [Decrypt, verify and retrieve data from the blockchain](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-decrypt-verify-and-retrieve-data-from-the-blockchain)
+
+4. [Encrypt, sign and upload file](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-encrypt-sign-and-upload-file)
+
+5. [Decrypt and download file](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#5-decrypt-and-download-file)
 
 ## 8. [Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
 
