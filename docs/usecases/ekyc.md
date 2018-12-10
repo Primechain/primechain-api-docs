@@ -8,10 +8,10 @@
 # 1. Upload KYC data
 
 To upload KYC data, use `post /api/v1/encrypt_sign_store_data` and pass the following parameters:   
-1. Your primechain address. The primechain private key coressponding to this address will be used to sign the data. 
-2. The KYC data.
+1. Your primechain address. The primechain private key coressponding to this address will be used to sign the data. Note: The address must have write permissions to DATA_MASTERLIST and DATA_SIGNATURE_MASTERLIST granted by the seed node.
 
-Note: The address must have write permissions to DATA_MASTERLIST and DATA_SIGNATURE_MASTERLIST granted by the seed node.
+2. The KYC data. The recommended KYC codes for individuals and for corporates are stored in the `CODE_MASTERLIST` stream.
+
 
 For example:
 ```
