@@ -2,7 +2,7 @@
 
 1. [Sign, encrypt and store data in the blockchain](#1-sign-encrypt-and-store-data-in-the-blockchain)
 
-2. [Decrypt and download data](#2-decrypt-and-download-data)
+2. [Decrypt, verify and retrieval data from the blockchain](#2-#decrypt-verify-and-retrieval-data-from-the-blockchain)
 
 3. [Encrypt, sign and upload file](#3-encrypt-sign-and-upload-file)
 
@@ -70,7 +70,7 @@ The following is the output:
 }
 ```
 
-## 2. Decrypt and download data
+## 2. Decrypt, verify and retrieval data from the blockchain
 To retrieve data from the blockchain and decrypt it, use `post /api/v1/decrypt_download_data` and pass these values:
 1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
 2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
