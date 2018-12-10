@@ -16,6 +16,7 @@ This is the list of all the data streams created automatically by Primechain API
 [ONBOARD_USERLIST](#onboard_userlist)      
 [RSA_MASTERLIST](#rsa_masterlist)   
 [SIGNATURE_MASTERLIST](#signature_masterlist)      
+[VERIFIED_USER_MASTERLIST](#verified_user_masterlist)
 [WHITELIST_MASTERLIST](#whitelist_masterlist)
 
 
@@ -74,6 +75,7 @@ The output will be something like this:
 
 # SIGNATURE_MASTERLIST      
 
+# VERIFIED_USER_MASTERLIST
 
 # WHITELIST_MASTERLIST   
 
