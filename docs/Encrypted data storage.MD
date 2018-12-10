@@ -1,13 +1,9 @@
 # Encrypted data storage
 
 1. [Introduction](#1-introduction)
-
 2. [Sign, encrypt and store data in the blockchain](#2-sign-encrypt-and-store-data-in-the-blockchain)
-
 3. [Decrypt, verify and retrieve data from the blockchain](#3-decrypt-verify-and-retrieve-data-from-the-blockchain)
-
 4. [Sign, encrypt and store a file in the blockchain](#4-sign-encrypt-and-store-a-file-in-the-blockchain)
-
 5. [Decrypt, verify and retrieve a file from the blockchain](#5-decrypt-verify-and-retrieve-a-file-from-the-blockchain)
 
 
