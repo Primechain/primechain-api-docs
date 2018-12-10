@@ -32,13 +32,13 @@ This is what happens:
 The SHA-512 hash of the data is computed.
 
 ## Step 2: Signing
-2. The hash is signed using the private key of the signing entity (using ECDSA).
+The hash is signed using the private key of the signing entity (using ECDSA).
 
 ## Step 3: Storing the signature
 The following are published to the `DATA_SIGNATURE_MASTERLIST` stream:
-* the digital signature
-* the hash
-* the primechain address of the signing entity
+1. the digital signature
+2. the hash
+3. the primechain address of the signing entity
 
 ## Step 4: Encrypting the data
 The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
@@ -72,10 +72,10 @@ The following is the output:
 
 ## 2. Decrypt and download data
 To retrieve data from the blockchain and decrypt it, use `post /api/v1/decrypt_download_data` and pass these values:
-* the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
-* the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
-* The AES password
-* The Initialization Vector (IV)
+1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
+2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
+3. The AES password
+4. The Initialization Vector (IV)
 
 ```
 {
@@ -86,16 +86,19 @@ To retrieve data from the blockchain and decrypt it, use `post /api/v1/decrypt_d
 ```
 This is what happens:   
 
-1. The digital signature, hash and the primechain address of the signing entity are retrieved from the DATA_SIGNSTURE_MASTERLIST stream.
+## Step 1: Retrieval of signing data 
+The digital signature, hash and the primechain address of the signing entity are retrieved from the DATA_SIGNSTURE_MASTERLIST stream.
 
-2. The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
+## Step 2: Retrieval of encrypted data 
+The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
 
+## Step 3: Decryption
 3. The encrypted data is decrypted.
 
+## Step 4: Verification
 4. The digital signature is verified
 
-5. The output is the decrypted data and address and name of the signer  
-
+## Step 5: Output
 The output will be the data and the details of the signer.
 ```
 {
