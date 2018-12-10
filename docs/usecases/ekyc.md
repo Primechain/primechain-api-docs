@@ -22,7 +22,7 @@ For example:
     "data_category": "KYC",
     "entity_category": "INDIVIDUAL",
     "name": "Gopal Kumar Santoshi",
-    "name_father": "INDIVIDUAL",
+    "name_father": "Ram Kumar Santoshi",
     "name_wife": "Ekta Santoshi",
     "email": "gopal@example.com",
     "mobile": "+91-1234567890",
