@@ -138,27 +138,61 @@ The output will be the data and the details of the signer.
 ```
 
 ## 4. Sign, encrypt and store a file in the blockchain
-To encrypt and upload a file, use `post /api/v1/encrypt_sign_store_file` and pass the blockchain address (using which the file will be signed) and the file.
+
+To encrypt a file and store the encrypted file in the blockchain, use `post /api/v1/encrypt_sign_store_file` and pass 2 parameters: 
+1. the data 
+2. the primechain address of the signing entity
+
 ```
 {
-  "primechain_address":"17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
+  "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
   "file":"<your file>"
 }
 ```
-The output contains:
-1. The transaction id of the transaction in which the data was stored on the blockchain
-2. The digital signature
+
+This is what happens:   
+
+### Step 1: Hash computation
+
+The SHA-512 hash of the file is computed.
+
+### Step 2: Signing
+The hash is signed using the private key of the signing entity (using ECDSA).
+
+### Step 3: Storing the signature
+The following are published to the `FILE_SIGNATURE_MASTERLIST` stream:
+1. the digital signature
+2. the hash
+3. the primechain address of the signing entity
+
+### Step 4: Encrypting the file
+The file is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
+1. the encrypted version of the file
+2. the AES password
+3. the Initialization Vector (IV)   
+4. the Authentication Tag (tag)
+
+### Step 5: Storing the encrypted file
+The encrypted file and the tag are published to the `FILE_MASTERLIST` stream
+
+### Step 6: Output 
+The following is the output:
+1. the id of the transaction in which the encrypted file and tag were published to the FILE_MASTERLIST stream
+2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the FILE_SIGNATURE_MASTERLIST stream
 3. The AES password
-4. The AES initializaion vector (iv)
+4. The Initialization Vector (IV)
+
 ```
 {
-    "status": 200,
-    "response": {
-        "transaction_id": "8c4419f7e808800b83ec6ac9090813dbeec59c2deb837993a47089ce45acf6b8",
-        "signature": "IJFvhJtyv03/kUICkceq4orcAFPzMJKmfuK80pSesdRxXPPF/SQnR234P5I8kY/GslH4bRgFE9mwkm5HhCPTfZk=",
-        "password": "pK4mTkZ5Mb6YRlwFmkUnpOO4DA8oY6JV",
-        "iv": "T24LZEuWHyrz"
-    }
+"status": 200,
+"response": 
+  {
+    "tx_id_enc_file":"a8441a8e8fe52c6f84941fd1f08f774ecbf0dc9edf9fd18e9f9d20f1d2945940".
+    "tx_id_signature": "8f15a1b3bc4cbeeae89ea28e77982ac7baa04c45870d9d40086b799ad795487f",
+    "signature": "H523zhPwR1gdPn2R0/JlfTJLWB5HaII96vJcDx4qy8f2StF1AE6Qfft8lqE2IoDd2czj5cW8i9ZJLaWXu7KkEyE=",
+    "aes_password": "5M1qnsYeRmSvlwNtZ8oJiHC0g9ucVrgc",
+    "aes_iv": "zNc59qnYapAw"
+  }
 }
 ```
 
