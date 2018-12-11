@@ -89,11 +89,14 @@ The output will be something like this:
 * Verified users are those that are listed in VERIFIED_USER_MASTERLIST stream. They are given write permissions as described [here](https://github.com/Primechain/primechain-api/blob/master/README.md#28-verified-users).
 
 
-
 # GREAT   
+* This is an open stream.
+
+* Signatures created using [`create_save_signature`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#3-sign-and-store-signature-in-great) are stored in GREAT (Global Repository of E-signatures And Timestamps) data stream.
+
 
 # OFFER_DETAIL_STREAM   
-This is an open stream.
+* This is an open stream.
 
 Following data of offers built using [`create_public_offer`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#1-create-a-public-offer) are stored here: 
 
