@@ -208,16 +208,51 @@ Use  `post /api/v1/assets_held_by_entity` to get details of Assets held by speci
 You can also enter multiple addresses:
 ```
 {
-   "primechain_address":
-  		[
-  			"1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
-  			"16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd"
-  		]
+  "primechain_address":
+  	[
+  		"1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  		"16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd"
+  	]
 }
 ```
 Output
 ```
-aaa
+{
+"status": 200,
+"response": {
+"1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2": [
+  {
+"name": "AUTH-tokens-series-A",
+"assetref": "324-267-25303",
+"qty": 45350
+},
+  {
+"name": "GOLD-tokens-series-A",
+"assetref": "301-267-14695",
+"qty": 19460
+}
+],
+"16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd": [
+  {
+"name": "GOLD-tokens-series-A",
+"assetref": "301-267-14695",
+"qty": 40
+}
+],
+"total": [
+  {
+"name": "AUTH-tokens-series-A",
+"assetref": "324-267-25303",
+"qty": 45350
+},
+  {
+"name": "GOLD-tokens-series-A",
+"assetref": "301-267-14695",
+"qty": 19500
+}
+],
+}
+}
 ```
 
 ## 6. Transfer asset
