@@ -4,8 +4,6 @@ This is the list of all the data streams created automatically by Primechain API
 
 [ASSET_DATA_MASTERLIST](#asset_data_masterlist)     
 [AUTH_USERS_MASTERLIST](#auth_users_masterlist)   
-   
-   
 [DATA_MASTERLIST](#data_masterlist)     
 [DATA_SIGNATURE_MASTERLIST](#data_signature_masterlist)    
 [FILE_MASTERLIST](#file_masterlist)     
@@ -14,12 +12,8 @@ This is the list of all the data streams created automatically by Primechain API
 [OFFER_DETAIL_STREAM](#offer_detail_stream)   
 [ONBOARD_USERLIST](#onboard_userlist)      
 [RSA_MASTERLIST](#rsa_masterlist)   
-
 [VERIFIED_USER_MASTERLIST](#verified_user_masterlist)   
    
-
-
-
 
 # ASSET_DATA_MASTERLIST
 This is a closed stream.
