@@ -226,7 +226,7 @@ The encrypted file is decrypted.
 The digital signature is verified
 
 ### Step 5: Output
-The output will be the data and the details of the signer.
+The output will be the file and the details of the signer.
 ```
 aaa
 ```
