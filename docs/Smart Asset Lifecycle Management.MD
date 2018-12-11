@@ -173,103 +173,68 @@ Use  `post /api/v1/assets_held_by_entity` to get details of Assets held by speci
 ```
 ```
 {
-"status": 200,
-"response": {
-"1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2": [
-  {
-"name": "AUTH-tokens-series-A",
-"assetref": "324-267-25303",
-"qty": 45350
-},
-  {
-"name": "GOLD-tokens-series-A",
-"assetref": "301-267-14695",
-"qty": 19500
-}
-],
-"total": [
-  {
-"name": "AUTH-tokens-series-A",
-"assetref": "324-267-25303",
-"qty": 45350
-},
-  {
-"name": "GOLD-tokens-series-A",
-"assetref": "301-267-14695",
-"qty": 19500
-}
-],
-}
+  "status": 200,
+  "response": 
+    {
+      "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2": 
+        [
+          {
+            "name": "AUTH-tokens-series-A",
+            "assetref": "324-267-25303",
+            "qty": 45350
+           },
+          {
+            "name": "GOLD-tokens-series-A",
+            "assetref": "301-267-14695",
+            "qty": 19500
+          }
+        ],
+  "total": 
+    [
+      {
+        "name": "AUTH-tokens-series-A",
+        "assetref": "324-267-25303",
+        "qty": 45350
+      },
+      {
+        "name": "GOLD-tokens-series-A",
+        "assetref": "301-267-14695",
+        "qty": 19500
+       }
+    ],
+  }
 }
 ```
 You can also enter multiple addresses:
 ```
 {
-   "address":
+   "primechain_address":
   		[
-  			"1AdBvHHyknKcvUsYbQ9pPXMS2wd8oD9coY3gT7",
-  			"1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk"
+  			"1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  			"16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd"
   		]
 }
 ```
+Output
 ```
-{
-"status": 200,
-"response": {
-"1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk": [
-  {
-"name": "AUTH-tokens-series-A",
-"assetref": "622-267-44590",
-"qty": 17430
-},
-  {
-"name": "AUTH-tokens-series-B",
-"assetref": "633-267-11748",
-"qty": 17430
-},
-  {
-"name": "AUTH-tokens",
-"assetref": "595-266-8935",
-"qty": 17430
-}
-],
-"1AdBvHHyknKcvUsYbQ9pPXMS2wd8oD9coY3gT7": [],
-"total": [
-  {
-"name": "AUTH-tokens-series-A",
-"assetref": "622-267-44590",
-"qty": 17430
-},
-  {
-"name": "AUTH-tokens-series-B",
-"assetref": "633-267-11748",
-"qty": 17430
-},
-  {
-"name": "AUTH-tokens",
-"assetref": "595-266-8935",
-"qty": 17430
-}
-],
-}
-}
+aaa
 ```
 
 ## 6. Transfer asset
 To send assets from one entity to another use `post /api/v1/send_asset_from` and pass 4 parameters - `from_address`, `to_address`, `asset_name`, `quantity` and `details`
 ```
 {
-  "from_address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
-  "to_address": "17eC7qETgYmdHwwT8b2CKBdbT6MxTosGYVYjHU",
-  "asset_name": "622-267-44590",
-  "quantity": 4,
+  "from_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  "to_address": "16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd",
+  "asset_name": "GOLD-tokens-series-A",
+  "quantity": 40,
   "details": "These are the details of this transfer"
 }
 ```
 ```
 {
-"status": 200,
-"transaction_id": "925b18653decdc04544e0f570bbdce7eabf8945dc360f6b7f42ed2a5a02a1185"
+  "status": 200,
+  "tx_id": "43dbacfa1af8a27af648de957d7d83b74c675027c8a44b650eb69a8f1cc2406c"
 }
 ```
 The output is the txid of the transaction in which the asset was transferred.
