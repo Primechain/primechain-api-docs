@@ -14,7 +14,7 @@ This is the list of all the data streams created automatically by Primechain API
 [OFFER_DETAILS_STREAM](#offer_details_stream)   
 [ONBOARD_USERLIST](#onboard_userlist)      
 [RSA_MASTERLIST](#rsa_masterlist)   
-[SIGNATURE_MASTERLIST](#signature_masterlist)      
+
 [VERIFIED_USER_MASTERLIST](#verified_user_masterlist)   
    
 
@@ -97,9 +97,7 @@ The output will be something like this:
 # ONBOARD_USERLIST
 
 # RSA_MASTERLIST
-
-
-# SIGNATURE_MASTERLIST      
+    
 
 # VERIFIED_USER_MASTERLIST   
 This is a closed stream.
