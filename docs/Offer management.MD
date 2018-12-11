@@ -37,11 +37,10 @@ The output is the id and vout of the transaction in which the offer data is stor
 ```
 {
 "status": 200,
-"response": 
-  {
-    "offer_txid": "65b6293b60cac5bec78e346486724f150103e55c9267b9ec86405590224fbe58",
-    "offer_vout": 0
-  }
+"response": {
+"offer_txid": "d8e32370ecd43ca8c22191b7a206db9b91144d040f0d20492df02cb544e0e4f8",
+"offer_vout": 0
+}
 }
 ```
 
