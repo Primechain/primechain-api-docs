@@ -4,10 +4,11 @@
 [2. Get list of open public offers](#2-get-list-of-open-public-offers)   
 
 [3. Read an offer](#3-read-an-offer)   
+[4. Accept an offer](#4-accept-an-offer)   
 
 [3. Create a targetted offer](#2-create-a-targetted-offer)   
 
-[4. Accept an offer](#4-accept-an-offer)   
+
 [5. Reject an offer](#5-reject-an-offer)   
 [6. Cancel an offer](#6-cancel-an-offer)   
 
@@ -133,6 +134,23 @@ To interpret an offer, use `post /api/v1/read_offer` and pass the hex blob:
 }
 ```
 
+## 4. Accept an offer
+To accept an offer, use `post /api/v1/accept_offer` and pass 2 parameters - 
+1. `primechain_address` of the acceptor   
+2. `offer_blob` relating to the offer   
+```
+{
+  "primechain_address": "1CbfDWDYN8A7i4zZisEzfkLwRcQUem3PaUin9p",
+  "offer_blob": "0100000001f8e4e044b52cf02d49200d0f044d14919bdb06a2b79121c2a83cd4ec7023e3d800000000694630430220024cd963ec869126c15611ae168f39f4bfdcd507a8d7e3738d0792e5f9ae09b6021f236f20aca9966fde2fd7ec9c0046585d42901cff7d7e3676729a4e0dc69dbd832103ab7548d8c3148110f595453ac491dfe45d271c92b88d0cfdd26b41eaa7bfbaa0ffffffff0100000000000000003776a914270c3ebee9d184df26275424af915236f51afddf88ac1c73706b71e77f0bebe4bd86bf4b6a225bb41c62d704000000000000007500000000"
+}
+```
+```
+{
+"status": 200,
+"response": "932b8b016c5465981c7d68dc1ec4d6ce2157416c821a05699fbb1a4796b03a47"
+}
+```
+
 ## 2. Create a targetted offer
 To create an offer, use `post /api/v1/create_targeted_offer` and pass these parameters:
 * address of the entity making the offer - `from_address`   
@@ -166,22 +184,7 @@ The output is the `transaction id` and the `offer blob` of the offer details.
 ```
 
 
-## 4. Accept an offer
-To accept an offer, use `post /api/v1/accept_offer` and pass 2 parameters - 
-1. `primechain_address` of the acceptor   
-2. `offer_blob` relating to the offer   
-```
-{
-  "primechain_address": "16XxJEpKQCmxEhXs56Wsb2WaTghVzKixYTR92k",
-  "offer_blob": "01000000019e57279825b7413826a879a437dc51572c89fcb1462e1f86927ddc8fb0485ad4000000006a4730440220282026f991b7f46dde67e4ae72b4e838e955cc538cbcbcc2cdf3f44ad20c04f10220777e5ed8178b1c542a4a044a9d3446d304f5df54ebd5f98c416d3cbd80adb79a832102be496ef6b719a8bf9f472fa778e490fc4dcbc333d133634a323c140a975244bdffffffff0100000000000000003776a914ceab8b6fd5876940500dc9e6e9e402b0424c34c888ac1c73706b712ca4a239e8175078e715648b47a58b4328000000000000007500000000"
-}
-```
-```
-{
-"status": 200,
-"response": "030f9de4f6e753de3e29edf6ba12330b9364716013292af0203c3fcaa8306b73"
-}
-```
+
 
 ## 5. Reject an offer
 To reject an offer, use `post /api/v1/reject_offer` and pass the `txid` of the offer as a parameter.
