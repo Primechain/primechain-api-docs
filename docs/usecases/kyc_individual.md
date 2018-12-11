@@ -15,8 +15,8 @@ The blockchain nodes can be operated by Banks, Financial institutions and Regula
 
 1. [Sign, encrypt and store KYC data in the blockchain](#1-sign-encrypt-and-store-kyc-data-in-the-blockchain)
 2. [Decrypt, verify and retrieve KYC data from the blockchain](#2-decrypt-verify-and-retrieve-kyc-data-from-the-blockchain)
-3. [Sign, encrypt and store a file in the blockchain](#3-sign,-encrypt-and-store-a-file-in-the-blockchain)
-4. [Decrypt, verify and retrieve a file from the blockchain](#4-decrypt,-verify-and-retrieve-a-file-from-the-blockchain)
+3. [Sign, encrypt and store a file in the blockchain](#3-sign-encrypt-and-store-a-file-in-the-blockchain)
+4. [Decrypt, verify and retrieve a file from the blockchain](#4-decrypt-verify-and-retrieve-a-file-from-the-blockchain)
 
 ## 1. Sign, encrypt and store KYC data in the blockchain
 
