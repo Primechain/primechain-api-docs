@@ -7,7 +7,6 @@ This is the list of all the data streams created automatically by Primechain API
 [BLACKLIST_MASTERLIST](#blacklist_masterlist)    
 [BLOB_STREAM](#blob_stream)    
 [DATA_MASTERLIST](#data_masterlist)     
-[CODE_MASTERLIST](#code-masterlist)   
 [DATA_SIGNATURE_MASTERLIST](#data_signature_masterlist)    
 [FILE_MASTERLIST](#file_masterlist)     
 [FILE_SIGNATURE_MASTERLIST](#file_signature_masterlist)    
@@ -20,7 +19,13 @@ This is the list of all the data streams created automatically by Primechain API
 [WHITELIST_MASTERLIST](#whitelist_masterlist)   
 
 
+
+
 # ASSET_DATA_MASTERLIST
+This is a closed stream.
+
+Asset creators write to this stream when using [create_new_asset_from](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset)
+
 
 # AUTH_USERS_MASTERLIST
 Data is entered into this stream when the `onboard_user` end-point is used. The data stored is:
@@ -54,7 +59,6 @@ The output will be something like this:
 
 # BLOB_STREAM   
 
-# CODE_MASTERLIST   
 
 # DATA_MASTERLIST   
 This is a closed stream.
