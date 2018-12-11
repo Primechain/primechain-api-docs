@@ -27,17 +27,18 @@ To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 
 ```
 {
-  "from_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
-  "to_address": "17Sonz7gM3ha6PvqZhRwKT7PUjA2H4TuKuRqF5",
+  "from_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  "to_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
   "asset": 
   	{
-    	"name": "AUTH-tokens-series-K",
-    	"open": true
+    	"name": "GOLD-tokens-series-A",
+    	"open": false
   	},
   "unit": 1,
-  "quantity": 17430,
-  "details": "These are the details of this asset." 
+  "quantity": 19500,
+  "details": "Backed by gold jewellery held in Lot A at Zimblia office" 
 }
+
 ```
 ***Output is:***
 * the txid of the transaction in which the asset was created.
@@ -46,11 +47,11 @@ To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 ```
 {
   "status": 200,
-  "transaction_id": "a922dce10c6f3690c11ab2526b24d59aee643fd248501c37be9a38d9bacd058a",
-  "asset_ref": "836-266-28088",
+  "tx_id": "011e3b965d9156f980980f0dad976a00978ecef4db8a081f166649dd4580a0e7",
+  "asset_ref": "301-267-14695",
   "description": 
     {
-      "details": "These are the details of this asset."
+      "details": "Backed by gold jewellery held in Lot A at Zimblia office"
     }
 }
 ```
