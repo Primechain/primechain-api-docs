@@ -64,7 +64,7 @@ To create additional units of an open asset, use `post /api/v1/asset_create_more
 * `from_address` is the entity that creates the asset. It must have `send` permission.
 * `to_address` is the entity that receives the newly created asset. It must have `receive` permission.
 * The `from_address` and `to_address` can be the same.
-* `asset_name` refers to the name of the asset.
+* `asset_name` refers to the name or asset_ref of the asset.
 * `quantity` refers to the additional quantity of the asset being issued.
 ```
 {
