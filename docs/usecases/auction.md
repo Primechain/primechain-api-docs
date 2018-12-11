@@ -18,15 +18,10 @@ The relevant API end points are:
 
 4. Revoke Permission - [`revoke_permissions`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#6-revoke-permissions-to-an-entity)
 
- - [`aaaa`]
-  - [`aaaa`]
-   - [`aaaa`]
-    - [`aaaa`]
-
 ## 2. Tokenizing the asset to be auctioned
 The relevant API end point is [`create_new_asset_from`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset)
 
-## 2. The auction process
+## 3. The auction process
 
 The relevant API end points are:
 
