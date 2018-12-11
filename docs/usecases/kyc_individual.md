@@ -61,10 +61,7 @@ Save this output in your private database along with the following:
 * Description of the record
 
 ## 2. Decrypt, verify and retrieve KYC data from the blockchain
-To decrypt, verify and retrieve KYC data in the blockchain, use `post /api/v1/decrypt_download_data`.
-
-For details, see: 
-[https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-decrypt-verify-and-retrieve-data-from-the-blockchain](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-decrypt-verify-and-retrieve-data-from-the-blockchain)
+To decrypt, verify and retrieve KYC data in the blockchain, use [`decrypt_download_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-decrypt-verify-and-retrieve-data-from-the-blockchain)
 
 Sample input:
 ```
