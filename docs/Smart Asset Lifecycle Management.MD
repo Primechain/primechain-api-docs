@@ -92,48 +92,53 @@ To get details of a specific asset, use `post /api/v1/asset_details` and pass th
 Output:
 ```
 {
-"status": 200,
-"response": [
-  {
-"name": "AUTH-tokens-series-A",
-"issuetxid": "d7621cb45b226a4bbf86bde4eb0b7fe700ebfc000f8bb12450362746777dbe44",
-"assetref": "324-267-25303",
-"multiple": 1,
-"units": 1,
-"open": true,
-"details": {
-"details": "These are AUTH tokens"
-},
-"issueqty": 45350,
-"issueraw": 45350,
-"subscribed": true,
-"synchronized": true,
-"transactions": 2,
-"confirmed": 2,
-"issues": [
-  {
-"txid": "d7621cb45b226a4bbf86bde4eb0b7fe700ebfc000f8bb12450362746777dbe44",
-"qty": 45000,
-"raw": 45000,
-"details": {
-"details": "These are AUTH tokens"
-},
-"issuers": [
-  "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
-],
-},
-  {
-"txid": "0ac10e7cc5d1a3bdd959f74034fabaae7e40ec5e4515aba4c57002e6e50b9736",
-"qty": 350,
-"raw": 350,
-"details": {},
-"issuers": [
-  "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
-],
-}
-],
-}
-],
+  "status": 200,
+  "response": 
+  [
+    {
+      "name": "AUTH-tokens-series-A",
+      "issuetxid": "d7621cb45b226a4bbf86bde4eb0b7fe700ebfc000f8bb12450362746777dbe44",
+      "assetref": "324-267-25303",
+      "multiple": 1,
+      "units": 1,
+      "open": true,
+      "details": {
+      "details": "These are AUTH tokens"
+    },
+      "issueqty": 45350,
+      "issueraw": 45350,
+      "subscribed": true,
+      "synchronized": true,
+      "transactions": 2,
+      "confirmed": 2,
+      "issues": 
+        [
+          {
+            "txid": "d7621cb45b226a4bbf86bde4eb0b7fe700ebfc000f8bb12450362746777dbe44",
+            "qty": 45000,
+            "raw": 45000,
+            "details": 
+              {
+                "details": "These are AUTH tokens"
+              },
+            "issuers": 
+              [
+                "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
+              ],
+            },
+          {
+            "txid": "0ac10e7cc5d1a3bdd959f74034fabaae7e40ec5e4515aba4c57002e6e50b9736",
+            "qty": 350,
+            "raw": 350,
+            "details": {},
+            "issuers": 
+              [
+                "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
+              ],
+          }
+        ],
+    }
+  ],
 }
 ```
 
