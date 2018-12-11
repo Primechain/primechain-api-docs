@@ -11,7 +11,7 @@ This is the list of all the data streams created automatically by Primechain API
 [FILE_MASTERLIST](#file_masterlist)     
 [FILE_SIGNATURE_MASTERLIST](#file_signature_masterlist)    
 [GREAT](#great)   
-[OFFER_DETAILS_STREAM](#offer_details_stream)   
+[OFFER_DETAIL_STREAM](#offer_detail_stream)   
 [ONBOARD_USERLIST](#onboard_userlist)      
 [RSA_MASTERLIST](#rsa_masterlist)   
 
@@ -92,7 +92,17 @@ The output will be something like this:
 
 # GREAT   
 
-# OFFER_DETAILS_STREAM   
+# OFFER_DETAIL_STREAM   
+This is an open stream.
+
+Following data of offers built using [`create_public_offer`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#1-create-a-public-offer) are stored here: 
+
+1. primechain_address of the offer creator   
+2. name of asset asked for   
+3. name of asset offerred   
+4. quantity of asset asked for   
+5. quantity of asset offerred   
+6. offer hex blob   
 
 # ONBOARD_USERLIST
 
