@@ -6,6 +6,10 @@ Primechain API can be used to create a transparent, secure and efficient auction
 3. Regulators
 4. Bidders
 
+[1. Onboarding bidders](#1-onboarding-bidders)   
+[2. Tokenizing the asset to be auctioned](#2-tokenizing-the-asset-to-be-auctioned)   
+[3. The auction process](#3-the-auction-process)
+
 ## 1. Onboarding bidders
 
 The relevant API end points are:
