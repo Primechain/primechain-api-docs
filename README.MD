@@ -40,6 +40,9 @@ https://github.com/Primechain/primechain-api-docs/blob/master/Documentation.md
 ## 3. Sandbox
 Email us on info@primechain.in for details on accessing the Primechain-API sandbox.
 
+To view a sample nodeJS application built on Primechain-API at:
+http://169.63.131.117:2206/user/dashboard
+
 ## 4. Availability
 Primechain-API is available in 2 modes:
 * a node on Primechain-MONEY, a multi-framework permissioned blockchain available only to BankChain members. The API runs on your infrastructure (on-cloud / on-premise).
