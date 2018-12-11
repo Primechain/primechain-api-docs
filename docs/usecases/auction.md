@@ -30,9 +30,9 @@ The relevant API end points are:
 The relevant API end point is [`create_new_asset_from`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset)
 
 ## 4. Earnest Money Deposit
+The relevant API end points for tokenizing fiat currency for Earnest Money Deposit [EMD] are [`create_new_asset_from`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset) and [`asset_create_more_from`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#2-create-additional-units-of-an-open-asset)
 
 ## 5. The auction process
-
 The relevant API end points are:
 
 1. Create targeted offer - [`create_targeted_offer`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#6-create-a-targeted-offer)
