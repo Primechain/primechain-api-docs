@@ -14,15 +14,15 @@ To create an offer, use `post /api/v1/create_public_offer` and pass these parame
 * name and quantity of asset offerred in return - `offer_asset`
 ```
 {
-  "primechain_address": "1Uw5kTMTx96YAoQ81BrnuDezcdFhVmAWvCMDTN",
+  "primechain_address": "16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd",
   "ask_asset": 
-    {
-      "Uranium-tokens-series-A": 40
-    },
+   {
+     "AUTH-tokens-series-A": 4
+   },
   "offer_asset": 
-    {
-      "Platinum-tokens-series-A": 10
-    }
+  {
+    "GOLD-tokens-series-A": 2
+  }
 }
 ```
 
@@ -32,8 +32,8 @@ The output is the `transaction id` and the `offer_blob` of the offer details.
   "status": 200,
   "response": 
     {
-      "offer_blob": "0100000001cc3c30cf5a5e2f891fb462f8796df599d9d815de67367b37a4aa5d3d27171e60000000006b483045022100f46fc5bed8b3dee978ad09e40616442279d272ac05abf2bea720cc680e5e8d0e0220659460108564bbdd993b60c8ca822637ac307c40bbaa06a78a7efd402a21e812832102be496ef6b719a8bf9f472fa778e490fc4dcbc333d133634a323c140a975244bdffffffff0100000000000000003776a914ceab8b6fd5876940500dc9e6e9e402b0424c34c888ac1c73706b712ca4a239e8175078e715648b47a58b4328000000000000007500000000",
-      "offer_txid": "601e17273d5daaa4377b3667de15d8d999f56d79f862b41f892f5e5acf303ccc",
+      "offer_blob": "010000000194d89dff126eac4bb217fa612cf50f98b943f3dcc5d1df4ac5057f2a2cdb098d000000006a47304402202667ff9be3e8454c62edd0a179c55a37fdcf9a54ad55cb82b43e0a5bf47579ef022015f0bec601426876bc4a59ff485bbda429bdfa1f7849146c8ba50b2bf752d481832103ab7548d8c3148110f595453ac491dfe45d271c92b88d0cfdd26b41eaa7bfbaa0ffffffff0100000000000000003776a914270c3ebee9d184df26275424af915236f51afddf88ac1c73706b71e77f0bebe4bd86bf4b6a225bb41c62d704000000000000007500000000",
+      "offer_txid": "8d09db2c2a7f05c54adfd1c5dcf343b9980ff52c61fa17b24bac6e12ff9dd894",
       "offer_vout": 0
     }
 }
