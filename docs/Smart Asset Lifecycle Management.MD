@@ -272,7 +272,7 @@ To send assets from one entity to another use `post /api/v1/send_asset_from` and
   "tx_id": "43dbacfa1af8a27af648de957d7d83b74c675027c8a44b650eb69a8f1cc2406c"
 }
 ```
-The output is the txid of the transaction in which the asset was transferred.
+The output is the id of the transaction in which the asset was transferred.
 
 ## 7. Transactions by a specified entity
 
@@ -280,7 +280,7 @@ To list information about the transactions related to an address in this node’
 
 ```
 {
-  "primechain_address": "17Sonz7gM3ha6PvqZhRwKT7PUjA2H4TuKuRqF5"
+  "primechain_address": "16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd"
 }
 ```
 
