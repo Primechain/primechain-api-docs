@@ -3,12 +3,9 @@
 1. [Sign, encrypt and store KYC data in the blockchain](#1-sign-encrypt-and-store-kyc-data-in-the-blockchain)
 2. [Decrypt, verify and retrieve KYC data from the blockchain](#2-decrypt-verify-and-retrieve-kyc-data-from-the-blockchain)
 
-# 1. Sign, encrypt and store KYC data in the blockchain
+## 1. Sign, encrypt and store KYC data in the blockchain
 
-To sign, encrypt and store KYC data in the blockchain, use `post /api/v1/encrypt_sign_store_data`.
-
-For details, see: 
-[https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain)
+To sign, encrypt and store KYC data in the blockchain, use [`encrypt_sign_store_data`][https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain)
 
 Sample input:
 ```
@@ -50,7 +47,7 @@ Save this output in your private database along with the following:
 * Price (optional)
 * Description of the record
 
-# 2. Decrypt, verify and retrieve KYC data from the blockchain
+## 2. Decrypt, verify and retrieve KYC data from the blockchain
 To decrypt, verify and retrieve KYC data in the blockchain, use `post /api/v1/decrypt_download_data`.
 
 For details, see: 
