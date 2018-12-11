@@ -197,15 +197,54 @@ The following is the output:
 ```
 
 ## 5. Decrypt, verify and retrieve a file from the blockchain
-To decrypt and download a file, use `post /api/v1/decrypt_download_file` and pass these values:   
-1 The transaction id of the transaction in which the file was stored on the blockchain   
-2. The AES password   
-3. The AES initializaion vector (iv)   
+To retrieve a file from the blockchain and decrypt it, use `post /api/v1/decrypt_download_file` and pass these values:
+1. the id of the transaction in which the encrypted file and tag were published to the FILE_MASTERLIST stream
+2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the FILE_SIGNSTURE_MASTERLIST stream
+3. The AES password
+4. The Initialization Vector (IV)
+
 ```
 {
-  "txid":"8c4419f7e808800b83ec6ac9090813dbeec59c2deb837993a47089ce45acf6b8",
-  "password":"pK4mTkZ5Mb6YRlwFmkUnpOO4DA8oY6JV",
-   "iv":"T24LZEuWHyrz"
-}
+    "tx_id_enc_file": "a8441a8e8fe52c6f84941fd1f08f774ecbf0dc9edf9fd18e9f9d20f1d2945940",
+    "tx_id_signature": "8f15a1b3bc4cbeeae89ea28e77982ac7baa04c45870d9d40086b799ad795487f",
+    "aes_password": "5M1qnsYeRmSvlwNtZ8oJiHC0g9ucVrgc",
+    "aes_iv": "zNc59qnYapAw"
+ }
 ```
-The file will get downloaded.
+This is what happens:   
+
+### Step 1: Retrieval of signing data 
+The digital signature, hash and the primechain address of the signing entity are retrieved from the FILE_SIGNSTURE_MASTERLIST stream.
+
+### Step 2: Retrieval of encrypted file 
+The encrypted file and tag are retrieved from the FILE_MASTERLIST stream.
+
+### Step 3: Decryption
+The encrypted file is decrypted.
+
+### Step 4: Verification
+The digital signature is verified
+
+### Step 5: Output
+The output will be the data and the details of the signer.
+```
+{
+"status": 200,
+"response": 
+  {
+    "data": 
+      {
+        "name": "Scarlett Johansson",
+        "email": "scarlett@example.com",
+        "cell": ":1234567890"
+       },
+  "signer_detail": 
+      {
+        "name": "Noodle Bank Official Signer",
+        "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
+       },
+   "signature_status": true
+  }
+}
+
+```
