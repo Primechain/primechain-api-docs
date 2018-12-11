@@ -15,6 +15,8 @@ The blockchain nodes can be operated by Banks, Financial institutions and Regula
 
 1. [Sign, encrypt and store KYC data in the blockchain](#1-sign-encrypt-and-store-kyc-data-in-the-blockchain)
 2. [Decrypt, verify and retrieve KYC data from the blockchain](#2-decrypt-verify-and-retrieve-kyc-data-from-the-blockchain)
+3. [Sign, encrypt and store a file in the blockchain](#3-sign,-encrypt-and-store-a-file-in-the-blockchain)
+4. [Decrypt, verify and retrieve a file from the blockchain](#4-decrypt,-verify-and-retrieve-a-file-from-the-blockchain)
 
 ## 1. Sign, encrypt and store KYC data in the blockchain
 
@@ -107,5 +109,5 @@ Sample output:
 
 To sign, encrypt and store a file in the blockchain, use [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
 
-## 3. Decrypt, verify and retrieve a file from the blockchain
+## 4. Decrypt, verify and retrieve a file from the blockchain
 To decrypt, verify and retrieve a file from the blockchain, use [`decrypt_download_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#5-decrypt-verify-and-retrieve-a-file-from-the-blockchain)
