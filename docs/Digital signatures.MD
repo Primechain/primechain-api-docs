@@ -49,11 +49,11 @@ Note: The signature can be verified by any node.
 
 ## 3. Sign and store signature 
 
-To sign data and store the signature in the `SIGNATURE_MASTERLIST` data stream, use `post /api/v1/create_save_signature`.
+To sign data and store the signature in the `GREAT` (Global Repository of E-signatures And Timestamps) data stream, use `post /api/v1/create_save_signature`.
 ```
 {
-  "primechain_address": "1aT3P8hqCK21x3EKyFKLzqLYdAnAqBALx3Gri3",
-  "data": "c14fa6ea73269522b3362c637e9d90de39f58ac7696536019b7a3f2e0741e606"
+  "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  "data": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
 }
 ```
 The output will be the signature and the transaction id through which the signature is stored in the `GREAT` data stream:
@@ -62,8 +62,8 @@ The output will be the signature and the transaction id through which the signat
 "status": 200,
 "response": 
   {
-    "tx_id": "c2ac22b1603ace9d86a760f48c893906515edb2ae34b14770f73a5cd99177e9b",
-    "signature": "IJHOhoHoNaWtszoPnzp6VZnfQS8oa3UMv5QhnQ7SRLLpZ2nqDCcZpxXcLFHCYZP7snMsGRW4dOyl7AYzb/17QOI="
+    "tx_id": "7d861030114ab5fb5b05c3307be04f9408c5e5251daade36996be4afba469bb3",
+    "signature": "H/zH4VWkOv9/Awu7OUEK43Fq1dtBcBxnrzmwOdytpsr0Grw+lPxWgbgh3Dcr4lhwgVOBb7vAoChjUvqxlqnpDAI="
   }
 }
 ```
