@@ -102,3 +102,10 @@ Sample output:
   }
 }
 ```
+
+## 3. Sign, encrypt and store a file in the blockchain
+
+To sign, encrypt and store a file in the blockchain, use [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
+
+## 3. Decrypt, verify and retrieve a file from the blockchain
+To decrypt, verify and retrieve a file from the blockchain, use [`decrypt_download_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#5-decrypt-verify-and-retrieve-a-file-from-the-blockchain)
