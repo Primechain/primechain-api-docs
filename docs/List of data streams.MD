@@ -4,8 +4,8 @@ This is the list of all the data streams created automatically by Primechain API
 
 [ASSET_DATA_MASTERLIST](#asset_data_masterlist)     
 [AUTH_USERS_MASTERLIST](#auth_users_masterlist)   
-[BLACKLIST_MASTERLIST](#blacklist_masterlist)    
-[BLOB_STREAM](#blob_stream)    
+   
+   
 [DATA_MASTERLIST](#data_masterlist)     
 [DATA_SIGNATURE_MASTERLIST](#data_signature_masterlist)    
 [FILE_MASTERLIST](#file_masterlist)     
@@ -16,7 +16,7 @@ This is the list of all the data streams created automatically by Primechain API
 [RSA_MASTERLIST](#rsa_masterlist)   
 [SIGNATURE_MASTERLIST](#signature_masterlist)      
 [VERIFIED_USER_MASTERLIST](#verified_user_masterlist)   
-[WHITELIST_MASTERLIST](#whitelist_masterlist)   
+   
 
 
 
@@ -55,20 +55,13 @@ The output will be something like this:
 }
 ```
 
-# BLACKLIST_MASTERLIST
-
-# BLOB_STREAM   
-
-
+ 
 # DATA_MASTERLIST   
 * This is a closed stream.
 
 * Verified addresses write to DATA_MASTERLIST when using [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
 
 * Verified users are those that are listed in VERIFIED_USER_MASTERLIST stream. They are given write permissions as described [here](https://github.com/Primechain/primechain-api/blob/master/README.md#28-verified-users).
-
-
-
 
 
 # DATA_SIGNATURE_MASTERLIST   
@@ -115,5 +108,5 @@ Seed node writes to it when a new verified address is requested by a member.
 
 Verified addresses are given write permissions to  DATA_SIGNATURE_MASTERLIST and DATA_MASTERLIST streams so that they can use [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
 
-# WHITELIST_MASTERLIST   
+ 
 
