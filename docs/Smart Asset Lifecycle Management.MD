@@ -147,29 +147,20 @@ To get the name, asset ref and balance of all assets, use `get /api/v1/asset_bal
 
 ```
 {
-"status": 200,
-"asset_balance": [
-  {
-"name": "Gold",
-"assetref": "277-267-37184",
-"qty": 13000
-},
-  {
-"name": "AUTH-tokens-series-A",
-"assetref": "622-267-44590",
-"qty": 17430
-},
-  {
-"name": "Silver",
-"assetref": "299-267-41329",
-"qty": 10000000000000
-},
-  {
-"name": "AUTH-tokens",
-"assetref": "595-266-8935",
-"qty": 17430
-}
-],
+  "status": 200,
+  "asset_balance": 
+    [
+      {
+        "name": "AUTH-tokens-series-A",
+        "assetref": "324-267-25303",
+        "qty": 45350
+       },
+       {
+        "name": "GOLD-tokens-series-A",
+        "assetref": "301-267-14695",
+        "qty": 19500
+        }
+    ],
 }
 ```
 
@@ -177,45 +168,35 @@ To get the name, asset ref and balance of all assets, use `get /api/v1/asset_bal
 Use  `post /api/v1/assets_held_by_entity` to get details of Assets held by specified entities
 ```
 {
-  "address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk"
+  "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
 }
 ```
 ```
 {
 "status": 200,
 "response": {
-"1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk": [
+"1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2": [
   {
 "name": "AUTH-tokens-series-A",
-"assetref": "622-267-44590",
-"qty": 17430
+"assetref": "324-267-25303",
+"qty": 45350
 },
   {
-"name": "AUTH-tokens-series-B",
-"assetref": "633-267-11748",
-"qty": 17430
-},
-  {
-"name": "AUTH-tokens",
-"assetref": "595-266-8935",
-"qty": 17430
+"name": "GOLD-tokens-series-A",
+"assetref": "301-267-14695",
+"qty": 19500
 }
 ],
 "total": [
   {
 "name": "AUTH-tokens-series-A",
-"assetref": "622-267-44590",
-"qty": 17430
+"assetref": "324-267-25303",
+"qty": 45350
 },
   {
-"name": "AUTH-tokens-series-B",
-"assetref": "633-267-11748",
-"qty": 17430
-},
-  {
-"name": "AUTH-tokens",
-"assetref": "595-266-8935",
-"qty": 17430
+"name": "GOLD-tokens-series-A",
+"assetref": "301-267-14695",
+"qty": 19500
 }
 ],
 }
