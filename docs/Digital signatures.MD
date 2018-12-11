@@ -2,7 +2,7 @@
 
 1. [Signing data](#1-signing-data)
 2. [Verifying a digital signature](#2-verifying-a-digital-signature)
-3. [Sign and store signature](#3-sign-and-store-signature)
+3. [Sign and store signature in GREAT](#3-sign-and-store-signature-in-great)
 
 ## 1. Signing data
 To generate a digital signature, use `post /api/v1/create_signature` and provide 2 parameters - addresss (the blockchain address of the signer) and data (the hash of the information to be signed). Example:
@@ -47,7 +47,7 @@ The output will be `true` if the signature is valid and `false` if the signature
 ```
 Note: The signature can be verified by any node.
 
-## 3. Sign and store signature 
+## 3. Sign and store signature in GREAT
 
 To sign data and store the signature in the `GREAT` (Global Repository of E-signatures And Timestamps) data stream, use `post /api/v1/create_save_signature`.
 ```
