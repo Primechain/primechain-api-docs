@@ -3,7 +3,7 @@
 ### 1. Banking & related Financial services
 Blockchain technology is ideal for banks and financial service providers because it offers real-time automated settlement in addition to vastly improved security, transparency & auditability with reduced infrastructure cost. Primechain API use cases for banking & related financial services include:
 
-1.	Auction of assets
+1.	[Auction of assets](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/auction.md)
 2. Bank Guarantees
 3.	Charge Registry
 4.	Contract authentication, verification & storage
