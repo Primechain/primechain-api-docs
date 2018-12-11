@@ -26,18 +26,19 @@ To create an offer, use `post /api/v1/create_public_offer` and pass these parame
 }
 ```
 
-The output is the `transaction id` and the `offer_blob` of the offer details.
+The output is 
 ```
-{
-  "status": 200,
-  "response": 
-    {
-      "offer_blob": "010000000194d89dff126eac4bb217fa612cf50f98b943f3dcc5d1df4ac5057f2a2cdb098d000000006a47304402202667ff9be3e8454c62edd0a179c55a37fdcf9a54ad55cb82b43e0a5bf47579ef022015f0bec601426876bc4a59ff485bbda429bdfa1f7849146c8ba50b2bf752d481832103ab7548d8c3148110f595453ac491dfe45d271c92b88d0cfdd26b41eaa7bfbaa0ffffffff0100000000000000003776a914270c3ebee9d184df26275424af915236f51afddf88ac1c73706b71e77f0bebe4bd86bf4b6a225bb41c62d704000000000000007500000000",
-      "offer_txid": "8d09db2c2a7f05c54adfd1c5dcf343b9980ff52c61fa17b24bac6e12ff9dd894",
-      "offer_vout": 0
-    }
-}
+aaaa
 ```
+The following is stored in the OFFER_DETAIL_STREAM   
+
+1. primechain_address of the offer creator
+2. name of asset asked for
+3. name of asset offerred
+4. quantity of asset asked for
+5. quantity of asset offerred
+6. offer hex blob
+
 ## 2. Create a targetted offer
 To create an offer, use `post /api/v1/create_targeted_offer` and pass these parameters:
 * address of the entity making the offer - `from_address`   
