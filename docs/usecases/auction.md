@@ -23,14 +23,19 @@ The relevant API end points are:
 ## 2. Signing contracts, inspection reports, terms and conditions 
 The relevant API end points are:
 1. Signing data - [`create_signature`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#1-signing-data)   
+
 2. Verifying a digital signature - [`verify_signature`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#2-verifying-a-digital-signature)
+
 3. Sign and store signature in GREAT - [`create_save_signature`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#3-sign-and-store-signature-in-great)
 
 ## 3. Tokenizing the asset to be auctioned
 The relevant API end point is [`create_new_asset_from`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset)
 
 ## 4. Earnest Money Deposit
-The relevant API end points for tokenizing fiat currency for Earnest Money Deposit [EMD] are [`create_new_asset_from`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset) and [`asset_create_more_from`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#2-create-additional-units-of-an-open-asset)
+The relevant API end points for tokenizing fiat currency for Earnest Money Deposit [EMD] are:
+1. [`create_new_asset_from`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset)
+
+2. [`asset_create_more_from`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#2-create-additional-units-of-an-open-asset)
 
 ## 5. The auction process
 The relevant API end points are:
