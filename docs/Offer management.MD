@@ -7,7 +7,6 @@
 [5. Cancel a public offer](#5-cancel-a-public-offer)  
 [6. Create a targeted offer](#6-create-a-targeted-offer)   
 [7. Reject a targeted offer](#7-reject-a-targeted-offer)   
- 
 
 ## 1. Create a public offer
 To create an offer, use `post /api/v1/create_public_offer` and pass these parameters:
@@ -206,5 +205,8 @@ To reject an offer, use `post /api/v1/reject_targeted_offer` and pass the offere
 }
 ```
 ```
-hh
+{
+"status": 200,
+"response": true
+}
 ```
