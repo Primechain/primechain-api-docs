@@ -1,5 +1,18 @@
 # KYC (Individual)
 
+Financial and capital markets use the KYC (Know Your Customer) system to identify "bad" customers and minimise money laundering, tax evasion and terrorism financing. Efforts to prevent money laundering and the financing of terrorism are costing the financial sector billions of dollars. Banks are also exposed to huge penalties for failure to follow KYC guidelines. 
+
+Costs aside, KYC can delay transactions and lead to duplication of effort between banks. B2 enables storage of encrypted records that can be viewed / purchased by banks that have been "whitelisted" by the issuer bank. This ensures data privacy and confidentiality while at the same time ensuring that records are shared only between banks that trust each other.
+
+B2 is a secure platform for high-quality, validated KYC & due diligence information on individuals and corporates. 
+
+All information is provided by Bankchain members in an encrypted format. Members may list a price for each record and may choose to share / sell the information to selected Bankchain members. 
+
+***Primechain API can be used to create a transparent, secure and efficient sharing / monetization blockchain for 
+high-quality, validated KYC & due diligence information on individuals.***
+
+The blockchain nodes can be operated by Banks, Financial institutions and Regulators.
+
 1. [Sign, encrypt and store KYC data in the blockchain](#1-sign-encrypt-and-store-kyc-data-in-the-blockchain)
 2. [Decrypt, verify and retrieve KYC data from the blockchain](#2-decrypt-verify-and-retrieve-kyc-data-from-the-blockchain)
 
