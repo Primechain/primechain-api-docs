@@ -5,8 +5,8 @@
 [3. Read an offer](#3-read-an-offer)   
 [4. Accept an offer](#4-accept-an-offer)   
 [5. Cancel a public offer](#5-cancel-a-public-offer)  
-[6. Create a targetted offer](#2-create-a-targetted-offer)   
-[7. Reject a targetted offer](#5-reject-a-targetted-offer)   
+[6. Create a targetted offer](#6-create-a-targetted-offer)   
+[7. Reject a targetted offer](#7-reject-a-targetted-offer)   
  
 
 ## 1. Create a public offer
