@@ -1,10 +1,6 @@
 # Auction of assets
 
-Primechain API can be used to create a transparent, secure and efficient auction ecosystem with blockchain nodes operated by: 
-1. Financial institutions
-2. Auditors
-3. Regulators
-4. Bidders
+Primechain API can be used to create a transparent, secure and efficient auction ecosystem with blockchain nodes operated by Financial institutions, Auditors, Regulators, Bidders.
 
 1. [Onboarding bidders](#1-onboarding-bidders)   
 2. [Signing contracts, inspection reports, terms and conditions](#2-signing-contracts,-inspection-reports,-terms-and-conditions)
