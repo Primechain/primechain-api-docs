@@ -52,12 +52,16 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 7. [Transactions by a specified entity](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transactions-by-a-specified-entity)
 
 ## 6. [Offer management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD)
-1. [Create a public offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#1-create-a-public-offer)   
-2. [Create a targetted offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#2-create-a-targetted-offer)   
-3. [Read an offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#3-read-an-offer)
-4. [Accept an offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#4-accept-an-offer)
-5. [Reject an offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#5-reject-an-offer)
-6. [Cancel an offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#6-cancel-an-offer)
+
+
+
+[1. Create a public offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#1-create-a-public-offer)   
+[2. Get list of open public offers](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#2-get-list-of-open-public-offers)   
+[3. Read an offer](#3-read-an-offer)   
+[4. Accept an offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#4-accept-an-offer)   
+[5. Cancel a public offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#5-cancel-a-public-offer)  
+[6. Create a targeted offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#6-create-a-targeted-offer)   
+[7. Reject a targeted offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#7-reject-a-targeted-offer)  
 
 ## 7. [Encrypted data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD)
 
