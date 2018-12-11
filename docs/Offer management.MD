@@ -25,19 +25,25 @@ To create an offer, use `post /api/v1/create_public_offer` and pass these parame
   }
 }
 ```
-
-The output is 
-```
-aaaa
-```
 The following is stored in the OFFER_DETAIL_STREAM   
-
 1. primechain_address of the offer creator
 2. name of asset asked for
 3. name of asset offerred
 4. quantity of asset asked for
 5. quantity of asset offerred
 6. offer hex blob
+
+The output is the id and vout of the transaction in which the offer data is stored in the blockchain.
+```
+{
+"status": 200,
+"response": 
+  {
+    "offer_txid": "65b6293b60cac5bec78e346486724f150103e55c9267b9ec86405590224fbe58",
+    "offer_vout": 0
+  }
+}
+```
 
 ## 2. Create a targetted offer
 To create an offer, use `post /api/v1/create_targeted_offer` and pass these parameters:
