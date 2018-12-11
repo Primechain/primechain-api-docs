@@ -5,14 +5,17 @@
 3. [Sign and store signature in GREAT](#3-sign-and-store-signature-in-great)
 
 ## 1. Signing data
-To generate a digital signature, use `post /api/v1/create_signature` and provide 2 parameters - addresss (the blockchain address of the signer) and data (the hash of the information to be signed). Example:
+To generate a digital signature, use `post /api/v1/create_signature` and provide 2 parameters:
+1. primechain addresss of the signer    
+2. the data to be signed    
+
+Example:
 ```
 {
   "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
   "data": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
 }
 ```
-
 The output will be the digital signature:
 ```
 {
@@ -20,11 +23,16 @@ The output will be the digital signature:
   "signature": "H/zH4VWkOv9/Awu7OUEK43Fq1dtBcBxnrzmwOdytpsr0Grw+lPxWgbgh3Dcr4lhwgVOBb7vAoChjUvqxlqnpDAI="
 }
 ```
-Note: The signature can be created only by the node containing the private key.
+Note: The signature can be created only by the node containing the private key of the signer.
 
 ## 2. Verifying a digital signature
 
-To verify that the the signature for the specified hash and public key is valid, use `post /api/v1/verify_signature` and provide 3 parameters - addresss (the blockchain address of the signer), data (the hash of the information to be verified) and signature (the digital signature). Example:
+To verify a signature, use `post /api/v1/verify_signature` and provide 3 parameters:
+1. primechain addresss of the signer   
+2. data    
+3. digital signature   
+
+Example:
 ```
 {
   "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
@@ -56,7 +64,7 @@ To sign data and store the signature in the `GREAT` (Global Repository of E-sign
   "data": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
 }
 ```
-The output will be the signature and the transaction id through which the signature is stored in the `GREAT` data stream:
+The output will be the signature and the id of the transaction in which the signature is stored in the `GREAT` data stream:
 ```
 {
 "status": 200,
