@@ -6,9 +6,11 @@ Primechain API can be used to create a transparent, secure and efficient auction
 3. Regulators
 4. Bidders
 
-[1. Onboarding bidders](#1-onboarding-bidders)   
-[2. Tokenizing the asset to be auctioned](#2-tokenizing-the-asset-to-be-auctioned)   
-[3. The auction process](#3-the-auction-process)
+1. [Onboarding bidders](#1-onboarding-bidders)   
+2. [Signing contracts, inspection reports, terms and conditions](#2-signing-contracts,-inspection-reports,-terms-and-conditions)
+3. [Tokenizing the asset to be auctioned](#3-tokenizing-the-asset-to-be-auctioned)   
+4. [Earnest Money Deposit](#4-earnest-money-deposit)   
+5. [The auction process](#5-the-auction-process)   
 
 ## 1. Onboarding bidders
 
@@ -22,10 +24,14 @@ The relevant API end points are:
 
 4. Revoke Permission - [`revoke_permissions`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#6-revoke-permissions-to-an-entity)
 
-## 2. Tokenizing the asset to be auctioned
+## 2. Signing contracts, inspection reports, terms and conditions 
+
+## 3. Tokenizing the asset to be auctioned
 The relevant API end point is [`create_new_asset_from`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset)
 
-## 3. The auction process
+## 4. Earnest Money Deposit
+
+## 5. The auction process
 
 The relevant API end points are:
 
