@@ -5,8 +5,8 @@
 [3. Read an offer](#3-read-an-offer)   
 [4. Accept an offer](#4-accept-an-offer)   
 [5. Cancel a public offer](#5-cancel-a-public-offer)  
-[6. Create a targetted offer](#6-create-a-targetted-offer)   
-[7. Reject a targetted offer](#7-reject-a-targetted-offer)   
+[6. Create a targeted offer](#6-create-a-targeted-offer)   
+[7. Reject a targeted offer](#7-reject-a-targeted-offer)   
  
 
 ## 1. Create a public offer
@@ -163,8 +163,7 @@ To cancel an offer, use `post /api/v1/cancel_public_offer` and pass the offerrer
 }
 ```
 
-
-## 6. Create a targetted offer
+## 6. Create a targeted offer
 To create an offer, use `post /api/v1/create_targeted_offer` and pass these parameters:
 * address of the entity making the offer - `from_address`   
 * address of the entity to whom the offer is made - `to_address`   
@@ -172,16 +171,17 @@ To create an offer, use `post /api/v1/create_targeted_offer` and pass these para
 * name and quantity of asset offerred in return - `offer_asset`
 ```
 {
-  "from_address": "1Uw5kTMTx96YAoQ81BrnuDezcdFhVmAWvCMDTN",
-  "to_address": "16XxJEpKQCmxEhXs56Wsb2WaTghVzKixYTR92k",
+  "from_address": "16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd",
+   "to_address": "1CbfDWDYN8A7i4zZisEzfkLwRcQUem3PaUin9p",
+   
   "ask_asset": 
-    {
-      "Uranium-tokens-series-A": 40
-    },
+   {
+     "AUTH-tokens-series-A": 4
+   },
   "offer_asset": 
-    {
-      "Platinum-tokens-series-A": 10
-    }
+  {
+    "GOLD-tokens-series-A": 2
+  }
 }
 ```
 The output is the `transaction id` and the `offer blob` of the offer details.
@@ -189,28 +189,22 @@ The output is the `transaction id` and the `offer blob` of the offer details.
 {
 "status": 200,
 "response": {
-"offer_blob": "01000000017a61711f21cfbff5fd8f465d9de00e262a1ffebcf3d1a9d70ec842e08736963a000000006b483045022100871b3625760bbaad16c376bc082d93aac98393eebf9560293214d98ffd8b29ad0220172131642087078977c4c5c6c68b8178a0903219a6210cdc5e07c3e9bae9ea16832102be496ef6b719a8bf9f472fa778e490fc4dcbc333d133634a323c140a975244bdffffffff0100000000000000003776a914ceab8b6fd5876940500dc9e6e9e402b0424c34c888ac1c73706b712ca4a239e8175078e715648b47a58b4328000000000000007500000000",
-"offer_txid": "3a963687e042c80ed7a9d1f3bcfe1f2a260ee09d5d468ffdf5bfcf211f71617a",
+"offer_blob": "0100000001ff5eec083a418dc55a8ce638b0953c5bb22750b5e75407f07f96ca99a130489d000000006a47304402206774afd0964167b47d97a36135f94aa46deb39aba25359d6c898cf3d31a5c184022041753eadc1f0e1096d2f6e95765be7ea27725a6488dbb18940b1420839de8f15832103ab7548d8c3148110f595453ac491dfe45d271c92b88d0cfdd26b41eaa7bfbaa0ffffffff0100000000000000003776a914270c3ebee9d184df26275424af915236f51afddf88ac1c73706b71e77f0bebe4bd86bf4b6a225bb41c62d704000000000000007500000000",
+"offer_txid": "9d4830a199ca967ff00754e7b55027b25b3c95b038e68c5ac58d413a08ec5eff",
 "offer_vout": 0
 }
 }
+
 ```
 
-
-
-
-## 7. Reject a targetted offer
-To reject an offer, use `post /api/v1/reject_offer` and pass the `txid` of the offer as a parameter.
+## 7. Reject a targeted offer
+To reject an offer, use `post /api/v1/reject_targeted_offer` and pass the offeree address and the `txid` of the offer as a parameter.
 ```
 {
-   "primechain_address: "16XxJEpKQCmxEhXs56Wsb2WaTghVzKixYTR92k",
-   "tx_id": "3a963687e042c80ed7a9d1f3bcfe1f2a260ee09d5d468ffdf5bfcf211f71617a"
+   "primechain_address": "1CbfDWDYN8A7i4zZisEzfkLwRcQUem3PaUin9p",
+   "tx_id": "9d4830a199ca967ff00754e7b55027b25b3c95b038e68c5ac58d413a08ec5eff"
 }
 ```
 ```
-{
-"status": 200,
-"response": true
-}
+hh
 ```
-
