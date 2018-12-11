@@ -199,7 +199,7 @@ The following is the output:
 ## 5. Decrypt, verify and retrieve a file from the blockchain
 To retrieve a file from the blockchain and decrypt it, use `post /api/v1/decrypt_download_file` and pass these values:
 1. the id of the transaction in which the encrypted file and tag were published to the FILE_MASTERLIST stream
-2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the FILE_SIGNSTURE_MASTERLIST stream
+2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the FILE_SIGNATURE_MASTERLIST stream
 3. The AES password
 4. The Initialization Vector (IV)
 
@@ -214,7 +214,7 @@ To retrieve a file from the blockchain and decrypt it, use `post /api/v1/decrypt
 This is what happens:   
 
 ### Step 1: Retrieval of signing data 
-The digital signature, hash and the primechain address of the signing entity are retrieved from the FILE_SIGNSTURE_MASTERLIST stream.
+The digital signature, hash and the primechain address of the signing entity are retrieved from the FILE_SIGNATURE_MASTERLIST stream.
 
 ### Step 2: Retrieval of encrypted file 
 The encrypted file and tag are retrieved from the FILE_MASTERLIST stream.
@@ -228,23 +228,5 @@ The digital signature is verified
 ### Step 5: Output
 The output will be the data and the details of the signer.
 ```
-{
-"status": 200,
-"response": 
-  {
-    "data": 
-      {
-        "name": "Scarlett Johansson",
-        "email": "scarlett@example.com",
-        "cell": ":1234567890"
-       },
-  "signer_detail": 
-      {
-        "name": "Noodle Bank Official Signer",
-        "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
-       },
-   "signature_status": true
-  }
-}
-
+aaa
 ```
