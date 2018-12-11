@@ -64,66 +64,71 @@ To create additional units of an open asset, use `post /api/v1/asset_create_more
 * `from_address` is the entity that creates the asset. It must have `send` permission.
 * `to_address` is the entity that receives the newly created asset. It must have `receive` permission.
 * The `from_address` and `to_address` can be the same.
-* `asset_name` refers to the name or asset_ref of the asset.
+* `asset_name` refers to the name of the asset.
 * `quantity` refers to the additional quantity of the asset being issued.
 ```
 {
-  "from_address": "1AdBvHHyknKcvUsYbQ9pPXMS2wd8oD9coY3gT7",
-  "to_address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
-  "asset_name": "AUTH-tokens",
+  "from_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  "to_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  "asset_name": "AUTH-tokens-series-A",
   "quantity": 350
 }
 ```
 ```
 {
-"status": 200,
-"transaction_id": "d755b1b97a4acb5ce53618fb724e2a3f6db1ad6ebe3a19c86175e81573db3ab5"
+  "status": 200,
+  "tx_id": "0ac10e7cc5d1a3bdd959f74034fabaae7e40ec5e4515aba4c57002e6e50b9736"
 }
 ```
-Output is the txid of the transaction in which the additional units were created.
+Output is the id of the transaction in which the additional units were created.
 
 ## 3. Details of a specified asset
 To get details of a specific asset, use `post /api/v1/asset_details` and pass the asset name or referece id as a parameter.
 ```
 {
-  "asset_name": "107-265-45291"
-}
-```
-```
-{
   "asset_name": "AUTH-tokens-series-A"
 }
 ```
+Output:
 ```
 {
 "status": 200,
 "response": [
   {
 "name": "AUTH-tokens-series-A",
-"issuetxid": "2eaea9d94fdc908b68a12f7d5c642513f53c8c7d1d507116b42f00a1ff0d68e7",
-"assetref": "622-267-44590",
+"issuetxid": "d7621cb45b226a4bbf86bde4eb0b7fe700ebfc000f8bb12450362746777dbe44",
+"assetref": "324-267-25303",
 "multiple": 1,
 "units": 1,
 "open": true,
 "details": {
-"details": "These are the details of this asset."
+"details": "These are AUTH tokens"
 },
-"issueqty": 17430,
-"issueraw": 17430,
+"issueqty": 45350,
+"issueraw": 45350,
 "subscribed": true,
 "synchronized": true,
 "transactions": 2,
 "confirmed": 2,
 "issues": [
   {
-"txid": "2eaea9d94fdc908b68a12f7d5c642513f53c8c7d1d507116b42f00a1ff0d68e7",
-"qty": 17430,
-"raw": 17430,
+"txid": "d7621cb45b226a4bbf86bde4eb0b7fe700ebfc000f8bb12450362746777dbe44",
+"qty": 45000,
+"raw": 45000,
 "details": {
-"details": "These are the details of this asset."
+"details": "These are AUTH tokens"
 },
 "issuers": [
-  "1AdBvHHyknKcvUsYbQ9pPXMS2wd8oD9coY3gT7"
+  "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
+],
+},
+  {
+"txid": "0ac10e7cc5d1a3bdd959f74034fabaae7e40ec5e4515aba4c57002e6e50b9736",
+"qty": 350,
+"raw": 350,
+"details": {},
+"issuers": [
+  "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
 ],
 }
 ],
