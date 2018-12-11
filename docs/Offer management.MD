@@ -2,15 +2,12 @@
 
 [1. Create a public offer](#1-create-a-public-offer)   
 [2. Get list of open public offers](#2-get-list-of-open-public-offers)   
-
 [3. Read an offer](#3-read-an-offer)   
 [4. Accept an offer](#4-accept-an-offer)   
-
-[3. Create a targetted offer](#2-create-a-targetted-offer)   
-
-
-[5. Reject an offer](#5-reject-an-offer)   
-[6. Cancel an offer](#6-cancel-an-offer)   
+[5. Cancel a public offer](#5-cancel-a-public-offer)  
+[6. Create a targetted offer](#2-create-a-targetted-offer)   
+[7. Reject a targetted offer](#5-reject-a-targetted-offer)   
+ 
 
 ## 1. Create a public offer
 To create an offer, use `post /api/v1/create_public_offer` and pass these parameters:
@@ -151,7 +148,23 @@ To accept an offer, use `post /api/v1/accept_offer` and pass 2 parameters -
 }
 ```
 
-## 2. Create a targetted offer
+## 5. Cancel a public offer
+To cancel an offer, use `post /api/v1/cancel_public_offer` and pass the offerrer's address and `txid` of the offer as a parameter.
+```
+{
+  "primechain_address": "16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd",
+  "tx_id": "d8e32370ecd43ca8c22191b7a206db9b91144d040f0d20492df02cb544e0e4f8"
+}
+```
+```
+{
+"status": 200,
+"response": true
+}
+```
+
+
+## 6. Create a targetted offer
 To create an offer, use `post /api/v1/create_targeted_offer` and pass these parameters:
 * address of the entity making the offer - `from_address`   
 * address of the entity to whom the offer is made - `to_address`   
@@ -186,7 +199,7 @@ The output is the `transaction id` and the `offer blob` of the offer details.
 
 
 
-## 5. Reject an offer
+## 7. Reject a targetted offer
 To reject an offer, use `post /api/v1/reject_offer` and pass the `txid` of the offer as a parameter.
 ```
 {
@@ -201,17 +214,3 @@ To reject an offer, use `post /api/v1/reject_offer` and pass the `txid` of the o
 }
 ```
 
-## 6. Cancel an offer
-To cancel an offer, use `post /api/v1/cancel_offer` and pass the `txid` of the offer as a parameter.
-```
-{
-   "primechain_address: "16XxJEpKQCmxEhXs56Wsb2WaTghVzKixYTR92k",
-   "tx_id": "3a963687e042c80ed7a9d1f3bcfe1f2a260ee09d5d468ffdf5bfcf211f71617a"
-}
-```
-```
-{
-"status": 200,
-"response": true
-}
-```
