@@ -11,7 +11,6 @@ This is the list of all the data streams created automatically by Primechain API
 [GREAT](#great)   
 [OFFER_DETAIL_STREAM](#offer_detail_stream)   
 [ONBOARD_USERLIST](#onboard_userlist)      
-[RSA_MASTERLIST](#rsa_masterlist)   
 [VERIFIED_USER_MASTERLIST](#verified_user_masterlist)   
    
 
@@ -102,8 +101,6 @@ Following data of offers built using [`create_public_offer`](https://github.com/
 6. offer hex blob   
 
 # ONBOARD_USERLIST
-
-# RSA_MASTERLIST
     
 
 # VERIFIED_USER_MASTERLIST   
@@ -112,6 +109,3 @@ This is a closed stream.
 Seed node writes to it when a new verified address is requested by a member. 
 
 Verified addresses are given write permissions to  DATA_SIGNATURE_MASTERLIST and DATA_MASTERLIST streams so that they can use [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain)
-
- 
-
