@@ -212,14 +212,14 @@ The output will be the decrypted data.
 Samairah retrieves Noodle Bank's 'RSA public key' using `post /api/v1/get_rsa_key` and passing Noodle's 'primechain address' as a parameter.
 ```
 {
-  "primechain_address": "12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v"
+  "primechain_address": "17SEyDKEwvA46U1FTUVVZWYgnR4X4L576vVAbp"
 }
 ```
 The output is Noodle Bank's 'RSA public key'.
 ```
 {
 "status": 200,
-"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1XUamZGgGBIKgUdXW35b 9V1PQ6jjv87erZY6XxW1RvdSBxfnYKIF+6FgTX1x/Rz54ynZagTA0CkdkYp+yKrG U53Cg/4vNl6MV2Ky/YgrBr1pOZzo89AyAt7u0lAPmkOXsewVTSSfQteQN4UoCtKh fPPgGiMlgKNvbH0pl3mD7USqI3Zo9VLm+P4qdyPG75mSu4t6i+xLWQOe9FtYUaR+ dy8OB8PBGIgkx3Q9Ik0xtBNTcYRAunJXULFy0T2xvmv73PS1OrJgNwXHEm/IDI+/ 5amvxtQirt7VBeubfQIyBcBGKSve2BRs2Fuw1ftZ4usSmgUTMZSi2NUU1Fhw1vQo WwIDAQAB -----END PUBLIC KEY-----"
+"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkydbbI+68zjRmp0n7Yss NwKbUl1IzBEqgm0Rp/utue8VNPfZaW7YrnwmEO7jO939C0/xAgayE6vR5VT7sItX uMKwvP0DozxWtUGGcoHEZgImzSXJGomZpr2+M6TdW+kbisUUKbjIApQvnGlh93Zv XiRTsvMkxC1Lf8Wkj52V7Xdn7O2p1tGg/j4wv78kT9wJ67xEnBmsGpGUZZYPAMZr j0WrsakvT5vqwtkGum2OI9eRNlB7qgDsuOrxAm3jyx17s+tOi2Sasn1GywHQmU6n YpCSsVv6ywGCMH5xLGAWT3glGCx2mwjAi+/QbpSXIWorlzzlZOR2xI+844dyDxbW MQIDAQAB -----END PUBLIC KEY-----"
 }
 ```
 
@@ -230,15 +230,15 @@ Samairah encrypts her own 'primechain address' with Noodle Bank's 'RSA public ke
 
 ```
 {
-  "data": "1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn",
-  "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1XUamZGgGBIKgUdXW35b 9V1PQ6jjv87erZY6XxW1RvdSBxfnYKIF+6FgTX1x/Rz54ynZagTA0CkdkYp+yKrG U53Cg/4vNl6MV2Ky/YgrBr1pOZzo89AyAt7u0lAPmkOXsewVTSSfQteQN4UoCtKh fPPgGiMlgKNvbH0pl3mD7USqI3Zo9VLm+P4qdyPG75mSu4t6i+xLWQOe9FtYUaR+ dy8OB8PBGIgkx3Q9Ik0xtBNTcYRAunJXULFy0T2xvmv73PS1OrJgNwXHEm/IDI+/ 5amvxtQirt7VBeubfQIyBcBGKSve2BRs2Fuw1ftZ4usSmgUTMZSi2NUU1Fhw1vQo WwIDAQAB -----END PUBLIC KEY-----"
+  "data": "16g8d8U3K3PbcvY6LYafgZ23JrnxRXwZqBP8sA",
+"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkydbbI+68zjRmp0n7Yss NwKbUl1IzBEqgm0Rp/utue8VNPfZaW7YrnwmEO7jO939C0/xAgayE6vR5VT7sItX uMKwvP0DozxWtUGGcoHEZgImzSXJGomZpr2+M6TdW+kbisUUKbjIApQvnGlh93Zv XiRTsvMkxC1Lf8Wkj52V7Xdn7O2p1tGg/j4wv78kT9wJ67xEnBmsGpGUZZYPAMZr j0WrsakvT5vqwtkGum2OI9eRNlB7qgDsuOrxAm3jyx17s+tOi2Sasn1GywHQmU6n YpCSsVv6ywGCMH5xLGAWT3glGCx2mwjAi+/QbpSXIWorlzzlZOR2xI+844dyDxbW MQIDAQAB -----END PUBLIC KEY-----"
 }
 ```
 The output is the encrypted value referred to as `encrypted_data_rsa`:
 ```
 {
 "status": 200,
-"encrypted_data_rsa": "UiP5ggF10c9onAxpvCgO116XcnZx9oBZ7+odcUziubmnfashhtavDf6vAzZ24ZnLEwvZPWOexyV/xKCCpXzZb4fxCI5T1xQvIVRSxjqFVmoltrc74Xg6y8DPWkItKf5ahZJEZSp5Oi+3TbH/LxQ6MIpQo/5//5PdlGgrN1xMiWW9YLBZhL2oEw46wUdBVbZkR2BOsUIDRXVmy8OkC8Ouzb3zk0bcGbrsmCvinHArh+z2S5NaqgGX/Bl9FBBw7xGzINbWVvH99nRQNXXM3xgrBJm/DjGJW+t9x7OAAp5+RxzzgKxgTAA5J9fGMkkHFf0SKJBnJlI7TDti3/iuPAoztA=="
+"encrypted_data_rsa": "acN4z1AbYKHbuK5Tixi+AgYwg/3XMqVxU3UJmZrXcRuSXYSPyDLrB7+BQeiazfcFk9WxpnvT8nXHkQ6Hz2rTUF1K1Lv5XM33iQMqdRUa9WzQGJS9IakS5TSw+OpxhCR0KWa1kJ4XIa6QHwCGqUQrUo7WXTV9k/Lb55eLZh9bINy6LAAeYQfQX7LZMVCuC7lmJcUAkDTYuccgZdtAc1BCHl0ODq7rcMSLpr/M0h+tjKE6fuGP9AuB7NznoAy+7yf9toy67DNIWAeQXptTq8ukBJ6AzBTerUbTrbwOWlBWOyVcnsyPkXRtPUNryu5Jvqlw6//w0Fc9FG3dM+lmuzWQ5A=="
 }
 ```
 
@@ -251,15 +251,15 @@ Noodle Bank uses `post /api/v1/decrypt_data_rsa` to decrypt the `encrypted_data_
 2. The `encrypted_data_rsa`
 ```
 {
-  "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQDVdRqZkaAYEgqB R1dbflv1XU9DqOO/zt6tljpfFbVG91IHF+dgogX7oWBNfXH9HPnjKdlqBMDQKR2R in7IqsZTncKD/i82XoxXYrL9iCsGvWk5nOjz0DIC3u7SUA+aQ5ex7BVNJJ9C15A3 hSgK0qF88+AaIyWAo29sfSmXeYPtRKojdmj1Uub4/ip3I8bvmZK7i3qL7EtZA570 W1hRpH53Lw4Hw8EYiCTHdD0iTTG0E1NxhEC6cldQsXLRPbG+a/vc9LU6smA3BccS b8gMj7/lqa/G1CKu3tUF65t9AjIFwEYpK97YFGzYW7DV+1ni6xKaBRMxlKLY1RTU WHDW9ChbAgMBAAECgf8RgomsD0YSs2gpMrD30GW6uuzFoBUOpumdU7V2F1HHgII6 ErvoMWJMQfCkaqXvHXFiMQykpb8rVDQYvEOqMlgSg95w9WjqDNd2U6JbKdBdvSvk jfqOBYYUtjThC7A79096SON2cIqf8Q7jfwjJ2n1kwpyfiEKLStzZCWtgAZfQ3qq5 wgatNWHWTjokVukWvK3zMamPEP9dOw97/Oo6i6wT/VeKM8d/p5fKoEUNSEBYzJkp CoxGIFpy8s1X3QvxJB9cLomY/JTrMsynIR7YimBmVAtlY2pndsXjC3aVR+WN6MtZ RCwzccA+JqmNiZr63MWIlKmCil/muGJG5UngbPECgYEA7wjahkoMSqyD4bt5ceFt FFMTb6qooW7DFj2ZVlr+NJ4DMieve0IhkOZenTGpSAGlyY7wJXnRCET2fTnEf0R7 OX+Nap/sVxAOaXRSupsvvauUjp2ETjhxSnZHhLPr3z9lj08lIDHUoo9QS5hbpwsK as2ojjLrKxEcaEGKHpeoqNkCgYEA5JuGiAnwj408jGudgJiQ146VJkYYT1UvKqn6 F7QVNg4OW4QckqBZRUwhEZSUBpluNQuLeO9EVDjQR16ZBBYgvEFQKLj0nJdcUz11 JiAsiQzrJIWPE/HM587QlTnr5xHcjyJuGnon/tyGdQptAd5dlsgQ/ctt7EypAfDr /7B+elMCgYBrt2SqUWIaoIVJyu7eV8SM/SbsEk6teLlnI1kfJiAZ2/76shGNDO8N WhLW6ZMsRLnOC6DCcpO1E0a0hby70UNqVMWIgArD7RNhiC7jsp0f7tsiLW96xEqh UI3ICkBHuUzt+K91Q59bphN8DWt36izGlmjXs7BwFuTjQm2YfaVeeQKBgCjo7BpM LRCDZeJ7H6RzqPfqPCatRIxt4hLweCDlySXzPf6Cldpnd5I/HWvX+uVzb5Vui3cI 2mF4CU28UAW7MACAb6fZ8WxUaeE7jktUVqPv++R9Qi1/h/uztv/9bYncWGwE7U8v rRievjETvI4pDPZ+twuz6+ftkBEY3CLVosyhAoGAdAIMNkZGPDdeWSGO6Zl3SBYf hhsFJc3nn9pNKhPgXZUvioAi+I9POljFJQgn9Y9OYYpp7b7L1lCP0D9cgOkju7UX DScZTRml7urq8lNqHR/dS8fKo4Z0JEowhmtUBH4clv5hOaY9EjG2w/kNZCdxDbJU b8SwjFWTl8KUu3O7N/g= -----END PRIVATE KEY-----",
-  "encrypted_data_rsa": "UiP5ggF10c9onAxpvCgO116XcnZx9oBZ7+odcUziubmnfashhtavDf6vAzZ24ZnLEwvZPWOexyV/xKCCpXzZb4fxCI5T1xQvIVRSxjqFVmoltrc74Xg6y8DPWkItKf5ahZJEZSp5Oi+3TbH/LxQ6MIpQo/5//5PdlGgrN1xMiWW9YLBZhL2oEw46wUdBVbZkR2BOsUIDRXVmy8OkC8Ouzb3zk0bcGbrsmCvinHArh+z2S5NaqgGX/Bl9FBBw7xGzINbWVvH99nRQNXXM3xgrBJm/DjGJW+t9x7OAAp5+RxzzgKxgTAA5J9fGMkkHFf0SKJBnJlI7TDti3/iuPAoztA=="
+  "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCTJ1tsj7rzONGa nSftiyw3AptSXUjMESqCbRGn+6257xU099lpbtiufCYQ7uM73f0LT/ECBrITq9Hl VPuwi1e4wrC8/QOjPFa1QYZygcRmAibNJckaiZmmvb4zpN1b6RuKxRQpuMgClC+c aWH3dm9eJFOy8yTELUt/xaSPnZXtd2fs7anW0aD+PjC/vyRP3AnrvEScGawakZRl lg8AxmuPRauxqS9Pm+rC2Qa6bY4j15E2UHuqAOy46vECbePLHXuz606LZJqyfUbL AdCZTqdikJKxW/rLAYIwfnEsYBZPeCUYLHabCMCL79BulJchaiuXPOVk5HbEj7zj h3IPFtYxAgMBAAECggEAY8GujK3zQqcmEPaw9qv+UVyHBxMOIqkQdFKUQZiwcPfP HJVY4cyvP7oR5DDOAuu+e0i6TXFUj1lPdXRjG4+a7Dmvrq6nJKXm8gF1r3KhPbX/ r9sJtd/KNeszYbdGCOTCMxTfUlld3cGvdQ1LyIKVhPCDfTCvn/5EzF2j7WgbF1tm oKuZB69LoVRSQ+rW9egQUWX5OCIC2aPReoRQCpPW3hz+CCuxk387twqlbS4/YFlB fdzC8N80umFvRFB8+YrgLrE/AM+dfFf8XMbwQDO13V4E6S5zVohAAJddxq7Nsv+e 1aZK+3NxlrkrOFij0ApLVtugToIBIMsGKbXuc5g6sQKBgQD9VIXvkX9fvr7wFgQ8 BDqDwavhUfQ3GdsZgzEnLK4SUgB1ApC7xMgwXauN38AL3kZEqQZNnWciQY8bU3i1 EFdFQ7K9n7s8nM/d8N/rbFIndRICJUQh47UAKWNZRaCV/IVMLPVjjHCjaej9aOUP JsyqbGfFA62rRCXoCHSzVjlFfwKBgQCUtF+PA0kP/V8CkaNV0VdRa702s57tu6Tg Quk8SOH4Ame9TcBrP95bpxUzBKapBj/ncW8lJKDD7zLYTQalWUG+KX/17i6NPgD6 vq+FwoCaGskRQTw3AUbkfHj6u7Cn41EmvxIZ2KWLi8Hl4+W3o6/mnsuucEZDOPwy FTN5FW+cTwKBgG0RTvjt86ENRrenQvtz9p1zbMT9u99dSm+ZhDgRjIBmvbui9x1g g7APJCVZCB4T/Lzi6MvR0O12vF5PedC60FgJ5ZKuirZ17Sjo4/9AC77hMHesA8Fz gCIpr5Rn3dO1fM5nLN9HP9ebaaxw1O3JDqTxN1wjUUpDdO6JdXUg0leRAoGBAI4l FSspos+MDSPxf0ZrQ6Jq8IW3kXYCZoqQq06bBJYEBpIoHoTmmnDV+Ce6jG0JslBU WEATETH6Foo4pt+rwHI8TTsSoKEW4ezOFg4wbKnibMz3pM2XhOKoMSTMAQObAVme T3kxZJ1NzN0pyc6Ow3gZ1u06GY/sivZ82aUm3nd1AoGAIqGOv9GiNYWJIdsdGmhI YS93Qj3Pw6ZSTqGTW4FYM9f4tawEWaGFGBL2CBYEp9nUTUBEAq8HJes0bimeScGn Tawewg84U4oiHuyTbtwIi5PkB+XIKfGaXU3SMaHYHiORRe7BhQwWKHpLdob4JJtm CdNBuN+I1w9yaWG1TeWVjk8= -----END PRIVATE KEY-----",
+  "encrypted_data_rsa": "acN4z1AbYKHbuK5Tixi+AgYwg/3XMqVxU3UJmZrXcRuSXYSPyDLrB7+BQeiazfcFk9WxpnvT8nXHkQ6Hz2rTUF1K1Lv5XM33iQMqdRUa9WzQGJS9IakS5TSw+OpxhCR0KWa1kJ4XIa6QHwCGqUQrUo7WXTV9k/Lb55eLZh9bINy6LAAeYQfQX7LZMVCuC7lmJcUAkDTYuccgZdtAc1BCHl0ODq7rcMSLpr/M0h+tjKE6fuGP9AuB7NznoAy+7yf9toy67DNIWAeQXptTq8ukBJ6AzBTerUbTrbwOWlBWOyVcnsyPkXRtPUNryu5Jvqlw6//w0Fc9FG3dM+lmuzWQ5A=="
 }
 ```
 The output is the decrypted data, which in this case is Samairah's 'primechain address'.
 ```
 {
 "status": 200,
-"decrypted_data": "1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn"
+"decrypted_data": "16g8d8U3K3PbcvY6LYafgZ23JrnxRXwZqBP8sA"
 }
 ```
 
