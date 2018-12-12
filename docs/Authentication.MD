@@ -21,6 +21,10 @@ Combining the power of blockchain technology and public key cryptography for sec
 
 ![Blockchain based authentication](http://www.primechaintech.com/img/auth/steps_1.png)
 
+![Blockchain based authentication](http://www.primechaintech.com/img/auth/1_steps.png)
+
+
+
 ![Blockchain based authentication](http://www.primechaintech.com/img/auth/steps_2.png)
 
 ![Blockchain based authentication](http://www.primechaintech.com/img/auth/steps_3.png)
