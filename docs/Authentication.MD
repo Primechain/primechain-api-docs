@@ -231,7 +231,7 @@ Samairah encrypts her own 'primechain address' with Noodle Bank's 'RSA public ke
 ```
 {
   "data": "16g8d8U3K3PbcvY6LYafgZ23JrnxRXwZqBP8sA",
-"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkydbbI+68zjRmp0n7Yss NwKbUl1IzBEqgm0Rp/utue8VNPfZaW7YrnwmEO7jO939C0/xAgayE6vR5VT7sItX uMKwvP0DozxWtUGGcoHEZgImzSXJGomZpr2+M6TdW+kbisUUKbjIApQvnGlh93Zv XiRTsvMkxC1Lf8Wkj52V7Xdn7O2p1tGg/j4wv78kT9wJ67xEnBmsGpGUZZYPAMZr j0WrsakvT5vqwtkGum2OI9eRNlB7qgDsuOrxAm3jyx17s+tOi2Sasn1GywHQmU6n YpCSsVv6ywGCMH5xLGAWT3glGCx2mwjAi+/QbpSXIWorlzzlZOR2xI+844dyDxbW MQIDAQAB -----END PUBLIC KEY-----"
+  "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkydbbI+68zjRmp0n7Yss NwKbUl1IzBEqgm0Rp/utue8VNPfZaW7YrnwmEO7jO939C0/xAgayE6vR5VT7sItX uMKwvP0DozxWtUGGcoHEZgImzSXJGomZpr2+M6TdW+kbisUUKbjIApQvnGlh93Zv XiRTsvMkxC1Lf8Wkj52V7Xdn7O2p1tGg/j4wv78kT9wJ67xEnBmsGpGUZZYPAMZr j0WrsakvT5vqwtkGum2OI9eRNlB7qgDsuOrxAm3jyx17s+tOi2Sasn1GywHQmU6n YpCSsVv6ywGCMH5xLGAWT3glGCx2mwjAi+/QbpSXIWorlzzlZOR2xI+844dyDxbW MQIDAQAB -----END PUBLIC KEY-----"
 }
 ```
 The output is the encrypted value referred to as `encrypted_data_rsa`:
@@ -267,14 +267,14 @@ The output is the decrypted data, which in this case is Samairah's 'primechain a
 Noodle Bank retrieves Samairah's 'RSA public key' using `post /api/v1/get_rsa_key` and passing Samairah's 'primechain address' as a parameter.
 ```
 {
-  "primechain_address": "1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn"
+  "primechain_address": "16g8d8U3K3PbcvY6LYafgZ23JrnxRXwZqBP8sA"
 }
 ```
 The output is the 'RSA public key' of the requester.
 ```
 {
 "status": 200,
-"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkSMswu6s2N2Ars4y6WyA 9OqWPRrx/5+6CFKa0cFak42xjWCQ5JBI8CSal8sQiebCNMCxpGwLcdFHv5ufJOt2 He3jzgU8hw1kPjzw+ONryz88flVqVXwTv2Yzd93IEvDl4rAIADDarso0McA6wvAz KfjQcoYcl1iHGxcFYUgUzDOZNStw8vPWJ7cogJZRuQTolN1X8BMczWJvXEeaLBCT HEt9QBTEGDsJqNBYLZkSEBA3ozS+02jE6fg7DpMU2KhbVO4MtTlmXvjM31+95Mk3 9XDSESLP0l8Nosd79L33r5Q38enfL8KCs6AYY18qvPIRE28IYFLzkzCvV5TJfTnG mQIDAQAB -----END PUBLIC KEY-----"
+"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiB49uOAIfw2nGsueboVL +CWPYqiYS/+pYrUjoCe3owwn395o68IPmYDm2NCYk17Dwx2bDW5/B4OFgznw+eSe Hg1K2RrCQbwArKssjez04VtVBODowv/h8usq6R/g1zsA/YtZTLHMR0tdr9Ton0Op GBbc/qsgAo76OJvGcy7dwCXcbzVkscjURiVQ8Grn+yvpS5DQW0fsklUoX6UO8esT lF1u+TFDaizMu5i1bl/CibiRzc5iT/E907ynBc2PZApcices8Eera8Ye8kGG2cz5 LIuf49OfTlq5zRQQLzrHSF5Tg4cVmxOH4XU3sbfPNxnvTVCBONq59LYvGsNBXuDH hQIDAQAB -----END PUBLIC KEY-----"
 }
 ```
 
@@ -282,13 +282,12 @@ The output is the 'RSA public key' of the requester.
 Noodle Bank generates a 512-character random string and the current GMT timestamp. For this it uses `get /api/v1/create_string_timestamp` and gets an output like:
 ```
 {
-  "status": 200,
-  "response": 
-    {
-      "string": "WN2kwi7Bi4OslUaGRHP427AE0NFXriDhayjFSZUnY7jkvaBdFlEg9or7OAlDQwkmPp3BoS5qbzK1bha9jqHuZUhMV8VM6POSz8YGHjtiQVEyPaejquIZqfdt8Wto3A4b5hRfYkOAGpzhNhGLCYuiDQqTzfZNy3gnpyOartX7z2NMpdz8Y3mOCtS3KtzRG2T9Ah2t9vMIW02IlZ7RgdkOZgG76rOhtdXQT8dMlMkI4o5mtkBUzq9Sdo8yZR7Th6TCYcGMsZiyuYLuSNr03NpJhS23RWfgb58YFH0AdEacHor0ebIAmmi7aXqMnCrHYZUo2M2EPdh3IuqEyVPAxHmp2nvgzMM5hNzw7fUowCxPC9q33SvYnsZC4EsCwyj6SywN1KGgwVPnvyCYTSQcbETZdlivt4XwlE7HwnNSUhJbufODUBoPiPubRCsWh4qacNdlducONVCtiIvbYxpKr3KLFIUtHMv5I8g0gcMJWinIrNV0c2XvKjkxKADV1BDqZA0X",
-      "timestamp": 1544090758,
-      "hash": "d7634a35369c47bf26055744032f85e0e6f1d3645f29c97674770cde95b6631db9a76fa2e93a018fec94e65ba11c752b8ca04403a3cf1b24c69412fc878e30c8"
-    }
+"status": 200,
+"response": {
+"string": "mroHlYTyC5gtYD3NcvS0vKG0rIrQOOF1DmdfMl5NCFBg7Xi0Yf9xsKSN987OUwcnSKfoGn6qZAOg7m87C3BzgpGL8WYcPlLfDgJhBl88THhfhGjIxnkOdrGtiiWzWBdRbQvRsj9FBc5q6kPQHJ8tXuZt3LRnN09JTEAMDZWoVj0ChTAn8AjN8sYbiIpTmEZRHoFGz1bvVNSlkEBNd2ju9G10MkkFcsezOpckT6pityTGvVPvYS5Zh8MjLOP7KhoW1GTYb7mRyMCsoJso6yxQ1Q2TRZOq4N0BMeajUBaLeubMpk7Dq1qado9Dk6xSvLFkBzsnj3BO7rT5T6M2zB8j8Zusf90vtu8e51CJNG1tbiBFXijuiQJt51Qi6sXYaCAX89FNmXDKCICNAlwnuttYc8N5AgYoUtnFBVQ4Uxsu3gueNlRq9qOFrD9LZ3P8dnVv7oCng1CjK4jNELUOzQFfFtikGu1j5OOw5IcqGNXhDGalUzQZ2eqWpiznzheE8W6a",
+"timestamp": 1544601150,
+"hash": "e7d0265f614a53dada9ecbe2555930cb4cfc3fc1accf6afb18b35a3619baff59f0dce692edcd51e2284fb8f72cecaf75a6ab5e6cdbfabafcbc1020f606d6fd82"
+}
 }
 ```
 Note: The `hash` is the SHA-512 hash of `string^timestamp`  
@@ -300,15 +299,15 @@ The `hash` is encrypted with Samairah's RSA public key and sent to her. This is 
 2. `rsa_public_key` of Samairah
 ```
 {
-  "data": "d7634a35369c47bf26055744032f85e0e6f1d3645f29c97674770cde95b6631db9a76fa2e93a018fec94e65ba11c752b8ca04403a3cf1b24c69412fc878e30c8",
-  "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkSMswu6s2N2Ars4y6WyA 9OqWPRrx/5+6CFKa0cFak42xjWCQ5JBI8CSal8sQiebCNMCxpGwLcdFHv5ufJOt2 He3jzgU8hw1kPjzw+ONryz88flVqVXwTv2Yzd93IEvDl4rAIADDarso0McA6wvAz KfjQcoYcl1iHGxcFYUgUzDOZNStw8vPWJ7cogJZRuQTolN1X8BMczWJvXEeaLBCT HEt9QBTEGDsJqNBYLZkSEBA3ozS+02jE6fg7DpMU2KhbVO4MtTlmXvjM31+95Mk3 9XDSESLP0l8Nosd79L33r5Q38enfL8KCs6AYY18qvPIRE28IYFLzkzCvV5TJfTnG mQIDAQAB -----END PUBLIC KEY-----"
+	"data": "e7d0265f614a53dada9ecbe2555930cb4cfc3fc1accf6afb18b35a3619baff59f0dce692edcd51e2284fb8f72cecaf75a6ab5e6cdbfabafcbc1020f606d6fd82",
+	"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjAcsDs6uRwW2EpqRwmOt ZYXPID+rWvcV3ZKmGUr4mUictf/RVk0/o8Q/pGbeeKqfNXTBfvAh4ZcaFmXP3p98 5JtSXS/tDw8/6nkZjLHbb3RDYSGhwMzd5DAkNILd0wwqh1QCdrlda7n4ZXrU77dg CRoWBPwUY8ItZSgOHFhdmU7acmI4iNNPKRfDPzJ5PefquqFrKQCbK7yVL1DnKPX7 56XowLHpYrutlYr9ZaOgZKWaA6NR8ThVVdyhTpU3FhigwdR5UGtAjVU08Ot14H9F 6rUyqtHINjfTQyMxDYiwVmfcAW0UJ1Nsp/ZkBOAUG+FOymHtYTsNbtacMkPi2O16 WwIDAQAB -----END PUBLIC KEY-----"
 }
 ```
 The output is the encrypted value referred to as `encrypted_data_rsa`:
 ```
 {
 "status": 200,
-"encrypted_data_rsa": "DuGcSUU9PuA8GVw0rgy/atvy9kWoQ4AD1q8jm1TrI4t61/IfBomajbfvAv93bOKKGLmUa8a6eJekxVySo6wwLsfy5CaAG1muA5AN9zOae72izTGDpvPC8c/iYAoC5V6wwwWuhH/CrCy2bDN5aKSI8lh9zgoAiKvEzKdMTCoMLOs3RzwOhzqT/yF7OsLM9cW3baFYgxrHtsOyAbEkG2DA0SR3XxDZtJIeLDXyZntqf7UQ7GJ6DGam4bnTe4UuUjNaApESWs/XlQFA1k7C7N9jooSNrvXcwIoMUdWNTJ3DY6KtxSCpwEaZrGuJrCnVZ5qEegCECAXilTccpf6ko+z7BA=="
+"encrypted_data_rsa": "HuQ6xjyEN9nayNAHg34enp89It2e10iew0mh3zyc7ZSMtz/i6weuai+PrLdR+LL3KbITQSJZHA1XDkKNvz7GmV6eDSX7meZWMXQJDVpBYeQYV+v38bGlAFOTmGosCeaK+CeLFYPkC6J1SKulHU07hSNdO4BGkek0/au87ztK2RLo5E7qUjGOtxbfu5zMQEYBghNhXVxfD2jO+Jr8zzkoRPeq7yfKtYtjtR68u6emIkRJIh08KHXZarplHFeDnaJ1onqZMWYB0BbBSJDVt06S4PFzceMk5pdF5MwUe9y8OSzdeD0jsmGfG/YLEtpNSc2IxCO0OtYgw3XbWbnbZvVntA=="
 }
 ```
 
