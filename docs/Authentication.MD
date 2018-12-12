@@ -116,7 +116,9 @@ If Samairah and her sister Sanya both have Noodle Bank accounts and use the same
 # 2. Authentication
 Authentication is a 13-step process. The user being authenticated is referred to as 'requester' and the user carrying out the authentication is referred to as the 'verifier'.
 
-In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the requester. Their primechain addresses are: `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah).
+In this guide, we presume that Noodle Bank is the verifier and Samairah Nagpal is the requester. Their primechain addresses are: 
+* `12pdAHR1Jurv7oSULBxDE7QPBUfDKtAg5t4u3v` (Noodle Bank) and    
+* `1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn` (Samairah)
 
 ### Optional - Use of symmetric encryption
 At any stage, you may optionally use AES symmetric encryption using `post /api/v1/encrypt_data_aes` and passing the data as the parameter:
