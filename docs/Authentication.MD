@@ -29,7 +29,6 @@ Combining the power of blockchain technology and public key cryptography for sec
 
 ---
 
-***Steps 9 through 13***
 ![Blockchain based authentication](http://www.primechaintech.com/img/auth/auth_steps_3.png)
 
 ---
