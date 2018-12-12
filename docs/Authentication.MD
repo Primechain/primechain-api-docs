@@ -320,8 +320,8 @@ Samairah decrypts the encrypted value using her own RSA private key. Samairah us
 2. The `encrypted_data_rsa`
 ```
 {
-	"rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCMBywOzq5HBbYS mpHCY61lhc8gP6ta9xXdkqYZSviZSJy1/9FWTT+jxD+kZt54qp81dMF+8CHhlxoW Zc/en3zkm1JdL+0PDz/qeRmMsdtvdENhIaHAzN3kMCQ0gt3TDCqHVAJ2uV1rufhl etTvt2AJGhYE/BRjwi1lKA4cWF2ZTtpyYjiI008pF8M/Mnk95+q6oWspAJsrvJUv UOco9fvnpejAseliu62Viv1lo6BkpZoDo1HxOFVV3KFOlTcWGKDB1HlQa0CNVTTw 63Xgf0XqtTKq0cg2N9NDIzENiLBWZ9wBbRQnU2yn9mQE4BQb4U7KYe1hOw1u1pwy Q+LY7XpbAgMBAAECggEBAIE2YQ5s496/w2pZXaVuC2SCXEYa2ol/NZsXptPyHYJ8 wbckD8y+TbpV7pBLKIFamL1gNulmty0PHNCMNIvuyfW96fv5rJvX65f3FX+B48Zu F3r66OMbaKoXTmFyXTVRpbDo8bkShcVRf4hNF074/NKJUsZYwovnc7JDivnXBM/g z1KtiR+IzUUBjO/6Vsax6Fdw30tzBhV18serm0Kqa1Fgk8gJrrnfWHm7aQQUj+PE BhwMtFGU89p1bJ4CML9x/NC5aPjpQSg1XfWbB3vn/K2Iea498q+jjSlOLrhGef4e MydqPMwiQ3UxkYvO431kB5UITxZHf9mYm7ucY02hnNkCgYEA8CqQFL1B2ARMVPqp hEgDk6CAfE9kkMmC5G9yBXitfYoT9BirIAhYjiXtoiXVrY8Wv0fsArF/Re7DtgeP qBkeeYLz5TKncVVbSuFak6xpA2DomKDUTFCvZf5A0pcNbclO85Lt1AbbLtBkOmaY V8dZVDdFC0W2PfUSpFMnusXLeOcCgYEAlUKDWVX4tWj2Pr58nBxWu4ySMTHlFNVT HjMGA17jsrNrQFRw3+aWxjamTEUvxczvegj2o+XpQLaG7hCz46t0yWOrvvEVPgpp njlVo+Zx1mZwZO1FESE3FENtNTeeScZOvE6OZ39xyalF2BlNY9BSxbx1YHbz0wog dyuFqxP9AG0CgYEAhOG36JGyrbfrGBW812EVAYiLrrwq02V7k7MJ7ncP3ucYFTXU 8RtNDBF2QwIWETqbhmhf8DmPRv1NshjK5mJHl0nacpUtSirFIVBA0nZRgDoNV+2c qUD3W0JrUVmcZ4M7uM8x4d+NRICvBBUh82dsSIlwHUWMCQnhL6SG1fN8mj8CgYBg OehKUPWtpsSSQOY/EroL4Z1iX+NrYfhbENQAmk07qRYs/ANlJdjwYs0lgLlC0VNW nq67jX6qPMKSemwvDBuXtk1EJVLnk3jyC86dgvTDH3m4Z4tOdtZ2lt2yIHBI6bNb DV4bdXtbYmjn37AX+HdUiaI2lZmt5ep2SbW8TH+gpQKBgG3j7+t5N9wsCMv0JuS3 k1Kx2gY2tJfn3+JWd5FNPh5HUwD+gkJyuX2sJSKk8o3xHvxcM/2SCHoqLHUdXbQ9 q0AEVEwy6XV1wsJ+6ASoA+CbcL3mllIbB1E+fYiA4km9RabHwTbh82rogsOUMPXm 9qVefyQneafYs+zz1RuX0ya3 -----END PRIVATE KEY-----",
-	"encrypted_data_rsa": "HuQ6xjyEN9nayNAHg34enp89It2e10iew0mh3zyc7ZSMtz/i6weuai+PrLdR+LL3KbITQSJZHA1XDkKNvz7GmV6eDSX7meZWMXQJDVpBYeQYV+v38bGlAFOTmGosCeaK+CeLFYPkC6J1SKulHU07hSNdO4BGkek0/au87ztK2RLo5E7qUjGOtxbfu5zMQEYBghNhXVxfD2jO+Jr8zzkoRPeq7yfKtYtjtR68u6emIkRJIh08KHXZarplHFeDnaJ1onqZMWYB0BbBSJDVt06S4PFzceMk5pdF5MwUe9y8OSzdeD0jsmGfG/YLEtpNSc2IxCO0OtYgw3XbWbnbZvVntA=="
+ "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCMBywOzq5HBbYS mpHCY61lhc8gP6ta9xXdkqYZSviZSJy1/9FWTT+jxD+kZt54qp81dMF+8CHhlxoW Zc/en3zkm1JdL+0PDz/qeRmMsdtvdENhIaHAzN3kMCQ0gt3TDCqHVAJ2uV1rufhl etTvt2AJGhYE/BRjwi1lKA4cWF2ZTtpyYjiI008pF8M/Mnk95+q6oWspAJsrvJUv UOco9fvnpejAseliu62Viv1lo6BkpZoDo1HxOFVV3KFOlTcWGKDB1HlQa0CNVTTw 63Xgf0XqtTKq0cg2N9NDIzENiLBWZ9wBbRQnU2yn9mQE4BQb4U7KYe1hOw1u1pwy Q+LY7XpbAgMBAAECggEBAIE2YQ5s496/w2pZXaVuC2SCXEYa2ol/NZsXptPyHYJ8 wbckD8y+TbpV7pBLKIFamL1gNulmty0PHNCMNIvuyfW96fv5rJvX65f3FX+B48Zu F3r66OMbaKoXTmFyXTVRpbDo8bkShcVRf4hNF074/NKJUsZYwovnc7JDivnXBM/g z1KtiR+IzUUBjO/6Vsax6Fdw30tzBhV18serm0Kqa1Fgk8gJrrnfWHm7aQQUj+PE BhwMtFGU89p1bJ4CML9x/NC5aPjpQSg1XfWbB3vn/K2Iea498q+jjSlOLrhGef4e MydqPMwiQ3UxkYvO431kB5UITxZHf9mYm7ucY02hnNkCgYEA8CqQFL1B2ARMVPqp hEgDk6CAfE9kkMmC5G9yBXitfYoT9BirIAhYjiXtoiXVrY8Wv0fsArF/Re7DtgeP qBkeeYLz5TKncVVbSuFak6xpA2DomKDUTFCvZf5A0pcNbclO85Lt1AbbLtBkOmaY V8dZVDdFC0W2PfUSpFMnusXLeOcCgYEAlUKDWVX4tWj2Pr58nBxWu4ySMTHlFNVT HjMGA17jsrNrQFRw3+aWxjamTEUvxczvegj2o+XpQLaG7hCz46t0yWOrvvEVPgpp njlVo+Zx1mZwZO1FESE3FENtNTeeScZOvE6OZ39xyalF2BlNY9BSxbx1YHbz0wog dyuFqxP9AG0CgYEAhOG36JGyrbfrGBW812EVAYiLrrwq02V7k7MJ7ncP3ucYFTXU 8RtNDBF2QwIWETqbhmhf8DmPRv1NshjK5mJHl0nacpUtSirFIVBA0nZRgDoNV+2c qUD3W0JrUVmcZ4M7uM8x4d+NRICvBBUh82dsSIlwHUWMCQnhL6SG1fN8mj8CgYBg OehKUPWtpsSSQOY/EroL4Z1iX+NrYfhbENQAmk07qRYs/ANlJdjwYs0lgLlC0VNW nq67jX6qPMKSemwvDBuXtk1EJVLnk3jyC86dgvTDH3m4Z4tOdtZ2lt2yIHBI6bNb DV4bdXtbYmjn37AX+HdUiaI2lZmt5ep2SbW8TH+gpQKBgG3j7+t5N9wsCMv0JuS3 k1Kx2gY2tJfn3+JWd5FNPh5HUwD+gkJyuX2sJSKk8o3xHvxcM/2SCHoqLHUdXbQ9 q0AEVEwy6XV1wsJ+6ASoA+CbcL3mllIbB1E+fYiA4km9RabHwTbh82rogsOUMPXm 9qVefyQneafYs+zz1RuX0ya3 -----END PRIVATE KEY-----",
+ "encrypted_data_rsa": "HuQ6xjyEN9nayNAHg34enp89It2e10iew0mh3zyc7ZSMtz/i6weuai+PrLdR+LL3KbITQSJZHA1XDkKNvz7GmV6eDSX7meZWMXQJDVpBYeQYV+v38bGlAFOTmGosCeaK+CeLFYPkC6J1SKulHU07hSNdO4BGkek0/au87ztK2RLo5E7qUjGOtxbfu5zMQEYBghNhXVxfD2jO+Jr8zzkoRPeq7yfKtYtjtR68u6emIkRJIh08KHXZarplHFeDnaJ1onqZMWYB0BbBSJDVt06S4PFzceMk5pdF5MwUe9y8OSzdeD0jsmGfG/YLEtpNSc2IxCO0OtYgw3XbWbnbZvVntA=="
 }
 ```
 The output is the decrypted data, which in this case is the hash.
@@ -361,13 +361,12 @@ This is done using `post /api/v1/encrypt_data_rsa` and passing the following par
 2. `rsa_public_key` of Noodle Bank
 ```
 {
-	"data": 
-		{
-			"signature":"H60blR7quU3GD5S3Apdh1uqM7ydEzMNRiQNAtKi6uOkdMhO14bjZpopURvbCoRKCsXusBRL7Yx03QiW0lvHO554=" ,
-			"primechain_address":"16g8d8U3K3PbcvY6LYafgZ23JrnxRXwZqBP8sA", 
-			"data":"e7d0265f614a53dada9ecbe2555930cb4cfc3fc1accf6afb18b35a3619baff59f0dce692edcd51e2284fb8f72cecaf75a6ab5e6cdbfabafcbc1020f606d6fd82"    
-		},
-	"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkydbbI+68zjRmp0n7Yss NwKbUl1IzBEqgm0Rp/utue8VNPfZaW7YrnwmEO7jO939C0/xAgayE6vR5VT7sItX uMKwvP0DozxWtUGGcoHEZgImzSXJGomZpr2+M6TdW+kbisUUKbjIApQvnGlh93Zv XiRTsvMkxC1Lf8Wkj52V7Xdn7O2p1tGg/j4wv78kT9wJ67xEnBmsGpGUZZYPAMZr j0WrsakvT5vqwtkGum2OI9eRNlB7qgDsuOrxAm3jyx17s+tOi2Sasn1GywHQmU6n YpCSsVv6ywGCMH5xLGAWT3glGCx2mwjAi+/QbpSXIWorlzzlZOR2xI+844dyDxbW MQIDAQAB -----END PUBLIC KEY-----"
+ "data": 
+  {
+    "signature":"H60blR7quU3GD5S3Apdh1uqM7ydEzMNRiQNAtKi6uOkdMhO14bjZpopURvbCoRKCsXusBRL7Yx03QiW0lvHO554=",
+    "primechain_address":"16g8d8U3K3PbcvY6LYafgZ23JrnxRXwZqBP8sA",      "data":"e7d0265f614a53dada9ecbe2555930cb4cfc3fc1accf6afb18b35a3619baff59f0dce692edcd51e2284fb8f72cecaf75a6ab5e6cdbfabafcbc1020f606d6fd82"    
+  },
+ "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkydbbI+68zjRmp0n7Yss NwKbUl1IzBEqgm0Rp/utue8VNPfZaW7YrnwmEO7jO939C0/xAgayE6vR5VT7sItX uMKwvP0DozxWtUGGcoHEZgImzSXJGomZpr2+M6TdW+kbisUUKbjIApQvnGlh93Zv XiRTsvMkxC1Lf8Wkj52V7Xdn7O2p1tGg/j4wv78kT9wJ67xEnBmsGpGUZZYPAMZr j0WrsakvT5vqwtkGum2OI9eRNlB7qgDsuOrxAm3jyx17s+tOi2Sasn1GywHQmU6n YpCSsVv6ywGCMH5xLGAWT3glGCx2mwjAi+/QbpSXIWorlzzlZOR2xI+844dyDxbW MQIDAQAB -----END PUBLIC KEY-----"
 }
 ```
 The output is the encrypted value referred to as `encrypted_data_rsa`:
@@ -395,7 +394,12 @@ The output is the decrypted data referred to as `decrypted_data`
 ```
 {
 "status": 200,
-"decrypted_data": "{"signature":"H60blR7quU3GD5S3Apdh1uqM7ydEzMNRiQNAtKi6uOkdMhO14bjZpopURvbCoRKCsXusBRL7Yx03QiW0lvHO554=","primechain_address":"16g8d8U3K3PbcvY6LYafgZ23JrnxRXwZqBP8sA","data":"e7d0265f614a53dada9ecbe2555930cb4cfc3fc1accf6afb18b35a3619baff59f0dce692edcd51e2284fb8f72cecaf75a6ab5e6cdbfabafcbc1020f606d6fd82"}"
+"decrypted_data": " 
+ {
+  "signature":"H60blR7quU3GD5S3Apdh1uqM7ydEzMNRiQNAtKi6uOkdMhO14bjZpopURvbCoRKCsXusBRL7Yx03QiW0lvHO554=",
+  "primechain_address":"16g8d8U3K3PbcvY6LYafgZ23JrnxRXwZqBP8sA",
+  "data":"e7d0265f614a53dada9ecbe2555930cb4cfc3fc1accf6afb18b35a3619baff59f0dce692edcd51e2284fb8f72cecaf75a6ab5e6cdbfabafcbc1020f606d6fd82"
+  }"
 }
 ```
 ### Step 13 - Verification of the digital signature
