@@ -19,15 +19,21 @@ Combining the power of blockchain technology and public key cryptography for sec
 2. Verification and encryption keys are stored on the blockchain.
 3. Protects against critical cyber attacks such as phishing, man-in-the-middle, replay attacks.
 
-***Steps 1 through 4***
+---
+
 ![Blockchain based authentication](http://www.primechaintech.com/img/auth/auth_steps_1.png)
+
+---
 
 ***Steps 5 through 8***
 ![Blockchain based authentication](http://www.primechaintech.com/img/auth/auth_steps_2.png)
 
+---
+
 ***Steps 9 through 13***
 ![Blockchain based authentication](http://www.primechaintech.com/img/auth/auth_steps_3.png)
 
+---
 
 ## [1. Onboarding a user](#1-onboarding-a-user)   
 [1.1 User has multiple devices](#11-user-has-multiple-devices)   
