@@ -1,6 +1,6 @@
 # Blockchain based authentication
 
-Primechain-API combines the power of blockchain technology with public key cryptography to enable:
+***Primechain-API combines the power of blockchain technology with public key cryptography to enable:***
 1. Secure authentication and identification of smart-phones and other devices
 2. Securing & encrypting online communications
 3. Password-less login systems
@@ -8,7 +8,7 @@ Primechain-API combines the power of blockchain technology with public key crypt
 5. Authenticating DNS records & preventing spoofing attacks
 7. Electronic signatures
 
-Blockchain based authentication has some special features:
+***Blockchain based authentication has some special features:***
 1. Signing and decryption keys stay on the device.
 2. Verification and encryption keys are stored on the blockchain.
 3. Protects against critical cyber attacks such as phishing, man-in-the-middle, replay attacks.
