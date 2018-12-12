@@ -361,21 +361,20 @@ This is done using `post /api/v1/encrypt_data_rsa` and passing the following par
 2. `rsa_public_key` of Noodle Bank
 ```
 {
-  "data": 
-        {
-           "signature":"H3i7JTbIfwe/jf05z3ea+O/Ljl0DHLg7MzTc4RE6FRd7M79SLGgq1zzuPkzffXHjecbcAMLtjHqoxUVRskSHfmQ=" ,
-           "primechain_address":"1JfukBtEC2nvGGexKYkfhetuiDJ1FP74w461Gn", 
-         "data":"d7634a35369c47bf26055744032f85e0e6f1d3645f29c97674770cde95b6631db9a76fa2e93a018fec94e65ba11c752b8ca04403a3cf1b24c69412fc878e30c8"    
-         },
-  "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1XUamZGgGBIKgUdXW35b 9V1PQ6jjv87erZY6XxW1RvdSBxfnYKIF+6FgTX1x/Rz54ynZagTA0CkdkYp+yKrG U53Cg/4vNl6MV2Ky/YgrBr1pOZzo89AyAt7u0lAPmkOXsewVTSSfQteQN4UoCtKh fPPgGiMlgKNvbH0pl3mD7USqI3Zo9VLm+P4qdyPG75mSu4t6i+xLWQOe9FtYUaR+ dy8OB8PBGIgkx3Q9Ik0xtBNTcYRAunJXULFy0T2xvmv73PS1OrJgNwXHEm/IDI+/ 5amvxtQirt7VBeubfQIyBcBGKSve2BRs2Fuw1ftZ4usSmgUTMZSi2NUU1Fhw1vQo WwIDAQAB -----END PUBLIC KEY-----"
+	"data": 
+		{
+			"signature":"H60blR7quU3GD5S3Apdh1uqM7ydEzMNRiQNAtKi6uOkdMhO14bjZpopURvbCoRKCsXusBRL7Yx03QiW0lvHO554=" ,
+			"primechain_address":"16g8d8U3K3PbcvY6LYafgZ23JrnxRXwZqBP8sA", 
+			"data":"e7d0265f614a53dada9ecbe2555930cb4cfc3fc1accf6afb18b35a3619baff59f0dce692edcd51e2284fb8f72cecaf75a6ab5e6cdbfabafcbc1020f606d6fd82"    
+		},
+	"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkydbbI+68zjRmp0n7Yss NwKbUl1IzBEqgm0Rp/utue8VNPfZaW7YrnwmEO7jO939C0/xAgayE6vR5VT7sItX uMKwvP0DozxWtUGGcoHEZgImzSXJGomZpr2+M6TdW+kbisUUKbjIApQvnGlh93Zv XiRTsvMkxC1Lf8Wkj52V7Xdn7O2p1tGg/j4wv78kT9wJ67xEnBmsGpGUZZYPAMZr j0WrsakvT5vqwtkGum2OI9eRNlB7qgDsuOrxAm3jyx17s+tOi2Sasn1GywHQmU6n YpCSsVv6ywGCMH5xLGAWT3glGCx2mwjAi+/QbpSXIWorlzzlZOR2xI+844dyDxbW MQIDAQAB -----END PUBLIC KEY-----"
 }
-
 ```
 The output is the encrypted value referred to as `encrypted_data_rsa`:
 ```
 {
 "status": 200,
-"encrypted_data_rsa": "KVzEEUAnMZMLFMK0FV+GHI6B4fY5q49zf9l6BNt4LXOJBVba/J0y1g5SX1K4Ol0S8p7z+0yOWUkXllU6wu99Sw6VntCJJK21zlyKGEtqGpReEXsS42ibXY+wMmoEU/aVd84pLIbfSAc5vBP5OpvmMD3/JPiPtDFqqIuEnadAerjoCwWpBsdxBm+YWB0nOpwabz7rpamjvrsS3Q3f3p67T+a/CM9JzrZxwG/UBbqbxWU2dPfpy7YuqFSLEuQj0DAPOOv3hCcaIQAXdWejcURyxTB7ZIpos+od5Wnsx/2e6ANMHgSJqCiLAs0xzOa8uLeLV8hFQk9HoKSB412kTR4PESL6n3NqRkQh403ui5EvP02j5bF+B7i/xA7EQfuVIj8F28woH3pOJ4rrKGPl7J11VV8R6OoQbo6d4n6tIQDdS2mpYcjzdpEWeM7PGCB0mRRDxJaToBV35Z5WvBPVO/ug1Eh4eQP+7YlTVEliDjEggX2GrEH945kK3oCxsDwysmR1w5fQUeguflejMYvSOHrcIVOl/0Z/t1WFtD6TYVcs4xKYiPKPbdzlm85S3q4ArlNi3yo47zLWYvGs11QbiOvetTDhSYKSq8YiTgbPC9vDhZVgxvNbZe+k9psQOvtljF0WjYarmuHGyQTv9vpY7eziEnSHCPH++LKwF+RkwMVOmJM="
+"encrypted_data_rsa": "R15SEiQtvY2QpxAY5MMXq2ar51ByO2y8TQcQtG9cge7SDPxT2cx8pQ8JcC89DVZuifLv4n6BGPtl/iIJDRtbyW+lEci+iVIGkOo5wM+Qz4PxIUUWGYRMGDPv2/K7tOHfEInNw+fjM5oS1NJRsq+ofjCxi3BN4hw7MW27BB8PCUVnKMMxLNL6fWuszqFIFVFPltH2r0sotwB1xyWUUNOZiZYIYgCMUwuoMhxRiDryR6vvQaadu774W4w2GfT63lHNkCcqK4KlQKovR6RP6XTh/1jBw8O0FHtnE0hVsheINFTGb6M3fQv48mbUzHt3e627IoQJ8DAcJoE6VXhxA5J1XzmIo48pHWgtvSOzt+Nti4kF8lTszlMb1cttdaG6wsJykqcSjW0NDD6wh2/4h3g7u45TzcgPpw8Ixmf6HFUtB1VP+P5EQuA2kR/ZbQSFgo1CUw0LhMzQ3+xnbDnZkS/TWbuwKtd9RcUQ9HEFdn3xFzrvlBQ3bqwfMXMzC4Y6NVhtV+UR1cQayteJiYTuea0XLOhNjerFCDJlG6tcinHIsNw+CSLKFrjjWo97v5U7llb+bUpAP1xYRmS3EPVzP1Eu00ymhNlyUdIVZbI48si2p0ePhorE2S8bSOnOOBt6QW9rOSG4VXAVBjUrHOw/nNIwWoYXXs6oSvOCykcelRNjMF0="
 }
 ```
 
