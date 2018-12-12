@@ -41,32 +41,37 @@ Blockchain technology is ideal for banks and financial service providers because
 25.	Vendor on-boarding & rating
 
 ### 2. Supply Chain
-1. Customer warranty management and Tracking returned products
-2. Digital marketplaces
-3. Digitising processes & eliminating paperwork
-4. Electronic signatures
-5. Eliminating fraud
-6. Employee background verification
-7. Enabling pricing transparency
-8. Forward stocking location mapping
-9. Inventory Tracking
-10. Invoice discounting / supply chain finance
-11. Logistics Tracking
-12. Loyalty program management
-13. Managing safety and quality & Risk mitigation
-14. Pilferage tracking
-15. Prevention of counterfeits
-16. Production tracking
-17. Regulatory compliance
-18. Repository of documentary credits
-19. Repository of trade documents
-20. Sharing operations data
-21. Smart Contract Management
-22. Ssuppliers and vendor onboarding & management
-23. Supply chain transparency
-24. Tracking asset maintenance
-25. Tracking components quality and handling product recalls
-26. Tracking field tech support personnel
+1.	[Auction of assets](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/auction.md)
+2.	[Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
+3. Contract authentication, verification & storage
+4. Customer warranty management and Tracking returned products
+5. Digital marketplaces
+6. Digitising processes & eliminating paperwork
+7. [Digital signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD)
+8. Eliminating fraud
+9. Employee background verification
+10. Encrypted communication
+11.	[Encrypted data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD)
+12. Forward stocking location mapping
+13. Inventory Tracking
+14. Invoice discounting / supply chain finance
+15. Logistics Tracking
+16. Loyalty program management
+17.	Loyalty program lifecycle management
+18. Managing safety and quality & Risk mitigation
+19. Pilferage tracking
+20. Prevention of counterfeits
+21. Pricing transparency
+22. Production tracking
+23. Regulatory compliance
+24. Repository of records 
+25. Sharing operations data
+26. Smart Contract Management
+27. Supply chain transparency
+28. Tracking asset maintenance
+29. Tracking components quality and handling product recalls
+30. Tracking field tech support personnel
+31. Vendor on-boarding & rating
 
 ### 3. Capital markets
 By providing transparent real-time data and increasing the efficiency in settlement of transactions and processing, blockchains are immensely useful for capital markets. Primechain-API use cases for Capital markets include:
