@@ -1,6 +1,17 @@
 # Primechain-API use cases
 
-### 1. Banking & related Financial services
+1. [Banking and related Financial services](#1-banking-and-related-financial-services)
+2. [Supply Chain](#2-supply-chain)
+3. [Capital markets](#3-capital-markets)
+4. [Government](#4-government)
+5. [Healthcare and pharmaceuticals](#5-healthcare-and-pharmaceuticals)
+6. [Insurance](#6-insurance)
+7. [Aviation](#7-aviation)
+8. [Shipping and logistics](#8-shipping-and-logistics)
+9. [Telecommunications](#9-telecommunications)
+10. [Defence and military](#10-defence-and-military)
+
+### 1. Banking and related Financial services
 Blockchain technology is ideal for banks and financial service providers because it offers real-time automated settlement in addition to vastly improved security, transparency & auditability with reduced infrastructure cost. Primechain API use cases for banking & related financial services include:
 
 1.	[Auction of assets](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/auction.md)
@@ -29,7 +40,10 @@ Blockchain technology is ideal for banks and financial service providers because
 24.	Syndicated loans
 25.	Vendor on-boarding & rating
 
-### 2. Capital markets
+### 2. Supply Chain
+
+
+### 3. Capital markets
 By providing transparent real-time data and increasing the efficiency in settlement of transactions and processing, blockchains are immensely useful for capital markets. Primechain-API use cases for Capital markets include:
 
 1. Securities lifecycle management - creation, issuing, trading, escrow, redemption, retirement (for equity & preference shares, debentures, bonds, options, derivatives etc)
@@ -42,7 +56,7 @@ By providing transparent real-time data and increasing the efficiency in settlem
 8. Depository receipts
  
 
-### 3. Government
+### 4. Government
 Blockchain technology can maximize integrity and minimize fraud & errors in Government services. Primechain-API use cases for Government sector include:
 
 1. assuring the integrity of operating systems, software, data and firmware used in critical infrastructure
@@ -53,7 +67,7 @@ Blockchain technology can maximize integrity and minimize fraud & errors in Gove
 6. Document authentication, verification & storage
  
 
-### 4. Healthcare & pharmaceuticals
+### 5. Healthcare and pharmaceuticals
 Healthcare & Pharmaceutical industry can greatly benefit from the immutable data storage, authentication and verification features of blockchain technology. Primechain-API use cases for Healthcare & pharmaceuticals include:
 
 1. minimising counterfeit drugs through transparency in transactions between manufacturers, wholesalers, pharmacists and patients.
@@ -63,7 +77,7 @@ Healthcare & Pharmaceutical industry can greatly benefit from the immutable data
 5. Document authentication, verification & storage
  
 
-### 5. Insurance
+### 6. Insurance
 Blockchain technology can reduce time, cost and risk across the entire insurance value chain. Primechain-API use cases for insurance include:
 
 1. Blockchain enabled micro insurance
@@ -75,14 +89,6 @@ Blockchain technology can reduce time, cost and risk across the entire insurance
 7. Unclaimed Life Insurance repository
 8. National Policy & Claims Records repository
  
-
-### 6. Manufacturing
-The manufacturing sector can greatly benefit from the immutable data storage, authentication and verification features of blockchain technology. Primechain-API use cases for manufacturing include:
-
-1. Supply Chain Management
-2. Document authentication, verification & storage
- 
-
 ### 7. Aviation
 The aviation industry can greatly benefit from the immutable data storage, authentication and verification features of blockchain technology. Primechain-API use cases for the aviation sector include:
 
@@ -94,7 +100,7 @@ The aviation industry can greatly benefit from the immutable data storage, authe
 6. aircraft components and systems performance monitoring
 7. establishing the provenance of every hardware and software component
 
-### 8. Shipping & logistics
+### 8. Shipping and logistics
 Blockchain technology's ability to ensure tamper-resistance and realtime data sharing can save the shipping and container logistics industry billions of dollars. It can also reduce the time consumed by archaic processes which require countless emails, phone calls and faxes. Primechain-API use cases for shipping & logistics include:
 
 1. digitising processes
@@ -111,23 +117,10 @@ Telecommunications companies can leverage blockchain technology to create new bu
 5. adding blockchain power to their mobile payment systems
  
 
-### 10. Defence & military
+### 10. Defence and military
 The military can greatly benefit from the immutable data storage, authentication and verification features of blockchain technology. Primechain-API use cases for telecom include:
 
 1. secure messaging systems for resilient communications.
 2. assuring the integrity of operating systems, software, data and firmware used in military infrastructure.
 3. establishing the provenance of every hardware and software component
  
-
-### 11. Other use-cases
-1. Auctions
-2. Contract management
-3. Employee background verification
-4. Escrow
-5. Fund portfolio management
-6. Identity management
-7. Internet of Things
-8. Peer to peer trading
-9. Regulatory reporting
-10. Vendor on-boarding
-11. Voting
