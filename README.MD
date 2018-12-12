@@ -1,6 +1,6 @@
 # Primechain API
 
-[![Electronic Signature Engine](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
+[![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 
 Primechain APIs make it very simple for developers to add blockchain power to their code - smart asset lifecycle management, electronic signatures, encrypted data storage & more.
 
@@ -36,6 +36,10 @@ Primechain APIs make it very simple for developers to add blockchain power to th
 ## 2. Documentation
 Prmechain API documentation is available at:    
 https://github.com/Primechain/primechain-api-docs/blob/master/Documentation.md
+
+To try Primechain API, you can use [Advance REST Client](https://install.advancedrestclient.com/install) or a similar tool.
+
+![Primechain-API](http://www.primechaintech.com/img/api_documentation/rest.png)
 
 ## 3. Sandbox
 Email us on info@primechain.in for details on accessing the Primechain-API sandbox.
