@@ -1,5 +1,11 @@
 # Blockchain based authentication
 
+[![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
+
+Combining the power of blockchain technology and public key cryptography for secure authentication and identification of people and devices.
+
+![Blockchain based authentication](http://www.primechaintech.com/img/auth/auth1.jpg)
+
 ***Primechain-API combines the power of blockchain technology with public key cryptography to enable:***
 1. Secure authentication and identification of smart-phones and other devices
 2. Securing & encrypting online communications
@@ -12,6 +18,10 @@
 1. Signing and decryption keys stay on the device.
 2. Verification and encryption keys are stored on the blockchain.
 3. Protects against critical cyber attacks such as phishing, man-in-the-middle, replay attacks.
+
+![Blockchain based authentication](http://www.primechaintech.com/img/auth/steps_1.png)
+
+steps_1
 
 
 ## [1. Onboarding a user](#1-onboarding-a-user)   
