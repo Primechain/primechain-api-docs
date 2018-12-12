@@ -41,7 +41,32 @@ Blockchain technology is ideal for banks and financial service providers because
 25.	Vendor on-boarding & rating
 
 ### 2. Supply Chain
-
+1. Customer warranty management and Tracking returned products
+2. Digital marketplaces
+3. Digitising processes & eliminating paperwork
+4. Electronic signatures
+5. Eliminating fraud
+6. Employee background verification
+7. Enabling pricing transparency
+8. Forward stocking location mapping
+9. Inventory Tracking
+10. Invoice discounting / supply chain finance
+11. Logistics Tracking
+12. Loyalty program management
+13. Managing safety and quality & Risk mitigation
+14. Pilferage tracking
+15. Prevention of counterfeits
+16. Production tracking
+17. Regulatory compliance
+18. Repository of documentary credits
+19. Repository of trade documents
+20. Sharing operations data
+21. Smart Contract Management
+22. Ssuppliers and vendor onboarding & management
+23. Supply chain transparency
+24. Tracking asset maintenance
+25. Tracking components quality and handling product recalls
+26. Tracking field tech support personnel
 
 ### 3. Capital markets
 By providing transparent real-time data and increasing the efficiency in settlement of transactions and processing, blockchains are immensely useful for capital markets. Primechain-API use cases for Capital markets include:
