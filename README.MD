@@ -21,6 +21,8 @@ Today, the Internet enables the movement of data (videos, text, photos and more)
 
 Blockchain is a revolutionary technology that enables "internets of value" that can move value in seconds - money, loyalty points, equity shares, bonds, coupons, votes, intellectual property and much more.
 
+Blockchain solutions can be permissioned (e.g. a Government run land registry) or permission-less (e.g. Bitcoin, where anyone can become a miner). Blockchain solutions can be private (e.g. a contract management system implemented in a pharmaceutical company), public (e.g. an asset backed cryptocurrency) or hybrid (e.g. a group of banks running a shared KYC platform). 
+
 ## 1.1 Blockchain benefits
 
 1. Blockchain removes the characteristic of infinite reproducibility from a digital asset. It confirms that each unit of value was transferred only once, solving the long-standing problem of double spending.
@@ -67,7 +69,23 @@ Primechain APIs are RESTful JSON APIs for interacting with blockchains that allo
 
 4.	Vastly increase the scalability of your applications.
 
-Primechain APIs make it very simple for developers to add blockchain power to their code - smart asset lifecycle management, electronic signatures, encrypted data storage & more.
+***Primechain API categories include:***
+
+1. Blockchain administration
+
+2. Entity creation & permissions management
+
+3. Digital Signatures
+
+4. Data Streams
+
+5. Smart Asset Lifecycle Management
+
+6. Offer management
+
+7. Encrypted data storage
+
+8. Blockchain based authentication
 
 ***A typical Primechain node:***
 ![Primechain-node](http://www.primechaintech.com/img/api_documentation/node2.png)
