@@ -1,8 +1,8 @@
 # Others
 
 [1. Upgrading Primechain-API](#1-upgrading-primechain-api)   
-[2. Create passwords](#3-create-passwords)   
-[3. Create UUID](#4-create-uuid)   
+[2. Create passwords](#2-create-passwords)   
+[3. Create UUID](#3-create-uuid)   
 
 ## 1. Upgrading Primechain-API
 Login to the server and execute the following commands:
