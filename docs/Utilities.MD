@@ -1,4 +1,4 @@
-# Others
+# Utilities
 
 [1. Upgrading Primechain-API](#1-upgrading-primechain-api)   
 [2. Create passwords](#2-create-passwords)   
