@@ -3,7 +3,6 @@
 [1. Upgrading Primechain-API](#1-upgrading-primechain-api)   
 [2. Create passwords](#2-create-passwords)   
 [3. Create UUID](#3-create-uuid)   
-[4. Sawtooth](#4-sawtooth)
 
 ## 1. Upgrading Primechain-API
 Login to the server and execute the following commands:
@@ -34,6 +33,3 @@ To get a universally unique identifier (UUID), use `get /api/v1/uuid`
 "uuid": "aa5fcef5-ffc7-45c9-85a2-357f0d0057fc"
 }
 ```
-
-## 4. Sawtooth
-
