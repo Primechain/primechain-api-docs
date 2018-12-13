@@ -78,14 +78,13 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
 ## 10. [Use cases](https://github.com/Primechain/primechain-api-docs/blob/master/use-cases.MD)
 
-## [Others](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Others.MD)
+## 11. [Utilities](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Utilities.MD)
 
-1. [Upgrading Primechain-API](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Others.MD#1-upgrading-primechain-api)    
-2. [Create passwords](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Others.MD#2-create-passwords)   
-3. [Create UUID](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Others.MD#3-create-uuid)   
-4. [Sawtooth](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Others.MD#4-sawtooth)
+1. [Upgrading Primechain-API](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Utilities.MD#1-upgrading-primechain-api)    
+2. [Create passwords](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Utilities.MD#2-create-passwords)   
+3. [Create UUID](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Utilities.MD#3-create-uuid)   
 
-## [Hyperledger Sawtooth](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD)
+## 12. [Hyperledger Sawtooth](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD)
 
 1. [Create key pair](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD#1-create-key-pair)
 2. [Publish data to the blockchain](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD#2-publish-data-to-the-blockchain)
