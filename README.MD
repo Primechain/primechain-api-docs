@@ -15,13 +15,13 @@ Primechain APIs make it very simple for developers to add blockchain power to th
 5. [About Primechain Technologies](#5-about-primechain-technologies)
 
 
-## 1. Introduction
+# 1. Introduction
 
 Today, the Internet enables the movement of data (videos, text, photos and more) globally in milliseconds. But try moving value (money, loyalty points etc.) and you will be surprised by the costs, inefficiencies and time delays.
 
 Blockchain is a revolutionary technology that enables "internets of value" that can move value in seconds - money, loyalty points, equity shares, bonds, coupons, votes, intellectual property and much more.
 
-### 1.1 Blockchain benefits
+## 1.1 Blockchain benefits
 
 1. Blockchain removes the characteristic of infinite reproducibility from a digital asset. It confirms that each unit of value was transferred only once, solving the long-standing problem of double spending.
 
@@ -41,7 +41,7 @@ Blockchain is a revolutionary technology that enables "internets of value" that 
 
 9. Blockchains greatly improve auditability and streamlines paperwork.
 
-### 1.2 Blockchain pain points
+## 1.2 Blockchain pain points
 
 Blockchain is a world-changing technology, but it suffers from some pain points:
 
@@ -53,7 +53,7 @@ Blockchain is a world-changing technology, but it suffers from some pain points:
 
 4. There is a severe shortage of skilled blockchain developers.
 
-### 1.3 Primechain API
+## 1.3 Primechain API
 
 Primechain APIs are RESTful JSON APIs for interacting with blockchains that allow developers to add blockchain power to their solutions in minutes.
 
@@ -77,26 +77,26 @@ Primechain APIs make it very simple for developers to add blockchain power to th
 
 ![Illustrative layout](http://www.primechaintech.com/img/api_documentation/b2_outline2.png)
 
-## 2. Primechain-API use cases
+# 2. Primechain-API use cases
 
 A partial list of Primechain-API use cases is at:   
 https://github.com/Primechain/primechain-api-docs/blob/master/use-cases.MD
 
 
-## 3. Documentation
-Prmechain API documentation is available at:    
+# 3. Documentation
+Primechain API documentation is available at:    
 https://github.com/Primechain/primechain-api-docs/blob/master/Documentation.md
 
 To try Primechain API, you can use [Advance REST Client](https://install.advancedrestclient.com/install) or a similar tool.
 
 ![Primechain-API](http://www.primechaintech.com/img/api_documentation/rest.png)
 
-## 4. Sandbox
+# 4. Sandbox
 Email us on info@primechain.in for details on accessing the Primechain-API sandbox.
 
 To view a sample nodeJS application built on Primechain-API, see:
 http://169.63.131.117:2206/user/dashboard
 
 
-## 5. About Primechain Technologies
+# 5. About Primechain Technologies
 Primechain API are developed and maintained by [Primechain™ Technologies Pvt. Ltd.](http://www.primechaintech.com), a blockchain startup with the mission of building blockchains for a better world. We operate the Bankchain community of banks and maintain the Blockchain Security Controls. 
