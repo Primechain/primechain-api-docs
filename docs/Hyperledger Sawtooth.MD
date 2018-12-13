@@ -2,7 +2,7 @@
 
 [1. Create key pair](#1-create-key-pair)   
 [2. Publish data to the blockchain](#2-publish-data-to-the-blockchain)     
-[3. Retrieve data from the blockchain](#retrieve-data-from-the-blockchain)    
+[3. Retrieve data from the blockchain](#3-retrieve-data-from-the-blockchain)    
 
 ## 1. Create key pair
 To create a key pair, use `get /api/v1/create_user_key_sawtooth`
@@ -36,7 +36,7 @@ Output will be the Sawtooth address for the transaction.
 }
 ```
 
-## Retrieve data from the blockchain
+## 3. Retrieve data from the blockchain
 To retrieve data from the blockchain, use `post /api/v1/get_data_sawtooth` and pass the Sawtooth address for the transaction.
 ```
 {
