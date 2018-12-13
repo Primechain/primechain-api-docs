@@ -6,13 +6,15 @@ Combining the power of blockchain technology and public key cryptography for sec
 
 ![Blockchain based authentication](http://www.primechaintech.com/img/auth/auth1.jpg)
 
+The Internet of things (IoT) is the network of devices, vehicles, and home appliances that contain electronics, software, actuators, and connectivity which allows these things to connect, interact and exchange data. From airplanes, cars & drones to medical devices, robots, security cameras & smartphones, all aspects of our lives are touched by IoT devices. The number of IoT devices is likely to cross 200 billion by 2020.
+
 ***Primechain-API combines the power of blockchain technology with public key cryptography to enable:***
-1. Secure authentication and identification of smart-phones and other devices
+1. Secure authentication and identification of smart-phones, other devices & users
 2. Securing & encrypting online communications
 3. Password-less login systems
 4. Preventing fake emails & phishing
 5. Authenticating DNS records & preventing spoofing attacks
-7. Electronic signatures
+6. Electronic signatures
 
 ***Blockchain based authentication has some special features:***
 1. Signing and decryption keys stay on the device.
