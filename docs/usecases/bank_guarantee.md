@@ -38,11 +38,11 @@ Sample input
 
         This bank guarantee shall be governed by and construed in accordance with the laws of the Republic of India and is free and clear of any lien and encumbrances and is of non-criminal origin.
       "
-      "authorized_bank_officer_name": "bbb"
-      "authorized_bank_officer_title": "bbb"
-      "authorized_bank_officer_telephone": "bbb"
-      "authorized_bank_officer_facsimile": "bbb"
-      "authorized_bank_officer_e": "bbb"      
+      "authorized_bank_officer_name": "Nicole Kidman"
+      "authorized_bank_officer_title": "Vice President"
+      "authorized_bank_officer_telephone": "230950934545"
+      "authorized_bank_officer_facsimile": "367645455624"
+      "authorized_bank_officer_email": "nicole@example.com"      
     }
 }
 ```
