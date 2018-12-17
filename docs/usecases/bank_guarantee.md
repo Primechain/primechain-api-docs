@@ -40,7 +40,6 @@ Sample input
 This is what happens:   
 
 ### Step 1: Hash computation
-
 The SHA-512 hash of the bank guarantee is computed.
 
 ### Step 2: Signing
@@ -65,7 +64,8 @@ The encrypted data and the tag are published to the `DATA_MASTERLIST` stream
 ### Step 6: Output 
 The following is the output:
 1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
-2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
+2. the id of the transaction in which the digital signature, hash and the issuer's primechain address were published to the DATA_SIGNATURE_MASTERLIST stream
+3. The digital signature
 3. The AES password
 4. The Initialization Vector (IV)
 
@@ -86,7 +86,7 @@ The following is the output:
 ## 2. Decrypt, verify and retrieve a bank guarantee from the blockchain
 To retrieve a bank guarantee from the blockchain, use `post /api/v1/decrypt_download_data` and pass these values:
 1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
-2. the id of the transaction in which the digital signature, hash and the issuers's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
+2. the id of the transaction in which the digital signature, hash and the issuers's primechain address were published to the DATA_SIGNATURE_MASTERLIST stream
 3. The AES password
 4. The Initialization Vector (IV)
 
@@ -94,7 +94,6 @@ To retrieve a bank guarantee from the blockchain, use `post /api/v1/decrypt_down
 {
     "tx_id_enc_data": "b40cb6e4b95e72510413cd20030c3ea7052ef1dea8deb9340efb5e39d05f8394",
     "tx_id_signature": "3f06f98af6b7acbb9b7ec26f7c692bf39b999fc645cce5f969ca5467470fc235",
-    "signature": "H2lRGUWxboEVTaCdK4X5Ii29zw3J13/ydI8aJ095foBtR1HRH3TJHgoZzmkxrQDgrw4ZdBGXTohYxLUYdtdHgR0=",
     "aes_password": "R1E3GYxjAc0Gfa8xEqRNtOdJfWErOBz7",
     "aes_iv": "VioxHPgIDj7F"
 }
@@ -102,7 +101,7 @@ To retrieve a bank guarantee from the blockchain, use `post /api/v1/decrypt_down
 This is what happens:   
 
 ### Step 1: Retrieval of signing data 
-The digital signature, hash and the primechain address of the issuing bank are retrieved from the DATA_SIGNSTURE_MASTERLIST stream.
+The digital signature, hash and the primechain address of the issuing bank are retrieved from the DATA_SIGNATURE_MASTERLIST stream.
 
 ### Step 2: Retrieval of encrypted data 
 The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
