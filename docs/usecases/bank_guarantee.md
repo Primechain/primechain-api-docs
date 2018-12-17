@@ -45,7 +45,7 @@ This is what happens:
 The SHA-512 hash of the bank guarantee is computed.
 
 ### Step 2: Signing
-The hash is signed using the private key of the issuing bank (using the ECDSA algorithm).
+The hash is signed using the private key of the issuing bank, using the Elliptic Curve Digital Signature Algorithm (ECDSA) algorithm.
 
 ### Step 3: Storing the signature
 The following are published to the `DATA_SIGNATURE_MASTERLIST` stream:
@@ -57,8 +57,8 @@ The following are published to the `DATA_SIGNATURE_MASTERLIST` stream:
 The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
 1. the encrypted version of the data
 2. the AES password
-3. the Initialization Vector (IV)   
-4. the Authentication Tag (tag)
+3. the Initialization Vector (IV). Initialization Vector is a nonce that is associated with an invocation of authenticated encryption on a particular plaintext and Additional Authenticated Data (AAD).   
+4. the Authentication Tag (tag), which is a cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data.
 
 ### Step 5: Storing the encrypted data
 The encrypted data and the tag are published to the `DATA_MASTERLIST` stream
