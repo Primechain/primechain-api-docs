@@ -136,13 +136,13 @@ The output will be the bank guarantee and the details of the signer.
           "authorized_bank_officer_facsimile": "367645455624",
           "authorized_bank_officer_email": "nicole@example.com"
         },
-"signer_detail": 
-  {
-    "name": "Noodle Bank Official Signer",
-    "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
-  },
-  "signature_status": true
-  }
+       "signer_detail": 
+        {
+          "name": "Noodle Bank Official Signer",
+          "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
+        },
+        "signature_status": true
+    }
 }
 
 ```
