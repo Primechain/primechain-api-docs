@@ -89,5 +89,7 @@ Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 1. [Create key pair](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD#1-create-key-pair)
 2. [Publish data to the blockchain](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD#2-publish-data-to-the-blockchain)
 3. [Retrieve data from the blockchain](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD#3-retrieve-data-from-the-blockchain)
+4. [Creating a digital signature](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD#4-creating-a-digital-signature)   
+5. [Verify a digital signature](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD#5-verify-a-digital-signature)   
 
 
