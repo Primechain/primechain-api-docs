@@ -92,11 +92,12 @@ To retrieve a bank guarantee from the blockchain, use `post /api/v1/decrypt_down
 
 ```
 {
-    "tx_id_enc_data": "a8441a8e8fe52c6f84941fd1f08f774ecbf0dc9edf9fd18e9f9d20f1d2945940",
-    "tx_id_signature": "8f15a1b3bc4cbeeae89ea28e77982ac7baa04c45870d9d40086b799ad795487f",
-    "aes_password": "5M1qnsYeRmSvlwNtZ8oJiHC0g9ucVrgc",
-    "aes_iv": "zNc59qnYapAw"
- }
+    "tx_id_enc_data": "b40cb6e4b95e72510413cd20030c3ea7052ef1dea8deb9340efb5e39d05f8394",
+    "tx_id_signature": "3f06f98af6b7acbb9b7ec26f7c692bf39b999fc645cce5f969ca5467470fc235",
+    "signature": "H2lRGUWxboEVTaCdK4X5Ii29zw3J13/ydI8aJ095foBtR1HRH3TJHgoZzmkxrQDgrw4ZdBGXTohYxLUYdtdHgR0=",
+    "aes_password": "R1E3GYxjAc0Gfa8xEqRNtOdJfWErOBz7",
+    "aes_iv": "VioxHPgIDj7F"
+}
 ```
 This is what happens:   
 
@@ -117,21 +118,28 @@ The output will be the bank guarantee and the details of the signer.
 ```
 {
 "status": 200,
-"response": 
-  {
-    "data": 
-      {
-        "name": "Scarlett Johansson",
-        "email": "scarlett@example.com",
-        "cell": ":1234567890"
-       },
-  "signer_detail": 
-      {
-        "name": "Noodle Bank Official Signer",
-        "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
-       },
-   "signature_status": true
-  }
+"response": {
+"data": {
+"guarantee_number": "ASDRE76464",
+"guarantee_currency": "USD",
+"guarantee_amount_words": "Twenty Two million",
+"guarantee_amount_figures": "22,000,000.00",
+"guarantee_date_of_issue": "17-December-2018",
+"guarantee_date_of_maturity": "16-March-2019",
+"guarantee_beneficiary": "Nicole Corporation",
+"guarantee_details": "On behalf of our client, Nicole Corporation, for value received, we, Global Bank, hereby irrevocably and unconditionally and without protest or notification, promise to pay against this, our irrevocable bank guarantee, to the order of Nicole Corporation, as beneficiary, on the maturity date, the sum of Twenty Two million united states dollars ($22,000,000.00 usd), upon their first written demand for payment hereunder. Such payment shall be made without set-off, free and clear of any deductions, charges, fees, levies, taxes or withholdings of any nature. This bank guarantee is tranferable, without payment of any transfer fees. This bank guarantee is issued in accordance with the uniform customs and practices for bank guarantees, as set forth by the International Chamber of Commerce, Paris, France, latest revision of ICC 500 publication. This bank guarantee shall be governed by and construed in accordance with the laws of the Republic of India and is free and clear of any lien and encumbrances and is of non-criminal origin.",
+"authorized_bank_officer_name": "Nicole Kidman",
+"authorized_bank_officer_title": "Vice President",
+"authorized_bank_officer_telephone": "230950934545",
+"authorized_bank_officer_facsimile": "367645455624",
+"authorized_bank_officer_email": "nicole@example.com"
+},
+"signer_detail": {
+"name": "Noodle Bank Official Signer",
+"primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
+},
+"signature_status": true
+}
 }
 
 ```
