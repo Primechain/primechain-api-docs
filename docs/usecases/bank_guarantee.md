@@ -118,7 +118,7 @@ The encrypted data is decrypted.
 The digital signature is verified
 
 ### Step 5: Output
-The output will be the bank guarantee and the details of the signer.
+The output will be the bank guarantee, the details of the signer and the status of the signature (true implies that the signature is verified and valid).
 
 ***Sample output***
 ```
@@ -150,5 +150,4 @@ The output will be the bank guarantee and the details of the signer.
         "signature_status": true
     }
 }
-
 ```
