@@ -7,7 +7,7 @@ Some of the benefits of using blockchain for issuing bank guarantees are: (1) Ea
 
 1. [Create, encrypt, sign and publish a bank guarantee to the blockchain](#1-create-encrypt,sign-and-publish-a-bank-guarantee-to-the-blockchain)
 
-2. [Decrypt, verify and retrieve a bank guarantee from the blockchain](#2-decrypt,-verify-and-retrieve-a-bank-guarantee-from-the-blockchain)
+2. [Decrypt, verify and retrieve a bank guarantee from the blockchain](#2-decrypt-verify-and-retrieve-a-bank-guarantee-from-the-blockchain)
 
 
 ## 1. Create, encrypt, sign and publish a bank guarantee to the blockchain
