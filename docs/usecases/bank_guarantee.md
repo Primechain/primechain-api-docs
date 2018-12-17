@@ -23,25 +23,16 @@ Sample input
     {
       "guarantee_number": "ASDRE76464",
       "guarantee_currency": "USD",
-      "guarantee_amount_words": "Twenty Two million"
-      "guarantee_amount_figures": "22,000,000.00"
-      "guarantee_date_of_issue": "17-December-2018"
-      "guarantee_date_of_maturity": "16-March-2019"
-      "guarantee_beneficiary": "Nicole Corporation"
-      "guarantee_details": 
-      "
-        On behalf of our client, Nicole Corporation, for value received, we, Global Bank, hereby irrevocably and unconditionally and without protest or notification, promise to pay against this, our irrevocable bank guarantee, to the order of Nicole Corporation, as beneficiary, on the maturity date, the sum of Twenty Two million united states dollars ($22,000,000.00 usd), upon their first written demand for payment hereunder. Such payment shall be made without set-off, free and clear of any deductions, charges, fees, levies, taxes or withholdings of any nature.
-      
-        This bank guarantee is tranferable, without payment of any transfer fees.
-
-        This bank guarantee is issued in accordance with the uniform customs and practices for bank guarantees, as set forth by the International Chamber of Commerce, Paris, France, latest revision of ICC 500 publication.
-
-        This bank guarantee shall be governed by and construed in accordance with the laws of the Republic of India and is free and clear of any lien and encumbrances and is of non-criminal origin.
-      "
-      "authorized_bank_officer_name": "Nicole Kidman"
-      "authorized_bank_officer_title": "Vice President"
-      "authorized_bank_officer_telephone": "230950934545"
-      "authorized_bank_officer_facsimile": "367645455624"
+      "guarantee_amount_words": "Twenty Two million",
+      "guarantee_amount_figures": "22,000,000.00",
+      "guarantee_date_of_issue": "17-December-2018",
+      "guarantee_date_of_maturity": "16-March-2019",
+      "guarantee_beneficiary": "Nicole Corporation",
+      "guarantee_details": "On behalf of our client, Nicole Corporation, for value received, we, Global Bank, hereby irrevocably and unconditionally and without protest or notification, promise to pay against this, our irrevocable bank guarantee, to the order of Nicole Corporation, as beneficiary, on the maturity date, the sum of Twenty Two million united states dollars ($22,000,000.00 usd), upon their first written demand for payment hereunder. Such payment shall be made without set-off, free and clear of any deductions, charges, fees, levies, taxes or withholdings of any nature. This bank guarantee is tranferable, without payment of any transfer fees. This bank guarantee is issued in accordance with the uniform customs and practices for bank guarantees, as set forth by the International Chamber of Commerce, Paris, France, latest revision of ICC 500 publication. This bank guarantee shall be governed by and construed in accordance with the laws of the Republic of India and is free and clear of any lien and encumbrances and is of non-criminal origin.",
+      "authorized_bank_officer_name": "Nicole Kidman",
+      "authorized_bank_officer_title": "Vice President",
+      "authorized_bank_officer_telephone": "230950934545",
+      "authorized_bank_officer_facsimile": "367645455624",
       "authorized_bank_officer_email": "nicole@example.com"      
     }
 }
