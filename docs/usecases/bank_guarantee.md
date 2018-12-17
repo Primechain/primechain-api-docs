@@ -5,12 +5,12 @@ Through a bank guarantee, a bank promises to cover a loss if a borrower defaults
 Some of the benefits of using blockchain for issuing bank guarantees are: (1) Each bank guarantee is digitally signed by the issuing bank; (2) Regulator nodes enable real-time supervision by the authorities; (3) The system is API driven and can easily be integrated with the banks' core banking and other legacy systems
 
 
-1. [Creating, encrypt, sign and publish a bank guarantee to the blockchain](#1-creating,-encrypt,-sign-and-publish-a-bank-guarantee-to-the-blockchain)
+1. [Create, encrypt, sign and publish a bank guarantee to the blockchain](#1-create-encrypt,sign-and-publish-a-bank-guarantee-to-the-blockchain)
 
 2. [Decrypt, verify and retrieve a bank guarantee from the blockchain](#2-decrypt,-verify-and-retrieve-a-bank-guarantee-from-the-blockchain)
 
 
-## 1. Creating, encrypt, sign and publish a bank guarantee to the blockchain
+## 1. Create, encrypt, sign and publish a bank guarantee to the blockchain
 To create a bank guarantee on the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
 1. the bank guarantee data 
 2. the primechain address of the bank issuing the guarantee
