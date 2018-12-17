@@ -63,7 +63,7 @@ The data is encrypted using the AES (Advanced Encryption Standard) algorithm and
 4. the Authentication Tag (tag), which is a cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data.
 
 ### Step 5: Storing the encrypted data
-The encrypted data and the tag are published to the `DATA_MASTERLIST` stream
+The encrypted data and the tag are published to the `DATA_MASTERLIST` stream.
 
 ### Step 6: Output 
 The following is the output:
@@ -72,6 +72,7 @@ The following is the output:
 3. the digital signature
 3. the AES password
 4. the Initialization Vector (IV)
+
 ***Sample output***
 ```
 {
