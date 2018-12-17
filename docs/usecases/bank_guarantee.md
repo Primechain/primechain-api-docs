@@ -115,7 +115,7 @@ The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
 The encrypted data is decrypted.
 
 ### Step 4: Verification
-The digital signature is verified
+The digital signature is verified.
 
 ### Step 5: Output
 The output will be the bank guarantee, the details of the signer and the status of the signature (true implies that the signature is verified and valid).
