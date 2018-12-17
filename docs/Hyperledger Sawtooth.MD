@@ -52,7 +52,7 @@ Output will be the data.
   "response": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
 }
 ```
-## 4. Crating a digital signature
+## 4. Creating a digital signature
 
 To create a digital signature, use `post /api/v1/create_signature_sawtooth` and pass 2 parameters:
 1. Private key
