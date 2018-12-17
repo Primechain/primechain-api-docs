@@ -16,8 +16,8 @@ Through a bank guarantee, a bank promises to cover a loss if a borrower defaults
 
 ## 1. Create, encrypt, sign and publish a bank guarantee to the blockchain
 To create a bank guarantee on the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
-1. the bank guarantee data 
-2. the primechain address of the bank issuing the guarantee
+1. the primechain address of the bank issuing the guarantee
+2. the bank guarantee data 
 
 ***Sample input***
 ```
