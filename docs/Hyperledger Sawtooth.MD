@@ -3,7 +3,7 @@
 [1. Create key pair](#1-create-key-pair)      
 [2. Publish data to the blockchain](#2-publish-data-to-the-blockchain)     
 [3. Retrieve data from the blockchain](#3-retrieve-data-from-the-blockchain)    
-[4. Creating a digital signature](4. Creating a digital signature](#4-creating-a-digital-signature)   
+[4. Creating a digital signature](#4-creating-a-digital-signature)   
 [5. Verify a digital signature](#5-verify-a-digital-signature)   
 
 ## 1. Create key pair
