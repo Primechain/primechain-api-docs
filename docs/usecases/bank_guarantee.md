@@ -7,6 +7,8 @@ Through a bank guarantee, a bank promises to cover a loss if a borrower defaults
 (2) Regulator nodes enable real-time supervision by the authorities.   
 (3) The system is API driven and can easily be integrated with the banks' core banking and other legacy systems.   
 
+### Steps involved
+
 1. [Create, encrypt, sign and publish a bank guarantee to the blockchain](#1-create-encrypt-sign-and-publish-a-bank-guarantee-to-the-blockchain)
 
 2. [Decrypt, verify and retrieve a bank guarantee from the blockchain](#2-decrypt-verify-and-retrieve-a-bank-guarantee-from-the-blockchain)
@@ -17,7 +19,7 @@ To create a bank guarantee on the blockchain, use `post /api/v1/encrypt_sign_sto
 1. the bank guarantee data 
 2. the primechain address of the bank issuing the guarantee
 
-Sample input
+***Sample input***
 ```
 {
   "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
@@ -67,10 +69,10 @@ The encrypted data and the tag are published to the `DATA_MASTERLIST` stream
 The following is the output:
 1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
 2. the id of the transaction in which the digital signature, hash and the issuer's primechain address were published to the DATA_SIGNATURE_MASTERLIST stream
-3. The digital signature
-3. The AES password
-4. The Initialization Vector (IV)
-
+3. the digital signature
+3. the AES password
+4. the Initialization Vector (IV)
+***Sample output***
 ```
 {
 "status": 200,
@@ -89,9 +91,10 @@ The following is the output:
 To retrieve a bank guarantee from the blockchain, use `post /api/v1/decrypt_download_data` and pass these values:
 1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
 2. the id of the transaction in which the digital signature, hash and the issuers's primechain address were published to the DATA_SIGNATURE_MASTERLIST stream
-3. The AES password
-4. The Initialization Vector (IV)
+3. the AES password
+4. the Initialization Vector (IV)
 
+***Sample input***
 ```
 {
     "tx_id_enc_data": "b40cb6e4b95e72510413cd20030c3ea7052ef1dea8deb9340efb5e39d05f8394",
@@ -116,6 +119,8 @@ The digital signature is verified
 
 ### Step 5: Output
 The output will be the bank guarantee and the details of the signer.
+
+***Sample output***
 ```
 {
   "status": 200,
