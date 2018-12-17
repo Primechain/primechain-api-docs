@@ -20,10 +20,12 @@ Through a bank guarantee, a bank promises to cover a loss if a borrower defaults
 2.	Regulator nodes enable real-time supervision by the authorities.
 3.	The system is API driven and can easily be integrated with the banks' core banking and other legacy systems
 
-[1. Creating a bank guarantee on the blockchain](#1-creating-a-bank-guarantee-on-the-blockchain)
+1. [Creating, encrypt, sign and publish a bank guarantee to the blockchain](#1-creating,-encrypt,-sign-and-publish-a-bank-guarantee-to-the-blockchain)
+
+2. [Decrypt, verify and retrieve a bank guarantee from the blockchain](#2-decrypt,-verify-and-retrieve-a-bank-guarantee-from-the-blockchain)
 
 
-## 1. Creating a bank guarantee on the blockchain
+## 1. Creating, encrypt, sign and publish a bank guarantee to the blockchain
 To create a bank guarantee on the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
 1. the bank guarantee data 
 2. the primechain address of the bank issuing the guarantee
@@ -103,4 +105,57 @@ The following is the output:
     "aes_iv": "zNc59qnYapAw"
   }
 }
+```
+
+## 2. Decrypt, verify and retrieve a bank guarantee from the blockchain
+To retrieve a bank guarantee from the blockchain, use `post /api/v1/decrypt_download_data` and pass these values:
+1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
+2. the id of the transaction in which the digital signature, hash and the issuers's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
+3. The AES password
+4. The Initialization Vector (IV)
+
+```
+{
+    "tx_id_enc_data": "a8441a8e8fe52c6f84941fd1f08f774ecbf0dc9edf9fd18e9f9d20f1d2945940",
+    "tx_id_signature": "8f15a1b3bc4cbeeae89ea28e77982ac7baa04c45870d9d40086b799ad795487f",
+    "aes_password": "5M1qnsYeRmSvlwNtZ8oJiHC0g9ucVrgc",
+    "aes_iv": "zNc59qnYapAw"
+ }
+```
+This is what happens:   
+
+### Step 1: Retrieval of signing data 
+The digital signature, hash and the primechain address of the issuing bank are retrieved from the DATA_SIGNSTURE_MASTERLIST stream.
+
+### Step 2: Retrieval of encrypted data 
+The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
+
+### Step 3: Decryption
+The encrypted data is decrypted.
+
+### Step 4: Verification
+The digital signature is verified
+
+### Step 5: Output
+The output will be the bank guarantee and the details of the signer.
+```
+{
+"status": 200,
+"response": 
+  {
+    "data": 
+      {
+        "name": "Scarlett Johansson",
+        "email": "scarlett@example.com",
+        "cell": ":1234567890"
+       },
+  "signer_detail": 
+      {
+        "name": "Noodle Bank Official Signer",
+        "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
+       },
+   "signature_status": true
+  }
+}
+
 ```
