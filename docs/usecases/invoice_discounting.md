@@ -180,8 +180,8 @@ Sample input
 2. Onboard vendors
 3. Onboard investors
 4. Distribute tokens against fiat currency held by it
-5. Redeem tokens for fiat currency
-6. Publish verified invoices to the blockchain as assets
+5. Publish verified invoices to the blockchain as assets
+6. Redeem tokens for fiat currency
 
 ### Corporate (payer)
 1. Transfer verified invoices as assets to the vendor who is the payee for that invoice.
