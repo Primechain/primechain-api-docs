@@ -29,10 +29,9 @@ To create an employee record on the blockchain, use `post /api/v1/encrypt_sign_s
   "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
   "data": 
     {
-      "employee_name": "aaa",
-      "employee_identifier": "aaa",
+      "employee_name": "Nicole Kidman",
       "employee_record_type": "Academic record",
-      "employee_record_data": "aaa",
+      "employee_record_data": "Nicole Kidman has passed the B.E. Electronics and Telecommunications Engineering (Revised) course degree examination held by the University of Mumbai in the month of May 2018 and was placed in the first class.",
     }
 }
 ```
@@ -92,6 +91,11 @@ The following is the output:
   }
 }
 ```
+Save this output in your private database along with the following:
+
+* Employee identifier e.g. PAN number, passport number etc.
+* Price (optional)
+* Description of the record
 
 ## 2. Decrypt, verify and retrieve an employee record from the blockchain
 To retrieve an employee record from the blockchain, use `post /api/v1/decrypt_download_data` and pass these values:
@@ -134,7 +138,11 @@ The output will be the employee record, the details of the uploader and the stat
     {
       "data": 
         {
-
+    {
+      "employee_name": "Nicole Kidman",
+      "employee_record_type": "Academic record",
+      "employee_record_data": "Nicole Kidman has passed the B.E. Electronics and Telecommunications Engineering (Revised) course degree examination held by the University of Mumbai in the month of May 2018 and was placed in the first class.",
+    }
         },
        "signer_detail": 
         {
