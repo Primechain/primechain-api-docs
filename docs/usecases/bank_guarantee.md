@@ -8,6 +8,7 @@ Through a bank guarantee, a bank promises to cover a loss if a borrower defaults
 (1) Each bank guarantee is digitally signed by the issuing bank.   
 (2) Regulator nodes enable real-time supervision by the authorities.   
 (3) The system is API driven and can easily be integrated with the banks' core banking and other legacy systems.   
+(4) Each bank guarantee is automatically encrypted and the decryption credentials are only available to the issuing bank.   
 
 ### Steps involved
 
