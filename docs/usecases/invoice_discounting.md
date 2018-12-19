@@ -99,8 +99,42 @@ Sample input
 ### Step 4: Bidding by investors
 Investors place bids on the invoice. To place a bid, they must hold sufficient quantity of tokens. Once they place a bid, the relevant amount of tokens are ‘locked’ till either (1) the vendor rejects the bid or (2) the investor cancels his bid.
 
+To create the offer, use `post /api/v1/create_targeted_offer`
+
+Sample input
+```
+```
+Sample input
+```
+```
+To cancel the offer, use `post /api/v1/cancel_targeted_offer`
+
+Sample input
+```
+```
+Sample input
+```
+```
+
 ### Step 5: Acceptance / rejection of bids by vendor
 The vendor can view all bids placed on invoices in which he is the payee. The vendor can accept or reject bids. If the vendor accepts the bid, the asset (invoice) is transferred to the relevant investor and the bid amount is transferred to the vendor. The vendor can redeem the tokens from the bank.
+
+To reject the offer, `post /api/v1/reject_targeted_offer`
+
+Sample input
+```
+```
+Sample input
+```
+```
+To accept the offer, `post /api/v1/accept_offer`
+
+Sample input
+```
+```
+Sample input
+```
+```
 
 ### Step 6: Maturity of invoice
 When the invoice matures, the corporate pays the relevant amount to the bank and receives equivalent tokens. 
@@ -109,7 +143,7 @@ When the invoice matures, the corporate pays the relevant amount to the bank and
 The corporate pays the amount to the relevant investor and receives the asset (invoice) from the investor.
 
 ### Step 8: 
-The corporate then sends the asset (invoice) to the burn address `1XXXXXXXM4XXXXXXiqXXXXXXdyXXXXXXc7qCdr`
+The corporate then sends the asset (invoice) to the burn address.
 
 ## 4. Overview of roles
 
