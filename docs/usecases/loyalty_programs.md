@@ -11,15 +11,15 @@ One of the biggest problems with legacy loyalty programs are low redemption rate
 5. Reduce cost of loyalty program lifecycle management.
 6. Improve customer experience.
 
-
-[1. Create a new loyalty program](#1-create-a-new-loyalty-program)   
+### Loyalty program lifecycle management
+[1. Creating a new loyalty program](#1-creating-a-new-loyalty-program)   
 [2. Receiving of loyalty points by customers](#2-receiving-of-loyalty-points-by-customers)   
 [3. Trading of loyalty points between customers](#3-trading-of-loyalty-points-between-customers)   
 [4. Redemption of loyatly points](#4-redemption-of-loyalty-points)   
 [5. Expiry of loyalty points](#5-expiry-of-loyalty-points)   
 
 
-## 1. Create a new loyalty program
+## 1. Creating a new loyalty program
 
 ## 2. Receiving of loyalty points by customers
 
