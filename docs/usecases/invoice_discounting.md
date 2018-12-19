@@ -12,6 +12,36 @@ The process involves 4 parties:
 3. Vendor (payee)
 4. Investors
 
+### Bank
+The bank performs the following functions:
+1. Onboard corporates
+2. Onboard vendors
+3. Onboard investors
+4. Distribute tokens against fiat currency held by it
+5. Redeem tokens for fiat currency
+6. Publish verified invoices to the blockchain as assets
+
+### Corporate (payer)
+A corporate performs the following functions:
+1. Transfer verified invoices as assets to the vendor who is the payee for that invoice.
+2. Pay the invoice amount on maturity.
+
+### Vendor (payee):
+A vendor performs the following functions: 
+1. View all published invoices in which they are payees
+2. View offers on all published invoices in which they are payees
+3. Accept offers on published invoices in which they are payees
+4. Reject offers on published invoices in which they are payees
+
+### Investors: 
+The investor performs the following functions:
+1. View all published invoices
+2. Bid on published invoices
+3. Cancel their own bids
+4. View their bids that have been accepted by vendors
+5. View their bids that have been rejected by vendors
+
+
 ## On-boarding
 The bank on-boards corporates, vendors and investors using ...
 
@@ -38,34 +68,4 @@ The bank issues tokens on the blockchain against fiat currency held by it in an 
 
 9. The corporate then sends the asset (invoice) to the burn address `1XXXXXXXM4XXXXXXiqXXXXXXdyXXXXXXc7qCdr`
 
-
-### Bank
-The bank performs the following functions:
-1. Onboard corporates
-2. Onboard vendors
-3. Onboard investors
-4. Distribute tokens against fiat currency held by it
-5. Redeem tokens for fiat currency
-6. Publish verified invoices to the blockchain
-
-### Corporate (payer)
-These are corporates who are customers of the Bank and who will be provided nodes through which they can publish authenticated invoices payable by them.
-Publish authenticated invoices to the blockchain
-View all invoices published by the corporate
-
-### Vendor (payee):
-These are vendors of the corporates. They can accept or reject offers made on the invoices payable to them.
-Upload financial and business related information
-1. View all published invoices in which they are payees
-2. View offers on all published invoices in which they are payees
-3. Accept offers on published invoices in which they are payees
-4. Reject offers on published invoices in which they are payees
-
-### Investors: These are investors who can bid to purchase invoices at a discount.
-
-1. View all published invoices
-2. Bid on published invoices
-3. Cancel their own bids
-4. View their bids that have been accepted by vendors
-5. View their bids that have been rejected by vendors
 
