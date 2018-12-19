@@ -16,6 +16,7 @@ Invoice discounting is also referred to as supply chain finance and factoring. T
 
 ## 1. On-boarding
 The bank on-boards corporates, vendors and investors using `post /api/v1/onboard_user`   
+
 Sample input
 ```
 {
@@ -140,10 +141,33 @@ Sample input
 When the invoice matures, the corporate pays the relevant amount to the bank and receives equivalent tokens. 
 
 ### Step 7: Payment to investor
-The corporate pays the amount to the relevant investor and receives the asset (invoice) from the investor.
+The corporate offers to exchange the asset (invoice) for the maturity amount. To create the offer, use `post /api/v1/create_targeted_offer`
+
+Sample input
+```
+```
+Sample input
+```
+```
+
+The investor accepts the offer using `post /api/v1/accept_offer`
+
+Sample input
+```
+```
+Sample input
+```
+```
 
 ### Step 8: 
-The corporate then sends the asset (invoice) to the burn address.
+The corporate then sends the asset (invoice) to the burn address using `post /api/v1/send_asset`
+
+Sample input
+```
+```
+Sample input
+```
+```
 
 ## 4. Overview of roles
 
