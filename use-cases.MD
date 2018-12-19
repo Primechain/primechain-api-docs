@@ -16,9 +16,9 @@ Blockchain technology is ideal for banks and financial service providers because
 
 1.	[Auction of assets](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/auction.md)
 2. [Bank Guarantees](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/bank_guarantee.md)
-3.	Charge Registry
-4.	Contract authentication, verification & storage
-5.	Cross-border remittance
+3.	[Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
+4.	Charge Registry
+5.	Contract authentication, verification & storage	
 6. Crowd funding 
 7.	Data marketplaces
 8.	[Digital signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD)
@@ -31,14 +31,13 @@ Blockchain technology is ideal for banks and financial service providers because
 15. Letters of Credit 
 16.	Loan origination & lifecycle management
 17.	Loyalty program lifecycle management
-18.	[Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
-19.	Peer-to-peer lending
-20.	Peer-to-peer payments
-21.	Repository of records 
-22.	Smart asset lifecycle management
-23.	Stressed assets (NPA) marketplace
-24.	Syndicated loans
-25.	Vendor on-boarding & rating
+18.	Peer-to-peer lending
+19.	Peer-to-peer remittance (cross-border & domestic)
+20.	Repository of records 
+21.	Smart asset lifecycle management
+22.	Stressed assets (NPA) marketplace
+23.	Syndicated loans
+24.	Vendor on-boarding & rating
 
 ### 2. Supply Chain
 1.	[Auction of assets](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/auction.md)
