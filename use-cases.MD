@@ -1,15 +1,15 @@
 # Primechain-API use cases
 
-1. [Aviation](#7-aviation)
-2. [Banking and related Financial services](#1-banking-and-related-financial-services)
+1. [Aviation](#1-aviation)
+2. [Banking and related Financial services](#2-banking-and-related-financial-services)
 3. [Capital markets](#3-capital-markets)
-4. [Defence and military](#10-defence-and-military)
-5. [Government](#4-government)
-6. [Healthcare and pharmaceuticals](#5-healthcare-and-pharmaceuticals)
-7. [Insurance](#6-insurance)
+4. [Defence and military](#4-defence-and-military)
+5. [Government](#5-government)
+6. [Healthcare and pharmaceuticals](#6-healthcare-and-pharmaceuticals)
+7. [Insurance](#7-insurance)
 8. [Shipping and logistics](#8-shipping-and-logistics)
-9. [Supply Chain](#2-supply-chain)
-10. [Telecommunications](#9-telecommunications)
+9. [Supply Chain](#9-supply-chain)
+10. [Telecommunications](#10-telecommunications)
 
 ## 1. Aviation
 The aviation industry can greatly benefit from the immutable data storage, authentication and verification features of blockchain technology. Primechain-API use cases for the aviation sector include:
