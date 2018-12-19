@@ -1,17 +1,17 @@
 # Invoice discounting
 
-Invoice discounting enables suppliers to sell their invoices at a discount to investors. This enables suppliers to get faster access to money they are owed and enables buyers to get more time to pay. 
+Invoice discounting enables suppliers to sell their invoices at a discount to investors. This enables suppliers to get faster access to money they are owed and enables buyers to get more time to pay. Instead of relying on the creditworthiness of suppliers (usually smaller businesses), the investors deal with buyers (usually large businesses). This can lower financing costs, optimize working capital and improve business efficiency.
 
-Instead of relying on the creditworthiness of suppliers (usually smaller businesses), the investors deal with buyers (usually large businesses). This can lower financing costs, optimize working capital and improve business efficiency.
-
-Invoice discounting is also referred to as supply chain finance and factoring. 
-
-The process involves 4 parties: banks, corporates (payers), vendors (payees) and investors.
+Invoice discounting is also referred to as supply chain finance and factoring. The process involves 4 parties: banks, corporates (payers), vendors (payees) and investors.
 
 ***Benefits of using the blockchain for invoice discounting:***
 1. Fractionalization of invoice enabling small investors to participate.
 2. Automated reconcillation.
 3. Provably immutable process
+
+1. [On-boarding](#1-on-boarding)   
+2. [Token issuance and redemption](#2-token-issuance-and-redemption)   
+3. [The invoice discounting process](#3-the-invoice-discounting-process)   
 
 ## 1. On-boarding
 The bank on-boards corporates, vendors and investors using `post /api/v1/onboard_user` and passing the following parameters:
