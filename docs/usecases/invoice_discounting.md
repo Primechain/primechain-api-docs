@@ -4,10 +4,11 @@ Invoice discounting enables suppliers to sell their invoices at a discount to in
 
 Invoice discounting is also referred to as supply chain finance and factoring. The process involves 4 parties: banks, corporates (payers), vendors (payees) and investors.
 
-***Benefits of using the blockchain for invoice discounting:***
-(1) Fractionalisation of invoice enabling small investors to participate
-(2) Automated reconciliation
-(3) Provably immutable process
+***Benefits of using the blockchain for invoice discounting:***   
+(1) Fractionalisation of invoice enabling small investors to participate   
+(2) Automated reconciliation   
+(3) Provably immutable process   
+
 
 1. [On-boarding](#1-on-boarding)   
 2. [Token issuance and redemption](#2-token-issuance-and-redemption)   
