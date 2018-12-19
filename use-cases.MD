@@ -124,7 +124,7 @@ The aviation industry can greatly benefit from the immutable data storage, authe
 1. Aircraft components and systems performance monitoring
 2. [Employee background verification](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/employee_background_verification.md)
 3. Flight operations performance monitoring
-4. Loyalty programs
+4. [Loyalty program lifecycle management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/loyalty_programs.md)
 5. Maintenance, repair and overhaul logs 
 6. Provenance of every hardware and software component
 7. Security & integrity of passenger records, flight manifests and crew information
@@ -143,7 +143,7 @@ Telecommunications companies can leverage blockchain technology to create new bu
 
 1. [Employee background verification](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/employee_background_verification.md)
 2. Identity management services to clients
-3. Loyalty program lifecycle management
+3. [Loyalty program lifecycle management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/loyalty_programs.md)
 4. Micropayment-based business models for purchase of music, mobile games, gift cards etc
 5. Mobile payment systems
 
