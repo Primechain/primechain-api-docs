@@ -94,7 +94,7 @@ The following is the output:
 ```
 
 ## 2. Decrypt, verify and retrieve an employee record from the blockchain
-To retrieve a bank guarantee from the blockchain, use `post /api/v1/decrypt_download_data` and pass these values:
+To retrieve an employee record from the blockchain, use `post /api/v1/decrypt_download_data` and pass these values:
 1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
 2. the id of the transaction in which the digital signature, hash and the uploader's primechain address were published to the DATA_SIGNATURE_MASTERLIST stream
 3. the AES password
