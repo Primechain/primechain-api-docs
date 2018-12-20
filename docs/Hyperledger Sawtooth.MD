@@ -5,7 +5,7 @@
 [3. Retrieve data from the blockchain](#3-retrieve-data-from-the-blockchain)    
 [4. Creating a digital signature](#4-creating-a-digital-signature)   
 [5. Verify a digital signature](#5-verify-a-digital-signature)   
-[6. Create, encrypt, sign and publish data to the blockchain](#6-create,-encrypt,-sign-and-publish-data-to-the-blockchain)
+[6. Create, encrypt, sign and publish data to the blockchain](#6-create-encrypt-sign-and-publish-data-to-the-blockchain)
 
 ## 1. Create key pair
 To create a key pair, use `get /api/v1/create_user_key_sawtooth`
