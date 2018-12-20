@@ -5,6 +5,7 @@
 [3. Retrieve data from the blockchain](#3-retrieve-data-from-the-blockchain)    
 [4. Creating a digital signature](#4-creating-a-digital-signature)   
 [5. Verify a digital signature](#5-verify-a-digital-signature)   
+[6. Create, encrypt, sign and publish data to the blockchain](#6-create,-encrypt,-sign-and-publish-data-to-the-blockchain)
 
 ## 1. Create key pair
 To create a key pair, use `get /api/v1/create_user_key_sawtooth`
@@ -90,3 +91,83 @@ The output will be:
 "response": true
 }
 ```
+## 6. Create, encrypt, sign and publish data to the blockchain
+To create, encrypt, sign and publish data to the blockchain, use `post /api/v1/encrypt_sign_store_data_sawtooth` and pass 2 parameters: 
+1. the primechain sawtooth private key 
+2. the data 
+
+***Sample input***
+```
+{
+  "primechain_sawtooth_private_key": "2e04323b1e1fe072aea4620a46d234dd52dbf8f90cacdb7bf8579b65622ea59c",
+  "data": 
+    {
+      "guarantee_number": "ASDRE76464",
+      "guarantee_currency": "USD",
+      "guarantee_amount_words": "Twenty Two million",
+      "guarantee_amount_figures": "22,000,000.00",
+      "guarantee_date_of_issue": "17-December-2018",
+      "guarantee_date_of_maturity": "16-March-2019",
+      "guarantee_beneficiary": "Nicole Corporation",
+      "guarantee_details": "On behalf of our client, Nicole Corporation, for value received, we, Global Bank, hereby irrevocably and unconditionally and without protest or notification, promise to pay against this, our irrevocable bank guarantee, to the order of Nicole Corporation, as beneficiary, on the maturity date, the sum of Twenty Two million United States Dollars ($22,000,000.00 USD), upon their first written demand for payment hereunder. Such payment shall be made without set-off, free and clear of any deductions, charges, fees, levies, taxes or withholdings of any nature. This bank guarantee is transferable, without payment of any transfer fees. This bank guarantee is issued in accordance with the uniform customs and practices for bank guarantees, as set forth by the International Chamber of Commerce, Paris, France, latest revision of ICC 500 publication. This bank guarantee shall be governed by and construed in accordance with the laws of the Republic of India and is free and clear of any lien and encumbrances and is of non-criminal origin.",
+      "authorized_bank_officer_name": "Nicole Kidman",
+      "authorized_bank_officer_title": "Vice President",
+      "authorized_bank_officer_telephone": "230950934545",
+      "authorized_bank_officer_facsimile": "367645455624",
+      "authorized_bank_officer_email": "nicole@example.com"      
+    }
+}
+```
+This is what happens:   
+
+### Step 1: Hash computation
+The SHA-512 hash of the data is computed.
+
+### Step 2: Signing
+The hash is signed using the private key of the signer, using the secp256k1 algorithm.
+
+### Step 3: Encrypting the data
+The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
+1. the encrypted version of the data
+2. the AES password
+3. the Initialization Vector (IV). Initialization Vector is a nonce that is associated with an invocation of authenticated encryption on a particular plaintext and Additional Authenticated Data (AAD).   
+4. the Authentication Tag (tag), which is a cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data.
+
+### Step 4: Storing the encrypted data
+The encrypted data and the tag are published to the blockchain.
+
+### Step 5: Output 
+The following is the output:
+1. the sawtooth address where the data is published
+2. the digital signature
+3. the AES password
+4. the Initialization Vector (IV)
+
+***Sample output***
+```
+{
+"status": 200,
+"response": {
+"sawtooth_address": "97fd77ad086befd425f5bf34a93f393593849eaf4edd3cba568f7385633db76d29e891",
+"signature": "fd61ee928d36d5b8762831a985b1b49574a2b155e099d92307494fb11d32968622f03986370243d9f33702573a5afe02798c893007f1d9f4c2a21657e7e55226",
+"aes_password": "Cwc7kcacMb8l1wOLOYrC0cHUWFhFRwz1",
+"aes_iv": "smMA29WohnyA"
+}
+}
+```
+
+
+decrypt_download_data_sawtooth
+
+{
+   "primechain_sawtooth_address" : "97fd776e9a527d9d545cf804fbc21b6c588af5ff30090b4c3da8e39a894374c0a16215",
+   "primechain_sawtooth_public_key": "022dfb9755cf6a7313ddc58aa22894436d0e4c49e4c52f4706b554ef2dc56fc7de",
+   "aes_password" : "x25BaUFCeQNXxENcRCPc8Kf8DBKF2nQr",
+   "aes_iv" : "JokkWUtVA03W",
+   "signature" : "70586c94e07ad968a67cab807118f0670d30c46f0c1e5f72167e60447bf5dc8b76d856f820e9cd52811bb142d4ad74acd7ab91fc2a2a4bf35d59a236b473125f"
+}
+
+{
+"status": 200,
+"response": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+}
