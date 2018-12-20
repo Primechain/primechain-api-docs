@@ -196,6 +196,6 @@ Sample input
 ### Investors: 
 1. View all published invoices
 2. Bid on published invoices
-3. Cancel their own bids
+3. Cancel their own bids (before the vendor has accepted the bid)
 4. View their bids that have been accepted by vendors
 5. View their bids that have been rejected by vendors
