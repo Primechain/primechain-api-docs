@@ -150,24 +150,50 @@ The following is the output:
 "response": {
 "sawtooth_address": "97fd77ad086befd425f5bf34a93f393593849eaf4edd3cba568f7385633db76d29e891",
 "signature": "fd61ee928d36d5b8762831a985b1b49574a2b155e099d92307494fb11d32968622f03986370243d9f33702573a5afe02798c893007f1d9f4c2a21657e7e55226",
-"aes_password": "Cwc7kcacMb8l1wOLOYrC0cHUWFhFRwz1",
-"aes_iv": "smMA29WohnyA"
+"aes_password": "3P83TKUsek9vh9EAsqJx1uAh14xWk3LA",
+"aes_iv": "NukszFAnCE09"
 }
 }
 ```
 
 
-decrypt_download_data_sawtooth
 
-{
-   "primechain_sawtooth_address" : "97fd776e9a527d9d545cf804fbc21b6c588af5ff30090b4c3da8e39a894374c0a16215",
-   "primechain_sawtooth_public_key": "022dfb9755cf6a7313ddc58aa22894436d0e4c49e4c52f4706b554ef2dc56fc7de",
-   "aes_password" : "x25BaUFCeQNXxENcRCPc8Kf8DBKF2nQr",
-   "aes_iv" : "JokkWUtVA03W",
-   "signature" : "70586c94e07ad968a67cab807118f0670d30c46f0c1e5f72167e60447bf5dc8b76d856f820e9cd52811bb142d4ad74acd7ab91fc2a2a4bf35d59a236b473125f"
-}
+## 2. Decrypt, verify and retrieve data from the blockchain
+To retrieve data from the blockchain, use `post /api/v1/decrypt_download_data_sawtooth` and pass these values:
+1. the sawtooth address where the data is published
+2. the sawtooth public key of the signer
+3. the AES password
+4. the Initialization Vector (IV)
+5. the digital signature
 
+***Sample input***
+```
 {
-"status": 200,
-"response": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+"sawtooth_address": "97fd77ad086befd425f5bf34a93f393593849eaf4edd3cba568f7385633db76d29e891",
+"primechain_sawtooth_public_key": "022dfb9755cf6a7313ddc58aa22894436d0e4c49e4c52f4706b554ef2dc56fc7de",
+"signature": "fd61ee928d36d5b8762831a985b1b49574a2b155e099d92307494fb11d32968622f03986370243d9f33702573a5afe02798c893007f1d9f4c2a21657e7e55226",
+"aes_password": "3P83TKUsek9vh9EAsqJx1uAh14xWk3LA",
+"aes_iv": "NukszFAnCE09"
 }
+```
+This is what happens:   
+
+### Step 1: Retrieval of encrypted data 
+The encrypted data and tag are retrieved from the blockchain.
+
+### Step 2: Decryption
+The encrypted data is decrypted.
+
+### Step 3: Verification
+The digital signature is verified.
+
+### Step 4: Output
+The output will be the data, the details of the signer and the status of the signature (true implies that the signature is verified and valid).
+
+***Sample output***
+```
+
+}
+```
+
+Have a query? Email us on info@primechain.in
