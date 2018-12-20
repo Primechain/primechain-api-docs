@@ -13,19 +13,22 @@ One of the biggest problems with legacy loyalty programs are low redemption rate
 
 ### Loyalty program lifecycle management
 [1. Creating a new loyalty program](#1-creating-a-new-loyalty-program)   
-[2. Receiving of loyalty points by customers](#2-receiving-of-loyalty-points-by-customers)   
-[3. Trading of loyalty points between customers](#3-trading-of-loyalty-points-between-customers)   
-[4. Redemption of loyatly points](#4-redemption-of-loyalty-points)   
-[5. Expiry of loyalty points](#5-expiry-of-loyalty-points)   
+[2. Onboarding customers](#2-onboarding-customers)   
+[3. Receiving of loyalty points by customers](#2-receiving-of-loyalty-points-by-customers)   
+[4. Trading of loyalty points between customers](#3-trading-of-loyalty-points-between-customers)   
+[5. Redemption of loyatly points](#4-redemption-of-loyalty-points)   
+[6. Expiry of loyalty points](#5-expiry-of-loyalty-points)   
 
 
 ## 1. Creating a new loyalty program
 
-## 2. Receiving of loyalty points by customers
+## 2. Onboarding customers
 
-## 3. Trading of loyalty points between customers
+## 3. Receiving of loyalty points by customers
 
-## 4. Redemption of loyalty points
+## 4. Trading of loyalty points between customers
 
-## 5. Expiry of loyalty points
+## 5. Redemption of loyalty points
+
+## 6. Expiry of loyalty points
 
