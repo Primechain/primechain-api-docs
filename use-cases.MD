@@ -18,7 +18,7 @@ The aviation industry can greatly benefit from the immutable data storage, authe
 2.	[Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
 3. [Employee background verification](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/employee_background_verification.md)
 4. Flight operations performance monitoring
-5. [Loyalty program lifecycle management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/loyalty_programs.md)
+5. [Loyalty / Frequent Flyer program lifecycle management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/loyalty_programs.md)
 6. Maintenance, repair and overhaul logs 
 7. Provenance of every hardware and software component
 8. Security & integrity of passenger records, flight manifests and crew information
