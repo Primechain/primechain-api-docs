@@ -12,7 +12,7 @@ Invoice discounting is also referred to as supply chain finance and factoring. T
 (3) Provably immutable process   
 
 
-1. [On-boarding](#1-on-boarding)   
+1. [On-boarding corporates, vendors and investors](#1-on-boarding)   
 2. [Token issuance and redemption](#2-token-issuance-and-redemption)   
 3. [The invoice discounting process](#3-the-invoice-discounting-process)   
 4. [Overview of roles](#4-overview-of-roles)
