@@ -5,7 +5,8 @@
 [3. Retrieve data from the blockchain](#3-retrieve-data-from-the-blockchain)    
 [4. Creating a digital signature](#4-creating-a-digital-signature)   
 [5. Verify a digital signature](#5-verify-a-digital-signature)   
-[6. Create, encrypt, sign and publish data to the blockchain](#6-create-encrypt-sign-and-publish-data-to-the-blockchain)
+[6. Create, encrypt, sign and publish data to the blockchain](#6-create-encrypt-sign-and-publish-data-to-the-blockchain)   
+[7. Decrypt, verify and retrieve data from the blockchain](#7-decrypt-verify-and-retrieve-data-from-the-blockchain)   
 
 ## 1. Create key pair
 To create a key pair, use `get /api/v1/create_user_key_sawtooth`
@@ -158,7 +159,7 @@ The following is the output:
 
 
 
-## 2. Decrypt, verify and retrieve data from the blockchain
+## 7. Decrypt, verify and retrieve data from the blockchain
 To retrieve data from the blockchain, use `post /api/v1/decrypt_download_data_sawtooth` and pass these values:
 1. the sawtooth address where the data is published
 2. the sawtooth public key of the signer
