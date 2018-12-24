@@ -61,15 +61,15 @@ To create a digital signature, use `post /api/v1/create_signature_sawtooth` and 
 2. the data
 ```
 {
-  "primechain_sawtooth_private_key": "2e04323b1e1fe072aea4620a46d234dd52dbf8f90cacdb7bf8579b65622ea59c",
-  "data": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+  "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
+  "data": "Mistakes are always forgivable, if one has the courage to admit them."
 }
 ```
 The output will be the digital signature:
 ```
 {
 "status": 200,
-"signature": "65a985418249c2f8c20d3a8f42b5398fbd7c7a75c31eb11038efa721505f24dc4d8eff7d6151562a464daeb34f3dcf8323191aae25997f2e5ce52ca46c6186f9"
+"signature": "235de04e222dfcfcc0a2cdec32c1a2aaa56b404dc6b0e4e721eef264ce891e1920ff05ee6345635bd017fca97fef2407b57364a287dd27eddc8a82dec61bb87b"
 }
 ```
 
@@ -80,9 +80,9 @@ To create a digital signature, use `post /api/v1/verify_signature_sawtooth` and 
 3. the digital signature
 ```
 {
-  "primechain_sawtooth_public_key": "022dfb9755cf6a7313ddc58aa22894436d0e4c49e4c52f4706b554ef2dc56fc7de",
-  "data": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times.",
-  "signature": "65a985418249c2f8c20d3a8f42b5398fbd7c7a75c31eb11038efa721505f24dc4d8eff7d6151562a464daeb34f3dcf8323191aae25997f2e5ce52ca46c6186f9"
+  "primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
+  "data": "Mistakes are always forgivable, if one has the courage to admit them.",
+  "signature": "235de04e222dfcfcc0a2cdec32c1a2aaa56b404dc6b0e4e721eef264ce891e1920ff05ee6345635bd017fca97fef2407b57364a287dd27eddc8a82dec61bb87b"
 }
 ```
 The output will be:
@@ -92,6 +92,14 @@ The output will be:
 "response": true
 }
 ```
+or
+```
+{
+"status": 200,
+"response": false
+}
+```
+
 ## 6. Create, encrypt, sign and publish data to the blockchain
 To create, encrypt, sign and publish data to the blockchain, use `post /api/v1/encrypt_sign_store_data_sawtooth` and pass 2 parameters: 
 1. the primechain sawtooth private key 
@@ -100,7 +108,7 @@ To create, encrypt, sign and publish data to the blockchain, use `post /api/v1/e
 ***Sample input***
 ```
 {
-  "primechain_sawtooth_private_key": "2e04323b1e1fe072aea4620a46d234dd52dbf8f90cacdb7bf8579b65622ea59c",
+  "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
   "data": 
     {
       "guarantee_number": "ASDRE76464",
@@ -149,15 +157,13 @@ The following is the output:
 {
 "status": 200,
 "response": {
-"sawtooth_address": "97fd77ad086befd425f5bf34a93f393593849eaf4edd3cba568f7385633db76d29e891",
-"signature": "fd61ee928d36d5b8762831a985b1b49574a2b155e099d92307494fb11d32968622f03986370243d9f33702573a5afe02798c893007f1d9f4c2a21657e7e55226",
-"aes_password": "3P83TKUsek9vh9EAsqJx1uAh14xWk3LA",
-"aes_iv": "NukszFAnCE09"
+"primechain_sawtooth_tx_id": "82cde773d6b25b9a48dcb16f602fbcd5ed3649183d595e19ed545650bdfcc8fc2a9316121281910f43c52d3ba5c9e2d0c0eb6fce3ece54b6a257462bc6d395c1",
+"signature": "cb36670bc1e53389473f1fcac881bf8c30e3a8b44ea34a8adb8608ab7dd7dec850073c9d2e6e868b1a4fe94603a2a3fa3187dfd506edf26fc7173a64e9c4e699",
+"aes_password": "gkSQEaVPI9bHwGM37NmtjNBUad7mwoHm",
+"aes_iv": "RaaizYEJvqxg"
 }
 }
 ```
-
-
 
 ## 7. Decrypt, verify and retrieve data from the blockchain
 To retrieve data from the blockchain, use `post /api/v1/decrypt_download_data_sawtooth` and pass these values:
@@ -170,11 +176,12 @@ To retrieve data from the blockchain, use `post /api/v1/decrypt_download_data_sa
 ***Sample input***
 ```
 {
-"sawtooth_address": "97fd77ad086befd425f5bf34a93f393593849eaf4edd3cba568f7385633db76d29e891",
-"primechain_sawtooth_public_key": "022dfb9755cf6a7313ddc58aa22894436d0e4c49e4c52f4706b554ef2dc56fc7de",
-"signature": "fd61ee928d36d5b8762831a985b1b49574a2b155e099d92307494fb11d32968622f03986370243d9f33702573a5afe02798c893007f1d9f4c2a21657e7e55226",
-"aes_password": "3P83TKUsek9vh9EAsqJx1uAh14xWk3LA",
-"aes_iv": "NukszFAnCE09"
+"primechain_sawtooth_tx_id": "82cde773d6b25b9a48dcb16f602fbcd5ed3649183d595e19ed545650bdfcc8fc2a9316121281910f43c52d3ba5c9e2d0c0eb6fce3ece54b6a257462bc6d395c1",
+
+"primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
+"signature": "cb36670bc1e53389473f1fcac881bf8c30e3a8b44ea34a8adb8608ab7dd7dec850073c9d2e6e868b1a4fe94603a2a3fa3187dfd506edf26fc7173a64e9c4e699",
+"aes_password": "gkSQEaVPI9bHwGM37NmtjNBUad7mwoHm",
+"aes_iv": "RaaizYEJvqxg"
 }
 ```
 This is what happens:   
@@ -193,7 +200,23 @@ The output will be the data, the details of the signer and the status of the sig
 
 ***Sample output***
 ```
-
+{
+"status": 200,
+"response": {
+"guarantee_number": "ASDRE76464",
+"guarantee_currency": "USD",
+"guarantee_amount_words": "Twenty Two million",
+"guarantee_amount_figures": "22,000,000.00",
+"guarantee_date_of_issue": "17-December-2018",
+"guarantee_date_of_maturity": "16-March-2019",
+"guarantee_beneficiary": "Nicole Corporation",
+"guarantee_details": "On behalf of our client, Nicole Corporation, for value received, we, Global Bank, hereby irrevocably and unconditionally and without protest or notification, promise to pay against this, our irrevocable bank guarantee, to the order of Nicole Corporation, as beneficiary, on the maturity date, the sum of Twenty Two million United States Dollars ($22,000,000.00 USD), upon their first written demand for payment hereunder. Such payment shall be made without set-off, free and clear of any deductions, charges, fees, levies, taxes or withholdings of any nature. This bank guarantee is transferable, without payment of any transfer fees. This bank guarantee is issued in accordance with the uniform customs and practices for bank guarantees, as set forth by the International Chamber of Commerce, Paris, France, latest revision of ICC 500 publication. This bank guarantee shall be governed by and construed in accordance with the laws of the Republic of India and is free and clear of any lien and encumbrances and is of non-criminal origin.",
+"authorized_bank_officer_name": "Nicole Kidman",
+"authorized_bank_officer_title": "Vice President",
+"authorized_bank_officer_telephone": "230950934545",
+"authorized_bank_officer_facsimile": "367645455624",
+"authorized_bank_officer_email": "nicole@example.com"
+}
 }
 ```
 
