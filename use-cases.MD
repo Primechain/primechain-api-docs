@@ -41,18 +41,15 @@ Blockchain technology is ideal for banks and financial service providers because
 10.	Encrypted communication
 11.	[Encrypted data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD)
 12.	[Invoice discounting / supply chain finance / factoring](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md)
-13. [KYC (Individual)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/kyc_individual.md)
-14. KYC (Corporate)
-15. Letters of Credit 
-16.	Loan origination & lifecycle management
-17.	[Loyalty program lifecycle management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/loyalty_programs.md)
-18.	Peer-to-peer lending
-19.	Peer-to-peer remittance (cross-border & domestic)
-20.	Repository of records 
-21.	Smart asset lifecycle management
-22.	Stressed assets (NPA) marketplace
-23.	Syndicated loans
-24.	Vendor on-boarding & rating
+13. [Know Your Customer (KYC)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/know_your_customer.md)
+14. Letters of Credit 
+15.	[Loyalty program lifecycle management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/loyalty_programs.md)
+16.	Peer-to-peer lending
+17.	Peer-to-peer remittance (cross-border & domestic)
+18.	Smart asset lifecycle management
+19.	Stressed assets (NPA) marketplace
+20.	Syndicated loans
+21.	Vendor on-boarding & rating
 
 ## 3. Capital markets
 By providing transparent real-time data and increasing the efficiency in settlement of transactions and processing, blockchains are immensely useful for capital markets. Primechain-API use cases for Capital markets include:
