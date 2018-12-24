@@ -74,7 +74,7 @@ The output will be the digital signature:
 ```
 
 ## 5. Verify a digital signature
-To create a digital signature, use `post /api/v1/verify_signature_sawtooth` and pass 2 parameters:
+To verify a digital signature, use `post /api/v1/verify_signature_sawtooth` and pass 3 parameters:
 1. public key
 2. the data
 3. the digital signature
