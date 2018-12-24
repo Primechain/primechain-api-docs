@@ -5,7 +5,7 @@ Financial and capital markets use the KYC (Know Your Customer) system to identif
 Costs aside, KYC can delay transactions and lead to duplication of effort between banks. Blockchain provides a secure platform for high-quality, validated KYC & due diligence information on individuals and corporates. All information is provided by banks in an encrypted format. Members may list a price for each record and may choose to share / sell the information to selected Bankchain members. 
 
 ***Primechain API can be used to create a transparent, secure and efficient sharing / monetization blockchain for 
-high-quality, validated KYC & due diligence information on individuals.***
+high-quality, validated KYC & due diligence information on individuals and corporates.***
 
 The blockchain nodes can be operated by Banks, Financial institutions and Regulators.
 
