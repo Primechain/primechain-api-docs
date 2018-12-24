@@ -15,10 +15,10 @@ The output will be the
 2. Public key
 ```
 {
-  "status": 200,
-  "primechain_sawtooth_private_key": "2e04323b1e1fe072aea4620a46d234dd52dbf8f90cacdb7bf8579b65622ea59c",
-  "primechain_sawtooth_public_key": "022dfb9755cf6a7313ddc58aa22894436d0e4c49e4c52f4706b554ef2dc56fc7de",
-  "response": "User keys generated"
+"status": 200,
+"primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
+"primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
+"response": "User keys generated"
 }
 ```
 
@@ -28,30 +28,30 @@ To publish data to the blockchain, use `post /api/v1/upload_data_sawtooth` and p
 2. The data
 ```
 {
-  "primechain_sawtooth_private_key": "2e04323b1e1fe072aea4620a46d234dd52dbf8f90cacdb7bf8579b65622ea59c",
-  "data": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+  "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
+  "data": "Mistakes are always forgivable, if one has the courage to admit them."
 }
 ```
-Output will be the Sawtooth address for the transaction.
+Output will be the Sawtooth transaction id for the transaction.
 ```
 {
-  "status": 200,
-  "primechain_sawtooth_address": "542e574e380d2d850c025b9dfdc28043487f17e5dcbe0220b1919db1dc85fa900987761f5ef72a9c3d60159141749b36f4abfab3a11a4ba85087a71f68eab716"
+"status": 200,
+"primechain_sawtooth_tx_id": "a31075ee02e17c73b520c3a379880e936a011a702fe412a5e4da0d02300b90623b442e627774671d542565c642d4aa246545faaedaecde16cfa5d979be231e62"
 }
 ```
 
 ## 3. Retrieve data from the blockchain
-To retrieve data from the blockchain, use `post /api/v1/get_data_sawtooth` and pass the Sawtooth address for the transaction.
+To retrieve data from the blockchain, use `post /api/v1/get_data_sawtooth` and pass the Sawtooth transaction id of the  transaction.
 ```
 {
-  "primechain_sawtooth_address": "542e574e380d2d850c025b9dfdc28043487f17e5dcbe0220b1919db1dc85fa900987761f5ef72a9c3d60159141749b36f4abfab3a11a4ba85087a71f68eab716"
+"primechain_sawtooth_tx_id": "a31075ee02e17c73b520c3a379880e936a011a702fe412a5e4da0d02300b90623b442e627774671d542565c642d4aa246545faaedaecde16cfa5d979be231e62"
 }
 ```
 Output will be the data.
 ```
 {
-  "status": 200,
-  "response": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+"status": 200,
+"response": "Mistakes are always forgivable, if one has the courage to admit them."
 }
 ```
 ## 4. Creating a digital signature
