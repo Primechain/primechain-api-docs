@@ -147,7 +147,7 @@ The encrypted data and the tag are published to the blockchain.
 
 ### Step 5: Output 
 The following is the output:
-1. the sawtooth address where the data is published
+1. the relevant Sawtooth transaction id
 2. the digital signature
 3. the AES password
 4. the Initialization Vector (IV)
@@ -167,7 +167,7 @@ The following is the output:
 
 ## 7. Decrypt, verify and retrieve data from the blockchain
 To retrieve data from the blockchain, use `post /api/v1/decrypt_download_data_sawtooth` and pass these values:
-1. the sawtooth address where the data is published
+1. the relevant Sawtooth transaction id 
 2. the sawtooth public key of the signer
 3. the AES password
 4. the Initialization Vector (IV)
@@ -196,7 +196,7 @@ The encrypted data is decrypted.
 The digital signature is verified.
 
 ### Step 4: Output
-The output will be the data, the details of the signer and the status of the signature (true implies that the signature is verified and valid).
+The output will be the data if the signature is verified and valid.
 
 ***Sample output***
 ```
