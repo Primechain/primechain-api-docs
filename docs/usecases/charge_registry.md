@@ -17,9 +17,9 @@ Categories of charge related records:
 
 ### Steps involved
 
-1. [Create, encrypt, sign and publish a charge related record to the blockchain](#1-create,-encrypt,-sign-and-publish-a-charge-related-record-to-the-blockchain)
+1. [Create, encrypt, sign and publish a charge related record to the blockchain](#1-create-encrypt-sign-and-publish-a-charge-related-record-to-the-blockchain)
 
-2. [Decrypt, verify and retrieve a charge related record from the blockchain](#2-decrypt,-verify-and-retrieve-a-charge-related-record-from-the-blockchain)
+2. [Decrypt, verify and retrieve a charge related record from the blockchain](#2-decrypt-verify-and-retrieve-a-charge-related-record-from-the-blockchain)
 
 
 ## 1. Create, encrypt, sign and publish a charge related record to the blockchain
