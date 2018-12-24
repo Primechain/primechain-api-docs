@@ -42,7 +42,7 @@ Blockchain technology is ideal for banks and financial service providers because
 11.	[Encrypted data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD)
 12.	[Invoice discounting / supply chain finance / factoring](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md)
 13. [Know Your Customer (KYC)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/know_your_customer.md)
-14. Letters of Credit 
+14. [Letters of Credit](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/letter_of_credit.md)
 15.	[Loyalty program lifecycle management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/loyalty_programs.md)
 16.	Peer-to-peer lending
 17.	Peer-to-peer remittance (cross-border & domestic)
