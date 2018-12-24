@@ -46,7 +46,7 @@ Blockchain technology is ideal for banks and financial service providers because
 15.	[Loyalty program lifecycle management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/loyalty_programs.md)
 16.	Peer-to-peer lending
 17.	Peer-to-peer remittance (cross-border & domestic)
-18.	Smart asset lifecycle management
+18.	Securities lifecycle management - creation, issuing, trading, escrow, redemption, retirement
 19.	Stressed assets (NPA) marketplace
 20.	Syndicated loans
 21.	Vendor on-boarding & rating
