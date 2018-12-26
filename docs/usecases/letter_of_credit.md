@@ -86,10 +86,10 @@ The output will be the
 Sample output
 ```
 {
-"status": 200,
-"primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
-"primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
-"response": "User keys generated"
+  "status": 200,
+  "primechain_sawtooth_private_key": "962504a3061c59754ca5640411c15a6556bd0d37d39a6bfb8ebc97ded798e82b",
+  "primechain_sawtooth_public_key": "03f0e3bb1d51b7fd5a85bd5937598e72835005fadfe08058fc702b86425d458035",
+  "response": "User keys generated"
 }
 ```
 
@@ -102,7 +102,7 @@ To create, encrypt, sign and publish a Letter of Credit to the blockchain, use `
 ***Sample input***
 ```
 {
-  "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
+  "primechain_sawtooth_private_key": "962504a3061c59754ca5640411c15a6556bd0d37d39a6bfb8ebc97ded798e82b",
   "data": 
     {
       "LOC_FORM": "IRREVOCABLE",
@@ -169,12 +169,13 @@ The following is the output:
 ```
 {
 "status": 200,
-"response": {
-"primechain_sawtooth_tx_id": "82cde773d6b25b9a48dcb16f602fbcd5ed3649183d595e19ed545650bdfcc8fc2a9316121281910f43c52d3ba5c9e2d0c0eb6fce3ece54b6a257462bc6d395c1",
-"signature": "cb36670bc1e53389473f1fcac881bf8c30e3a8b44ea34a8adb8608ab7dd7dec850073c9d2e6e868b1a4fe94603a2a3fa3187dfd506edf26fc7173a64e9c4e699",
-"aes_password": "gkSQEaVPI9bHwGM37NmtjNBUad7mwoHm",
-"aes_iv": "RaaizYEJvqxg"
-}
+"response": 
+  {
+    "primechain_sawtooth_tx_id": "fcbccc4279acb8bda5b8f4dbce68a74d5c7b393949c0cbc77c92f5c9217cf968650b537afb7f8b19c20c4033511a9415a229d8df1f676ea7796bfd5901df8c33",
+    "signature": "588e8f5116244ad4166faeb7975b207006e78552cc30e547c81dfbef4000cd83268edb073c0fac5162e698eb930482ed41e793a1b85eb55ac4d01b617a58a12b",
+    "aes_password": "jipfAoqwJflAZLjzIYYwQiwqWcAPkqmr",
+    "aes_iv": "R6UrPh8Hsosl"
+  }
 }
 ```
 
@@ -189,12 +190,11 @@ To retrieve a Letter of Credit from the blockchain, use `post /api/v1/decrypt_do
 ***Sample input***
 ```
 {
-"primechain_sawtooth_tx_id": "82cde773d6b25b9a48dcb16f602fbcd5ed3649183d595e19ed545650bdfcc8fc2a9316121281910f43c52d3ba5c9e2d0c0eb6fce3ece54b6a257462bc6d395c1",
-
-"primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
-"signature": "cb36670bc1e53389473f1fcac881bf8c30e3a8b44ea34a8adb8608ab7dd7dec850073c9d2e6e868b1a4fe94603a2a3fa3187dfd506edf26fc7173a64e9c4e699",
-"aes_password": "gkSQEaVPI9bHwGM37NmtjNBUad7mwoHm",
-"aes_iv": "RaaizYEJvqxg"
+  "primechain_sawtooth_tx_id": "fcbccc4279acb8bda5b8f4dbce68a74d5c7b393949c0cbc77c92f5c9217cf968650b537afb7f8b19c20c4033511a9415a229d8df1f676ea7796bfd5901df8c33",
+  "primechain_sawtooth_public_key": "03f0e3bb1d51b7fd5a85bd5937598e72835005fadfe08058fc702b86425d458035",
+  "signature": "588e8f5116244ad4166faeb7975b207006e78552cc30e547c81dfbef4000cd83268edb073c0fac5162e698eb930482ed41e793a1b85eb55ac4d01b617a58a12b",
+  "aes_password": "jipfAoqwJflAZLjzIYYwQiwqWcAPkqmr",
+  "aes_iv": "R6UrPh8Hsosl"
 }
 ```
 This is what happens:   
@@ -213,43 +213,7 @@ The output will be the Letter of Credit if the signature is verified and valid.
 
 ***Sample output***
 ```
-{
-"status": 200,
-"response": {
-      "LOC_FORM": "IRREVOCABLE",
-      "LOC_NUMBER": "32453675864534",
-      "LOC_DATE_OF_ISSUE": "17-DECEMBER-2018",
-      "LOC_DATE_OF_EXPIRY": "16-MARCH-2019",
-      "LOC_PLACE_OF_EXPIRY": "MUMBAI, INDIA",
-      "LOC_APPLICANT_BANK": "GLOBAL BANK, GENEVA, SWITZERLAND",
-      "LOC_APPLICANT": "NICOLE CORPORATION",
-      "LOC_BENEFICIARY": "KIDMAN INC, ADELAIDE, AUSTRALIA",
-      "LOC_CURRENCY": "USD",
-      "LOC_AMOUNT_WORDS": "TWO MILLION",
-      "LOC_AMOUNT_FIGURES": "2,000,000.00",
-      "LOC_MAX_CREDIT_AMOUNT": "NOT EXCEEDING",
-      "LOC_AVAILABLE_WITH": "ANY BANK",
-      "LOC_AVAILABLE_BY": "BY NEGOTIATION",
-      "LOC_DRAFTS_AT": "SIGHT",
-      "LOC_DRAWEE": "INTERNATIONAL BANK, NEW YORK, USA",
-      "LOC_PARTIAL_SHIPMENTS": "ALLOWED",
-      "LOC_TRANSHIPMENT": "NOT ALLOWED",
-      "LOC_FOR_TRANSPORTATION_TO": "MUMBAI, INDIA",
-      "LOC_LATEST_DATE_OF_SHIPMENT": "17-JANUARY-2018",
-      "LOC_DESCRIPTION_GOODS_SERVICES": "PLATINUM RODS",
-      "LOC_QUANTITY_GOODS_SERVICES": "2000",
-      "LOC_UNIT_PRICE_GOODS_SERVICES": "1000",
-      "LOC_TRADE_TERMS": "CIF MUMBAI",
-      "LOC_ORDER_NUMBER": "435346453",
-      "LOC_DOCUMENTS_REQUIRED": "1.BENEFICIARY'S DRAFT AT SIGHT DRAWN ON BUYER'S BANK NAME, ADDRESS, MARKED "DRAWN UNDER BUYER'S BANK NAME IRREVOCABLE LETTER OF CREDIT NO.XXX DATED XXX". 2. SIGNED COMMERCIAL INVOICE IN TRIPLICATE. 3. PACKING LIST IN TRIPLICATE, INDICATING WEIGHT AND MEASUREMENT. 4. FULL SET (3 ORIGINALS AND 3 COPIES) OF CLEAN ON BOARD BILLS OF LADING MADE OUT TO ORDER OF SHIPPER AND BLANK ENDORSED MARKED "FREIGHT PREPAID" AND NOTIFY APPLICANT. 5. INSURANCE POLICY IN DUPLICATE ENDORSED IN BLANK FOR 110 PERCENT OF THE INVOICE VALUE INCLUDING ALL RISKS, WAR CLAUSES AND S.R.C.C. 6. CERTIFICATE OF ORIGIN IN 3 ORIGINALS AND 2 COPIES ISSUED BY CHAMBER OF COMMERCE.",
-      "LOC_ADDITIONAL_CONDITIONS": "THE COMPLETE SET OF ORIGINAL DOCUMENTS TO BE SENT IN ONE LOT BY THE COURIER SERVICE TO APPLIANT BANK.",
-      "LOC_CHARGES": "ALL BANKING CHARGES ARE FOR BENEFICIARY'S ACCOUNT.",
-      "LOC_PERIOD_FOR_PRESENTATION": "DOCUMENTS MUST BE PRESENTED WITHIN THE VALIDITY OF THIS CREDIT.",
-      "LOC_CONFIRMATION_INSTRUCTIONS": "CONFIRM",
-      "LOC_ADVISING_THROUGH_BANK": "STATE BANK OF ZIMBLIA, WOODFORD, ZIMBLIA",
-      "LOC_SENDER_TO_RECEIVER_INFORMATION": "THIS CREDIT IS SUBJECT TO UNIFORM CUSTOMS AND PRACTICE FOR DOCUMENTARY CREDIT, 2007 REVISION, INTERNATIONAL CHAMBER OF COMMERCE PUBLICATIONS NO.600."   
-}
-}
+ aaaa
 ```
 
 ## 3.6 Publishing unencrypted data to TRADE-Chain
@@ -268,7 +232,7 @@ Output will be the Sawtooth transaction id for the transaction.
 ```
 {
 "status": 200,
-"primechain_sawtooth_tx_id": "a31075ee02e17c73b520c3a379880e936a011a702fe412a5e4da0d02300b90623b442e627774671d542565c642d4aa246545faaedaecde16cfa5d979be231e62"
+"primechain_sawtooth_tx_id": "aaa"
 }
 ```
 
@@ -276,7 +240,7 @@ Output will be the Sawtooth transaction id for the transaction.
 To retrieve unencrypted data from TRADE-Chain, use `post /api/v1/get_data_sawtooth` and pass the Sawtooth transaction id of the  transaction.
 ```
 {
-"primechain_sawtooth_tx_id": "a31075ee02e17c73b520c3a379880e936a011a702fe412a5e4da0d02300b90623b442e627774671d542565c642d4aa246545faaedaecde16cfa5d979be231e62"
+"primechain_sawtooth_tx_id": "aaa"
 }
 ```
 Output will be the data.
@@ -295,16 +259,13 @@ To create a digital signature using TRADE-Chain, use `post /api/v1/create_signat
 Sample input
 ```
 {
-  "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
+  "primechain_sawtooth_private_key": "aaa",
   "data": "Mistakes are always forgivable, if one has the courage to admit them."
 }
 ```
 The output will be the digital signature:
 ```
-{
-"status": 200,
-"signature": "235de04e222dfcfcc0a2cdec32c1a2aaa56b404dc6b0e4e721eef264ce891e1920ff05ee6345635bd017fca97fef2407b57364a287dd27eddc8a82dec61bb87b"
-}
+aaaa
 ```
 
 ## 3.9 Verify a digital signature using TRADE-Chain
@@ -314,9 +275,9 @@ To verify a digital signature using TRADE-Chain, use `post /api/v1/verify_signat
 3. the digital signature
 ```
 {
-  "primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
+  "primechain_sawtooth_public_key": "aaaa",
   "data": "Mistakes are always forgivable, if one has the courage to admit them.",
-  "signature": "235de04e222dfcfcc0a2cdec32c1a2aaa56b404dc6b0e4e721eef264ce891e1920ff05ee6345635bd017fca97fef2407b57364a287dd27eddc8a82dec61bb87b"
+  "signature": "aaaa"
 }
 ```
 The output will be:
