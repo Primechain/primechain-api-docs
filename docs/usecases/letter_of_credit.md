@@ -45,6 +45,8 @@ TRADE-Chain is a permissioned global trade finance blockchain for the world’s 
 
 ## 3.2 Hyperledger Sawtooth
 
+TRADE-Chain is built on Hyperledger Sawtooth.
+
 Hyperledger Sawtooth is an enterprise blockchain platform for building distributed ledger applications and networks. The design philosophy targets keeping ledgers distributed and making smart contracts safe, particularly for enterprise use.
 
 Sawtooth simplifies blockchain application development by separating the core system from the application domain. Application developers can specify the business rules appropriate for their application, using the language of their choice, without needing to know the underlying design of the core system.
@@ -56,7 +58,7 @@ Sawtooth is an open source project under the Hyperledger umbrella. For more info
 
 ## 3.3 Publishing a letter of credit to TRADE-Chain
 
-To create, encrypt, sign and publish data to the blockchain, use `post /api/v1/encrypt_sign_store_data_sawtooth` and pass 2 parameters: 
+To create, encrypt, sign and publish a Letter of Credit to the blockchain, use `post /api/v1/encrypt_sign_store_data_sawtooth` and pass 2 parameters: 
 1. the primechain sawtooth private key 
 2. the data 
 
@@ -104,20 +106,20 @@ To create, encrypt, sign and publish data to the blockchain, use `post /api/v1/e
 This is what happens:   
 
 ### Step 1: Hash computation
-The SHA-512 hash of the data is computed.
+The SHA-512 hash of the Letter of Credit is computed.
 
-### Step 2: Signing
+### Step 2: Signing the Letter of Credit
 The hash is signed using the private key of the signer, using the secp256k1 algorithm.
 
-### Step 3: Encrypting the data
-The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
-1. the encrypted version of the data
+### Step 3: Encrypting the Letter of Credit
+The Letter of Credit is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
+1. the encrypted version of the Letter of Credit
 2. the AES password
 3. the Initialization Vector (IV). Initialization Vector is a nonce that is associated with an invocation of authenticated encryption on a particular plaintext and Additional Authenticated Data (AAD).   
 4. the Authentication Tag (tag), which is a cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data.
 
-### Step 4: Storing the encrypted data
-The encrypted data and the tag are published to the blockchain.
+### Step 4: Storing the encrypted Letter of Credit
+The encrypted Letter of Credit and the tag are published to the blockchain.
 
 ### Step 5: Output 
 The following is the output:
@@ -140,7 +142,7 @@ The following is the output:
 ```
 
 ## 3.4 Retrieving a letter of credit from TRADE-Chain
-To retrieve data from the blockchain, use `post /api/v1/decrypt_download_data_sawtooth` and pass these values:
+To retrieve a Letter of Credit from the blockchain, use `post /api/v1/decrypt_download_data_sawtooth` and pass these values:
 1. the relevant Sawtooth transaction id 
 2. the sawtooth public key of the signer
 3. the AES password
@@ -160,17 +162,17 @@ To retrieve data from the blockchain, use `post /api/v1/decrypt_download_data_sa
 ```
 This is what happens:   
 
-### Step 1: Retrieval of encrypted data 
-The encrypted data and tag are retrieved from the blockchain.
+### Step 1: Retrieval of the encrypted Letter of Credit 
+The encrypted Letter of Credit and tag are retrieved from the blockchain.
 
 ### Step 2: Decryption
-The encrypted data is decrypted.
+The encrypted Letter of Credit is decrypted.
 
 ### Step 3: Verification
 The digital signature is verified.
 
 ### Step 4: Output
-The output will be the data if the signature is verified and valid.
+The output will be the Letter of Credit if the signature is verified and valid.
 
 ***Sample output***
 ```
