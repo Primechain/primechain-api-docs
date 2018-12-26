@@ -260,8 +260,8 @@ To publish unencrypted data to TRADE-Chain, use `post /api/v1/upload_data_sawtoo
 Sample input
 ```
 {
-  "status": 200,
-  "primechain_sawtooth_tx_id": "d8e102ef081f9b368adad997db4875c2b67ac5482b0d68969ac8162fb039abd67bfc46112c667fe84e0210416fa9829fba121b898f3c15671ec88815ae18a101"
+  "primechain_sawtooth_private_key": "962504a3061c59754ca5640411c15a6556bd0d37d39a6bfb8ebc97ded798e82b",
+  "data": "Mistakes are always forgivable, if one has the courage to admit them."
 }
 ```
 Output will be the Sawtooth transaction id for the transaction.
