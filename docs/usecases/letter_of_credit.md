@@ -4,7 +4,7 @@ TRADE-Chain is a permissioned "global trade finance" blockchain for the world’
 
 ![Letter of credit](http://www.primechaintech.com/img/api_documentation/letter_of_credit.jpg)
 
-Table of contents:   
+***Table of contents:***   
 
 [1. Introduction](#1-introduction)   
 
@@ -16,10 +16,10 @@ Table of contents:
 [3.3 On-boarding an issuer of Letters of Credit](#33-on-boarding-an-issuer-of-letters-of-credit)   
 [3.4 Publishing a letter of credit to TRADE-Chain](#34-publishing-a-letter-of-credit-to-trade-chain)   
 [3.5 Retrieving a letter of credit from TRADE-Chain](#35-retrieving-a-letter-of-credit-from-trade-chain)   
-[3.6 Publishing unencrypted data to TRADE-Chain](#36-publishing-unencrypted-data-to-trade-chain)
-[3.7 Retrieving unencrypted data from TRADE-Chain](#37-retrieving-unencrypted-data-from-trade-chain)
-[3.8 Creating a digital signature using TRADE-Chain](#38-creating-a-digital-signature-using-trade-chain)
-[3.9 Verify a digital signature using TRADE-Chain](#39-verify-a-digital-signature-using-trade-chain)
+[3.6 Publishing unencrypted data to TRADE-Chain](#36-publishing-unencrypted-data-to-trade-chain)   
+[3.7 Retrieving unencrypted data from TRADE-Chain](#37-retrieving-unencrypted-data-from-trade-chain)   
+[3.8 Creating a digital signature using TRADE-Chain](#38-creating-a-digital-signature-using-trade-chain)   
+[3.9 Verify a digital signature using TRADE-Chain](#39-verify-a-digital-signature-using-trade-chain)   
 
 # 1. Introduction
 
