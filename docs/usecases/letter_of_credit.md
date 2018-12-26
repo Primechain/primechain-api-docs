@@ -1,9 +1,26 @@
 # Letter of credit
 
-A letter of credit (LoC) is a common payment mechanism used in international trade. It provides an economic guarantee from a creditworthy bank to an exporter of goods. A letter of credit is used in cases where the reliability of contracting parties cannot be readily and easily determined. It introduces a bank as underwriting the credit risk of the buyer paying the seller for goods.
+![Letter of credit](http://www.primechaintech.com/img/api_documentation/letter_of_credit.jpg)
 
-Some of the benefits of using blockchain for issuing letters of credit  are:
-(1) Each LoC is digitally signed by the issuing bank.
+A letter of credit is like a promissory note that represents an obligation taken on by a bank to make a payment once certain criteria are met - once the terms are completed and confirmed, the bank will transfer the funds. Simply put, a letter of credit ensures that the payment will be made as long as the services are performed.
+
+Example: An Indian exporter receives an order from an American importer. The exporter is not sure about the importer’s ability and willingness to pay once the order is delivered. The exporter requests for a letter of credit from the importer. The importer then applies for a letter of credit from its bank (where it has adequate funds or credit line. Once the goods are shipped, the bank pays the exporter subject to fulfilment of relevant terms and conditions. 
+
+Letters of credit are especially important in international trade due to the distance involved and potentially differing laws in the countries of the businesses involved. In these transactions, it is not always possible for the parties to meet in person. The bank issuing the letter of credit holds payment on behalf of the buyer until it receives confirmation that the goods in the transaction have been shipped. (Source: Investopedia)
+
+
+***Some of the benefits of using blockchain for letters of credit are:***
+
+1. A conventional Letter of Credit transaction involves time consuming manual processes such as the transfer of physical copies by post, courier, fax or scans. The use of blockchain offers significant potential to reduce the timelines involved in exchange of export documentation from the extant 7 to 10 days to less than a day. (Source: shippingandfreightresource.com)
+
+2. Use of blockchain in trade finance enhances transparency, security and synergy across all the parties and stakeholders involved. 
+
+3. Blockchain brings efficiency to trade finance and ensures cost effectiveness, quicker turnaround and unlocks liquidity for businesses.
+
+4. Blockchain technology usage for trade finance “enables automation of LC creation, payment against documents...” (Source: Reserve Bank of India’s 2017 Report of the Working Group on FinTech and Digital Banking).
+
+5. Blockchain will have a transformative impact on trade finance transactions, enable greater transparency, and offer simpler and faster transactions. (Source: morethanshipping.com)
+
 (2) Regulator nodes enable real-time supervision by the authorities.
 (3) The system is API driven and can easily be integrated with the banks' core banking and other legacy systems.
 (4) Each LoC is automatically encrypted and the decryption credentials are only available to the issuing bank.
