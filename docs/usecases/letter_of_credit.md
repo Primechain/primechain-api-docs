@@ -27,7 +27,7 @@ Letters of credit are especially important in international trade due to the dis
 
 TRADE-Chain is a permissioned global trade finance blockchain for the world’s banks and financial institutions. TRADE-Chain is operated by [Primechain Technologies Private Limited](http://www.primechaintech.com/). 
 
-Some of the core features of TRADE-Chain are:
+***Some of the core features of TRADE-Chain are:***
 
 1. A complete API driven system that can easily be integrated with legacy systems.
 
