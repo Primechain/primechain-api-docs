@@ -2,14 +2,15 @@
 
 ![Letter of credit](http://www.primechaintech.com/img/api_documentation/letter_of_credit.jpg)
 
+# 1. Introduction
+
 A letter of credit is like a promissory note that represents an obligation taken on by a bank to make a payment once certain criteria are met - once the terms are completed and confirmed, the bank will transfer the funds. Simply put, a letter of credit ensures that the payment will be made as long as the services are performed.
 
 ***Example:*** An Indian exporter receives an order from an American importer. The exporter is not sure about the importer’s ability and willingness to pay once the order is delivered. The exporter requests for a letter of credit from the importer. The importer then applies for a letter of credit from its bank (where it has adequate funds or credit line. Once the goods are shipped, the bank pays the exporter subject to fulfilment of relevant terms and conditions. 
 
 Letters of credit are especially important in international trade due to the distance involved and potentially differing laws in the countries of the businesses involved. In these transactions, it is not always possible for the parties to meet in person. The bank issuing the letter of credit holds payment on behalf of the buyer until it receives confirmation that the goods in the transaction have been shipped. (Source: Investopedia)
 
-
-***Some of the benefits of using blockchain for letters of credit are:***
+# 2. Benefits of using blockchain for letters of credit
 
 1. A conventional Letter of Credit transaction involves time consuming manual processes such as the transfer of physical copies by post, courier, fax or scans. The use of blockchain offers significant potential to reduce the timelines involved in exchange of export documentation from the extant 7 to 10 days to less than a day. (Source: shippingandfreightresource.com)
 
@@ -25,15 +26,12 @@ Letters of credit are especially important in international trade due to the dis
 (3) The system is API driven and can easily be integrated with the banks' core banking and other legacy systems.
 (4) Each LoC is automatically encrypted and the decryption credentials are only available to the issuing bank.
 
-### Steps involved
+# 3. TRADE-Chain
 
-1. [Create, encrypt, sign and publish a letter of credit to the blockchain](#1-create-encrypt-sign-and-publish-a-letter-of-credit-to-the-blockchain)
+TRADE-Chain is a permissioned global trade finance blockchain for the world’s banks and financial institutions. TRADE-Chain is operated by Primechain Technologies Private Limited. 
 
-2. [Decrypt, verify and retrieve a letter of credit from the blockchain](#2-decrypt-verify-and-retrieve-a-letter-of-credit-from-the-blockchain)
-
-
-## 1. Create, encrypt, sign and publish a letter of credit to the blockchain
-To create a letter of credit on the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
+## 3.1 Publishing a letter of credit to TRADE-Chain
+To create and publish a letter of credit on TRADE, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
 1. the primechain address of the bank issuing the letter of credit
 2. the letter of credit data 
 
@@ -125,8 +123,8 @@ The following is the output:
 }
 ```
 
-## 2. Decrypt, verify and retrieve a letter of credit from the blockchain
-To retrieve a letter of credit from the blockchain, use `post /api/v1/decrypt_download_data` and pass these values:
+## 3.2 Retrieving a letter of credit from TRADE-Chain
+To retrieve a letter of credit from TRADE-Chain, use `post /api/v1/decrypt_download_data` and pass these values:
 1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
 2. the id of the transaction in which the digital signature, hash and the issuers's primechain address were published to the DATA_SIGNATURE_MASTERLIST stream
 3. the AES password
@@ -211,5 +209,3 @@ The output will be the letter of credit, the details of the signer and the statu
 ```
 
 Have a query? Email us on info@primechain.in
-
-
