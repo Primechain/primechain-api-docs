@@ -213,7 +213,43 @@ The output will be the Letter of Credit if the signature is verified and valid.
 
 ***Sample output***
 ```
- aaaa
+{
+"status": 200,
+"response": {
+"LOC_FORM": "IRREVOCABLE",
+"LOC_NUMBER": "32453675864534",
+"LOC_DATE_OF_ISSUE": "17-DECEMBER-2018",
+"LOC_DATE_OF_EXPIRY": "16-MARCH-2019",
+"LOC_PLACE_OF_EXPIRY": "MUMBAI, INDIA",
+"LOC_APPLICANT_BANK": "GLOBAL BANK, GENEVA, SWITZERLAND",
+"LOC_APPLICANT": "NICOLE CORPORATION",
+"LOC_BENEFICIARY": "KIDMAN INC, ADELAIDE, AUSTRALIA",
+"LOC_CURRENCY": "USD",
+"LOC_AMOUNT_WORDS": "TWO MILLION",
+"LOC_AMOUNT_FIGURES": "2,000,000.00",
+"LOC_MAX_CREDIT_AMOUNT": "NOT EXCEEDING",
+"LOC_AVAILABLE_WITH": "ANY BANK",
+"LOC_AVAILABLE_BY": "BY NEGOTIATION",
+"LOC_DRAFTS_AT": "SIGHT",
+"LOC_DRAWEE": "INTERNATIONAL BANK, NEW YORK, USA",
+"LOC_PARTIAL_SHIPMENTS": "ALLOWED",
+"LOC_TRANSHIPMENT": "NOT ALLOWED",
+"LOC_FOR_TRANSPORTATION_TO": "MUMBAI, INDIA",
+"LOC_LATEST_DATE_OF_SHIPMENT": "17-JANUARY-2018",
+"LOC_DESCRIPTION_GOODS_SERVICES": "PLATINUM RODS",
+"LOC_QUANTITY_GOODS_SERVICES": "2000",
+"LOC_UNIT_PRICE_GOODS_SERVICES": "1000",
+"LOC_TRADE_TERMS": "CIF MUMBAI",
+"LOC_ORDER_NUMBER": "435346453",
+"LOC_DOCUMENTS_REQUIRED": "1.BENEFICIARY'S DRAFT AT SIGHT DRAWN ON BUYER'S BANK NAME, ADDRESS, MARKED 'DRAWN UNDER BUYER'S BANK NAME IRREVOCABLE LETTER OF CREDIT NO.XXX DATED XXX'. 2. SIGNED COMMERCIAL INVOICE IN TRIPLICATE. 3. PACKING LIST IN TRIPLICATE, INDICATING WEIGHT AND MEASUREMENT. 4. FULL SET (3 ORIGINALS AND 3 COPIES) OF CLEAN ON BOARD BILLS OF LADING MADE OUT TO ORDER OF SHIPPER AND BLANK ENDORSED MARKED 'FREIGHT PREPAID' AND NOTIFY APPLICANT. 5. INSURANCE POLICY IN DUPLICATE ENDORSED IN BLANK FOR 110 PERCENT OF THE INVOICE VALUE INCLUDING ALL RISKS, WAR CLAUSES AND S.R.C.C. 6. CERTIFICATE OF ORIGIN IN 3 ORIGINALS AND 2 COPIES ISSUED BY CHAMBER OF COMMERCE.",
+"LOC_ADDITIONAL_CONDITIONS": "THE COMPLETE SET OF ORIGINAL DOCUMENTS TO BE SENT IN ONE LOT BY THE COURIER SERVICE TO APPLIANT BANK.",
+"LOC_CHARGES": "ALL BANKING CHARGES ARE FOR BENEFICIARY'S ACCOUNT.",
+"LOC_PERIOD_FOR_PRESENTATION": "DOCUMENTS MUST BE PRESENTED WITHIN THE VALIDITY OF THIS CREDIT.",
+"LOC_CONFIRMATION_INSTRUCTIONS": "CONFIRM",
+"LOC_ADVISING_THROUGH_BANK": "STATE BANK OF ZIMBLIA, WOODFORD, ZIMBLIA",
+"LOC_SENDER_TO_RECEIVER_INFORMATION": "THIS CREDIT IS SUBJECT TO UNIFORM CUSTOMS AND PRACTICE FOR DOCUMENTARY CREDIT, 2007 REVISION, INTERNATIONAL CHAMBER OF COMMERCE PUBLICATIONS NO.600."
+}
+}
 ```
 
 ## 3.6 Publishing unencrypted data to TRADE-Chain
@@ -224,15 +260,15 @@ To publish unencrypted data to TRADE-Chain, use `post /api/v1/upload_data_sawtoo
 Sample input
 ```
 {
-  "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
-  "data": "Mistakes are always forgivable, if one has the courage to admit them."
+  "status": 200,
+  "primechain_sawtooth_tx_id": "d8e102ef081f9b368adad997db4875c2b67ac5482b0d68969ac8162fb039abd67bfc46112c667fe84e0210416fa9829fba121b898f3c15671ec88815ae18a101"
 }
 ```
 Output will be the Sawtooth transaction id for the transaction.
 ```
 {
-"status": 200,
-"primechain_sawtooth_tx_id": "aaa"
+  "status": 200,
+  "primechain_sawtooth_tx_id": "d8e102ef081f9b368adad997db4875c2b67ac5482b0d68969ac8162fb039abd67bfc46112c667fe84e0210416fa9829fba121b898f3c15671ec88815ae18a101"
 }
 ```
 
@@ -240,14 +276,14 @@ Output will be the Sawtooth transaction id for the transaction.
 To retrieve unencrypted data from TRADE-Chain, use `post /api/v1/get_data_sawtooth` and pass the Sawtooth transaction id of the  transaction.
 ```
 {
-"primechain_sawtooth_tx_id": "aaa"
+  "primechain_sawtooth_tx_id": "d8e102ef081f9b368adad997db4875c2b67ac5482b0d68969ac8162fb039abd67bfc46112c667fe84e0210416fa9829fba121b898f3c15671ec88815ae18a101"
 }
 ```
 Output will be the data.
 ```
 {
-"status": 200,
-"response": "Mistakes are always forgivable, if one has the courage to admit them."
+  "status": 200,
+  "response": "Mistakes are always forgivable, if one has the courage to admit them."
 }
 ```
 ## 3.8 Creating a digital signature using TRADE-Chain
@@ -259,13 +295,16 @@ To create a digital signature using TRADE-Chain, use `post /api/v1/create_signat
 Sample input
 ```
 {
-  "primechain_sawtooth_private_key": "aaa",
+  "primechain_sawtooth_private_key": "962504a3061c59754ca5640411c15a6556bd0d37d39a6bfb8ebc97ded798e82b",
   "data": "Mistakes are always forgivable, if one has the courage to admit them."
 }
 ```
 The output will be the digital signature:
 ```
-aaaa
+{
+  "status": 200,
+  "signature": "5def215805aa708bba99e0bcb9351be0a7f99295e16dd81259aee39c1972efc145b84200f712658c86509bcb88ea2c25d6922fa7c7a6a80e941f050dd275d077"
+}
 ```
 
 ## 3.9 Verify a digital signature using TRADE-Chain
@@ -275,9 +314,9 @@ To verify a digital signature using TRADE-Chain, use `post /api/v1/verify_signat
 3. the digital signature
 ```
 {
-  "primechain_sawtooth_public_key": "aaaa",
+  "primechain_sawtooth_public_key": "03f0e3bb1d51b7fd5a85bd5937598e72835005fadfe08058fc702b86425d458035",
   "data": "Mistakes are always forgivable, if one has the courage to admit them.",
-  "signature": "aaaa"
+  "signature": "5def215805aa708bba99e0bcb9351be0a7f99295e16dd81259aee39c1972efc145b84200f712658c86509bcb88ea2c25d6922fa7c7a6a80e941f050dd275d077"
 }
 ```
 The output will be:
