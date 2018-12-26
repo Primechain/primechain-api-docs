@@ -1,6 +1,19 @@
 # Letter of credit
 
+TRADE-Chain is a permissioned "global trade finance" blockchain for the world’s banks and financial institutions. TRADE-Chain is operated by [Primechain Technologies Private Limited](http://www.primechaintech.com/). TRADE-Chain enables the issuance and sharing of letters of credit.
+
 ![Letter of credit](http://www.primechaintech.com/img/api_documentation/letter_of_credit.jpg)
+
+Table of contents:
+[1. Introduction](#1-introduction)   
+
+[2. Benefits of using blockchain for letters of credit](#2-benefits-of-using-blockchain-for-letters-of-credit)   
+
+[3. TRADE-Chain](#3-trade-chain)   
+[3.1 Core features of TRADE-Chain](#31-core-features-of-trade-chain)
+[3.2 Hyperledger Sawtooth](#32-hyperledger-sawtooth)   
+[3.3 Publishing a letter of credit to TRADE-Chain](#33-publishing-a-letter-of-credit-to-trade-chain)
+[3.4 Retrieving a letter of credit from TRADE-Chain](#34-retrieving-a-letter-of-credit-from-trade-chain)
 
 # 1. Introduction
 
