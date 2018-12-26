@@ -4,7 +4,7 @@
 
 A letter of credit is like a promissory note that represents an obligation taken on by a bank to make a payment once certain criteria are met - once the terms are completed and confirmed, the bank will transfer the funds. Simply put, a letter of credit ensures that the payment will be made as long as the services are performed.
 
-Example: An Indian exporter receives an order from an American importer. The exporter is not sure about the importer’s ability and willingness to pay once the order is delivered. The exporter requests for a letter of credit from the importer. The importer then applies for a letter of credit from its bank (where it has adequate funds or credit line. Once the goods are shipped, the bank pays the exporter subject to fulfilment of relevant terms and conditions. 
+***Example:*** An Indian exporter receives an order from an American importer. The exporter is not sure about the importer’s ability and willingness to pay once the order is delivered. The exporter requests for a letter of credit from the importer. The importer then applies for a letter of credit from its bank (where it has adequate funds or credit line. Once the goods are shipped, the bank pays the exporter subject to fulfilment of relevant terms and conditions. 
 
 Letters of credit are especially important in international trade due to the distance involved and potentially differing laws in the countries of the businesses involved. In these transactions, it is not always possible for the parties to meet in person. The bank issuing the letter of credit holds payment on behalf of the buyer until it receives confirmation that the goods in the transaction have been shipped. (Source: Investopedia)
 
