@@ -2,7 +2,7 @@
 
 TRADE-Chain is a permissioned "global trade finance" blockchain for the world’s banks and financial institutions. TRADE-Chain is operated by [Primechain Technologies Private Limited](http://www.primechaintech.com/). TRADE-Chain is built on Hyperledger Sawtooth and enables the issuance and sharing of letters of credit in a secure and confidential manner.
 
-![Letter of credit](http://www.primechaintech.com/img/api_documentation/letter_of_credit.jpg)
+![Letter of credit](http://www.primechaintech.com/img/api_documentation/trade-chain.jpg)
 
 ***Table of contents:***   
 
