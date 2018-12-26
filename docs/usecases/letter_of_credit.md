@@ -1,4 +1,4 @@
-# Blockchain platform for Letters of Credit
+# Hyperledger-Sawtooth Blockchain platform for Letters of Credit
 
 TRADE-Chain is a permissioned "global trade finance" blockchain for the world’s banks and financial institutions. TRADE-Chain is operated by [Primechain Technologies Private Limited](http://www.primechaintech.com/). TRADE-Chain is built on Hyperledger Sawtooth and enables the issuance and sharing of letters of credit in a secure and confidential manner.
 
