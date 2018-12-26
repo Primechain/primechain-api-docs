@@ -45,14 +45,15 @@ TRADE-Chain is a permissioned global trade finance blockchain for the world’s 
 
 
 ## 3.1 Publishing a letter of credit to TRADE-Chain
-To create and publish a letter of credit on TRADE, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
-1. the primechain address of the bank issuing the letter of credit
-2. the letter of credit data 
+
+To create, encrypt, sign and publish data to the blockchain, use `post /api/v1/encrypt_sign_store_data_sawtooth` and pass 2 parameters: 
+1. the primechain sawtooth private key 
+2. the data 
 
 ***Sample input***
 ```
 {
-  "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
   "data": 
     {
       "LOC_FORM": "IRREVOCABLE",
@@ -86,39 +87,32 @@ To create and publish a letter of credit on TRADE, use `post /api/v1/encrypt_sig
       "LOC_PERIOD_FOR_PRESENTATION": "DOCUMENTS MUST BE PRESENTED WITHIN THE VALIDITY OF THIS CREDIT.",
       "LOC_CONFIRMATION_INSTRUCTIONS": "CONFIRM",
       "LOC_ADVISING_THROUGH_BANK": "STATE BANK OF ZIMBLIA, WOODFORD, ZIMBLIA",
-      "LOC_SENDER_TO_RECEIVER_INFORMATION": "THIS CREDIT IS SUBJECT TO UNIFORM CUSTOMS AND PRACTICE FOR DOCUMENTARY CREDIT, 2007 REVISION, INTERNATIONAL CHAMBER OF COMMERCE PUBLICATIONS NO.600."   
+      "LOC_SENDER_TO_RECEIVER_INFORMATION": "THIS CREDIT IS SUBJECT TO UNIFORM CUSTOMS AND PRACTICE FOR DOCUMENTARY CREDIT, 2007 REVISION, INTERNATIONAL CHAMBER OF COMMERCE PUBLICATIONS NO.600."        
     }
 }
 ```
 This is what happens:   
 
 ### Step 1: Hash computation
-The SHA-512 hash of the letter of credit is computed.
+The SHA-512 hash of the data is computed.
 
 ### Step 2: Signing
-The hash is signed using the private key of the issuing bank, using the Elliptic Curve Digital Signature Algorithm (ECDSA) algorithm.
+The hash is signed using the private key of the signer, using the secp256k1 algorithm.
 
-### Step 3: Storing the signature
-The following are published to the `DATA_SIGNATURE_MASTERLIST` stream:
-1. the digital signature
-2. the hash
-3. the primechain address of the issuing bank 
-
-### Step 4: Encrypting the data
+### Step 3: Encrypting the data
 The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
 1. the encrypted version of the data
 2. the AES password
 3. the Initialization Vector (IV). Initialization Vector is a nonce that is associated with an invocation of authenticated encryption on a particular plaintext and Additional Authenticated Data (AAD).   
 4. the Authentication Tag (tag), which is a cryptographic checksum on data that is designed to reveal both accidental errors and the intentional modification of the data.
 
-### Step 5: Storing the encrypted data
-The encrypted data and the tag are published to the `DATA_MASTERLIST` stream.
+### Step 4: Storing the encrypted data
+The encrypted data and the tag are published to the blockchain.
 
-### Step 6: Output 
+### Step 5: Output 
 The following is the output:
-1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
-2. the id of the transaction in which the digital signature, hash and the issuer's primechain address were published to the DATA_SIGNATURE_MASTERLIST stream
-3. the digital signature
+1. the relevant Sawtooth transaction id
+2. the digital signature
 3. the AES password
 4. the Initialization Vector (IV)
 
@@ -126,58 +120,53 @@ The following is the output:
 ```
 {
 "status": 200,
-"response": 
-  {
-    "tx_id_enc_data": "a8441a8e8fe52c6f84941fd1f08f774ecbf0dc9edf9fd18e9f9d20f1d2945940",
-    "tx_id_signature": "8f15a1b3bc4cbeeae89ea28e77982ac7baa04c45870d9d40086b799ad795487f",
-    "signature": "H523zhPwR1gdPn2R0/JlfTJLWB5HaII96vJcDx4qy8f2StF1AE6Qfft8lqE2IoDd2czj5cW8i9ZJLaWXu7KkEyE=",
-    "aes_password": "5M1qnsYeRmSvlwNtZ8oJiHC0g9ucVrgc",
-    "aes_iv": "zNc59qnYapAw"
-  }
+"response": {
+"primechain_sawtooth_tx_id": "82cde773d6b25b9a48dcb16f602fbcd5ed3649183d595e19ed545650bdfcc8fc2a9316121281910f43c52d3ba5c9e2d0c0eb6fce3ece54b6a257462bc6d395c1",
+"signature": "cb36670bc1e53389473f1fcac881bf8c30e3a8b44ea34a8adb8608ab7dd7dec850073c9d2e6e868b1a4fe94603a2a3fa3187dfd506edf26fc7173a64e9c4e699",
+"aes_password": "gkSQEaVPI9bHwGM37NmtjNBUad7mwoHm",
+"aes_iv": "RaaizYEJvqxg"
+}
 }
 ```
 
-## 3.2 Retrieving a letter of credit from TRADE-Chain
-To retrieve a letter of credit from TRADE-Chain, use `post /api/v1/decrypt_download_data` and pass these values:
-1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
-2. the id of the transaction in which the digital signature, hash and the issuers's primechain address were published to the DATA_SIGNATURE_MASTERLIST stream
+## 3.2 Retreiving 
+To retrieve data from the blockchain, use `post /api/v1/decrypt_download_data_sawtooth` and pass these values:
+1. the relevant Sawtooth transaction id 
+2. the sawtooth public key of the signer
 3. the AES password
 4. the Initialization Vector (IV)
+5. the digital signature
 
 ***Sample input***
 ```
 {
-    "tx_id_enc_data": "b40cb6e4b95e72510413cd20030c3ea7052ef1dea8deb9340efb5e39d05f8394",
-    "tx_id_signature": "3f06f98af6b7acbb9b7ec26f7c692bf39b999fc645cce5f969ca5467470fc235",
-    "aes_password": "R1E3GYxjAc0Gfa8xEqRNtOdJfWErOBz7",
-    "aes_iv": "VioxHPgIDj7F"
+"primechain_sawtooth_tx_id": "82cde773d6b25b9a48dcb16f602fbcd5ed3649183d595e19ed545650bdfcc8fc2a9316121281910f43c52d3ba5c9e2d0c0eb6fce3ece54b6a257462bc6d395c1",
+
+"primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
+"signature": "cb36670bc1e53389473f1fcac881bf8c30e3a8b44ea34a8adb8608ab7dd7dec850073c9d2e6e868b1a4fe94603a2a3fa3187dfd506edf26fc7173a64e9c4e699",
+"aes_password": "gkSQEaVPI9bHwGM37NmtjNBUad7mwoHm",
+"aes_iv": "RaaizYEJvqxg"
 }
 ```
 This is what happens:   
 
-### Step 1: Retrieval of signing data 
-The digital signature, hash and the primechain address of the issuing bank are retrieved from the DATA_SIGNATURE_MASTERLIST stream.
+### Step 1: Retrieval of encrypted data 
+The encrypted data and tag are retrieved from the blockchain.
 
-### Step 2: Retrieval of encrypted data 
-The encrypted data and tag are retrieved from the DATA_MASTERLIST stream.
-
-### Step 3: Decryption
+### Step 2: Decryption
 The encrypted data is decrypted.
 
-### Step 4: Verification
+### Step 3: Verification
 The digital signature is verified.
 
-### Step 5: Output
-The output will be the letter of credit, the details of the signer and the status of the signature (true implies that the signature is verified and valid).
+### Step 4: Output
+The output will be the data if the signature is verified and valid.
 
 ***Sample output***
 ```
 {
-  "status": 200,
-  "response": 
-    {
-      "data": 
-        {
+"status": 200,
+"response": {
       "LOC_FORM": "IRREVOCABLE",
       "LOC_NUMBER": "32453675864534",
       "LOC_DATE_OF_ISSUE": "17-DECEMBER-2018",
@@ -210,15 +199,7 @@ The output will be the letter of credit, the details of the signer and the statu
       "LOC_CONFIRMATION_INSTRUCTIONS": "CONFIRM",
       "LOC_ADVISING_THROUGH_BANK": "STATE BANK OF ZIMBLIA, WOODFORD, ZIMBLIA",
       "LOC_SENDER_TO_RECEIVER_INFORMATION": "THIS CREDIT IS SUBJECT TO UNIFORM CUSTOMS AND PRACTICE FOR DOCUMENTARY CREDIT, 2007 REVISION, INTERNATIONAL CHAMBER OF COMMERCE PUBLICATIONS NO.600."   
-   
-        },
-       "signer_detail": 
-        {
-          "name": "Noodle Bank Official Signer",
-          "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
-        },
-        "signature_status": true
-    }
+}
 }
 ```
 
