@@ -28,7 +28,7 @@ Letters of credit are especially important in international trade due to the dis
 
 # 3. TRADE-Chain
 
-TRADE-Chain is a permissioned global trade finance blockchain for the world’s banks and financial institutions. TRADE-Chain is operated by Primechain Technologies Private Limited. 
+TRADE-Chain is a permissioned global trade finance blockchain for the world’s banks and financial institutions. TRADE-Chain is operated by [Primechain Technologies Private Limited](http://www.primechaintech.com/). 
 
 ## 3.1 Publishing a letter of credit to TRADE-Chain
 To create and publish a letter of credit on TRADE, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
