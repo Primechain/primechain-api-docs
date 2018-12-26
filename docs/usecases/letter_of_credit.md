@@ -14,8 +14,8 @@ Table of contents:
 [3.1 Core features of TRADE-Chain](#31-core-features-of-trade-chain)   
 [3.2 Hyperledger Sawtooth](#32-hyperledger-sawtooth)      
 [3.3 On-boarding an issuer of Letters of Credit](#33-on-boarding-an-issuer-of-letters-of-credit)   
-[3.4 Publishing a letter of credit to TRADE-Chain](#33-publishing-a-letter-of-credit-to-trade-chain)   
-[3.5 Retrieving a letter of credit from TRADE-Chain](#34-retrieving-a-letter-of-credit-from-trade-chain)   
+[3.4 Publishing a letter of credit to TRADE-Chain](#34-publishing-a-letter-of-credit-to-trade-chain)   
+[3.5 Retrieving a letter of credit from TRADE-Chain](#35-retrieving-a-letter-of-credit-from-trade-chain)   
 
 
 # 1. Introduction
