@@ -4,16 +4,19 @@ TRADE-Chain is a permissioned "global trade finance" blockchain for the world’
 
 ![Letter of credit](http://www.primechaintech.com/img/api_documentation/letter_of_credit.jpg)
 
-Table of contents:
+Table of contents:   
+
 [1. Introduction](#1-introduction)   
 
 [2. Benefits of using blockchain for letters of credit](#2-benefits-of-using-blockchain-for-letters-of-credit)   
 
 [3. TRADE-Chain](#3-trade-chain)   
-[3.1 Core features of TRADE-Chain](#31-core-features-of-trade-chain)
-[3.2 Hyperledger Sawtooth](#32-hyperledger-sawtooth)   
-[3.3 Publishing a letter of credit to TRADE-Chain](#33-publishing-a-letter-of-credit-to-trade-chain)
-[3.4 Retrieving a letter of credit from TRADE-Chain](#34-retrieving-a-letter-of-credit-from-trade-chain)
+[3.1 Core features of TRADE-Chain](#31-core-features-of-trade-chain)   
+[3.2 Hyperledger Sawtooth](#32-hyperledger-sawtooth)      
+[3.3 On-boarding an issuer of Letters of Credit](#33-on-boarding-an-issuer-of-letters-of-credit)   
+[3.4 Publishing a letter of credit to TRADE-Chain](#33-publishing-a-letter-of-credit-to-trade-chain)   
+[3.5 Retrieving a letter of credit from TRADE-Chain](#34-retrieving-a-letter-of-credit-from-trade-chain)   
+
 
 # 1. Introduction
 
@@ -69,7 +72,25 @@ Sawtooth is also highly modular. This modularity enables enterprises and consort
 Sawtooth is an open source project under the Hyperledger umbrella. For more information see: https://sawtooth.hyperledger.org/
 
 
-## 3.3 Publishing a letter of credit to TRADE-Chain
+## 3.3 On-boarding an issuer of Letters of Credit
+
+To on-board an issuer of Letters of Credit, use `get /api/v1/create_user_key_sawtooth`
+
+The output will be the 
+1. The private key of the newly created issuer
+2. The public key of the newly created issuer
+
+Sample output
+```
+{
+"status": 200,
+"primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
+"primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
+"response": "User keys generated"
+}
+```
+
+## 3.4 Publishing a letter of credit to TRADE-Chain
 
 To create, encrypt, sign and publish a Letter of Credit to the blockchain, use `post /api/v1/encrypt_sign_store_data_sawtooth` and pass 2 parameters: 
 1. the primechain sawtooth private key 
@@ -106,7 +127,7 @@ To create, encrypt, sign and publish a Letter of Credit to the blockchain, use `
       "LOC_UNIT_PRICE_GOODS_SERVICES": "1000",
       "LOC_TRADE_TERMS": "CIF MUMBAI",
       "LOC_ORDER_NUMBER": "435346453",
-      "LOC_DOCUMENTS_REQUIRED": "1.BENEFICIARY'S DRAFT AT SIGHT DRAWN ON BUYER'S BANK NAME, ADDRESS, MARKED "DRAWN UNDER BUYER'S BANK NAME IRREVOCABLE LETTER OF CREDIT NO.XXX DATED XXX". 2. SIGNED COMMERCIAL INVOICE IN TRIPLICATE. 3. PACKING LIST IN TRIPLICATE, INDICATING WEIGHT AND MEASUREMENT. 4. FULL SET (3 ORIGINALS AND 3 COPIES) OF CLEAN ON BOARD BILLS OF LADING MADE OUT TO ORDER OF SHIPPER AND BLANK ENDORSED MARKED "FREIGHT PREPAID" AND NOTIFY APPLICANT. 5. INSURANCE POLICY IN DUPLICATE ENDORSED IN BLANK FOR 110 PERCENT OF THE INVOICE VALUE INCLUDING ALL RISKS, WAR CLAUSES AND S.R.C.C. 6. CERTIFICATE OF ORIGIN IN 3 ORIGINALS AND 2 COPIES ISSUED BY CHAMBER OF COMMERCE.",
+      "LOC_DOCUMENTS_REQUIRED": "1.BENEFICIARY'S DRAFT AT SIGHT DRAWN ON BUYER'S BANK NAME, ADDRESS, MARKED 'DRAWN UNDER BUYER'S BANK NAME IRREVOCABLE LETTER OF CREDIT NO.XXX DATED XXX'. 2. SIGNED COMMERCIAL INVOICE IN TRIPLICATE. 3. PACKING LIST IN TRIPLICATE, INDICATING WEIGHT AND MEASUREMENT. 4. FULL SET (3 ORIGINALS AND 3 COPIES) OF CLEAN ON BOARD BILLS OF LADING MADE OUT TO ORDER OF SHIPPER AND BLANK ENDORSED MARKED 'FREIGHT PREPAID' AND NOTIFY APPLICANT. 5. INSURANCE POLICY IN DUPLICATE ENDORSED IN BLANK FOR 110 PERCENT OF THE INVOICE VALUE INCLUDING ALL RISKS, WAR CLAUSES AND S.R.C.C. 6. CERTIFICATE OF ORIGIN IN 3 ORIGINALS AND 2 COPIES ISSUED BY CHAMBER OF COMMERCE.",
       "LOC_ADDITIONAL_CONDITIONS": "THE COMPLETE SET OF ORIGINAL DOCUMENTS TO BE SENT IN ONE LOT BY THE COURIER SERVICE TO APPLIANT BANK.",
       "LOC_CHARGES": "ALL BANKING CHARGES ARE FOR BENEFICIARY'S ACCOUNT.",
       "LOC_PERIOD_FOR_PRESENTATION": "DOCUMENTS MUST BE PRESENTED WITHIN THE VALIDITY OF THIS CREDIT.",
@@ -154,7 +175,7 @@ The following is the output:
 }
 ```
 
-## 3.4 Retrieving a letter of credit from TRADE-Chain
+## 3.5 Retrieving a letter of credit from TRADE-Chain
 To retrieve a Letter of Credit from the blockchain, use `post /api/v1/decrypt_download_data_sawtooth` and pass these values:
 1. the relevant Sawtooth transaction id 
 2. the sawtooth public key of the signer
@@ -227,5 +248,83 @@ The output will be the Letter of Credit if the signature is verified and valid.
 }
 }
 ```
+
+## 3.6 Publishing unencrypted data to TRADE-Chain
+To publish data to the blockchain, use `post /api/v1/upload_data_sawtooth` and pass 2 parameters:
+1. Private_key
+2. The data
+```
+{
+  "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
+  "data": "Mistakes are always forgivable, if one has the courage to admit them."
+}
+```
+Output will be the Sawtooth transaction id for the transaction.
+```
+{
+"status": 200,
+"primechain_sawtooth_tx_id": "a31075ee02e17c73b520c3a379880e936a011a702fe412a5e4da0d02300b90623b442e627774671d542565c642d4aa246545faaedaecde16cfa5d979be231e62"
+}
+```
+
+## 3.7 Retrieving unencrypted data from TRADE-Chain
+To retrieve data from the blockchain, use `post /api/v1/get_data_sawtooth` and pass the Sawtooth transaction id of the  transaction.
+```
+{
+"primechain_sawtooth_tx_id": "a31075ee02e17c73b520c3a379880e936a011a702fe412a5e4da0d02300b90623b442e627774671d542565c642d4aa246545faaedaecde16cfa5d979be231e62"
+}
+```
+Output will be the data.
+```
+{
+"status": 200,
+"response": "Mistakes are always forgivable, if one has the courage to admit them."
+}
+```
+## 4. Creating a digital signature using TRADE-Chain
+
+To create a digital signature, use `post /api/v1/create_signature_sawtooth` and pass 2 parameters:
+1. Private key
+2. the data
+```
+{
+  "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
+  "data": "Mistakes are always forgivable, if one has the courage to admit them."
+}
+```
+The output will be the digital signature:
+```
+{
+"status": 200,
+"signature": "235de04e222dfcfcc0a2cdec32c1a2aaa56b404dc6b0e4e721eef264ce891e1920ff05ee6345635bd017fca97fef2407b57364a287dd27eddc8a82dec61bb87b"
+}
+```
+
+## 5. Verify a digital signature using TRADE-Chain
+To verify a digital signature, use `post /api/v1/verify_signature_sawtooth` and pass 3 parameters:
+1. public key
+2. the data
+3. the digital signature
+```
+{
+  "primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
+  "data": "Mistakes are always forgivable, if one has the courage to admit them.",
+  "signature": "235de04e222dfcfcc0a2cdec32c1a2aaa56b404dc6b0e4e721eef264ce891e1920ff05ee6345635bd017fca97fef2407b57364a287dd27eddc8a82dec61bb87b"
+}
+```
+The output will be:
+```
+{
+"status": 200,
+"response": true
+}
+```
+or
+```
+{
+"status": 200,
+"response": false
+}
+``` 
 
 Have a query? Email us on info@primechain.in
