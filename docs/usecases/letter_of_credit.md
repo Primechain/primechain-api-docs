@@ -16,7 +16,10 @@ Table of contents:
 [3.3 On-boarding an issuer of Letters of Credit](#33-on-boarding-an-issuer-of-letters-of-credit)   
 [3.4 Publishing a letter of credit to TRADE-Chain](#34-publishing-a-letter-of-credit-to-trade-chain)   
 [3.5 Retrieving a letter of credit from TRADE-Chain](#35-retrieving-a-letter-of-credit-from-trade-chain)   
-
+[3.6 Publishing unencrypted data to TRADE-Chain](#36-publishing-unencrypted-data-to-trade-chain)
+[3.7 Retrieving unencrypted data from TRADE-Chain](#37-retrieving-unencrypted-data-from-trade-chain)
+[3.8 Creating a digital signature using TRADE-Chain](#38-creating-a-digital-signature-using-trade-chain)
+[3.9 Verify a digital signature using TRADE-Chain](#39-verify-a-digital-signature-using-trade-chain)
 
 # 1. Introduction
 
@@ -250,9 +253,11 @@ The output will be the Letter of Credit if the signature is verified and valid.
 ```
 
 ## 3.6 Publishing unencrypted data to TRADE-Chain
-To publish data to the blockchain, use `post /api/v1/upload_data_sawtooth` and pass 2 parameters:
-1. Private_key
+To publish unencrypted data to TRADE-Chain, use `post /api/v1/upload_data_sawtooth` and pass 2 parameters:
+1. The private key of the uploading entity
 2. The data
+
+Sample input
 ```
 {
   "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
@@ -268,7 +273,7 @@ Output will be the Sawtooth transaction id for the transaction.
 ```
 
 ## 3.7 Retrieving unencrypted data from TRADE-Chain
-To retrieve data from the blockchain, use `post /api/v1/get_data_sawtooth` and pass the Sawtooth transaction id of the  transaction.
+To retrieve unencrypted data from TRADE-Chain, use `post /api/v1/get_data_sawtooth` and pass the Sawtooth transaction id of the  transaction.
 ```
 {
 "primechain_sawtooth_tx_id": "a31075ee02e17c73b520c3a379880e936a011a702fe412a5e4da0d02300b90623b442e627774671d542565c642d4aa246545faaedaecde16cfa5d979be231e62"
@@ -281,11 +286,13 @@ Output will be the data.
 "response": "Mistakes are always forgivable, if one has the courage to admit them."
 }
 ```
-## 4. Creating a digital signature using TRADE-Chain
+## 3.8 Creating a digital signature using TRADE-Chain
 
-To create a digital signature, use `post /api/v1/create_signature_sawtooth` and pass 2 parameters:
-1. Private key
+To create a digital signature using TRADE-Chain, use `post /api/v1/create_signature_sawtooth` and pass 2 parameters:
+1. The private key of the signer
 2. the data
+
+Sample input
 ```
 {
   "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
@@ -300,9 +307,9 @@ The output will be the digital signature:
 }
 ```
 
-## 5. Verify a digital signature using TRADE-Chain
-To verify a digital signature, use `post /api/v1/verify_signature_sawtooth` and pass 3 parameters:
-1. public key
+## 3.9 Verify a digital signature using TRADE-Chain
+To verify a digital signature using TRADE-Chain, use `post /api/v1/verify_signature_sawtooth` and pass 3 parameters:
+1. the public key of the signer
 2. the data
 3. the digital signature
 ```
