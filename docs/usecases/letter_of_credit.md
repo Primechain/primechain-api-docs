@@ -22,13 +22,27 @@ Letters of credit are especially important in international trade due to the dis
 
 5. Blockchain will have a transformative impact on trade finance transactions, enable greater transparency, and offer simpler and faster transactions. (Source: morethanshipping.com)
 
-(2) Regulator nodes enable real-time supervision by the authorities.
-(3) The system is API driven and can easily be integrated with the banks' core banking and other legacy systems.
-(4) Each LoC is automatically encrypted and the decryption credentials are only available to the issuing bank.
 
 # 3. TRADE-Chain
 
 TRADE-Chain is a permissioned global trade finance blockchain for the world’s banks and financial institutions. TRADE-Chain is operated by [Primechain Technologies Private Limited](http://www.primechaintech.com/). 
+
+Some of the core features of TRADE-Chain are:
+
+1. A complete API driven system that can easily be integrated with legacy systems.
+
+2. Enables real-time supervision by the authorities.
+
+3. All data is automatically encrypted and the decryption credentials are only available to the issuing entity.
+
+4. By storing data across its network, TRADE-Chain eliminates the security risks that come with data being held centrally. 
+
+5. The use of Public key cryptography, symmetric cryptography and cryptographic hash functions makes TRADE-Chain cryptographically secure and provably immutable.
+
+6. TRADE-Chain maximizes efficiency, security & transparency and minimizes fraud.
+
+7. TRADE-Chain greatly improve auditability and streamlines documentation.
+
 
 ## 3.1 Publishing a letter of credit to TRADE-Chain
 To create and publish a letter of credit on TRADE, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
