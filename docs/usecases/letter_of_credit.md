@@ -60,7 +60,7 @@ TRADE-Chain is a permissioned "global trade finance" blockchain for the world’
 
 6. TRADE-Chain maximizes efficiency, security & transparency and minimizes fraud.
 
-7. TRADE-Chain greatly improve auditability and streamlines documentation.
+7. TRADE-Chain greatly improves auditability and streamlines documentation.
 
 ## 3.2 Hyperledger Sawtooth
 
@@ -182,10 +182,10 @@ The following is the output:
 ## 3.5 Retrieving a letter of credit from TRADE-Chain
 To retrieve a Letter of Credit from the blockchain, use `post /api/v1/decrypt_download_data_sawtooth` and pass these values:
 1. the relevant Sawtooth transaction id 
-2. the sawtooth public key of the signer
-3. the AES password
-4. the Initialization Vector (IV)
-5. the digital signature
+2. the sawtooth public key of the issuer
+3. the digital signature
+4. the AES password
+5. the Initialization Vector (IV)
 
 ***Sample input***
 ```
