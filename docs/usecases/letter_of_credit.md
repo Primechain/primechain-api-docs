@@ -11,15 +11,15 @@ TRADE-Chain is a permissioned "global trade finance" blockchain for the world’
 [2. Benefits of using blockchain for letters of credit](#2-benefits-of-using-blockchain-for-letters-of-credit)   
 
 [3. TRADE-Chain](#3-trade-chain)   
-[3.1 Core features of TRADE-Chain](#31-core-features-of-trade-chain)   
-[3.2 Hyperledger Sawtooth](#32-hyperledger-sawtooth)      
-[3.3 On-boarding an issuer of Letters of Credit](#33-on-boarding-an-issuer-of-letters-of-credit)   
-[3.4 Publishing a letter of credit to TRADE-Chain](#34-publishing-a-letter-of-credit-to-trade-chain)   
-[3.5 Retrieving a letter of credit from TRADE-Chain](#35-retrieving-a-letter-of-credit-from-trade-chain)   
-[3.6 Publishing unencrypted data to TRADE-Chain](#36-publishing-unencrypted-data-to-trade-chain)   
-[3.7 Retrieving unencrypted data from TRADE-Chain](#37-retrieving-unencrypted-data-from-trade-chain)   
-[3.8 Creating a digital signature using TRADE-Chain](#38-creating-a-digital-signature-using-trade-chain)   
-[3.9 Verify a digital signature using TRADE-Chain](#39-verify-a-digital-signature-using-trade-chain)   
+ * [3.1 Core features of TRADE-Chain](#31-core-features-of-trade-chain)   
+ * [3.2 Hyperledger Sawtooth](#32-hyperledger-sawtooth)      
+ * [3.3 On-boarding an issuer of Letters of Credit](#33-on-boarding-an-issuer-of-letters-of-credit)   
+ * [3.4 Publishing a letter of credit to TRADE-Chain](#34-publishing-a-letter-of-credit-to-trade-chain)   
+ * [3.5 Retrieving a letter of credit from TRADE-Chain](#35-retrieving-a-letter-of-credit-from-trade-chain)   
+ * [3.6 Publishing unencrypted data to TRADE-Chain](#36-publishing-unencrypted-data-to-trade-chain)   
+ * [3.7 Retrieving unencrypted data from TRADE-Chain](#37-retrieving-unencrypted-data-from-trade-chain)   
+ * [3.8 Creating a digital signature using TRADE-Chain](#38-creating-a-digital-signature-using-trade-chain)   
+ * [3.9 Verify a digital signature using TRADE-Chain](#39-verify-a-digital-signature-using-trade-chain)   
 
 # 1. Introduction
 
