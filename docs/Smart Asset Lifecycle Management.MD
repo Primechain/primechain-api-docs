@@ -9,7 +9,7 @@ A blockchain smart asset can be the digital representation of a real-world asset
 [5. Assets held by specified entities](#5-assets-held-by-specified-entities)   
 [6. Transfer asset when private key is in the node](#6-transfer-asset-when-private-key-is-in-the-node)    
 [7. Transfer asset from multisig address](#7-transfer-asset-from-multisig-address)    
-[8. Transfer asset when private key is not in the node](#8-transfer-asset-when-private-key-is-not-in-the-node)
+[8. Transfer asset when private key is not in the node](#8-transfer-asset-when-private-key-is-not-in-the-node)   
 [9. Transactions by a specified entity](#9-transactions-by-a-specified-entity)    
 
 ## 1. Create a new asset
