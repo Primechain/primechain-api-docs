@@ -4,6 +4,8 @@
 
 Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
+Note: To generate an API key, use `get /api/v1/get_api_key`
+
 ## 1. [Blockchain administration](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD)
 1. [Blockchain parameters](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD#1-blockchain-parameters)
 2. [Runtime parameters](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD#2-runtime-parameters)
