@@ -8,7 +8,8 @@ A blockchain smart asset can be the digital representation of a real-world asset
 [4. Balances of all assets](#4-balances-of-all-assets)   
 [5. Assets held by specified entities](#5-assets-held-by-specified-entities)   
 [6. Transfer asset](#6-transfer-asset)    
-[7. Transactions by a specified entity](#7-transactions-by-a-specified-entity)    
+[7. Transfer asset from multisig address](#7-transfer-asset-from-multisig-address)    
+[8. Transactions by a specified entity](#8-transactions-by-a-specified-entity)    
 
 ## 1. Create a new asset
 To create a new smart asset, use `post /api/v1/create_asset`.
@@ -270,7 +271,7 @@ To send assets from one entity to another use `post /api/v1/send_asset_from` and
 ```
 The output is the id of the transaction in which the asset was transferred.
 
-
+## 7. Transfer asset from multisig address
 To send assets from a multisig address, use `post /api/v1/transfer_multisign_asset` and pass 5 parameters:
 1. Sender's address
 2. Receiver's address
