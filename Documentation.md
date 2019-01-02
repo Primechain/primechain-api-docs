@@ -4,7 +4,10 @@
 
 Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
-Note: To generate an API key, use `get /api/v1/get_api_key`
+Note: To generate an API key, use `get /api/v1/get_api_key`. Add the key to REST API as illustrated below:
+
+![Primechain-API](http://www.primechaintech.com/img/api_documentation/api_key.jpg)
+
 
 ## 1. [Blockchain administration](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD)
 1. [Blockchain parameters](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD#1-blockchain-parameters)
