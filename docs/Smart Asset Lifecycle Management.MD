@@ -11,7 +11,7 @@ A blockchain smart asset can be the digital representation of a real-world asset
 [7. Transactions by a specified entity](#7-transactions-by-a-specified-entity)    
 
 ## 1. Create a new asset
-To create a new smart asset, use `post /api/v1/create_new_asset_from`.
+To create a new smart asset, use `post /api/v1/create_asset`.
 
 ***Note:***
 *  This may take upto 30 seconds.   
@@ -27,16 +27,16 @@ To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 
 ```
 {
-  "from_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
-  "to_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  "from_address": "1K2MYAXp1tiMEKw2VKMrzy8X9peZFrrUbvZnXK",
+  "to_address": "4NM46pESGpnvCn8pJmVZpuFepaeUkwKF3YecSM",
   "asset": 
   	{
-    	"name": "GOLD-tokens-series-A",
+    	"name": "SILVER-tokens-series-A",
     	"open": false
   	},
   "unit": 1,
   "quantity": 19500,
-  "details": "Backed by gold jewellery held in Lot A at Zimblia office" 
+  "details": "Backed by silver jewellery held in Lot A at Zimblia office" 
 }
 
 ```
@@ -46,19 +46,18 @@ To create a new smart asset, use `post /api/v1/create_new_asset_from`.
 * the newly created data stream specifically for writing data relating to this asset. The `to_address` is granted write permissions to this stream. 
 ```
 {
-  "status": 200,
-  "tx_id": "011e3b965d9156f980980f0dad976a00978ecef4db8a081f166649dd4580a0e7",
-  "asset_ref": "301-267-14695",
-  "description": 
-    {
-      "details": "Backed by gold jewellery held in Lot A at Zimblia office"
-    }
+"status": 200,
+"tx_id": "00897558db1f7d2b4682ca79afd1830d5066266bc0118bbe87c7e2ff3a9cc5e1",
+"asset_ref": "1074-267-61526",
+"description": {
+"details": "Backed by silver jewellery held in Lot A at Zimblia office"
+}
 }
 ```
 
 ## 2. Create additional units of an open asset
 
-To create additional units of an open asset, use `post /api/v1/asset_create_more_from`.
+To create additional units of an open asset, use `post /api/v1/create_more_asset`.
 
 ***Note:***
 * `from_address` is the entity that creates the asset. It must have `send` permission.
@@ -68,16 +67,16 @@ To create additional units of an open asset, use `post /api/v1/asset_create_more
 * `quantity` refers to the additional quantity of the asset being issued.
 ```
 {
-  "from_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
-  "to_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
-  "asset_name": "AUTH-tokens-series-A",
-  "quantity": 350
+  "from_address": "1K2MYAXp1tiMEKw2VKMrzy8X9peZFrrUbvZnXK",
+  "to_address": "4NM46pESGpnvCn8pJmVZpuFepaeUkwKF3YecSM",
+  "asset_name": "SILVER-tokens-series-B",
+  "quantity": 5000
 }
 ```
 ```
 {
-  "status": 200,
-  "tx_id": "0ac10e7cc5d1a3bdd959f74034fabaae7e40ec5e4515aba4c57002e6e50b9736"
+"status": 200,
+"tx_id": "c749efc4cca56b72749e8e2d0acf7bf6282383255482894c578e4c82869fbc4f"
 }
 ```
 Output is the id of the transaction in which the additional units were created.
