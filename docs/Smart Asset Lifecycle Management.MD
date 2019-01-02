@@ -7,7 +7,7 @@ A blockchain smart asset can be the digital representation of a real-world asset
 [3. Details of a specified asset](#3-details-of-a-specified-asset)   
 [4. Balances of all assets](#4-balances-of-all-assets)   
 [5. Assets held by specified entities](#5-assets-held-by-specified-entities)   
-[6. Transfer asset](#6-transfer-asset)    
+[6. Transfer asset when private key is in the node](#6-transfer-asset-when-private-key-is-in-the-node)    
 [7. Transfer asset from multisig address](#7-transfer-asset-from-multisig-address)    
 [8. Transactions by a specified entity](#8-transactions-by-a-specified-entity)    
 
@@ -252,21 +252,26 @@ Output
 }
 ```
 
-## 6. Transfer asset
-To send assets from one entity to another use `post /api/v1/send_asset_from` and pass 4 parameters - `from_address`, `to_address`, `asset_name`, `quantity` and `details`
+## 6. Transfer asset when private key is in the node
+To send assets when the sender's private key is in the node, use `post /api/v1/send_asset` and pass 5 parameters - 
+1. Sender's address
+2. Receiver's address
+3. Asset name or reference
+4. Asset quantity
+5. Details of the transaction
 ```
 {
-  "from_address": "aaaa",
-  "to_address": "aaaa",
-  "asset_name": "aaaa",
-  "quantity": aaaa,
+  "from_address": "1K2MYAXp1tiMEKw2VKMrzy8X9peZFrrUbvZnXK",
+  "to_address": "4NM46pESGpnvCn8pJmVZpuFepaeUkwKF3YecSM",
+  "asset_name": "SILVER-tokens-series-A",
+  "quantity": 12,
   "details": "These are the details of this transfer"
 }
 ```
 ```
 {
-  "status": 200,
-  "tx_id": "aaaa"
+"status": 200,
+"tx_id": "79e44ffa6e8b611ee7750f8a41bb16e44e628c9ef48c4c55ba15314a2c574428"
 }
 ```
 The output is the id of the transaction in which the asset was transferred.
