@@ -255,20 +255,49 @@ Output
 To send assets from one entity to another use `post /api/v1/send_asset_from` and pass 4 parameters - `from_address`, `to_address`, `asset_name`, `quantity` and `details`
 ```
 {
-  "from_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
-  "to_address": "16H6WdDR7LpHzVeEkdTiE6dNiPHBniPtnxTYdd",
-  "asset_name": "GOLD-tokens-series-A",
-  "quantity": 40,
+  "from_address": "aaaa",
+  "to_address": "aaaa",
+  "asset_name": "aaaa",
+  "quantity": aaaa,
   "details": "These are the details of this transfer"
 }
 ```
 ```
 {
   "status": 200,
-  "tx_id": "43dbacfa1af8a27af648de957d7d83b74c675027c8a44b650eb69a8f1cc2406c"
+  "tx_id": "aaaa"
 }
 ```
 The output is the id of the transaction in which the asset was transferred.
+
+
+To send assets from a multisig address, use `post /api/v1/transfer_multisign_asset` and pass 5 parameters:
+1. Sender's address
+2. Receiver's address
+3. Asset name or reference
+4. Asset quantity
+5. Senders' private keys (of minimum required signers)
+
+Sample input
+```
+{
+  "senders_address": "4NM46pESGpnvCn8pJmVZpuFepaeUkwKF3YecSM",
+  "receivers_address": "1GkxHWs76J2SbyZtq68NUuCMuBc48eERkcukFN",
+  "asset_name": "SILVER-tokens-series-A",
+  "asset_quantity": 175,
+  "senders_private_key": [
+    "VGEnfWgmCLCMjU2ao9tAp3JxX9eK2ahMMiUevqLUN1A9HwFPA5hB5sDH",
+    "VHRLz6v1VypfTWpqNxAnhVhxNFG77K2XpVgtdNf3PwypovVX14TZrNjA"
+  ]
+}
+```
+Sample output
+```
+{
+"status": 200,
+"tx_id": "3f48baa90aba1b01e2fa857a965170a904e0ec657745c5b501f05d7bcad37176"
+}
+```
 
 ## 7. Transactions by a specified entity
 
