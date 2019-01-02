@@ -167,41 +167,38 @@ To get the name, asset ref and balance of all assets, use `get /api/v1/asset_bal
 Use  `post /api/v1/assets_held_by_entity` to get details of Assets held by specified entities
 ```
 {
-  "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2"
+  "primechain_address": "4NM46pESGpnvCn8pJmVZpuFepaeUkwKF3YecSM"
 }
 ```
 ```
 {
-  "status": 200,
-  "response": 
-    {
-      "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2": 
-        [
-          {
-            "name": "AUTH-tokens-series-A",
-            "assetref": "324-267-25303",
-            "qty": 45350
-           },
-          {
-            "name": "GOLD-tokens-series-A",
-            "assetref": "301-267-14695",
-            "qty": 19500
-          }
-        ],
-  "total": 
-    [
-      {
-        "name": "AUTH-tokens-series-A",
-        "assetref": "324-267-25303",
-        "qty": 45350
-      },
-      {
-        "name": "GOLD-tokens-series-A",
-        "assetref": "301-267-14695",
-        "qty": 19500
-       }
-    ],
-  }
+"status": 200,
+"response": {
+"4NM46pESGpnvCn8pJmVZpuFepaeUkwKF3YecSM": [
+  {
+"name": "SILVER-tokens-series-A",
+"assetref": "1074-267-61526",
+"qty": 19500
+},
+  {
+"name": "SILVER-tokens-series-B",
+"assetref": "1086-266-919",
+"qty": 33500
+}
+],
+"total": [
+  {
+"name": "SILVER-tokens-series-A",
+"assetref": "1074-267-61526",
+"qty": 19500
+},
+  {
+"name": "SILVER-tokens-series-B",
+"assetref": "1086-266-919",
+"qty": 33500
+}
+],
+}
 }
 ```
 You can also enter multiple addresses:
