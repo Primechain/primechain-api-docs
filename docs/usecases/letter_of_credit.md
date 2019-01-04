@@ -18,10 +18,10 @@ Letters of credit are especially important in international trade due to the dis
 [Step 4: Shipping of goods](#step-4-shipping-of-goods)   
 [Step 5: Presenting of documents by the seller](#step-5-presenting-of-documents-by-the-seller)   
 [Step 6: Examination of documents by the issuing bank](#step-6-examination-of-documents-by-the-issuing-bank)   
-[Step 7: Issuing bank obtains payment from the buyer](#step-7:-issuing-bank-obtains-payment-from-the-buyer)   
-[Step 8: Issuing bank forwards documents to the buyer](#step-8:-issuing-bank-forwards-documents-to-the-buyer)   
-[Step 9: Buyer picks up the goods](#step-9:-buyer-picks-up-the-goods)   
-[Step 10: Seller receives the payment](#step-10:-seller-receives-the-payment)
+[Step 7: Issuing bank obtains payment from the buyer](#step-7-issuing-bank-obtains-payment-from-the-buyer)   
+[Step 8: Issuing bank forwards documents to the buyer](#step-8-issuing-bank-forwards-documents-to-the-buyer)   
+[Step 9: Buyer picks up the goods](#step-9-buyer-picks-up-the-goods)   
+[Step 10: Seller receives the payment](#step-10-seller-receives-the-payment)
 
 # Step 1: Agreement to purchase goods
 The buyer agrees to purchase goods from the seller. This agreement may be a purchase order, an accepted pro-forma invoice, a formal contract, or an informal exchange of messages. Agreement is made as to goods being purchased, how and when they are to be shipped and insured, and that a letter of credit will be used as the mechanism of payment.
