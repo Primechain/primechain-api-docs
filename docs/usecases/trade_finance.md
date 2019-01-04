@@ -10,13 +10,28 @@ Trade finance provides the credit, payment guarantees and insurance needed to fa
 
 In certain cases, trade credit can be extended for longer periods of time, particularly for categories of goods subject to longer production and delivery cycles such as aircraft and capital equipment. A key aspect of trade finance is that it helps mitigate the risk of cashless trade transactions.
 
+***Table of contents***
 
-TRADE-Chain modules include:
-On-boarding importers, exporters, shippers and investors
-Publishing purchase orders, invoices and contracts to the blockchain
-Application for letters of credit
-Issuing letters of credit directly on the blockchain
-Publishing letters of credit on the blockchain
-Publishing & retrieving unencrypted data
-Creating & verifying digital signatures
-Invoice discounting / supply chain finance / factoring
+[1. On-boarding importers, exporters, shippers and investors](#1-on-boarding-importers,-exporters,-shippers-and-investors) [2. Publishing purchase orders, invoices and contracts to the blockchain](#2-publishing-purchase-orders,-invoices-and-contracts-to-the-blockchain)   
+[3. Letter of credit lifecycle](#3-letter-of-credit-lifecycle)   
+[4. Publishing and retrieving unencrypted data](#4-publishing-and-retrieving-unencrypted-data)   
+[5. Creating and verifying digital signatures](#5-creating-and-verifying-digital-signatures)   
+[6. Invoice discounting / supply chain finance / factoring](#6-invoice-discounting-/-supply-chain-finance-/-factoring)
+
+# 1. On-boarding importers, exporters, shippers and investors
+
+# 2. Publishing purchase orders, invoices and contracts to the blockchain
+
+# 3. Letter of credit lifecycle
+For details on letter of credit lifecycle management, see:
+https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/letter_of_credit.md
+
+# 4. Publishing and retrieving unencrypted data
+
+# 5. Creating and verifying digital signatures
+
+# 6. Invoice discounting / supply chain finance / factoring
+
+
+
+
