@@ -49,7 +49,8 @@ Blockchain technology is ideal for banks and financial service providers because
 18.	Securities lifecycle management - creation, issuing, trading, escrow, redemption, retirement
 19.	Stressed assets (NPA) marketplace
 20.	Syndicated loans
-21.	Vendor on-boarding & rating
+21. [Trade Finance](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_finance.md)
+22.	Vendor on-boarding & rating
 
 ## 3. Capital markets
 By providing transparent real-time data and increasing the efficiency in settlement of transactions and processing, blockchains are immensely useful for capital markets. Primechain-API use cases for Capital markets include:
@@ -114,8 +115,8 @@ Blockchain technology's ability to ensure tamper-resistance and realtime data sh
 4. Shipping containers tracking 
 
 ## 9. Supply Chain
-1.	[Auction of assets](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/auction.md)
-2.	[Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
+1. [Auction of assets](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/auction.md)
+2. [Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
 3. Contract authentication, verification & storage
 4. Customer warranty management and Tracking returned products
 5. Digital marketplaces
@@ -127,24 +128,25 @@ Blockchain technology's ability to ensure tamper-resistance and realtime data sh
 11.	[Encrypted data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD)
 12. Forward stocking location mapping
 13. Inventory Tracking
-14. Invoice discounting / supply chain finance
-15. Logistics Tracking
-16. Loyalty program management
-17.	[Loyalty program lifecycle management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/loyalty_programs.md)
-18. Managing safety and quality & Risk mitigation
-19. Pilferage tracking
-20. Prevention of counterfeits
-21. Pricing transparency
-22. Production tracking
-23. Regulatory compliance
-24. Repository of records 
-25. Sharing operations data
-26. Smart Contract Management
-27. Supply chain transparency
-28. Tracking asset maintenance
-29. Tracking components quality and handling product recalls
-30. Tracking field tech support personnel
-31. Vendor on-boarding & rating
+14. [Invoice discounting / supply chain finance / factoring](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md)    
+15. [Invoice issuance](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_issuance.md)   
+16. Logistics Tracking
+17. Loyalty program management
+18.	[Loyalty program lifecycle management](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/loyalty_programs.md)
+19. Managing safety and quality & Risk mitigation
+20. Pilferage tracking
+21. Prevention of counterfeits
+22. Pricing transparency
+23. Production tracking
+24. Regulatory compliance
+25. Repository of records 
+26. Sharing operations data
+27. Smart Contract Management
+28. Supply chain transparency
+29. Tracking asset maintenance
+30. Tracking components quality and handling product recalls
+31. Tracking field tech support personnel
+32. Vendor on-boarding & rating
 
 ## 10. Telecommunications
 Telecommunications companies can leverage blockchain technology to create new business models and revenue streams. Primechain-API use cases for telecom include:
