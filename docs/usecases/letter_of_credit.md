@@ -11,7 +11,8 @@ Letters of credit are especially important in international trade due to the dis
 ![Letter of credit](http://www.primechaintech.com/img/api_documentation/trade-chain.jpg)
 
 ***Table of contents:***   
-[Step 1: Agreement to purchase goods](#step-1:-agreement-to-purchase-goods)   
+
+[Step 1: Agreement to purchase goods](#step-1-agreement-to-purchase-goods)   
 
 # Step 1: Agreement to purchase goods
 The buyer agrees to purchase goods from the seller. This agreement may be a purchase order, an accepted pro-forma invoice, a formal contract, or an informal exchange of messages. Agreement is made as to goods being purchased, how and when they are to be shipped and insured, and how and when payment is to be effected. In this case, the agreement is to use a letter of credit as the mechanism of payment.
