@@ -19,7 +19,7 @@ Through a bank guarantee, a bank promises to cover a loss if a borrower defaults
 
 ## 1. Issuing a bank guarantee
 
-1. In case the bank guarantee is to be issued directly on the blockchain, the relevant API end-point is [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain). Also see formats for issuing and sharing [`trade documents`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md) on the blockchain. Also see the suggested [format of the bank guarantee here](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md#4-bank-guarantee). 
+1. In case the bank guarantee is to be issued directly on the blockchain, the relevant API end-point is [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain). Also see the suggested [format of the bank guarantee here](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md#4-bank-guarantee). 
 
 2. In case the bank guarantee is issued off-chain and then stored on the blockchain, the relevant API end-point is [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain) 
 
