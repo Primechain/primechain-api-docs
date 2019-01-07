@@ -19,33 +19,30 @@ Sample input
       "TERMS_OF_PAYMENT": "Terms, conditions, and currency of settlement as agreed upon by the vendor and purchaser per the pro forma invoice, customer purchase order and / or the letter of credit.",      
       "CURRENCY_OF_SETTLEMENT": "Currency agreed upon between seller and buyer as payment.",
       "MODE_OF_SHIPMENT": "Indicate air, ocean, and surface. ",
-"ITEMS"
-    {
-      "ITEM_1": 
+      "ITEMS"
         {
-           "ITEM_QUANTITY": "Record total number of units of this item",
-           "ITEM_DESCRIPTION": "Record description of this item",
-           "ITEM_UNIT_PRICE": "Record the unit price of the merchandise per unit of measure.",
-           "ITEM_UNIT_OF_MEASURE": "Record total net weight and total gross weight in kilograms (1 kilogram = 2.2 pounds) for this item.",
-           "ITEM_TOTAL_PRICE": "Record the extended value of this item"
-        },
-       "ITEM_2": 
-        {
-           "ITEM_QUANTITY": "Record total number of units of this item",
-           "ITEM_DESCRIPTION": "Record description of this item",
-           "ITEM_UNIT_PRICE": "Record the unit price of the merchandise per unit of measure.",
-           "ITEM_UNIT_OF_MEASURE": "Record total net weight and total gross weight in kilograms (1 kilogram = 2.2 pounds) for this item.",
-           "ITEM_TOTAL_PRICE": "Record the extended value of this item"
-        },
-      }
-        
+          "ITEM_1": 
+            {
+               "ITEM_QUANTITY": "Record total number of units of this item",
+               "ITEM_DESCRIPTION": "Record description of this item",
+               "ITEM_UNIT_PRICE": "Record the unit price of the merchandise per unit of measure.",
+               "ITEM_UNIT_OF_MEASURE": "Record total net weight and total gross weight in kilograms (1 kilogram = 2.2 pounds) for this item.",
+               "ITEM_TOTAL_PRICE": "Record the extended value of this item"
+            },
+           "ITEM_2": 
+            {
+               "ITEM_QUANTITY": "Record total number of units of this item",
+               "ITEM_DESCRIPTION": "Record description of this item",
+               "ITEM_UNIT_PRICE": "Record the unit price of the merchandise per unit of measure.",
+               "ITEM_UNIT_OF_MEASURE": "Record total net weight and total gross weight in kilograms (1 kilogram = 2.2 pounds) for this item.",
+               "ITEM_TOTAL_PRICE": "Record the extended value of this item"
+            },
+        }
       "DESCRIPTION": "Provide full description of items shipped, the type of container, (carton, box, etc.) the gross weight per container, and the quantity and unit of measure of the merchandise.",
       "TOTAL_COMMERCIAL_VALUE": "Total value of the invoice.",
       "PACKAGE_MARKS": "Record in this field and on each package number (for example, “1 of 7,””3 of 7”) shippers company name, country of origin (e.g., Made in USA), destination port of entry, package weight in kilograms, package size (length x width x height) and shipper’s control number (optional). ",
       "MISCELLANEOUS_CHARGES": "Charges (packing, insurance, etc. Record any miscellaneous charges that are to be paid by customer, such as export transportation, insurance, export packaging inland freight to peer, etc.).",
-      "CERTIFICATIONS": "Any certifications or declarations required of the shipper regarding any information recorded on the commercial invoice.",
-      
-      "aaaa": "aaaa"        
+      "CERTIFICATIONS": "Any certifications or declarations required of the shipper regarding any information recorded on the commercial invoice.",      
     }
 }
 
