@@ -8,7 +8,8 @@ Blockchain provides a secure and transparent platform for issuance and sgaring o
 
 [1. Commercial Invoice](#1-commercial-invoice)   
 [2. Letter of credit](#2-letter-of-credit)   
-[3. Straight Bill of Lading](#3-straight-bill-of-lading)
+[3. Straight Bill of Lading](#3-straight-bill-of-lading)   
+[4. Bank guarantee](#4-bank-guarantee)
 
 ## 1. Commercial Invoice
 
@@ -101,6 +102,7 @@ Sample input
 
 Sample input
 ```
+{
   "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
   "data": 
     {
@@ -142,6 +144,34 @@ Sample input
       "SHIPMENT_DECLARED_VALUE": "When the weight charged by the carrier is dependent upon the value of the shipment, the dollar value per unit of measure (for example, $100.00/pound) must be stated by the shipper.",
       "SHIPPER_AGENT": "Enter the signature of the individual preparing the shipment for the shipper.",
       "CARRIERS_AGENT": "The carrier’s agent will sign here prior to taking control of the shipment.",
-      "CERTIFICATION_HAZARDOUS_MATERIAL": "If the shipments is of hazardous material, add - THIS IS TO CERTIFY THAT THE ABOVE-NAMED MATERIALS ARE PROPERLY CLASSIFIED, DESCRIBED, PACKAGED, MARKED AND LABELED AND ARE IN PROPER CONDITION FOR TRANSPORTATION ACCORDING TO THE APPLICABLE REGULATIONS OF THE DEPARTMENT OF TRANSPORTATION.",
+      "CERTIFICATION_HAZARDOUS_MATERIAL": "If the shipments is of hazardous material, add - THIS IS TO CERTIFY THAT THE ABOVE-NAMED MATERIALS ARE PROPERLY CLASSIFIED, DESCRIBED, PACKAGED, MARKED AND LABELED AND ARE IN PROPER CONDITION FOR TRANSPORTATION ACCORDING TO THE APPLICABLE REGULATIONS OF THE DEPARTMENT OF TRANSPORTATION."
+     }
 }
 ```
+
+## 4. Bank guarantee
+
+Sample input
+```
+{
+  "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  "data": 
+    {
+      "guarantee_number": "ASDRE76464",
+      "guarantee_currency": "USD",
+      "guarantee_amount_words": "Twenty Two million",
+      "guarantee_amount_figures": "22,000,000.00",
+      "guarantee_date_of_issue": "17-December-2018",
+      "guarantee_date_of_maturity": "16-March-2019",
+      "guarantee_beneficiary": "Nicole Corporation",
+      "guarantee_details": "On behalf of our client, Nicole Corporation, for value received, we, Global Bank, hereby irrevocably and unconditionally and without protest or notification, promise to pay against this, our irrevocable bank guarantee, to the order of Nicole Corporation, as beneficiary, on the maturity date, the sum of Twenty Two million United States Dollars ($22,000,000.00 USD), upon their first written demand for payment hereunder. Such payment shall be made without set-off, free and clear of any deductions, charges, fees, levies, taxes or withholdings of any nature. This bank guarantee is transferable, without payment of any transfer fees. This bank guarantee is issued in accordance with the uniform customs and practices for bank guarantees, as set forth by the International Chamber of Commerce, Paris, France, latest revision of ICC 500 publication. This bank guarantee shall be governed by and construed in accordance with the laws of the Republic of India and is free and clear of any lien and encumbrances and is of non-criminal origin.",
+      "authorized_bank_officer_name": "Nicole Kidman",
+      "authorized_bank_officer_title": "Vice President",
+      "authorized_bank_officer_telephone": "230950934545",
+      "authorized_bank_officer_facsimile": "367645455624",
+      "authorized_bank_officer_email": "nicole@example.com"      
+    }
+}
+```
+
+Have a query? Email us on info@primechain.in
