@@ -19,7 +19,7 @@ Sample input
       "TERMS_OF_PAYMENT": "Terms, conditions, and currency of settlement as agreed upon by the vendor and purchaser per the pro forma invoice, customer purchase order and / or the letter of credit.",      
       "CURRENCY_OF_SETTLEMENT": "Currency agreed upon between seller and buyer as payment.",
       "MODE_OF_SHIPMENT": "Indicate air, ocean, and surface. ",
-      "ITEMS"
+      "ITEMS":
         {
           "ITEM_1": 
             {
