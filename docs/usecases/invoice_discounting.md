@@ -53,9 +53,11 @@ To cancel the offer, use [`cancel_targeted_offer`]()
 #### Step 5: Acceptance / rejection of bids by vendor
 The vendor can view all bids placed on invoices in which he is the payee. The vendor can accept or reject bids. If the vendor accepts the bid, the asset (invoice) is transferred to the relevant investor and the bid amount is transferred to the vendor. The vendor can redeem the tokens from the bank.
 
-To reject the offer, [`reject_targeted_offer`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#7-reject-a-targeted-offer)
+To read an offer, use [read_offer](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#3-read-an-offer)
 
-To accept the offer, [`accept_offer`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#4-accept-an-offer)
+To reject the offer, use [`reject_targeted_offer`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#7-reject-a-targeted-offer)
+
+To accept the offer, use [`accept_offer`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#4-accept-an-offer)
 
 #### Step 6: Maturity of invoice
 When the invoice matures, the corporate pays the relevant amount to the bank and receives equivalent tokens. 
@@ -94,3 +96,5 @@ The corporate then sends the asset (invoice) to the burn address using [`send_as
 3. Cancel their own bids (before the vendor has accepted the bid)
 4. View their bids that have been accepted by vendors
 5. View their bids that have been rejected by vendors
+
+Have a query? Email us on info@primechain.in
