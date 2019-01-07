@@ -76,7 +76,9 @@ The issuing bank obtains payment from the buyer in accordance with the terms of 
 
 1. The relevant API end points for tokenizing fiat currency for this are: [`create_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset) and [`create_more_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#2-create-additional-units-of-an-open-asset).
 
-2. The relevant API end points for transferring tokenized fiat currency are [`send_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#6-transfer-asset-when-private-key-is-in-the-node), [`transfer_multisign_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transfer-asset-from-multisig-address) and [`transfer_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#8-transfer-asset-when-private-key-is-not-in-the-node)
+2. The relevant API end points for onboarding relevant entities (buyer, seller etc.) are [`create_entity`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#1-creating-a-new-entity), [`create_keypair`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#2-creating-a-new-entity-for-external-key-management) and [`create_entity_rsa`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#3-creating-a-new-entity-with-rsa-keys) 
+
+3. The relevant API end points for transferring tokenized fiat currency are [`send_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#6-transfer-asset-when-private-key-is-in-the-node), [`transfer_multisign_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transfer-asset-from-multisig-address) and [`transfer_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#8-transfer-asset-when-private-key-is-not-in-the-node)
 
 ## Step 8: Issuing bank forwards documents to the buyer
 The issuing bank forwards the documents to the buyer.
@@ -92,10 +94,11 @@ The buyer uses the documents to pick up the merchandise from the carrier, comple
 
 ## Step 10: Seller receives the payment
 The issuing bank pays the seller.
+
 1. The relevant API end points for tokenizing fiat currency for this are: [`create_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset) and [`create_more_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#2-create-additional-units-of-an-open-asset).
 
-2. The relevant API end points for transferring tokenized fiat currency are [`send_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#6-transfer-asset-when-private-key-is-in-the-node), [`transfer_multisign_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transfer-asset-from-multisig-address) and [`transfer_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#8-transfer-asset-when-private-key-is-not-in-the-node)
+2. The relevant API end points for onboarding relevant entities (buyer, seller etc.) are [`create_entity`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#1-creating-a-new-entity), [`create_keypair`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#2-creating-a-new-entity-for-external-key-management) and [`create_entity_rsa`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#3-creating-a-new-entity-with-rsa-keys) 
 
-
+3. The relevant API end points for transferring tokenized fiat currency are [`send_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#6-transfer-asset-when-private-key-is-in-the-node), [`transfer_multisign_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transfer-asset-from-multisig-address) and [`transfer_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#8-transfer-asset-when-private-key-is-not-in-the-node)
 
 Have a query? Email us on info@primechain.in
