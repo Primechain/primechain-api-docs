@@ -39,7 +39,7 @@ Corporate sends details of an approved invoice to its bank through the online ba
 The bank publishes the invoice (as an asset) to the blockchain using [`create_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset). This asset is issued to the corporate who is the payer of that particular invoice.
 
 ### Step 3: Verification by corporate (payer)
-The corporate verifies the details of the asset (invoice). If it is correct, the corporate (payer) transfers the asset (invoice) to the vendor who is the payee for that invoice. This is done using [`send_asset`]()
+The corporate verifies the details of the asset (invoice). If it is correct, the corporate (payer) transfers the asset (invoice) to the vendor who is the payee for that invoice. The relevant API end points for this are [`send_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#6-transfer-asset-when-private-key-is-in-the-node), [`transfer_multisign_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transfer-asset-from-multisig-address) and [`transfer_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#8-transfer-asset-when-private-key-is-not-in-the-node)
 
 If it is incorrect, the corporate (payer) transfers the asset (invoice) to the burn address. The relevant API end points for this are [`send_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#6-transfer-asset-when-private-key-is-in-the-node), [`transfer_multisign_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transfer-asset-from-multisig-address) and [`transfer_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#8-transfer-asset-when-private-key-is-not-in-the-node)
 
@@ -66,7 +66,7 @@ The corporate offers to exchange the asset (invoice) for the maturity amount. To
 The investor accepts the offer using [`accept_offer`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#4-accept-an-offer)
 
 ### Step 8: 
-The corporate then sends the asset (invoice) to the burn address using [`send_asset`]()
+The corporate then sends the asset (invoice) to the burn address using [`send_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#6-transfer-asset-when-private-key-is-in-the-node), [`transfer_multisign_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transfer-asset-from-multisig-address) or [`transfer_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#8-transfer-asset-when-private-key-is-not-in-the-node)
 
 ## 4. Overview of roles
 
