@@ -22,5 +22,8 @@ https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invo
 For details on bank guarantee lifecycle management, see:   
 https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/bank_guarantee.md
 
+## Trade document samples
+For sample formats of trade documents for direct issuance on the blockchain, see:
+https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md
 
 Have a query? Email us on info@primechain.in
