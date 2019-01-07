@@ -65,7 +65,7 @@ The corporate offers to exchange the asset (invoice) for the maturity amount. To
 
 The investor accepts the offer using [`accept_offer`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Offer%20management.MD#4-accept-an-offer)
 
-#### Step 8: 
+#### Step 8: Retiring the invoice
 The corporate then sends the asset (invoice) to the burn address using [`send_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#6-transfer-asset-when-private-key-is-in-the-node), [`transfer_multisign_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transfer-asset-from-multisig-address) or [`transfer_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#8-transfer-asset-when-private-key-is-not-in-the-node)
 
 ## 4. Overview of roles
