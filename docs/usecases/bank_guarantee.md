@@ -1,8 +1,10 @@
 # Bank guarantee
 
-![Bank guarantees on the blockchain](http://www.primechaintech.com/img/api_documentation/guarantee.jpg)
+[![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 
 Through a bank guarantee, a bank promises to cover a loss if a borrower defaults. Types of guarantees include Advance Payment Guarantee, Bid Bond Guarantee, Confirmed Payment Order, Credit Security Bond, Deferred Payment Guarantee, Financial Guarantee, Foreign Bank Guarantee, Performance Bond, Performance Guarantee, Rental Guarantee, and Warranty bond.
+
+![Bank guarantees on the blockchain](http://www.primechaintech.com/img/api_documentation/guarantee.jpg)
 
 ***Some of the benefits of using blockchain for issuing bank guarantees are:***    
 (1) Each bank guarantee is digitally signed by the issuing bank.   
