@@ -26,19 +26,25 @@ Letters of credit are especially important in international trade due to the dis
 # Step 1: Agreement to purchase goods
 The buyer agrees to purchase goods from the seller. This agreement may be a purchase order, an accepted pro-forma invoice, a formal contract, or an informal exchange of messages. Agreement is made as to goods being purchased, how and when they are to be shipped and insured, and that a letter of credit will be used as the mechanism of payment.
 
-The relevant API end-points are [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [encrypt_sign_store_file](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain).
+The relevant API end-points are [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain).
 
 # Step 2: Application for a letter of credit
 The buyer applies to his bank for a letter of credit, by signing the bank's letter of credit application/agreement form.
 
+The relevant API end-points are [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain).
+
 # Step 3: Issue of the letter of cedit
 After approving the application, the issuing bank issues the actual letter of credit instrument and sends it to the seller (beneficiary).
+
+The relevant API end-points are [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain).
 
 # Step 4: Shipping of goods
 Having received the issuing bank's assurance of payment, the seller ships the goods to the buyer.
 
 # Step 5: Presenting of documents by the seller
 The seller prepares the documents called for in the letter of credit and presents them to the issuing bank.
+
+[`decrypt_download_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-decrypt-verify-and-retrieve-data-from-the-blockchain) and [`decrypt_download_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#5-decrypt-verify-and-retrieve-a-file-from-the-blockchain)
 
 # Step 6: Examination of documents by the issuing bank
 The issuing bank examines the documents. If it determines that the documents comply with the letter of credit, the issuing bank pays the seller.
