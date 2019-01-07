@@ -10,11 +10,6 @@ Trade finance provides the credit, payment guarantees and insurance needed to fa
 
 In certain cases, trade credit can be extended for longer periods of time, particularly for categories of goods subject to longer production and delivery cycles such as aircraft and capital equipment. A key aspect of trade finance is that it helps mitigate the risk of cashless trade transactions.
 
-***Table of contents***
-
-[1. Letter of credit lifecycle management](#3-letter-of-credit-lifecycle-management)   
-[2. Invoice discounting / supply chain finance / factoring](#2-invoice-discounting-supply-chain-finance-factoring)
-
 ## 1. Letter of credit lifecycle management
 For details on letter of credit lifecycle management, see:   
 https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/letter_of_credit.md
@@ -22,3 +17,5 @@ https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/lett
 ## 2. Invoice discounting, supply chain finance, factoring
 For details on invoice discounting, supply chain finance, factoring, see:   
 https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md
+
+Have a query? Email us on info@primechain.in
