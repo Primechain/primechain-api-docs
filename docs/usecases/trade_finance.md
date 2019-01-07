@@ -18,4 +18,9 @@ https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/lett
 For details on invoice discounting, supply chain finance, factoring, see:   
 https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md
 
+## 3. Bank guarantee lifecycle management
+For details on bank guarantee lifecycle management, see:   
+https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/bank_guarantee.md
+
+
 Have a query? Email us on info@primechain.in
