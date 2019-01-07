@@ -26,7 +26,7 @@ Letters of credit are especially important in international trade due to the dis
 # Step 1: Agreement to purchase goods
 The buyer agrees to purchase goods from the seller. This agreement may be a purchase order, an accepted pro-forma invoice, a formal contract, or an informal exchange of messages. Agreement is made as to goods being purchased, how and when they are to be shipped and insured, and that a letter of credit will be used as the mechanism of payment.
 
-The relevant API end-points are [encrypt_sign_store_data](encrypt_sign_store_data) and [encrypt_sign_store_file](encrypt_sign_store_file).
+The relevant API end-points are [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain) and [encrypt_sign_store_file](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain).
 
 # Step 2: Application for a letter of credit
 The buyer applies to his bank for a letter of credit, by signing the bank's letter of credit application/agreement form.
