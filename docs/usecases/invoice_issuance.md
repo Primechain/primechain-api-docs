@@ -1,9 +1,15 @@
-# Invoice issuance
+# Trade documents
 
 [![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 
-Blockchain provides a secure and transparent platform for issuance of invoices. This is especially useful in case of invoice discounting, trade finance and related use cases.
+Blockchain provides a secure and transparent platform for issuance and sgaring of trade documents.
 
+***Table of contents***
+
+[1. Commercial Invoice](#1-commercial-invoice)
+
+
+## 1. Commercial Invoice
 
 Sample input
 ```
