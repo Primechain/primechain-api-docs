@@ -43,8 +43,8 @@ The relevant API end-points are:
 After approving the application, the issuing bank issues the actual letter of credit instrument and sends it to the seller (beneficiary).
 
 The relevant API end-points are:
-* [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain)   
-* [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain) 
+* Sign, encrypt and store data in the blockchain: [`encrypt_sign_store_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#2-sign-encrypt-and-store-data-in-the-blockchain)   
+* Sign, encrypt and store a file in the blockchain: [`encrypt_sign_store_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#4-sign-encrypt-and-store-a-file-in-the-blockchain) 
 
 ## Step 4: Shipping of goods
 Having received the issuing bank's assurance of payment, the seller ships the goods to the buyer.
@@ -53,15 +53,15 @@ Having received the issuing bank's assurance of payment, the seller ships the go
 The seller prepares the documents called for in the letter of credit and presents them to the issuing bank.
 
 The relevant API end-points are:
-* [`decrypt_download_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-decrypt-verify-and-retrieve-data-from-the-blockchain)   
-* [`decrypt_download_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#5-decrypt-verify-and-retrieve-a-file-from-the-blockchain)
+* Decrypt, verify and retrieve data from the blockchain: [`decrypt_download_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-decrypt-verify-and-retrieve-data-from-the-blockchain)   
+* Decrypt, verify and retrieve a file from the blockchain: [`decrypt_download_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#5-decrypt-verify-and-retrieve-a-file-from-the-blockchain)
 
 ## Step 6: Examination of documents by the issuing bank
 The issuing bank examines the documents. If it determines that the documents comply with the letter of credit, the issuing bank pays the seller.
 
 The relevant API end-points are:
-* [`decrypt_download_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-decrypt-verify-and-retrieve-data-from-the-blockchain)   
-* [`decrypt_download_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#5-decrypt-verify-and-retrieve-a-file-from-the-blockchain)
+* Decrypt, verify and retrieve data from the blockchain: [`decrypt_download_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-decrypt-verify-and-retrieve-data-from-the-blockchain)   
+* Decrypt, verify and retrieve a file from the blockchain: [`decrypt_download_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#5-decrypt-verify-and-retrieve-a-file-from-the-blockchain)
 
 ## Step 7: Issuing bank obtains payment from the buyer
 The issuing bank obtains payment from the buyer in accordance with the terms of the letter of credit agreement. 
