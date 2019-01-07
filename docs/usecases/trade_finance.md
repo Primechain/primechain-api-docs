@@ -12,22 +12,13 @@ In certain cases, trade credit can be extended for longer periods of time, parti
 
 ***Table of contents***
 
-[1. On-boarding importers, exporters, shippers and investors](#1-onboarding-importers-exporters-shippers-and-investors)   
-[2. Publishing purchase orders, invoices and contracts to the blockchain](#2-publishing-purchase-orders-invoices-and-contracts-to-the-blockchain)   
-[3. Letter of credit lifecycle](#3-letter-of-credit-lifecycle)   
-[4. Publishing and retrieving unencrypted data](#4-publishing-and-retrieving-unencrypted-data)   
-[5. Creating and verifying digital signatures](#5-creating-and-verifying-digital-signatures)   
-[6. Invoice discounting / supply chain finance / factoring](#6-invoice-discounting-supply-chain-finance-factoring)
+[1. Letter of credit lifecycle management](#3-letter-of-credit-lifecycle-management)   
+[2. Invoice discounting / supply chain finance / factoring](#2-invoice-discounting-supply-chain-finance-factoring)
 
-## 1. Onboarding importers, exporters, shippers and investors
-
-## 2. Letter of credit lifecycle
+## 1. Letter of credit lifecycle management
 For details on letter of credit lifecycle management, see:   
 https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/letter_of_credit.md
 
-## 3. Invoice discounting, supply chain finance, factoring
+## 2. Invoice discounting, supply chain finance, factoring
 For details on invoice discounting, supply chain finance, factoring, see:   
 https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md
-
-
-
