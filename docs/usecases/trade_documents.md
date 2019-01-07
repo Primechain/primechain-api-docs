@@ -157,7 +157,7 @@ Sample input
   "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
   "data": 
     {
-      "guarantee_number": "ASDRE76464",
+      "GUARANTEE_NUMBER": "ASDRE76464",
       "guarantee_currency": "USD",
       "guarantee_amount_words": "Twenty Two million",
       "guarantee_amount_figures": "22,000,000.00",
@@ -169,7 +169,11 @@ Sample input
       "authorized_bank_officer_title": "Vice President",
       "authorized_bank_officer_telephone": "230950934545",
       "authorized_bank_officer_facsimile": "367645455624",
-      "authorized_bank_officer_email": "nicole@example.com"      
+      "authorized_bank_officer_email": "nicole@example.com",
+      "STAMP_PAPER_CERTIFICATE_NUMBER": "IN-KA56448168201790P",
+      "STAMP_PAPER_STATE": "KARNATAKA",
+      "STAMP_PAPER_CERTIFICATE_ISSUE_DATE": "12-03-2018",
+      "GUARANTEE_VERSION": "1.0"      
     }
 }
 ```
