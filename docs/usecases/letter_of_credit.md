@@ -74,15 +74,27 @@ The issuing bank examines the documents. If it determines that the documents com
 ## Step 7: Issuing bank obtains payment from the buyer
 The issuing bank obtains payment from the buyer in accordance with the terms of the letter of credit agreement. 
 
+1. The relevant API end points for tokenizing fiat currency for this are: [`create_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset) and [`create_more_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#2-create-additional-units-of-an-open-asset).
+
+2. The relevant API end points for transferring tokenized fiat currency are [`send_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#6-transfer-asset-when-private-key-is-in-the-node), [`transfer_multisign_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transfer-asset-from-multisig-address) and [`transfer_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#8-transfer-asset-when-private-key-is-not-in-the-node)
+
 ## Step 8: Issuing bank forwards documents to the buyer
 The issuing bank forwards the documents to the buyer.
+
+1. In case the documents were issued directly on the blockchain, the relevant API end-point is [`decrypt_download_data`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#3-decrypt-verify-and-retrieve-data-from-the-blockchain). 
+
+2. In case the documents were issued off-chain and then stored on the blockchain, the relevant API end-point is [`decrypt_download_file`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Encrypted%20data%20storage.MD#5-decrypt-verify-and-retrieve-a-file-from-the-blockchain)   
+
+3. In case the documents were issued off-chain and NOT stored on the blockchain, the relevant end-points are [`verify_signature`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#2-verifying-a-digital-signature).
 
 ## Step 9: Buyer picks up the goods
 The buyer uses the documents to pick up the merchandise from the carrier, completing the letter of credit cycle.
 
 ## Step 10: Seller receives the payment
 The issuing bank pays the seller.
+1. The relevant API end points for tokenizing fiat currency for this are: [`create_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#1-create-a-new-asset) and [`create_more_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#2-create-additional-units-of-an-open-asset).
 
+2. The relevant API end points for transferring tokenized fiat currency are [`send_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#6-transfer-asset-when-private-key-is-in-the-node), [`transfer_multisign_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#7-transfer-asset-from-multisig-address) and [`transfer_asset`](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Smart%20Asset%20Lifecycle%20Management.MD#8-transfer-asset-when-private-key-is-not-in-the-node)
 
 
 
