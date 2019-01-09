@@ -10,14 +10,14 @@ intro to trade finance
 
 ***[1. Preliminary steps](#1-preliminary-steps)***   
 [1.1 Generate API keys](#11-generate-api-keys)      
-[1.2 Create an address whose private key is stored on the blockchain](#12-create-an-entity-whose-private-key-is-stored-on-the-blockchain)   
+[1.2 Create an address whose private key is stored on the blockchain](#12-create-an-address-whose-private-key-is-stored-on-the-blockchain)   
 
 ***[2. Create a dedicated Data Stream](#2-create-a-dedicated-data-stream-for-a-specific-transaction,-shipment-or-event)***    
 [2.1 Create a data stream](#21-create-a-data-stream)   
 [2.2 Grant write permissions](#22-grant-write-permissions)   
 [2.3 Revoke write permissions](#23-revoke-write-permissions)   
 
-***[3. Publish relevant data to the blockchain](#3-publish-relevant-data-to-the-blockchain)***   
+***[3. Publish data to the blockchain](#3-publish-data-to-the-blockchain)***   
 [3.1 Publish an invoice](#31-publish-an-invoice)   
 [3.2 Publish a bank guarantee](#32-publish-a-bank-guarantee)   
 [3.3 Publish a letter of credit](#33-publish-a-letter-of-credit)   
@@ -120,27 +120,30 @@ Sample output
 
 ## 2. On-board relevant exporters, importers, shippers etc.
 
-To on-board relevant exporters, importers, shippers etc. use `get /api/v1/create_keypair`. The output will be:
+To on-board relevant exporters, importers, shippers etc. use `get /api/v1/create_entity_rsa`. The output will be:
 1. the primechain address, 
-2. primechain public key and 
-3. primechain private key
+2. primechain private key
+3. primechain public key, 
+4. RSA private key
+5. RSA public key
 
 Sample output
 ```
 {
-  "status": 200,
-  "response": 
-    {
-      "primechain_private_key": "VCYNEaX1HuvxM56D69ULvNbR6H1Rcae6EbobiKr4PDYdYPs9NJq5C2yk",
-      "primechain_address": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
-      "primechain_public_key": "02d80c774feea05859a3701c927a0d4b87b01654f75cbd57f49d673a03d94f69a1"
-    }
+"status": 200,
+"response": {
+"primechain_address": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP",
+"primechain_private_key": "VHpUJD5NkTrurFHEoQ79t55TUAgZYEFvygbZHSCJ3za6zSwtXbQqVsaV",
+"primechain_public_key": "03fe0f7af92c260c0098dcf9818eb9b6998584d7cb68a776d7b9e63aa5ad16b53b",
+"rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCQPcJ5wYOPptDb LMnPDSjWlOdvlf8dQ6GOEQ9XDqk3iEiLl0kf9FaMG9Nzq12yVB5ZHpHWlDjyx45q d42ya+0d6AcyJlB/0z/vCLg0hFBA5A+EZBHXVnIVJzEoCOrQzpI3YMM35u6XsgYB nKir53M12IOUZ114DGSgkIiXqN6F7/6P6Zr2ZdaCTL95iXFiSKGcFlN9UTPYXghF kw1u1A0cv2ns6v/sfsCY10BjK8AXcuDaS5mg2vlFwuyUGjOQ4MXZwouHgKw5lIlE J46zxsDjpJHSrODkvqb/Y3GWuUx4evu3NoJ3mKq6DzHd9k5kPvHF2L9EFYrnP0nj KTjXqru7AgMBAAECggEAeCVJYVukNzrPS1EyRCoE80ASyuqZFoon/osNSQmoP95f 9w4r1dcTZB8lcXqzUAArSzZgaekKyocYhGxS9eRaHQgRPl+Vu/N9lKChtvTjWDnf BvrHtaOG4UHE+0D6PrViK4iI836DDI433I3eHVprp9VSPIIg5AcGpovdit4ZhFvS GwfFD2IQ61H/JgWei0n34tUEbRGYODhNaGPgTyCEZ1+rx1+HOS30K80TVChADuSw aNTDnYPzPpOsihHN/TllydtsX92Yavg3XzQZTbrRAQhblSRlCJHALJRJErcH1g3T PiwnvAcx9If4O4f3EwT/XslWSPY+T+eBZGaUtq0zUQKBgQDZLW3UoMAaUeIosM5Q /RGBYxNxu2qotNm3fKSMNTzB05DYDKYKyj1XtW448DVm9srFYJ67N/EK9yDKR59O 9aj+VPyAP7FWmyp8sJA8e+GjRIDvPeRoyr5pVBwK1Q0BYLmDI5MNiggBbFO+DBHu swylORd7c37WKdfJSSc6lWsy4wKBgQCqBpdxYcYqucLBemDeOJPRyRqiKCSUqzn3 85FtXoW3CzQ177rAp2uWFA8VCKHs1u7NLOuBayvo68lbbuebVgaffxpX0WSp6VnV 6tpPQCmDvisj5iIs7ETiNNm93ZvBWFek8xpEl26FbfgFAw1YCfEipjwfV6t6x9Do qzDJDxIzSQKBgQCUAGeWva3swdy0Cjmv66agXFqF6Uj4i7bLWn/wpN8w3/MXqRcG x2gie5wP5XMfJhRtijjiMW9tH5kTANhKQRPXryccZ0t9T+UWcGT7MxlD4I1VfQJJ f9FfilhJ8YMZa0dBXV77nRNzlNVE8IjP+OknN88O7FiFrqJFpDq9q9IQLQKBgDk/ 3PBlfqdWQxiIj2Nj44oIz/n30FFq0isGDVqpMBbxI9Rhcx15ggVXnbh0XqlzuZbG YEoEfxV/hx5NWpj4P2SnFISrUdzQYNphqL50mUXt23LMA4fiylLsfsCqhM52Y5R7 8sVTw/gTjiaJ341cU6BaHvZiu6+s5k/hjJy2gWdZAoGBAJMAcDfRnLDKMV5wiC4V ARxrXfmZdJhfoNRb9O4VOin+OkO+NQOdHi1ECA6mMMdAm1iHNDIep2nQlXLcp2K2 jzjD/lszxp5JHkoGWGEQi5l8FdHimgmRRg7GnNeui1cKJ9yAg+EgP4kflBOu/F66 vkIg4N6DI/lVIbvVbihIyITM -----END PRIVATE KEY-----",
+"rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkD3CecGDj6bQ2yzJzw0o 1pTnb5X/HUOhjhEPVw6pN4hIi5dJH/RWjBvTc6tdslQeWR6R1pQ48seOaneNsmvt HegHMiZQf9M/7wi4NIRQQOQPhGQR11ZyFScxKAjq0M6SN2DDN+bul7IGAZyoq+dz NdiDlGddeAxkoJCIl6jehe/+j+ma9mXWgky/eYlxYkihnBZTfVEz2F4IRZMNbtQN HL9p7Or/7H7AmNdAYyvAF3Lg2kuZoNr5RcLslBozkODF2cKLh4CsOZSJRCeOs8bA 46SR0qzg5L6m/2NxlrlMeHr7tzaCd5iqug8x3fZOZD7xxdi/RBWK5z9J4yk416q7 uwIDAQAB -----END PUBLIC KEY-----"
+}
 }
 ```
 
 
 
-## 3. Publish relevant data to the blockchain
+## 3. Publish data to the blockchain
 ```
 {
   "rsa_pub_key_id": "5c3492873cf18b37aec45abe",
