@@ -12,13 +12,14 @@ Trade finance provides the credit, payment guarantees and insurance needed to fa
 ***Table of contents***   
 
 [1. Preliminary steps](#1-preliminary-steps)   
-[1.1 Generate API keys](#11-generate-api-keys)   
-[1.2 Generate RSA key pair](#12-generate-rsa-key-pair)   
+[1.1 Generate API keys](#11-generate-api-keys)      
+[1.2 Generate RSA key pair](#12-generate-rsa-key-pair)      
+[1.3 Create an entity whose private key is stored on the blockchain](#13-create-an-entity-whose-private-key-is-stored-on-the-blockchain)   
 
 [2. Create a dedicated Data Stream for a specific transaction, shipment or event](#2-create-a-dedicated-data-stream-for-a-specific-transaction,-shipment-or-event)   
-[2.1 Create a data stream](#21-create-a-data-stream)
-[2.2 Grant write permissions](#22-grant-write-permissions)
-[2.3 Revoke write permissions](#23-revoke-write-permissions)
+[2.1 Create a data stream](#21-create-a-data-stream)   
+[2.2 Grant write permissions](#22-grant-write-permissions)   
+[2.3 Revoke write permissions](#23-revoke-write-permissions)   
 
 To onboard an entity 
 
@@ -49,33 +50,47 @@ Sample output
   }
 }
 ```
+### 1.3 Create an entity whose private key is stored on the blockchain
+
+To create an address whose private key is stored on the blockchain, use `get /api/v1/create_entity`.
+
+The output will be the blockchain address of the newly created entity. The private key is automatically stored in your node. This will not be visible to other nodes. 
+
+Sample output
+```
+{
+"status": 200,
+"primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
+}
+```
 
 ## 2. Create a dedicated Data Stream for a specific transaction, shipment or event
 A data stream enables TRADE-Chain to be used as a general purpose append-only database, with TRADE-Chain providing timestamping, notarization and immutability. Storing all the data relating to a transaction, shipment or event in a dedicated data stream enables quick and efficient data retrieval and processing.
 
 ### 2.1 Create a data stream
-To create a new data stream use `post /api/v1/create_data_stream_from` and provide these 4 parameters:
+To create a new data stream use `post /api/v1/create_data_stream` and provide these 4 parameters:
 1. The creators address
 2. The stream name
 3. A short description of the data stream
-4. Whether the stream is open or not. If open is set to true, write permissions need not be explicitly provided. All addresses can write to the stream. If open is set to false, write permissions need to be explicitly provided. It is recommended to keep the stream as closed and to provide write permissions on an address basis. To provide write access 
+4. Whether the stream is open or not. If open is set to true, write permissions need not be explicitly provided. All addresses can write to the stream. If open is set to false, write permissions need to be explicitly provided. It is recommended to keep the stream as closed and to provide write permissions on an address basis. 
 
+Sample input
+```
 {
-  "from_address": "17kpbJdha6vt8QjZz3nsctSx2qWK38idttfDV9",
-  "type": "stream",
-  "stream_name": "TEST_STREAM_8",
+  "primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp",
+  "stream_name": "TEST_STREAM_C",
   "details": "This is a test data stream",
   "open":true
 }
-Note: 
 
 The output is the txid of the transaction creating the stream.
-
+Sample output
+```
 {
 "status": 200,
-"transaction_id": "e6c3f05d1f576fb559d04ab60124fdbd04d0b32605fab2534a81a63ebe0962ac"
+"tx_id": "07fbc2601ff9031bff3dc17623c9cceb52d433151c0cc72c9855a4289ef8341c"
 }
-
+```
 2.2 Grant write permissions
 
 To grant an entity write permission to a stream, use post /api/v1/grant_write_permission_to_stream and provide 2 parameters - addresss (the blockchain address of the entity) and the stream name. Example:
