@@ -18,7 +18,11 @@ intro to trade finance
 [2.2 Grant write permissions](#22-grant-write-permissions)   
 [2.3 Revoke write permissions](#23-revoke-write-permissions)   
 
-To onboard an entity 
+[3. Publish relevant documents to the blockchain](#3-publish-relevant-documents-to-the-blockchain)   
+[3.1 Publish an invoice](#31-publish-an-invoice)   
+[3.2 Publish a bank guarantee](#32-publish-a-bank-guarantee)   
+[3.3 Publish a letter of credit](#33-publish-a-letter-of-credit)   
+[3.4 Publish a bill of lading](#34-publish-a-bill-of-lading)
 
 ## 1. Preliminary steps
 
@@ -90,44 +94,85 @@ Sample output
 ```
 ### 2.2 Grant write permissions
 
-To grant an entity write permission to a stream, use post /api/v1/grant_write_permission_to_stream and provide 3 parameters:
+To grant an entity write permission to a stream, use `post /api/v1/grant_write_permission_to_stream` and provide 3 parameters:
 1. The primechain addresss of the entity to be granted write permission - `primechain_address_stream_writer`
-2. The name of the data stream to which the entity is to be granted write permission - `stream_name`
+2. The name of the relevant data stream - `stream_name`
 3. The primechain addresss of the creator of the data stream - `primechain_address_stream_creator`
 
 Sample input
 ```
 {
-  "primechain_address_stream_writer": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
-  "stream_name": "200_tons_xyz_Jan_2019"
-  "primechain_address_stream_creator": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
+  "primechain_address_stream_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
+  "stream_name": "200_tons_xyz_Jan_2019",
+  "primechain_address_stream_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
 }
 ```
 Sample output
 ```
 {
-  aaa
+"status": 200,
+"tx_id": "94179d61270f24acc208b8647e735cb54307c4ccbfece64ebae0e9539c37b2bf"
 }
 ```
+
 ### 2.3 Revoke write permissions
+To revoke an entity's write permission to a stream, use `post /api/v1/revoke_write_permission_to_stream` and provide 3 parameters:
+1. The primechain addresss of the entity whose write permission is to be revoked - `primechain_address_stream_writer`
+2. The name of the relevant data stream - `stream_name`
+3. The primechain addresss of the creator of the data stream - `primechain_address_stream_creator`
+
+Sample input
+```
+{
+  "primechain_address_stream_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
+  "stream_name": "200_tons_xyz_Jan_2019",
+  "primechain_address_stream_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
+}
+```
+Sample output
+```
+{
+
+}
+```
+
 
 
 ## 2. On-board relevant exporters, importers, shippers etc.
 
-create_keypair
-{
-"status": 200,
-"response": {
-"primechain_private_key": "V8DVtDuXK4iSQ9EtZ3Vm3VULG6phU3FTTxagQDpesXCc1NThQToqPBh2",
-"primechain_address": "1CAaJRU6C6h8e6U6eWk7pxMCXggBVZ6azFK1j3",
-"primechain_public_key": "032dce777777479f5ae48fac94ed9093a49bc70215059b3e06cfa6d390267e14d2"
-}
-}
+To on-board relevant exporters, importers, shippers etc. use `get /api/v1/create_keypair`. The output will be:
+1. the primechain address, 
+2. primechain public key and 
+3. primechain private key
 
-## 3. Publish relevant invoices, contracts, guarantees, letters of credit, bills of lading etc.
+Sample output
+```
+{
+  "status": 200,
+  "response": 
+    {
+      "primechain_private_key": "VCYNEaX1HuvxM56D69ULvNbR6H1Rcae6EbobiKr4PDYdYPs9NJq5C2yk",
+      "primechain_address": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
+      "primechain_public_key": "02d80c774feea05859a3701c927a0d4b87b01654f75cbd57f49d673a03d94f69a1"
+    }
+}
+```
+
+
+
+## 3. Publish relevant documents to the blockchain
+
+3.1 Publish an invoice
+
+3.2 Publish a bank guarantee
+
+3.3 Publish a letter of credit
+
+3.4 Publish a bill of lading
 
 
 ## 4. Enable invoice discounting. 
+
 
 ## 5. Publish GPS information and documents in real-time.
 
