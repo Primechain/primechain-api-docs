@@ -105,6 +105,19 @@ Sample input
    "stream_name": "200_tons_xyz_Jan_2019"
 }
 ```
+This is what happens:   
+1. The SHA-512 hash of the data is computed.
+2. The hash is signed using the provided private key (using ECDSA).
+3. The digital signature, hash and the primechain address of the signer are stored in the data stream.
+4. The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: the encrypted version of the data, the AES password, the Initialization Vector (IV) and the Authentication Tag (tag).
+5. The encrypted data and the tag are published to the data stream.
+
+The following is the output:
+1. the id of the transaction in which the encrypted data and tag were published to the data stream.
+2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the the data stream.
+3. The AES password
+4. The Initialization Vector (IV)
+
 Sample output
 ```
 {
@@ -131,6 +144,32 @@ Sample output
 
 ## 5. Retrieve data from the blockchain
 
+`post /api/v1/get_data`
+
+Sample input
+```
+{
+      "tx_id_enc_data": "16346d48deea43865a276b5153fec90ac2ef83f146a20bf6826df995acdc5fc8",
+      "tx_id_signature": "7c72b8fc633d9a091e878ef6c610e4383ca597f846092a35077374fb0accea76",
+      "signature": "IGOfNLkkrioZwsA3sHnZTDWXP0LRb1OOSUo0Tu3TBKuYVIBgH7mDvIb4NE9eosNvWBYvVA50lZYzqQU1tKpL2tY=",
+      "aes_password": "kfkNhEWZErbMLhtKkg6zSTy85Aq9QIJr",
+      "aes_iv": "9UuZX4vgZ8r3",
+      "stream_name": "200_tons_xyz_Jan_2019"
+}
+```
+Sample output
+```
+{
+"status": 200,
+"response": {
+"data": "This is the data that will be encryptd and stored.",
+"signer_detail": {
+"primechain_address": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP"
+},
+"signature_status": true
+}
+}
+```
 
 ## 6. Invoice discounting
 
