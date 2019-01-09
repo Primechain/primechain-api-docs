@@ -89,6 +89,10 @@ Sample output
 
 ## 4. Publish data to a Data Stream
 
+To encrypt data and store the encrypted data in the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
+1. the data 
+2. the primechain address of the signing entity
+
 `post /api/v1/publish_data`
 
 Sample input
@@ -143,31 +147,43 @@ Sample output
 
 
 ## 5. Retrieve data from the blockchain
-
-`post /api/v1/get_data`
+To retrieve data use `post /api/v1/get_data` and pass these values:
+1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
+2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
+3. The AES password
+4. The Initialization Vector (IV)
 
 Sample input
 ```
 {
-      "tx_id_enc_data": "16346d48deea43865a276b5153fec90ac2ef83f146a20bf6826df995acdc5fc8",
-      "tx_id_signature": "7c72b8fc633d9a091e878ef6c610e4383ca597f846092a35077374fb0accea76",
-      "signature": "IGOfNLkkrioZwsA3sHnZTDWXP0LRb1OOSUo0Tu3TBKuYVIBgH7mDvIb4NE9eosNvWBYvVA50lZYzqQU1tKpL2tY=",
-      "aes_password": "kfkNhEWZErbMLhtKkg6zSTy85Aq9QIJr",
-      "aes_iv": "9UuZX4vgZ8r3",
-      "stream_name": "200_tons_xyz_Jan_2019"
+  "tx_id_enc_data": "16346d48deea43865a276b5153fec90ac2ef83f146a20bf6826df995acdc5fc8",
+  "tx_id_signature": "7c72b8fc633d9a091e878ef6c610e4383ca597f846092a35077374fb0accea76",
+  "aes_password": "kfkNhEWZErbMLhtKkg6zSTy85Aq9QIJr",
+  "aes_iv": "9UuZX4vgZ8r3",
+  "stream_name": "200_tons_xyz_Jan_2019"
 }
 ```
+This is what happens:   
+1. The digital signature, hash and the primechain address of the signing entity are retrieved from the data stream.
+2. The encrypted data and tag are retrieved from the data stream.
+3. The encrypted data is decrypted.
+4. The digital signature is verified.
+
+The output will be the data and the details of the signer.
+
 Sample output
 ```
 {
-"status": 200,
-"response": {
-"data": "This is the data that will be encryptd and stored.",
-"signer_detail": {
-"primechain_address": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP"
-},
-"signature_status": true
-}
+  "status": 200,
+  "response": 
+    {
+      "data": "This is the data that will be encryptd and stored.",
+      "signer_detail": 
+        {
+          "primechain_address": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP"
+         },
+      "signature_status": true
+      }
 }
 ```
 
