@@ -12,7 +12,7 @@ intro to trade finance
 [1.1 Generate API keys](#11-generate-api-keys)      
 [1.2 Create an address whose private key is stored on the blockchain](#12-create-an-address-whose-private-key-is-stored-on-the-blockchain)   
 
-***[2. Create a dedicated Data Stream](#2-create-a-dedicated-data-stream-for-a-specific-transaction,-shipment-or-event)***    
+***[2. Create a dedicated Data Stream](#2-create-a-dedicated-data-stream)***    
 [2.1 Create a data stream](#21-create-a-data-stream)   
 [2.2 Grant write permissions](#22-grant-write-permissions)   
 [2.3 Revoke write permissions](#23-revoke-write-permissions)   
