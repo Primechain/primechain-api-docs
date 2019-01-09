@@ -8,7 +8,7 @@ intro to trade finance
 
 ***Table of contents***   
 
-### [1. Preliminary steps](#1-preliminary-steps)   
+***[1. Preliminary steps](#1-preliminary-steps)***   
 [1.1 Generate API keys](#11-generate-api-keys)      
 [1.2 Generate RSA key pair](#12-generate-rsa-key-pair)      
 [1.3 Create an entity whose private key is stored on the blockchain](#13-create-an-entity-whose-private-key-is-stored-on-the-blockchain)   
