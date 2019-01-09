@@ -10,7 +10,7 @@ intro to trade finance
 
 ***[1. Preliminary steps](#1-preliminary-steps)***   
 [1.1 Generate API keys](#11-generate-api-keys)      
-[1.2 Create an address whose private key is stored on the blockchain](#12-create-an-address-whose-private-key-is-stored-on-the-blockchain)   
+[1.2 Create a data stream admin](#12-create-a-data-stream-admin)   
 
 ***[2. Create a dedicated Data Stream](#2-create-a-dedicated-data-stream)***    
 [2.1 Create a data stream](#21-create-a-data-stream)   
@@ -43,10 +43,8 @@ Sample API key
 k3wq1TdYcEGb7sqX&Es8-xVR$ocdw5ICLtIh5rT661UDaZoKmLV!12X01ce!GnEW
 ```
 
-### 1.2 Create an address whose private key is stored on the blockchain
-To create an address whose private key is stored on the blockchain, use `get /api/v1/create_entity`.
-
-The output will be the blockchain address of the newly created entity. The private key is automatically stored in your node. This will not be visible to other nodes. 
+### 1.2 Create a data stream admin
+First, create an address whose private key is stored on the blockchain using `get /api/v1/create_entity`. The output will be the primechain address of the newly created entity. The private key is automatically stored in your node. This will not be visible to other nodes. 
 
 Sample output
 ```
@@ -55,13 +53,14 @@ Sample output
 "primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
 }
 ```
+Then send this address to Primechain Technologies so that they can grant "data stream creation" permission to the address.
 
 ## 2. Create a dedicated Data Stream
 A data stream enables TRADE-Chain to be used as a general purpose append-only database, with TRADE-Chain providing timestamping, notarization and immutability. Storing all the data relating to a transaction, shipment or event in a dedicated data stream enables quick and efficient data retrieval and processing.
 
 ### 2.1 Create a data stream
 To create a new data stream use `post /api/v1/create_data_stream` and provide these 4 parameters:
-1. The creators address
+1. The data stream admin's address
 2. The stream name
 3. A short description of the data stream
 4. Whether the stream is open or not. If open is set to true, write permissions need not be explicitly provided. All addresses can write to the stream. If open is set to false, write permissions need to be explicitly provided. It is recommended to keep the stream as closed and to provide write permissions on an address basis. 
@@ -153,6 +152,8 @@ Sample output
 ## 3. Publish data to the blockchain
 
 `post /api/v1/publish_data`
+
+Sample input
 ```
 {
   "primechain_private_key": "VHpUJD5NkTrurFHEoQ79t55TUAgZYEFvygbZHSCJ3za6zSwtXbQqVsaV",
@@ -166,7 +167,21 @@ Sample output
    "stream_name": "200_tons_xyz_Jan_2019"
 }
 ```
-
+Sample output
+```
+{
+  "status": 200,
+  "response": 
+    {
+      "tx_id_enc_data": "16346d48deea43865a276b5153fec90ac2ef83f146a20bf6826df995acdc5fc8",
+      "tx_id_signature": "7c72b8fc633d9a091e878ef6c610e4383ca597f846092a35077374fb0accea76",
+      "signature": "IGOfNLkkrioZwsA3sHnZTDWXP0LRb1OOSUo0Tu3TBKuYVIBgH7mDvIb4NE9eosNvWBYvVA50lZYzqQU1tKpL2tY=",
+      "aes_password": "kfkNhEWZErbMLhtKkg6zSTy85Aq9QIJr",
+      "aes_iv": "9UuZX4vgZ8r3",
+      "stream_name": "200_tons_xyz_Jan_2019"
+    }
+}
+```
 ### 3.1 Publish an invoice
 
 ### 3.2 Publish a bank guarantee
