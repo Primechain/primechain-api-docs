@@ -89,11 +89,12 @@ Sample output
 
 ## 4. Publish data to a Data Stream
 
-To encrypt data and store the encrypted data in the blockchain, use `post /api/v1/encrypt_sign_store_data` and pass 2 parameters: 
-1. the data 
-2. the primechain address of the signing entity
-
-`post /api/v1/publish_data`
+To encrypt, sign anf publish data to a Data Stream, use `post /api/v1/publish_data` and pass 5 parameters: 
+1. the private key of the signer
+2. the primechain address of the signer
+3. The keys to enable quick searching of the data 
+4. the data
+5. the name of the data stream
 
 Sample input
 ```
@@ -109,18 +110,19 @@ Sample input
    "stream_name": "200_tons_xyz_Jan_2019"
 }
 ```
-This is what happens:   
+***This is what happens:***   
 1. The SHA-512 hash of the data is computed.
 2. The hash is signed using the provided private key (using ECDSA).
 3. The digital signature, hash and the primechain address of the signer are stored in the data stream.
 4. The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: the encrypted version of the data, the AES password, the Initialization Vector (IV) and the Authentication Tag (tag).
 5. The encrypted data and the tag are published to the data stream.
 
-The following is the output:
+***The following is the output:***
 1. the id of the transaction in which the encrypted data and tag were published to the data stream.
 2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the the data stream.
-3. The AES password
-4. The Initialization Vector (IV)
+3. the digital signature
+4. The AES password
+5. The Initialization Vector (IV)
 
 Sample output
 ```
@@ -147,11 +149,12 @@ Sample output
 
 
 ## 5. Retrieve data from the blockchain
-To retrieve data use `post /api/v1/get_data` and pass these values:
-1. the id of the transaction in which the encrypted data and tag were published to the DATA_MASTERLIST stream
-2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the DATA_SIGNSTURE_MASTERLIST stream
-3. The AES password
-4. The Initialization Vector (IV)
+To retrieve data use `post /api/v1/get_data` and pass 4 parameters:
+1. the id of the transaction in which the encrypted data and tag were published to the data stream
+2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the data stream
+3. the AES password
+4. the Initialization Vector (IV)
+5. the name of the data stream
 
 Sample input
 ```
@@ -163,13 +166,16 @@ Sample input
   "stream_name": "200_tons_xyz_Jan_2019"
 }
 ```
-This is what happens:   
+***This is what happens:***   
 1. The digital signature, hash and the primechain address of the signing entity are retrieved from the data stream.
 2. The encrypted data and tag are retrieved from the data stream.
 3. The encrypted data is decrypted.
 4. The digital signature is verified.
 
-The output will be the data and the details of the signer.
+***The following is the output:***
+1. the unencrypted data - `data`
+2. the primechain address of the signer - `primechain_address`
+3. the verification status of the signature - `signature_status`
 
 Sample output
 ```
