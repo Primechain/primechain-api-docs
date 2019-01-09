@@ -78,37 +78,56 @@ Sample input
 ```
 {
   "primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp",
-  "stream_name": "TEST_STREAM_C",
-  "details": "This is a test data stream",
-  "open":true
+  "stream_name": "200_tons_xyz_Jan_2019",
+  "details": "This stream is for the consignment of 200 tons of xyz material",
+  "open":false
 }
-
+```
 The output is the txid of the transaction creating the stream.
 Sample output
 ```
 {
 "status": 200,
-"tx_id": "07fbc2601ff9031bff3dc17623c9cceb52d433151c0cc72c9855a4289ef8341c"
+"tx_id": "d84f84849431d5a5c5565530021d4c8bc37bf7180c58a116bd42295f90b434e2"
 }
 ```
 2.2 Grant write permissions
 
-To grant an entity write permission to a stream, use post /api/v1/grant_write_permission_to_stream and provide 2 parameters - addresss (the blockchain address of the entity) and the stream name. Example:
+To grant an entity write permission to a stream, use post /api/v1/grant_write_permission_to_stream and provide 4 parameters:
+1. The primechain addresss of the entity to be granted write permission.
+2. The name of the data stream to which the entity is to be granted write permission.
+3. The primechain addresss of the creator of the data stream.
+4. 
 
+Sample input
+```
 {
-  "address": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
-  "stream_name": "ASSET_DATA_MASTERLIST"
+  "primechain_address_stream writer": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
+  "stream_name": "200_tons_xyz_Jan_2019"
+  "primechain_address_stream_creator": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
+
 }
+```
+Sample output
+```
 {
-"status": 200,
-"transaction_id": "a7671ffc82874c195e070017531b196093d5109d3fda55fd2c0c0acb823d1122"
+aaa
 }
+```
 ### 2.3 Revoke write permissions
 
 
 ## 2. On-board relevant exporters, importers, shippers etc.
 
-
+create_keypair
+{
+"status": 200,
+"response": {
+"primechain_private_key": "V8DVtDuXK4iSQ9EtZ3Vm3VULG6phU3FTTxagQDpesXCc1NThQToqPBh2",
+"primechain_address": "1CAaJRU6C6h8e6U6eWk7pxMCXggBVZ6azFK1j3",
+"primechain_public_key": "032dce777777479f5ae48fac94ed9093a49bc70215059b3e06cfa6d390267e14d2"
+}
+}
 
 ## 3. Publish relevant invoices, contracts, guarantees, letters of credit, bills of lading etc.
 
