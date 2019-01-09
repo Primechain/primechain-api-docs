@@ -8,34 +8,28 @@ intro to trade finance
 
 ***Table of contents***   
 
-***[1. Preliminary steps](#1-preliminary-steps)***   
-[1.1 Generate API keys](#11-generate-api-keys)      
-[1.2 Create a data stream admin](#12-create-a-data-stream-admin)   
+***[1. Generate API keys](#1-generate-api-keys)***   
 
-***[2. Create a dedicated Data Stream](#2-create-a-dedicated-data-stream)***    
-[2.1 Create a data stream](#21-create-a-data-stream)   
-[2.2 Grant write permissions](#22-grant-write-permissions)   
-[2.3 Revoke write permissions](#23-revoke-write-permissions)   
+***[2. Create a dedicated Data Stream](#2-create-a-dedicated-data-stream)***      
 
-***[3. Publish data to the blockchain](#3-publish-data-to-the-blockchain)***   
-[3.1 Publish an invoice](#31-publish-an-invoice)   
-[3.2 Publish a bank guarantee](#32-publish-a-bank-guarantee)   
-[3.3 Publish a letter of credit](#33-publish-a-letter-of-credit)   
-[3.4 Publish a bill of lading](#34-publish-a-bill-of-lading)
+***[3. On-board users](#3-on-board-users)***
 
-***[4. Retrieve data from the blockchain](#4-retrieve-data-from-the-blockchain)***   
+***[4. Publish data to a Data Stream](#4-publish-data-to-a-data-stream)***   
+[4.1 Publish an invoice](#41-publish-an-invoice)   
+[4.2 Publish a bank guarantee](#42-publish-a-bank-guarantee)   
+[4.3 Publish a letter of credit](#43-publish-a-letter-of-credit)   
+[4.4 Publish a bill of lading](#44-publish-a-bill-of-lading)
 
-***[5. Invoice discounting](#5-invoice-discounting)***   
+***[5. Retrieve data from the blockchain](#5-retrieve-data-from-the-blockchain)***   
 
-***[6. Publish GPS information and data in real-time](#6-publish-gps-information-and-data-in-real-time)***
+***[6. Invoice discounting](#6-invoice-discounting)***   
 
-***[7. Settle accounts in real-time](#7-settle-accounts-in-real-time)***
+***[7. Publish GPS information and data in real-time](#7-publish-gps-information-and-data-in-real-time)***
+
+***[8. Settle accounts in real-time](#8-settle-accounts-in-real-time)***
 
 
-## 1. Preliminary steps
-TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers and shippers. The  preliminary steps to be carried out by node holders are:
-
-### 1.1 Generate API keys
+## 1. Generate API keys
 API keys authenticate access to the TRADE-Chain API service. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header.
 
 Sample API key
@@ -43,27 +37,14 @@ Sample API key
 k3wq1TdYcEGb7sqX&Es8-xVR$ocdw5ICLtIh5rT661UDaZoKmLV!12X01ce!GnEW
 ```
 
-### 1.2 Create a data stream admin
-First, create an address whose private key is stored on the blockchain using `get /api/v1/create_entity`. The output will be the primechain address of the newly created entity. The private key is automatically stored in your node. This will not be visible to other nodes. 
-
-Sample output
-```
-{
-"status": 200,
-"primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
-}
-```
-Then send this address to Primechain Technologies so that they can grant "data stream creation" permission to the address.
-
 ## 2. Create a dedicated Data Stream
 A data stream enables TRADE-Chain to be used as a general purpose append-only database, with TRADE-Chain providing timestamping, notarization and immutability. Storing all the data relating to a transaction, shipment or event in a dedicated data stream enables quick and efficient data retrieval and processing.
 
-### 2.1 Create a data stream
 To create a new data stream use `post /api/v1/create_data_stream` and provide these 4 parameters:
-1. The data stream admin's address
-2. The stream name
-3. A short description of the data stream
-4. Whether the stream is open or not. If open is set to true, write permissions need not be explicitly provided. All addresses can write to the stream. If open is set to false, write permissions need to be explicitly provided. It is recommended to keep the stream as closed and to provide write permissions on an address basis. 
+1. Your node's default primechain address - `primechain_address`
+2. The stream name - `stream_name`
+3. A short description of the data stream - `details`
+4. Whether the stream is open or not - `open`. If open is set to true, write permissions need not be explicitly provided. All addresses can write to the stream. If open is set to false, write permissions need to be explicitly provided. It is recommended to keep the stream as closed and to provide write permissions on an address basis. 
 
 Sample input
 ```
@@ -83,50 +64,7 @@ Sample output
 }
 ```
 
-### 2.2 Grant write permissions
-To grant an entity write permission to a stream, use `post /api/v1/grant_write_permission_to_stream` and provide 3 parameters:
-1. The primechain addresss of the entity to be granted write permission - `primechain_address_stream_writer`
-2. The name of the relevant data stream - `stream_name`
-3. The primechain addresss of the creator of the data stream - `primechain_address_stream_creator`
-
-Sample input
-```
-{
-  "primechain_address_stream_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
-  "stream_name": "200_tons_xyz_Jan_2019",
-  "primechain_address_stream_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
-}
-```
-Sample output
-```
-{
-"status": 200,
-"tx_id": "94179d61270f24acc208b8647e735cb54307c4ccbfece64ebae0e9539c37b2bf"
-}
-```
-
-### 2.3 Revoke write permissions
-To revoke an entity's write permission to a stream, use `post /api/v1/revoke_write_permission_to_stream` and provide 3 parameters:
-1. The primechain addresss of the entity whose write permission is to be revoked - `primechain_address_stream_writer`
-2. The name of the relevant data stream - `stream_name`
-3. The primechain addresss of the creator of the data stream - `primechain_address_stream_creator`
-
-Sample input
-```
-{
-  "primechain_address_stream_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
-  "stream_name": "200_tons_xyz_Jan_2019",
-  "primechain_address_stream_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
-}
-```
-Sample output
-```
-{
-
-}
-```
-
-## 2. On-board relevant exporters, importers, shippers etc.
+## 3. On-board users
 
 To on-board relevant exporters, importers, shippers etc. use `get /api/v1/create_entity_rsa`. The output will be:
 1. the primechain address, 
@@ -149,7 +87,7 @@ Sample output
 }
 ```
 
-## 3. Publish data to the blockchain
+## 4. Publish data to a Data Stream
 
 `post /api/v1/publish_data`
 
@@ -182,25 +120,25 @@ Sample output
     }
 }
 ```
-### 3.1 Publish an invoice
+### 4.1 Publish an invoice
 
-### 3.2 Publish a bank guarantee
+### 4.2 Publish a bank guarantee
 
-### 3.3 Publish a letter of credit
+### 4.3 Publish a letter of credit
 
-### 3.4 Publish a bill of lading
-
-
-## 4. Retrieve data from the blockchain
+### 4.4 Publish a bill of lading
 
 
-## 5. Invoice discounting
+## 5. Retrieve data from the blockchain
 
 
-## 6. Publish GPS information and data in real-time
+## 6. Invoice discounting
 
 
-## 7. Settle accounts in real-time
+## 7. Publish GPS information and data in real-time
+
+
+## 8. Settle accounts in real-time
 
 
 Have a query? Email us on info@primechain.in
