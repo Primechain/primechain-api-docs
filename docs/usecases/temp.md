@@ -90,25 +90,23 @@ Sample output
 ```
 ### 2.2 Grant write permissions
 
-To grant an entity write permission to a stream, use post /api/v1/grant_write_permission_to_stream and provide 4 parameters:
-1. The primechain addresss of the entity to be granted write permission.
-2. The name of the data stream to which the entity is to be granted write permission.
-3. The primechain addresss of the creator of the data stream.
-4. 
+To grant an entity write permission to a stream, use post /api/v1/grant_write_permission_to_stream and provide 3 parameters:
+1. The primechain addresss of the entity to be granted write permission - `primechain_address_stream_writer`
+2. The name of the data stream to which the entity is to be granted write permission - `stream_name`
+3. The primechain addresss of the creator of the data stream - `primechain_address_stream_creator`
 
 Sample input
 ```
 {
-  "primechain_address_stream writer": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
+  "primechain_address_stream_writer": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
   "stream_name": "200_tons_xyz_Jan_2019"
   "primechain_address_stream_creator": "1BGuzWgkBoyCtk71YyN7BFapY69qhgBL1wmLXk",
-
 }
 ```
 Sample output
 ```
 {
-aaa
+  aaa
 }
 ```
 ### 2.3 Revoke write permissions
