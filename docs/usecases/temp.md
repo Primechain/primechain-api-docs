@@ -2,9 +2,29 @@
 
 [![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 
-intro to trade finance
+The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a permissioned "global trade finance" blockchain for the world’s banks and financial institutions. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers and shippers.
 
 ![Letter of credit](http://www.primechaintech.com/img/api_documentation/trade-finance.jpg)
+
+***The pain points of today’s trade finance processes are:***
+1. Delays and errors due to manual document creation and distribution
+2. Invoice factoring risk
+3. Delayed timeline
+4. Manual AML review
+5. Fraud risk due to multiple disconnected platforms
+6. Fraud risk due to duplicate bills of lading
+
+***Core benefits of TRADE-Chain:***
+1. Real-time review and approval of documents.
+2. Real-time, transparent view of invoices for discounting and factoring.
+3. Eliminating the need for correspondent banks and other intermediaries.
+4. Elimination of fraud by providing real-time, transparent view of bills of lading.
+5. Transparency in terms of ownership and location of goods.
+6. Real-time, automated settlements without the need for reconciliation.
+7. Real-time view to regulators leading to complete regulatory transparency.
+8. Reducing the letter of credit issue process from several days to a few hours.
+9. Reducing the time of delivery for trade documents from several days to a few hours.
+10.Increased transparency by sharing transaction details with all parties.
 
 ***Table of contents***   
 
