@@ -23,6 +23,15 @@ intro to trade finance
 [3.3 Publish a letter of credit](#33-publish-a-letter-of-credit)   
 [3.4 Publish a bill of lading](#34-publish-a-bill-of-lading)
 
+***[4. Retrieve data from the blockchain](#4-retrieve-data-from-the-blockchain)***   
+
+***[5. Invoice discounting](#5-invoice-discounting)***   
+
+***[6. Publish GPS information and data in real-time](#6-publish-gps-information-and-data-in-real-time)***
+
+***[7. Settle accounts in real-time](#7-settle-accounts-in-real-time)***
+
+
 ## 1. Preliminary steps
 TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers and shippers. The  preliminary steps to be carried out by node holders are:
 
@@ -74,8 +83,8 @@ Sample output
 "tx_id": "d84f84849431d5a5c5565530021d4c8bc37bf7180c58a116bd42295f90b434e2"
 }
 ```
-### 2.2 Grant write permissions
 
+### 2.2 Grant write permissions
 To grant an entity write permission to a stream, use `post /api/v1/grant_write_permission_to_stream` and provide 3 parameters:
 1. The primechain addresss of the entity to be granted write permission - `primechain_address_stream_writer`
 2. The name of the relevant data stream - `stream_name`
@@ -141,19 +150,20 @@ Sample output
 }
 ```
 
-
-
 ## 3. Publish data to the blockchain
+
+`post /api/v1/publish_data`
 ```
 {
-  "rsa_pub_key_id": "5c3492873cf18b37aec45abe",
-  "encrypted_private_key": "e2M+9kEuPhEAijGlHn/auxLT2RPHJToiq1GcjaTaJVrn0N3aX0q59mFHKW3dVJtxW4/B99h0o0LF4s7/BZ0FEOAhmQfyoAmSnnhzoh6nb5ZleGO/Dwq35AHDQxY660gFn2lf8yG3IWQ2RIHemy32t4lYKY/0RKN4ZVr3uj9MnWabdLbM6hBThEDSVcwa9XDjEKbi16JZSjrR85mIN+/3ioMQvhpG4q+s9IyOcXVCXGGmJoWhtXRzH3Gl4dWnhXUwD9+grrMPXaJTHbgO9vOpLIOqSuuuZA7CzXrAS2taxP4eUmgcsOXcwQdGcPr2h8M/0USUXa+8hPnkEPcXGEYuYw==",
-  "primechain_address": "1VLRwqpawyNFNn8uTYhufsK1p7HFK5KAdKhsaE",
-  "keys": [
-    "hello",
-    "00554"
-  ],
-  "data": "hello world"
+  "primechain_private_key": "VHpUJD5NkTrurFHEoQ79t55TUAgZYEFvygbZHSCJ3za6zSwtXbQqVsaV",
+  "primechain_address": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP",
+   "keys": 
+    [
+      "key1",
+      "key2"
+    ],
+   "data": "This is the data that will be encryptd and stored.",
+   "stream_name": "200_tons_xyz_Jan_2019"
 }
 ```
 
@@ -166,13 +176,16 @@ Sample output
 ### 3.4 Publish a bill of lading
 
 
-## 4. Enable invoice discounting. 
+## 4. Retrieve data from the blockchain
 
 
-## 5. Publish GPS information and documents in real-time.
+## 5. Invoice discounting
 
 
-## 6. Settle accounts in real-time without the need for manual reconciliation.
+## 6. Publish GPS information and data in real-time
+
+
+## 7. Settle accounts in real-time
 
 
 Have a query? Email us on info@primechain.in
