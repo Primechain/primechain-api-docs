@@ -2,12 +2,9 @@
 
 [![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 
-Only a small part of international trade is paid cash in advance, as importers generally wish to pay, at the earliest, upon receipt of the merchandise in order to verify its physical integrity on arrival. Exporters, however, wish to be paid upon shipment. In order to bridge the gap between the time at which exporters wish to be paid and the time at which importers will pay, a credit or a guarantee of payment is required. 
-
-Trade finance provides the credit, payment guarantees and insurance needed to facilitate the payment for the merchandise or service on terms that will satisfy both the exporter and the importer. As such, trade finance is often described as a lubricant of trade. Most trade credit, payment guarantees and insurance are short-term, with a standard maturity of 90 days.
+intro to trade finance
 
 ![Letter of credit](http://www.primechaintech.com/img/api_documentation/trade-finance.jpg)
-
 
 ***Table of contents***   
 
@@ -91,7 +88,7 @@ Sample output
 "tx_id": "d84f84849431d5a5c5565530021d4c8bc37bf7180c58a116bd42295f90b434e2"
 }
 ```
-2.2 Grant write permissions
+### 2.2 Grant write permissions
 
 To grant an entity write permission to a stream, use post /api/v1/grant_write_permission_to_stream and provide 4 parameters:
 1. The primechain addresss of the entity to be granted write permission.
