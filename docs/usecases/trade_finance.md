@@ -44,7 +44,7 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [2.3 Revoke write permissions](#23-revoke-write-permissions)   
 
 ***[4. Publish data to a Data Stream](#4-publish-data-to-a-data-stream)***   
-[4.1 Encrypt, sign and publish data](#41-encrypt-sign-and-publish-data)
+[4.1 Encrypt, sign and publish data](#41-encrypt-sign-and-publish-data)   
 [4.2 Publish an invoice](#42-publish-an-invoice)   
 [4.3 Publish a bank guarantee](#43-publish-a-bank-guarantee)   
 [4.4 Publish a letter of credit](#43-publish-a-letter-of-credit)   
