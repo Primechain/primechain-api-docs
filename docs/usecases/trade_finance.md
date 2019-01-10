@@ -483,9 +483,9 @@ Invoice discounting is also referred to as supply chain finance and factoring. T
 Benefits of using the blockchain for invoice discounting include automated reconciliation and a provably immutable and transparent process.
 
 ### 6.1 Publish a new invoice
-New invoices can be published to the blockchain by large corporates (payers) using `post /api/v1/create_invoice` and passing these parameters:
-2. The primechain address of the corporate who is the payer of the invoice - `invoice_payer`   
-2. The primechain address of the supplier who is the payee of the invoice - `invoice_payee`   
+New invoices can be published to the blockchain by large corporates (payers) using `post /api/v1/create_invoice` and passing these parameters:   
+1. The primechain address of the corporate who is the payer of the invoice - `invoice_payer`    
+2. The primechain address of the supplier who is the payee of the invoice - `invoice_payee`    
 3. The name of the invoice. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces - `invoice_name`   
 4. The details of the invoice - `invoice_details`. This contains 3 parameters, namely the amount of the invoice (`invoice_amount`), the maturity date of the invoice (`invoice_maturity`) and optional additional information about the invoice (`invoice_description`). 
 
