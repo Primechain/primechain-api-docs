@@ -49,7 +49,7 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [4.3 Publish a bank guarantee](#43-publish-a-bank-guarantee)   
 [4.4 Publish a letter of credit](#43-publish-a-letter-of-credit)   
 [4.5 Publish a bill of lading](#45-publish-a-bill-of-lading)
-[4.6 Publish GPS data](#46-publish-gps-data)
+[4.6 Publish GPS data](#46-publish-gps-data)   
 
 ***[5. Decrypt, verify and retrieve data from the blockchain](#5-decrypt,-verify-and-retrieve-data-from-the-blockchain)***   
 ***[6. Invoice discounting](#6-invoice-discounting)***   
@@ -427,7 +427,7 @@ Sample input
 14. `M` denotes the units used by the geoidal separation.
 15. `1.0` denotes the age of the correction (if any).
 16. `0000` denotes the correction station ID (if any).
-17. `*40` denotes the checksum.
+17. `*40` denotes the checksum.   
 (Source: https://www.gpsworld.com/what-exactly-is-gps-nmea-data/)
 
 ## 5. Decrypt, verify and retrieve data from the blockchain
