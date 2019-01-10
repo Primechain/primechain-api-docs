@@ -1,6 +1,7 @@
 # Trade Finance
 
-[![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
+[![Primechain Technologies](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
+[![TRADE-Chain brochure](https://img.shields.io/badge/Download-Brochure-green.svg)](http://www.primechaintech.com/docs/brochures/Trade_Chain.pdf)
 
 The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a permissioned "global trade finance" blockchain for the world’s banks and financial institutions. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers and shippers.
 
@@ -48,9 +49,8 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 
 ***[8. Settle accounts in real-time](#8-settle-accounts-in-real-time)***
 
-
 ## 1. Generate API keys
-API keys authenticate access to the TRADE-Chain API service. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header.
+API keys authenticate access to the TRADE-Chain API service. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](https://camo.githubusercontent.com/c3e402907d4735fa944e79888ddc58209247e07e/687474703a2f2f7777772e7072696d65636861696e746563682e636f6d2f696d672f6170695f646f63756d656e746174696f6e2f6170695f6b65792e6a7067))
 
 Sample API key
 ```
@@ -75,7 +75,7 @@ Sample input
   "open":false
 }
 ```
-The output is the txid of the transaction creating the stream.
+The output is the transaction id of the transaction creating the stream - `tx_id`.
 Sample output
 ```
 {
@@ -107,15 +107,14 @@ Sample output
     }
 }
 ```
-
 ## 4. Publish data to a Data Stream
 
 To encrypt, sign anf publish data to a Data Stream, use `post /api/v1/publish_data` and pass 5 parameters: 
-1. the private key of the signer
-2. the primechain address of the signer
-3. The keys to enable quick searching of the data 
-4. the data
-5. the name of the data stream
+1. the private key of the signer - `primechain_private_key`
+2. the primechain address of the signer - `primechain_address`
+3. The keys to enable quick searching of the data - `keys`
+4. the data - `data`
+5. the name of the data stream - `stream_name`
 
 Sample input
 ```
