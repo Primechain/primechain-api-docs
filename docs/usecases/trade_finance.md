@@ -48,7 +48,7 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [4.2 Publish an invoice](#42-publish-an-invoice)   
 [4.3 Publish a bank guarantee](#43-publish-a-bank-guarantee)   
 [4.4 Publish a letter of credit](#43-publish-a-letter-of-credit)   
-[4.5 Publish a bill of lading](#45-publish-a-bill-of-lading)
+[4.5 Publish a bill of lading](#45-publish-a-bill-of-lading)   
 [4.6 Publish GPS data](#46-publish-gps-data)   
 
 ***[5. Decrypt, verify and retrieve data from the blockchain](#5-decrypt,-verify-and-retrieve-data-from-the-blockchain)***   
