@@ -55,10 +55,11 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 
 ***[6. Invoice discounting](#6-invoice-discounting)***   
 [6.1 Publish a new invoice](#61-publish-a-new-invoice)   
-[6.2 Bidding by investors](#62-bidding-by-investors)   
-[6.3 Acceptance and rejection of bids](#63-acceptance-and-rejection-of-bids)   
-[6.4 Maturity of invoice](#64-maturity-of-invoice)   
-[6.5 Retiring the invoice](#65-retiring-the-invoice)   
+[6.2 Bidding by investors](#62-bidding-by-investors) 
+[6.3 Viewing bids](#63-viewing-bids)  
+[6.4 Acceptance and rejection of bids](#64-acceptance-and-rejection-of-bids)   
+[6.5 Maturity of invoice](#65-maturity-of-invoice)   
+[6.6 Retiring the invoice](#66-retiring-the-invoice)   
 
 ***[7. Settle accounts in real-time](#7-settle-accounts-in-real-time)***
 
@@ -567,8 +568,8 @@ Sample input
 }
 ```
 
-### 6.3 Acceptance and rejection of bids
-All participants can view all bids placed on all invoices using use `get /api/v1/view_all_bids`. This creates a highly transparent platform and enables price discovery.
+### 6.3 Viewing bids
+All participants can view all bids placed on all invoices using `get /api/v1/view_all_bids`. This creates a highly transparent platform and enables price discovery.
 
 Sample output
 ```
@@ -602,6 +603,9 @@ Sample output
 aaa
 ```
 
+### 6.4 Acceptance and rejection of bids
+
+
 To accept a bid, use `post /api/v1/accept_bid` and pass the transaction id of the bid as a parameter:
 
 Sample input
@@ -615,7 +619,7 @@ Sample output
 aaa
 ```
 
-### 6.4 Maturity of invoice
+### 6.5 Maturity of invoice
 Upon maturity of the invoice, or any time before that, the payer of an invoice places a bid to purchase the invoice from the investor holding the invoice. To place this bid, the payer must hold sufficient quantity of fiat currency tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Payers can purchase these tokens from their banks. Once the payer places a bid, the relevant amount of tokens are ‘locked’ and 'un-spendable' till either (1) the investor rejects the bid or (2) the payer cancels the bid.
 
 To create a bid, the payer uses `create_bid` and passes these parameters:
@@ -660,7 +664,7 @@ aaa
 The invoice gets transferred to the payer and the investor receives the bid amount of the tokens. The investor can redeem the tokens from the bank.
 
 
-### 6.5 Retiring the invoice
+### 6.6 Retiring the invoice
 The corporate (payer) then retires the invoice using `post /api/v1/retire_invoice` and passing the invoice reference number as a parameter. 
 
 Sample input
