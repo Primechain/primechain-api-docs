@@ -29,7 +29,14 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 
 ***Table of contents***   
 
-***[1. Generate API keys](#1-generate-api-keys)***   
+***[1. Introduction and overview](#1-introduction-and-overview)***
+[1.1 Sandbox blockchain](#11-sandbox-blockchain)    
+[1.2 Production blockchain](#12-production-blockchain)    
+[1.3 System requirements](#13-system-requirements)   
+[1.4 Information Security issues](#14-information-security-issues)   
+[1.5 API keys](#15-api-keys)   
+
+***[1.1 Generate API keys](#1-generate-api-keys)***   
 
 ***[2. Create a dedicated Data Stream](#2-create-a-dedicated-data-stream)***      
 
@@ -49,7 +56,30 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 
 ***[8. Settle accounts in real-time](#8-settle-accounts-in-real-time)***
 
-## 1. Generate API keys
+## 1. Introduction and overview
+
+TRADE-Chain is a permissioned multi-framework blockchain powered by Primechain APIs. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers, shippers and investors.
+
+### 1.1 Sandbox blockchain
+To access the TRADE-Chain sandbox, email us on info@primechain.in
+
+### 1.2 Production blockchain
+Nodes on the commpercial / production TRADE-Chain are available free to all Bankchain members and at an annual subscription fee for non-members. Email us on info@primechain.in for details.
+
+### 1.3 System requirements
+2 virtual machines / physical servers with the following details are required:
+* Ubuntu 16.04 machine with 32 GB RAM, 4 core processor, 100 GB SSD disk). The following ports are required to be open: 22. 15590 and 61172.   
+* For the TRADE-Chain API server: Ubuntu 16.04 machine with 32 GB RAM, 8 core processor, 25 GB SSD disk). The following ports are required to be open: 22 and 2512.
+
+### 1.4 Information Security issues
+* Symmetric and asymmetric cryptography ensures confidentiality of data.   
+* Hash functions ensure integrity of data.   
+* Multiple blockchain nodes ensure availability of data.   
+* Blockchain technology ensures provable immutability of data.   
+* Digital signatures ensure non-repudiation.   
+* [Blockchain Security Controls](http://www.primechaintech.com/bsc.php) provide the security controls and information security framework.
+
+### 1.5 API keys
 API keys authenticate access to the TRADE-Chain API service. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](https://camo.githubusercontent.com/c3e402907d4735fa944e79888ddc58209247e07e/687474703a2f2f7777772e7072696d65636861696e746563682e636f6d2f696d672f6170695f646f63756d656e746174696f6e2f6170695f6b65792e6a7067))
 
 Sample API key
