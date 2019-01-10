@@ -32,14 +32,14 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 ***[1. Introduction and overview](#1-introduction-and-overview)***   
 [1.1 Sandbox blockchain](#11-sandbox-blockchain)    
 [1.2 Production blockchain](#12-production-blockchain)    
-[1.3 System requirements](#13-system-requirements)   
+[1.3 System requirements for nodes](#13-system-requirements-for-nodes)   
 [1.4 Information Security issues](#14-information-security-issues)   
 [1.5 API keys for sandbox](#15-api-keys-for-sandbox)   
-[1.6 Default address for a node](#16-default-address-for-a-node)
+[1.6 Default address for a node](#16-default-address-for-a-node)   
 [1.7 Additional addresses](#17-additional-addresses)
 
 ***[2. Data Streams and permissions to write to them](#2-data-streams-and-permissions-to-write-to-them)***    
-[2.1 Create a data stream](#21-create-a-data-stream)   
+[2.1 Create a new data stream](#21-create-a-new-data-stream)   
 [2.2 Grant write permissions](#22-grant-write-permissions)   
 [2.3 Revoke write permissions](#23-revoke-write-permissions)   
 
