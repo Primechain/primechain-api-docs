@@ -49,8 +49,9 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [4.3 Publish a bank guarantee](#43-publish-a-bank-guarantee)   
 [4.4 Publish a letter of credit](#43-publish-a-letter-of-credit)   
 [4.5 Publish a bill of lading](#45-publish-a-bill-of-lading)
+[4.6 Publish GPS data](#46-publish-gps-data)
 
-***[[5. Decrypt, verify and retrieve data from the blockchain](#5-decrypt,-verify-and-retrieve-data-from-the-blockchain)***   
+***[5. Decrypt, verify and retrieve data from the blockchain](#5-decrypt,-verify-and-retrieve-data-from-the-blockchain)***   
 ***[6. Invoice discounting](#6-invoice-discounting)***   
 
 ***[7. Publish GPS information and data in real-time](#7-publish-gps-information-and-data-in-real-time)***
@@ -395,6 +396,40 @@ Sample input
 }
 ```
 
+### 4.6 Publish GPS data
+
+It is recommended to use National Marine Electronics Association (NMEA) formatted Global Positioning System (GPS) data
+
+Sample input
+```
+{
+  "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  "data": 
+    {
+      "NMEA_GPS_DATA": "$GPGGA,181908.00,3404.7041778,N,07044.3966270,W,4,13,1.00,495.144,M,29.200,M,0.10,0000*40",
+    }
+}
+```
+***Explanation:***
+1. All NMEA messages start with the $ character, and each data field is separated by a comma.
+2. `GP` represent that it is a GPS position (GL would denote GLONASS - Russia's version of GPS)
+3. `181908.00` is the time stamp: UTC time in hours, minutes and seconds.
+4. `3404.7041778` is the latitude in the DDMM.MMMMM format. Decimal places are variable.
+5. `N` denotes north latitude.
+6. `07044.3966270` is the longitude in the DDDMM.MMMMM format. Decimal places are variable.
+7. `W` denotes west longitude.
+8. `4` denotes the Quality Indicator: (`1` = Uncorrected coordinate, `2` = Differentially correct coordinate (e.g., WAAS, DGPS), `4` = RTK Fix coordinate (centimeter precision), `5` = RTK Float (decimeter precision)
+9. `13` denotes number of satellites used in the coordinate.
+10. `1.0` denotes the HDOP (horizontal dilution of precision).
+11. `495.144` denotes altitude of the antenna.
+12. `M` denotes units of altitude (eg. Meters or Feet)
+13. `29.200` denotes the geoidal separation (subtract this from the altitude of the antenna to arrive at the Height Above Ellipsoid (HAE).
+14. `M` denotes the units used by the geoidal separation.
+15. `1.0` denotes the age of the correction (if any).
+16. `0000` denotes the correction station ID (if any).
+17. `*40` denotes the checksum.
+(Source: https://www.gpsworld.com/what-exactly-is-gps-nmea-data/)
+
 ## 5. Decrypt, verify and retrieve data from the blockchain
 To retrieve data use `post /api/v1/get_data` and pass 4 parameters:
 1. the id of the transaction in which the encrypted data and tag were published to the data stream
@@ -443,10 +478,7 @@ Sample output
 ## 6. Invoice discounting
 
 
-## 7. Publish GPS information and data in real-time
-
-
-## 8. Settle accounts in real-time
+## 7. Settle accounts in real-time
 
 
 Have a query? Email us on info@primechain.in
