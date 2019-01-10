@@ -35,21 +35,22 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [1.3 System requirements](#13-system-requirements)   
 [1.4 Information Security issues](#14-information-security-issues)   
 [1.5 API keys for sandbox](#15-api-keys-for-sandbox)   
+[1.6 Default address for a node](#16-default-address-for-a-node)
+[1.7 Additional addresses](#17-additional-addresses)
 
-***[1.1 Generate API keys](#1-generate-api-keys)***   
-
-***[2. Create a dedicated Data Stream](#2-create-a-dedicated-data-stream)***      
-
-***[3. On-board users](#3-on-board-users)***
+***[2. Data Streams and permissions to write to them](#2-data-streams-and-permissions-to-write-to-them)***    
+[2.1 Create a data stream](#21-create-a-data-stream)   
+[2.2 Grant write permissions](#22-grant-write-permissions)   
+[2.3 Revoke write permissions](#23-revoke-write-permissions)   
 
 ***[4. Publish data to a Data Stream](#4-publish-data-to-a-data-stream)***   
-[4.1 Publish an invoice](#41-publish-an-invoice)   
-[4.2 Publish a bank guarantee](#42-publish-a-bank-guarantee)   
-[4.3 Publish a letter of credit](#43-publish-a-letter-of-credit)   
-[4.4 Publish a bill of lading](#44-publish-a-bill-of-lading)
+[4.1 Encrypt, sign and publish data](#41-encrypt-sign-and-publish-data)
+[4.2 Publish an invoice](#42-publish-an-invoice)   
+[4.3 Publish a bank guarantee](#43-publish-a-bank-guarantee)   
+[4.4 Publish a letter of credit](#43-publish-a-letter-of-credit)   
+[4.5 Publish a bill of lading](#45-publish-a-bill-of-lading)
 
-***[5. Retrieve data from the blockchain](#5-retrieve-data-from-the-blockchain)***   
-
+***[[5. Decrypt, verify and retrieve data from the blockchain](#5-decrypt,-verify-and-retrieve-data-from-the-blockchain)***   
 ***[6. Invoice discounting](#6-invoice-discounting)***   
 
 ***[7. Publish GPS information and data in real-time](#7-publish-gps-information-and-data-in-real-time)***
@@ -87,12 +88,26 @@ Sample API key
 k3wq1TdYcEGb7sqX&Es8-xVR$ocdw5ICLtIh5rT661UDaZoKmLV!12X01ce!GnEW
 ```
 
-#### 1.6 Default address for a node and its permissions
-When your node connects to TRADE-Chain, it is provided a default primechain address with relevant permissions connect, issue send, receive and permissions
+### 1.6 Default address for a node
+When a node connects to TRADE-Chain, it is provided a default primechain address with relevant permissions. 
 
-## 2. Create a dedicated Data Stream
+### 1.7 Additional addresses
+If required, additional addresses can be created on a node using `get /api/v1/create_entity`. The following are generated:
+1. a public key,
+2. a private key
+3. a blockchain address.
+The output will be the blockchain address of the newly created signer. The private key is automatically stored in your node. This will not be visible to other nodes. 
+```
+{
+"status": 200,
+"primechain_address": "1VCeqGYXLaqMtAFtxTNeTzfW8T714us2t3uwYM"
+}
+```
+
+## 2. Data Streams and permissions to write to them
 A data stream enables TRADE-Chain to be used as a general purpose append-only database, with TRADE-Chain providing timestamping, notarization and immutability. Storing all the data relating to a transaction, shipment or event in a dedicated data stream enables quick and efficient data retrieval and processing.
 
+### 2.1 Create a new data stream
 To create a new data stream use `post /api/v1/create_data_stream` and provide these 4 parameters:
 1. Your node's default primechain address - `primechain_address`
 2. The stream name - `stream_name`
@@ -117,32 +132,57 @@ Sample output
 }
 ```
 
-## 3. On-board users
+### 2.2 Grant write permissions
+To grant an entity write permission to a stream, use `post /api/v1/grant_write_permission_to_stream` and provide 3 parameters:
+1. The primechain addresss of the entity to be granted write permission - `primechain_address_stream_writer`
+2. The name of the relevant data stream - `stream_name`
+3. The primechain addresss of the creator of the data stream - `primechain_address_stream_creator`
 
-To on-board relevant exporters, importers, shippers etc. use `get /api/v1/create_entity_rsa`. The output will be:
-1. the primechain address, 
-2. primechain private key
-3. primechain public key, 
-4. RSA private key
-5. RSA public key
+***Note:*** This must be run on the node containing the private key of the stream creator.
 
+Sample input
+```
+{
+  "primechain_address_stream_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
+  "stream_name": "200_tons_xyz_Jan_2019",
+  "primechain_address_stream_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
+}
+```
 Sample output
 ```
 {
-  "status": 200,
-  "response": 
-     {
-      "primechain_address": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP",
-      "primechain_private_key": "VHpUJD5NkTrurFHEoQ79t55TUAgZYEFvygbZHSCJ3za6zSwtXbQqVsaV",
-      "primechain_public_key": "03fe0f7af92c260c0098dcf9818eb9b6998584d7cb68a776d7b9e63aa5ad16b53b",
-      "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCQPcJ5wYOPptDb LMnPDSjWlOdvlf8dQ6GOEQ9XDqk3iEiLl0kf9FaMG9Nzq12yVB5ZHpHWlDjyx45q d42ya+0d6AcyJlB/0z/vCLg0hFBA5A+EZBHXVnIVJzEoCOrQzpI3YMM35u6XsgYB nKir53M12IOUZ114DGSgkIiXqN6F7/6P6Zr2ZdaCTL95iXFiSKGcFlN9UTPYXghF kw1u1A0cv2ns6v/sfsCY10BjK8AXcuDaS5mg2vlFwuyUGjOQ4MXZwouHgKw5lIlE J46zxsDjpJHSrODkvqb/Y3GWuUx4evu3NoJ3mKq6DzHd9k5kPvHF2L9EFYrnP0nj KTjXqru7AgMBAAECggEAeCVJYVukNzrPS1EyRCoE80ASyuqZFoon/osNSQmoP95f 9w4r1dcTZB8lcXqzUAArSzZgaekKyocYhGxS9eRaHQgRPl+Vu/N9lKChtvTjWDnf BvrHtaOG4UHE+0D6PrViK4iI836DDI433I3eHVprp9VSPIIg5AcGpovdit4ZhFvS GwfFD2IQ61H/JgWei0n34tUEbRGYODhNaGPgTyCEZ1+rx1+HOS30K80TVChADuSw aNTDnYPzPpOsihHN/TllydtsX92Yavg3XzQZTbrRAQhblSRlCJHALJRJErcH1g3T PiwnvAcx9If4O4f3EwT/XslWSPY+T+eBZGaUtq0zUQKBgQDZLW3UoMAaUeIosM5Q /RGBYxNxu2qotNm3fKSMNTzB05DYDKYKyj1XtW448DVm9srFYJ67N/EK9yDKR59O 9aj+VPyAP7FWmyp8sJA8e+GjRIDvPeRoyr5pVBwK1Q0BYLmDI5MNiggBbFO+DBHu swylORd7c37WKdfJSSc6lWsy4wKBgQCqBpdxYcYqucLBemDeOJPRyRqiKCSUqzn3 85FtXoW3CzQ177rAp2uWFA8VCKHs1u7NLOuBayvo68lbbuebVgaffxpX0WSp6VnV 6tpPQCmDvisj5iIs7ETiNNm93ZvBWFek8xpEl26FbfgFAw1YCfEipjwfV6t6x9Do qzDJDxIzSQKBgQCUAGeWva3swdy0Cjmv66agXFqF6Uj4i7bLWn/wpN8w3/MXqRcG x2gie5wP5XMfJhRtijjiMW9tH5kTANhKQRPXryccZ0t9T+UWcGT7MxlD4I1VfQJJ f9FfilhJ8YMZa0dBXV77nRNzlNVE8IjP+OknN88O7FiFrqJFpDq9q9IQLQKBgDk/ 3PBlfqdWQxiIj2Nj44oIz/n30FFq0isGDVqpMBbxI9Rhcx15ggVXnbh0XqlzuZbG YEoEfxV/hx5NWpj4P2SnFISrUdzQYNphqL50mUXt23LMA4fiylLsfsCqhM52Y5R7 8sVTw/gTjiaJ341cU6BaHvZiu6+s5k/hjJy2gWdZAoGBAJMAcDfRnLDKMV5wiC4V ARxrXfmZdJhfoNRb9O4VOin+OkO+NQOdHi1ECA6mMMdAm1iHNDIep2nQlXLcp2K2 jzjD/lszxp5JHkoGWGEQi5l8FdHimgmRRg7GnNeui1cKJ9yAg+EgP4kflBOu/F66 vkIg4N6DI/lVIbvVbihIyITM -----END PRIVATE KEY-----",
-      "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkD3CecGDj6bQ2yzJzw0o 1pTnb5X/HUOhjhEPVw6pN4hIi5dJH/RWjBvTc6tdslQeWR6R1pQ48seOaneNsmvt HegHMiZQf9M/7wi4NIRQQOQPhGQR11ZyFScxKAjq0M6SN2DDN+bul7IGAZyoq+dz NdiDlGddeAxkoJCIl6jehe/+j+ma9mXWgky/eYlxYkihnBZTfVEz2F4IRZMNbtQN HL9p7Or/7H7AmNdAYyvAF3Lg2kuZoNr5RcLslBozkODF2cKLh4CsOZSJRCeOs8bA 46SR0qzg5L6m/2NxlrlMeHr7tzaCd5iqug8x3fZOZD7xxdi/RBWK5z9J4yk416q7 uwIDAQAB -----END PUBLIC KEY-----"
-    }
+"status": 200,
+"tx_id": "94179d61270f24acc208b8647e735cb54307c4ccbfece64ebae0e9539c37b2bf"
 }
 ```
+
+### 2.3 Revoke write permissions
+To revoke an entity's write permission to a stream, use `post /api/v1/revoke_write_permission_to_stream` and provide 3 parameters:
+1. The primechain addresss of the entity whose write permission is to be revoked - `primechain_address_stream_writer`
+2. The name of the relevant data stream - `stream_name`
+3. The primechain addresss of the creator of the data stream - `primechain_address_stream_creator`
+
+***Note:*** This must be run on the node containing the private key of the stream creator.
+
+Sample input
+```
+{
+  "primechain_address_stream_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
+  "stream_name": "200_tons_xyz_Jan_2019",
+  "primechain_address_stream_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
+}
+```
+Sample output
+```
+{
+
+}
+```
+
 ## 4. Publish data to a Data Stream
 
-To encrypt, sign anf publish data to a Data Stream, use `post /api/v1/publish_data` and pass 5 parameters: 
+### 4.1 Encrypt, sign and publish data
+To encrypt, sign and publish data to a Data Stream, use `post /api/v1/publish_data` and pass 5 parameters: 
 1. the private key of the signer - `primechain_private_key`
 2. the primechain address of the signer - `primechain_address`
 3. The keys to enable quick searching of the data - `keys`
@@ -192,7 +232,7 @@ Sample output
     }
 }
 ```
-### 4.1 Publish an invoice
+### 4.2 Publish an invoice
 Sample input
 ```
   "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
@@ -235,7 +275,7 @@ Sample input
 }
 ```
 
-### 4.2 Publish a bank guarantee
+### 4.3 Publish a bank guarantee
 Sample input
 ```
 {
@@ -262,7 +302,7 @@ Sample input
     }
 }
 ```
-### 4.3 Publish a letter of credit
+### 4.4 Publish a letter of credit
 Sample input
 ```
 {
@@ -305,7 +345,7 @@ Sample input
 }
 ```
 
-### 4.4 Publish a bill of lading
+### 4.5 Publish a bill of lading
 Sample input
 ```
 {
@@ -355,7 +395,7 @@ Sample input
 }
 ```
 
-## 5. Retrieve data from the blockchain
+## 5. Decrypt, verify and retrieve data from the blockchain
 To retrieve data use `post /api/v1/get_data` and pass 4 parameters:
 1. the id of the transaction in which the encrypted data and tag were published to the data stream
 2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the data stream
