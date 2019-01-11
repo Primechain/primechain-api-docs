@@ -837,7 +837,9 @@ Sample output
 ```
 
 ### 6.7 Rejection of bids
-A supplier (payee) can reject bids made on invoices in which she is the payee. To reject a bid, use `post /api/v1/reject_bid` and pass the transaction id of the bid as a parameter:
+A supplier (payee) can reject bids made on invoices in which she is the payee. To reject a bid, use `post /api/v1/reject_bid` and pass the following parameters:   
+1. transaction id of the bid   
+2. primechain address of the bidder   
 
 Sample input
 ```
@@ -855,7 +857,9 @@ Sample output
 ```
 
 ### 6.8 Acceptance of bids
-A supplier (payee) can accept bids made on invoices in which she is the payee. If she accepts the bid, the invoice is transferred to the relevant investor and the bid amount of the tokens is transferred to her. She can redeem the tokens from the bank. To accept a bid, use `post /api/v1/accept_bid` and pass the transaction id of the bid as a parameter:
+A supplier (payee) can accept bids made on invoices in which she is the payee. If she accepts the bid, the invoice is transferred to the relevant investor and the bid amount of the tokens is transferred to her. She can redeem the tokens from the bank. To accept a bid, use `post /api/v1/accept_bid` and pass the following parameters:   
+1. transaction id of the bid   
+2. primechain address of the payee   
 
 Sample input
 ```
