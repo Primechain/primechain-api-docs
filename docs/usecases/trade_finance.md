@@ -80,8 +80,8 @@ Nodes on the commercial / production TRADE-Chain are available free to all Bankc
 
 ### 1.3 System requirements for nodes
 2 virtual machines / physical servers with the following details are required:
-* Ubuntu 16.04 machine with 32 GB RAM, 4 core processor, 100 GB SSD disk). The following ports are required to be open: 22. 15590 and 61172.   
-* Ubuntu 16.04 machine with 32 GB RAM, 8 core processor, 25 GB SSD disk). The following ports are required to be open: 22 and 2512.
+* Ubuntu 16.04 machine with 32 GB RAM, 4 core processor, 100 GB SSD disk with ports 22, 15590 and 61172 open.   
+* Ubuntu 16.04 machine with 32 GB RAM, 8 core processor, 25 GB SSD disk with ports 22 and 2512 open.
 
 ### 1.4 Information Security issues
 * Symmetric and asymmetric cryptography ensures ***confidentiality*** of data.   
@@ -556,14 +556,7 @@ Sample output
 ```
 
 ### 6.3 Viewing invoices
-Participants, especially investors, view invoices. This list of invoices can be filtered based on payer, payee, maturity date and value.
-
-To view invoices, use `post /api/v1/view_invoice` and passes these parameters:
-1. `invoice_reference_number` - the reference number of the invoice.
-2. `token` - name of the fiat currency token.
-3. `token_amount` - quantity of the fiat currency token.
-
-
+Participants, especially investors, view invoices. This list of invoices can be filtered based on payer, payee, maturity date and value. To view all the invoices, use `get /api/v1/view_all_invoices`.
 
 ### 6.4 Bidding by investors
 Investors place bids on invoices. To place a bid on an invoice, the investor must hold sufficient quantity of fiat currency  tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Investors can purchase these tokens from their banks. Once an investor places a bid, the relevant amount of tokens are ‘locked’ and 'un-spendable' till either:
@@ -578,11 +571,14 @@ To create a bid, the investor uses `create_bid` and passes these parameters:
 Sample input
 ```
 {
-  "invoice_reference_number": "aaa",
+  "from_address": "1b8yZEFmK2HSTKUm1rgKUDABPAq8CGRJYQWW2k",
+  "to_address": "1HhDFkG6erh3cusjY1M8tgEQr3dhTM8Dh71Pmr",
+  "invoice_reference_number": "4607-266-27124",
   "token": "Global-Bank-USD",
-  "token_amount": "10"
+  "token_amount": 100
 }
 ```
+
 The following gets published to the `OFFER_DETAIL_STREAM` data-stream:
 1. The primechain address of the bidder
 2. Name of the invoice
@@ -591,10 +587,12 @@ The following gets published to the `OFFER_DETAIL_STREAM` data-stream:
 5. A hexadecimal representation of the bid
 
 The output is the id of the transaction in which the bid information is stored in the blockchain.
+
+Sample output
 ```
 {
   "status": 200,
-  "tx_id": "aaa"
+  "tx_id": "950e37cc585dc6437e95ef9d37956513daa9b83f0438fbf49a82f6c2e861e907"
 }
 ```
 
@@ -604,11 +602,15 @@ To cancel a bid, the investor uses `post /api/v1/cancel_bid` and passes 1 parame
 Sample input
 ```
 {
-  "tx_id": "aaa"
+  "offer_tx_id": "9acbe1619a749f0f690e65ae4e7836c56a9e923705119563c1351b7601ec3998"
 }
 ```
 Sample output
 ```
+{
+"status": 200,
+"response": true
+}
 ```
 
 ### 6.6 Viewing bids
@@ -616,22 +618,49 @@ All participants can view all bids placed on all invoices using `get /api/v1/vie
 
 Sample output
 ```
-aa
+{
+"status": 200,
+"all_bid_details": [
+  {
+"from_address": "1b8yZEFmK2HSTKUm1rgKUDABPAq8CGRJYQWW2k",
+"to_address": "1HhDFkG6erh3cusjY1M8tgEQr3dhTM8Dh71Pmr",
+"invoice_reference_number": "4607-266-27124",
+"token": "lite_coin_8763737",
+"token_amount": 10,
+"txid": "110f4b14f225789b22db9676470898ca6d32e6f8af0d5ccd30a4ebfa6d6397af",
+"vout": 0,
+"offer_blob": "0100000001af97636dfaeba430cd5c0daff8e6326dca9808477696db229b7825f2144b0f11000000006a4730440220736c0d78bcb3e27a27891485867c32422b4533f88005a76d33e95d8f3584afb502201e815010859e02ab055b7405c41b80903683c21fe495f673ab2d0d73216a4ed6832102ae5cc5f1f9e1557bf3323dae43afdad30a0cbd8c3738ca4a6d0b6127484c063affffffff0100000000000000003776a914fc94b1fcb15f639eef422098fdd415167740831788ac1c73706b712d3aad14eaa2d1925b57b995716a69f401000000000000007500000000"
+}
+],
+}
 ```
 To view bid details for a specific invoice, use `post /api/v1/view_bid` and pass the invoice reference number as a parameter.
 
 Sample input
 ```
 {
-  "invoice_reference_number": "aaa"
+  "invoice_reference_number": "4607-266-27124"
 }
 ```
 Sample output
 ```
-aa
+{
+"status": 200,
+"response": [
+  {
+"from_address": "1b8yZEFmK2HSTKUm1rgKUDABPAq8CGRJYQWW2k",
+"to_address": "1HhDFkG6erh3cusjY1M8tgEQr3dhTM8Dh71Pmr",
+"invoice_reference_number": "4607-266-27124",
+"token": "lite_coin_8763737",
+"token_amount": 100,
+"txid": "602dceb782166d222c6fed8470feaa62fd3b66b0bfcef2a91f729684b46222a6",
+"vout": 0,
+"offer_blob": "0100000001a62262b48496721fa9f2cebfb0663bfd62aafe7084ed6f2c226d1682b7ce2d60000000006b483045022100ee606fc93d4d04298d04551b4c60893a7c0bab2cd92ad815b404d8210d6bb9ce02205ccbd2ec2db9a1b4a2b90edae48a5ce868b1d91bcc8e9d08d37680a37aaaa827832102ae5cc5f1f9e1557bf3323dae43afdad30a0cbd8c3738ca4a6d0b6127484c063affffffff0100000000000000003776a914fc94b1fcb15f639eef422098fdd415167740831788ac1c73706b712d3aad14eaa2d1925b57b995716a69f401000000000000007500000000"
+}
+],
+}
+
 ```
-
-
 
 ### 6.7 Rejection of bids
 A supplier (payee) can reject bids made on invoices in which she is the payee. To reject a bid, use `post /api/v1/reject_bid` and pass the transaction id of the bid as a parameter:
@@ -639,12 +668,16 @@ A supplier (payee) can reject bids made on invoices in which she is the payee. T
 Sample input
 ```
 {
-  "tx_id": "aaa"
+  "offer_tx_id": "9acbe1619a749f0f690e65ae4e7836c56a9e923705119563c1351b7601ec3998",
+  "primechain_address": "1HhDFkG6erh3cusjY1M8tgEQr3dhTM8Dh71Pmr"
 }
 ```
 Sample output
 ```
-aaa
+{
+"status": 200,
+"response": true
+}
 ```
 
 ### 6.8 Acceptance of bids
@@ -653,12 +686,16 @@ A supplier (payee) can accept bids made on invoices in which she is the payee. I
 Sample input
 ```
 {
-  "tx_id": "aaa"
+  "offer_tx_id": "ce1a7475c8419ad3a30ef9db98d7219aa72221fe9fe2cae8f652a690efda80fa",
+  "primechain_address": "1HhDFkG6erh3cusjY1M8tgEQr3dhTM8Dh71Pmr"
 }
 ```
 Sample output
 ```
-aaa
+{
+"status": 200,
+"response": "1b1cd89ebd0b813780ffc0d39361ab4711a92e97ad6073304cb4909083268f71"
+}
 ```
 
 ### 6.9 Buyback of the invoice upon maturity of invoice
@@ -715,6 +752,13 @@ Sample input
   "invoice_reference_number": "aaa"
 }
 ```
+Sample output
+```
+{
+  "status": 200,
+  "response": "93bf243e60a029430ccca38f2e2165b16e5ee9e8fa516ea2552144de089f0a4b"
+}
 
+```
 ---
 Have a query? Email us on info@primechain.in
