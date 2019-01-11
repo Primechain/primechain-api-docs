@@ -522,7 +522,7 @@ New invoices can be published to the blockchain by large corporates (payers) usi
 2. `invoice_payee` - the primechain address of the supplier who is the payee of the invoice.    
 3. `invoice_name` - the name of the invoice. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces.
 4. `invoice_details` - the details of the invoice. This contains 3 parameters, namely 
-    * `invoice_amount` - the amount of the invoice.
+    * `invoice_amount` - the maturity amount of the invoice.
     * `invoice_maturity` - the maturity date of the invoice. 
     * `invoice_description` - optional additional information about the invoice.
 
@@ -546,28 +546,45 @@ Sample input
 
 ***Output is:***
 * the id of the transaction in which the invoice was published to the blockchain - `tx_id`.
-* the reference number of the asset - `invoice_reference_number`
+* the unique reference number of the asset - `invoice_reference_number`
 
 Sample output
 ```
 {
-  "status": 200,
-  "tx_id": "aaa",
-  "invoice_reference_number": "aaa",
+"status": 200,
+"response": {
+"tx_id": "6b8842e04d649d33a2f6cd4e632d1c61e5989dd46532a8a8eee566ee58656fbc",
+"invoice_reference_number": "365-515-34923",
+"invoice_details": {
+"details": {
+"invoice_amount": "USD 856,000",
+"invoice_maturity": "10-April-2019",
+"invoice_description": "This is optional additional information about the invoice."
+}
+}
+}
 }
 ```
 
 ### 6.3 Viewing invoices
+Participants, especially investors, view invoices. This list of invoices can be filtered based on payer, payee, maturity date and value.
+
+To view invoices, use `post /api/v1/view_invoice` and passes these parameters:
+1. `invoice_reference_number` - the reference number of the invoice.
+2. `token` - name of the fiat currency token.
+3. `token_amount` - quantity of the fiat currency token.
 
 
 
 ### 6.4 Bidding by investors
-Investors place bids on invoices. To place a bid on an invoice, the investor must hold sufficient quantity of fiat currency  tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Investors can purchase these tokens from their banks. Once an investor places a bid, the relevant amount of tokens are ‘locked’ and 'un-spendable' till either (1) the supplier (payee) rejects the bid or (2) the investor cancels his bid.
+Investors place bids on invoices. To place a bid on an invoice, the investor must hold sufficient quantity of fiat currency  tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Investors can purchase these tokens from their banks. Once an investor places a bid, the relevant amount of tokens are ‘locked’ and 'un-spendable' till either:
+* the supplier (payee) rejects the bid or    
+* the investor cancels his bid   
 
 To create a bid, the investor uses `create_bid` and passes these parameters:
 1. `invoice_reference_number` - the reference number of the invoice.
 2. `token` - name of the fiat currency token.
-3. `token_amount` - quantity of the fiat currency token.
+3. `token_amount` - quantity of the fiat currency token being offered in return for the invoice
 
 Sample input
 ```
@@ -577,7 +594,7 @@ Sample input
   "token_amount": "10"
 }
 ```
-The following gets published to the `OFFER_DETAIL_STREAM`:
+The following gets published to the `OFFER_DETAIL_STREAM` data-stream:
 1. The primechain address of the bidder
 2. Name of the invoice
 3. Name of the fiat currency token 
@@ -592,6 +609,7 @@ The output is the id of the transaction in which the bid information is stored i
 }
 ```
 
+### 6.5 Cancelling of bids by investors
 To cancel a bid, the investor uses `post /api/v1/cancel_bid` and passes 1 parameter - the id of the transaction in which the bid information is stored in the blockchain:
 
 Sample input
@@ -600,11 +618,9 @@ Sample input
   "tx_id": "aaa"
 }
 ```
-
-and cancelling of bids 
-
-### 6.5 Cancelling of bids by investors
-
+Sample output
+```
+```
 
 ### 6.6 Viewing bids
 All participants can view all bids placed on all invoices using `get /api/v1/view_all_bids`. This creates a highly transparent platform and enables price discovery.
@@ -626,24 +642,10 @@ Sample output
 aa
 ```
 
-A supplier (payee) can accept or reject bids made on invoices in which she is the payee. If she accepts the bid, the invoice is transferred to the relevant investor and the bid amount of the tokens is transferred to her. She can redeem the tokens from the bank.
+
 
 ### 6.7 Rejection of bids
-
-
-To accept a bid, use `post /api/v1/accept_bid` and pass the transaction id of the bid as a parameter:
-
-Sample input
-```
-{
-  "tx_id": "aaa"
-}
-```
-Sample output
-```
-aaa
-```
-To reject a bid, use `post /api/v1/reject_bid` and pass the transaction id of the bid as a parameter:
+A supplier (payee) can reject bids made on invoices in which she is the payee. To reject a bid, use `post /api/v1/reject_bid` and pass the transaction id of the bid as a parameter:
 
 Sample input
 ```
@@ -657,7 +659,18 @@ aaa
 ```
 
 ### 6.8 Acceptance of bids
+A supplier (payee) can accept bids made on invoices in which she is the payee. If she accepts the bid, the invoice is transferred to the relevant investor and the bid amount of the tokens is transferred to her. She can redeem the tokens from the bank. To accept a bid, use `post /api/v1/accept_bid` and pass the transaction id of the bid as a parameter:
 
+Sample input
+```
+{
+  "tx_id": "aaa"
+}
+```
+Sample output
+```
+aaa
+```
 
 ### 6.9 Buyback of the invoice upon maturity of invoice
 Upon maturity of the invoice, or any time before that, the payer of an invoice places a bid to purchase the invoice from the investor holding the invoice. To place this bid, the payer must hold sufficient quantity of fiat currency tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Payers can purchase these tokens from their banks. 
@@ -713,7 +726,6 @@ Sample input
   "invoice_reference_number": "aaa"
 }
 ```
-The corporate (payer) can redeem the tokens with the relevant bank.
 
 ---
 Have a query? Email us on info@primechain.in
