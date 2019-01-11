@@ -7,8 +7,6 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 
 ![Letter of credit](http://www.primechaintech.com/img/api_documentation/trade-finance.jpg)
 
-
-
 ### Table of contents  
 
 ***[1. Introduction and overview](#1-introduction-and-overview)***   
@@ -50,12 +48,12 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 TRADE-Chain is a permissioned multi-framework blockchain powered by Primechain APIs. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers, shippers and investors.
 
 ***The pain points of today’s trade finance processes are:***
-1. Delays and errors due to manual document creation and distribution
-2. Invoice factoring risk
-3. Delayed timeline
-4. Manual AML review
-5. Fraud risk due to multiple disconnected platforms
-6. Fraud risk due to duplicate bills of lading
+1. Delays and errors due to manual document creation and distribution.
+2. Invoice factoring risk.
+3. Delayed timeline.
+4. Manual AML review.
+5. Fraud risk due to multiple disconnected platforms.
+6. Fraud risk due to duplicate bills of lading.
 
 ***Core benefits of TRADE-Chain:***
 1. Real-time review and approval of documents.
@@ -66,14 +64,14 @@ TRADE-Chain is a permissioned multi-framework blockchain powered by Primechain A
 6. Real-time, automated settlements without the need for reconciliation.
 7. Real-time view to regulators leading to complete regulatory transparency.
 8. Reducing the letter of credit issue process from several days to a few hours.
-9. Reducing the time of delivery for trade documents from several days to a few hours.
+9. Reducing the time of delivery for trade documents from several days to a few hours.   
 10.Increased transparency by sharing transaction details with all parties.
 
 ### 1.1 Sandbox blockchain
 To access the TRADE-Chain sandbox, email us on info@primechain.in
 
 ### 1.2 Production blockchain
-Nodes on the commpercial / production TRADE-Chain are available free to all Bankchain members and at an annual subscription fee for non-members. Email us on info@primechain.in for details.
+Nodes on the commercial / production TRADE-Chain are available free to all Bankchain members and at an annual subscription fee for non-members. Email us on info@primechain.in for details.
 
 ### 1.3 System requirements for nodes
 2 virtual machines / physical servers with the following details are required:
@@ -101,10 +99,11 @@ When a node connects to TRADE-Chain, it is provided a default primechain address
 
 ### 1.7 Additional addresses
 If required, additional addresses can be created on a node using `get /api/v1/create_entity`. The following are generated:
-1. a public key,
-2. a private key
-3. a blockchain address.
-The output will be the blockchain address of the newly created signer. The private key is automatically stored in your node. This will not be visible to other nodes. This address will have permissions to send and receive assets e.g. invoices, fiat currency backed tokens, etc.
+1. public key
+2. private key
+3. primechain address
+
+The output will be the primechain address of the newly created signer. The private key is automatically stored in your node. This will not be visible to other nodes. This address will have permissions to send and receive assets e.g. invoices, fiat currency backed tokens, etc.
 
 Sample output
 ```
@@ -119,10 +118,10 @@ A data stream enables TRADE-Chain to be used as a general purpose append-only da
 
 ### 2.1 Create a new data stream
 To create a new data stream use `post /api/v1/create_data_stream` and provide these 4 parameters:
-1. Your node's default primechain address - `primechain_address`
-2. The stream name - `stream_name`
-3. A short description of the data stream - `details`
-4. Whether the stream is open or not - `open`. If open is set to true, write permissions need not be explicitly provided. All addresses can write to the stream. If open is set to false, write permissions need to be explicitly provided. It is recommended to keep the stream as closed and to provide write permissions on an address basis. 
+1. `primechain_address` - your node's default primechain address
+2. `stream_name` - the stream name
+3. `details` - a short description of the data stream
+4. `open`: `true` or `false` - whether the stream is open or not. If open is set to true, write permissions need not be explicitly provided. All addresses can write to the stream. If open is set to false, write permissions need to be explicitly provided. It is recommended to keep the stream as closed and to provide write permissions on an address basis. 
 
 Sample input
 ```
@@ -137,8 +136,8 @@ The output is the transaction id of the transaction creating the stream - `tx_id
 Sample output
 ```
 {
-"status": 200,
-"tx_id": "d84f84849431d5a5c5565530021d4c8bc37bf7180c58a116bd42295f90b434e2"
+ "status": 200,
+ "tx_id": "d84f84849431d5a5c5565530021d4c8bc37bf7180c58a116bd42295f90b434e2"
 }
 ```
 
