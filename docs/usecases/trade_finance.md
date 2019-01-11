@@ -168,7 +168,7 @@ Sample output
 
 ### 2.3 Revoke write permissions
 To revoke an entity's write permission to a stream, use `post /api/v1/revoke_write_permission_to_stream` and provide 3 parameters:
-1. `primechain_address_stream_writer` - the primechain address of the entity whose write permission is to be revoked - 
+1. `primechain_address_stream_writer` - the primechain address of the entity whose write permission is to be revoked.
 2. `stream_name` - the name of the relevant data stream.
 3. `primechain_address_stream_creator` - the primechain address of the creator of the data stream.
 
@@ -464,9 +464,9 @@ Sample input
 4. The digital signature is verified.
 
 ***The following is the output:***
-1. the unencrypted data - `data`
-2. the primechain address of the signer - `primechain_address`
-3. the verification status of the signature - `signature_status`
+1. `data` - the unencrypted data.   
+2. `primechain_address` - the primechain address of the signer.   
+3. `signature_status` - the verification status of the signature.   
 
 Sample output
 ```
@@ -489,7 +489,11 @@ Sample output
 
 Invoice discounting enables suppliers to sell their invoices at a discount to investors. This enables suppliers to get faster access to money they are owed and enables buyers to get more time to pay. Instead of relying on the creditworthiness of suppliers (usually smaller businesses), the investors deal with buyers (usually large businesses). This can lower financing costs, optimize working capital and improve business efficiency.
 
-Invoice discounting is also referred to as supply chain finance and factoring. The process involves 4 parties: banks, large corporates (payers), supplier (payees) and investors.
+Invoice discounting is also referred to as supply chain finance and factoring. The process involves 4 parties: 
+* banks   
+* large corporates (payers)    
+* supplier (payees)       
+* investors   
 
 Benefits of using the blockchain for invoice discounting include automated reconciliation and a provably immutable and transparent process.
 
@@ -538,9 +542,9 @@ Sample output
 Investors place bids on invoices. To place a bid on an invoice, the investor must hold sufficient quantity of fiat currency  tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Investors can purchase these tokens from their banks. Once an investor places a bid, the relevant amount of tokens are ‘locked’ and 'un-spendable' till either (1) the supplier (payee) rejects the bid or (2) the investor cancels his bid.
 
 To create a bid, the investor uses `create_bid` and passes these parameters:
-1. The reference number of the invoice - `invoice_reference_number`
-2. Name of the fiat currency token - `token`
-3. Quantity of the fiat currency token - `token_amount`
+1. `invoice_reference_number` - the reference number of the invoice.
+2. `token` - name of the fiat currency token.
+3. `token_amount` - quantity of the fiat currency token.
 
 Sample input
 ```
@@ -596,7 +600,10 @@ aa
 
 A supplier (payee) can accept or reject bids made on invoices in which she is the payee. If she accepts the bid, the invoice is transferred to the relevant investor and the bid amount of the tokens is transferred to her. She can redeem the tokens from the bank.
 
-To reject a bid, use `post /api/v1/reject_bid` and pass the transaction id of the bid as a parameter:
+### 6.4 Acceptance and rejection of bids
+
+
+To accept a bid, use `post /api/v1/accept_bid` and pass the transaction id of the bid as a parameter:
 
 Sample input
 ```
@@ -608,11 +615,7 @@ Sample output
 ```
 aaa
 ```
-
-### 6.4 Acceptance and rejection of bids
-
-
-To accept a bid, use `post /api/v1/accept_bid` and pass the transaction id of the bid as a parameter:
+To reject a bid, use `post /api/v1/reject_bid` and pass the transaction id of the bid as a parameter:
 
 Sample input
 ```
