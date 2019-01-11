@@ -628,9 +628,9 @@ aaa
 Upon maturity of the invoice, or any time before that, the payer of an invoice places a bid to purchase the invoice from the investor holding the invoice. To place this bid, the payer must hold sufficient quantity of fiat currency tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Payers can purchase these tokens from their banks. Once the payer places a bid, the relevant amount of tokens are ‘locked’ and 'un-spendable' till either (1) the investor rejects the bid or (2) the payer cancels the bid.
 
 To create a bid, the payer uses `create_bid` and passes these parameters:
-1. The reference number of the invoice - `invoice_reference_number`
-2. Name of the fiat currency token - `token`
-3. Quantity of the fiat currency token - `token_amount`
+1. `invoice_reference_number` - The reference number of the invoice.
+2. `token` - Name of the fiat currency token.
+3. `token_amount` - Quantity of the fiat currency token.
 
 Sample input
 ```
