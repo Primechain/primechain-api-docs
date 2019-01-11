@@ -80,11 +80,11 @@ Nodes on the commercial / production TRADE-Chain are available free to all Bankc
 * Ubuntu 16.04 machine with 32 GB RAM, 8 core processor, 25 GB SSD disk). The following ports are required to be open: 22 and 2512.
 
 ### 1.4 Information Security issues
-* Symmetric and asymmetric cryptography ensures confidentiality of data.   
-* Hash functions ensure integrity of data.   
-* Multiple blockchain nodes ensure availability of data.   
-* Blockchain technology ensures provable immutability of data.   
-* Digital signatures ensure non-repudiation.   
+* Symmetric and asymmetric cryptography ensures ***confidentiality*** of data.   
+* Hash functions ensure ***integrity*** of data.   
+* Multiple blockchain nodes ensure ***availability*** of data.   
+* Blockchain technology ensures provable ***immutability*** of data.   
+* Digital signatures ensure ***non-repudiation***.   
 * [Blockchain Security Controls](http://www.primechaintech.com/bsc.php) provide the security controls and information security framework.
 
 ### 1.5 API keys for sandbox
