@@ -35,7 +35,7 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 
 ***[6. Invoice discounting](#6-invoice-discounting)***   
 [6.1 Publish a new invoice](#61-publish-a-new-invoice)   
-[6.2 Bidding by investors](#62-bidding-by-investors) 
+[6.2 Bidding by investors](#62-bidding-by-investors)    
 [6.3 Viewing bids](#63-viewing-bids)  
 [6.4 Acceptance and rejection of bids](#64-acceptance-and-rejection-of-bids)   
 [6.5 Maturity of invoice](#65-maturity-of-invoice)   
