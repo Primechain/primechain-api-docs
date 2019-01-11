@@ -879,45 +879,8 @@ Sample output
 ### 6.9 Buyback of the invoice upon maturity of invoice
 Upon maturity of the invoice, or any time before that, the payer of an invoice places a bid to purchase the invoice from the investor holding the invoice. To place this bid, the payer must hold sufficient quantity of fiat currency tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Payers can purchase these tokens from their banks. 
 
-To create a bid, the payer uses `post /api/v1/create_bid` and passes these parameters:
-1. `invoice_reference_number` - The reference number of the invoice.
-2. `token` - Name of the fiat currency token.
-3. `token_amount` - Quantity of the fiat currency token.
+To create a bid, use `post /api/v1/create_bid` and to accept the bid, use `post /api/v1/accept_bid` as explained in the sections above.
 
-Sample input
-```
-{
-  "invoice_reference_number": "aaa",
-  "token": "Global-Bank-USD",
-  "token_amount": "10"
-}
-```
-The following gets published to the `OFFER_DETAIL_STREAM`:
-1. The primechain address of the bidder
-2. Name of the invoice
-3. Name of the fiat currency token 
-4. Quantity of the fiat currency token offered for the invoice
-5. A hexadecimal representation of the bid
-
-The output is the id of the transaction in which the bid information is stored in the blockchain.
-```
-{
-  "status": 200,
-  "tx_id": "aaa"
-}
-```
-To accept the bid, the investor uses `post /api/v1/accept_bid` and passes the transaction id of the bid as a parameter:
-
-Sample input
-```
-{
-  "tx_id": "aaa"
-}
-```
-Sample output
-```
-aaa
-```
 The invoice gets transferred to the payer and the investor receives the bid amount of the tokens. The investor can redeem the tokens from the bank.
 
 
