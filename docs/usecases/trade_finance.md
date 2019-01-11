@@ -879,7 +879,7 @@ Sample output
 ### 6.9 Buyback of the invoice upon maturity of invoice
 Upon maturity of the invoice, or any time before that, the payer of an invoice places a bid to purchase the invoice from the investor holding the invoice. To place this bid, the payer must hold sufficient quantity of fiat currency tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Payers can purchase these tokens from their banks. 
 
-To create a bid, the payer uses `create_bid` and passes these parameters:
+To create a bid, the payer uses `post /api/v1/create_bid` and passes these parameters:
 1. `invoice_reference_number` - The reference number of the invoice.
 2. `token` - Name of the fiat currency token.
 3. `token_amount` - Quantity of the fiat currency token.
