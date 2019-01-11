@@ -108,8 +108,8 @@ The output will be the primechain address of the newly created signer. The priva
 Sample output
 ```
 {
-"status": 200,
-"primechain_address": "1VCeqGYXLaqMtAFtxTNeTzfW8T714us2t3uwYM"
+  "status": 200,
+  "primechain_address": "1VCeqGYXLaqMtAFtxTNeTzfW8T714us2t3uwYM"
 }
 ```
 
@@ -119,7 +119,7 @@ A data stream enables TRADE-Chain to be used as a general purpose append-only da
 ### 2.1 Create a new data stream
 To create a new data stream use `post /api/v1/create_data_stream` and provide these 4 parameters:
 1. `primechain_address` - your node's default primechain address
-2. `stream_name` - the stream name
+2. `stream_name` - the stream name. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces.
 3. `details` - a short description of the data stream
 4. `open`: `true` or `false` - whether the stream is open or not. If open is set to true, write permissions need not be explicitly provided. All addresses can write to the stream. If open is set to false, write permissions need to be explicitly provided. It is recommended to keep the stream as closed and to provide write permissions on an address basis. 
 
@@ -143,9 +143,9 @@ Sample output
 
 ### 2.2 Grant write permissions
 To grant an entity write permission to a stream, use `post /api/v1/grant_write_permission_to_stream` and provide 3 parameters:
-1. The primechain addresss of the entity to be granted write permission - `primechain_address_stream_writer`
-2. The name of the relevant data stream - `stream_name`
-3. The primechain addresss of the creator of the data stream - `primechain_address_stream_creator`
+1. `primechain_address_stream_writer` - the primechain address of the entity to be granted write permission.
+2. `stream_name` - the name of the relevant data stream.
+3. `primechain_address_stream_creator` - the primechain address of the creator of the data stream.
 
 ***Note:*** This must be run on the node containing the private key of the stream creator.
 
@@ -167,9 +167,9 @@ Sample output
 
 ### 2.3 Revoke write permissions
 To revoke an entity's write permission to a stream, use `post /api/v1/revoke_write_permission_to_stream` and provide 3 parameters:
-1. The primechain addresss of the entity whose write permission is to be revoked - `primechain_address_stream_writer`
-2. The name of the relevant data stream - `stream_name`
-3. The primechain addresss of the creator of the data stream - `primechain_address_stream_creator`
+1. `primechain_address_stream_writer` - the primechain address of the entity whose write permission is to be revoked - 
+2. `stream_name` - the name of the relevant data stream.
+3. `primechain_address_stream_creator` - the primechain address of the creator of the data stream.
 
 ***Note:*** This must be run on the node containing the private key of the stream creator.
 
@@ -192,11 +192,11 @@ Sample output
 
 ### 4.1 Encrypt, sign and publish data
 To encrypt, sign and publish data to a Data Stream, use `post /api/v1/publish_data` and pass 5 parameters: 
-1. the private key of the signer - `primechain_private_key`
-2. the primechain address of the signer - `primechain_address`
-3. The keys to enable quick searching of the data - `keys`
-4. the data - `data`
-5. the name of the data stream - `stream_name`
+1. `primechain_private_key` - the private key of the signer.
+2. `primechain_address` - the primechain address of the signer.
+3. `keys` - the keys to enable quick searching of the data.
+4. `data` - the data. 
+5. `stream_name` - the name of the data stream.
 
 Sample input
 ```
@@ -216,15 +216,16 @@ Sample input
 1. The SHA-512 hash of the data is computed.
 2. The hash is signed using the provided private key (using ECDSA).
 3. The digital signature, hash and the primechain address of the signer are stored in the data stream.
-4. The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: the encrypted version of the data, the AES password, the Initialization Vector (IV) and the Authentication Tag (tag).
+4. The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: the encrypted version of the data, the AES password, the Initialisation Vector (IV) and the Authentication Tag (tag).
 5. The encrypted data and the tag are published to the data stream.
 
 ***The following is the output:***
-1. the id of the transaction in which the encrypted data and tag were published to the data stream.
-2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the the data stream.
-3. the digital signature
-4. The AES password
-5. The Initialization Vector (IV)
+1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the data stream.
+2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the the data stream.
+3. `signature` - the digital signature
+4. `aes_password` - the AES password
+5. `aes_iv` - the Initialization Vector (IV)
+6. `stream_name` - the data-stream name
 
 Sample output
 ```
@@ -390,7 +391,6 @@ Sample input
                "ITEM_CLASS": "Enter either the five-digit class (per the Uniform Freight Classification or the National Motor Freight Classification) or a two-digit class rate (a percentage of the first class 100 rate) per line item. This information may be determined by contacting the carrier."
             },
         }
-      
       "WITHOUT_RECOURSE": "For prepaid shipments, leave blank. Otherwise, add - THE CARRIER SHALL NOT MAKE DELIVERY OF THE SHIPMENT WITHOUT PAYMENT OF FREIGHT AND ALL OTHERLAWFUL CHARGES.",
       "PREPAID_SHIPMENT": "Enter “Prepaid” if shipment is to be paid for by the shipper. If this field is left blank, the carrier will seek to collect the freight charges from the consignee ",
       "PREPAYMENTS_RECEIVED": "Carrier enters any payments received in advance from the shipper for the shipment.",
@@ -439,12 +439,12 @@ Sample input
 (Source: https://www.gpsworld.com/what-exactly-is-gps-nmea-data/)
 
 ## 5. Decrypt, verify and retrieve data from the blockchain
-To retrieve data use `post /api/v1/get_data` and pass 4 parameters:
-1. the id of the transaction in which the encrypted data and tag were published to the data stream
-2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the data stream
-3. the AES password
-4. the Initialization Vector (IV)
-5. the name of the data stream
+To retrieve data use `post /api/v1/get_data` and pass 5 parameters:
+1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the data stream.
+2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the data stream.
+3. `aes_password` - the AES password.
+4. `aes_iv` - the Initialization Vector (IV).
+5. `stream_name` - the name of the data stream.
 
 Sample input
 ```
@@ -479,6 +479,7 @@ Sample output
           "primechain_address": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP"
          },
       "signature_status": true
+      // timestamp 
       }
 }
 ```
@@ -493,10 +494,13 @@ Benefits of using the blockchain for invoice discounting include automated recon
 
 ### 6.1 Publish a new invoice
 New invoices can be published to the blockchain by large corporates (payers) using `post /api/v1/create_invoice` and passing these parameters:   
-1. The primechain address of the corporate who is the payer of the invoice - `invoice_payer`    
-2. The primechain address of the supplier who is the payee of the invoice - `invoice_payee`    
-3. The name of the invoice. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces - `invoice_name`   
-4. The details of the invoice - `invoice_details`. This contains 3 parameters, namely the amount of the invoice (`invoice_amount`), the maturity date of the invoice (`invoice_maturity`) and optional additional information about the invoice (`invoice_description`). 
+1. `invoice_payer` - the primechain address of the corporate who is the payer of the invoice.  
+2. `invoice_payee` - the primechain address of the supplier who is the payee of the invoice.    
+3. `invoice_name` - the name of the invoice. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces.
+4. `invoice_details` - the details of the invoice. This contains 3 parameters, namely 
+    * `invoice_amount` - the amount of the invoice.
+    * `invoice_maturity` - the maturity date of the invoice. 
+    * `invoice_description` - optional additional information about the invoice.
 
 The newly created invoice is created as an asset of the blockchain and is transferred automatically to the supplier (payee).
 
@@ -507,11 +511,11 @@ Sample input
   "invoice_payee": "aaaa",
   "invoice_name": "Invoice no. 235235",  
   "invoice_details": 
-        {
-          "invoice_amount": "USD 856,000"
-          "invoice_maturity": "10-April-2019"
-          "invoice_description": "This is optional additional information about the invoice."
-         },
+    {
+      "invoice_amount": "USD 856,000"
+      "invoice_maturity": "10-April-2019"
+      "invoice_description": "This is optional additional information about the invoice."
+     },
 }
 ```
 ***Note:*** This may take upto 30 seconds.   
