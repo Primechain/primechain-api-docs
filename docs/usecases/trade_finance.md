@@ -165,8 +165,8 @@ Sample input
 Sample output
 ```
 {
-"status": 200,
-"tx_id": "94179d61270f24acc208b8647e735cb54307c4ccbfece64ebae0e9539c37b2bf"
+  "status": 200,
+  "tx_id": "94179d61270f24acc208b8647e735cb54307c4ccbfece64ebae0e9539c37b2bf"
 }
 ```
 
@@ -189,7 +189,8 @@ Sample input
 Sample output
 ```
 {
-
+  "status": 200,
+  "tx_id": "83fd7c73360cc80a4bc89c3fa3de956deb145882219bcce3b5631a916b15b97a"
 }
 ```
 
@@ -206,7 +207,6 @@ To encrypt, sign and publish data to a Data Stream, use `post /api/v1/publish_da
 Sample input
 ```
 {
-  "primechain_private_key": "VHpUJD5NkTrurFHEoQ79t55TUAgZYEFvygbZHSCJ3za6zSwtXbQqVsaV",
   "primechain_address": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP",
    "keys": 
     [
@@ -234,18 +234,7 @@ Sample input
 
 Sample output
 ```
-{
-  "status": 200,
-  "response": 
-    {
-      "tx_id_enc_data": "16346d48deea43865a276b5153fec90ac2ef83f146a20bf6826df995acdc5fc8",
-      "tx_id_signature": "7c72b8fc633d9a091e878ef6c610e4383ca597f846092a35077374fb0accea76",
-      "signature": "IGOfNLkkrioZwsA3sHnZTDWXP0LRb1OOSUo0Tu3TBKuYVIBgH7mDvIb4NE9eosNvWBYvVA50lZYzqQU1tKpL2tY=",
-      "aes_password": "kfkNhEWZErbMLhtKkg6zSTy85Aq9QIJr",
-      "aes_iv": "9UuZX4vgZ8r3",
-      "stream_name": "200_tons_xyz_Jan_2019"
-    }
-}
+
 ```
 ### 4.2 Publish an invoice
 Sample input
