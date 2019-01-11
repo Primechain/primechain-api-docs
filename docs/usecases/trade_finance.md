@@ -736,7 +736,7 @@ Investors place bids on invoices. To place a bid on an invoice, the investor mus
 * the supplier (payee) rejects the bid or    
 * the investor cancels his bid   
 
-To create a bid, the investor uses `create_bid` and passes these parameters:
+To create a bid, the investor uses `post /api/v1/create_bid` and passes these parameters:
 1. `from_address` - the primechain address of the investor
 2. `to_address` - the primechain address of the payee
 1. `invoice_reference_number` - the reference number of the invoice
@@ -755,7 +755,7 @@ Sample input
 ```
 The following gets published to the `OFFER_DETAIL_STREAM` data-stream:
 1. The primechain address of the bidder
-2. Name of the invoice
+2. Reference number of the invoice
 3. Name of the fiat currency token 
 4. Quantity of the fiat currency token offered for the invoice
 5. A hexadecimal representation of the bid
@@ -930,7 +930,7 @@ Sample output
 ```
 {
   "status": 200,
-  "response": "93bf243e60a029430ccca38f2e2165b16e5ee9e8fa516ea2552144de089f0a4b"
+  "tx_id": "93bf243e60a029430ccca38f2e2165b16e5ee9e8fa516ea2552144de089f0a4b"
 }
 
 ```
