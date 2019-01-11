@@ -43,6 +43,7 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 
 ***[7. Settle accounts in real-time](#7-settle-accounts-in-real-time)***
 
+
 ## 1. Introduction and overview
 
 TRADE-Chain is a permissioned multi-framework blockchain powered by Primechain APIs. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers, shippers and investors.
@@ -680,5 +681,5 @@ Sample input
 ```
 The corporate (payer) can redeem the tokens with the relevant bank.
 
-
+---
 Have a query? Email us on info@primechain.in
