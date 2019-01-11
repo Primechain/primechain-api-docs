@@ -872,7 +872,7 @@ Sample output
 ```
 {
 "status": 200,
-"response": "1b1cd89ebd0b813780ffc0d39361ab4711a92e97ad6073304cb4909083268f71"
+"tx_id": "1b1cd89ebd0b813780ffc0d39361ab4711a92e97ad6073304cb4909083268f71"
 }
 ```
 
