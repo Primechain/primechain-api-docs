@@ -497,7 +497,22 @@ Invoice discounting is also referred to as supply chain finance and factoring. T
 
 Benefits of using the blockchain for invoice discounting include automated reconciliation and a provably immutable and transparent process.
 
-### 6.1 Publish a new invoice
+### 6.1 Process flow
+
+The process flow is as follows:
+1. A corporate (payers) publishes an invoice to the blockchain. This invoice is a blockchain asset and is immediately transferred to the relevant supplier (payee).
+2. Participants, especially investors, view invoices.
+3. Investors purchase fiat currency tokens from the bank. The payment to the bank for purchasing these tokens is done via conventional banking processes.
+4. All participants, especially investors, view all bids.
+5. Investors place bids. The bid amount is "locked" and "unspendable" till they cancel their bid or till the supplier (payee) rejects their bid. 
+6. The supplier (payee) rejects bids that are not acceptable to her. 
+7. The supplier (payee) accepts a bid. The invoice now gets transferred to the relevant investor and the supplier immediately recives the relevant quantity of tokens. This is an atomic transaction and does not require any re-concilliation.
+8. Upon maturity of the invoice, or any time before that, the corporate (payer) purchases fiat currency tokens from the bank. The payment to the bank for purchasing these tokens is done via conventional banking processes.
+9. The corporate (payer) places a bid to purchase the invoice from the investor holding the invoice. 
+10. The investor accepts the bid. The invoice now gets transferred to the corporate (payer) and the investor immediately recives the relevant quantity of tokens. This is an atomic transaction and does not require any re-concilliation.
+11. The corporate (payer) retires the invoice by sending it to the burn address.
+
+### 6.2 Publishing a new invoice
 New invoices can be published to the blockchain by large corporates (payers) using `post /api/v1/create_invoice` and passing these parameters:   
 1. `invoice_payer` - the primechain address of the corporate who is the payer of the invoice.  
 2. `invoice_payee` - the primechain address of the supplier who is the payee of the invoice.    
@@ -538,7 +553,11 @@ Sample output
 }
 ```
 
-### 6.2 Bidding by investors
+### 6.3 Viewing invoices
+
+
+
+### 6.4 Bidding by investors
 Investors place bids on invoices. To place a bid on an invoice, the investor must hold sufficient quantity of fiat currency  tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Investors can purchase these tokens from their banks. Once an investor places a bid, the relevant amount of tokens are ‘locked’ and 'un-spendable' till either (1) the supplier (payee) rejects the bid or (2) the investor cancels his bid.
 
 To create a bid, the investor uses `create_bid` and passes these parameters:
@@ -578,7 +597,12 @@ Sample input
 }
 ```
 
-### 6.3 Viewing bids
+and cancelling of bids 
+
+### 6.5 Cancelling of bids by investors
+
+
+### 6.6 Viewing bids
 All participants can view all bids placed on all invoices using `get /api/v1/view_all_bids`. This creates a highly transparent platform and enables price discovery.
 
 Sample output
@@ -600,7 +624,7 @@ aa
 
 A supplier (payee) can accept or reject bids made on invoices in which she is the payee. If she accepts the bid, the invoice is transferred to the relevant investor and the bid amount of the tokens is transferred to her. She can redeem the tokens from the bank.
 
-### 6.4 Acceptance and rejection of bids
+### 6.7 Rejection of bids
 
 
 To accept a bid, use `post /api/v1/accept_bid` and pass the transaction id of the bid as a parameter:
@@ -628,8 +652,11 @@ Sample output
 aaa
 ```
 
-### 6.5 Maturity of invoice
-Upon maturity of the invoice, or any time before that, the payer of an invoice places a bid to purchase the invoice from the investor holding the invoice. To place this bid, the payer must hold sufficient quantity of fiat currency tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Payers can purchase these tokens from their banks. Once the payer places a bid, the relevant amount of tokens are ‘locked’ and 'un-spendable' till either (1) the investor rejects the bid or (2) the payer cancels the bid.
+### 6.8 Acceptance of bids
+
+
+### 6.9 Buyback of the invoice upon maturity of invoice
+Upon maturity of the invoice, or any time before that, the payer of an invoice places a bid to purchase the invoice from the investor holding the invoice. To place this bid, the payer must hold sufficient quantity of fiat currency tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Payers can purchase these tokens from their banks. 
 
 To create a bid, the payer uses `create_bid` and passes these parameters:
 1. `invoice_reference_number` - The reference number of the invoice.
@@ -673,7 +700,7 @@ aaa
 The invoice gets transferred to the payer and the investor receives the bid amount of the tokens. The investor can redeem the tokens from the bank.
 
 
-### 6.6 Retiring the invoice
+### 6.10 Retiring the invoice
 The corporate (payer) then retires the invoice using `post /api/v1/retire_invoice` and passing the invoice reference number as a parameter. 
 
 Sample input
