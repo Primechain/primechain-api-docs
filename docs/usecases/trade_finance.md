@@ -839,7 +839,7 @@ Sample output
 ### 6.7 Rejection of bids
 A supplier (payee) can reject bids made on invoices in which she is the payee. To reject a bid, use `post /api/v1/reject_bid` and pass the following parameters:   
 1. transaction id of the bid   
-2. primechain address of the bidder   
+2. primechain address of the payee   
 
 Sample input
 ```
