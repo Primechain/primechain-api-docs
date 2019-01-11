@@ -218,9 +218,13 @@ Sample input
 ```
 ***This is what happens:***   
 1. The SHA-512 hash of the data is computed.
-2. The hash is signed using the provided private key (using ECDSA).
+2. The hash is signed using the private key of the provided primechain address (using ECDSA).
 3. The digital signature, hash and the primechain address of the signer are stored in the data stream.
-4. The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: the encrypted version of the data, the AES password, the Initialisation Vector (IV) and the Authentication Tag (tag).
+4. The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
+    * the encrypted version of the data    
+    * the AES password    
+    * the Initialization Vector (IV)    
+    * the Authentication Tag (tag)   
 5. The encrypted data and the tag are published to the data stream.
 
 ***The following is the output:***
