@@ -473,7 +473,7 @@ Sample input
 1. `data` - the unencrypted data.   
 2. `primechain_address` - the primechain address of the signer.   
 3. `signature_status` - the verification status of the signature.  
-4. `timestamp` - the timestamp o
+4. `timestamp` - the timestamp
 
 Sample output
 ```
@@ -538,14 +538,15 @@ Sample input
       "invoice_amount": "USD 856,000"
       "invoice_maturity": "10-April-2019"
       "invoice_description": "This is optional additional information about the invoice."
-     },
+     }
 }
 ```
 ***Note:*** This may take upto 30 seconds.   
 
 ***Output is:***
-* the id of the transaction in which the invoice was published to the blockchain - `tx_id`.
-* the unique reference number of the asset - `invoice_reference_number`
+* `tx_id` - the id of the transaction in which the invoice was published to the blockchain
+* `invoice_reference_number` - the unique reference number of the asset
+* `invoice_details` - invoice details
 
 Sample output
 ```
@@ -736,8 +737,10 @@ Investors place bids on invoices. To place a bid on an invoice, the investor mus
 * the investor cancels his bid   
 
 To create a bid, the investor uses `create_bid` and passes these parameters:
-1. `invoice_reference_number` - the reference number of the invoice.
-2. `token` - name of the fiat currency token.
+1. `from_address` - the primechain address of the investor
+2. `to_address` - the primechain address of the payee
+1. `invoice_reference_number` - the reference number of the invoice
+2. `token` - name of the fiat currency token
 3. `token_amount` - quantity of the fiat currency token being offered in return for the invoice
 
 Sample input
@@ -750,7 +753,6 @@ Sample input
   "token_amount": 100
 }
 ```
-
 The following gets published to the `OFFER_DETAIL_STREAM` data-stream:
 1. The primechain address of the bidder
 2. Name of the invoice
@@ -774,7 +776,7 @@ To cancel a bid, the investor uses `post /api/v1/cancel_bid` and passes 1 parame
 Sample input
 ```
 {
-  "offer_tx_id": "9acbe1619a749f0f690e65ae4e7836c56a9e923705119563c1351b7601ec3998"
+  "tx_id": "9acbe1619a749f0f690e65ae4e7836c56a9e923705119563c1351b7601ec3998"
 }
 ```
 Sample output
@@ -840,7 +842,7 @@ A supplier (payee) can reject bids made on invoices in which she is the payee. T
 Sample input
 ```
 {
-  "offer_tx_id": "9acbe1619a749f0f690e65ae4e7836c56a9e923705119563c1351b7601ec3998",
+  "tx_id": "9acbe1619a749f0f690e65ae4e7836c56a9e923705119563c1351b7601ec3998",
   "primechain_address": "1HhDFkG6erh3cusjY1M8tgEQr3dhTM8Dh71Pmr"
 }
 ```
@@ -858,7 +860,7 @@ A supplier (payee) can accept bids made on invoices in which she is the payee. I
 Sample input
 ```
 {
-  "offer_tx_id": "ce1a7475c8419ad3a30ef9db98d7219aa72221fe9fe2cae8f652a690efda80fa",
+  "tx_id": "ce1a7475c8419ad3a30ef9db98d7219aa72221fe9fe2cae8f652a690efda80fa",
   "primechain_address": "1HhDFkG6erh3cusjY1M8tgEQr3dhTM8Dh71Pmr"
 }
 ```
