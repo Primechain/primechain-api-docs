@@ -34,12 +34,16 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 ***[5. Decrypt, verify and retrieve data from the blockchain](#5-decrypt-verify-and-retrieve-data-from-the-blockchain)*** 
 
 ***[6. Invoice discounting](#6-invoice-discounting)***   
-[6.1 Publish a new invoice](#61-publish-a-new-invoice)   
-[6.2 Bidding by investors](#62-bidding-by-investors)    
-[6.3 Viewing bids](#63-viewing-bids)  
-[6.4 Acceptance and rejection of bids](#64-acceptance-and-rejection-of-bids)   
-[6.5 Maturity of invoice](#65-maturity-of-invoice)   
-[6.6 Retiring the invoice](#66-retiring-the-invoice)   
+[6.1 Process flow](#61-process-flow)   
+[6.2 Publishing a new invoice](#62-publishing-a-new-invoice)   
+[6.3 Viewing invoices](#63-viewing-invoices)   
+[6.4 Bidding by investors](#64-bidding-by-investors)   
+[6.5 Cancelling of bids by investors](#65-cancelling-of-bids-by-investors)   
+[6.6 Viewing bids](#66-viewing-bids)   
+[6.7 Rejection of bids](#67-rejection-of-bids)   
+[6.8 Acceptance of bids](#68-acceptance-of-bids)   
+[6.9 Buyback of the invoice upon maturity of invoice](#69-buyback-of-the-invoice-upon-maturity-of-invoice)   
+[6.10 Retiring the invoice](#610-retiring-the-invoice)   
 
 ***[7. Settle accounts in real-time](#7-settle-accounts-in-real-time)***
 
@@ -501,15 +505,15 @@ Benefits of using the blockchain for invoice discounting include automated recon
 
 The process flow is as follows:
 1. A corporate (payers) publishes an invoice to the blockchain. This invoice is a blockchain asset and is immediately transferred to the relevant supplier (payee).
-2. Participants, especially investors, view invoices.
+2. Participants, especially investors, view invoices. This list of invoices can be filtered based on payer, payee, maturity date and value.
 3. Investors purchase fiat currency tokens from the bank. The payment to the bank for purchasing these tokens is done via conventional banking processes.
 4. All participants, especially investors, view all bids.
-5. Investors place bids. The bid amount is "locked" and "unspendable" till they cancel their bid or till the supplier (payee) rejects their bid. 
+5. Investors place bids. The bid amount is "locked" and "un-spendable" till they cancel their bid or till the supplier (payee) rejects their bid. 
 6. The supplier (payee) rejects bids that are not acceptable to her. 
-7. The supplier (payee) accepts a bid. The invoice now gets transferred to the relevant investor and the supplier immediately recives the relevant quantity of tokens. This is an atomic transaction and does not require any re-concilliation.
+7. The supplier (payee) accepts a bid. The invoice now gets transferred to the relevant investor and the supplier immediately receives the relevant quantity of tokens. This is an atomic transaction and does not require any re-conciliation. The supplier (payee) can redeem these tokens from the bank.
 8. Upon maturity of the invoice, or any time before that, the corporate (payer) purchases fiat currency tokens from the bank. The payment to the bank for purchasing these tokens is done via conventional banking processes.
 9. The corporate (payer) places a bid to purchase the invoice from the investor holding the invoice. 
-10. The investor accepts the bid. The invoice now gets transferred to the corporate (payer) and the investor immediately recives the relevant quantity of tokens. This is an atomic transaction and does not require any re-concilliation.
+10. The investor accepts the bid. The invoice now gets transferred to the corporate (payer) and the investor immediately receives the relevant quantity of tokens. This is an atomic transaction and does not require any re-conciliation.
 11. The corporate (payer) retires the invoice by sending it to the burn address.
 
 ### 6.2 Publishing a new invoice
