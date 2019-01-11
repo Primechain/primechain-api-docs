@@ -197,17 +197,16 @@ Sample output
 ## 4. Publish data to a Data Stream
 
 ### 4.1 Encrypt, sign and publish data
-To encrypt, sign and publish data to a Data Stream, use `post /api/v1/publish_data` and pass 5 parameters: 
-1. `primechain_private_key` - the private key of the signer.
-2. `primechain_address` - the primechain address of the signer.
-3. `keys` - the keys to enable quick searching of the data.
-4. `data` - the data. 
-5. `stream_name` - the name of the data stream.
+To encrypt, sign and publish data to a Data Stream, use `post /api/v1/publish_data` and pass 4 parameters: 
+1. `primechain_address` - the primechain address of the signer.
+2. `keys` - the keys to enable quick searching of the data.
+3. `data` - the data. 
+4. `stream_name` - the name of the data stream.
 
 Sample input
 ```
 {
-  "primechain_address": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP",
+  "primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp",
    "keys": 
     [
       "key1",
@@ -234,7 +233,17 @@ Sample input
 
 Sample output
 ```
-
+{
+"status": 200,
+"response": {
+"tx_id_enc_data": "7e94282014b2b73bc17ac163e24b2538b6174ba96a4a27f4f2e2333e94346b96",
+"tx_id_signature": "f2d3f1954064b12d3f434cee8d68ed6f08960f7a400a41946c972680abdbaef2",
+"signature": "INfKjUiGDpMQ68K4GlTwh3Z3LDXrWpiJ4L2Qvn1wSqSxd0zauOZDn292E32GAQk6fsNvPl1G9ty1iRfXJWJDW0w=",
+"aes_password": "ScX56ZWKuqYsMpINcXScyfgSL0Ihc05c",
+"aes_iv": "lSr9HJqWN1eA",
+"stream_name": "200_tons_xyz_Jan_2019"
+}
+}
 ```
 ### 4.2 Publish an invoice
 Sample input
