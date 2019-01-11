@@ -472,22 +472,19 @@ Sample input
 ***The following is the output:***
 1. `data` - the unencrypted data.   
 2. `primechain_address` - the primechain address of the signer.   
-3. `signature_status` - the verification status of the signature.   
+3. `signature_status` - the verification status of the signature.  
+4. `timestamp` - the timestamp o
 
 Sample output
 ```
 {
-  "status": 200,
-  "response": 
-    {
-      "data": "This is the data that will be encryptd and stored.",
-      "signer_detail": 
-        {
-          "primechain_address": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP"
-         },
-      "signature_status": true
-      // timestamp 
-      }
+"status": 200,
+"response": {
+"data": "This is the data that will be encryptd and stored.",
+"signer_detail": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP",
+"signature_status": true,
+"timestamp": "09/01/2019 01:42:47:00"
+}
 }
 ```
 
