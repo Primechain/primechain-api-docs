@@ -3,9 +3,51 @@
 [![Primechain Technologies](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 [![TRADE-Chain brochure](https://img.shields.io/badge/Download-Brochure-green.svg)](http://www.primechaintech.com/docs/brochures/Trade_Chain.pdf)
 
-The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a permissioned "global trade finance" blockchain for the world’s banks and financial institutions. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers and shippers.
+The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a permissioned "global trade finance" blockchain for the world’s banks and financial institutions. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers, shippers and investors.
 
 ![Letter of credit](http://www.primechaintech.com/img/api_documentation/trade-finance.jpg)
+
+
+
+### Table of contents  
+
+***[1. Introduction and overview](#1-introduction-and-overview)***   
+[1.1 Sandbox blockchain](#11-sandbox-blockchain)    
+[1.2 Production blockchain](#12-production-blockchain)    
+[1.3 System requirements for nodes](#13-system-requirements-for-nodes)   
+[1.4 Information Security issues](#14-information-security-issues)   
+[1.5 API keys for sandbox](#15-api-keys-for-sandbox)   
+[1.6 Default address for a node](#16-default-address-for-a-node)   
+[1.7 Additional addresses](#17-additional-addresses)
+
+***[2. Data Streams and permissions to write to them](#2-data-streams-and-permissions-to-write-to-them)***    
+[2.1 Create a new data stream](#21-create-a-new-data-stream)   
+[2.2 Grant write permissions](#22-grant-write-permissions)   
+[2.3 Revoke write permissions](#23-revoke-write-permissions)   
+
+***[4. Publish data to a Data Stream](#4-publish-data-to-a-data-stream)***   
+[4.1 Encrypt, sign and publish data](#41-encrypt-sign-and-publish-data)   
+[4.2 Publish an invoice](#42-publish-an-invoice)   
+[4.3 Publish a bank guarantee](#43-publish-a-bank-guarantee)   
+[4.4 Publish a letter of credit](#44-publish-a-letter-of-credit)   
+[4.5 Publish a bill of lading](#45-publish-a-bill-of-lading)   
+[4.6 Publish GPS data](#46-publish-gps-data)   
+
+***[5. Decrypt, verify and retrieve data from the blockchain](#5-decrypt-verify-and-retrieve-data-from-the-blockchain)*** 
+
+***[6. Invoice discounting](#6-invoice-discounting)***   
+[6.1 Publish a new invoice](#61-publish-a-new-invoice)   
+[6.2 Bidding by investors](#62-bidding-by-investors) 
+[6.3 Viewing bids](#63-viewing-bids)  
+[6.4 Acceptance and rejection of bids](#64-acceptance-and-rejection-of-bids)   
+[6.5 Maturity of invoice](#65-maturity-of-invoice)   
+[6.6 Retiring the invoice](#66-retiring-the-invoice)   
+
+***[7. Settle accounts in real-time](#7-settle-accounts-in-real-time)***
+
+## 1. Introduction and overview
+
+TRADE-Chain is a permissioned multi-framework blockchain powered by Primechain APIs. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers, shippers and investors.
 
 ***The pain points of today’s trade finance processes are:***
 1. Delays and errors due to manual document creation and distribution
@@ -26,46 +68,6 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 8. Reducing the letter of credit issue process from several days to a few hours.
 9. Reducing the time of delivery for trade documents from several days to a few hours.
 10.Increased transparency by sharing transaction details with all parties.
-
-***Table of contents***   
-
-***[1. Introduction and overview](#1-introduction-and-overview)***   
-[1.1 Sandbox blockchain](#11-sandbox-blockchain)    
-[1.2 Production blockchain](#12-production-blockchain)    
-[1.3 System requirements for nodes](#13-system-requirements-for-nodes)   
-[1.4 Information Security issues](#14-information-security-issues)   
-[1.5 API keys for sandbox](#15-api-keys-for-sandbox)   
-[1.6 Default address for a node](#16-default-address-for-a-node)   
-[1.7 Additional addresses](#17-additional-addresses)
-
-***[2. Data Streams and permissions to write to them](#2-data-streams-and-permissions-to-write-to-them)***    
-[2.1 Create a new data stream](#21-create-a-new-data-stream)   
-[2.2 Grant write permissions](#22-grant-write-permissions)   
-[2.3 Revoke write permissions](#23-revoke-write-permissions)   
-
-***[4. Publish data to a Data Stream](#4-publish-data-to-a-data-stream)***   
-[4.1 Encrypt, sign and publish data](#41-encrypt-sign-and-publish-data)   
-[4.2 Publish an invoice](#42-publish-an-invoice)   
-[4.3 Publish a bank guarantee](#43-publish-a-bank-guarantee)   
-[4.4 Publish a letter of credit](#43-publish-a-letter-of-credit)   
-[4.5 Publish a bill of lading](#45-publish-a-bill-of-lading)   
-[4.6 Publish GPS data](#46-publish-gps-data)   
-
-***[5. Decrypt, verify and retrieve data from the blockchain](#5-decrypt-verify-and-retrieve-data-from-the-blockchain)*** 
-
-***[6. Invoice discounting](#6-invoice-discounting)***   
-[6.1 Publish a new invoice](#61-publish-a-new-invoice)   
-[6.2 Bidding by investors](#62-bidding-by-investors) 
-[6.3 Viewing bids](#63-viewing-bids)  
-[6.4 Acceptance and rejection of bids](#64-acceptance-and-rejection-of-bids)   
-[6.5 Maturity of invoice](#65-maturity-of-invoice)   
-[6.6 Retiring the invoice](#66-retiring-the-invoice)   
-
-***[7. Settle accounts in real-time](#7-settle-accounts-in-real-time)***
-
-## 1. Introduction and overview
-
-TRADE-Chain is a permissioned multi-framework blockchain powered by Primechain APIs. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers, shippers and investors.
 
 ### 1.1 Sandbox blockchain
 To access the TRADE-Chain sandbox, email us on info@primechain.in
