@@ -163,7 +163,7 @@ Sample input
 ```
 {
   "trade_channel_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
-  "trade_channel_name": "200_tons_xyz_Jan_2019",
+  "trade_channel_name": "200_tons_xyz_Feb_2019",
   "trade_channel_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
 }
 ```
