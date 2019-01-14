@@ -7,6 +7,9 @@
 [5. Verify a digital signature](#5-verify-a-digital-signature)   
 [6. Create, encrypt, sign and publish data to the blockchain](#6-create-encrypt-sign-and-publish-data-to-the-blockchain)   
 [7. Decrypt, verify and retrieve data from the blockchain](#7-decrypt-verify-and-retrieve-data-from-the-blockchain)   
+[8. Sign, encrypt and store a file in the blockchain](#8-sign-encrypt-and-store-a-file-in-the-blockchain)   
+[9. Decrypt, verify and retrieve a file from the blockchain](#9-decrypt-verify-and-retrieve-a-file-from-the-blockchain)   
+
 
 ## 1. Create key pair
 To create a key pair, use `get /api/v1/create_user_key_sawtooth`
@@ -219,5 +222,53 @@ The output will be the data if the signature is verified and valid.
 }
 }
 ```
+
+## 8. Sign, encrypt and store a file in the blockchain
+
+To encrypt a file and store the encrypted file in the blockchain, use `post /api/v1/encrypt_sign_store_file_sawtooth` and pass 2 parameters: 
+1. the data 
+2. the relevant private key
+
+```
+{
+  "primechain_sawtooth_private_key": "89b0d0a7ef410e9dc19907b8d9297ec2239222c2b38d56056964495b517fe6c1",
+  "file":"<your file>"
+}
+```
+
+The file is encrypted, signed and stored in the blockchain. 
+
+The following is the output:
+1. the id of the transaction in which the encrypted file and tag were published to the FILE_MASTERLIST stream
+2. tthe digital signature
+3. The AES password
+4. The Initialization Vector (IV)
+
+```
+{
+  "primechain_sawtooth_tx_id": "2dd1b2e4f247359c033fe3ceae29c72b2e18be1f2019bf4f32dcba218c7fa49d26d133aa5e0357ed7878be10e4f4307a4ec2c2b7ead9000b291b5002e968b68d",
+  "signature": "bd85d8c1810c3e2f747ae7f3723ada03712f3680ccaaa2db6a1a1510e48d63bc4d1f8970108ea1b913a9c61c21d58fbf55bbd40496fc31c4f37795f4a2ce5f79",
+  "aes_password": "cjWeTsSMeBywaOmIPWhrpJAhnW8clIQJ",
+  "aes_iv": "epWNEtu58YaA"
+}
+```
+
+## 9. Decrypt, verify and retrieve a file from the blockchain
+To retrieve a file from the blockchain and decrypt it, use `post /api/v1/decrypt_download_file_sawtooth` and pass these values:
+1. the id of the transaction in which the encrypted file and tag were published to the FILE_MASTERLIST stream
+2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the FILE_SIGNATURE_MASTERLIST stream
+3. The AES password
+4. The Initialization Vector (IV)
+
+```
+{
+  "primechain_sawtooth_tx_id": "2dd1b2e4f247359c033fe3ceae29c72b2e18be1f2019bf4f32dcba218c7fa49d26d133aa5e0357ed7878be10e4f4307a4ec2c2b7ead9000b291b5002e968b68d",
+  "primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
+  "signature": "bd85d8c1810c3e2f747ae7f3723ada03712f3680ccaaa2db6a1a1510e48d63bc4d1f8970108ea1b913a9c61c21d58fbf55bbd40496fc31c4f37795f4a2ce5f79",
+  "aes_password": "cjWeTsSMeBywaOmIPWhrpJAhnW8clIQJ",
+  "aes_iv": "epWNEtu58YaA"
+}
+```
+The file is decrupted, verified and retrieved from the blockchain.
 
 Have a query? Email us on info@primechain.in
