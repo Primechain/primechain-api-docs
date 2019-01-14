@@ -169,7 +169,7 @@ Sample input
 ```
 {
   "trade_channel_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
-  "stream_name": "200_tons_xyz_Feb_2019",
+  "trade_channel_name": "200_tons_xyz_Feb_2019",
   "trade_channel_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
 }
 ```
@@ -193,7 +193,7 @@ Sample input
 ```
 {
   "trade_channel_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
-  "stream_name": "200_tons_xyz_Jan_2019",
+  "trade_channel_name": "200_tons_xyz_Jan_2019",
   "trade_channel_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
 }
 ```
@@ -242,7 +242,7 @@ Sample input
 ***This is what happens:***   
 1. The SHA-512 hash of the data is computed.
 2. The hash is signed using the private key of the provided primechain address (using ECDSA).
-3. The digital signature, hash and the primechain address of the signer are stored in the data stream.
+3. The digital signature, hash and the primechain address of the signer are stored in the trade channel.
 4. The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
     * the encrypted version of the data    
     * the AES password    
@@ -251,8 +251,8 @@ Sample input
 5. The encrypted data and the tag are published to the specified trade channel.
 
 ***The following is the output:***
-1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the data stream.
-2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the the data stream.
+1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the trade channel.
+2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the the trade channel.
 3. `signature` - the digital signature
 4. `aes_password` - the AES password
 5. `aes_iv` - the Initialization Vector (IV)
@@ -293,8 +293,8 @@ Sample input
 }
 ```
 ***This is what happens:***   
-1. The digital signature, hash and the primechain address of the signing entity are retrieved from the data stream.
-2. The encrypted data and tag are retrieved from the data stream.
+1. The digital signature, hash and the primechain address of the signing entity are retrieved from the trade channel.
+2. The encrypted data and tag are retrieved from the trade channel.
 3. The encrypted data is decrypted.
 4. The digital signature is verified.
 
