@@ -3,20 +3,16 @@
 [![Primechain Technologies](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 [![TRADE-Chain brochure](https://img.shields.io/badge/Download-Brochure-green.svg)](http://www.primechaintech.com/docs/brochures/Trade_Chain.pdf)
 
-The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a permissioned "global trade finance" blockchain for the world’s banks and financial institutions. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers, shippers and investors.
+TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade finance sector.
 
 ![Letter of credit](http://www.primechaintech.com/img/tradechain/tradechain_top.jpg)
 
 ### Table of contents  
 
 ***[1. Introduction and overview](#1-introduction-and-overview)***   
-[1.1 Sandbox blockchain](#11-sandbox-blockchain)    
-[1.2 Production blockchain](#12-production-blockchain)    
-[1.3 System requirements for nodes](#13-system-requirements-for-nodes)   
-[1.4 Information Security issues](#14-information-security-issues)   
-[1.5 API keys for sandbox](#15-api-keys-for-sandbox)   
-[1.6 Default address for a node](#16-default-address-for-a-node)   
-[1.7 Additional addresses](#17-additional-addresses)
+[1.1 TRADE-Chain nodes](#11-trade-chain-nodes)   
+[1.2 API keys for sandbox](#12-api-keys-for-sandbox)   
+[1.3 Creating addresses](#13-creating-addresses)   
 
 ***[2. Trade channels and permissions to write to them](#2-trade-channels-and-permissions-to-write-to-them)***    
 [2.1 Create a new trade channel](#21-create-a-new-trade-channel)   
@@ -49,48 +45,25 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 
 ## 1. Introduction and overview
 
-TRADE-Chain is a permissioned multi-framework blockchain powered by Primechain APIs. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers, shippers and investors.
+### 1.1 TRADE-Chain nodes
+TRADE-Chain is a permissioned multi-framework blockchain powered by Primechain APIs. The following types of TRADE-Chain nodes are available:
+1. Importer and Exporters nodes
+2. Bank modes
+3. Financer and investor nodes
+4. Insurer nodes
+5. Export credit agency nodes
+6. Freight company nodes
+7. Regulator nodes
+8. Service provider nodes
 
-***The pain points of today’s trade finance processes are:***
-1. Delays and errors due to manual document creation and distribution.
-2. Invoice factoring risk.
-3. Delayed timeline.
-4. Manual AML review.
-5. Fraud risk due to multiple disconnected platforms.
-6. Fraud risk due to duplicate bills of lading.
-
-***Core benefits of TRADE-Chain:***
-1. Real-time review and approval of documents.
-2. Real-time, transparent view of invoices for discounting and factoring.
-3. Eliminating the need for correspondent banks and other intermediaries.
-4. Elimination of fraud by providing real-time, transparent view of bills of lading.
-5. Transparency in terms of ownership and location of goods.
-6. Real-time, automated settlements without the need for reconciliation.
-7. Real-time view to regulators leading to complete regulatory transparency.
-8. Reducing the letter of credit issue process from several days to a few hours.
-9. Reducing the time of delivery for trade documents from several days to a few hours.   
-10.Increased transparency by sharing transaction details with all parties.
-
-### 1.1 Sandbox blockchain
 To access the TRADE-Chain sandbox, email us on info@primechain.in
 
-### 1.2 Production blockchain
-Nodes on the commercial / production TRADE-Chain are available free to all Bankchain members and at an annual subscription fee for non-members. Email us on info@primechain.in for details.
-
-### 1.3 System requirements for nodes
-2 virtual machines / physical servers with the following details are required:
+***System requirements for nodes***   
+2 virtual machines / physical servers with the following details are required:   
 * Ubuntu 16.04 machine with 32 GB RAM, 4 core processor, 100 GB SSD disk with ports 22, 15590 and 61172 open.   
-* Ubuntu 16.04 machine with 32 GB RAM, 8 core processor, 25 GB SSD disk with ports 22 and 2512 open.
+* Ubuntu 16.04 machine with 32 GB RAM, 8 core processor, 25 GB SSD disk with ports 22 and 2512 open.   
 
-### 1.4 Information Security issues
-* Symmetric and asymmetric cryptography ensures ***confidentiality*** of data.   
-* Hash functions ensure ***integrity*** of data.   
-* Multiple blockchain nodes ensure ***availability*** of data.   
-* Blockchain technology ensures provable ***immutability*** of data.   
-* Digital signatures ensure ***non-repudiation***.   
-* [Blockchain Security Controls](http://www.primechaintech.com/bsc.php) provide the security controls and information security framework.
-
-### 1.5 API keys for sandbox
+### 1.2 API keys for sandbox
 API keys authenticate access to the TRADE-Chain sandbox. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](http://www.primechaintech.com/img/api_documentation/sample_rest_api_client.jpg))
 
 Sample output
@@ -104,10 +77,7 @@ Sample output
 }
 ```
 
-### 1.6 Default address for a node
-When a node connects to TRADE-Chain, it is provided a default primechain address with relevant permissions. 
-
-### 1.7 Additional addresses
+### 1.3 Creating addresses
 If required, additional addresses can be created on a node using `get /api/v1/create_entity`. The following are generated:
 1. public key
 2. private key
