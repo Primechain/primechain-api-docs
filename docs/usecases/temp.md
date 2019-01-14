@@ -25,13 +25,16 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 
 ***[3. Real-time issuing and sharing of trade documents.](#3-real-time-issuing-and-sharing-of-trade-documents)***   
 [3.1 Types of documents](#31-types-of-documents)    
-[3.2 Issuance of documents to TRADE-Chain](#32-issuance-of-documents-to-trade-chain)   
+[3.2 Issuance of documents on TRADE-Chain](#32-issuance-of-documents-on-trade-chain)   
 [3.3 Retrieving documents from TRADE-Chain](#33-retrieving-documents-from-trade-chain)    
 
 
-***[5. Retrieving trade documents](#5-retrieving-trade-documents)*** 
+***[4. Real-time tracking of cargo](#4-real-time-tracking-of-cargo)*** 
 
-***[6. Invoice discounting](#6-invoice-discounting)***   
+[5. Cross-border and domestic trade payments](#5-cross-border-and-domestic-trade-payments)
+
+
+***[6. Factoring / invoice discounting platform](#6-factoring-/-invoice-discounting-platform)***   
 [6.1 Process flow](#61-process-flow)   
 [6.2 Publishing a new invoice](#62-publishing-a-new-invoice)   
 [6.3 Viewing invoices](#63-viewing-invoices)   
@@ -43,7 +46,7 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [6.9 Buyback of the invoice upon maturity of invoice](#69-buyback-of-the-invoice-upon-maturity-of-invoice)   
 [6.10 Retiring the invoice](#610-retiring-the-invoice)   
 
-***[7. Settle accounts in real-time](#7-settle-accounts-in-real-time)***
+***[7. Auction platform for goods and freight contracts](#7-auction-platform-for-goods-and-freight-contracts)***
 
 
 ## 1. Introduction and overview
@@ -206,7 +209,7 @@ TRADE-Chain provides a transparent repository for secure & real time issuing and
 
 ***4. Government Documents:*** Certificate of Origin, Certificate of Origin, Import / Export Declaration, Import / Export Licence, International Import Certificate, Delivery Verification Certificate, Landing Certificate, Customs Invoice.
 
-### 3.2 Issuance of documents to TRADE-Chain
+### 3.2 Issuance of documents on TRADE-Chain
 To encrypt, sign and publish data to TRADE-Chain, use `post /api/v1/publish_data` and pass 4 parameters: 
 1. `primechain_address` - the primechain address of the signer.
 2. `keys` - the keys to enable quick searching of the data.
@@ -304,7 +307,11 @@ Sample output
 }
 ```
 
-## 6. Invoice discounting
+## 4. Real-time tracking of cargo
+
+## 5. Cross-border and domestic trade payments
+
+## 6. Factoring / invoice discounting platform
 
 Invoice discounting enables suppliers to sell their invoices at a discount to investors. This enables suppliers to get faster access to money they are owed and enables buyers to get more time to pay. Instead of relying on the creditworthiness of suppliers (usually smaller businesses), the investors deal with buyers (usually large businesses). This can lower financing costs, optimize working capital and improve business efficiency.
 
