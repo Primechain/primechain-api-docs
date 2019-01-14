@@ -5,7 +5,7 @@
 
 The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a permissioned "global trade finance" blockchain for the world’s banks and financial institutions. TRADE-Chain nodes are available to banks, financial institutions and large exporters, importers, shippers and investors.
 
-![Letter of credit](http://www.primechaintech.com/img/api_documentation/trade-finance.jpg)
+![Letter of credit](http://www.primechaintech.com/img/tradechain/tradechain_top.jpg)
 
 ### Table of contents  
 
