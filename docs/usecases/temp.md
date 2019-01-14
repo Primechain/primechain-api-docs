@@ -26,7 +26,11 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 
 ***[4. Real-time tracking of cargo](#4-real-time-tracking-of-cargo)*** 
 
-***[5. Cross-border and domestic trade payments](#5-cross-border-and-domestic-trade-payments)***
+***[5. Cross-border and domestic trade payments](#5-cross-border-and-domestic-trade-payments)***   
+[5.1 Creating a new token](#51-creating-a-new-token)   
+[5.2 Issuing additional units of an existing token](#52-issuing-additional-units-of-an-existing-token)   
+[5.3 Sending tokens](#53-sending-tokens)   
+[5.4 Retiring units of a token](#54-retiring-units-of-a-token)   
 
 ***[6. Factoring and invoice discounting platform](#6-factoring-and-invoice-discounting-platform)***   
 [6.1 Process flow](#61-process-flow)   
@@ -41,7 +45,13 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 [6.10 Retiring the invoice](#610-retiring-the-invoice)   
 
 ***[7. Auction platform for goods and freight contracts](#7-auction-platform-for-goods-and-freight-contracts)***
-
+[7.1 Publishing a contract for goods or freight](#71-publishing-a-contract-for-goods-or-freight)
+[7.2 Bidding for a contract](#72-bidding-for-a-contract)
+[7.3 Cancelling a bid by the bidder](#73-cancelling-a-bid-by-the-bidder)
+[7.4 Viewing bids](#74-viewing-bids)
+[7.5 Rejection of bids](#75-rejection-of-bids)
+[7.6 Acceptance of bids](#76-acceptance-of-bids)
+[7.7 Retiring a contract](#77-retiring-a-contract)
 
 ## 1. Introduction and overview
 
@@ -322,6 +332,15 @@ Sample input
 (Source: https://www.gpsworld.com/what-exactly-is-gps-nmea-data/)
 
 ## 5. Cross-border and domestic trade payments
+
+### 5.1 Creating a new token
+
+### 5.2 Issuing additional units of an existing token
+
+### 5.3 Sending tokens
+
+### 5.4 Retiring units of a token
+
 
 ## 6. Factoring and invoice discounting platform
 
@@ -738,5 +757,20 @@ Sample output
 ```
 
 ## 7. Auction platform for goods and freight contracts
+
+### 7.1 Publishing a contract for goods or freight
+
+### 7.2 Bidding for a contract
+
+### 7.3 Cancelling a bid by the bidder
+
+### 7.4 Viewing bids
+
+### 7.5 Rejection of bids
+
+### 7.6 Acceptance of bids
+
+### 7.7 Retiring a contract
+
 ---
 Have a query? Email us on info@primechain.in
