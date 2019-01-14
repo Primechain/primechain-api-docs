@@ -276,8 +276,8 @@ Sample output
 
 ## 3.3 Retrieving documents from TRADE-Chain
 To retrieve data use `post /api/v1/get_data` and pass 5 parameters:
-1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the data stream.
-2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the data stream.
+1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the trade channel.
+2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the trade channel.
 3. `aes_password` - the AES password.
 4. `aes_iv` - the Initialization Vector (IV).
 5. `trade_channel_name` - the name of the trade channel from which the data is to be retrieved.
