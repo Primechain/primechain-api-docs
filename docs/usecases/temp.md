@@ -23,9 +23,11 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [2.2 Grant write permissions](#22-grant-write-permissions)   
 [2.3 Revoke write permissions](#23-revoke-write-permissions)   
 
-***[4. Issuing and sharing of trade documents](#4-issuing-and-sharing-of-trade-documents)***   
-[4.1 Encrypt, sign and publish data](#41-encrypt-sign-and-publish-data)   
-  
+***[3. Real-time issuing and sharing of trade documents.](#3-real-time-issuing-and-sharing-of-trade-documents)***   
+[3.1 Types of documents](#31-types-of-documents)    
+[3.2 Issuance of documents to TRADE-Chain](#32-issuance-of-documents-to-trade-chain)   
+[3.3 Retrieving documents from TRADE-Chain](#33-retrieving-documents-from-trade-chain)    
+
 
 ***[5. Retrieving trade documents](#5-retrieving-trade-documents)*** 
 
@@ -190,7 +192,9 @@ Sample output
 }
 ```
 
-## 4. Issuing of trade documents
+## 3. Real-time issuing and sharing of trade documents
+
+### 3.1 Types of documents
 
 TRADE-Chain provides a transparent repository for secure & real time issuing and sharing of trade documents such as:
 
@@ -202,9 +206,7 @@ TRADE-Chain provides a transparent repository for secure & real time issuing and
 
 ***4. Government Documents:*** Certificate of Origin, Certificate of Origin, Import / Export Declaration, Import / Export Licence, International Import Certificate, Delivery Verification Certificate, Landing Certificate, Customs Invoice.
 
-
-
-### 4.1 Issuance of documents to TRADE-Chain
+### 3.2 Issuance of documents to TRADE-Chain
 To encrypt, sign and publish data to TRADE-Chain, use `post /api/v1/publish_data` and pass 4 parameters: 
 1. `primechain_address` - the primechain address of the signer.
 2. `keys` - the keys to enable quick searching of the data.
@@ -259,7 +261,7 @@ Sample output
 }
 ```
 
-## 5. Retrieving trade documents
+## 3.3 Retrieving documents from TRADE-Chain
 To retrieve data use `post /api/v1/get_data` and pass 5 parameters:
 1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the data stream.
 2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the data stream.
