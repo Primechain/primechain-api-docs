@@ -28,13 +28,11 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [3.2 Issuance of documents on TRADE-Chain](#32-issuance-of-documents-on-trade-chain)   
 [3.3 Retrieving documents from TRADE-Chain](#33-retrieving-documents-from-trade-chain)    
 
-
 ***[4. Real-time tracking of cargo](#4-real-time-tracking-of-cargo)*** 
 
-[5. Cross-border and domestic trade payments](#5-cross-border-and-domestic-trade-payments)
+***[5. Cross-border and domestic trade payments](#5-cross-border-and-domestic-trade-payments)***
 
-
-***[6. Factoring / invoice discounting platform](#6-factoring-invoice-discounting-platform)***   
+***[6. Factoring and invoice discounting platform](#6-factoring-and-invoice-discounting-platform)***   
 [6.1 Process flow](#61-process-flow)   
 [6.2 Publishing a new invoice](#62-publishing-a-new-invoice)   
 [6.3 Viewing invoices](#63-viewing-invoices)   
@@ -309,9 +307,44 @@ Sample output
 
 ## 4. Real-time tracking of cargo
 
+It is recommended to use National Marine Electronics Association (NMEA) formatted Global Positioning System (GPS) data while publishing real-time GPS data for cargo.
+
+Sample input
+```
+{
+  "primechain_address": "1N9VtvZvP3rsw5Rf4Qpi12TWBaDoEwM2BAEsv2",
+  "data": 
+    {
+      "NMEA_GPS_DATA": "$GPGGA,181908.00,3404.7041778,N,07044.3966270,W,4,13,1.00,495.144,M,29.200,M,0.10,0000*40",
+    }
+}
+```
+***Explanation:***
+1. All NMEA messages start with the $ character, and each data field is separated by a comma.
+2. `GP` represent that it is a GPS position (GL would denote GLONASS - Russia's version of GPS)
+3. `181908.00` is the time stamp: UTC time in hours, minutes and seconds.
+4. `3404.7041778` is the latitude in the DDMM.MMMMM format. Decimal places are variable.
+5. `N` denotes north latitude.
+6. `07044.3966270` is the longitude in the DDDMM.MMMMM format. Decimal places are variable.
+7. `W` denotes west longitude.
+8. `4` denotes the Quality Indicator: (`1` = Uncorrected coordinate, `2` = Differentially correct coordinate (e.g., WAAS, DGPS), `4` = RTK Fix coordinate (centimeter precision), `5` = RTK Float (decimeter precision)
+9. `13` denotes number of satellites used in the coordinate.
+10. `1.0` denotes the HDOP (horizontal dilution of precision).
+11. `495.144` denotes altitude of the antenna.
+12. `M` denotes units of altitude (eg. Meters or Feet)
+13. `29.200` denotes the geoidal separation (subtract this from the altitude of the antenna to arrive at the Height Above Ellipsoid (HAE).
+14. `M` denotes the units used by the geoidal separation.
+15. `1.0` denotes the age of the correction (if any).
+16. `0000` denotes the correction station ID (if any).
+17. `*40` denotes the checksum.   
+(Source: https://www.gpsworld.com/what-exactly-is-gps-nmea-data/)
+
+
+
+
 ## 5. Cross-border and domestic trade payments
 
-## 6. Factoring / invoice discounting platform
+## 6. Factoring and invoice discounting platform
 
 Invoice discounting enables suppliers to sell their invoices at a discount to investors. This enables suppliers to get faster access to money they are owed and enables buyers to get more time to pay. Instead of relying on the creditworthiness of suppliers (usually smaller businesses), the investors deal with buyers (usually large businesses). This can lower financing costs, optimize working capital and improve business efficiency.
 
