@@ -91,7 +91,7 @@ Nodes on the commercial / production TRADE-Chain are available free to all Bankc
 * [Blockchain Security Controls](http://www.primechaintech.com/bsc.php) provide the security controls and information security framework.
 
 ### 1.5 API keys for sandbox
-API keys authenticate access to the TRADE-Chain sandbox. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](http://www.primechaintech.com/sample_rest_api_client.jpg)
+API keys authenticate access to the TRADE-Chain sandbox. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](http://www.primechaintech.com/img/api_documentation/sample_rest_api_client.jpg))
 
 Sample API key
 ```
