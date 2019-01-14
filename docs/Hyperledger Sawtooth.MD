@@ -269,6 +269,6 @@ To retrieve a file from the blockchain and decrypt it, use `post /api/v1/decrypt
   "aes_iv": "epWNEtu58YaA"
 }
 ```
-The file is decrupted, verified and retrieved from the blockchain.
+The file is decrypted, verified and retrieved from the blockchain.
 
 Have a query? Email us on info@primechain.in
