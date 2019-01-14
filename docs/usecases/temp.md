@@ -34,7 +34,7 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [5. Cross-border and domestic trade payments](#5-cross-border-and-domestic-trade-payments)
 
 
-***[6. Factoring / invoice discounting platform](#6-factoring-/-invoice-discounting-platform)***   
+***[6. Factoring / invoice discounting platform](#6-factoring-invoice-discounting-platform)***   
 [6.1 Process flow](#61-process-flow)   
 [6.2 Publishing a new invoice](#62-publishing-a-new-invoice)   
 [6.3 Viewing invoices](#63-viewing-invoices)   
