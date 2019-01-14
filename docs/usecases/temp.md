@@ -19,7 +19,7 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [1.7 Additional addresses](#17-additional-addresses)
 
 ***[2. Trade channels and permissions to write to them](#2-trade-channels-and-permissions-to-write-to-them)***    
-[2.1 Create a new data stream](#21-create-a-new-data-stream)   
+[2.1 Create a new trade channel](#21-create-a-new-trade-channel)   
 [2.2 Grant write permissions](#22-grant-write-permissions)   
 [2.3 Revoke write permissions](#23-revoke-write-permissions)   
 
@@ -93,9 +93,15 @@ Nodes on the commercial / production TRADE-Chain are available free to all Bankc
 ### 1.5 API keys for sandbox
 API keys authenticate access to the TRADE-Chain sandbox. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](http://www.primechaintech.com/img/api_documentation/sample_rest_api_client.jpg))
 
-Sample API key
+Sample output
 ```
-k3wq1TdYcEGb7sqX&Es8-xVR$ocdw5ICLtIh5rT661UDaZoKmLV!12X01ce!GnEW
+{
+"status": 200,
+"api_key": "zA-nTC$sKTn5VyYAhED66w3CVDBvJ7K6!c0Vbu0pMY13QtwCS&YfqIF0!1$qpHVv",
+"message": {
+14040: "A new API key has been successfully generated"
+}
+}
 ```
 
 ### 1.6 Default address for a node
@@ -107,7 +113,7 @@ If required, additional addresses can be created on a node using `get /api/v1/cr
 2. private key
 3. primechain address
 
-The output will be the primechain address of the newly created signer. The private key is automatically stored in your node. This will not be visible to other nodes. This address will have permissions to send and receive assets e.g. invoices, fiat currency backed tokens, etc.
+The output will be the newly created primechain address. The corresponding private key is automatically stored in your node. This will not be visible to other nodes. This address will have permissions to send and receive assets e.g. invoices, fiat currency backed tokens, etc.
 
 Sample output
 ```
@@ -123,21 +129,26 @@ Storing all the data relating to a transaction, shipment or event in a dedicated
 
 ### 2.1 Create a new trade channel
 To create a new trade channel use `post /api/v1/create_trade_channel` and provide these 4 parameters:
-1. `primechain_address` - your node's default primechain address
-2. `stream_name` - the stream name. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces.
-3. `details` - a short description of the data stream
-4. `open`: `true` or `false` - whether the stream is open or not. If open is set to true, write permissions need not be explicitly provided. All addresses can write to the stream. If open is set to false, write permissions need to be explicitly provided. It is recommended to keep the stream as closed and to provide write permissions on an address basis. 
+1. `primechain_address` - your node's default primechain address. This is provided to you when your node connects to TRADE-Chain.
+2. `trade_channel_name` - the trade channel name. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces.
+3. `details` - a short description of the trade channel
+4. `open`: `true` or `false` 
+    * if set to `true`, write permissions need not be explicitly provided. All addresses can write to the trade channel.
+    * If set to `false`, write permissions need to be explicitly provided. 
+    
+***Note***: It is recommended to keep the set the value to `false` and to provide write permissions on an address basis. 
 
 Sample input
 ```
 {
   "primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp",
-  "stream_name": "200_tons_xyz_Jan_2019",
-  "details": "This stream is for the consignment of 200 tons of xyz material",
+  "trade_channel_name": "200_tons_xyz_Feb_2019",
+  "trade_channel_details": "This trade channel is for the consignment of 200 tons of xyz material",
   "open":false
 }
 ```
-The output is the transaction id of the transaction creating the stream - `tx_id`.
+The output is the transaction id of the transaction creating the trade channel - `tx_id`.
+
 Sample output
 ```
 {
@@ -147,19 +158,19 @@ Sample output
 ```
 
 ### 2.2 Grant write permissions
-To grant an entity write permission to a stream, use `post /api/v1/grant_write_permission_to_stream` and provide 3 parameters:
-1. `primechain_address_stream_writer` - the primechain address of the entity to be granted write permission.
-2. `stream_name` - the name of the relevant data stream.
-3. `primechain_address_stream_creator` - the primechain address of the creator of the data stream.
+To grant an entity write permission to a trade channel, use `post /api/v1/grant_write_permission_to_trade_channel` and provide 3 parameters:
+1. `trade_channel_writer` - the primechain address of the entity to be granted write permission to the trade channel.
+2. `trade_channel_name` - the name of the relevant the trade channel.
+3. `trade_channel_creator` - the primechain address of the creator of the trade channel.
 
-***Note:*** This must be run on the node containing the private key of the stream creator.
+***Note:*** This must be run on the node containing the private key of the `trade_channel_writer`.
 
 Sample input
 ```
 {
-  "primechain_address_stream_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
-  "stream_name": "200_tons_xyz_Jan_2019",
-  "primechain_address_stream_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
+  "trade_channel_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
+  "stream_name": "200_tons_xyz_Feb_2019",
+  "trade_channel_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
 }
 ```
 Sample output
@@ -171,19 +182,19 @@ Sample output
 ```
 
 ### 2.3 Revoke write permissions
-To revoke an entity's write permission to a stream, use `post /api/v1/revoke_write_permission_to_stream` and provide 3 parameters:
-1. `primechain_address_stream_writer` - the primechain address of the entity whose write permission is to be revoked.
-2. `stream_name` - the name of the relevant data stream.
-3. `primechain_address_stream_creator` - the primechain address of the creator of the data stream.
+To revoke an entity's write permission to a trade channel, use `post /api/v1/revoke_write_permission_to_trade_channel` and provide 3 parameters:
+1. `trade_channel_writer` - the primechain address of the entity whose write permission is to be revoked.
+2. `trade_channel_name` - the name of the relevant trade channel.
+3. `trade_channel_creator` - the primechain address of the creator of the trade channel.
 
-***Note:*** This must be run on the node containing the private key of the stream creator.
+***Note:*** This must be run on the node containing the private key of the `trade_channel_creator`.
 
 Sample input
 ```
 {
-  "primechain_address_stream_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
+  "trade_channel_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
   "stream_name": "200_tons_xyz_Jan_2019",
-  "primechain_address_stream_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
+  "trade_channel_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
 }
 ```
 Sample output
@@ -213,7 +224,7 @@ To encrypt, sign and publish data to TRADE-Chain, use `post /api/v1/publish_data
 1. `primechain_address` - the primechain address of the signer.
 2. `keys` - the keys to enable quick searching of the data.
 3. `data` - the data. 
-4. `stream_name` - the name of the data stream to which the data is to be published.
+4. `trade_channel_name` - the name of the trade channel to which the data is to be published.
 
 Sample input
 ```
@@ -225,7 +236,7 @@ Sample input
       "key2"
     ],
    "data": "This is the data that will be encryptd and stored.",
-   "stream_name": "200_tons_xyz_Jan_2019"
+   "trade_channel_name": "200_tons_xyz_Jan_2019"
 }
 ```
 ***This is what happens:***   
@@ -237,7 +248,7 @@ Sample input
     * the AES password    
     * the Initialization Vector (IV)    
     * the Authentication Tag (tag)   
-5. The encrypted data and the tag are published to the data stream.
+5. The encrypted data and the tag are published to the specified trade channel.
 
 ***The following is the output:***
 1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the data stream.
@@ -245,7 +256,7 @@ Sample input
 3. `signature` - the digital signature
 4. `aes_password` - the AES password
 5. `aes_iv` - the Initialization Vector (IV)
-6. `stream_name` - the name of the data-stream to which the data is published. 
+6. `trade_channel_name` - the name of the trade channel to which the data is published. 
 
 Sample output
 ```
@@ -258,7 +269,7 @@ Sample output
     "signature": "INfKjUiGDpMQ68K4GlTwh3Z3LDXrWpiJ4L2Qvn1wSqSxd0zauOZDn292E32GAQk6fsNvPl1G9ty1iRfXJWJDW0w=",
     "aes_password": "ScX56ZWKuqYsMpINcXScyfgSL0Ihc05c",
     "aes_iv": "lSr9HJqWN1eA",
-    "stream_name": "200_tons_xyz_Jan_2019"
+    "trade_channel_name": "200_tons_xyz_Feb_2019"
   }
 }
 ```
@@ -269,7 +280,7 @@ To retrieve data use `post /api/v1/get_data` and pass 5 parameters:
 2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the data stream.
 3. `aes_password` - the AES password.
 4. `aes_iv` - the Initialization Vector (IV).
-5. `stream_name` - the name of the data stream from which the data is to be retrieved.
+5. `trade_channel_name` - the name of the trade channel from which the data is to be retrieved.
 
 Sample input
 ```
@@ -278,7 +289,7 @@ Sample input
   "tx_id_signature": "7c72b8fc633d9a091e878ef6c610e4383ca597f846092a35077374fb0accea76",
   "aes_password": "kfkNhEWZErbMLhtKkg6zSTy85Aq9QIJr",
   "aes_iv": "9UuZX4vgZ8r3",
-  "stream_name": "200_tons_xyz_Jan_2019"
+  "trade_channel_name": "200_tons_xyz_Feb_2019"
 }
 ```
 ***This is what happens:***   
@@ -339,9 +350,6 @@ Sample input
 16. `0000` denotes the correction station ID (if any).
 17. `*40` denotes the checksum.   
 (Source: https://www.gpsworld.com/what-exactly-is-gps-nmea-data/)
-
-
-
 
 ## 5. Cross-border and domestic trade payments
 
@@ -610,7 +618,7 @@ Sample input
   "token_amount": 100
 }
 ```
-The following gets published to the `OFFER_DETAIL_STREAM` data-stream:
+The following gets published to the `OFFER_DETAIL_REPOSITORY`:
 1. The primechain address of the bidder
 2. Reference number of the invoice
 3. Name of the fiat currency token 
