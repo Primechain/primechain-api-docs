@@ -48,7 +48,7 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 ### 1.1 TRADE-Chain nodes
 TRADE-Chain is a permissioned multi-framework blockchain powered by Primechain APIs. The following types of TRADE-Chain nodes are available:
 1. Importer and Exporters nodes
-2. Bank modes
+2. Bank nodes
 3. Financer and investor nodes
 4. Insurer nodes
 5. Export credit agency nodes
