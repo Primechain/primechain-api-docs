@@ -18,7 +18,7 @@ The market for trade finance is above US$ 12 trillion annually. TRADE-Chain is a
 [1.6 Default address for a node](#16-default-address-for-a-node)   
 [1.7 Additional addresses](#17-additional-addresses)
 
-***[2. Data Streams and permissions to write to them](#2-data-streams-and-permissions-to-write-to-them)***    
+***[2. Trade channels and permissions to write to them](#2-trade-channels-and-permissions-to-write-to-them)***    
 [2.1 Create a new data stream](#21-create-a-new-data-stream)   
 [2.2 Grant write permissions](#22-grant-write-permissions)   
 [2.3 Revoke write permissions](#23-revoke-write-permissions)   
@@ -91,7 +91,7 @@ Nodes on the commercial / production TRADE-Chain are available free to all Bankc
 * [Blockchain Security Controls](http://www.primechaintech.com/bsc.php) provide the security controls and information security framework.
 
 ### 1.5 API keys for sandbox
-API keys authenticate access to the TRADE-Chain sandbox. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](https://camo.githubusercontent.com/c3e402907d4735fa944e79888ddc58209247e07e/687474703a2f2f7777772e7072696d65636861696e746563682e636f6d2f696d672f6170695f646f63756d656e746174696f6e2f6170695f6b65792e6a7067))
+API keys authenticate access to the TRADE-Chain sandbox. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](http://www.primechaintech.com/sample_rest_api_client.jpg)
 
 Sample API key
 ```
@@ -117,11 +117,12 @@ Sample output
 }
 ```
 
-## 2. Data Streams and permissions to write to them
-A data stream enables TRADE-Chain to be used as a general purpose append-only database, with TRADE-Chain providing timestamping, notarization and immutability. Storing all the data relating to a transaction, shipment or event in a dedicated data stream enables quick and efficient data retrieval and processing.
+## 2. Trade channels and permissions to write to them
 
-### 2.1 Create a new data stream
-To create a new data stream use `post /api/v1/create_data_stream` and provide these 4 parameters:
+Storing all the data relating to a transaction, shipment or event in a dedicated trade channel enables quick and efficient data retrieval and processing.
+
+### 2.1 Create a new trade channel
+To create a new trade channel use `post /api/v1/create_trade_channel` and provide these 4 parameters:
 1. `primechain_address` - your node's default primechain address
 2. `stream_name` - the stream name. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces.
 3. `details` - a short description of the data stream
@@ -757,5 +758,7 @@ Sample output
 }
 
 ```
+
+## 7. Auction platform for goods and freight contracts
 ---
 Have a query? Email us on info@primechain.in
