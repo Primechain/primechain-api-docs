@@ -24,7 +24,9 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 [3.2 Issuance of documents on TRADE-Chain](#32-issuance-of-documents-on-trade-chain)   
 [3.3 Retrieving documents from TRADE-Chain](#33-retrieving-documents-from-trade-chain)    
 
-***[4. Real-time tracking of cargo](#4-real-time-tracking-of-cargo)*** 
+***[4. Real-time tracking of cargo](#4-real-time-tracking-of-cargo)***    
+[4.1 Publishing GPS data](#41-publishing-gps-data)   
+[4.2 Retrieving GPS data](#42-retrieving-gps-data)   
 
 ***[5. Cross-border and domestic trade payments](#5-cross-border-and-domestic-trade-payments)***   
 [5.1 Creating a new token](#51-creating-a-new-token)   
@@ -44,14 +46,14 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 [6.9 Buyback of the invoice upon maturity of invoice](#69-buyback-of-the-invoice-upon-maturity-of-invoice)   
 [6.10 Retiring the invoice](#610-retiring-the-invoice)   
 
-***[7. Auction platform for goods and freight contracts](#7-auction-platform-for-goods-and-freight-contracts)***
-[7.1 Publishing a contract for goods or freight](#71-publishing-a-contract-for-goods-or-freight)
-[7.2 Bidding for a contract](#72-bidding-for-a-contract)
-[7.3 Cancelling a bid by the bidder](#73-cancelling-a-bid-by-the-bidder)
-[7.4 Viewing bids](#74-viewing-bids)
-[7.5 Rejection of bids](#75-rejection-of-bids)
-[7.6 Acceptance of bids](#76-acceptance-of-bids)
-[7.7 Retiring a contract](#77-retiring-a-contract)
+***[7. Auction platform for goods and freight contracts](#7-auction-platform-for-goods-and-freight-contracts)***   
+[7.1 Publishing a contract for goods or freight](#71-publishing-a-contract-for-goods-or-freight)   
+[7.2 Bidding for a contract](#72-bidding-for-a-contract)   
+[7.3 Cancelling a bid by the bidder](#73-cancelling-a-bid-by-the-bidder)   
+[7.4 Viewing bids](#74-viewing-bids)   
+[7.5 Rejection of bids](#75-rejection-of-bids)   
+[7.6 Acceptance of bids](#76-acceptance-of-bids)   
+[7.7 Retiring a contract](#77-retiring-a-contract)   
 
 ## 1. Introduction and overview
 
@@ -299,6 +301,9 @@ Sample output
 
 ## 4. Real-time tracking of cargo
 
+### 4.1 Publishing GPS data
+
+
 It is recommended to use National Marine Electronics Association (NMEA) formatted Global Positioning System (GPS) data while publishing real-time GPS data for cargo.
 
 Sample input
@@ -330,6 +335,10 @@ Sample input
 16. `0000` denotes the correction station ID (if any).
 17. `*40` denotes the checksum.   
 (Source: https://www.gpsworld.com/what-exactly-is-gps-nmea-data/)
+
+
+### 4.2 Retrieving GPS data
+
 
 ## 5. Cross-border and domestic trade payments
 
