@@ -63,7 +63,7 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 [9.1 Issuing AML data](#91-issuing-aml-data)   
 [9.2 Retrieving AML data](#92-retrieving-aml-data)   
 
-***[10. Rating and review](#10-rating-and-review)***
+***[10. Rating and review](#10-rating-and-review)***   
 [10.1 Submitting a review](#101-submitting-a-review)   
 [10.2 Viewing reviews](#102-viewing-reviews)   
 
