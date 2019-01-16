@@ -55,6 +55,18 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 [7.6 Acceptance of bids](#76-acceptance-of-bids)   
 [7.7 Retiring a contract](#77-retiring-a-contract)   
 
+***[8. KYC and Digital Identity](#8-kyc-and-digital-identity)***   
+[8.1 Issuance of KYC data](#81-issuance-of-kyc-data)   
+[8.2 Retrieving KYC data](#82-retrieving-kyc-data)  
+
+***[9. Anti-Money Laundering](#9-anti-money-laundering)***   
+[9.1 Issuing AML data](#91-issuing-aml-data)   
+[9.2 Retrieving AML data](#92-retrieving-aml-data)   
+
+***[10. Rating and review](#10-rating-and-review)***
+[10.1 Submitting a review](#101-submitting-a-review)   
+[10.2 Viewing reviews](#102-viewing-reviews)   
+
 ## 1. Introduction and overview
 
 ### 1.1 TRADE-Chain nodes
@@ -780,6 +792,27 @@ Sample output
 ### 7.6 Acceptance of bids
 
 ### 7.7 Retiring a contract
+
+
+## 8. KYC and Digital Identity
+
+### 8.1 Issuance of KYC data
+
+### 8.2 Retrieving KYC data
+
+
+## 9. Anti-Money Laundering 
+
+### 9.1 Issuing AML data
+
+### 9.2 Retrieving AML data
+
+
+## 10. Rating and review
+
+### 10.1 Submitting a review
+
+### 10.2 Viewing reviews
 
 ---
 Have a query? Email us on info@primechain.in
