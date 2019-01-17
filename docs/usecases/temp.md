@@ -68,15 +68,18 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 [10.1 Submitting a review](#101-submitting-a-review)   
 [10.2 Viewing reviews](#102-viewing-reviews)   
 
+***[11. Supply chain transparency and counterfeit reduction](#11-supply-chain-transparency-and-counterfeit-reduction)***
+
+
 ## 1. Introduction and overview
 
 ### 1.1 TRADE-Chain components and modules
 TRADE-Chain comprises:
-1. API layer
-2. Blockchain layer
-3. Database layer
-4. Encryption Engine
-5. Electronic Signature Engine
+1. Blockchain layer: This holds the trade channels, encrypted and unencrypted data, and handles the asset lifecycle management.
+2. Database layer: This powers the API key management and rating function.
+3. Encryption Engine: This provides symmetric and asymmetric encryption function.
+4. Electronic Signature Engine: This provides electronic signature functions for data and documents.
+5. API layer: The above components interact with the user systems though this layer.
 
 TRADE-Chain modules are:
 1. Trade documents   
@@ -835,6 +838,11 @@ Sample output
 ### 10.1 Submitting a review
 
 ### 10.2 Viewing reviews
+
+
+## 11. Supply chain transparency and counterfeit reduction
+
+Details coming soon
 
 ---
 Have a query? Email us on info@primechain.in
