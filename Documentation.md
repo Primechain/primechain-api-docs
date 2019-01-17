@@ -4,10 +4,7 @@
 
 Documentation for [Primechain API](https://github.com/Primechain/primechain-api)
 
-Note: To generate an API key, use `get /api/v1/get_api_key`. Add the key to REST API as illustrated below:
-
-![Primechain-API](http://www.primechaintech.com/img/api_documentation/api_key.jpg)
-
+API keys authenticate access to Primechain-API powered blockchains. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](http://www.primechaintech.com/img/api_documentation/sample_rest_api_client.jpg))
 
 ## 1. [Blockchain administration](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD)
 1. [Blockchain parameters](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Blockchain%20administration.MD#1-blockchain-parameters)
@@ -30,7 +27,7 @@ Note: To generate an API key, use `get /api/v1/get_api_key`. Add the key to REST
 9. [Validate address](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#9-validate-address)
 10. [List entities](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Entities.MD#10-list-entities)
 
-## 3. [Digital Signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD)
+## 3. [Electronic Signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Electronic%20signatures.MD)
 1. [Signing data](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#1-signing-data)
 2. [Verifying a digital signature](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#2-verifying-a-digital-signature)   
 3. [Sign and store signature in GREAT](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Digital%20signatures.MD#3-sign-and-store-signature-in-great)
