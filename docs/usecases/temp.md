@@ -5,14 +5,15 @@
 
 TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade finance sector.
 
-![Letter of credit](http://www.primechaintech.com/img/tradechain/tradechain_top.jpg)
+![TRADE-Chain](http://www.primechaintech.com/img/tradechain/tradechain_top.jpg)
 
 ### Table of contents  
 
 ***[1. Introduction and overview](#1-introduction-and-overview)***   
-[1.1 TRADE-Chain nodes](#11-trade-chain-nodes)   
-[1.2 API keys for sandbox](#12-api-keys-for-sandbox)   
-[1.3 Creating addresses](#13-creating-addresses)   
+[1.1 TRADE-Chain components](#11-trade-chain-components)   
+[1.2 TRADE-Chain nodes](#12-trade-chain-nodes)   
+[1.3 API keys for sandbox](#13-api-keys-for-sandbox)   
+[1.4 Creating addresses](#14-creating-addresses)   
 
 ***[2. Trade channels and permissions to write to them](#2-trade-channels-and-permissions-to-write-to-them)***    
 [2.1 Create a new trade channel](#21-create-a-new-trade-channel)   
@@ -69,7 +70,17 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 
 ## 1. Introduction and overview
 
-### 1.1 TRADE-Chain nodes
+### 1.1 TRADE-Chain components
+TRADE-Chain comprises:
+1. API layer
+2. Blockchain layer
+3. Database layer
+4. Encryption Engine
+5. Electronic Signature Engine
+
+![TRADE-Chain](http://www.primechaintech.com/img/api_documentation/how-trade-chain-works.jpg)
+
+### 1.2 TRADE-Chain nodes
 TRADE-Chain is a permissioned blockchain powered by Primechain APIs. The following types of TRADE-Chain nodes are available:
 1. Importer and Exporters nodes
 2. Bank nodes
@@ -87,7 +98,7 @@ To access the TRADE-Chain sandbox, email us on info@primechain.in
 * Ubuntu 16.04 machine with 32 GB RAM, 4 core processor, 100 GB SSD disk with ports 22, 15590 and 61172 open.   
 * Ubuntu 16.04 machine with 32 GB RAM, 8 core processor, 25 GB SSD disk with ports 22 and 2512 open.   
 
-### 1.2 API keys for sandbox
+### 1.3 API keys for sandbox
 API keys authenticate access to the TRADE-Chain sandbox. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](http://www.primechaintech.com/img/api_documentation/sample_rest_api_client.jpg))
 
 Sample output
@@ -101,7 +112,7 @@ Sample output
 }
 ```
 
-### 1.3 Creating addresses
+### 1.4 Creating addresses
 If required, additional addresses can be created on a node using `get /api/v1/create_entity`. The following are generated:
 1. public key
 2. private key
