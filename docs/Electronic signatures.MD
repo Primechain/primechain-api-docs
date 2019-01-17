@@ -1,4 +1,4 @@
-# Digital Signatures
+# Electronic Signatures
 
 1. [Signing data](#1-signing-data)
 2. [Verifying a digital signature](#2-verifying-a-digital-signature)
