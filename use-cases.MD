@@ -1,4 +1,4 @@
-# Use cases for BFS
+# Use cases
 
 1. Auction of assets, goods and freight contracts
 2. [Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
