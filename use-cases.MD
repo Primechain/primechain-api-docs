@@ -12,5 +12,5 @@
 10. Rating and review of vendors, merchants and others
 11. Supply chain transparency and counterfeit reduction
 12. Trade document issuance and sharing
-13. Trade finance
+13. [Trade finance](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md)
 14. Trade payments - global and domestic
