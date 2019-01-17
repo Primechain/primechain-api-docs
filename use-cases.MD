@@ -9,8 +9,10 @@
 7. [Encrypted & non-encrypted data and file storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD)
 8. [Factoring and invoice discounting](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md#6-factoring-and-invoice-discounting-platform)
 9. [KYC and Digital Identity](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md#8-kyc-and-digital-identity)
-10. Rating and review of vendors, merchants and others
+10. [Rating and review of vendors, merchants and others](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md#10-rating-and-review)
 11. [Supply chain transparency and counterfeit reduction](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md#11-supply-chain-transparency-and-counterfeit-reduction)
 12. [Trade document issuance and sharing](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md#3-real-time-issuing-and-sharing-of-trade-documents)
 13. [Trade finance](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md)
 14. [Trade payments - global and domestic](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md#5-cross-border-and-domestic-trade-payments)
+---
+Have a query? Email us on info@primechain.in
