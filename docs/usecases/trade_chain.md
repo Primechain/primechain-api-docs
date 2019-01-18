@@ -13,7 +13,8 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 [2. System requirements](#2-system-requirements)   
 [3. API keys for the sandbox](#3-api-keys-for-the-sandbox)   
 [4. Creating addresses](#4-creating-addresses)   
-[5. Components and modules](#5-components-and-modules)   
+[5. Trade channels](#5-trade-channels)   
+[6. Components and modules](#5-components-and-modules)   
 
 # 1. Executive summary
 
@@ -116,11 +117,91 @@ Sample output
 }
 ```
 
-[5.1 Trade documents issuance and sharing](#51-trade-documents-issuance-and-sharing)
+# 5. Trade channels
 
-# 5. Components and modules
+Storing all the data relating to a transaction, shipment or event in a dedicated trade channel enables quick and efficient data retrieval and processing.
 
-## 5.1 Trade documents issuance and sharing
+# 5.1 Create a new trade channel
+To create a new trade channel use `post /api/v1/create_trade_channel` and provide these 4 parameters:
+1. `primechain_address` - your node's default primechain address. This is provided to you when your node connects to TRADE-Chain.
+2. `trade_channel_name` - the trade channel name. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces.
+3. `details` - a short description of the trade channel
+4. `open`: `true` or `false` 
+    * if set to `true`, write permissions need not be explicitly provided. All addresses can write to the trade channel.
+    * If set to `false`, write permissions need to be explicitly provided. 
+    
+***Note***: It is recommended to keep the set the value to `false` and to provide write permissions on an address basis. 
+
+Sample input
+```
+{
+  "primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp",
+  "trade_channel_name": "200_tons_xyz_Feb_2019",
+  "trade_channel_details": "This trade channel is for the consignment of 200 tons of xyz material",
+  "open":false
+}
+```
+The output is the transaction id of the transaction creating the trade channel - `tx_id`.
+
+Sample output
+```
+{
+ "status": 200,
+ "tx_id": "d84f84849431d5a5c5565530021d4c8bc37bf7180c58a116bd42295f90b434e2"
+}
+```
+
+### 5.2 Grant write permissions
+To grant an entity write permission to a trade channel, use `post /api/v1/grant_write_permission_to_trade_channel` and provide 3 parameters:
+1. `trade_channel_writer` - the primechain address of the entity to be granted write permission to the trade channel.
+2. `trade_channel_name` - the name of the relevant the trade channel.
+3. `trade_channel_creator` - the primechain address of the creator of the trade channel.
+
+***Note:*** This must be run on the node containing the private key of the `trade_channel_writer`.
+
+Sample input
+```
+{
+  "trade_channel_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
+  "trade_channel_name": "200_tons_xyz_Feb_2019",
+  "trade_channel_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
+}
+```
+Sample output
+```
+{
+  "status": 200,
+  "tx_id": "94179d61270f24acc208b8647e735cb54307c4ccbfece64ebae0e9539c37b2bf"
+}
+```
+
+### 5.3 Revoke write permissions
+To revoke an entity's write permission to a trade channel, use `post /api/v1/revoke_write_permission_to_trade_channel` and provide 3 parameters:
+1. `trade_channel_writer` - the primechain address of the entity whose write permission is to be revoked.
+2. `trade_channel_name` - the name of the relevant trade channel.
+3. `trade_channel_creator` - the primechain address of the creator of the trade channel.
+
+***Note:*** This must be run on the node containing the private key of the `trade_channel_creator`.
+
+Sample input
+```
+{
+  "trade_channel_writer": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
+  "trade_channel_name": "200_tons_xyz_Feb_2019",
+  "trade_channel_creator": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp"
+}
+```
+Sample output
+```
+{
+  "status": 200,
+  "tx_id": "83fd7c73360cc80a4bc89c3fa3de956deb145882219bcce3b5631a916b15b97a"
+}
+```
+
+# 6. Components and modules
+
+## 6.1 Trade documents issuance and sharing
 TRADE-Chain provides a robust immutable platform for real-time issuing and sharing of trade documents. For details, see:
 
 ## 5.2 Cargo tracking
