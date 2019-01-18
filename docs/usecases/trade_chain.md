@@ -14,7 +14,7 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 [3. API keys for the sandbox](#3-api-keys-for-the-sandbox)   
 [4. Creating addresses](#4-creating-addresses)   
 [5. Trade channels](#5-trade-channels)   
-[6. Components and modules](#5-components-and-modules)   
+[6. Components and modules](#6-components-and-modules)   
 
 # 1. Executive summary
 
@@ -121,7 +121,7 @@ Sample output
 
 Storing all the data relating to a transaction, shipment or event in a dedicated trade channel enables quick and efficient data retrieval and processing.
 
-# 5.1 Create a new trade channel
+## 5.1 Create a new trade channel
 To create a new trade channel use `post /api/v1/create_trade_channel` and provide these 4 parameters:
 1. `primechain_address` - your node's default primechain address. This is provided to you when your node connects to TRADE-Chain.
 2. `trade_channel_name` - the trade channel name. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces.
@@ -151,7 +151,7 @@ Sample output
 }
 ```
 
-### 5.2 Grant write permissions
+## 5.2 Grant write permissions to a trade channel
 To grant an entity write permission to a trade channel, use `post /api/v1/grant_write_permission_to_trade_channel` and provide 3 parameters:
 1. `trade_channel_writer` - the primechain address of the entity to be granted write permission to the trade channel.
 2. `trade_channel_name` - the name of the relevant the trade channel.
@@ -175,7 +175,7 @@ Sample output
 }
 ```
 
-### 5.3 Revoke write permissions
+### 5.3 Revoke write permissions to a trade channel
 To revoke an entity's write permission to a trade channel, use `post /api/v1/revoke_write_permission_to_trade_channel` and provide 3 parameters:
 1. `trade_channel_writer` - the primechain address of the entity whose write permission is to be revoked.
 2. `trade_channel_name` - the name of the relevant trade channel.
