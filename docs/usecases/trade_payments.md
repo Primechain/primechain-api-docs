@@ -13,6 +13,7 @@ TRADE-Chain provides a platform for real-time cross-border and domestic trade pa
 3. [Transfer token](#3-transfer-token)   
 4. [Create additional units of an open token](#4-create-additional-units-of-an-open-token)   
 5. [Balances of all tokens](#5-balances-of-all-tokens)   
+6. [Details of a specified token](#6-details-of-a-specified-token)
 
 # 1. Overview
 
@@ -159,7 +160,56 @@ Sample output
   ],
 }
 ```
+# 6. Details of a specified token
 
+To get details of a specific token, use post /api/v1/asset_details and pass the asset name or referece id as a parameter.
+```
+{
+  "asset_name": "National-Bank-USD-Series-A"
+}
+```
+Output
+```
+{
+"status": 200,
+"response": [
+  {
+"name": "National-Bank-USD-Series-A",
+"issuetxid": "00bba7916962fe440546f84bc70be6da38130731d536e3f7b50aa80ff3bfa447",
+"assetref": "755-266-47872",
+"multiple": 1,
+"units": 1,
+"open": true,
+"restrict": {
+"send": false,
+"receive": false
+},
+"details": {
+"details": "Issued by National Bank against US dollar escrow account number 12345"
+},
+"issueqty": 19500,
+"issueraw": 19500,
+"subscribed": true,
+"synchronized": true,
+"transactions": 1,
+"confirmed": 1,
+"issues": [
+  {
+"txid": "00bba7916962fe440546f84bc70be6da38130731d536e3f7b50aa80ff3bfa447",
+"qty": 19500,
+"raw": 19500,
+"details": {
+"details": "Issued by National Bank against US dollar escrow account number 12345"
+},
+"issuers": [
+  "1YYAavvJgKisoTB7sVakqKuMaMVwL5GbKJ1kai"
+],
+}
+],
+}
+],
+}
+```
 ---
 Have a query? Email us on info@primechain.in
 
