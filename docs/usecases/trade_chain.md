@@ -125,7 +125,7 @@ Storing all the data relating to a transaction, shipment or event in a dedicated
 To create a new trade channel use `post /api/v1/create_trade_channel` and provide these 4 parameters:
 1. `primechain_address` - your node's default primechain address. This is provided to you when your node connects to TRADE-Chain.
 2. `trade_channel_name` - the trade channel name. This must be unique across the blockchain and can contain a maximum of 32 characters including blank spaces.
-3. `details` - a short description of the trade channel
+3. `trade_channel_details` - a short description of the trade channel
 4. `open`: `true` or `false` 
     * if set to `true`, write permissions need not be explicitly provided. All addresses can write to the trade channel.
     * If set to `false`, write permissions need to be explicitly provided. 
