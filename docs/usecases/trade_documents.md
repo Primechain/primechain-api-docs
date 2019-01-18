@@ -4,30 +4,17 @@
 
 TRADE-Chain provides a robust immutable platform for real-time issuing and sharing of trade documents. 
 
-![Trade documents issuance and sharing](http://www.primechaintech.com/img/api_documentation/trade_documents.jpg)
+![Trade documents issuance and sharing](http://www.primechaintech.com/img/api_documentation/trade_documents.png)
 
 
 ***Table of contents***
 
-[1. Commercial Invoice](#1-commercial-invoice)   
-[2. Letter of credit](#2-letter-of-credit)   
-[3. Straight Bill of Lading](#3-straight-bill-of-lading)   
-[4. Bank guarantee](#4-bank-guarantee)
+[1. Issuance of documents on TRADE-Chain](#1-issuance-of-documents-on-trade-chain)   
+[2. Retrieving documents from TRADE-Chain](#2-retrieving-documents-from-trade-chain)   
+[3. Types of trade documents](#3-types-of-trade-documents)
 
 
-# 1 Types of documents
-
-TRADE-Chain provides a transparent repository for secure & real time issuing and sharing of trade documents such as:
-
-***1. Commercial Documents:*** Quotation, Sales Contract, Pro Forma Invoice, Commercial Invoice, Packing List, Inspection Certificate, Insurance Policy, Insurance Certificate, Product Testing Certificate, Health Certificate, Phytosanitary Certificate, Fumigation Certificate, ATA Carnet, Consular Invoice.
-
-***2. Transport Documents:*** Shipping Order, Dock / Mate's Receipt, Bill of Lading, House Bill of Lading, Sea Waybill, Air Waybill, House Air Waybill, Shipping Guarantee, Packing List.
-
-***3. Financial Documents:*** Documentary Credit, Standby Credit, Collection Instruction, Bill of Exchange or Draft, Trust Receipt, Promissory Note, [Letter of Credit](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md#2-letter-of-credit), [Bank Guarantee](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md#4-bank-guarantee).
-
-***4. Government Documents:*** Certificate of Origin, Certificate of Origin, Import / Export Declaration, Import / Export Licence, International Import Certificate, Delivery Verification Certificate, Landing Certificate, Customs Invoice.
-
-### 3.2 Issuance of documents on TRADE-Chain
+# 1. Issuance of documents on TRADE-Chain
 To encrypt, sign and publish data to TRADE-Chain, use `post /api/v1/publish_data` and pass 4 parameters: 
 1. `primechain_address` - the primechain address of the signer.
 2. `keys` - the keys to enable quick searching of the data.
@@ -82,7 +69,7 @@ Sample output
 }
 ```
 
-## 3.3 Retrieving documents from TRADE-Chain
+# 2. Retrieving documents from TRADE-Chain
 To retrieve data use `post /api/v1/get_data` and pass 5 parameters:
 1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the trade channel.
 2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the trade channel.
@@ -124,7 +111,17 @@ Sample output
 }
 }
 ```
+# 3. Types of trade documents
 
+TRADE-Chain provides a transparent repository for secure & real time issuing and sharing of trade documents such as:
+
+***1. Commercial Documents:*** Quotation, Sales Contract, Pro Forma Invoice, Commercial Invoice, Packing List, Inspection Certificate, Insurance Policy, Insurance Certificate, Product Testing Certificate, Health Certificate, Phytosanitary Certificate, Fumigation Certificate, ATA Carnet, Consular Invoice.
+
+***2. Transport Documents:*** Shipping Order, Dock / Mate's Receipt, Bill of Lading, House Bill of Lading, Sea Waybill, Air Waybill, House Air Waybill, Shipping Guarantee, Packing List.
+
+***3. Financial Documents:*** Documentary Credit, Standby Credit, Collection Instruction, Bill of Exchange or Draft, Trust Receipt, Promissory Note, [Letter of Credit](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md#2-letter-of-credit), [Bank Guarantee](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md#4-bank-guarantee).
+
+***4. Government Documents:*** Certificate of Origin, Certificate of Origin, Import / Export Declaration, Import / Export Licence, International Import Certificate, Delivery Verification Certificate, Landing Certificate, Customs Invoice.
 
 ## 1. Commercial Invoice
 
