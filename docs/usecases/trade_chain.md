@@ -13,6 +13,7 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 [2. System requirements](#2-system-requirements)   
 [3. API keys for the sandbox](#3-api-keys-for-the-sandbox)   
 [4. Creating addresses](#4-creating-addresses)   
+[5. Components and modules](#5-components-and-modules)   
 
 # 1. Executive summary
 
@@ -114,6 +115,52 @@ Sample output
   "primechain_address": "1VCeqGYXLaqMtAFtxTNeTzfW8T714us2t3uwYM"
 }
 ```
+
+[5.1 Trade documents issuance and sharing](#51-trade-documents-issuance-and-sharing)
+
+# 5. Components and modules
+
+## 5.1 Trade documents issuance and sharing
+TRADE-Chain provides a robust immutable platform for real-time issuing and sharing of trade documents. For details, see:
+
+## 5.2 Cargo tracking
+TRADE-Chain provides a platform for real-time tracking of cargo. For details, see:
+
+## 5.3 Cross border and domestic trade payments
+TRADE-Chain provides a platform for real-time cross-border and domestic trade payments. For details, see:
+
+## 5.4 Auction of goods and freight contracts
+TRADE-Chain provides a platform for real-time, transparent auction of goods and freight contracts. For details, see:
+
+## 5.5 factoring / invoice discounting platform
+TRADE-Chain provides a secure and transparent real-time factoring / invoice discounting platform. For details, see:
+
+## 5.6 KYC & Digital Identity
+TRADE-Chain provides a robust immutable platform for real-time KYC & Digital Identity verification. For details, see:
+
+## 5.7 Anti-Money Laundering review
+TRADE-Chain provides a robust immutable platform for real-time Anti-Money Laundering (AML) review. For details, see:
+
+## 5.8 Rating and review platform
+TRADE-Chain provides a transparent rating and review platform. For details, see:
+
+## 5.9 Supply chain transparency and counterfeit reduction
+TRADE-Chain provides a platform for supply chain transparency & counterfeit reduction. For details, see:
+
+## 5.10 Loyalty program
+TRADE-Chain provides a robust and transparent Loyalty program platform. For details, see:
+
+## 5.11 Electronic Signature Engine
+TRADE-Chain provides electronic signature functions for data and documents without the need to disclose the actual content being signed – secure key generation, signing and verification. For details, see:
+
+## 5.12 File Storage Layer
+TRADE-Chain provides a dedicated blockchain powered storage service for encrypted and un-encrypted data and document storage. For details, see:
+
+## 5.13 Encryption Engine
+TRADE-Chain provides symmetric (AES) and asymmetric (RSA) encryption functions – secure key generation, encryption and decryption. For details, see:
+
+## 5.14 Blockchain based authentication
+TRADE-Chain combines the power of blockchain technology and public key cryptography for secure authentication and identification of people and devices. For details, see:
 
 ---
 Have a query? Email us on info@primechain.in
