@@ -15,6 +15,7 @@ TRADE-Chain provides a platform for real-time cross-border and domestic trade pa
 5. [Balances of all tokens](#5-balances-of-all-tokens)   
 6. [Details of a specified token](#6-details-of-a-specified-token)   
 7. [Tokens held by a specified entity](#7-tokens-held-by-a-specified-entity)   
+8. [Transactions by a specified entity](#8-transactions-by-a-specified-entity)   
 
 # 1. Overview
 
@@ -217,8 +218,217 @@ Use post /api/v1/assets_held_by_entity to get details of Assets held by specifie
 {
   "primechain_address": "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
 }
+Sample output
+```
+{
+"status": 200,
+"response": 
+  [
+    {
+      "name": "National-Bank-USD-Series-A",
+      "assetref": "755-266-47872",
+      "qty": 19500
+     },
+    {
+      "name": "National-Bank-USD-Series-B",
+      "assetref": "767-267-21562",
+      "qty": 32000
+    },
+    {
+      "name": "National-Bank-USD",
+      "assetref": "723-267-65068",
+      "qty": 19500
+    }
+  ],
+}
+```
+# 8. Transactions by a specified entity
 
+To list information about the transactions related to an entity use `post /api/v1/entity_transaction_list` and pass the address as a parameter.
 
+Sample input
+```
+{
+  "primechain_address": "1GkxHWs76J2SbyZtq68NUuCMuBc48eERkcukFN"
+}
+```
+Sample output
+```
+{
+"status": 200,
+"entity_transaction_list": [
+  {
+"balance": {
+"amount": 0,
+"assets": [
+  {
+"name": "National-Bank-USD-Series-A",
+"assetref": "755-266-47872",
+"qty": 19500
+}
+],
+},
+"myaddresses": [
+  "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
+],
+"addresses": [
+  "1YYAavvJgKisoTB7sVakqKuMaMVwL5GbKJ1kai"
+],
+"permissions": [],
+"issue": {
+"name": "National-Bank-USD-Series-A",
+"assetref": "755-266-47872",
+"multiple": 1,
+"units": 1,
+"open": true,
+"restrict": {
+"send": false,
+"receive": false
+},
+"details": {
+"details": "Issued by National Bank against US dollar escrow account number 12345"
+},
+"qty": 19500,
+"raw": 19500,
+"addresses": [
+  "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
+],
+},
+"items": [],
+"data": [],
+"confirmations": 113,
+"blockhash": "006a715a95995a0ae7f9a84505fa99897b5c475e1b82e1187a157d3eec5f8e38",
+"blockindex": 1,
+"blocktime": 1547818386,
+"txid": "00bba7916962fe440546f84bc70be6da38130731d536e3f7b50aa80ff3bfa447",
+"valid": true,
+"time": 1547818377,
+"timereceived": 1547818377
+},
+  {
+"balance": {
+"amount": 0,
+"assets": [
+  {
+"name": "National-Bank-USD-Series-B",
+"assetref": "767-267-21562",
+"qty": 19500
+}
+],
+},
+"myaddresses": [
+  "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
+],
+"addresses": [
+  "1YYAavvJgKisoTB7sVakqKuMaMVwL5GbKJ1kai"
+],
+"permissions": [],
+"issue": {
+"name": "National-Bank-USD-Series-B",
+"assetref": "767-267-21562",
+"multiple": 1,
+"units": 1,
+"open": true,
+"restrict": {
+"send": false,
+"receive": false
+},
+"details": {
+"details": {
+"backed_by": "Issued by National Bank against US dollar escrow account number 12345",
+"redemption_information": "This is information about the redempton of the asset",
+"contact_person": "These are the details of the contact person for this token"
+}
+},
+"qty": 19500,
+"raw": 19500,
+"addresses": [
+  "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
+],
+},
+"items": [],
+"data": [],
+"confirmations": 101,
+"blockhash": "081319e096796185294d739eac92992684e2b9afbed1fd50b3e538df8ee2f83f",
+"blockindex": 1,
+"blocktime": 1547818546,
+"txid": "3a54cc96f49704a5092309abd6f10c03e42d53fb8dd9693d2b13200edf21ff1f",
+"valid": true,
+"time": 1547818533,
+"timereceived": 1547818533
+},
+  {
+"balance": {
+"amount": 0,
+"assets": [
+  {
+"name": "National-Bank-USD-Series-B",
+"assetref": "767-267-21562",
+"qty": -2500
+}
+],
+},
+"myaddresses": [
+  "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
+],
+"addresses": [
+  "1R1gwFwipsVbJTzoc2MVBwb79FgQ9LPDkpq2p3"
+],
+"permissions": [],
+"items": [],
+"data": [],
+"confirmations": 78,
+"blockhash": "0632bd5b908b02029684ca25071ff9de94ad69010f4993a7a45311cbbab89b8e",
+"blockindex": 1,
+"blocktime": 1547818928,
+"txid": "16cb1e2995b4d81ae99e59f45267311f6ce6e06babe02933b5c534318802944a",
+"valid": true,
+"time": 1547818916,
+"timereceived": 1547818916,
+"comment": "These are the details of this transfer"
+},
+  {
+"balance": {
+"amount": 0,
+"assets": [
+  {
+"name": "National-Bank-USD-Series-B",
+"assetref": "767-267-21562",
+"qty": 15000
+}
+],
+},
+"myaddresses": [
+  "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
+],
+"addresses": [
+  "1YYAavvJgKisoTB7sVakqKuMaMVwL5GbKJ1kai"
+],
+"permissions": [],
+"issue": {
+"name": "National-Bank-USD-Series-B",
+"assetref": "767-267-21562",
+"details": {},
+"qty": 15000,
+"raw": 15000,
+"addresses": [
+  "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
+],
+},
+"items": [],
+"data": [],
+"confirmations": 66,
+"blockhash": "0b383db3edd56e215ad47b169ac66c91a70ff0ffa662fac1f677c80d973e9cc6",
+"blockindex": 1,
+"blocktime": 1547819111,
+"txid": "eb965639e76b06bcd9f4f19caea58ace8f5de83aa71066d88b4ff1d1ae4f85d1",
+"valid": true,
+"time": 1547819096,
+"timereceived": 1547819096
+}
+],
+}
+```
 ---
 Have a query? Email us on info@primechain.in
 
