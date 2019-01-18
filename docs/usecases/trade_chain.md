@@ -71,31 +71,52 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 ***[11. Supply chain transparency and counterfeit reduction](#11-supply-chain-transparency-and-counterfeit-reduction)***
 
 
-## 1. Introduction and overview
+[1. Executive summary](#1-executive-summary)
 
-### 1.1 TRADE-Chain components and modules
+# 1. Executive summary
 
-***TRADE-Chain comprises:***
-1. Blockchain layer: This holds the trade channels, encrypted and unencrypted data, and handles the asset lifecycle management.
-2. Database layer: This powers the API key management and rating function.
-3. Encryption Engine: This provides symmetric and asymmetric encryption function.
-4. Electronic Signature Engine: This provides electronic signature functions for data and documents.
-5. API layer: The above components interact with the user systems though this layer.
+International trade has existed for thousands of years and involves the exchange of capital, goods, and services across international borders. International trade represents a significant share of Gross Domestic Product (GDP) of most countries. 
 
-***TRADE-Chain modules are:***
-1. Trade documents   
-2. Real-time cargo tracking   
-3. Trade payments
-4. Factoring and invoice discounting
-5. Auction of goods &freight contracts
-6. KYC & Digital Identity
-7. Anti-Money Laundering (AML) review
-8. Rating and review
-9. Supply chain transparency and counterfeit reduction
+Trade finance is an umbrella term for all the monetary activities related to commerce and international trade - lending, the issuance of letters of credit, factoring / invoice discounting, export credit and insurance. 
 
-***Design components of TRADE-Chain power multiple use cases***
+Trade financing protects against the unique risks of international trade - currency fluctuations, political instability, and issues of non-payment & creditworthiness.
 
-![TRADE-Chain](http://www.primechaintech.com/img/api_documentation/how-trade-chain-works.jpg)
+The market for trade finance is estimated to be above US$ 12 trillion annually. (Source: World Trade Organization).
+
+### Pain points of today’s trade finance process:
+
+![Pain points of today’s trade finance process](http://www.primechaintech.com/img/api_documentation/trade_chain_pain_points.png)
+
+### TRADE-Chain
+
+Today, the Internet enables the movement of data (videos, text, photos) globally in milliseconds. But try moving value and you will be surprised by the costs, inefficiencies and time delays. Blockchain is a revolutionary technology that enables "internets of value" that can move value in seconds - money, trade documents, financial securities and more.
+
+TRADE-Chain reduces errors, fraud, cost & time in the trade process and increases revenue, transparency, auditability and efficiency of trade operations.
+
+![Components of TRADE-Chain
+](http://www.primechaintech.com/img/api_documentation/trade_chain_components.png)
+
+***1. Blockchain layer:***  
+This holds the trade channels, encrypted and unencrypted data relating to trade documents & KYC records, and handles the asset lifecycle management – invoices, fiat backed tokens, goods & cargo contract, loyalty programs.
+
+***2. Database layer:***  
+This powers the API key management and rating function.
+
+***3. Electronic Signature Engine:***  
+This provides electronic signature functions for data and documents without the need to disclose the actual content being signed – secure key generation, signing and verification.
+
+***4. File Storage Layer:***  
+This provides a dedicated blockchain powered storage service for encrypted and un-encrypted data and document storage.
+
+***5. Encryption Engine:***  
+This provides symmetric (AES) and asymmetric (RSA) encryption functions – secure key generation, encryption and decryption.
+
+***6. Blockchain based authentication:***  
+This combines the power of blockchain technology and public key cryptography for secure authentication and identification of people and devices.
+
+***7. Primechain® API layer:***  
+The above-mentioned layers and engines interact with the user systems though the Primechain® API layer.
+
 
 ### 1.2 TRADE-Chain nodes
 TRADE-Chain is a permissioned blockchain powered by Primechain APIs. The following types of TRADE-Chain nodes are available:
