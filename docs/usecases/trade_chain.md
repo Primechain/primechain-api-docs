@@ -9,7 +9,10 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 
 ### Table of contents   
 
-[1. Executive summary](#1-executive-summary)
+[1. Executive summary](#1-executive-summary)   
+[2. System requirements](#2-system-requirements)   
+[3. API keys for the sandbox](#3-api-keys-for-the-sandbox)   
+[4. Creating addresses](#4-creating-addresses)   
 
 # 1. Executive summary
 
@@ -64,9 +67,9 @@ The above-mentioned layers and engines interact with the user systems though the
 ![Information Security & TRADE-Chain](http://www.primechaintech.com/img/api_documentation/trade_chain_infosec.png)
 
 
+# 2. System requirements
 
-### 1.2 TRADE-Chain nodes
-TRADE-Chain is a permissioned blockchain powered by Primechain APIs. The following types of TRADE-Chain nodes are available:
+The following types of TRADE-Chain nodes are available:
 1. Importer and Exporters nodes
 2. Bank nodes
 3. Financer and investor nodes
@@ -76,14 +79,12 @@ TRADE-Chain is a permissioned blockchain powered by Primechain APIs. The followi
 7. Regulator nodes
 8. Service provider nodes
 
-To access the TRADE-Chain sandbox, email us on info@primechain.in
-
-***System requirements for nodes***   
+### System requirements for nodes  
 2 virtual machines / physical servers with the following details are required:   
 * Ubuntu 16.04 machine with 32 GB RAM, 4 core processor, 100 GB SSD disk with ports 22, 15590 and 61172 open.   
 * Ubuntu 16.04 machine with 32 GB RAM, 8 core processor, 25 GB SSD disk with ports 22 and 2512 open.   
 
-### 1.3 API keys for sandbox
+# 3. API keys for the sandbox
 API keys authenticate access to the TRADE-Chain sandbox. To generate an API key, use `get api/v1/get_api_key`. An API key must be passed in the authorization header. ([See example](http://www.primechaintech.com/img/api_documentation/sample_rest_api_client.jpg))
 
 Sample output
@@ -97,8 +98,9 @@ Sample output
 }
 ```
 
-### 1.4 Creating addresses
-If required, additional addresses can be created on a node using `get /api/v1/create_entity`. The following are generated:
+# 4. Creating addresses
+
+Every node has a default address. If required, additional addresses can be created on a node using `get /api/v1/create_entity`. The following are generated:
 1. public key
 2. private key
 3. primechain address
@@ -112,8 +114,6 @@ Sample output
   "primechain_address": "1VCeqGYXLaqMtAFtxTNeTzfW8T714us2t3uwYM"
 }
 ```
-
-
 
 ---
 Have a query? Email us on info@primechain.in
