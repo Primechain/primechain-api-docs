@@ -85,11 +85,11 @@ To create a new fiat currency backed token, use `post /api/v1/create_token`.
 
 # 3. Transfer token
 To send tokens use `post /api/v1/send_asset` and pass 5 parameters - 
-1. Sender's address
-2. Receiver's address
-3. Asset name or reference
-4. Asset quantity
-5. Details of the transaction
+1. `from_address` - sender's address
+2. `to_address` - receiver's address
+3. `asset_name` - asset name or reference
+4. `quantity` - asset quantity
+5. `details` - details of the transaction
 ```
 {
   "from_address": "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi",
@@ -208,7 +208,7 @@ Output
 }
 ```
 # 7. Tokens held by a specified entity
-Use post /api/v1/assets_held_by_entity to get details of Assets held by specified entities
+Use `post /api/v1/assets_held_by_entity` to get details of Assets held by specified entities
 ```
 {
   "primechain_address": "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
