@@ -221,7 +221,7 @@ Sample output
 
 10. Loyalty program
 
-11. Electronic Signature Engine
+11. [Electronic Signature Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/electronic_signature_engine.MD)
 
 12. [File and data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD)
 
