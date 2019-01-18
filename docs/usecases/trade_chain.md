@@ -207,21 +207,21 @@ Sample output
 
 3. [Cross border and domestic trade payments](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_payments.md)
 
-4. [Auction of goods and freight contracts]
+4. Auction of goods and freight contracts
 
 5. [Factoring / invoice discounting platform](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md)
 
-6. [KYC and Digital Identity]
+6. KYC and Digital Identity
 
-7. [Anti-Money Laundering review]
+7. Anti-Money Laundering review
 
-8. [Rating and review platform]
+8. Rating and review platform
 
-9. [Supply chain transparency and counterfeit reduction]
+9. Supply chain transparency and counterfeit reduction
 
-10. [Loyalty program]
+10. Loyalty program
 
-11. [Electronic Signature Engine]
+11. Electronic Signature Engine
 
 12. [File and data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD)
 
