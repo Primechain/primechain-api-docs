@@ -99,14 +99,13 @@ To send tokens use `post /api/v1/send_asset` and pass 5 parameters -
   "details": "These are the details of this transfer"
 }
 ```
+The output is the id of the transaction in which the token was transferred.
 ```
 {
   "status": 200,
   "tx_id": "16cb1e2995b4d81ae99e59f45267311f6ce6e06babe02933b5c534318802944a"
 }
 ```
-The output is the id of the transaction in which the token was transferred.
-
 
 # 4. Create additional units of an open token
 
@@ -126,13 +125,14 @@ To create additional units of an open token, use `post /api/v1/create_more_token
   "quantity": 15000
 }
 ```
+Output is the id of the transaction in which the additional units were created.
 ```
 {
   "status": 200,
   "tx_id": "eb965639e76b06bcd9f4f19caea58ace8f5de83aa71066d88b4ff1d1ae4f85d1"
 }
 ```
-Output is the id of the transaction in which the additional units were created.
+
 
 # 5. Balances of all tokens
 
@@ -159,7 +159,7 @@ Sample output
 ```
 # 6. Details of a specified token
 
-To get details of a specific token, use post /api/v1/asset_details and pass the asset name or referece id as a parameter.
+To get details of a specific token, use `post /api/v1/asset_details` and pass the asset name or referece id as a parameter.
 ```
 {
   "asset_name": "National-Bank-USD-Series-A"
@@ -209,10 +209,11 @@ Output
 ```
 # 7. Tokens held by a specified entity
 Use post /api/v1/assets_held_by_entity to get details of Assets held by specified entities
-
+```
 {
   "primechain_address": "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
 }
+```
 Sample output
 ```
 {
