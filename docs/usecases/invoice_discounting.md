@@ -50,13 +50,13 @@ The newly created invoice is created as an asset of the blockchain and is transf
 Sample input
 ```
 {
-  "invoice_payer": "aaa",
-  "invoice_payee": "aaaa",
-  "invoice_name": "Invoice no. 235235",  
+  "invoice_payer": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp",
+  "invoice_payee": "125LHLRKDDdaJSWXbVdaAGG7pGRT9dWPjjF7aG",
+  "invoice_name": "Invoice no. 23523561",  
   "invoice_details": 
     {
-      "invoice_amount": "USD 856,000"
-      "invoice_maturity": "10-April-2019"
+      "invoice_amount": "USD 856,000",
+      "invoice_maturity": "10-April-2019",
       "invoice_description": "This is optional additional information about the invoice."
      }
 }
@@ -71,18 +71,21 @@ Sample input
 Sample output
 ```
 {
-"status": 200,
-"response": {
-"tx_id": "6b8842e04d649d33a2f6cd4e632d1c61e5989dd46532a8a8eee566ee58656fbc",
-"invoice_reference_number": "365-515-34923",
-"invoice_details": {
-"details": {
-"invoice_amount": "USD 856,000",
-"invoice_maturity": "10-April-2019",
-"invoice_description": "This is optional additional information about the invoice."
-}
-}
-}
+   "status": 200,
+   "response": 
+      {
+         "tx_id": "ec106e10a7dcc69ed8e481be34d46b83e7f329a449755cd81b8d066b4e766fff",
+         "invoice_reference_number": "700-267-4332",
+         "invoice_details": 
+            {
+               "details": 
+                  {
+                     "invoice_amount": "USD 856,000",
+                     "invoice_maturity": "10-April-2019",
+                     "invoice_description": "This is optional additional information about the invoice."
+                  }
+            }
+      }
 }
 ```
 
