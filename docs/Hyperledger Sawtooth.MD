@@ -1,4 +1,4 @@
-# Hyperledger Sawtooth
+# File and data storage
 
 [1. Create key pair](#1-create-key-pair)      
 [2. Publish data to the blockchain](#2-publish-data-to-the-blockchain)     
@@ -270,5 +270,5 @@ To retrieve a file from the blockchain and decrypt it, use `post /api/v1/decrypt
 }
 ```
 The file is decrypted, verified and retrieved from the blockchain.
-
+---
 Have a query? Email us on info@primechain.in
