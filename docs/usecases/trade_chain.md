@@ -203,7 +203,7 @@ Sample output
 
 1. [Trade documents issuance and sharing](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md)
 
-2. [Cargo tracking]
+2. [Cargo tracking](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/cargo_tracking.md)
 
 3. [Cross border and domestic trade payments](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_payments.md)
 
