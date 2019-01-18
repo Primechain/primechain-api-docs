@@ -17,7 +17,7 @@ TRADE-Chain provides a robust immutable platform for real-time issuing and shari
 # 1. Issuance of documents on TRADE-Chain
 To encrypt, sign and publish data to TRADE-Chain, use `post /api/v1/publish_data` and pass 4 parameters: 
 1. `primechain_address` - the primechain address of the signer.
-2. `keys` - the keys to enable quick searching of the data.
+2. `keys` - upto 5 keys can be used to enable quick searching of the data. Each key can be upto 64 characters including blank spaces.
 3. `data` - the data. 
 4. `trade_channel_name` - the name of the trade channel to which the data is to be published.
 
@@ -27,11 +27,14 @@ Sample input
   "primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp",
    "keys": 
     [
-      "key1",
-      "key2"
+      "unobtainium",
+      "mumbai",
+      "dubai",
+      "march",
+      "nicole"
     ],
-   "data": "This is the data that will be encryptd and stored.",
-   "trade_channel_name": "200_tons_xyz_Jan_2019"
+   "data": "This is the data that will be encrypted and stored.",
+   "trade_channel_name": "200_tons_unobtainium_march_2019"
 }
 ```
 ***This is what happens:***   
@@ -56,16 +59,16 @@ Sample input
 Sample output
 ```
 {
-"status": 200,
-"response": 
-  {
-    "tx_id_enc_data": "7e94282014b2b73bc17ac163e24b2538b6174ba96a4a27f4f2e2333e94346b96",
-    "tx_id_signature": "f2d3f1954064b12d3f434cee8d68ed6f08960f7a400a41946c972680abdbaef2",
-    "signature": "INfKjUiGDpMQ68K4GlTwh3Z3LDXrWpiJ4L2Qvn1wSqSxd0zauOZDn292E32GAQk6fsNvPl1G9ty1iRfXJWJDW0w=",
-    "aes_password": "ScX56ZWKuqYsMpINcXScyfgSL0Ihc05c",
-    "aes_iv": "lSr9HJqWN1eA",
-    "trade_channel_name": "200_tons_xyz_Feb_2019"
-  }
+  "status": 200,
+  "response": 
+    {
+      "tx_id_enc_data": "dc23aae8ffa32c5a87a784354f834242d34224372ab9ede53070253053a1521d",
+      "tx_id_signature": "2c3586798257ccad468df95c5d261c85347cb484e1f674fddac16c49c29904e0",
+      "signature": "H7Cvr0B7dvbozD5aORGppnf7o6FBPGsz19sH0CZq0JN8es5c+IXwDco3LSbvftctIJLjlGOHKAF4V1Ptkvi/lt8=",
+      "aes_password": "do2mfJy6JfEeypxer0aEZPKttTNXgvA4",
+      "aes_iv": "yJY3HR5vT4Pj",
+      "trade_channel_name": "200_tons_unobtainium_march_2019"
+    }
 }
 ```
 
@@ -80,11 +83,11 @@ To retrieve data use `post /api/v1/get_data` and pass 5 parameters:
 Sample input
 ```
 {
-  "tx_id_enc_data": "16346d48deea43865a276b5153fec90ac2ef83f146a20bf6826df995acdc5fc8",
-  "tx_id_signature": "7c72b8fc633d9a091e878ef6c610e4383ca597f846092a35077374fb0accea76",
-  "aes_password": "kfkNhEWZErbMLhtKkg6zSTy85Aq9QIJr",
-  "aes_iv": "9UuZX4vgZ8r3",
-  "trade_channel_name": "200_tons_xyz_Feb_2019"
+  "tx_id_enc_data": "dc23aae8ffa32c5a87a784354f834242d34224372ab9ede53070253053a1521d",
+  "tx_id_signature": "2c3586798257ccad468df95c5d261c85347cb484e1f674fddac16c49c29904e0",
+  "aes_password": "do2mfJy6JfEeypxer0aEZPKttTNXgvA4",
+  "aes_iv": "yJY3HR5vT4Pj",
+  "trade_channel_name": "200_tons_unobtainium_march_2019"
 }
 ```
 ***This is what happens:***   
