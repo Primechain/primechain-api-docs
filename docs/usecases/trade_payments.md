@@ -12,7 +12,7 @@ TRADE-Chain provides a platform for real-time cross-border and domestic trade pa
 2. [Issuance of a fiat currency backed token](#2-issuance-of-a-fiat-currency-backed-token)   
 3. [Transfer token](#3-transfer-token)   
 4. [Create additional units of an open token](#4-create-additional-units-of-an-open-token)   
-[5. Balances of all tokens](#5-balances-of-all-tokens)   
+5. [Balances of all tokens](#5-balances-of-all-tokens)   
 
 # 1. Overview
 
