@@ -6,11 +6,12 @@ TRADE-Chain provides a platform for real-time cross-border and domestic trade pa
 
 ![Trade documents issuance and sharing](http://www.primechaintech.com/img/api_documentation/trade_payments.jpg)
 
+***Table of contents***
 
 1. [Overview](#1-overview)   
 2. [Issuance of a fiat currency backed token](#2-issuance-of-a-fiat-currency-backed-token)   
 3. [Transfer token](#3-transfer-token)   
-[4. Create additional units of an open token](#4-create-additional-units-of-an-open-token)   
+4. [Create additional units of an open token](#4-create-additional-units-of-an-open-token)   
 
 
 # 1. Overview
@@ -109,7 +110,7 @@ To send tokens use `post /api/v1/send_asset` and pass 5 parameters -
 The output is the id of the transaction in which the token was transferred.
 
 
-## 4. Create additional units of an open token
+# 4. Create additional units of an open token
 
 To create additional units of an open token, use `post /api/v1/create_more_token`.
 
@@ -137,4 +138,6 @@ Output is the id of the transaction in which the additional units were created.
 
 
 
-…
+---
+Have a query? Email us on info@primechain.in
+
