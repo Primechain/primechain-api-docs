@@ -203,29 +203,29 @@ Sample output
 
 1. [Trade documents issuance and sharing](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md)
 
-2. [Cargo tracking](aaaa)
+2. [Cargo tracking]
 
-3. [Cross border and domestic trade payments](aaaa)
+3. [Cross border and domestic trade payments]
 
-4. [Auction of goods and freight contracts](aaaa)
+4. [Auction of goods and freight contracts]
 
-5. [Factoring / invoice discounting platform](aaaa)
+5. [Factoring / invoice discounting platform]
 
-6. [KYC and Digital Identity](aaaa)
+6. [KYC and Digital Identity]
 
-7. [Anti-Money Laundering review](aaaa)
+7. [Anti-Money Laundering review]
 
-8. [Rating and review platform](aaaa)
+8. [Rating and review platform]
 
-9. [Supply chain transparency and counterfeit reduction](aaaa)
+9. [Supply chain transparency and counterfeit reduction]
 
-10. [Loyalty program](aaaa)
+10. [Loyalty program]
 
-11. [Electronic Signature Engine](aaaa)
+11. [Electronic Signature Engine]
 
-12. [File Storage Layer](aaaa)
+12. [File Storage Layer]
 
-13. [Encryption Engine](aaaa)
+13. [Encryption Engine]
 
 14. [Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
 
