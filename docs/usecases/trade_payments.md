@@ -8,7 +8,7 @@ TRADE-Chain provides a platform for real-time cross-border and domestic trade pa
 
 ***Table of contents***
 
-1. [Overview](#1-overview)   
+1. [Process flow](#1-process-flow)   
 2. [Issuance of a fiat currency backed token](#2-issuance-of-a-fiat-currency-backed-token)   
 3. [Transfer token](#3-transfer-token)   
 4. [Create additional units of an open token](#4-create-additional-units-of-an-open-token)   
@@ -17,13 +17,8 @@ TRADE-Chain provides a platform for real-time cross-border and domestic trade pa
 7. [Tokens held by a specified entity](#7-tokens-held-by-a-specified-entity)   
 8. [Transactions by a specified entity](#8-transactions-by-a-specified-entity)   
 
-# 1. Overview
+# 1. Process flow
 
-A single TRADE-Chain transaction can perform an asset exchange between two or more parties, e.g. sending a dollar-denominated asset from Sanya to Tanya, while simultaneously sending a rupee-denominated asset from Tanya to Sanya. 
-
-Because the exchange takes place in a single transaction, it comes with a guarantee of atomicity, meaning that all of the asset transfers take place simultaneously, or none take place at all. In the finance world, this type of transaction is termed delivery-versus-payment, or DvP for short.
-
-### Process flow
 1. A bank issues a fiat currency-backed token on TRADE-Chain.
 
 2. Participants (exporters, importers, invoice payers, investors etc.) can purchase these tokens from the bank through regular banking channels.
