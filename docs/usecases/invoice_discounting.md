@@ -1,16 +1,26 @@
-## 6. Factoring and invoice discounting platform
+# Factoring and invoice discounting platform
 
-Invoice discounting enables suppliers to sell their invoices at a discount to investors. This enables suppliers to get faster access to money they are owed and enables buyers to get more time to pay. Instead of relying on the creditworthiness of suppliers (usually smaller businesses), the investors deal with buyers (usually large businesses). This can lower financing costs, optimize working capital and improve business efficiency.
 
-Invoice discounting is also referred to as supply chain finance and factoring. The process involves 4 parties: 
-* banks   
-* large corporates (payers)    
-* supplier (payees)       
-* investors   
+[![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 
-Benefits of using the blockchain for invoice discounting include automated reconciliation and a provably immutable and transparent process.
+TRADE-Chain provides a robust immutable platform for real-time issuing and sharing of trade documents. 
 
-### 6.1 Process flow
+![Trade documents issuance and sharing](http://www.primechaintech.com/img/api_documentation/factoring.png)
+
+
+***Table of contents***   
+[1. Process flow](#1-process-flow)   
+[2. Publishing a new invoice](#2-publishing-a-new-invoice)   
+[3. Viewing invoices](#3-viewing-invoices)   
+[4. Bidding by investors](#4-bidding-by-investors)   
+[5. Cancelling of bids by investors](#5-cancelling-of-bids-by-investors)   
+[6. Viewing bids](#6-viewing-bids)   
+[7. Rejection of bids](#7-rejection-of-bids)   
+[8. Acceptance of bids](#8-acceptance-of-bids)   
+[9. Buyback of the invoice upon maturity of invoice](#9-buyback-of-the-invoice-upon-maturity-of-invoice)   
+[10. Retiring the invoice](#10-retiring-the-invoice)
+
+# 1. Process flow
 
 The process flow is as follows:
 1. A corporate (payers) publishes an invoice to the blockchain. This invoice is a blockchain asset and is immediately transferred to the relevant supplier (payee).
@@ -25,7 +35,7 @@ The process flow is as follows:
 10. The investor accepts the bid. The invoice now gets transferred to the corporate (payer) and the investor immediately receives the relevant quantity of tokens. This is an atomic transaction and does not require any re-conciliation.
 11. The corporate (payer) retires the invoice by sending it to the burn address.
 
-### 6.2 Publishing a new invoice
+# 2. Publishing a new invoice
 New invoices can be published to the blockchain by large corporates (payers) using `post /api/v1/create_invoice` and passing these parameters:   
 1. `invoice_payer` - the primechain address of the corporate who is the payer of the invoice.  
 2. `invoice_payee` - the primechain address of the supplier who is the payee of the invoice.    
@@ -76,7 +86,7 @@ Sample output
 }
 ```
 
-### 6.3 Viewing invoices
+# 3. Viewing invoices
 Participants, especially investors, view invoices. This list of invoices can be filtered based on payer, payee, maturity date and value. To view all the invoices, use `get /api/v1/view_all_invoices`.
 
 Sample output
@@ -241,7 +251,7 @@ Sample output
 }
 ```
 
-### 6.4 Bidding by investors
+# 4. Bidding by investors
 Investors place bids on invoices. To place a bid on an invoice, the investor must hold sufficient quantity of fiat currency  tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Investors can purchase these tokens from their banks. Once an investor places a bid, the relevant amount of tokens are ‘locked’ and 'un-spendable' till either:
 * the supplier (payee) rejects the bid or    
 * the investor cancels his bid   
@@ -280,7 +290,7 @@ Sample output
 }
 ```
 
-### 6.5 Cancelling of bids by investors
+# 5. Cancelling of bids by investors
 To cancel a bid, the investor uses `post /api/v1/cancel_bid` and passes 1 parameter - the id of the transaction in which the bid information is stored in the blockchain:
 
 Sample input
@@ -297,7 +307,7 @@ Sample output
 }
 ```
 
-### 6.6 Viewing bids
+# 6. Viewing bids
 All participants can view all bids placed on all invoices using `get /api/v1/view_all_bids`. This creates a highly transparent platform and enables price discovery.
 
 Sample output
@@ -346,7 +356,7 @@ Sample output
 
 ```
 
-### 6.7 Rejection of bids
+# 7. Rejection of bids
 A supplier (payee) can reject bids made on invoices in which she is the payee. To reject a bid, use `post /api/v1/reject_bid` and pass the following parameters:   
 1. transaction id of the bid   
 2. primechain address of the payee   
@@ -366,7 +376,7 @@ Sample output
 }
 ```
 
-### 6.8 Acceptance of bids
+# 8. Acceptance of bids
 A supplier (payee) can accept bids made on invoices in which she is the payee. If she accepts the bid, the invoice is transferred to the relevant investor and the bid amount of the tokens is transferred to her. She can redeem the tokens from the bank. To accept a bid, use `post /api/v1/accept_bid` and pass the following parameters:   
 1. transaction id of the bid   
 2. primechain address of the payee   
@@ -386,7 +396,7 @@ Sample output
 }
 ```
 
-### 6.9 Buyback of the invoice upon maturity of invoice
+# 9. Buyback of the invoice upon maturity of invoice
 Upon maturity of the invoice, or any time before that, the payer of an invoice places a bid to purchase the invoice from the investor holding the invoice. To place this bid, the payer must hold sufficient quantity of fiat currency tokens (token). These tokens are issued by banks against fiat currency deposits held by them. Payers can purchase these tokens from their banks. 
 
 To create a bid, use `post /api/v1/create_bid` and to accept the bid, use `post /api/v1/accept_bid` as explained in the sections above.
@@ -394,7 +404,7 @@ To create a bid, use `post /api/v1/create_bid` and to accept the bid, use `post 
 The invoice gets transferred to the payer and the investor receives the bid amount of the tokens. The investor can redeem the tokens from the bank.
 
 
-### 6.10 Retiring the invoice
+# 10. Retiring the invoice
 The corporate (payer) then retires the invoice using `post /api/v1/retire_invoice` and passing the invoice reference number as a parameter. 
 
 Sample input
