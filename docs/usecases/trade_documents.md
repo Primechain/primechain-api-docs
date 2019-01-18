@@ -17,6 +17,9 @@ TRADE-Chain provides a robust immutable platform for real-time issuing and shari
 
 [4. Sample documents](#4-sample-documents)   
 [4.1 Sample Commercial Invoice](#41-sample-commercial-invoice)   
+[4.2 Sample Letter of Credit](#42-sample-letter-of-credit)   
+[4.3 Sample Straight Bill of Lading](#43-sample-straight-bill-of-lading)   
+[4.4 Sample Bank Guarantee](#44-sample-bank-guarantee)   
 
 # 1. Issuance of documents on TRADE-Chain
 To encrypt, sign and publish data to TRADE-Chain, use `post /api/v1/publish_data` and pass 4 parameters: 
@@ -264,7 +267,7 @@ Sample output
 }
 }
 ```
-## 3. Straight Bill of Lading
+## 4.3 Sample Straight Bill of Lading
 
 Sample input
 ```
@@ -332,7 +335,7 @@ Sample output
 }
 ```
 
-## 4. Bank guarantee
+## 4.4 Sample Bank Guarantee
 
 Sample input
 ```
