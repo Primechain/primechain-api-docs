@@ -1,8 +1,8 @@
-# Trade documents
+# Trade documents issuance and sharing
 
 [![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 
-Blockchain provides a secure and transparent platform for issuance and sgaring of trade documents.
+TRADE-Chain provides a robust immutable platform for real-time issuing and sharing of trade documents. 
 
 ***Table of contents***
 
@@ -10,6 +10,118 @@ Blockchain provides a secure and transparent platform for issuance and sgaring o
 [2. Letter of credit](#2-letter-of-credit)   
 [3. Straight Bill of Lading](#3-straight-bill-of-lading)   
 [4. Bank guarantee](#4-bank-guarantee)
+
+
+# 1 Types of documents
+
+TRADE-Chain provides a transparent repository for secure & real time issuing and sharing of trade documents such as:
+
+***1. Commercial Documents:*** Quotation, Sales Contract, Pro Forma Invoice, Commercial Invoice, Packing List, Inspection Certificate, Insurance Policy, Insurance Certificate, Product Testing Certificate, Health Certificate, Phytosanitary Certificate, Fumigation Certificate, ATA Carnet, Consular Invoice.
+
+***2. Transport Documents:*** Shipping Order, Dock / Mate's Receipt, Bill of Lading, House Bill of Lading, Sea Waybill, Air Waybill, House Air Waybill, Shipping Guarantee, Packing List.
+
+***3. Financial Documents:*** Documentary Credit, Standby Credit, Collection Instruction, Bill of Exchange or Draft, Trust Receipt, Promissory Note, [Letter of Credit](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md#2-letter-of-credit), [Bank Guarantee](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md#4-bank-guarantee).
+
+***4. Government Documents:*** Certificate of Origin, Certificate of Origin, Import / Export Declaration, Import / Export Licence, International Import Certificate, Delivery Verification Certificate, Landing Certificate, Customs Invoice.
+
+### 3.2 Issuance of documents on TRADE-Chain
+To encrypt, sign and publish data to TRADE-Chain, use `post /api/v1/publish_data` and pass 4 parameters: 
+1. `primechain_address` - the primechain address of the signer.
+2. `keys` - the keys to enable quick searching of the data.
+3. `data` - the data. 
+4. `trade_channel_name` - the name of the trade channel to which the data is to be published.
+
+Sample input
+```
+{
+  "primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp",
+   "keys": 
+    [
+      "key1",
+      "key2"
+    ],
+   "data": "This is the data that will be encryptd and stored.",
+   "trade_channel_name": "200_tons_xyz_Jan_2019"
+}
+```
+***This is what happens:***   
+1. The SHA-512 hash of the data is computed.
+2. The hash is signed using the private key of the provided primechain address (using ECDSA).
+3. The digital signature, hash and the primechain address of the signer are stored in the trade channel.
+4. The data is encrypted using the AES (Advanced Encryption Standard) algorithm and the following are generated: 
+    * the encrypted version of the data    
+    * the AES password    
+    * the Initialization Vector (IV)    
+    * the Authentication Tag (tag)   
+5. The encrypted data and the tag are published to the specified trade channel.
+
+***The following is the output:***
+1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the trade channel.
+2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the the trade channel.
+3. `signature` - the digital signature
+4. `aes_password` - the AES password
+5. `aes_iv` - the Initialization Vector (IV)
+6. `trade_channel_name` - the name of the trade channel to which the data is published. 
+
+Sample output
+```
+{
+"status": 200,
+"response": 
+  {
+    "tx_id_enc_data": "7e94282014b2b73bc17ac163e24b2538b6174ba96a4a27f4f2e2333e94346b96",
+    "tx_id_signature": "f2d3f1954064b12d3f434cee8d68ed6f08960f7a400a41946c972680abdbaef2",
+    "signature": "INfKjUiGDpMQ68K4GlTwh3Z3LDXrWpiJ4L2Qvn1wSqSxd0zauOZDn292E32GAQk6fsNvPl1G9ty1iRfXJWJDW0w=",
+    "aes_password": "ScX56ZWKuqYsMpINcXScyfgSL0Ihc05c",
+    "aes_iv": "lSr9HJqWN1eA",
+    "trade_channel_name": "200_tons_xyz_Feb_2019"
+  }
+}
+```
+
+## 3.3 Retrieving documents from TRADE-Chain
+To retrieve data use `post /api/v1/get_data` and pass 5 parameters:
+1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the trade channel.
+2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the trade channel.
+3. `aes_password` - the AES password.
+4. `aes_iv` - the Initialization Vector (IV).
+5. `trade_channel_name` - the name of the trade channel from which the data is to be retrieved.
+
+Sample input
+```
+{
+  "tx_id_enc_data": "16346d48deea43865a276b5153fec90ac2ef83f146a20bf6826df995acdc5fc8",
+  "tx_id_signature": "7c72b8fc633d9a091e878ef6c610e4383ca597f846092a35077374fb0accea76",
+  "aes_password": "kfkNhEWZErbMLhtKkg6zSTy85Aq9QIJr",
+  "aes_iv": "9UuZX4vgZ8r3",
+  "trade_channel_name": "200_tons_xyz_Feb_2019"
+}
+```
+***This is what happens:***   
+1. The digital signature, hash and the primechain address of the signing entity are retrieved from the trade channel.
+2. The encrypted data and tag are retrieved from the trade channel.
+3. The encrypted data is decrypted.
+4. The digital signature is verified.
+
+***The following is the output:***
+1. `data` - the unencrypted data.   
+2. `primechain_address` - the primechain address of the signer.   
+3. `signature_status` - the verification status of the signature.  
+4. `timestamp` - the timestamp
+
+Sample output
+```
+{
+"status": 200,
+"response": {
+"data": "This is the data that will be encryptd and stored.",
+"signer_detail": "1BiWh3dEMEDVRHNTsrYf7MCHHfXP2qL6or34PP",
+"signature_status": true,
+"timestamp": "09/01/2019 01:42:47:00"
+}
+}
+```
+
 
 ## 1. Commercial Invoice
 
