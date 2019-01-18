@@ -4,6 +4,9 @@
 
 TRADE-Chain provides a robust immutable platform for real-time issuing and sharing of trade documents. 
 
+![Trade documents issuance and sharing](http://www.primechaintech.com/img/api_documentation/trade_documents.jpg)
+
+
 ***Table of contents***
 
 [1. Commercial Invoice](#1-commercial-invoice)   
