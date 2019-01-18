@@ -7,11 +7,11 @@ TRADE-Chain enables real-time tracking of cargo.
 ![Cargo tracking](http://www.primechaintech.com/img/api_documentation/cargo.jpg)
 
 ***Table of contents***    
-1. [Publishing GPS data to TRADE Chain](#1-publishing-gps-data-to-trade-chain)   
+1. [Publishing GPS data to TRADE-Chain](#1-publishing-gps-data-to-trade-chain)   
 2. [Retrieving GPS data from TRADE-Chain](#2-retrieving-gps-data-from-trade-chain)
 
 
-# 1. Publishing GPS data to TRADE Chain
+# 1. Publishing GPS data to TRADE-Chain
 
 To publish Global Positioning System (GPS) data for cargo, use `post /api/v1/publish_data` and pass 4 parameters:
 
