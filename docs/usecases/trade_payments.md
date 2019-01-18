@@ -4,5 +4,5 @@
 
 TRADE-Chain provides a platform for real-time cross-border and domestic trade payments.
 
-![Trade documents issuance and sharing](http://www.primechaintech.com/img/api_documentation/trade_payments.png)
+![Trade documents issuance and sharing](http://www.primechaintech.com/img/api_documentation/trade_payments.jpg)
 
