@@ -250,7 +250,7 @@ The corporate (payer) then retires the invoice using `post /api/v1/retire_invoic
 Sample input
 ```
 {
-  "invoice_reference_number": "aaa"
+  "invoice_reference_number": "4607-266-27124"
 }
 ```
 Sample output
