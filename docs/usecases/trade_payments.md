@@ -7,8 +7,11 @@ TRADE-Chain provides a platform for real-time cross-border and domestic trade pa
 ![Trade documents issuance and sharing](http://www.primechaintech.com/img/api_documentation/trade_payments.jpg)
 
 
-1. [Overview](#1-overview)
-2. [Issuance of a fiat currency backed token](#2-issuance-of-a-fiat-currency-backed-token)
+1. [Overview](#1-overview)   
+2. [Issuance of a fiat currency backed token](#2-issuance-of-a-fiat-currency-backed-token)   
+3. [Transfer token](#3-transfer-token)   
+[4. Create additional units of an open token](#4-create-additional-units-of-an-open-token)   
+
 
 # 1. Overview
 
@@ -108,7 +111,7 @@ The output is the id of the transaction in which the token was transferred.
 
 ## 4. Create additional units of an open token
 
-To create additional units of an open asset, use `post /api/v1/create_more_token`.
+To create additional units of an open token, use `post /api/v1/create_more_token`.
 
 ***Note:***
 * `from_address` is the entity that creates the asset. It must have `send` permission.
@@ -118,16 +121,16 @@ To create additional units of an open asset, use `post /api/v1/create_more_token
 * `quantity` refers to the additional quantity of the asset being issued.
 ```
 {
-  "from_address": "1K2MYAXp1tiMEKw2VKMrzy8X9peZFrrUbvZnXK",
-  "to_address": "4NM46pESGpnvCn8pJmVZpuFepaeUkwKF3YecSM",
-  "asset_name": "SILVER-tokens-series-B",
-  "quantity": 5000
+  "from_address": "1YYAavvJgKisoTB7sVakqKuMaMVwL5GbKJ1kai",
+  "to_address": "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi",
+  "asset_name": "National-Bank-USD-Series-B",
+  "quantity": 15000
 }
 ```
 ```
 {
-"status": 200,
-"tx_id": "c749efc4cca56b72749e8e2d0acf7bf6282383255482894c578e4c82869fbc4f"
+  "status": 200,
+  "tx_id": "eb965639e76b06bcd9f4f19caea58ace8f5de83aa71066d88b4ff1d1ae4f85d1"
 }
 ```
 Output is the id of the transaction in which the additional units were created.
