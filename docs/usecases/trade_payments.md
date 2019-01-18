@@ -81,7 +81,32 @@ To create a new fiat currency backed token, use `post /api/v1/create_token`.
 }
 ```
 
-## 2. Create additional units of an open token
+# 3. Transfer token
+To send tokens use `post /api/v1/send_asset` and pass 5 parameters - 
+1. Sender's address
+2. Receiver's address
+3. Asset name or reference
+4. Asset quantity
+5. Details of the transaction
+```
+{
+  "from_address": "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi",
+  "to_address": "1R1gwFwipsVbJTzoc2MVBwb79FgQ9LPDkpq2p3",
+  "asset_name": "National-Bank-USD-Series-B",
+  "quantity": 2500,
+  "details": "These are the details of this transfer"
+}
+```
+```
+{
+  "status": 200,
+  "tx_id": "16cb1e2995b4d81ae99e59f45267311f6ce6e06babe02933b5c534318802944a"
+}
+```
+The output is the id of the transaction in which the token was transferred.
+
+
+## 4. Create additional units of an open token
 
 To create additional units of an open asset, use `post /api/v1/create_more_token`.
 
