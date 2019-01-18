@@ -209,7 +209,7 @@ Sample output
 
 4. [Auction of goods and freight contracts]
 
-5. [Factoring / invoice discounting platform](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md#3-viewing-invoices)
+5. [Factoring / invoice discounting platform](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md)
 
 6. [KYC and Digital Identity]
 
