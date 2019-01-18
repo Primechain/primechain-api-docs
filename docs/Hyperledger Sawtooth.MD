@@ -180,7 +180,6 @@ To retrieve data from the blockchain, use `post /api/v1/decrypt_download_data_sa
 ```
 {
 "primechain_sawtooth_tx_id": "82cde773d6b25b9a48dcb16f602fbcd5ed3649183d595e19ed545650bdfcc8fc2a9316121281910f43c52d3ba5c9e2d0c0eb6fce3ece54b6a257462bc6d395c1",
-
 "primechain_sawtooth_public_key": "02b023ef5ce8f6ef4e3419ebc925060ceb3ed9f80c489e34fb93033956581b4941",
 "signature": "cb36670bc1e53389473f1fcac881bf8c30e3a8b44ea34a8adb8608ab7dd7dec850073c9d2e6e868b1a4fe94603a2a3fa3187dfd506edf26fc7173a64e9c4e699",
 "aes_password": "gkSQEaVPI9bHwGM37NmtjNBUad7mwoHm",
@@ -239,7 +238,7 @@ To encrypt a file and store the encrypted file in the blockchain, use `post /api
 The file is encrypted, signed and stored in the blockchain. 
 
 The following is the output:
-1. the id of the transaction in which the encrypted file and tag were published to the FILE_MASTERLIST stream
+1. the id of the transaction in which the encrypted file and tag were published to the blockchain
 2. tthe digital signature
 3. The AES password
 4. The Initialization Vector (IV)
@@ -255,10 +254,11 @@ The following is the output:
 
 ## 9. Decrypt, verify and retrieve a file from the blockchain
 To retrieve a file from the blockchain and decrypt it, use `post /api/v1/decrypt_download_file_sawtooth` and pass these values:
-1. the id of the transaction in which the encrypted file and tag were published to the FILE_MASTERLIST stream
-2. the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the FILE_SIGNATURE_MASTERLIST stream
-3. The AES password
-4. The Initialization Vector (IV)
+1. the id of the transaction in which the encrypted file and tag were published to the blockchain
+2. the relevant public key
+3. the relevant signature
+4. The AES password
+5. The Initialization Vector (IV)
 
 ```
 {
@@ -270,5 +270,6 @@ To retrieve a file from the blockchain and decrypt it, use `post /api/v1/decrypt
 }
 ```
 The file is decrypted, verified and retrieved from the blockchain.
+
 ---
 Have a query? Email us on info@primechain.in
