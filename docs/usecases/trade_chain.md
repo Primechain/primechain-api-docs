@@ -201,22 +201,22 @@ Sample output
 
 # 6. Components and modules
 
-## 6.1 Trade documents issuance and sharing
+#### 1. Trade documents issuance and sharing
 TRADE-Chain provides a robust immutable platform for real-time issuing and sharing of trade documents. For details, see:
 
-## 5.2 Cargo tracking
+### 2. Cargo tracking
 TRADE-Chain provides a platform for real-time tracking of cargo. For details, see:
 
-## 5.3 Cross border and domestic trade payments
+### 3. Cross border and domestic trade payments
 TRADE-Chain provides a platform for real-time cross-border and domestic trade payments. For details, see:
 
-## 5.4 Auction of goods and freight contracts
+### 4. Auction of goods and freight contracts
 TRADE-Chain provides a platform for real-time, transparent auction of goods and freight contracts. For details, see:
 
-## 5.5 factoring / invoice discounting platform
+### 5. Factoring / invoice discounting platform
 TRADE-Chain provides a secure and transparent real-time factoring / invoice discounting platform. For details, see:
 
-## 5.6 KYC & Digital Identity
+## 6. KYC and Digital Identity
 TRADE-Chain provides a robust immutable platform for real-time KYC & Digital Identity verification. For details, see:
 
 ## 5.7 Anti-Money Laundering review
