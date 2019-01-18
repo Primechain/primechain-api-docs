@@ -117,6 +117,11 @@ This combines the power of blockchain technology and public key cryptography for
 ***7. Primechain® API layer:***  
 The above-mentioned layers and engines interact with the user systems though the Primechain® API layer.
 
+### TRADE-Chain APIs can be easily and securely integrated with legacy and mobile applications ###
+
+![Integration](http://www.primechaintech.com/img/api_documentation/trade_chain_integration.png)
+
+
 
 ### 1.2 TRADE-Chain nodes
 TRADE-Chain is a permissioned blockchain powered by Primechain APIs. The following types of TRADE-Chain nodes are available:
