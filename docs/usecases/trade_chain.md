@@ -205,7 +205,7 @@ Sample output
 
 2. [Cargo tracking]
 
-3. [Cross border and domestic trade payments]
+3. [Cross border and domestic trade payments](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_payments.md)
 
 4. [Auction of goods and freight contracts]
 
