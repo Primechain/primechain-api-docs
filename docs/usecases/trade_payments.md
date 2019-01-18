@@ -33,7 +33,7 @@ To create a new fiat currency backed token, use `post /api/v1/create_token`.
 
 ***Note:***
 *  This may take upto 30 seconds.   
-* `from_address` is the entity that creates the asset. It must have `send`, `receive` and `issue` permissions. It must also have permissions to write to TOKEN_MASTERLIST.
+* `from_address` is the entity that creates the asset. It must have `send`, `receive` and `issue` permissions. It must also have permissions to `write` to TOKEN_MASTERLIST.
 * `to_address` is the entity that receives the newly created asset. It must have `receive` permission and ideally also `send` permission.   
 *  The `from_address` and `to_address` can be the same.
 *  `unit` refers to the minimum divisible quantity of the asset.
@@ -113,7 +113,7 @@ The output is the id of the transaction in which the token was transferred.
 To create additional units of an open token, use `post /api/v1/create_more_token`.
 
 ***Note:***
-* `from_address` is the entity that creates the asset. It must have `send` permission.
+* `from_address` is the entity that creates the asset. It must have `issue` and `send` permission.
 * `to_address` is the entity that receives the newly created asset. It must have `receive` permission.
 * The `from_address` and `to_address` can be the same.
 * `asset_name` refers to the name of the asset.
