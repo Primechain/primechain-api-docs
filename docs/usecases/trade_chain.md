@@ -136,8 +136,8 @@ Sample input
 ```
 {
   "primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp",
-  "trade_channel_name": "200_tons_xyz_Feb_2019",
-  "trade_channel_details": "This trade channel is for the consignment of 200 tons of xyz material",
+  "trade_channel_name": "200_tons_unobtainium_march_2019",
+  "trade_channel_details": "This trade channel is for the consignment of 200 tons of unobtainium",
   "open":false
 }
 ```
