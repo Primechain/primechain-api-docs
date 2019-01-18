@@ -223,7 +223,7 @@ Sample output
 
 11. [Electronic Signature Engine]
 
-12. [File Storage Layer]
+12. [File and data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD)
 
 13. [Encryption Engine]
 
