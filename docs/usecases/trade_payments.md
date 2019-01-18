@@ -136,7 +136,29 @@ To create additional units of an open token, use `post /api/v1/create_more_token
 ```
 Output is the id of the transaction in which the additional units were created.
 
+# 5. Balances of all tokens
 
+To get the name, asset ref and balance of all assets, use `get /api/v1/asset_balances`
+
+Sample output
+```
+{
+"status": 200,
+"asset_balance": 
+  [
+    {
+        "name": "National-Bank-USD-Series-A",
+        "assetref": "755-266-47872",
+        "qty": 19500
+     },
+     {
+        "name": "National-Bank-USD-Series-B",
+        "assetref": "767-267-21562",
+        "qty": 34500
+      },
+  ],
+}
+```
 
 ---
 Have a query? Email us on info@primechain.in
