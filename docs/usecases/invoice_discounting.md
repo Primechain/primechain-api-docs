@@ -128,6 +128,7 @@ Sample output
   "tx_id": "950e37cc585dc6437e95ef9d37956513daa9b83f0438fbf49a82f6c2e861e907"
 }
 ```
+***Note:*** This transaction id is critical for the discounting process.
 
 # 5. Cancelling of bids by investors
 To cancel a bid, the investor uses `post /api/v1/cancel_bid` and passes 1 parameter - the id of the transaction in which the bid information is stored in the blockchain:
