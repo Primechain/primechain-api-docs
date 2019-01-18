@@ -20,6 +20,10 @@ TRADE-Chain provides a secure and transparent real-time factoring / invoice disc
 
 # 1. Process flow
 
+A single TRADE-Chain transaction can perform an asset exchange between two or more parties, e.g. sending a dollar-denominated asset from Sanya to Tanya, while simultaneously sending a rupee-denominated asset from Tanya to Sanya. 
+
+Because the exchange takes place in a single transaction, it comes with a guarantee of atomicity, meaning that all of the asset transfers take place simultaneously, or none take place at all. In the finance world, this type of transaction is termed delivery-versus-payment, or DvP for short.
+
 The process flow is as follows:
 1. A corporate (payers) publishes an invoice to the blockchain. This invoice is a blockchain asset and is immediately transferred to the relevant supplier (payee).
 2. Participants, especially investors, view invoices. This list of invoices can be filtered based on payer, payee, maturity date and value.
