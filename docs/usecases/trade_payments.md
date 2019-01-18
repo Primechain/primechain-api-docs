@@ -13,7 +13,8 @@ TRADE-Chain provides a platform for real-time cross-border and domestic trade pa
 3. [Transfer token](#3-transfer-token)   
 4. [Create additional units of an open token](#4-create-additional-units-of-an-open-token)   
 5. [Balances of all tokens](#5-balances-of-all-tokens)   
-6. [Details of a specified token](#6-details-of-a-specified-token)
+6. [Details of a specified token](#6-details-of-a-specified-token)   
+7. [Tokens held by a specified entity](#7-tokens-held-by-a-specified-entity)   
 
 # 1. Overview
 
@@ -210,6 +211,14 @@ Output
 ],
 }
 ```
+# 7. Tokens held by a specified entity
+Use post /api/v1/assets_held_by_entity to get details of Assets held by specified entities
+
+{
+  "primechain_address": "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi"
+}
+
+
 ---
 Have a query? Email us on info@primechain.in
 
