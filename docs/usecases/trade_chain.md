@@ -7,7 +7,7 @@ TRADE-Chain is the global trade finance blockchain for the US$ 12 trillion trade
 
 ![TRADE-Chain](http://www.primechaintech.com/img/tradechain/tradechain_top.jpg)
 
-### Table of contents  
+### Table of contents   
 
 ***[1. Introduction and overview](#1-introduction-and-overview)***   
 [1.1 TRADE-Chain components and modules](#11-trade-chain-components-and-modules)   
