@@ -161,6 +161,7 @@ TRADE-Chain provides symmetric (AES) and asymmetric (RSA) encryption functions â
 
 ## 5.14 Blockchain based authentication
 TRADE-Chain combines the power of blockchain technology and public key cryptography for secure authentication and identification of people and devices. For details, see:
+https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD
 
 ---
 Have a query? Email us on info@primechain.in
