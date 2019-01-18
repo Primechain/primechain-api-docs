@@ -138,7 +138,7 @@ Sample input
   "primechain_address": "1VUid7fZaiFnNXddiwfwvk8idyXixkFKRSQvMp",
   "trade_channel_name": "200_tons_unobtainium_march_2019",
   "trade_channel_details": "This trade channel is for the consignment of 200 tons of unobtainium",
-  "open":false
+  "open": false
 }
 ```
 The output is the transaction id of the transaction creating the trade channel - `tx_id`.
@@ -146,8 +146,8 @@ The output is the transaction id of the transaction creating the trade channel -
 Sample output
 ```
 {
- "status": 200,
- "tx_id": "d84f84849431d5a5c5565530021d4c8bc37bf7180c58a116bd42295f90b434e2"
+  "status": 200,
+  "tx_id": "70b06829af34c04bf13592e97bacd0923ba8bbf538f3621ec040f706f58a9553"
 }
 ```
 
@@ -171,7 +171,7 @@ Sample output
 ```
 {
   "status": 200,
-  "tx_id": "94179d61270f24acc208b8647e735cb54307c4ccbfece64ebae0e9539c37b2bf"
+  "tx_id": "e4d05ba3a324c7b8768f4798e94636c018f2d3699d505679b8a2a7d532ebf638"
 }
 ```
 
@@ -195,7 +195,7 @@ Sample output
 ```
 {
   "status": 200,
-  "tx_id": "83fd7c73360cc80a4bc89c3fa3de956deb145882219bcce3b5631a916b15b97a"
+  "tx_id": "ceed9a85f58a55543e8d2f6ea70e8507fc13341486acca9c49bee1bfeec03e4b"
 }
 ```
 
