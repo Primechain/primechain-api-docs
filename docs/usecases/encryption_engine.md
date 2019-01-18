@@ -4,6 +4,12 @@
 
 The Encryption Engine provides symmetric (AES) and asymmetric (RSA) encryption functions – secure key generation, encryption and decryption.
 
+***Table of contents***
+[1. Generating key pairs](#1-generating-key-pairs)   
+[2. Symmetric encryption and decryption](#2-symmetric-encryption-and-decryption)   
+[3. Asymmetric encryption and decryption](#3-asymmetric-encryption-and-decryption)   
+
+
 # 1. Generating key pairs
 
 To generate key pairs, use `post /api/v1/onboard_user` and pass the following parameters:
@@ -37,7 +43,7 @@ The output is:
 }
 ```
 
-# 2. Symmetric encryption
+# 2. Symmetric encryption and decryption 
 For AES symmetric encryption use `post /api/v1/encrypt_data_aes` and pass the data as the parameter:
 ```
 {
@@ -123,3 +129,42 @@ The output will be the decrypted data.
 "response": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
 }
 ```
+
+# 3. Asymmetric encryption and decryption 
+Asymmetric encryption is done using `post /api/v1/encrypt_data_rsa` and passing the following parameters:   
+1. `data`, which is data to be encrypted
+2. `rsa_public_key` of the recipient 
+
+```
+{
+  "data": "Hello",
+  "rsa_public_key": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkydbbI+68zjRmp0n7Yss NwKbUl1IzBEqgm0Rp/utue8VNPfZaW7YrnwmEO7jO939C0/xAgayE6vR5VT7sItX uMKwvP0DozxWtUGGcoHEZgImzSXJGomZpr2+M6TdW+kbisUUKbjIApQvnGlh93Zv XiRTsvMkxC1Lf8Wkj52V7Xdn7O2p1tGg/j4wv78kT9wJ67xEnBmsGpGUZZYPAMZr j0WrsakvT5vqwtkGum2OI9eRNlB7qgDsuOrxAm3jyx17s+tOi2Sasn1GywHQmU6n YpCSsVv6ywGCMH5xLGAWT3glGCx2mwjAi+/QbpSXIWorlzzlZOR2xI+844dyDxbW MQIDAQAB -----END PUBLIC KEY-----"
+}
+```
+The output is the encrypted value referred to as `encrypted_data_rsa`:
+```
+{
+"status": 200,
+"encrypted_data_rsa": "acN4z1AbYKHbuK5Tixi+AgYwg/3XMqVxU3UJmZrXcRuSXYSPyDLrB7+BQeiazfcFk9WxpnvT8nXHkQ6Hz2rTUF1K1Lv5XM33iQMqdRUa9WzQGJS9IakS5TSw+OpxhCR0KWa1kJ4XIa6QHwCGqUQrUo7WXTV9k/Lb55eLZh9bINy6LAAeYQfQX7LZMVCuC7lmJcUAkDTYuccgZdtAc1BCHl0ODq7rcMSLpr/M0h+tjKE6fuGP9AuB7NznoAy+7yf9toy67DNIWAeQXptTq8ukBJ6AzBTerUbTrbwOWlBWOyVcnsyPkXRtPUNryu5Jvqlw6//w0Fc9FG3dM+lmuzWQ5A=="
+}
+```
+
+Asymmetric decryption is done using `post /api/v1/decrypt_data_rsa` and passing the following parameters:   
+
+1. `rsa_private_key` of the recipient
+2. `encrypted_data_rsa` - the encrypted data
+```
+{
+  "rsa_private_key": "-----BEGIN PRIVATE KEY----- MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCTJ1tsj7rzONGa nSftiyw3AptSXUjMESqCbRGn+6257xU099lpbtiufCYQ7uM73f0LT/ECBrITq9Hl VPuwi1e4wrC8/QOjPFa1QYZygcRmAibNJckaiZmmvb4zpN1b6RuKxRQpuMgClC+c aWH3dm9eJFOy8yTELUt/xaSPnZXtd2fs7anW0aD+PjC/vyRP3AnrvEScGawakZRl lg8AxmuPRauxqS9Pm+rC2Qa6bY4j15E2UHuqAOy46vECbePLHXuz606LZJqyfUbL AdCZTqdikJKxW/rLAYIwfnEsYBZPeCUYLHabCMCL79BulJchaiuXPOVk5HbEj7zj h3IPFtYxAgMBAAECggEAY8GujK3zQqcmEPaw9qv+UVyHBxMOIqkQdFKUQZiwcPfP HJVY4cyvP7oR5DDOAuu+e0i6TXFUj1lPdXRjG4+a7Dmvrq6nJKXm8gF1r3KhPbX/ r9sJtd/KNeszYbdGCOTCMxTfUlld3cGvdQ1LyIKVhPCDfTCvn/5EzF2j7WgbF1tm oKuZB69LoVRSQ+rW9egQUWX5OCIC2aPReoRQCpPW3hz+CCuxk387twqlbS4/YFlB fdzC8N80umFvRFB8+YrgLrE/AM+dfFf8XMbwQDO13V4E6S5zVohAAJddxq7Nsv+e 1aZK+3NxlrkrOFij0ApLVtugToIBIMsGKbXuc5g6sQKBgQD9VIXvkX9fvr7wFgQ8 BDqDwavhUfQ3GdsZgzEnLK4SUgB1ApC7xMgwXauN38AL3kZEqQZNnWciQY8bU3i1 EFdFQ7K9n7s8nM/d8N/rbFIndRICJUQh47UAKWNZRaCV/IVMLPVjjHCjaej9aOUP JsyqbGfFA62rRCXoCHSzVjlFfwKBgQCUtF+PA0kP/V8CkaNV0VdRa702s57tu6Tg Quk8SOH4Ame9TcBrP95bpxUzBKapBj/ncW8lJKDD7zLYTQalWUG+KX/17i6NPgD6 vq+FwoCaGskRQTw3AUbkfHj6u7Cn41EmvxIZ2KWLi8Hl4+W3o6/mnsuucEZDOPwy FTN5FW+cTwKBgG0RTvjt86ENRrenQvtz9p1zbMT9u99dSm+ZhDgRjIBmvbui9x1g g7APJCVZCB4T/Lzi6MvR0O12vF5PedC60FgJ5ZKuirZ17Sjo4/9AC77hMHesA8Fz gCIpr5Rn3dO1fM5nLN9HP9ebaaxw1O3JDqTxN1wjUUpDdO6JdXUg0leRAoGBAI4l FSspos+MDSPxf0ZrQ6Jq8IW3kXYCZoqQq06bBJYEBpIoHoTmmnDV+Ce6jG0JslBU WEATETH6Foo4pt+rwHI8TTsSoKEW4ezOFg4wbKnibMz3pM2XhOKoMSTMAQObAVme T3kxZJ1NzN0pyc6Ow3gZ1u06GY/sivZ82aUm3nd1AoGAIqGOv9GiNYWJIdsdGmhI YS93Qj3Pw6ZSTqGTW4FYM9f4tawEWaGFGBL2CBYEp9nUTUBEAq8HJes0bimeScGn Tawewg84U4oiHuyTbtwIi5PkB+XIKfGaXU3SMaHYHiORRe7BhQwWKHpLdob4JJtm CdNBuN+I1w9yaWG1TeWVjk8= -----END PRIVATE KEY-----",
+  "encrypted_data_rsa": "acN4z1AbYKHbuK5Tixi+AgYwg/3XMqVxU3UJmZrXcRuSXYSPyDLrB7+BQeiazfcFk9WxpnvT8nXHkQ6Hz2rTUF1K1Lv5XM33iQMqdRUa9WzQGJS9IakS5TSw+OpxhCR0KWa1kJ4XIa6QHwCGqUQrUo7WXTV9k/Lb55eLZh9bINy6LAAeYQfQX7LZMVCuC7lmJcUAkDTYuccgZdtAc1BCHl0ODq7rcMSLpr/M0h+tjKE6fuGP9AuB7NznoAy+7yf9toy67DNIWAeQXptTq8ukBJ6AzBTerUbTrbwOWlBWOyVcnsyPkXRtPUNryu5Jvqlw6//w0Fc9FG3dM+lmuzWQ5A=="
+}
+```
+The output is the decrypted data.
+```
+{
+  "status": 200,
+  "decrypted_data": "Hello"
+}
+```
+---
+Have a query? Email us on info@primechain.in
