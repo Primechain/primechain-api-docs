@@ -1,4 +1,4 @@
-# Factoring and invoice discounting platform
+# Trade payments
 
 [![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
 
@@ -6,3 +6,107 @@ TRADE-Chain provides a platform for real-time cross-border and domestic trade pa
 
 ![Trade documents issuance and sharing](http://www.primechaintech.com/img/api_documentation/trade_payments.jpg)
 
+
+1. [Overview](#1-overview)
+2. [Issuance of a fiat currency backed token](#2-issuance-of-a-fiat-currency-backed-token)
+
+# 1. Overview
+
+A single TRADE-Chain transaction can perform an asset exchange between two or more parties, e.g. sending a dollar-denominated asset from Sanya to Tanya, while simultaneously sending a rupee-denominated asset from Tanya to Sanya. 
+
+Because the exchange takes place in a single transaction, it comes with a guarantee of atomicity, meaning that all of the asset transfers take place simultaneously, or none take place at all. In the finance world, this type of transaction is termed delivery-versus-payment, or DvP for short.
+
+### Process flow
+1. A bank issues a fiat currency-backed token on TRADE-Chain.
+
+2. Participants (exporters, importers, invoice payers, investors etc.) can purchase these tokens from the bank through regular banking channels.
+
+3. Participants can send and receive tokens to / from each other in real-time. Since these transactions are atomic, there is no need for re-conciliation.
+
+4. Participants can redeem these tokens from the issuer bank and receive fiat currency through regular banking channels.
+
+# 2. Issuance of a fiat currency backed token
+
+To create a new fiat currency backed token, use `post /api/v1/create_token`.
+
+***Note:***
+*  This may take upto 30 seconds.   
+* `from_address` is the entity that creates the asset. It must have `send`, `receive` and `issue` permissions. It must also have permissions to write to TOKEN_MASTERLIST.
+* `to_address` is the entity that receives the newly created asset. It must have `receive` permission and ideally also `send` permission.   
+*  The `from_address` and `to_address` can be the same.
+*  `unit` refers to the minimum divisible quantity of the asset.
+* `asset` refers to the name of the asset.
+* `quantity` refers to the initial quantity of the asset.
+* `details` refers to any details about the asset.
+* Setting `"open": "true"` will create an open asset - additional units of the asset CAN be issued in the future. 
+* Setting `"open": "false"` will create a closed asset - additional units of the asset CANNOT be issued in the future. 
+
+```
+{
+  "from_address": "1YYAavvJgKisoTB7sVakqKuMaMVwL5GbKJ1kai",
+  "to_address": "1Mjas5NkmuLbumsx4ccmScDatHK7qFzQbHZXYi",
+  "asset": 
+  	{
+    	"name": "National-Bank-USD-Series-B",
+    	"open": true
+  	},
+  "unit": 1,
+  "quantity": 19500,
+  "details": 
+     {
+    	"backed_by": "Issued by National Bank against US dollar escrow account number 12345",
+    	"redemption_information": "This is information about the redempton of the asset",
+       	"contact_person": "These are the details of the contact person for this token"
+  	}
+}
+```
+***Output is:***
+* `tx_id` - the txid of the transaction in which the token was created.
+* `asset_ref` - the reference number of the token.
+* `description` - the details relating to the token.
+```
+{
+  "status": 200,
+  "tx_id": "51f3569f42c3ffff0972bf6db2c32365afe1d26deabc4b4c0621007b66db38d0",
+  "asset_ref": "767-267-21562",
+  "description": 
+    {
+      "details": 
+        {
+          "backed_by": "Issued by National Bank against US dollar escrow account number 12345",
+          "redemption_information": "This is information about the redempton of the asset",
+          "contact_person": "These are the details of the contact person for this token"
+        }
+    }
+}
+```
+
+## 2. Create additional units of an open token
+
+To create additional units of an open asset, use `post /api/v1/create_more_token`.
+
+***Note:***
+* `from_address` is the entity that creates the asset. It must have `send` permission.
+* `to_address` is the entity that receives the newly created asset. It must have `receive` permission.
+* The `from_address` and `to_address` can be the same.
+* `asset_name` refers to the name of the asset.
+* `quantity` refers to the additional quantity of the asset being issued.
+```
+{
+  "from_address": "1K2MYAXp1tiMEKw2VKMrzy8X9peZFrrUbvZnXK",
+  "to_address": "4NM46pESGpnvCn8pJmVZpuFepaeUkwKF3YecSM",
+  "asset_name": "SILVER-tokens-series-B",
+  "quantity": 5000
+}
+```
+```
+{
+"status": 200,
+"tx_id": "c749efc4cca56b72749e8e2d0acf7bf6282383255482894c578e4c82869fbc4f"
+}
+```
+Output is the id of the transaction in which the additional units were created.
+
+
+
+…
