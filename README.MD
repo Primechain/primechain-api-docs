@@ -112,8 +112,7 @@ To try Primechain API, you can use [Advance REST Client](https://install.advance
 # 4. Sandbox
 Email us on info@primechain.in for details on accessing the Primechain-API sandbox.
 
-To view a sample nodeJS application built on Primechain-API, see:
-http://169.63.131.117:2206/user/dashboard
+To view a sample nodeJS application built on Primechain-API, email us on info@primechain.in
 
 
 # 5. About Primechain Technologies
