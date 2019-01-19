@@ -198,35 +198,37 @@ Sample output
 }
 ```
 
+
+
 # 6. Components and modules
 
-1. [Trade documents issuance and sharing](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md)
+1. Anti-Money Laundering review
 
-2. [Cargo tracking](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/cargo_tracking.md)
+2. Auction of goods and freight contracts
 
-3. [Cross border and domestic trade payments](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_payments.md)
+3. [Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
 
-4. Auction of goods and freight contracts
+4. [Cargo tracking](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/cargo_tracking.md)
 
-5. [Factoring / invoice discounting platform](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md)
+5. [Cross border and domestic trade payments](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_payments.md)
 
-6. KYC and Digital Identity
+6. [Electronic Signature Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/electronic_signature_engine.MD)
 
-7. Anti-Money Laundering review
+7. [Encryption Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/encryption_engine.md)
 
-8. Rating and review platform
+8. [Factoring / invoice discounting platform](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md)
 
-9. Supply chain transparency and counterfeit reduction
+9. [File and data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD)
 
-10. Loyalty program
+10. [KYC and Digital Identity](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/kyc_digital_id.md)
 
-11. [Electronic Signature Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/electronic_signature_engine.MD)
+11. Loyalty program
 
-12. [File and data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD)
+12. Rating and review platform
 
-13. [Encryption Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/encryption_engine.md)
+13. Supply chain transparency and counterfeit reduction
 
-14. [Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
+14. [Trade documents issuance and sharing](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md)
 
 ---
 Have a query? Email us on info@primechain.in
