@@ -122,7 +122,7 @@ Sample output
                 "type":"Buffer",
                 "data":[93,24,105,196,53,45,127,77,51,121,189,218,230,203,253,232]
                }
-              }",
+           }",
       "confirmations": 11,
       "blockhash": "032e6684653b576ea26b6733feb03dbc3b25d27f075167c3838011f17bb60a46",
       "blockindex": 2,
