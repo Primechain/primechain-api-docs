@@ -2,7 +2,7 @@
 
 1. [Auction of assets, goods and freight contracts](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md#7-auction-platform-for-goods-and-freight-contracts)
 2. [Blockchain based authentication](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Authentication.MD)
-3. [Cargo tracking](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md#4-real-time-tracking-of-cargo)
+3. [Cargo tracking](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/cargo_tracking.md)
 4. [Charge Registry](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/charge_registry.md)
 5. [Electronic signatures](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Electronic%20signatures.MD)
 6. [Employee background verification](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/employee_background_verification.md)
