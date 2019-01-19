@@ -36,29 +36,28 @@ Today, the Internet enables the movement of data (videos, text, photos) globally
 
 TRADE-Chain reduces errors, fraud, cost & time in the trade process and increases revenue, transparency, auditability and efficiency of trade operations.
 
-![Components of TRADE-Chain
-](http://www.primechaintech.com/img/api_documentation/trade_chain_components.png)
+![Components of TRADE-Chain](http://www.primechaintech.com/img/api_documentation/how-trade-chain-works.png)
 
-***1. Blockchain layer:***  
-This holds the trade channels, encrypted and unencrypted data relating to trade documents & KYC records, and handles the asset lifecycle management – invoices, fiat backed tokens, goods & cargo contract, loyalty programs.
+***1. Blockchain Asset Layer:***  
+This handles the asset lifecycle management (issuance, payment, exchange, escrow, retirement) for invoices, fiat backed tokens, goods & cargo contracts, loyalty programs.
 
 ***2. Database layer:***  
 This powers the API key management and rating function.
 
-***3. Electronic Signature Engine:***  
+***3. Blockchain Signature Engine:***  
 This provides electronic signature functions for data and documents without the need to disclose the actual content being signed – secure key generation, signing and verification.
 
-***4. File Storage Layer:***  
-This provides a dedicated blockchain powered storage service for encrypted and un-encrypted data and document storage.
+***4. Blockchain Storage Layer:***  
+This holds the trade channels, encrypted & unencrypted data and documents.
 
-***5. Encryption Engine:***  
+***5. Blockchain Encryption Engine:***  
 This provides symmetric (AES) and asymmetric (RSA) encryption functions – secure key generation, encryption and decryption.
 
-***6. Blockchain based authentication:***  
+***6. Blockchain-based authentication:***  
 This combines the power of blockchain technology and public key cryptography for secure authentication and identification of people and devices.
 
 ***7. Primechain® API layer:***  
-The above-mentioned layers and engines interact with the user systems though the Primechain® API layer.
+The above-mentioned layers and engines interact with the user systems through the Primechain® API layer.
 
 ### TRADE-Chain APIs can be easily and securely integrated with legacy and mobile applications ###
 
