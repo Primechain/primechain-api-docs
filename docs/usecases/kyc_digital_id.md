@@ -8,13 +8,14 @@ TRADE-Chain provides a robust immutable platform for real-time KYC & Digital Ide
 
 ***Table of contents*** 
 
-[1. Issue KYC and Digital Identity records on TRADE-Chain](#1-issue-kyc-and-digital-identity-records-on-trade-chain)   
+[1. Issue KYC and Digital Identity records](#1-issue-kyc-and-digital-identity-records)   
 
-[2. Search for KYC and Digital Identity records on TRADE-Chain](#2-search-for-kyc-and-digital-identity-records-on-trade-chain)   
+[2. Search for KYC and Digital Identity records](#2-search-for-kyc-and-digital-identity-records)   
 
-[3. Retrieve KYC and Digital Identity records from TRADE-Chain](#3-retrieve-kyc-and-digital-identity-records-from-trade-chain)   
+[3. Retrieve KYC and Digital Identity records](#3-retrieve-kyc-and-digital-identity-records)   
 
-# 1. Issue KYC and Digital Identity records on TRADE-Chain
+
+# 1. Issue KYC and Digital Identity records
 
 To encrypt, sign and publish KYC records on TRADE-Chain, use `post /api/v1/publish_data` and pass 4 parameters: 
 1. `primechain_address` - the primechain address of the signer.
@@ -85,7 +86,7 @@ Sample output
     }
 }
 ```
-# 2. Search for KYC and Digital Identity records on TRADE-Chain
+# 2. Search for KYC and Digital Identity records
 
 To search for KYC and Digital Identity records on TRADE-Chain use `post /api/v1/list_stream_items_by_key` and pass 2 parameters:
 1. `key` - the income tax registration number 
@@ -144,7 +145,7 @@ The actual record is stored in encrypted form and cannot be decrypted without th
 "content":"1f6688e01f060a5b004b72906f886434a5514643b5221a1be48aefa8b0985308dcd63763c3eb8b54bf4444e778410887c5f455bd029d75d8c5358fc1555fe535890264b2f0c1bd53e66e53c8093c573e614bcbcdc4a1dce0469cbb50614e795a00db1e8e8a0a01bf3033368b71a0f9f427a48533c65b90a7316644907b1efb9f6a33ecf0baf5b7d1b65d6fa5c67f2e6d53fef7f49ab67912c10e6d0e4a98e5d9890a5ed412f8916544dd776c4454953d2bb8f61e08a18253781dedd7207d00ef7756a6df919ad3c0c47f6ac371ba9cdac2f1b563a8e7d259feefac657565074ee85150245056bbf5ce98c7545de05f70cf10fe6d211fb11e04e8366659a07b301c8500b10e664972f65a432122fa816ecf0b3ea9b7da3a12b18479b8a960a57cec481f919ed7c28a147276b9cbf22a4d0560dda24bce590cd350e127e1b2a5bb50283b74b36b7a65559c4ddadbbca2a5b00dd9a846d457de7a0ce477c21f955d578956a3cbd230d98812b2f5d3273b702874"
 ```
 
-# 3. Retrieve KYC and Digital Identity records from TRADE-Chain
+# 3. Retrieve KYC and Digital Identity records
 To retrieve data use `post /api/v1/get_data` and pass 5 parameters:
 1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the trade channel.
 2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the trade channel.
