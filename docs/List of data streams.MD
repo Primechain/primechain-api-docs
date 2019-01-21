@@ -9,6 +9,8 @@ This is the list of all the data streams created automatically by Primechain API
 [FILE_MASTERLIST](#file_masterlist)     
 [FILE_SIGNATURE_MASTERLIST](#file_signature_masterlist)    
 [GREAT](#great)   
+
+[INVOICE MASTERLIST](#invoice_masterlist)  
 [OFFER_DETAIL_STREAM](#offer_detail_stream)   
 [ONBOARD_USERLIST](#onboard_userlist)      
 [VERIFIED_USER_MASTERLIST](#verified_user_masterlist)   
@@ -73,7 +75,6 @@ The output will be something like this:
 * Verified users are those that are listed in VERIFIED_USER_MASTERLIST stream. They are given write permissions as described [here](https://github.com/Primechain/primechain-api/blob/master/README.md#28-verified-users).
 
 
-
 # FILE_SIGNATURE_MASTERLIST   
 * This is a closed stream.
 
@@ -81,6 +82,8 @@ The output will be something like this:
 
 * Verified users are those that are listed in VERIFIED_USER_MASTERLIST stream. They are given write permissions as described [here](https://github.com/Primechain/primechain-api/blob/master/README.md#28-verified-users).
 
+# INVOICE MASTERLIST
+This is an open stream.
 
 # GREAT   
 * This is an open stream.
