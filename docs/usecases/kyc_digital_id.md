@@ -1,8 +1,6 @@
 # KYC & Digital Identity verification 
 
-[![Version](https://img.shields.io/badge/Version-1.0-brightgreen.svg)]()
-
-[![TRADE-Chain](https://img.shields.io/badge/Module%20of-TRADE--Chain-blue.svg)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md)
+[![Version](https://img.shields.io/badge/Version-TRADE--Chain%20v%201.0-brightgreen.svg)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md)
 
 
 TRADE-Chain provides a robust immutable platform for real-time KYC & Digital Identity verification. 
