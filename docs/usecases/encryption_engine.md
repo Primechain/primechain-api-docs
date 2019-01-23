@@ -1,6 +1,6 @@
 # Encryption Engine
 
-[![Primechain API](https://img.shields.io/badge/Built%20by-Primechain-blue.svg)](http://www.primechaintech.com/)
+[![Version](https://img.shields.io/badge/TRADE--Chain-v%201.0-brightgreen.svg)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md) [![Version](https://img.shields.io/badge/Contact-Primechain-blue.svg)](http://www.primechaintech.com/contactus.php)
 
 The Encryption Engine provides symmetric (AES) and asymmetric (RSA) encryption functions – secure key generation, encryption and decryption.
 
