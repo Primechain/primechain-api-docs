@@ -78,7 +78,7 @@ API keys authenticate access to Primechain-API powered blockchains. To generate 
 
 ## 9. [List of data streams](https://github.com/Primechain/primechain-api-docs/blob/master/docs/List%20of%20data%20streams.MD)
 
-## 10. [Use cases](https://github.com/Primechain/primechain-api-docs/blob/master/use-cases.MD)
+## 10. [Use cases](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md#6-components-and-modules)
 
 ## 11. [Utilities](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Utilities.MD)
 
