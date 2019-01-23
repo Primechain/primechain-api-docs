@@ -5,15 +5,17 @@ This is the list of all the data streams created automatically by Primechain API
 [ASSET_DATA_MASTERLIST](#asset_data_masterlist)     
 [AUTH_USERS_MASTERLIST](#auth_users_masterlist)   
 [DATA_MASTERLIST](#data_masterlist)     
-[DATA_SIGNATURE_MASTERLIST](#data_signature_masterlist)    
+[DATA_SIGNATURE_MASTERLIST](#data_signature_masterlist)   
+[DIRECTORY_STREAM](#directory_stream)
 [FILE_MASTERLIST](#file_masterlist)     
 [FILE_SIGNATURE_MASTERLIST](#file_signature_masterlist)    
 [GREAT](#great)   
 [INVOICE MASTERLIST](#invoice_masterlist)  
 [OFFER_DETAIL_STREAM](#offer_detail_stream)   
+[OFFER_STATUS_STREAM](#offer_status_stream)
 [ONBOARD_USERLIST](#onboard_userlist)      
 [VERIFIED_USER_MASTERLIST](#verified_user_masterlist)   
-   
+ 
 
 # ASSET_DATA_MASTERLIST
 This is a closed stream.
@@ -65,6 +67,8 @@ The output will be something like this:
 
 * Verified users are those that are listed in VERIFIED_USER_MASTERLIST stream. They are given write permissions as described [here](https://github.com/Primechain/primechain-api/blob/master/README.md#28-verified-users).
 
+# DIRECTORY_STREAM
+Admin node will verify member details and put the details into this stream to check valid members.
 
 # FILE_MASTERLIST   
 * This is a closed stream.
@@ -101,6 +105,11 @@ Following data of offers built using [`create_public_offer`](https://github.com/
 4. quantity of asset asked for   
 5. quantity of asset offerred   
 6. offer hex blob   
+
+
+# OFFER_STATUS_STREAM
+It stores status of bids going on trade chain
+
 
 # ONBOARD_USERLIST
     
