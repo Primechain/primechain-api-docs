@@ -1,5 +1,7 @@
 # Employee background verification
 
+[![Version](https://img.shields.io/badge/TRADE--Chain-v%201.0-brightgreen.svg)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md) [![Version](https://img.shields.io/badge/Contact-Primechain-blue.svg)](http://www.primechaintech.com/contactus.php)
+
 “Bad” employees pose a massive threat to employers (companies, Government agencies, organisations). Employers use background checks to make informed placement decisions, retain the most qualified candidates, and mitigate the risk of selecting the wrong candidate. This minimizes workplace violence, fraud, embezzlement, and theft. (Source: National Association of Professional Background Screeners)
 
 Primechain-API enable the creation of a blockchain that allows trusted employers to share employee records in a transparent, secure and confidential manner. 
