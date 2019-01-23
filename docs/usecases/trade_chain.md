@@ -210,13 +210,13 @@ Sample output
 
 4. [Cargo tracking](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/cargo_tracking.md)
 
-5. Charge Registry
+5. [Charge Registry](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/charge_registry.md)
 
 6. [Cross border and domestic trade payments](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_payments.md)
 
 7. [Electronic Signature Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/electronic_signature_engine.MD)
 
-8. Employee background verification
+8. [Employee background verification](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/employee_background_verification.md)
 
 9. [Encryption Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/encryption_engine.md)
 
