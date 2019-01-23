@@ -19,7 +19,13 @@ TRADE-Chain provides a robust immutable platform for real-time KYC & Digital Ide
 
 To encrypt, sign and publish KYC records on TRADE-Chain, use `post /api/v1/publish_data` and pass 4 parameters: 
 1. `primechain_address` - the primechain address of the signer.
-2. `keys` - upto 5 keys can be used to enable quick searching of the data. Each key can be upto 64 characters including blank spaces.
+2. `keys` - upto 5 keys can be used to enable quick searching of the data. Each key can be upto 256 characters including blank spaces. Recommended keys are: 
+   * Full name of the customer
+   * Income tax registration number of the customer
+   * Country of citizenship of the customer
+   * Name of bank issuing the record
+   * Date as of which the record is current
+   
 3. `data` - the data. 
 4. `trade_channel_name` - as kyc.
 
