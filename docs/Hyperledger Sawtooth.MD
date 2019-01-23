@@ -1,5 +1,7 @@
 # File and data storage
 
+[![Version](https://img.shields.io/badge/TRADE--Chain-v%201.0-brightgreen.svg)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md) [![Version](https://img.shields.io/badge/Contact-Primechain-blue.svg)](http://www.primechaintech.com/contactus.php)
+
 [1. Create key pair](#1-create-key-pair)      
 [2. Publish data to the blockchain](#2-publish-data-to-the-blockchain)     
 [3. Retrieve data from the blockchain](#3-retrieve-data-from-the-blockchain)    
