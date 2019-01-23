@@ -210,25 +210,29 @@ Sample output
 
 4. [Cargo tracking](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/cargo_tracking.md)
 
-5. [Cross border and domestic trade payments](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_payments.md)
+5. Charge Registry
 
-6. [Electronic Signature Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/electronic_signature_engine.MD)
+6. [Cross border and domestic trade payments](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_payments.md)
 
-7. [Encryption Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/encryption_engine.md)
+7. [Electronic Signature Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/electronic_signature_engine.MD)
 
-8. [Factoring / invoice discounting platform](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md)
+8. Employee background verification
 
-9. [File and data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD)
+9. [Encryption Engine](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/encryption_engine.md)
 
-10. [KYC and Digital Identity](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/kyc_digital_id.md)
+10. [Factoring / invoice discounting platform](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/invoice_discounting.md)
 
-11. Loyalty program
+11. [File and data storage](https://github.com/Primechain/primechain-api-docs/blob/master/docs/Hyperledger%20Sawtooth.MD)
 
-12. Rating and review platform
+12. [KYC and Digital Identity](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/kyc_digital_id.md)
 
-13. Supply chain transparency and counterfeit reduction
+13. Loyalty program
 
-14. [Trade documents issuance and sharing](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md)
+14. Rating and review platform
+
+15. Supply chain transparency and counterfeit reduction
+
+16. [Trade documents issuance and sharing](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md)
 
 ---
 Have a query? Email us on info@primechain.in
