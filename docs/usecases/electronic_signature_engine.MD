@@ -1,6 +1,6 @@
 # Electronic Signature Engine
+[![Version](https://img.shields.io/badge/TRADE--Chain-v%201.0-brightgreen.svg)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md) [![Version](https://img.shields.io/badge/Contact-Primechain-blue.svg)](http://www.primechaintech.com/contactus.php) [![Live demo](https://img.shields.io/badge/Live-Demo-orange.svg)](http://169.63.131.117:2206/user/ese_signing_data) 
 
-[![Version](https://img.shields.io/badge/TRADE--Chain-v%201.0-brightgreen.svg)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md) [![Version](https://img.shields.io/badge/Contact-Primechain-blue.svg)](http://www.primechaintech.com/contactus.php)
 
 1. [Signing data](#1-signing-data)
 2. [Verifying a digital signature](#2-verifying-a-digital-signature)
