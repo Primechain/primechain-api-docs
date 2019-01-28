@@ -6,13 +6,13 @@ Corporates leverage their immovable, movable and intangible assets to raise debt
 
 Categories of charge related records:
 1. Bank financing arrangements
-2. Guaranties to which the entity is a party
+2. Guarantees to which the entity is a party
 3. Hypothecation related records
 4. Lien related records
 5. Line of credit
 6. Loan agreements
 7. Loan Sanction Documents
-8. Mortgage related records
+8. Mortgage-related records
 9. Other charge related documents
 10. Pledge related records
 11. Promissory notes
