@@ -129,10 +129,10 @@ TRADE-Chain provides a transparent repository for secure & real time issuing and
 Quotation, Sales Contract, Pro Forma Invoice, Commercial Invoice, Packing List, Inspection Certificate, Insurance Policy, Insurance Certificate, Product Testing Certificate, Health Certificate, Phytosanitary Certificate, Fumigation Certificate, ATA Carnet, Consular Invoice.
 
 ## Transport Documents
-Shipping Order, Dock / Mate's Receipt, Bill of Lading, House Bill of Lading, Sea Waybill, Air Waybill, House Air Waybill, Shipping Guarantee, Packing List.
+Shipping Order, Dock / Mate's Receipt, [Bill of Lading](#43-sample-straight-bill-of-lading), House Bill of Lading, Sea Waybill, Air Waybill, House Air Waybill, Shipping Guarantee, Packing List.
 
 ## Financial Documents
-Documentary Credit, Standby Credit, Collection Instruction, Bill of Exchange or Draft, Trust Receipt, Promissory Note, [Letter of Credit](#42-sample-letter-of-credit), [Bank Guarantee](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_documents.md#4-bank-guarantee).
+Documentary Credit, Standby Credit, Collection Instruction, Bill of Exchange or Draft, Trust Receipt, Promissory Note, [Letter of Credit](#42-sample-letter-of-credit), [Bank Guarantee](#44-sample-bank-guarantee).
 
 ## Government Documents
 Certificate of Origin, Certificate of Origin, Import / Export Declaration, Import / Export Licence, International Import Certificate, Delivery Verification Certificate, Landing Certificate, Customs Invoice.
