@@ -126,7 +126,7 @@ Sample output
 TRADE-Chain provides a transparent repository for secure & real time issuing and sharing of trade documents such as:
 
 ## Commercial Documents
-Quotation, Sales Contract, Pro Forma Invoice, Commercial Invoice, Packing List, Inspection Certificate, Insurance Policy, Insurance Certificate, Product Testing Certificate, Health Certificate, Phytosanitary Certificate, Fumigation Certificate, ATA Carnet, Consular Invoice.
+Quotation, Sales Contract, Pro Forma Invoice, [Commercial Invoice](#41-sample-commercial-invoice), Packing List, Inspection Certificate, Insurance Policy, Insurance Certificate, Product Testing Certificate, Health Certificate, Phytosanitary Certificate, Fumigation Certificate, ATA Carnet, Consular Invoice.
 
 ## Transport Documents
 Shipping Order, Dock / Mate's Receipt, [Bill of Lading](#43-sample-straight-bill-of-lading), House Bill of Lading, Sea Waybill, Air Waybill, House Air Waybill, Shipping Guarantee, Packing List.
