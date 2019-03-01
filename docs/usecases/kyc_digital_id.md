@@ -46,7 +46,7 @@ Lets take an example of Gopal Kumar Santoshi, a citizen of Zimblia having income
    "data": 
     {
       "name": "Gopal Kumar Santoshi",
-      "name_of_father": "INDIVIDUAL",
+      "name_of_father": "Hari Kumar Santoshi",
       "name_of_wife": "Ekta Santoshi",
       "email": "gopal@example.com",
       "mobile": "+91-1234567890",
