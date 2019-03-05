@@ -2,6 +2,8 @@
 
 [![Version](https://img.shields.io/badge/TRADE--Chain-v%201.0-brightgreen.svg)](https://github.com/Primechain/primechain-api-docs/blob/master/docs/usecases/trade_chain.md) [![Version](https://img.shields.io/badge/Contact-Primechain-blue.svg)](http://www.primechaintech.com/contactus.php) [![Live demo](https://img.shields.io/badge/Live-Demo-orange.svg)](http://169.63.131.117:2206/user/kyc_issue) 
 
+Financial and capital markets use the KYC (Know Your Customer) system to identify "bad" customers and minimize money laundering, tax evasion and terrorism financing. Efforts to prevent money laundering and the financing of terrorism are costing the financial sector billions of dollars. Banks are also exposed to huge penalties for failure to follow KYC guidelines. Costs aside, KYC can delay transactions and lead to duplication of effort between banks.
+
 TRADE-Chain provides a robust immutable platform for real-time KYC & Digital Identity verification. 
 
 ![KYC & Digital Identity verification ](http://www.primechaintech.com/img/api_documentation/kyc.png)
@@ -9,12 +11,36 @@ TRADE-Chain provides a robust immutable platform for real-time KYC & Digital Ide
 ***Table of contents*** 
 
 [1. Issue KYC and Digital Identity records](#1-issue-kyc-and-digital-identity-records)   
-
 [2. Search for records by key](#2-search-for-records-by-key)   
-
 [3. Search for records by publisher](#3-search-for-records-by-publisher)   
-
 [4. Retrieve KYC and Digital Identity records](#4-retrieve-kyc-and-digital-identity-records)   
+
+# Introduction
+
+According to an independent survey discussing the real impact of global changes in Know Your Customer (KYC) regulation on corporates by Refinitiv:
+
+#### 1. The KYC burden on corporates is being magnified by their high number of banking relationships.
+* On average globally, each corporate has 10 banking relationships.
+* Bigger organizations have more banking relationships, as many as 14 in some cases.
+
+#### 2. Financial institutions’ lack of common KYC standards continues to create issues for corporates.
+* 85% of corporates have not had a good KYC experience.
+* 12% changed banks as a result.
+
+#### 3. KYC procedures continue to lengthen client onboarding times.
+* Average onboarding times have risen from 28 days in 2016 to 32 days in 2017.
+* Corporates are contacted an average of 8 times by banks during the onboarding process
+
+#### 4. Corporates are still not passing on all material changes.
+* 30% have not made their banks aware of all material changes.
+* The average time corporates spend updating their FIs about material changes has risen to 30 days, up from 27 days in 2016.
+
+#### 5. The regulatory pressure on banks is being passed down to corporates by increasing the volume of KYC information required.
+* Half of all respondents say that changes to regulatory requirements are driving the amount of time they spend on KYC.
+* On average, corporates spend 26 days a year supplying additional regulatory information, up from 23 days in 2016.
+
+#### 6. Verification is not portable since the documents needed vary from nation to nation and bank to bank. 
+
 
 
 # 1. Issue KYC and Digital Identity records
