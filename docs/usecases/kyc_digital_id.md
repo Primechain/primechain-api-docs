@@ -10,12 +10,18 @@ TRADE-Chain provides a robust immutable platform for real-time KYC & Digital Ide
 
 ***Table of contents*** 
 
-[1. Issue KYC and Digital Identity records](#1-issue-kyc-and-digital-identity-records)   
-[2. Search for records by key](#2-search-for-records-by-key)   
-[3. Search for records by publisher](#3-search-for-records-by-publisher)   
-[4. Retrieve KYC and Digital Identity records](#4-retrieve-kyc-and-digital-identity-records)   
+[1. Introduction](#1-introduction)
 
-# Introduction
+[2. Statistics](#2-statistics)
+
+[3. The solution](#3-the-solution)   
+    [3.1 Issue KYC and Digital Identity records](#31-issue-kyc-and-digital-identity-records)
+    [3.2 Search for records by key](#32-search-for-records-by-key)   
+    [3.3 Search for records by publisher](#33-search-for-records-by-publisher)   
+    [3.4 Retrieve KYC and Digital Identity records](#34-retrieve-kyc-and-digital-identity-records)   
+
+
+# 1. Introduction
 
 According to an independent survey discussing the real impact of global changes in Know Your Customer (KYC) regulation on corporates by Refinitiv:
 
@@ -41,9 +47,48 @@ According to an independent survey discussing the real impact of global changes 
 
 #### 6. Verification is not portable since the documents needed vary from nation to nation and bank to bank. 
 
+# 2. Statistics
+
+* Some major financial institutions spend up to $500 million annually on KYC and customer due diligence.
+
+* 10% of the world’s top financial institutions spend at least $100 million annually on it.
+
+* Average annual spending (including labor and third-party costs) is $48 million.
+
+* KYC is driving up the costs of customer onboarding. 2017 saw a 19% increase compared to 2016, with a 16% increase expected in 2018.
+
+* More than half of all banking salespeople are spending one-and-a-half days each week onboarding new client organizations.
+
+* A few years ago, Citibank said about half its $3.4 billion efficiency savings were “consumed by additional investments that we’re making in regulatory and compliance activities.”
+
+* In 2013, JPMorgan added 5,000 employees to their compliance team and spent an additional $1 billion on controls.
+
+* Risk, governance and compliance costs account for 15-20% of the total “run the bank” cost base of most major banks (Bain & Co.)
+
+# 3. The solution
+
+Primechain-KYC is a blockchain API for corporate and individual KYC, due-diligence and charge registry. Primechain-KYC records are stored in the blockchain in an encrypted form and the decryption credentials are available only to the uploading entity. 
+
+This ensures data privacy and confidentiality while at the same time ensuring that records are shared only between banks that trust each other. Primechain-KYC can be used intra-bank and inter-bank (nationally / globally).
+
+Some of the benefits of Primechain-KYC:
+
+1. Removes duplication of effort, automates processes and reduces compliance errors.
+
+2. Enables the distribution of encrypted updates to client information in real time.
+
+3. Provides the historical record of all compliance activities undertaken for each customer.
+
+4. Provides the historical record of all documents pertaining to each customer.
+
+5. Records can be used as evidence to prove to regulators that the bank has complied with all relevant regulations.
+
+6. Enables identification of entities attempting to create fraudulent histories.
+
+7, Enables data and records to be analyzed to spot criminal activities.
 
 
-# 1. Issue KYC and Digital Identity records
+## 3.1 Issue KYC and Digital Identity records
 
 To encrypt, sign and publish KYC records on TRADE-Chain, use `post /api/v1/publish_data` and pass 4 parameters: 
 1. `primechain_address` - the primechain address of the signer.
@@ -120,7 +165,7 @@ Sample output
     }
 }
 ```
-# 2. Search for records by key
+## 3.2 Search for records by key
 
 To search for records by key, use `post /api/v1/list_trade_channel_items_by_key` and pass 2 parameters:
 1. `key` - the income tax registration number 
@@ -179,7 +224,7 @@ The actual record is stored in encrypted form and cannot be decrypted without th
 "content":"1f6688e01f060a5b004b72906f886434a5514643b5221a1be48aefa8b0985308dcd63763c3eb8b54bf4444e778410887c5f455bd029d75d8c5358fc1555fe535890264b2f0c1bd53e66e53c8093c573e614bcbcdc4a1dce0469cbb50614e795a00db1e8e8a0a01bf3033368b71a0f9f427a48533c65b90a7316644907b1efb9f6a33ecf0baf5b7d1b65d6fa5c67f2e6d53fef7f49ab67912c10e6d0e4a98e5d9890a5ed412f8916544dd776c4454953d2bb8f61e08a18253781dedd7207d00ef7756a6df919ad3c0c47f6ac371ba9cdac2f1b563a8e7d259feefac657565074ee85150245056bbf5ce98c7545de05f70cf10fe6d211fb11e04e8366659a07b301c8500b10e664972f65a432122fa816ecf0b3ea9b7da3a12b18479b8a960a57cec481f919ed7c28a147276b9cbf22a4d0560dda24bce590cd350e127e1b2a5bb50283b74b36b7a65559c4ddadbbca2a5b00dd9a846d457de7a0ce477c21f955d578956a3cbd230d98812b2f5d3273b702874"
 ```
 
-# 3. Search for records by publisher
+## 3.3 Search for records by publisher
 
 To search for records by publisher, use `post /api/v1/list_trade_channel_items_by_publisher` and pass 2 parameters:
 1. `primechain_address` - the primechain address of the publisher
@@ -220,7 +265,7 @@ Sample output
 ```
 The actual record is stored in encrypted form and cannot be decrypted without the relevant credentials. 
 
-# 4. Retrieve KYC and Digital Identity records
+## 3.4 Retrieve KYC and Digital Identity records
 To retrieve data use `post /api/v1/get_data` and pass 5 parameters:
 1. `tx_id_enc_data` - the id of the transaction in which the encrypted data and tag were published to the trade channel.
 2. `tx_id_signature` - the id of the transaction in which the digital signature, hash and the signer's primechain address were published to the trade channel.
