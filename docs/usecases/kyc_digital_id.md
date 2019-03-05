@@ -36,7 +36,7 @@ According to an independent survey discussing the real impact of global changes 
 
 #### 3. KYC procedures continue to lengthen client onboarding times.
 * Average onboarding times have risen from 28 days in 2016 to 32 days in 2017.
-* Corporates are contacted an average of 8 times by banks during the onboarding process
+* Corporates are contacted an average of 8 times by banks during the onboarding process.
 
 #### 4. Corporates are still not passing on all material changes.
 * 30% have not made their banks aware of all material changes.
