@@ -15,11 +15,12 @@ TRADE-Chain provides a robust immutable platform for real-time KYC & Digital Ide
 [2. Statistics](#2-statistics)
 
 [3. The solution](#3-the-solution)   
-    [3.1 Issue KYC and Digital Identity records](#31-issue-kyc-and-digital-identity-records)
+    [3.1 Issue KYC and Digital Identity records](#31-issue-kyc-and-digital-identity-records)   
     [3.2 Search for records by key](#32-search-for-records-by-key)   
     [3.3 Search for records by publisher](#33-search-for-records-by-publisher)   
     [3.4 Retrieve KYC and Digital Identity records](#34-retrieve-kyc-and-digital-identity-records)   
-
+    
+[4. Sandbox and demo](#4-sandbox-and-demo)
 
 # 1. Introduction
 
@@ -320,6 +321,10 @@ Sample output
     }
 }
 ```
+
+# 4. Sandbox and demo
+
+http://169.63.131.117:2206/user/kyc_issue
 
 ---
 Have a query? Email us on info@primechain.in
